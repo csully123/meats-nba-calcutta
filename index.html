@@ -58,7 +58,9 @@ header{display:flex;flex-direction:column;gap:14px;padding-top:28px;border-botto
 .rules dd{margin:0}
 .board{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .tile{background:var(--surface);border:1.5px solid var(--line);padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
-.tile{position:relative;overflow:hidden}
+.tile{position:relative;overflow:hidden;cursor:pointer;font:inherit;color:inherit;text-align:left;width:100%}
+.tile:hover{border-color:var(--accent)}
+.tile:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .tile::before{content:"";position:absolute;inset:0;background:var(--flag,none);background-size:cover;background-position:center;opacity:.3;pointer-events:none}
 .tile>*{position:relative}
 .tile.flag-pl{--flag:url("assets/flag-poland.svg")}
@@ -393,7 +395,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     // dense ranking: tied scores share a place and the same medal
     let place=0,prev=null;const ranked=st.map(x=>{const key=x.pts+'|'+x.w;if(key!==prev){place++;prev=key;}return {...x,place};});
     const crown=p=>p<=3?`<svg class="crown r${p}" viewBox="0 0 24 16" width="18" height="12" aria-label="${p===1?'First':p===2?'Second':'Third'} place"><path d="M2 14h20l-2-9-5 4-3-7-3 7-5-4z" fill="currentColor"/></svg>`:'';
-    $('board').innerHTML=ranked.map(s=>`<div class="tile ${s.place<=3?'r'+s.place:''} ${FLAGS[s.p]||''}"><div class="name"><span>${esc(s.p)}${crown(s.place)}</span><span class="rank num">${s.place}</span></div><div class="pts num">${s.pts}</div><div class="rec num">${s.w}-${s.l}-${s.t} ATS${s.open?` <span>(${s.open} open)</span>`:''}</div><div class="wk num ${s.wk>0?'pos':s.wk<0?'neg':'zero'}">${signed(s.wk)} this week</div><div class="wkp num ${s.wkPicks>=MAX_WEEK?'full':''}">${s.wkPicks} of ${MAX_WEEK} picks used this week${s.wkLocks?`, ${s.wkLocks} lock${s.wkLocks===1?'':'s'}`:''}</div><div class="wkp num">${moneyballOf(s.p)?'Mega Bonus used':'Mega Bonus available'}</div></div>`).join('');}
+    $('board').innerHTML=ranked.map(s=>`<button type="button" class="tile ${s.place<=3?'r'+s.place:''} ${FLAGS[s.p]||''}" data-statsfor="${esc(s.p)}" title="See ${esc(s.p)}'s stats"><div class="name"><span>${esc(s.p)}${crown(s.place)}</span><span class="rank num">${s.place}</span></div><div class="pts num">${s.pts}</div><div class="rec num">${s.w}-${s.l}-${s.t} ATS${s.open?` <span>(${s.open} open)</span>`:''}</div><div class="wk num ${s.wk>0?'pos':s.wk<0?'neg':'zero'}">${signed(s.wk)} this week</div><div class="wkp num ${s.wkPicks>=MAX_WEEK?'full':''}">${s.wkPicks} of ${MAX_WEEK} picks used this week${s.wkLocks?`, ${s.wkLocks} lock${s.wkLocks===1?'':'s'}`:''}</div><div class="wkp num">${moneyballOf(s.p)?'Mega Bonus used':'Mega Bonus available'}</div></button>`).join('');}
   const moneyballOf=player=>S.picks.find(k=>k.player===player&&k.moneyball);
   function renderGames(){const v=$('view-board');const today=nowET();
     const picksBy={};for(const k of S.picks)(picksBy[k.gameId]=picksBy[k.gameId]||[]).push(k);
@@ -593,6 +595,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
 
   // Events
   $('who').addEventListener('click',e=>{const b=e.target.closest('[data-player]');if(!b)return;S.me=b.dataset.player;try{localStorage.setItem('cc.me',S.me);}catch(x){}$('who').classList.remove('nudge');render();});
+  $('board').addEventListener('click',e=>{const t=e.target.closest('[data-statsfor]');if(!t)return;S.stat=t.dataset.statsfor;S.tab='stats';try{localStorage.setItem('cc.stat',S.stat);localStorage.setItem('cc.tab',S.tab);}catch(x){}renderTabs();renderStatsTab();$('tabs').scrollIntoView({behavior:'smooth',block:'start'});});
   $('tabs').addEventListener('click',e=>{const b=e.target.closest('[data-tab]');if(!b)return;S.tab=b.dataset.tab;try{localStorage.setItem('cc.tab',S.tab);}catch(x){}renderTabs();});
   $('histfilters').addEventListener('click',e=>{const b=e.target.closest('[data-hist]');if(!b)return;S.hist=b.dataset.hist;try{localStorage.setItem('cc.hist',S.hist);}catch(x){}renderHistory();});
   $('statfilters').addEventListener('click',e=>{const b=e.target.closest('[data-stat]');if(!b)return;S.stat=b.dataset.stat;try{localStorage.setItem('cc.stat',S.stat);}catch(x){}renderStatsTab();});
