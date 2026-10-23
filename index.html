@@ -110,17 +110,16 @@ details.day>summary:hover{border-color:var(--ink)}
 details.day>summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 details.day .daybody{display:flex;flex-direction:column;gap:10px;margin-top:10px}
 .game{--ac:var(--line);--hc:var(--line);background:var(--surface);border:1.5px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;position:relative}
-.game.split .meta{background:linear-gradient(90deg,var(--ac) 0 50%,var(--hc) 50% 100%);color:var(--hc-ink);border-bottom:0;padding:10px 12px;min-height:44px}
-.game.split .meta .when{color:var(--ac-ink)}
-.game.split .meta .live-tag{color:var(--hc-ink);opacity:.85}
-.game.split .meta .badge.lock{background:rgba(0,0,0,.35);color:#fff}
-.game.split .meta .badge.final{background:rgba(0,0,0,.45);color:#fff}
+.game.picked .meta{background:var(--pc);color:var(--pc-ink);border-bottom:0;padding:10px 12px;min-height:44px}
+.game.picked .meta .when{color:var(--pc-ink)}
+.game.picked .meta .live-tag{color:var(--pc-ink);opacity:.85}
+.game.picked .meta .badge.lock{background:rgba(0,0,0,.35);color:#fff}
+.game.picked .meta .badge.final{background:rgba(0,0,0,.45);color:#fff}
 .tcode{color:color-mix(in srgb,var(--tc,var(--ink)) 70%,var(--ink));padding:0 5px;border-radius:3px;background:color-mix(in srgb,var(--tc,var(--line)) 14%,transparent)}
 .cpickwrap{background:linear-gradient(90deg,color-mix(in srgb,var(--tc,var(--accent)) 16%,var(--surface)),var(--surface) 60%);border-left:5px solid var(--tc,var(--accent))}
 .cpick .team{color:color-mix(in srgb,var(--tc,var(--accent)) 72%,var(--ink));display:inline-flex;align-items:center;gap:6px}
 .logo.sm{width:26px;height:26px;object-fit:contain}
 .game.picked{border-color:var(--pc);border-width:2px}
-.game.picked .meta{border-bottom-color:color-mix(in srgb,var(--pc) 40%,var(--line))}
 .game.picked .side{--tc:var(--pc);border-top-color:color-mix(in srgb,var(--pc) 35%,var(--line))}
 .game.picked .side+.side{border-left-color:color-mix(in srgb,var(--pc) 35%,var(--line))}
 .game.picked .pickbtn[aria-pressed="true"]{background:var(--pc);color:var(--pc-ink);border-color:var(--pc)}
