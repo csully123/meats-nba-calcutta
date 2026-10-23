@@ -7,8 +7,10 @@
   ],
   "scoring": {
     "start": 30,
-    "win": 2,
-    "loss": 1,
+    "win": 1,
+    "loss": 0,
+    "lockWin": 2,
+    "lockLoss": 1,
     "push": 0
   },
   "seasonStart": "2026-10-20",
@@ -20,5 +22,5 @@
     }
   },
   "bonusGameIds": {},
-  "minPicksPerWeek": 3
+  "maxPicksPerWeek": 5
 }
