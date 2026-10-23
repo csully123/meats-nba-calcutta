@@ -61,6 +61,8 @@ header{display:flex;flex-direction:column;gap:14px;padding-top:28px;border-botto
 .tile .pts{font-family:var(--display);font-size:46px;font-weight:700;line-height:1}
 .tile .rec{font-size:13px;color:var(--muted)}
 .tile .wk{font-size:13px;font-weight:600}
+.tile .wkp{font-size:12px;color:var(--muted)}
+.tile .wkp.short{color:var(--loss);font-weight:600}
 .pos{color:var(--win)} .neg{color:var(--loss)} .zero{color:var(--muted)}
 @media (max-width:620px){.board{grid-template-columns:repeat(2,1fr)}.tile .pts{font-size:38px}}
 .tabs{display:flex;gap:4px;border-bottom:1.5px solid var(--line)}
@@ -174,10 +176,10 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
         <dt>Refresh</dt><dd>Tap the Refresh Button every time you open the page. It pulls live lines and scores from ESPN and reloads everyone's picks. Write-ups do not change when you refresh; they are written once each morning.</dd>
         <dt>Who</dt><dd>Tap your name under "Picking as" before you pick anything. Every pick is saved under that name so the board knows it is you, and this device remembers it next time. Picking as someone else is on your conscience.</dd>
         <dt>Start</dt><dd>Everyone opens the season at 30 points. The tally runs from there.</dd>
-        <dt>Cover</dt><dd>+1 point. A bonus game (Christmas Day, NBA Cup group stage) pays +2.</dd>
-        <dt>Miss</dt><dd>-2 points. Bonus games do not make a miss worse.</dd>
+        <dt>Cover</dt><dd>+2 points. A bonus game (Christmas Day, NBA Cup group stage) pays +4.</dd>
+        <dt>Miss</dt><dd>-1 point. Bonus games do not make a miss worse.</dd>
         <dt>Push</dt><dd>0 points when the game lands exactly on the number.</dd>
-        <dt>Volume</dt><dd>Pick as many or as few games as you like. Weeks run Monday through Sunday.</dd>
+        <dt>Volume</dt><dd>At least 3 picks every week, Monday through Sunday. No ceiling. Your tile shows where you stand on the week.</dd>
         <dt>Line</dt><dd>You are graded on the spread shown when you made the pick, not the closing line. Lines appear once books post them, usually the day before.</dd>
         <dt>Lock</dt><dd>Picks lock at tip-off. Until then you can switch sides or take a pick back.</dd>
         <dt>Season</dt><dd>Regular season only, plus every NBA Cup game including the Cup final. No play-in, no playoffs.</dd>
@@ -219,7 +221,8 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
   // Firebase web config for the picks database. Filled in at setup; the page runs read-only until then.
   const FIREBASE_CONFIG = window.FIREBASE_CONFIG || null;
   const PLAYERS=["Kev","Beekie","Mio","Sulliver"];
-  const DEFAULT_CFG={start:30,win:1,loss:2,push:0};
+  const DEFAULT_CFG={start:30,win:2,loss:1,push:0};
+  let MIN_WEEK=3;
   const ET='America/New_York';
   const ESPN='https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?limit=50&dates=';
   const ABBR={NY:'NYK',GS:'GSW',SA:'SAS',NO:'NOP',UTAH:'UTA',WSH:'WAS'};
@@ -257,14 +260,15 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
   }
   function standings(){
     const thisWk=weekKey(nowET());
-    return PLAYERS.map(p=>{let pts=S.cfg.start,w=0,l=0,t=0,wk=0,open=0;
+    return PLAYERS.map(p=>{let pts=S.cfg.start,w=0,l=0,t=0,wk=0,open=0,wkPicks=0;
       for(const k of S.picks){if(k.player!==p)continue;const g=S.games[k.gameId];const r=grade(k,g);
+        const day=k.gameDate||(g&&g.date);if(day&&weekKey(day)===thisWk)wkPicks++;
         if(!r){open++;continue;}pts+=r.points;if(r.result==='win')w++;else if(r.result==='loss')l++;else t++;
-        const day=k.gameDate||(g&&g.date);if(day&&weekKey(day)===thisWk)wk+=r.points;}
-      return {p,pts,w,l,t,wk,open};}).sort((a,b)=>b.pts-a.pts||b.w-a.w);
+        if(day&&weekKey(day)===thisWk)wk+=r.points;}
+      return {p,pts,w,l,t,wk,open,wkPicks};}).sort((a,b)=>b.pts-a.pts||b.w-a.w);
   }
   function renderBoard(){const st=standings();const top=st[0]&&st[0].pts;
-    $('board').innerHTML=st.map((s,i)=>`<div class="tile ${s.pts===top&&S.picks.length?'lead':''}"><div class="name"><span>${esc(s.p)}</span><span class="rank num">${i+1}</span></div><div class="pts num">${s.pts}</div><div class="rec num">${s.w}-${s.l}-${s.t} ATS${s.open?` <span>(${s.open} open)</span>`:''}</div><div class="wk num ${s.wk>0?'pos':s.wk<0?'neg':'zero'}">${signed(s.wk)} this week</div></div>`).join('');}
+    $('board').innerHTML=st.map((s,i)=>`<div class="tile ${s.pts===top&&S.picks.length?'lead':''}"><div class="name"><span>${esc(s.p)}</span><span class="rank num">${i+1}</span></div><div class="pts num">${s.pts}</div><div class="rec num">${s.w}-${s.l}-${s.t} ATS${s.open?` <span>(${s.open} open)</span>`:''}</div><div class="wk num ${s.wk>0?'pos':s.wk<0?'neg':'zero'}">${signed(s.wk)} this week</div><div class="wkp num ${s.wkPicks<MIN_WEEK?'short':''}">${s.wkPicks} of ${MIN_WEEK} picks this week${s.wkPicks<MIN_WEEK?`, ${MIN_WEEK-s.wkPicks} to go`:''}</div></div>`).join('');}
   function renderGames(){const v=$('view-board');const today=nowET();
     const picksBy={};for(const k of S.picks)(picksBy[k.gameId]=picksBy[k.gameId]||[]).push(k);
     const show=gameList().filter(g=>g.status!=='postponed'&&(g.date>=today||!isFinal(g)||(picksBy[g.id]&&g.date>=addDays(today,-2))));
@@ -320,7 +324,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
       fetch('data/writeups.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({})),
       fetch('data/config.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({})),
     ]);
-    S.games=g||{};S.writeups=w||{};S.cfg={...DEFAULT_CFG,...(c.scoring||{})};S.bonusDates=c.bonusDates||{};S.bonusIds=c.bonusGameIds||{};
+    S.games=g||{};S.writeups=w||{};S.cfg={...DEFAULT_CFG,...(c.scoring||{})};S.bonusDates=c.bonusDates||{};S.bonusIds=c.bonusGameIds||{};if(c.minPicksPerWeek)MIN_WEEK=c.minPicksPerWeek;
     S.dataUpdated=Object.values(S.games).reduce((m,x)=>x.spreadUpdated&&x.spreadUpdated>m?x.spreadUpdated:m,'')||null;
   }
   async function loadLive(){

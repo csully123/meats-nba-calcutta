@@ -8,4 +8,4 @@ A season-long NBA against-the-spread picks pool for four friends. Static site on
 - `data/writeups.json`: per-game matchup notes, injury breakdowns and Claude's pick, keyed by ESPN game id.
 - `data/config.json`: scoring rules, season dates and bonus games.
 
-Scoring: everyone starts at 30, +1 for a cover (x2 on bonus games), -2 for a miss, 0 for a push. Picks lock at tip-off and are graded on the spread at the time of the pick.
+Scoring: everyone starts at 30, +2 for a cover (x2 on bonus games), -1 for a miss, 0 for a push. At least 3 picks per week (Monday to Sunday), no maximum. Picks lock at tip-off and are graded on the spread at the time of the pick.
