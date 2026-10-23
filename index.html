@@ -428,10 +428,11 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     const half=()=>el.scrollWidth/2;
     const wrap=()=>{const h=half();if(h>0){if(MQ.pos>=h)MQ.pos-=h;if(MQ.pos<0)MQ.pos+=h;}};
     MQ.pos=MQ.pos%Math.max(1,half());el.scrollLeft=MQ.pos;
-    el.addEventListener('pointerdown',e=>{if(e.pointerType==='touch')return;MQ.drag={x:e.clientX,start:MQ.pos,moved:false};el.setPointerCapture&&el.setPointerCapture(e.pointerId);});
-    el.addEventListener('pointermove',e=>{if(!MQ.drag)return;const dx=e.clientX-MQ.drag.x;if(Math.abs(dx)>5)MQ.drag.moved=true;MQ.pos=MQ.drag.start-dx;wrap();el.scrollLeft=MQ.pos;});
-    const endDrag=()=>{if(MQ.drag&&MQ.drag.moved){el.dataset.dragged='1';setTimeout(()=>{delete el.dataset.dragged;},0);}MQ.drag=null;};
-    el.addEventListener('pointerup',endDrag);el.addEventListener('pointercancel',endDrag);
+    // Mouse drag is tracked on the window so a plain click still reaches the tile underneath.
+    const onMove=e=>{if(!MQ.drag||MQ.drag.touch)return;const dx=e.clientX-MQ.drag.x;if(Math.abs(dx)>5)MQ.drag.moved=true;MQ.pos=MQ.drag.start-dx;wrap();el.scrollLeft=MQ.pos;};
+    const onUp=()=>{if(!MQ.drag||MQ.drag.touch)return;const moved=MQ.drag.moved;MQ.drag=null;window.removeEventListener('pointermove',onMove);window.removeEventListener('pointerup',onUp);
+      if(moved){el.dataset.dragged='1';setTimeout(()=>{delete el.dataset.dragged;},50);}};
+    el.addEventListener('pointerdown',e=>{if(e.pointerType==='touch'||e.button!==0)return;MQ.drag={x:e.clientX,start:MQ.pos,moved:false};window.addEventListener('pointermove',onMove);window.addEventListener('pointerup',onUp);e.preventDefault();});
     el.addEventListener('click',e=>{if(el.dataset.dragged){e.stopPropagation();e.preventDefault();}},true);
     el.addEventListener('touchstart',()=>{MQ.drag={touch:true};},{passive:true});
     el.addEventListener('touchend',()=>{MQ.pos=el.scrollLeft;MQ.drag=null;},{passive:true});
