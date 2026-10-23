@@ -1,0 +1,26 @@
+name: Remove a pick
+
+on:
+  workflow_dispatch:
+    inputs:
+      pick_id:
+        description: "Pick id to remove, as Name_GameId (for example Kev_401909848)"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  remove:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Delete the pick from Firebase
+        env:
+          POOL_PASSWORD: ${{ secrets.POOL_PASSWORD }}
+          PICK_ID: ${{ inputs.pick_id }}
+        run: python scripts/remove_pick.py
