@@ -149,6 +149,10 @@ details.day .daybody{display:flex;flex-direction:column;gap:10px;margin-top:10px
 .pickbtn:hover:not(:disabled){border-color:var(--ink)}
 .pickbtn[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .pickbtn:disabled{cursor:default;opacity:.85}
+.pickbtn.islocked{cursor:not-allowed;opacity:.85}
+.pickbtn .spwrap{display:flex;flex-direction:column;align-items:flex-end;gap:3px;flex:none}
+.padlock{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--lock);font-family:var(--body)}
+.pickbtn[aria-pressed="true"] .padlock{color:inherit;opacity:.8}
 .pickbtn.nolines .sp{color:var(--muted);font-size:13px;font-family:var(--body)}
 .score{font-family:var(--display);font-size:30px;font-weight:700;line-height:1}
 .pickers{display:flex;gap:4px;flex-wrap:wrap;min-height:22px}
@@ -337,7 +341,8 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
       const chips=who.map(k=>{const r=grade(k,g);return `<span class="ini ${r?r.result:''} ${k.player===S.me?'me':''} ${k.moneyball?'mb':k.lock?'lk':''}" title="${esc(k.player)} ${esc(spStr(k.spread))}${k.moneyball?' (mega bonus)':k.lock?' (lock)':''}">${ini(k.player)}</span>`;}).join('');
       const sc=fin||live?`<span class="score num">${team===g.home?g.homeScore??'':g.awayScore??''}</span>`:'';const spTxt=sp==null?'Line pending':spStr(sp);
       const logo=logoOf(team);
-      return `<div class="side" ${tcStyle(team)}><button class="pickbtn ${sp==null?'nolines':''}" data-game="${esc(g.id)}" data-team="${esc(team)}" aria-pressed="${mine?'true':'false'}" ${locked||sp==null||busy?'disabled':''}>${logo?`<img class="logo" src="${esc(logo)}" alt="" loading="lazy">`:''}<span class="team">${esc(team)}<span class="tname">${esc(name||'')}</span></span>${sc||`<span class="sp num">${esc(spTxt)}</span>`}</button><div class="pickers">${chips}</div></div>`;};
+      const padlock=`<span class="padlock" aria-label="Locked"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><rect x="3" y="7" width="10" height="8" rx="1.5" fill="currentColor"/><path d="M5 7V5a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Locked</span>`;
+      return `<div class="side" ${tcStyle(team)}><button class="pickbtn ${sp==null?'nolines':''} ${locked?'islocked':''}" data-game="${esc(g.id)}" data-team="${esc(team)}" aria-pressed="${mine?'true':'false'}" ${locked?'aria-disabled="true"':''} ${(!locked&&sp==null)||busy?'disabled':''}>${logo?`<img class="logo" src="${esc(logo)}" alt="" loading="lazy">`:''}<span class="team">${esc(team)}<span class="tname">${esc(name||'')}</span></span><span class="spwrap">${sc||`<span class="sp num">${esc(spTxt)}</span>`}${locked?padlock:''}</span></button><div class="pickers">${chips}</div></div>`;};
     const tag=fin?`<span class="badge final">Final</span>`:live?`<span class="badge live">Live</span>`:locked?`<span class="badge lock">Locked</span>`:'';
     const bonus=mult>1?`<span class="badge bonus">${esc(g.label||'Bonus')} ${mult}x</span>`:'';
     const lineNote=g.spreadHome!=null&&!locked?`<span>${esc(g.home)} ${esc(spStr(g.spreadHome))}${g.spreadUpdated?`, line as of ${esc(fmtStamp.format(new Date(g.spreadUpdated)))}`:''}</span>`:'';
@@ -488,6 +493,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
       finally{S.busy.delete(g.id);renderGames();}
       return;}
     const b=e.target.closest('.pickbtn');if(!b||b.disabled)return;
+    if(b.classList.contains('islocked')){toast('This game has already started');return;}
     if(!S.me){$('who').classList.add('nudge');toast('Choose your name first');$('who').scrollIntoView({behavior:'smooth',block:'center'});return;}
     if(!S.db){toast('Picks are not connected yet',true);return;}
     const g=S.games[b.dataset.game];if(!g)return;if(isLocked(g)){toast('That game has tipped off');render();return;}
