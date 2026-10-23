@@ -1,0 +1,38 @@
+{
+ "backedUpAt": "2026-10-23T19:56:42Z",
+ "count": 2,
+ "picks": {
+  "Kev_401909095": {
+   "_updated": "2026-10-23T19:38:46.838360Z",
+   "away": "NYK",
+   "gameDate": "2026-10-23",
+   "gameId": "401909095",
+   "gameStart": "2026-10-23T23:00:00.000Z",
+   "home": "BOS",
+   "label": null,
+   "lock": false,
+   "moneyball": false,
+   "multiplier": 1,
+   "pickedAt": "2026-10-23T19:38:46.630Z",
+   "player": "Kev",
+   "spread": -2.5,
+   "team": "BOS"
+  },
+  "Kev_401909848": {
+   "_updated": "2026-10-23T19:38:42.604986Z",
+   "away": "CHI",
+   "gameDate": "2026-10-23",
+   "gameId": "401909848",
+   "gameStart": "2026-10-23T20:00:00.000Z",
+   "home": "MIL",
+   "label": null,
+   "lock": true,
+   "moneyball": false,
+   "multiplier": 1,
+   "pickedAt": "2026-10-23T19:38:39.085Z",
+   "player": "Kev",
+   "spread": 1.5,
+   "team": "CHI"
+  }
+ }
+}
