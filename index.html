@@ -71,11 +71,12 @@ header{display:flex;flex-direction:column;gap:14px;padding-top:28px;border-botto
 .tile.flag-rs{--flag:url("assets/flag-serbia.svg")}
 .tile.flag-it{--flag:url("assets/flag-italy.svg")}
 .tile .name{font-family:var(--display);font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:.03em;display:flex;justify-content:space-between;align-items:baseline}
-.tile .rank{font-size:12px;color:var(--muted);letter-spacing:.1em}
+.tile .rank{font-size:12px;color:var(--ink);letter-spacing:.1em}
 .tile .pts{font-family:var(--display);font-size:46px;font-weight:700;line-height:1}
-.tile .rec{font-size:13px;color:var(--muted)}
+.tile .rec{font-size:13px;color:var(--ink)}
 .tile .wk{font-size:13px;font-weight:600}
-.tile .wkp{font-size:12px;color:var(--muted)}
+.tile .wk.zero{color:var(--ink)}
+.tile .wkp{font-size:12px;color:var(--ink)}
 .tile .wkp.full{color:var(--ink);font-weight:600}
 .lockbtn{width:100%;justify-self:stretch;text-align:center;border:1.5px solid var(--accent);background:none;color:var(--accent);border-radius:4px;padding:5px 10px;font-family:var(--display);font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
 .lockbtn[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
