@@ -195,7 +195,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
         <dt>Start</dt><dd>Everyone opens the season at 30 points. The tally runs from there.</dd>
         <dt>Regular pick</dt><dd>+1 if it covers, nothing if it does not.</dd>
         <dt>Lock</dt><dd>Once you have picked a game, tap "This is a Lock" on it. A lock pays +2 if it covers and costs -1 if it does not. Lock as many of your picks as you dare; you can unlock until tip-off.</dd>
-        <dt>Moneyball</dt><dd>One per person for the whole season. Tap "This is a Moneyball" on a pick: +5 if it covers, nothing if it does not. You can move it to another game until the game it is on tips off; after that it is spent. A Moneyball cannot also be a lock, and bonus games do not double it.</dd>
+        <dt>Mega Bonus</dt><dd>One per person for the whole season. Tap "This is a Mega Bonus" on a pick: +5 if it covers, nothing if it does not. You can move it to another game until the game it is on tips off; after that it is spent. A Mega Bonus cannot also be a lock, and Christmas and Cup games do not double it.</dd>
         <dt>Bonus games</dt><dd>Christmas Day and NBA Cup group-stage games double the payout on a cover (+2 regular, +4 lock). A miss costs the same as always.</dd>
         <dt>Push</dt><dd>0 points when the game lands exactly on the number.</dd>
         <dt>Volume</dt><dd>Up to 5 picks a week, Monday through Sunday. No minimum. Your tile shows how many you have used.</dd>
@@ -272,7 +272,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
   const gameList=()=>Object.values(S.games);
 
   function pointsFor(r,mult,lock,mb){const c=S.cfg;
-    if(mb){return r==='win'?c.moneyballWin:r==='loss'?-c.moneyballLoss:c.push;} // the Moneyball is a flat payout, bonus games do not double it
+    if(mb){return r==='win'?c.moneyballWin:r==='loss'?-c.moneyballLoss:c.push;} // the Mega Bonus is a flat payout, bonus games do not double it
     if(r==='win')return (lock?c.lockWin:c.win)*(mult||1);if(r==='loss')return -(lock?c.lockLoss:c.loss);return c.push;}
   const kindOf=p=>p.moneyball?'moneyball':p.lock?'lock':'regular';
   function grade(p,g){ // graded live from the final score; the spread is the one stored on the pick
@@ -292,7 +292,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
   }
   function weekPickCount(player,day){const wk=weekKey(day);return S.picks.filter(k=>k.player===player&&weekKey(k.gameDate||(S.games[k.gameId]||{}).date||day)===wk).length;}
   function renderBoard(){const st=standings();const top=st[0]&&st[0].pts;
-    $('board').innerHTML=st.map((s,i)=>`<div class="tile ${s.pts===top&&S.picks.length?'lead':''}"><div class="name"><span>${esc(s.p)}</span><span class="rank num">${i+1}</span></div><div class="pts num">${s.pts}</div><div class="rec num">${s.w}-${s.l}-${s.t} ATS${s.open?` <span>(${s.open} open)</span>`:''}</div><div class="wk num ${s.wk>0?'pos':s.wk<0?'neg':'zero'}">${signed(s.wk)} this week</div><div class="wkp num ${s.wkPicks>=MAX_WEEK?'full':''}">${s.wkPicks} of ${MAX_WEEK} picks used this week${s.wkLocks?`, ${s.wkLocks} lock${s.wkLocks===1?'':'s'}`:''}</div><div class="wkp num">${moneyballOf(s.p)?'Moneyball used':'Moneyball available'}</div></div>`).join('');}
+    $('board').innerHTML=st.map((s,i)=>`<div class="tile ${s.pts===top&&S.picks.length?'lead':''}"><div class="name"><span>${esc(s.p)}</span><span class="rank num">${i+1}</span></div><div class="pts num">${s.pts}</div><div class="rec num">${s.w}-${s.l}-${s.t} ATS${s.open?` <span>(${s.open} open)</span>`:''}</div><div class="wk num ${s.wk>0?'pos':s.wk<0?'neg':'zero'}">${signed(s.wk)} this week</div><div class="wkp num ${s.wkPicks>=MAX_WEEK?'full':''}">${s.wkPicks} of ${MAX_WEEK} picks used this week${s.wkLocks?`, ${s.wkLocks} lock${s.wkLocks===1?'':'s'}`:''}</div><div class="wkp num">${moneyballOf(s.p)?'Mega Bonus used':'Mega Bonus available'}</div></div>`).join('');}
   const moneyballOf=player=>S.picks.find(k=>k.player===player&&k.moneyball);
   function renderGames(){const v=$('view-board');const today=nowET();
     const picksBy={};for(const k of S.picks)(picksBy[k.gameId]=picksBy[k.gameId]||[]).push(k);
@@ -308,7 +308,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     v.querySelectorAll('details.day').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)openDays.add(d.dataset.day);else openDays.delete(d.dataset.day);}));}
   function renderGame(g,picks){const locked=isLocked(g),fin=isFinal(g),live=g.status==='inprogress';const mult=g.multiplier||1;const w=S.writeups[g.id]||{};
     const side=team=>{const name=team===g.home?g.homeName:g.awayName;const sp=sideSpread(g,team);const mine=picks.find(k=>k.player===S.me&&k.team===team);const who=picks.filter(k=>k.team===team);const busy=S.busy.has(g.id);
-      const chips=who.map(k=>{const r=grade(k,g);return `<span class="ini ${r?r.result:''} ${k.player===S.me?'me':''} ${k.moneyball?'mb':k.lock?'lk':''}" title="${esc(k.player)} ${esc(spStr(k.spread))}${k.moneyball?' (moneyball)':k.lock?' (lock)':''}">${ini(k.player)}</span>`;}).join('');
+      const chips=who.map(k=>{const r=grade(k,g);return `<span class="ini ${r?r.result:''} ${k.player===S.me?'me':''} ${k.moneyball?'mb':k.lock?'lk':''}" title="${esc(k.player)} ${esc(spStr(k.spread))}${k.moneyball?' (mega bonus)':k.lock?' (lock)':''}">${ini(k.player)}</span>`;}).join('');
       const sc=fin||live?`<span class="score num">${team===g.home?g.homeScore??'':g.awayScore??''}</span>`:'';const spTxt=sp==null?'Line pending':spStr(sp);
       return `<div class="side"><button class="pickbtn ${sp==null?'nolines':''}" data-game="${esc(g.id)}" data-team="${esc(team)}" aria-pressed="${mine?'true':'false'}" ${locked||sp==null||busy?'disabled':''}><span class="team">${esc(team)}<span class="tname">${esc(name||'')}</span></span>${sc||`<span class="sp num">${esc(spTxt)}</span>`}</button><div class="pickers">${chips}</div></div>`;};
     const tag=fin?`<span class="badge final">Final</span>`:live?`<span class="badge live">Live</span>`:locked?`<span class="badge lock">Locked</span>`:'';
@@ -322,11 +322,11 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     const myPick=picks.find(k=>k.player===S.me);
     let lockRow='';
     if(myPick){const busy=locked||S.busy.has(g.id);const c=S.cfg;
-      const lockHint=myPick.moneyball?`Moneyball: ${signed(c.moneyballWin)} if ${esc(myPick.team)} covers, nothing if not. Your one shot for the season.`:myPick.lock?`Lock: ${signed(c.lockWin*mult)} if ${esc(myPick.team)} covers, -${c.lockLoss} if not.`:`Regular pick: ${signed(c.win*mult)} if ${esc(myPick.team)} covers, nothing if not.`;
+      const lockHint=myPick.moneyball?`Mega Bonus: ${signed(c.moneyballWin)} if ${esc(myPick.team)} covers, nothing if not. Your one shot for the season.`:myPick.lock?`Lock: ${signed(c.lockWin*mult)} if ${esc(myPick.team)} covers, -${c.lockLoss} if not.`:`Regular pick: ${signed(c.win*mult)} if ${esc(myPick.team)} covers, nothing if not.`;
       const mb=moneyballOf(S.me);const mbElsewhere=mb&&mb.gameId!==g.id;const mbGame=mbElsewhere?S.games[mb.gameId]:null;const mbMovable=mbElsewhere&&mbGame&&!isLocked(mbGame);
-      const mbHint=myPick.moneyball?'':mbElsewhere?(mbMovable?`Your Moneyball is on ${esc(mb.team)} ${esc(spStr(mb.spread))} (${esc(fmtShort.format(new Date((mb.gameDate||'')+'T12:00:00Z')))}). Take it off there first to use it here.`:`Moneyball already used on ${esc(mb.team)} ${esc(spStr(mb.spread))}. One per season.`):`One per season: ${signed(c.moneyballWin)} if it covers, nothing if not.`;
+      const mbHint=myPick.moneyball?'':mbElsewhere?(mbMovable?`Your Mega Bonus is on ${esc(mb.team)} ${esc(spStr(mb.spread))} (${esc(fmtShort.format(new Date((mb.gameDate||'')+'T12:00:00Z')))}). Take it off there first to use it here.`:`Mega Bonus already used on ${esc(mb.team)} ${esc(spStr(mb.spread))}. One per season.`):`One per season: ${signed(c.moneyballWin)} if it covers, nothing if not.`;
       lockRow=`<div class="blurb lockrow"><div class="lockline"><button class="lockbtn" data-lock="${esc(g.id)}" aria-pressed="${myPick.lock&&!myPick.moneyball?'true':'false'}" ${busy||myPick.moneyball?'disabled':''}>${myPick.lock&&!myPick.moneyball?'Locked in':'This is a Lock'}</button><span class="hint">${lockHint}</span></div>
-        <div class="lockline"><button class="lockbtn mb" data-moneyball="${esc(g.id)}" aria-pressed="${myPick.moneyball?'true':'false'}" ${busy||(mbElsewhere&&!myPick.moneyball)?'disabled':''}>${myPick.moneyball?'Moneyball is on this':'This is a Moneyball'}</button><span class="hint">${mbHint}</span></div></div>`;}
+        <div class="lockline"><button class="lockbtn mb" data-moneyball="${esc(g.id)}" aria-pressed="${myPick.moneyball?'true':'false'}" ${busy||(mbElsewhere&&!myPick.moneyball)?'disabled':''}>${myPick.moneyball?'Mega Bonus is on this':'This is a Mega Bonus'}</button><span class="hint">${mbHint}</span></div></div>`;}
     return `<article class="game ${mult>1?'bonus':''}"><div class="meta"><span class="when">${esc(g.away)} at ${esc(g.home)}, ${esc(fmtTime.format(new Date(g.start)))} ET</span>${tag}${bonus}${lineNote}${lineLive}</div>${w.blurb?`<div class="blurb"><span class="eyebrow">Matchup${stamp?', written '+esc(stamp):''}</span>${esc(w.blurb)}</div>`:''}${inj}${pk}${wnote}${side(g.away)}${side(g.home)}${lockRow}</article>`;}
   function renderHistory(){$('histfilters').innerHTML=['All',...PLAYERS].map(p=>`<button class="chip" data-hist="${esc(p)}" aria-pressed="${S.hist===p}">${esc(p)}</button>`).join('');
     const rows=S.picks.filter(k=>S.hist==='All'||k.player===S.hist).map(k=>{const g=S.games[k.gameId];const day=k.gameDate||(g&&g.date)||k.pickedAt.slice(0,10);const r=grade(k,g);
@@ -337,7 +337,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     for(const x of rows){const wk=weekKey(x.day);
       if(wk!==lastWk){const wkRows=rows.filter(y=>weekKey(y.day)===wk);const tally=wkRows.reduce((a,y)=>a+(y.r?y.r.points:0),0);out+=`<tr class="wkrow"><td colspan="6">${esc(weekLabel(wk))}<span class="num" style="float:right">${signed(tally)}</span></td></tr>`;lastWk=wk;}
       const res=x.r?x.r.result:'open';
-      out+=`<tr><td class="num">${esc(fmtShort.format(new Date(x.day+'T12:00:00Z')))}</td><td>${esc(x.k.player)}</td><td class="pk">${esc(x.k.team)}<span class="sp">${esc(spStr(x.k.spread))}</span>${x.k.moneyball?'<span class="lockchip mb">Moneyball</span>':x.k.lock?'<span class="lockchip">Lock</span>':''}${(x.k.multiplier||1)>1?' <span class="badge bonus">2x</span>':''}</td><td class="num">${esc(x.away)} ${x.as??''} at ${esc(x.home)} ${x.hs??''}</td><td><span class="res ${res}">${res==='open'?(x.g&&isLocked(x.g)?'In play':'Open'):res}</span></td><td class="ptcell num ${x.r?(x.r.points>0?'pos':x.r.points<0?'neg':'zero'):'zero'}">${x.r?signed(x.r.points):''}</td></tr>`;}
+      out+=`<tr><td class="num">${esc(fmtShort.format(new Date(x.day+'T12:00:00Z')))}</td><td>${esc(x.k.player)}</td><td class="pk">${esc(x.k.team)}<span class="sp">${esc(spStr(x.k.spread))}</span>${x.k.moneyball?'<span class="lockchip mb">Mega Bonus</span>':x.k.lock?'<span class="lockchip">Lock</span>':''}${(x.k.multiplier||1)>1?' <span class="badge bonus">2x</span>':''}</td><td class="num">${esc(x.away)} ${x.as??''} at ${esc(x.home)} ${x.hs??''}</td><td><span class="res ${res}">${res==='open'?(x.g&&isLocked(x.g)?'In play':'Open'):res}</span></td><td class="ptcell num ${x.r?(x.r.points>0?'pos':x.r.points<0?'neg':'zero'):'zero'}">${x.r?signed(x.r.points):''}</td></tr>`;}
     $('histbody').innerHTML=statsHtml+`<div class="tablewrap"><table><thead><tr><th>Date</th><th>Who</th><th>Pick</th><th>Game</th><th>Result</th><th style="text-align:right">Pts</th></tr></thead><tbody>${out}</tbody></table></div>`;}
   function renderStats(player){
     const mine=S.picks.filter(k=>k.player===player);
@@ -363,7 +363,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
       ${tile('Record',rec(T.all),`${pct(T.all)} win rate, ${signed(T.all.pts)} pts`)}
       ${tile('Regular picks',rec(T.regular),`${T.regular.n} made, ${pct(T.regular)} win rate, ${signed(T.regular.pts)} pts`)}
       ${tile('Locks',rec(T.lock),`${T.lock.n} made, ${pct(T.lock)} win rate, ${signed(T.lock.pts)} pts`)}
-      ${tile('Moneyball',mbPick?`${esc(mbPick.team)} ${esc(spStr(mbPick.spread))}`:'Unused',mbPick?(mb.w?`Hit, +${S.cfg.moneyballWin}`:mb.l?'Missed':mb.p?'Pushed':'Still open'):'One shot, +'+S.cfg.moneyballWin)}
+      ${tile('Mega Bonus',mbPick?`${esc(mbPick.team)} ${esc(spStr(mbPick.spread))}`:'Unused',mbPick?(mb.w?`Hit, +${S.cfg.moneyballWin}`:mb.l?'Missed':mb.p?'Pushed':'Still open'):'One shot, +'+S.cfg.moneyballWin)}
       ${tile('Favorites',rec(T.fav),`${T.fav.n} picked, ${pct(T.fav)}`)}
       ${tile('Underdogs',rec(T.dog),`${T.dog.n} picked, ${pct(T.dog)}`)}
       ${tile('Home / away',`${rec(T.home)} / ${rec(T.away)}`,`${T.home.n} home sides, ${T.away.n} road sides`)}
@@ -383,6 +383,18 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     el.textContent=(when?`Lines and scores as of ${fmtStamp.format(new Date(when))} ET (tap Refresh for live). `:'')+(wu?`Write-ups from ${fmtStamp.format(new Date(wu))} ET, refreshed each morning. `:'')+(S.me?`You are picking as ${S.me}.`:'Choose your name above to make picks.');
     so.hidden=!S.signedIn;el.appendChild(so);}
   function render(){renderWho();renderTabs();renderBoard();renderGames();renderHistory();renderStatus();}
+  // Confetti burst for the Mega Bonus. Pure canvas, no library, skipped when the viewer prefers reduced motion.
+  function confetti(x,y){
+    if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    const c=document.createElement('canvas');c.style.cssText='position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:40';document.body.appendChild(c);
+    const dpr=window.devicePixelRatio||1;c.width=innerWidth*dpr;c.height=innerHeight*dpr;const ctx=c.getContext('2d');ctx.scale(dpr,dpr);
+    const colors=['#d4581b','#f0b429','#1f7a4d','#2f6fde','#b3261e','#8a7a2c','#ffffff'];
+    const P=[];for(let i=0;i<220;i++){const a=Math.random()*Math.PI*2,sp=6+Math.random()*11;P.push({x,y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp-6,g:.35+Math.random()*.2,w:6+Math.random()*6,h:4+Math.random()*6,r:Math.random()*Math.PI,vr:(Math.random()-.5)*.4,c:colors[i%colors.length],life:70+Math.random()*50});}
+    let t=0;(function frame(){ctx.clearRect(0,0,innerWidth,innerHeight);let alive=0;
+      for(const p of P){if(p.life<=0)continue;alive++;p.vy+=p.g;p.vx*=.985;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;p.life--;
+        ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.r);ctx.globalAlpha=Math.min(1,p.life/25);ctx.fillStyle=p.c;ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);ctx.restore();}
+      if(alive&&t++<160)requestAnimationFrame(frame);else c.remove();})();
+  }
   let toastT;function toast(msg,err){let t=document.querySelector('.toast');if(!t){t=document.createElement('div');t.className='toast';document.body.appendChild(t);}t.textContent=msg;t.classList.toggle('err',!!err);clearTimeout(toastT);toastT=setTimeout(()=>t.remove(),2600);}
 
   // Data: the repo's JSON files, then a live overlay straight from ESPN for today and tomorrow.
@@ -434,11 +446,12 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     if(lb&&!lb.disabled){const gid=lb.dataset.lock||lb.dataset.moneyball;const g=S.games[gid];const mine=S.picks.find(k=>k.player===S.me&&k.gameId===gid);if(!g||!mine||!S.db)return;
       if(isLocked(g)){toast('That game has tipped off');render();return;}
       const isMb='moneyball' in lb.dataset;let patch,msg;
-      if(isMb){if(!mine.moneyball){const other=moneyballOf(S.me);if(other){toast('Your Moneyball is already on another game',true);return;}patch={moneyball:true,lock:false};msg=`${mine.team} ${spStr(mine.spread)} is your Moneyball. One per season.`;}
-        else{patch={moneyball:false};msg=`Moneyball taken off ${mine.team} ${spStr(mine.spread)}. It is available again.`;}}
+      if(isMb){if(!mine.moneyball){const other=moneyballOf(S.me);if(other){toast('Your Mega Bonus is already on another game',true);return;}patch={moneyball:true,lock:false};msg=`${mine.team} ${spStr(mine.spread)} is your Mega Bonus. One per season.`;}
+        else{patch={moneyball:false};msg=`Mega Bonus taken off ${mine.team} ${spStr(mine.spread)}. It is available again.`;}}
       else{patch={lock:!mine.lock};msg=!mine.lock?`${mine.team} ${spStr(mine.spread)} is now a lock`:`${mine.team} ${spStr(mine.spread)} is back to a regular pick`;}
+      const rect=lb.getBoundingClientRect();const cx=rect.left+rect.width/2,cy=rect.top+rect.height/2;
       S.busy.add(g.id);renderGames();
-      try{await S.db.collection('picks').doc(mine.id).update(patch);toast(msg);}
+      try{await S.db.collection('picks').doc(mine.id).update(patch);toast(msg);if(isMb&&patch.moneyball)confetti(cx,cy);}
       catch(err){console.error(err);toast('Could not update that pick, try again',true);}
       finally{S.busy.delete(g.id);renderGames();}
       return;}
