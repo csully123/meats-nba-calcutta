@@ -9,7 +9,7 @@
 <style>
 :root{
   --bg:#f3f1ec; --surface:#ffffff; --ink:#15202b; --muted:#5f6b78; --line:#d9d4ca;
-  --accent:#d4581b; --accent-ink:#ffffff;
+  --accent:#1f5fbf; --accent-ink:#ffffff;
   --win:#1f7a4d; --loss:#b3261e; --push:#8a7a2c;
   --soft:#ebe7df; --lock:#8b8f96; --outline:#15202b;
   --display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;
@@ -19,7 +19,7 @@
 }
 @media (prefers-color-scheme: dark){ :root{
   --bg:#0b1118; --surface:#182230; --ink:#eef1f4; --muted:#9aa6b2; --line:#2a3542;
-  --accent:#f08a4b; --accent-ink:#15202b;
+  --accent:#6ea0ff; --accent-ink:#0b1118;
   --win:#4cc78a; --loss:#ff7b73; --push:#d9c35a;
   --soft:#212c39; --lock:#6d7682; --outline:#ffffff; color-scheme:dark } }
 *{box-sizing:border-box}
@@ -545,7 +545,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
     const c=document.createElement('canvas');c.style.cssText='position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:40';document.body.appendChild(c);
     const dpr=window.devicePixelRatio||1;c.width=innerWidth*dpr;c.height=innerHeight*dpr;const ctx=c.getContext('2d');ctx.scale(dpr,dpr);
-    const colors=['#d4581b','#f0b429','#1f7a4d','#2f6fde','#b3261e','#8a7a2c','#ffffff'];
+    const colors=['#1f5fbf','#f0b429','#1f7a4d','#6ea0ff','#b3261e','#d9a21b','#ffffff'];
     const P=[];for(let i=0;i<220;i++){const a=Math.random()*Math.PI*2,sp=6+Math.random()*11;P.push({x,y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp-6,g:.35+Math.random()*.2,w:6+Math.random()*6,h:4+Math.random()*6,r:Math.random()*Math.PI,vr:(Math.random()-.5)*.4,c:colors[i%colors.length],life:70+Math.random()*50});}
     let t=0;(function frame(){ctx.clearRect(0,0,innerWidth,innerHeight);let alive=0;
       for(const p of P){if(p.life<=0)continue;alive++;p.vy+=p.g;p.vx*=.985;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;p.life--;
