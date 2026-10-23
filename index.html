@@ -18,7 +18,7 @@
   color-scheme:light;
 }
 @media (prefers-color-scheme: dark){ :root{
-  --bg:#0f151d; --surface:#18212c; --ink:#eef1f4; --muted:#9aa6b2; --line:#2a3542;
+  --bg:#0b1118; --surface:#182230; --ink:#eef1f4; --muted:#9aa6b2; --line:#2a3542;
   --accent:#f08a4b; --accent-ink:#15202b;
   --win:#4cc78a; --loss:#ff7b73; --push:#d9c35a;
   --soft:#212c39; --lock:#6d7682; --outline:#ffffff; color-scheme:dark } }
@@ -100,7 +100,7 @@ header{display:flex;flex-direction:column;gap:14px;padding-top:28px;border-botto
 .tabs{display:flex;gap:4px;border-bottom:1.5px solid var(--line)}
 .tabs button{background:none;border:0;padding:10px 14px;font-family:var(--display);font-size:18px;text-transform:uppercase;letter-spacing:.05em;font-weight:600;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-1.5px}
 .tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
-.day{display:flex;flex-direction:column;gap:10px}
+.day{display:flex;flex-direction:column;gap:16px}
 .dayhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
 .dayhead .cnt{font-size:13px;color:var(--muted)}
 details.day>summary{list-style:none;cursor:pointer;padding:10px 12px;background:var(--surface);border:1.5px solid var(--line);border-left:4px solid var(--line)}
@@ -109,8 +109,8 @@ details.day>summary h2::before{content:"\25B8";display:inline-block;width:1em;co
 details.day[open]>summary h2::before{transform:rotate(90deg)}
 details.day>summary:hover{border-color:var(--ink)}
 details.day>summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-details.day .daybody{display:flex;flex-direction:column;gap:10px;margin-top:10px}
-.game{--ac:var(--line);--hc:var(--line);background:var(--surface);border:2px solid var(--outline);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;position:relative}
+details.day .daybody{display:flex;flex-direction:column;gap:16px;margin-top:12px}
+.game{--ac:var(--line);--hc:var(--line);background:var(--surface);border:1px solid color-mix(in srgb,var(--outline) 14%,transparent);border-radius:10px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.18),0 10px 24px -14px rgba(0,0,0,.45);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;position:relative}
 .game.picked .meta{background:var(--pc);color:var(--pc-ink);border-bottom:0;padding:10px 12px;min-height:44px}
 .game.picked .meta .when{color:var(--pc-ink)}
 .game.picked .meta .live-tag{color:var(--pc-ink);opacity:.85}
@@ -120,7 +120,7 @@ details.day .daybody{display:flex;flex-direction:column;gap:10px;margin-top:10px
 .cpickwrap{background:linear-gradient(90deg,color-mix(in srgb,var(--tc,var(--accent)) 16%,var(--surface)),var(--surface) 60%);border-left:5px solid var(--tc,var(--accent))}
 .cpick .team{color:color-mix(in srgb,var(--tc,var(--accent)) 72%,var(--ink));display:inline-flex;align-items:center;gap:6px}
 .logo.sm{width:26px;height:26px;object-fit:contain}
-.game.picked{border-color:var(--pc);border-width:2px}
+.game.picked{border-color:var(--pc);box-shadow:0 0 0 1px var(--pc),0 10px 24px -14px rgba(0,0,0,.45)}
 .game.picked .side{--tc:var(--pc);border-top-color:color-mix(in srgb,var(--pc) 35%,var(--line))}
 .game.picked .side+.side{border-left-color:color-mix(in srgb,var(--pc) 35%,var(--line))}
 .game.picked .pickbtn[aria-pressed="true"]{background:var(--pc);color:var(--pc-ink);border-color:var(--pc)}
