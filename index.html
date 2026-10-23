@@ -289,7 +289,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
         <dt>Line</dt><dd>You are graded on the spread shown when you made the pick, not the closing line. Lines appear once books post them, usually the day before.</dd>
         <dt>Lock</dt><dd>Picks lock at tip-off. Until then you can switch sides or take a pick back.</dd>
         <dt>Season</dt><dd>Regular season only, plus every NBA Cup game including the Cup final. No play-in, no playoffs.</dd>
-        <dt>Stats</dt><dd>On the History tab, tap a name to see that person's numbers: record and win rate overall and by pick type, favorites against underdogs, home against road, streaks, best week and more.</dd>
+        <dt>Stats</dt><dd>On the Stats tab, tap a name to see that person's numbers: record and win rate overall and by pick type, favorites against underdogs, home against road, streaks, best week and more.</dd>
         <dt>Live vs daily</dt><dd>Live, every time you refresh: spreads, scores, results, standings and everyone's picks and locks. Once a day, each morning: the matchup note, injury list and Claude's pick for that day's games, stamped with the time they were written. A line can move after the write-up; the number on the pick buttons is the one you are graded on.</dd>
       </dl>
     </details>
@@ -309,6 +309,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
   <div class="tabs" role="tablist" id="tabs">
     <button role="tab" data-tab="board" aria-selected="true">Board</button>
     <button role="tab" data-tab="history" aria-selected="false">History</button>
+    <button role="tab" data-tab="stats" aria-selected="false">Stats</button>
   </div>
 
   <section id="view-board" class="day" style="gap:22px"><div class="skel"><div></div><div></div><div></div></div></section>
@@ -316,6 +317,11 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
   <section id="view-history" hidden style="display:flex;flex-direction:column;gap:14px">
     <div class="filters" id="histfilters"></div>
     <div id="histbody"></div>
+  </section>
+
+  <section id="view-stats" hidden style="display:flex;flex-direction:column;gap:14px">
+    <div class="filters" id="statfilters"></div>
+    <div id="statbody"></div>
   </section>
 </div>
 
@@ -341,9 +347,9 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
   const fmtStamp=new Intl.DateTimeFormat('en-US',{timeZone:ET,month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
 
   const S={db:null,me:null,tab:'board',hist:'All',games:{},writeups:{},picks:[],cfg:{...DEFAULT_CFG},dataUpdated:null,liveAt:null,busy:new Set(),ready:false};
-  try{S.me=localStorage.getItem('cc.me')||null;S.tab=localStorage.getItem('cc.tab')||'board';S.hist=localStorage.getItem('cc.hist')||'All';}catch(e){}
+  try{S.me=localStorage.getItem('cc.me')||null;S.tab=localStorage.getItem('cc.tab')||'board';S.hist=localStorage.getItem('cc.hist')||'All';S.stat=localStorage.getItem('cc.stat')||null;}catch(e){}
   if(!PLAYERS.includes(S.me))S.me=null;
-  if(!['board','history'].includes(S.tab))S.tab='board';
+  if(!['board','history','stats'].includes(S.tab))S.tab='board';
 
   const $=id=>document.getElementById(id);
   const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -472,12 +478,16 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
       return {k,g,day,r,hs:g&&g.homeScore,as:g&&g.awayScore,home:k.home||(g&&g.home)||'',away:k.away||(g&&g.away)||'',start:k.gameStart||(g&&g.start)||k.pickedAt};}).sort((a,b)=>a.start<b.start?1:a.start>b.start?-1:a.k.player<b.k.player?-1:1);
     if(!rows.length){$('histbody').innerHTML=`<div class="empty"><strong>No picks yet</strong>${S.hist==='All'?'Every pick, graded or still open, lands here.':S.hist+' has not made a pick yet.'}</div>`;return;}
     let out='',lastWk=null;
-    const statsHtml=S.hist==='All'?'':renderStats(S.hist);
     for(const x of rows){const wk=weekKey(x.day);
       if(wk!==lastWk){const wkRows=rows.filter(y=>weekKey(y.day)===wk);const tally=wkRows.reduce((a,y)=>a+(y.r?y.r.points:0),0);out+=`<tr class="wkrow"><td colspan="6">${esc(weekLabel(wk))}<span class="num" style="float:right">${signed(tally)}</span></td></tr>`;lastWk=wk;}
       const res=x.r?x.r.result:'open';
       out+=`<tr><td class="num">${esc(fmtShort.format(new Date(x.day+'T12:00:00Z')))}</td><td>${esc(x.k.player)}</td><td class="pk" ${(()=>{const c=x.g&&(x.k.team===x.g.home?x.g.homeColor:x.g.awayColor);return /^[0-9a-fA-F]{6}$/.test(c||'')?`style="--tc:#${c}"`:'';})()}><span class="tcode">${esc(x.k.team)}</span><span class="sp">${esc(spStr(x.k.spread))}</span>${x.k.moneyball?'<span class="lockchip mb">Mega Bonus</span>':x.k.lock?'<span class="lockchip">Lock</span>':''}${(x.k.multiplier||1)>1?' <span class="badge bonus">2x</span>':''}</td><td class="num">${esc(x.away)} ${x.as??''} at ${esc(x.home)} ${x.hs??''}</td><td><span class="res ${res}">${res==='open'?(x.g&&isLocked(x.g)?'In play':'Open'):res}</span></td><td class="ptcell num ${x.r?(x.r.points>0?'pos':x.r.points<0?'neg':'zero'):'zero'}">${x.r?signed(x.r.points):''}</td></tr>`;}
-    $('histbody').innerHTML=statsHtml+`<div class="tablewrap"><table><thead><tr><th>Date</th><th>Who</th><th>Pick</th><th>Game</th><th>Result</th><th style="text-align:right">Pts</th></tr></thead><tbody>${out}</tbody></table></div>`;}
+    $('histbody').innerHTML=`<div class="tablewrap"><table><thead><tr><th>Date</th><th>Who</th><th>Pick</th><th>Game</th><th>Result</th><th style="text-align:right">Pts</th></tr></thead><tbody>${out}</tbody></table></div>`;}
+  function renderStatsTab(){
+    const who=PLAYERS.includes(S.stat)?S.stat:(S.me||PLAYERS[0]);S.stat=who;
+    $('statfilters').innerHTML=PLAYERS.map(p=>`<button class="chip" data-stat="${esc(p)}" aria-pressed="${who===p}">${esc(p)}</button>`).join('');
+    const n=S.picks.filter(k=>k.player===who&&canSee(k)).length;
+    $('statbody').innerHTML=n?renderStats(who):`<div class="empty"><strong>No numbers yet</strong>${esc(who)} has no graded or visible picks yet. Stats fill in as games are played.</div>`;}
   function renderStats(player){
     const mine=S.picks.filter(k=>k.player===player&&canSee(k));
     const T={all:{n:0,w:0,l:0,p:0,pts:0},regular:{n:0,w:0,l:0,p:0,pts:0},lock:{n:0,w:0,l:0,p:0,pts:0},moneyball:{n:0,w:0,l:0,p:0,pts:0},fav:{n:0,w:0,l:0,p:0,pts:0},dog:{n:0,w:0,l:0,p:0,pts:0},home:{n:0,w:0,l:0,p:0,pts:0},away:{n:0,w:0,l:0,p:0,pts:0},bonus:{n:0,w:0,l:0,p:0,pts:0}};
@@ -514,14 +524,14 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
       ${tile('Picks per week',wkKeys.length?Math.round(10*T.all.n/wkKeys.length)/10:'0',`${wkKeys.length} week${wkKeys.length===1?'':'s'} with a pick`)}
     </div>`;}
   function renderWho(){document.querySelectorAll('#who .chip').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.player===S.me)));}
-  function renderTabs(){document.querySelectorAll('#tabs [role=tab]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===S.tab)));for(const t of ['board','history'])$('view-'+t).hidden=t!==S.tab;}
+  function renderTabs(){document.querySelectorAll('#tabs [role=tab]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===S.tab)));for(const t of ['board','history','stats'])$('view-'+t).hidden=t!==S.tab;}
   function renderStatus(){const el=$('status');if(!S.ready)return;const so=$('signout');
     if(!S.db){el.className='status warn';el.textContent='Picks are not connected yet, so the board is read-only.';return;}
     el.className='status';const when=S.liveAt||S.dataUpdated;
     const wu=Object.values(S.writeups).reduce((m,x)=>x.updated&&x.updated>m?x.updated:m,'');
     el.textContent=(when?`Lines and scores as of ${fmtStamp.format(new Date(when))} ET (tap Refresh for live). `:'')+(wu?`Write-ups from ${fmtStamp.format(new Date(wu))} ET, refreshed each morning. `:'')+(S.me?`You are picking as ${S.me}.`:'Choose your name above to make picks.');
     so.hidden=!S.signedIn;el.appendChild(so);}
-  function render(){renderWho();renderTabs();renderBoard();renderGames();renderHistory();renderStatus();}
+  function render(){renderWho();renderTabs();renderBoard();renderGames();renderHistory();renderStatsTab();renderStatus();}
   // Confetti burst for the Mega Bonus. Pure canvas, no library, skipped when the viewer prefers reduced motion.
   function confetti(x,y){
     if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
@@ -579,6 +589,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
   $('who').addEventListener('click',e=>{const b=e.target.closest('[data-player]');if(!b)return;S.me=b.dataset.player;try{localStorage.setItem('cc.me',S.me);}catch(x){}$('who').classList.remove('nudge');render();});
   $('tabs').addEventListener('click',e=>{const b=e.target.closest('[data-tab]');if(!b)return;S.tab=b.dataset.tab;try{localStorage.setItem('cc.tab',S.tab);}catch(x){}renderTabs();});
   $('histfilters').addEventListener('click',e=>{const b=e.target.closest('[data-hist]');if(!b)return;S.hist=b.dataset.hist;try{localStorage.setItem('cc.hist',S.hist);}catch(x){}renderHistory();});
+  $('statfilters').addEventListener('click',e=>{const b=e.target.closest('[data-stat]');if(!b)return;S.stat=b.dataset.stat;try{localStorage.setItem('cc.stat',S.stat);}catch(x){}renderStatsTab();});
   $('refresh').addEventListener('click',refreshAll);
   $('view-board').addEventListener('click',async e=>{
     const lb=e.target.closest('.lockbtn');
