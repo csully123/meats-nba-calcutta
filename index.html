@@ -156,6 +156,7 @@ h1::after{content:"";display:block;width:64px;height:4px;background:var(--accent
 .tile::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 50%,color-mix(in srgb,var(--surface) 85%,transparent) 100%);pointer-events:none;z-index:0}
 .tile>*{z-index:1}
 /* tonight strip */
+.slate{display:flex;flex-direction:column;gap:8px}
 .strip{display:flex;gap:10px;overflow-x:auto;padding:2px 2px 8px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
 .mini{flex:0 0 150px;scroll-snap-align:start;display:flex;flex-direction:column;gap:4px;align-items:flex-start;background:var(--surface);border:1px solid color-mix(in srgb,var(--outline) 14%,transparent);border-radius:10px;padding:10px 12px;text-align:left;box-shadow:0 1px 2px rgba(0,0,0,.15)}
 .mini:hover{border-color:var(--ink)}
@@ -169,10 +170,14 @@ h1::after{content:"";display:block;width:64px;height:4px;background:var(--accent
 .mini.mine .mp{color:color-mix(in srgb,var(--pc) 70%,var(--ink))}
 .game.flash{outline:3px solid var(--accent);outline-offset:3px}
 /* collapsible write-up */
-.wdet>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px}
+.wdet{padding:8px 12px}
+.wdet>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;background:var(--soft);border:1.5px solid var(--line);border-radius:6px;padding:8px 12px}
+.wdet>summary:hover{border-color:var(--ink)}
 .wdet>summary::-webkit-details-marker{display:none}
-.wdet>summary .eyebrow::before{content:"\25B8";display:inline-block;width:1em;color:var(--muted);transition:transform .15s}
-.wdet[open]>summary .eyebrow::before{transform:rotate(90deg)}
+.wdet>summary .eyebrow{color:var(--ink);font-size:13px;letter-spacing:.08em}
+.wdet>summary::after{content:"Show \25BE";font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
+.wdet[open]>summary::after{content:"Hide \25B4"}
+.wdet .wtext{margin:10px 0 0;padding:0 2px}
 .wdet .wtext{margin:8px 0 0}
 .wblock{margin-top:10px}
 .wblock.wnote{font-size:12px;color:var(--muted)}
@@ -265,7 +270,6 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
         <div class="eyebrow">Regular season, against the spread</div>
         <h1>Meats NBA Calcutta</h1>
       </div>
-      <div class="sub">Four guys, four flags, one season against the number.</div>
     </div>
     <details class="rules" id="rules">
       <summary><h2>The rules</h2><span class="hint">tap to open</span></summary>
@@ -382,7 +386,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     return `<svg class="spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true"><polyline points="${d}" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${last[0].toFixed(1)}" cy="${last[1].toFixed(1)}" r="2.6" fill="currentColor"/></svg>`;}
   function weekPickCount(player,day){const wk=weekKey(day);return S.picks.filter(k=>k.player===player&&weekKey(k.gameDate||(S.games[k.gameId]||{}).date||day)===wk).length;}
   function renderBoard(){const st=standings();const top=st[0]&&st[0].pts;
-    $('board').innerHTML=st.map((s,i)=>`<div class="tile ${s.pts===top&&S.picks.length?'lead':''} ${FLAGS[s.p]||''}"><div class="name"><span>${esc(s.p)}${s.pts===top&&S.picks.length?`<svg class="crown" viewBox="0 0 24 16" width="18" height="12" aria-label="Leader"><path d="M2 14h20l-2-9-5 4-3-7-3 7-5-4z" fill="currentColor"/></svg>`:''}</span><span class="rank num">${i+1}</span></div><div class="ptsrow"><div class="pts num">${s.pts}</div>${spark(s.series)}</div><div class="rec num">${s.w}-${s.l}-${s.t} ATS${s.open?` <span>(${s.open} open)</span>`:''}</div><div class="wk num ${s.wk>0?'pos':s.wk<0?'neg':'zero'}">${signed(s.wk)} this week</div><div class="wkp num ${s.wkPicks>=MAX_WEEK?'full':''}">${s.wkPicks} of ${MAX_WEEK} picks used this week${s.wkLocks?`, ${s.wkLocks} lock${s.wkLocks===1?'':'s'}`:''}</div><div class="wkp num">${moneyballOf(s.p)?'Mega Bonus used':'Mega Bonus available'}</div></div>`).join('');}
+    $('board').innerHTML=st.map((s,i)=>`<div class="tile ${s.pts===top&&S.picks.length?'lead':''} ${FLAGS[s.p]||''}"><div class="name"><span>${esc(s.p)}${s.pts===top&&S.picks.length?`<svg class="crown" viewBox="0 0 24 16" width="18" height="12" aria-label="Leader"><path d="M2 14h20l-2-9-5 4-3-7-3 7-5-4z" fill="currentColor"/></svg>`:''}</span><span class="rank num">${i+1}</span></div><div class="pts num">${s.pts}</div><div class="rec num">${s.w}-${s.l}-${s.t} ATS${s.open?` <span>(${s.open} open)</span>`:''}</div><div class="wk num ${s.wk>0?'pos':s.wk<0?'neg':'zero'}">${signed(s.wk)} this week</div><div class="wkp num ${s.wkPicks>=MAX_WEEK?'full':''}">${s.wkPicks} of ${MAX_WEEK} picks used this week${s.wkLocks?`, ${s.wkLocks} lock${s.wkLocks===1?'':'s'}`:''}</div><div class="wkp num">${moneyballOf(s.p)?'Mega Bonus used':'Mega Bonus available'}</div></div>`).join('');}
   const moneyballOf=player=>S.picks.find(k=>k.player===player&&k.moneyball);
   function renderGames(){const v=$('view-board');const today=nowET();
     const picksBy={};for(const k of S.picks)(picksBy[k.gameId]=picksBy[k.gameId]||[]).push(k);
@@ -393,9 +397,9 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     const openDays=S.openDays||(S.openDays=new Set());
     const tonight=(days[today]||[]).slice().sort((a,b)=>a.start<b.start?-1:1);
     const nextDay=Object.keys(days).filter(d=>d>today).sort()[0];
-    const strip=tonight.length?`<div class="strip" aria-label="Tonight at a glance">${tonight.map(g=>{const my=(picksBy[g.id]||[]).find(k=>k.player===S.me);const hex=c=>/^[0-9a-fA-F]{6}$/.test(c||'')?'#'+c:'';const pc=my?hex(my.team===g.home?g.homeColor:g.awayColor):'';
+    const strip=tonight.length?`<div class="slate"><div class="dayhead"><h2>Today's Slate</h2><span class="cnt num">${tonight.length} game${tonight.length===1?'':'s'}, tap one to jump to it</span></div><div class="strip" aria-label="Today's slate">${tonight.map(g=>{const my=(picksBy[g.id]||[]).find(k=>k.player===S.me);const hex=c=>/^[0-9a-fA-F]{6}$/.test(c||'')?'#'+c:'';const pc=my?hex(my.team===g.home?g.homeColor:g.awayColor):'';
       const fin=isFinal(g),live=g.status==='inprogress';const score=fin||live?`${g.awayScore??''}-${g.homeScore??''}`:'';
-      return `<button class="mini ${my?'mine':''}" data-jump="g-${esc(g.id)}" ${pc?`style="--pc:${pc}"`:''}><span class="logos">${g.awayLogo?`<img src="${esc(g.awayLogo)}" alt="">`:''}<span class="at">at</span>${g.homeLogo?`<img src="${esc(g.homeLogo)}" alt="">`:''}</span><span class="mt">${esc(g.away)} at ${esc(g.home)}</span><span class="ml num">${fin?'Final '+score:live?'Live '+score:fmtTime.format(new Date(g.start))}</span><span class="mp num">${my?`${esc(my.team)} ${esc(spStr(my.spread))}${my.moneyball?' MB':my.lock?' Lock':''}`:(g.spreadHome!=null?`${esc(g.home)} ${esc(spStr(g.spreadHome))}`:'Line pending')}</span></button>`;}).join('')}</div>`:
+      return `<button class="mini ${my?'mine':''}" data-jump="g-${esc(g.id)}" ${pc?`style="--pc:${pc}"`:''}><span class="logos">${g.awayLogo?`<img src="${esc(g.awayLogo)}" alt="">`:''}<span class="at">at</span>${g.homeLogo?`<img src="${esc(g.homeLogo)}" alt="">`:''}</span><span class="mt">${esc(g.away)} at ${esc(g.home)}</span><span class="ml num">${fin?'Final '+score:live?'Live '+score:fmtTime.format(new Date(g.start))}</span><span class="mp num">${my?`${esc(my.team)} ${esc(spStr(my.spread))}${my.moneyball?' MB':my.lock?' Lock':''}`:(g.spreadHome!=null?`${esc(g.home)} ${esc(spStr(g.spreadHome))}`:'Line pending')}</span></button>`;}).join('')}</div></div>`:
       `<div class="empty"><strong>No games tonight</strong>${nextDay?`Next up: ${esc(fmtLong.format(new Date(nextDay+'T12:00:00Z')))}, ${days[nextDay].length} game${days[nextDay].length===1?'':'s'}.`:'Nothing on the schedule yet.'}</div>`;
     v.innerHTML=strip+Object.keys(days).sort().map(day=>{const list=days[day].sort((a,b)=>a.start<b.start?-1:1);const lined=list.filter(g=>g.spreadHome!=null).length;
       const head=`<h2>${day===today?'Today, ':day<today?'Earlier, ':''}${fmtLong.format(new Date(day+'T12:00:00Z'))}</h2><span class="cnt num">${list.length} game${list.length===1?'':'s'}${lined<list.length?`, ${list.length-lined} waiting on a line`:''}</span>`;
