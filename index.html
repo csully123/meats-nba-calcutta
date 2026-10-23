@@ -102,6 +102,7 @@ details.day .daybody{display:flex;flex-direction:column;gap:10px;margin-top:10px
 .game .blurb{grid-column:1/-1;padding:10px 12px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.5;color:var(--ink)}
 .game .blurb .eyebrow{display:block;margin-bottom:2px}
 .game .wnote{font-size:12px;color:var(--muted);background:var(--soft)}
+.game .hiddenpicks{font-size:12px;color:var(--muted);border-top:1px solid var(--line);border-bottom:0}
 .live-tag{font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--win)}
 .inj{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
 .inj li{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline}
@@ -191,7 +192,8 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
       <dl>
         <dt>Password</dt><dd>The pool password gets you in. Enter it once and this device stays signed in.</dd>
         <dt>Refresh</dt><dd>Tap the Refresh Button every time you open the page. It pulls live lines and scores from ESPN and reloads everyone's picks. Write-ups do not change when you refresh; they are written once each morning.</dd>
-        <dt>Who</dt><dd>Tap your name under "Picking as" before you pick anything. Every pick is saved under that name so the board knows it is you, and this device remembers it next time. Picking as someone else is on your conscience.</dd>
+        <dt>Who</dt><dd>Tap your name under "Picking as" before you pick anything. Every pick is saved under that name so the board knows it is you, and this device remembers it next time. Honor system: pick as yourself only.</dd>
+        <dt>Hidden picks</dt><dd>Nobody can see anyone else's pick on a game until that game tips off. Until then a game shows only how many others have picked it, not which side. Your own picks are always visible to you.</dd>
         <dt>Start</dt><dd>Everyone opens the season at 30 points. The tally runs from there.</dd>
         <dt>Regular pick</dt><dd>+1 if it covers, nothing if it does not.</dd>
         <dt>Lock</dt><dd>Once you have picked a game, tap "This is a Lock" on it. A lock pays +2 if it covers and costs -1 if it does not. Lock as many of your picks as you dare; you can unlock until tip-off.</dd>
@@ -270,6 +272,8 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
   const isLocked=g=>isFinal(g)||g.status==='inprogress'||Date.now()>=new Date(g.start).getTime();
   const sideSpread=(g,team)=>g.spreadHome==null?null:(team===g.home?g.spreadHome:-g.spreadHome);
   const gameList=()=>Object.values(S.games);
+  const pickStarted=k=>{const g=S.games[k.gameId];return g?isLocked(g):Date.now()>=new Date(k.gameStart||0).getTime();};
+  const canSee=k=>k.player===S.me||pickStarted(k);
 
   function pointsFor(r,mult,lock,mb){const c=S.cfg;
     if(mb){return r==='win'?c.moneyballWin:r==='loss'?-c.moneyballLoss:c.push;} // the Mega Bonus is a flat payout, bonus games do not double it
@@ -307,7 +311,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
       return `<details class="day" data-day="${esc(day)}" ${openDays.has(day)?'open':''}><summary class="dayhead">${head}</summary><div class="daybody">${body}</div></details>`;}).join('');
     v.querySelectorAll('details.day').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)openDays.add(d.dataset.day);else openDays.delete(d.dataset.day);}));}
   function renderGame(g,picks){const locked=isLocked(g),fin=isFinal(g),live=g.status==='inprogress';const mult=g.multiplier||1;const w=S.writeups[g.id]||{};
-    const side=team=>{const name=team===g.home?g.homeName:g.awayName;const sp=sideSpread(g,team);const mine=picks.find(k=>k.player===S.me&&k.team===team);const who=picks.filter(k=>k.team===team);const busy=S.busy.has(g.id);
+    const side=team=>{const name=team===g.home?g.homeName:g.awayName;const sp=sideSpread(g,team);const mine=picks.find(k=>k.player===S.me&&k.team===team);const who=picks.filter(k=>k.team===team&&canSee(k));const busy=S.busy.has(g.id);
       const chips=who.map(k=>{const r=grade(k,g);return `<span class="ini ${r?r.result:''} ${k.player===S.me?'me':''} ${k.moneyball?'mb':k.lock?'lk':''}" title="${esc(k.player)} ${esc(spStr(k.spread))}${k.moneyball?' (mega bonus)':k.lock?' (lock)':''}">${ini(k.player)}</span>`;}).join('');
       const sc=fin||live?`<span class="score num">${team===g.home?g.homeScore??'':g.awayScore??''}</span>`:'';const spTxt=sp==null?'Line pending':spStr(sp);
       return `<div class="side"><button class="pickbtn ${sp==null?'nolines':''}" data-game="${esc(g.id)}" data-team="${esc(team)}" aria-pressed="${mine?'true':'false'}" ${locked||sp==null||busy?'disabled':''}><span class="team">${esc(team)}<span class="tname">${esc(name||'')}</span></span>${sc||`<span class="sp num">${esc(spTxt)}</span>`}</button><div class="pickers">${chips}</div></div>`;};
@@ -319,7 +323,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     const stamp=w.updated?fmtStamp.format(new Date(w.updated))+' ET':'';
     const wnote=w.blurb||pk?`<div class="blurb wnote">Write-up${stamp?' from '+esc(stamp):''}. Write-ups refresh each morning and are not live; the lines, scores and picks above and below update every time you tap the Refresh Button.</div>`:'';
     const lineLive=!locked?`<span class="live-tag">live when you refresh</span>`:'';
-    const myPick=picks.find(k=>k.player===S.me);
+    const myPick=picks.find(k=>k.player===S.me);const hiddenPicks=locked?0:picks.filter(k=>!canSee(k)).length;
     let lockRow='';
     if(myPick){const busy=locked||S.busy.has(g.id);const c=S.cfg;
       const lockHint=`Lock: ${signed(c.lockWin*mult)} if ${esc(myPick.team)} covers, -${c.lockLoss} if not.`;
@@ -327,9 +331,9 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
       const mbHint=myPick.moneyball?`Mega Bonus: ${signed(c.moneyballWin)} if ${esc(myPick.team)} covers, nothing if not. One per season.`:mbElsewhere?(mbMovable?`Your Mega Bonus is on ${esc(mb.team)} ${esc(spStr(mb.spread))} (${esc(fmtShort.format(new Date((mb.gameDate||'')+'T12:00:00Z')))}). Take it off there first to use it here.`:`Mega Bonus already used on ${esc(mb.team)} ${esc(spStr(mb.spread))}. One per season.`):`Mega Bonus: ${signed(c.moneyballWin)} if ${esc(myPick.team)} covers, nothing if not. One per season.`;
       lockRow=`<div class="blurb lockrow"><div class="lockline"><button class="lockbtn" data-lock="${esc(g.id)}" aria-pressed="${myPick.lock&&!myPick.moneyball?'true':'false'}" ${busy||myPick.moneyball?'disabled':''}>${myPick.lock&&!myPick.moneyball?'Locked in':'This is a Lock'}</button><span class="hint">${lockHint}</span></div>
         <div class="lockline"><button class="lockbtn mb" data-moneyball="${esc(g.id)}" aria-pressed="${myPick.moneyball?'true':'false'}" ${busy||(mbElsewhere&&!myPick.moneyball)?'disabled':''}>${myPick.moneyball?'Mega Bonus is on this':'This is a Mega Bonus'}</button><span class="hint">${mbHint}</span></div></div>`;}
-    return `<article class="game ${mult>1?'bonus':''}"><div class="meta"><span class="when">${esc(g.away)} at ${esc(g.home)}, ${esc(fmtTime.format(new Date(g.start)))} ET</span>${tag}${bonus}${lineNote}${lineLive}</div>${w.blurb?`<div class="blurb"><span class="eyebrow">Matchup${stamp?', written '+esc(stamp):''}</span>${esc(w.blurb)}</div>`:''}${inj}${pk}${wnote}${side(g.away)}${side(g.home)}${lockRow}</article>`;}
+    return `<article class="game ${mult>1?'bonus':''}"><div class="meta"><span class="when">${esc(g.away)} at ${esc(g.home)}, ${esc(fmtTime.format(new Date(g.start)))} ET</span>${tag}${bonus}${lineNote}${lineLive}</div>${w.blurb?`<div class="blurb"><span class="eyebrow">Matchup${stamp?', written '+esc(stamp):''}</span>${esc(w.blurb)}</div>`:''}${inj}${pk}${wnote}${side(g.away)}${side(g.home)}${hiddenPicks?`<div class="blurb hiddenpicks">${hiddenPicks} other pick${hiddenPicks===1?'':'s'} on this game, hidden until tip-off.</div>`:''}${lockRow}</article>`;}
   function renderHistory(){$('histfilters').innerHTML=['All',...PLAYERS].map(p=>`<button class="chip" data-hist="${esc(p)}" aria-pressed="${S.hist===p}">${esc(p)}</button>`).join('');
-    const rows=S.picks.filter(k=>S.hist==='All'||k.player===S.hist).map(k=>{const g=S.games[k.gameId];const day=k.gameDate||(g&&g.date)||k.pickedAt.slice(0,10);const r=grade(k,g);
+    const rows=S.picks.filter(k=>(S.hist==='All'||k.player===S.hist)&&canSee(k)).map(k=>{const g=S.games[k.gameId];const day=k.gameDate||(g&&g.date)||k.pickedAt.slice(0,10);const r=grade(k,g);
       return {k,g,day,r,hs:g&&g.homeScore,as:g&&g.awayScore,home:k.home||(g&&g.home)||'',away:k.away||(g&&g.away)||'',start:k.gameStart||(g&&g.start)||k.pickedAt};}).sort((a,b)=>a.start<b.start?1:a.start>b.start?-1:a.k.player<b.k.player?-1:1);
     if(!rows.length){$('histbody').innerHTML=`<div class="empty"><strong>No picks yet</strong>${S.hist==='All'?'Every pick, graded or still open, lands here.':S.hist+' has not made a pick yet.'}</div>`;return;}
     let out='',lastWk=null;
@@ -340,7 +344,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
       out+=`<tr><td class="num">${esc(fmtShort.format(new Date(x.day+'T12:00:00Z')))}</td><td>${esc(x.k.player)}</td><td class="pk">${esc(x.k.team)}<span class="sp">${esc(spStr(x.k.spread))}</span>${x.k.moneyball?'<span class="lockchip mb">Mega Bonus</span>':x.k.lock?'<span class="lockchip">Lock</span>':''}${(x.k.multiplier||1)>1?' <span class="badge bonus">2x</span>':''}</td><td class="num">${esc(x.away)} ${x.as??''} at ${esc(x.home)} ${x.hs??''}</td><td><span class="res ${res}">${res==='open'?(x.g&&isLocked(x.g)?'In play':'Open'):res}</span></td><td class="ptcell num ${x.r?(x.r.points>0?'pos':x.r.points<0?'neg':'zero'):'zero'}">${x.r?signed(x.r.points):''}</td></tr>`;}
     $('histbody').innerHTML=statsHtml+`<div class="tablewrap"><table><thead><tr><th>Date</th><th>Who</th><th>Pick</th><th>Game</th><th>Result</th><th style="text-align:right">Pts</th></tr></thead><tbody>${out}</tbody></table></div>`;}
   function renderStats(player){
-    const mine=S.picks.filter(k=>k.player===player);
+    const mine=S.picks.filter(k=>k.player===player&&canSee(k));
     const T={all:{n:0,w:0,l:0,p:0,pts:0},regular:{n:0,w:0,l:0,p:0,pts:0},lock:{n:0,w:0,l:0,p:0,pts:0},moneyball:{n:0,w:0,l:0,p:0,pts:0},fav:{n:0,w:0,l:0,p:0,pts:0},dog:{n:0,w:0,l:0,p:0,pts:0},home:{n:0,w:0,l:0,p:0,pts:0},away:{n:0,w:0,l:0,p:0,pts:0},bonus:{n:0,w:0,l:0,p:0,pts:0}};
     const weeks={};let open=0,spreadSum=0,spreadN=0,marginSum=0,marginN=0;const seq=[];
     const bump=(b,r)=>{b.n++;if(!r)return;b.pts+=r.points;if(r.result==='win')b.w++;else if(r.result==='loss')b.l++;else b.p++;};
