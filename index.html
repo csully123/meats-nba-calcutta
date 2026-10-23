@@ -177,11 +177,11 @@ h1::after{content:"";display:block;width:64px;height:4px;background:var(--accent
 .game.flash{outline:3px solid var(--accent);outline-offset:3px}
 /* collapsible write-up */
 .wdet{padding:8px 12px}
-.wdet>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;background:color-mix(in srgb,var(--accent) 8%,var(--surface));border:1.5px solid color-mix(in srgb,var(--accent) 35%,var(--line));border-left:4px solid var(--accent);border-radius:6px;padding:9px 12px}
-.wdet>summary:hover{background:color-mix(in srgb,var(--accent) 14%,var(--surface));border-color:color-mix(in srgb,var(--accent) 60%,var(--line))}
+.wdet>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;background:var(--soft);border:1.5px solid var(--line);border-radius:6px;padding:8px 12px}
+.wdet>summary:hover{border-color:color-mix(in srgb,var(--accent) 50%,var(--line))}
 .wdet>summary::-webkit-details-marker{display:none}
-.wdet>summary .eyebrow{color:var(--ink);font-size:13px;letter-spacing:.08em;font-weight:700}
-.wdet>summary::after{content:"Show \25BE";font-size:12px;font-weight:700;color:var(--accent);background:none;border:1.5px solid var(--accent);padding:2px 9px;border-radius:999px;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
+.wdet>summary .eyebrow{color:var(--ink);font-size:12px;letter-spacing:.08em;font-weight:600}
+.wdet>summary::after{content:"Show \25BE";font-size:11px;font-weight:700;color:var(--accent);background:none;border:1px solid color-mix(in srgb,var(--accent) 55%,var(--line));padding:2px 8px;border-radius:999px;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
 .wdet[open]>summary::after{content:"Hide \25B4"}
 .wdet .wtext{margin:10px 0 0;padding:0 2px}
 .wdet .wtext{margin:8px 0 0}
