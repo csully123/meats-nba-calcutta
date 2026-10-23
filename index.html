@@ -63,13 +63,13 @@ header{display:flex;flex-direction:column;gap:14px;padding-top:28px;border-botto
 .tile .wk{font-size:13px;font-weight:600}
 .tile .wkp{font-size:12px;color:var(--muted)}
 .tile .wkp.full{color:var(--ink);font-weight:600}
-.lockbtn{width:100%;text-align:center;border:1.5px solid var(--accent);background:none;color:var(--accent);border-radius:4px;padding:5px 10px;font-family:var(--display);font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+.lockbtn{width:100%;justify-self:stretch;text-align:center;border:1.5px solid var(--accent);background:none;color:var(--accent);border-radius:4px;padding:5px 10px;font-family:var(--display);font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
 .lockbtn[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
 .lockbtn:disabled{opacity:.6;cursor:default}
 .ini.lk{border:2px solid var(--accent);box-shadow:0 0 0 1px var(--surface) inset}
 .lockbtn.mb{border-color:var(--push);color:var(--push)}
 .lockbtn.mb[aria-pressed="true"]{background:var(--push);color:#fff}
-.game .lockrow{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 12px;align-items:center;justify-items:start;text-align:left}
+.game .lockrow{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 12px;align-items:center;justify-items:start;text-align:left;border-bottom:0;border-top:1px solid var(--line)}
 .lockline{display:contents}
 .lockline .hint{min-width:0}
 .ini.mb{border:2px solid var(--push)}
@@ -102,7 +102,6 @@ details.day .daybody{display:flex;flex-direction:column;gap:10px;margin-top:10px
 .game .blurb{grid-column:1/-1;padding:10px 12px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.5;color:var(--ink)}
 .game .blurb .eyebrow{display:block;margin-bottom:2px}
 .game .wnote{font-size:12px;color:var(--muted);background:var(--soft)}
-.game .lockrow{border-bottom:0;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
 .live-tag{font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--win)}
 .inj{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
 .inj li{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline}
