@@ -157,8 +157,10 @@ h1::after{content:"";display:block;width:64px;height:4px;background:var(--accent
 .tile>*{z-index:1}
 /* tonight strip */
 .slate{display:flex;flex-direction:column;gap:8px}
-.strip{display:flex;gap:10px;overflow-x:auto;padding:2px 2px 8px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.strip{display:flex;gap:10px;overflow-x:auto;cursor:grab;user-select:none;padding:2px 2px 8px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .strip::-webkit-scrollbar{display:none}
+.strip:active{cursor:grabbing}
+.mini img{-webkit-user-drag:none;pointer-events:none}
 .mini{flex:0 0 150px;display:flex;flex-direction:column;gap:4px;align-items:flex-start;background:var(--surface);border:1px solid color-mix(in srgb,var(--outline) 14%,transparent);border-radius:10px;padding:10px 12px;text-align:left;box-shadow:0 1px 2px rgba(0,0,0,.15)}
 .mini:hover{border-color:var(--ink)}
 .mini.mine{border-color:var(--pc);box-shadow:0 0 0 1px var(--pc)}
@@ -417,25 +419,30 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     const openW=S.openW||(S.openW=new Set());v.querySelectorAll('details.wdet').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)openW.add(d.dataset.w);else openW.delete(d.dataset.w);}));
     startMarquee(v.querySelector('.strip'));
     v.querySelectorAll('[data-jump]').forEach(b=>b.addEventListener('click',()=>{const t=document.getElementById(b.dataset.jump);if(t){t.scrollIntoView({behavior:'smooth',block:'start'});t.classList.add('flash');setTimeout(()=>t.classList.remove('flash'),1200);}}));}
-  // Today's Slate drifts left on its own; a touch, drag, wheel or hover pauses it, and it picks back up after a short rest.
-  const MQ={el:null,raf:0,pausedUntil:0,hover:false,pos:0,last:0};
+  // Today's Slate drifts left on its own and never stops for a hover. Click and drag (or swipe) moves it by exactly how far you drag; it resumes drifting the moment you let go.
+  const MQ={el:null,raf:0,pos:0,last:0,drag:null};
   function startMarquee(el){
     if(MQ.raf){cancelAnimationFrame(MQ.raf);MQ.raf=0;}
     MQ.el=el;if(!el)return;
     const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const half=()=>el.scrollWidth/2;
-    el.scrollLeft=MQ.pos%Math.max(1,half());
-    const pause=ms=>{MQ.pausedUntil=Date.now()+ms;};
-    el.addEventListener('pointerenter',()=>{MQ.hover=true;});el.addEventListener('pointerleave',()=>{MQ.hover=false;pause(800);});
-    ['pointerdown','touchstart','wheel'].forEach(ev=>el.addEventListener(ev,()=>pause(3000),{passive:true}));
-    el.addEventListener('scroll',()=>{if(Date.now()<MQ.pausedUntil||MQ.hover){MQ.pos=el.scrollLeft;}},{passive:true});
+    const wrap=()=>{const h=half();if(h>0){if(MQ.pos>=h)MQ.pos-=h;if(MQ.pos<0)MQ.pos+=h;}};
+    MQ.pos=MQ.pos%Math.max(1,half());el.scrollLeft=MQ.pos;
+    el.addEventListener('pointerdown',e=>{if(e.pointerType==='touch')return;MQ.drag={x:e.clientX,start:MQ.pos,moved:false};el.setPointerCapture&&el.setPointerCapture(e.pointerId);});
+    el.addEventListener('pointermove',e=>{if(!MQ.drag)return;const dx=e.clientX-MQ.drag.x;if(Math.abs(dx)>5)MQ.drag.moved=true;MQ.pos=MQ.drag.start-dx;wrap();el.scrollLeft=MQ.pos;});
+    const endDrag=()=>{if(MQ.drag&&MQ.drag.moved){el.dataset.dragged='1';setTimeout(()=>{delete el.dataset.dragged;},0);}MQ.drag=null;};
+    el.addEventListener('pointerup',endDrag);el.addEventListener('pointercancel',endDrag);
+    el.addEventListener('click',e=>{if(el.dataset.dragged){e.stopPropagation();e.preventDefault();}},true);
+    el.addEventListener('touchstart',()=>{MQ.drag={touch:true};},{passive:true});
+    el.addEventListener('touchend',()=>{MQ.pos=el.scrollLeft;MQ.drag=null;},{passive:true});
+    el.addEventListener('wheel',()=>{MQ.pos=el.scrollLeft;},{passive:true});
     if(reduce)return;
     const speed=28; // px per second
     MQ.last=performance.now();
     const step=now=>{if(MQ.el!==el||!el.isConnected){MQ.raf=0;return;}
       const dt=Math.min(100,now-MQ.last);MQ.last=now;
-      if(!MQ.hover&&Date.now()>=MQ.pausedUntil){MQ.pos+=speed*dt/1000;const h=half();if(h>0&&MQ.pos>=h)MQ.pos-=h;el.scrollLeft=MQ.pos;}
-      else{const h=half();MQ.pos=el.scrollLeft;if(h>0&&MQ.pos>=h){MQ.pos-=h;el.scrollLeft=MQ.pos;}}
+      if(!MQ.drag){MQ.pos+=speed*dt/1000;wrap();el.scrollLeft=MQ.pos;}
+      else if(MQ.drag.touch){MQ.pos=el.scrollLeft;}
       MQ.raf=requestAnimationFrame(step);};
     MQ.raf=requestAnimationFrame(step);
   }
