@@ -3,25 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0b1118">
 <title>Meats NBA Calcutta</title>
 <meta name="description" content="NBA against-the-spread picks pool: Kev, Beekie, Mio and Sulliver.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
 <style>
 :root{
-  --bg:#f3f1ec; --surface:#ffffff; --ink:#15202b; --muted:#5f6b78; --line:#d9d4ca;
-  --accent:#1f5fbf; --accent-ink:#ffffff;
-  --win:#1f7a4d; --loss:#b3261e; --push:#8a7a2c;
-  --soft:#ebe7df; --lock:#8b8f96; --outline:#15202b;
+  --bg:#0b1118; --surface:#182230; --ink:#eef1f4; --muted:#9aa6b2; --line:#2a3542;
+    --accent:#6ea0ff; --accent-ink:#0b1118;
+    --win:#4cc78a; --loss:#ff7b73; --push:#d9c35a;
+    --soft:#212c39; --lock:#6d7682; --outline:#ffffff; color-scheme:dark
   --display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;
   --body:"Barlow","Helvetica Neue",Arial,sans-serif;
   --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
-  color-scheme:light;
 }
-@media (prefers-color-scheme: dark){ :root{
-  --bg:#0b1118; --surface:#182230; --ink:#eef1f4; --muted:#9aa6b2; --line:#2a3542;
-  --accent:#6ea0ff; --accent-ink:#0b1118;
-  --win:#4cc78a; --loss:#ff7b73; --push:#d9c35a;
-  --soft:#212c39; --lock:#6d7682; --outline:#ffffff; color-scheme:dark } }
 *{box-sizing:border-box}
 html,body{margin:0}
 [hidden]{display:none!important}
@@ -63,9 +59,8 @@ header{display:flex;flex-direction:column;gap:14px;padding-top:28px;border-botto
 .board{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .tile{background:var(--surface);border:1.5px solid var(--line);padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
 .tile{position:relative;overflow:hidden}
-.tile::before{content:"";position:absolute;inset:0;background:var(--flag,none);background-size:cover;background-position:center;opacity:.26;pointer-events:none}
+.tile::before{content:"";position:absolute;inset:0;background:var(--flag,none);background-size:cover;background-position:center;opacity:.3;pointer-events:none}
 .tile>*{position:relative}
-@media (prefers-color-scheme: dark){.tile::before{opacity:.3}}
 .tile.flag-pl{--flag:url("assets/flag-poland.svg")}
 .tile.flag-il{--flag:url("assets/flag-israel.svg")}
 .tile.flag-rs{--flag:url("assets/flag-serbia.svg")}
