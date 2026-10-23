@@ -1,0 +1,35 @@
+name: Update lines and scores
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Pull schedule, scores and spreads
+        run: python scripts/update.py
+      - name: Commit if anything changed
+        run: |
+          git config user.name "calcutta-bot"
+          git config user.email "calcutta-bot@users.noreply.github.com"
+          git add data/games.json data/status.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update games $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi

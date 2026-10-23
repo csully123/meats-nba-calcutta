@@ -1,0 +1,10 @@
+{
+  "players": ["Kev", "Beekie", "Mio", "Sulliver"],
+  "scoring": {"start": 30, "win": 1, "loss": 2, "push": 0},
+  "seasonStart": "2026-10-20",
+  "seasonEnd": "2027-04-12",
+  "bonusDates": {
+    "2026-12-25": {"multiplier": 2, "label": "Christmas"}
+  },
+  "bonusGameIds": {}
+}
