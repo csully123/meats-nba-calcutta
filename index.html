@@ -41,9 +41,6 @@ header{display:flex;flex-direction:column;gap:14px;padding-top:28px;border-botto
 .who.nudge .chip{border-color:var(--accent);animation:nudge .5s ease 2}
 @keyframes nudge{50%{transform:translateY(-2px)}}
 @media (prefers-reduced-motion:reduce){.who.nudge .chip{animation:none}}
-.refresh{margin-left:auto;border:0;background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:8px 16px;font-family:var(--display);font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
-.refresh:disabled{opacity:.6;cursor:default}
-@media (max-width:620px){.refresh{margin-left:0;width:100%}}
 .rules{background:var(--surface);border:1.5px solid var(--line);padding:0}
 .rules>summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;gap:12px;padding:12px 18px}
 .rules>summary::-webkit-details-marker{display:none}
@@ -275,7 +272,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
       <summary><h2>The rules</h2><span class="hint">tap to open</span></summary>
       <dl>
         <dt>Password</dt><dd>The pool password gets you in. Enter it once and this device stays signed in.</dd>
-        <dt>Refresh</dt><dd>Tap the Refresh Button every time you open the page. It pulls live lines and scores from ESPN and reloads everyone's picks. Write-ups do not change when you refresh; they are written once each morning.</dd>
+        <dt>Always live</dt><dd>Lines, scores and everyone's picks update on their own: when you open the page, every couple of minutes while it is open, and whenever you come back to it. No button to press.</dd>
         <dt>Who</dt><dd>Tap your name under "Picking as" before you pick anything. Every pick is saved under that name so the board knows it is you, and this device remembers it next time. Honor system: pick as yourself only.</dd>
         <dt>Hidden picks</dt><dd>Nobody can see anyone else's picks until the game tips off. Before then a game shows nothing about other people's picks at all. Your own picks are always visible to you.</dd>
         <dt>Start</dt><dd>Everyone opens the season at 30 points. The tally runs from there.</dd>
@@ -289,7 +286,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
         <dt>Lock</dt><dd>Picks lock at tip-off. Until then you can switch sides or take a pick back.</dd>
         <dt>Season</dt><dd>Regular season only, plus every NBA Cup game including the Cup final. No play-in, no playoffs.</dd>
         <dt>Stats</dt><dd>On the Stats tab, tap a name to see that person's numbers: record and win rate overall and by pick type, favorites against underdogs, home against road, streaks, best week and more.</dd>
-        <dt>Live vs daily</dt><dd>Live, every time you refresh: spreads, scores, results, standings and everyone's picks and locks. Once a day, each morning: the matchup note, injury list and Claude's pick for that day's games, stamped with the time they were written. A line can move after the write-up; the number on the pick buttons is the one you are graded on.</dd>
+        <dt>Live vs daily</dt><dd>Live, on its own: spreads, scores, results, standings and everyone's picks and locks. Once a day, each morning: the matchup note, injury list and Claude's pick for that day's games, stamped with the time they were written. A line can move after the write-up; the number on the pick buttons is the one you are graded on.</dd>
       </dl>
     </details>
     <div class="who" id="who">
@@ -298,7 +295,6 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
       <button class="chip" data-player="Beekie" aria-pressed="false"><img class="chipflag" src="assets/flag-israel.svg" alt="">Beekie</button>
       <button class="chip" data-player="Mio" aria-pressed="false"><img class="chipflag" src="assets/flag-serbia.svg" alt="">Mio</button>
       <button class="chip" data-player="Sulliver" aria-pressed="false"><img class="chipflag" src="assets/flag-italy.svg" alt="">Sulliver</button>
-      <button class="refresh" id="refresh" type="button">Refresh Button</button>
     </div>
     <div class="status" id="status">Loading the board.<button class="signout" id="signout" type="button" hidden>Sign out</button></div>
   </header>
@@ -401,7 +397,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     const picksBy={};for(const k of S.picks)(picksBy[k.gameId]=picksBy[k.gameId]||[]).push(k);
     const show=gameList().filter(g=>g.status!=='postponed'&&(g.date>=today||!isFinal(g)||(picksBy[g.id]&&g.date>=addDays(today,-2))));
     if(!S.ready&&!show.length)return;
-    if(!show.length){v.innerHTML=`<div class="empty"><strong>No games on the board yet</strong>Tap the Refresh Button to pull today's games and lines.</div>`;return;}
+    if(!show.length){v.innerHTML=`<div class="empty"><strong>No games on the board yet</strong>Today's games and lines load on their own; give it a moment.</div>`;return;}
     const days={};for(const g of show)(days[g.date]=days[g.date]||[]).push(g);
     const openDays=S.openDays||(S.openDays=new Set());
     const tonight=(days[today]||[]).slice().sort((a,b)=>a.start<b.start?-1:1);
@@ -462,8 +458,8 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     const inj=Array.isArray(w.injuries)&&w.injuries.length?`<div class="wblock"><span class="eyebrow">Injuries</span><ul class="inj">${w.injuries.map(x=>`<li><strong class="tcode" ${tcStyle(x.team)}>${esc(x.team)}</strong> ${esc(x.player)} <span class="st ${esc(String(x.status||'').toLowerCase())}">${esc(x.status||'')}</span>${x.stats?`<span class="num hint">${esc(x.stats)}</span>`:''}${x.impact?`<span class="imp ${esc(String(x.impact).toLowerCase())}">${esc(x.impact)} impact</span>`:''}${x.note?`<span>${esc(x.note)}</span>`:''}</li>`).join('')}</ul></div>`:'';
     const pk=w.pick&&w.pick.team?`<div class="blurb cpickwrap" ${tcStyle(w.pick.team)}><span class="eyebrow">Claude's pick</span><div class="cpick"><span class="team">${logoOf(w.pick.team)?`<img class="logo sm" src="${esc(logoOf(w.pick.team))}" alt="">`:''}${esc(w.pick.team)}${w.pick.spread!=null?`<span class="sp">${esc(spStr(w.pick.spread))}</span>`:`<span class="sp">lean</span>`}</span><span>${esc(w.pick.why||'')}</span></div></div>`:'';
     const stamp=w.updated?fmtStamp.format(new Date(w.updated))+' ET':'';
-    const wnote=w.blurb||pk?`<div class="wblock wnote">Write-up${stamp?' from '+esc(stamp):''}. Write-ups refresh each morning and are not live; the lines, scores and picks above and below update every time you tap the Refresh Button.</div>`:'';
-    const lineLive=!locked?`<span class="live-tag">live when you refresh</span>`:'';
+    const wnote=w.blurb||pk?`<div class="wblock wnote">Write-up${stamp?' from '+esc(stamp):''}. Write-ups refresh each morning and are not live; the lines, scores and picks above and below stay live on their own.</div>`:'';
+    const lineLive=!locked?`<span class="live-tag">live</span>`:'';
     const myPick=picks.find(k=>k.player===S.me);
     let lockRow='';
     if(myPick){const busy=locked||S.busy.has(g.id);const c=S.cfg;
@@ -537,7 +533,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     if(!S.db){el.className='status warn';el.textContent='Picks are not connected yet, so the board is read-only.';return;}
     el.className='status';const when=S.liveAt||S.dataUpdated;
     const wu=Object.values(S.writeups).reduce((m,x)=>x.updated&&x.updated>m?x.updated:m,'');
-    el.textContent=(when?`Lines and scores as of ${fmtStamp.format(new Date(when))} ET (tap Refresh for live). `:'')+(wu?`Write-ups from ${fmtStamp.format(new Date(wu))} ET, refreshed each morning. `:'')+(S.me?`You are picking as ${S.me}.`:'Choose your name above to make picks.');
+    el.textContent=(when?`Lines and scores as of ${fmtStamp.format(new Date(when))} ET, updating live. `:'')+(wu?`Write-ups from ${fmtStamp.format(new Date(wu))} ET, refreshed each morning. `:'')+(S.me?`You are picking as ${S.me}.`:'Choose your name above to make picks.');
     so.hidden=!S.signedIn;el.appendChild(so);}
   function render(){renderWho();renderTabs();renderBoard();renderGames();renderHistory();renderStatsTab();renderStatus();}
   // Confetti burst for the Mega Bonus. Pure canvas, no library, skipped when the viewer prefers reduced motion.
@@ -588,10 +584,15 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     if(got)S.liveAt=new Date().toISOString();
     return got;
   }
-  async function refreshAll(){const b=$('refresh');if(b.disabled)return;b.disabled=true;const label=b.textContent;b.textContent='Refreshing';
-    try{await loadFiles();const live=await loadLive();render();toast(live?'Board refreshed with live lines and scores.':'Board refreshed. Live feed was not reachable, showing the last saved lines.');}
-    catch(e){console.error(e);toast('Could not refresh, try again',true);}
-    finally{b.disabled=false;b.textContent=label;}}
+  // Silent live refresh: on load, every two minutes while the page is open, and whenever the tab comes back into view.
+  let refreshing=false,lastRefresh=0;
+  async function refreshAll(force){if(refreshing)return;if(!force&&Date.now()-lastRefresh<20000)return;refreshing=true;
+    try{await loadFiles();await loadLive();lastRefresh=Date.now();render();}
+    catch(e){console.warn('refresh',e);}
+    finally{refreshing=false;}}
+  setInterval(()=>{if(!document.hidden)refreshAll(false);},120000);
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshAll(false);});
+  window.addEventListener('focus',()=>refreshAll(false));
 
   // Events
   $('who').addEventListener('click',e=>{const b=e.target.closest('[data-player]');if(!b)return;S.me=b.dataset.player;try{localStorage.setItem('cc.me',S.me);}catch(x){}$('who').classList.remove('nudge');render();});
@@ -599,7 +600,6 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
   $('tabs').addEventListener('click',e=>{const b=e.target.closest('[data-tab]');if(!b)return;S.tab=b.dataset.tab;try{localStorage.setItem('cc.tab',S.tab);}catch(x){}renderTabs();});
   $('histfilters').addEventListener('click',e=>{const b=e.target.closest('[data-hist]');if(!b)return;S.hist=b.dataset.hist;try{localStorage.setItem('cc.hist',S.hist);}catch(x){}renderHistory();});
   $('statfilters').addEventListener('click',e=>{const b=e.target.closest('[data-stat]');if(!b)return;S.stat=b.dataset.stat;try{localStorage.setItem('cc.stat',S.stat);}catch(x){}renderStatsTab();});
-  $('refresh').addEventListener('click',refreshAll);
   $('view-board').addEventListener('click',async e=>{
     const lb=e.target.closest('.lockbtn');
     if(lb&&!lb.disabled){const gid=lb.dataset.lock||lb.dataset.moneyball;const g=S.games[gid];const mine=S.picks.find(k=>k.player===S.me&&k.gameId===gid);if(!g||!mine||!S.db)return;
