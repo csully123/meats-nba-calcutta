@@ -1,0 +1,38 @@
+name: Nightly picks backup
+
+on:
+  schedule:
+    - cron: "10 8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Read every pick from Firebase and save it
+        env:
+          POOL_PASSWORD: ${{ secrets.POOL_PASSWORD }}
+        run: python scripts/backup.py
+      - name: Commit the backup
+        run: |
+          git config user.name "calcutta-bot"
+          git config user.email "calcutta-bot@users.noreply.github.com"
+          git pull --rebase origin main
+          git add data/backups
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Picks backup $(date -u +%Y-%m-%d)"
+            git push
+          fi
