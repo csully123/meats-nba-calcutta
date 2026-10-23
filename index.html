@@ -61,8 +61,7 @@ header{display:flex;flex-direction:column;gap:14px;padding-top:28px;border-botto
 .rules dt{font-family:var(--display);font-size:18px;font-weight:600;text-transform:uppercase;white-space:nowrap}
 .rules dd{margin:0}
 .board{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.tile{background:var(--surface);border:1.5px solid var(--line);border-top:4px solid var(--ink);padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
-.tile.lead{border-top-color:var(--accent)}
+.tile{background:var(--surface);border:1.5px solid var(--line);padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
 .tile{position:relative;overflow:hidden}
 .tile::before{content:"";position:absolute;inset:0;background:var(--flag,none);background-size:cover;background-position:center;opacity:.26;pointer-events:none}
 .tile>*{position:relative}
