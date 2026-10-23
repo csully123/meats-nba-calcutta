@@ -74,6 +74,8 @@ header{display:flex;flex-direction:column;gap:14px;padding-top:28px;border-botto
 .game .meta .when{font-weight:600;color:var(--ink)}
 .game .blurb{grid-column:1/-1;padding:10px 12px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.5;color:var(--ink)}
 .game .blurb .eyebrow{display:block;margin-bottom:2px}
+.game .wnote{font-size:12px;color:var(--muted);background:var(--soft)}
+.live-tag{font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--win)}
 .inj{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
 .inj li{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline}
 .inj .st{font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;padding:1px 6px;border-radius:3px;background:var(--soft);color:var(--muted)}
@@ -160,7 +162,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
       <h2>The rules</h2>
       <dl>
         <dt>Password</dt><dd>The pool password gets you in. Enter it once and this device stays signed in.</dd>
-        <dt>Refresh</dt><dd>Tap the Refresh Button every time you open the page. It pulls the latest lines and scores and reloads everyone's picks, so you are never looking at a stale board.</dd>
+        <dt>Refresh</dt><dd>Tap the Refresh Button every time you open the page. It pulls live lines and scores from ESPN and reloads everyone's picks. Write-ups do not change when you refresh; they are written once each morning.</dd>
         <dt>Who</dt><dd>Tap your name under "Picking as" before you pick anything. Every pick is saved under that name so the board knows it is you, and this device remembers it next time. Picking as someone else is on your conscience.</dd>
         <dt>Start</dt><dd>Everyone opens the season at 30 points. The tally runs from there.</dd>
         <dt>Cover</dt><dd>+1 point. A bonus game (Christmas Day, NBA Cup group stage) pays +2.</dd>
@@ -170,7 +172,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
         <dt>Line</dt><dd>You are graded on the spread shown when you made the pick, not the closing line. Lines appear once books post them, usually the day before.</dd>
         <dt>Lock</dt><dd>Picks lock at tip-off. Until then you can switch sides or take a pick back.</dd>
         <dt>Season</dt><dd>Regular season only, plus every NBA Cup game including the Cup final. No play-in, no playoffs.</dd>
-        <dt>Updates</dt><dd>Lines and scores come from ESPN and refresh whenever anyone taps the Refresh Button, plus every half hour on their own. Write-ups and Claude's picks are added each morning for that day's games.</dd>
+        <dt>Live vs daily</dt><dd>Live, every time you refresh: spreads, scores, results, standings and everyone's picks. Once a day, each morning: the matchup note, injury list and Claude's pick for that day's games, stamped with the time they were written. A line can move after the write-up; the number on the pick buttons is the one you are graded on.</dd>
       </dl>
     </div>
     <div class="who" id="who">
@@ -271,7 +273,10 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     const lineNote=g.spreadHome!=null&&!locked?`<span>${esc(g.home)} ${esc(spStr(g.spreadHome))}${g.spreadUpdated?`, line as of ${esc(fmtStamp.format(new Date(g.spreadUpdated)))}`:''}</span>`:'';
     const inj=Array.isArray(w.injuries)&&w.injuries.length?`<div class="blurb"><span class="eyebrow">Injuries</span><ul class="inj">${w.injuries.map(x=>`<li><strong>${esc(x.team)}</strong> ${esc(x.player)} <span class="st ${esc(String(x.status||'').toLowerCase())}">${esc(x.status||'')}</span>${x.stats?`<span class="num hint">${esc(x.stats)}</span>`:''}${x.impact?`<span class="imp ${esc(String(x.impact).toLowerCase())}">${esc(x.impact)} impact</span>`:''}${x.note?`<span>${esc(x.note)}</span>`:''}</li>`).join('')}</ul></div>`:'';
     const pk=w.pick&&w.pick.team?`<div class="blurb"><span class="eyebrow">Claude's pick</span><div class="cpick"><span class="team">${esc(w.pick.team)}${w.pick.spread!=null?`<span class="sp">${esc(spStr(w.pick.spread))}</span>`:`<span class="sp">lean</span>`}</span><span>${esc(w.pick.why||'')}</span></div></div>`:'';
-    return `<article class="game ${mult>1?'bonus':''}"><div class="meta"><span class="when">${esc(g.away)} at ${esc(g.home)}, ${esc(fmtTime.format(new Date(g.start)))} ET</span>${tag}${bonus}${lineNote}</div>${w.blurb?`<div class="blurb"><span class="eyebrow">Matchup</span>${esc(w.blurb)}</div>`:''}${inj}${pk}${side(g.away)}${side(g.home)}</article>`;}
+    const stamp=w.updated?fmtStamp.format(new Date(w.updated))+' ET':'';
+    const wnote=w.blurb||pk?`<div class="blurb wnote">Write-up${stamp?' from '+esc(stamp):''}. Write-ups refresh each morning and are not live; the lines, scores and picks above and below update every time you tap the Refresh Button.</div>`:'';
+    const lineLive=!locked?`<span class="live-tag">live when you refresh</span>`:'';
+    return `<article class="game ${mult>1?'bonus':''}"><div class="meta"><span class="when">${esc(g.away)} at ${esc(g.home)}, ${esc(fmtTime.format(new Date(g.start)))} ET</span>${tag}${bonus}${lineNote}${lineLive}</div>${w.blurb?`<div class="blurb"><span class="eyebrow">Matchup${stamp?', written '+esc(stamp):''}</span>${esc(w.blurb)}</div>`:''}${inj}${pk}${wnote}${side(g.away)}${side(g.home)}</article>`;}
   function renderHistory(){$('histfilters').innerHTML=['All',...PLAYERS].map(p=>`<button class="chip" data-hist="${esc(p)}" aria-pressed="${S.hist===p}">${esc(p)}</button>`).join('');
     const rows=S.picks.filter(k=>S.hist==='All'||k.player===S.hist).map(k=>{const g=S.games[k.gameId];const day=k.gameDate||(g&&g.date)||k.pickedAt.slice(0,10);const r=grade(k,g);
       return {k,g,day,r,hs:g&&g.homeScore,as:g&&g.awayScore,home:k.home||(g&&g.home)||'',away:k.away||(g&&g.away)||'',start:k.gameStart||(g&&g.start)||k.pickedAt};}).sort((a,b)=>a.start<b.start?1:a.start>b.start?-1:a.k.player<b.k.player?-1:1);
@@ -287,7 +292,8 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
   function renderStatus(){const el=$('status');if(!S.ready)return;const so=$('signout');
     if(!S.db){el.className='status warn';el.textContent='Picks are not connected yet, so the board is read-only.';return;}
     el.className='status';const when=S.liveAt||S.dataUpdated;
-    el.textContent=(when?`Lines and scores as of ${fmtStamp.format(new Date(when))} ET. `:'')+(S.me?`You are picking as ${S.me}.`:'Choose your name above to make picks.');
+    const wu=Object.values(S.writeups).reduce((m,x)=>x.updated&&x.updated>m?x.updated:m,'');
+    el.textContent=(when?`Lines and scores as of ${fmtStamp.format(new Date(when))} ET (tap Refresh for live). `:'')+(wu?`Write-ups from ${fmtStamp.format(new Date(wu))} ET, refreshed each morning. `:'')+(S.me?`You are picking as ${S.me}.`:'Choose your name above to make picks.');
     so.hidden=!S.signedIn;el.appendChild(so);}
   function render(){renderWho();renderTabs();renderBoard();renderGames();renderHistory();renderStatus();}
   let toastT;function toast(msg,err){let t=document.querySelector('.toast');if(!t){t=document.createElement('div');t.className='toast';document.body.appendChild(t);}t.textContent=msg;t.classList.toggle('err',!!err);clearTimeout(toastT);toastT=setTimeout(()=>t.remove(),2600);}
