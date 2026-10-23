@@ -11,6 +11,8 @@
     "loss": 0,
     "lockWin": 2,
     "lockLoss": 1,
+    "moneyballWin": 5,
+    "moneyballLoss": 0,
     "push": 0
   },
   "seasonStart": "2026-10-20",
