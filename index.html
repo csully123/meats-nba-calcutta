@@ -103,6 +103,11 @@ details.day>summary:hover{border-color:var(--ink)}
 details.day>summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 details.day .daybody{display:flex;flex-direction:column;gap:10px;margin-top:10px}
 .game{--ac:var(--line);--hc:var(--line);background:var(--surface);border:1.5px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;position:relative}
+.game.split .meta{background:linear-gradient(90deg,var(--ac) 0 50%,var(--hc) 50% 100%);color:var(--hc-ink);border-bottom:0;padding:10px 12px;min-height:44px}
+.game.split .meta .when{color:var(--ac-ink)}
+.game.split .meta .live-tag{color:var(--hc-ink);opacity:.85}
+.game.split .meta .badge.lock{background:rgba(0,0,0,.35);color:#fff}
+.game.split .meta .badge.final{background:rgba(0,0,0,.45);color:#fff}
 .tcode{color:color-mix(in srgb,var(--tc,var(--ink)) 70%,var(--ink));padding:0 5px;border-radius:3px;background:color-mix(in srgb,var(--tc,var(--line)) 14%,transparent)}
 .cpickwrap{background:linear-gradient(90deg,color-mix(in srgb,var(--tc,var(--accent)) 16%,var(--surface)),var(--surface) 60%);border-left:5px solid var(--tc,var(--accent))}
 .cpick .team{color:color-mix(in srgb,var(--tc,var(--accent)) 72%,var(--ink));display:inline-flex;align-items:center;gap:6px}
@@ -360,9 +365,11 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
       lockRow=`<div class="blurb lockrow"><div class="lockline"><button class="lockbtn" data-lock="${esc(g.id)}" aria-pressed="${myPick.lock&&!myPick.moneyball?'true':'false'}" ${busy||myPick.moneyball?'disabled':''}>${myPick.lock&&!myPick.moneyball?'Locked in':'This is a Lock'}</button><span class="hint">${lockHint}</span></div>
         <div class="lockline"><button class="lockbtn mb" data-moneyball="${esc(g.id)}" aria-pressed="${myPick.moneyball?'true':'false'}" ${busy||(mbElsewhere&&!myPick.moneyball)?'disabled':''}>${myPick.moneyball?'Mega Bonus is on this':'This is a Mega Bonus'}</button><span class="hint">${mbHint}</span></div></div>`;}
     const ac=colOf(g.away)||'var(--line)',hc=colOf(g.home)||'var(--line)';
-    const pc=myPick?colOf(myPick.team):'';const lum=c=>{const n=parseInt(c.slice(1),16);const r=(n>>16)&255,gg=(n>>8)&255,b=n&255;return (0.299*r+0.587*gg+0.114*b)/255;};
-    const pickedStyle=pc?`--pc:${pc};--pc-ink:${lum(pc)>0.6?'#15202b':'#ffffff'}`:'';
-    return `<article class="game ${mult>1?'bonus':''} ${pc?'picked':''}" style="--ac:${ac};--hc:${hc};${pickedStyle}"><div class="meta"><span class="when">${esc(g.away)} at ${esc(g.home)}, ${esc(fmtTime.format(new Date(g.start)))} ET</span>${tag}${bonus}${lineNote}${lineLive}</div>${w.blurb?`<div class="blurb"><span class="eyebrow">Matchup${stamp?', written '+esc(stamp):''}</span>${esc(w.blurb)}</div>`:''}${inj}${pk}${wnote}${side(g.away)}${side(g.home)}${lockRow}</article>`;}
+    const pc=myPick?colOf(myPick.team):'';const lum=c=>{if(!/^#/.test(c))return 0.5;const n=parseInt(c.slice(1),16);const r=(n>>16)&255,gg=(n>>8)&255,b=n&255;return (0.299*r+0.587*gg+0.114*b)/255;};
+    const inkFor=c=>lum(c)>0.6?'#15202b':'#ffffff';
+    const pickedStyle=pc?`--pc:${pc};--pc-ink:${inkFor(pc)}`:'';
+    const haveCols=!!(colOf(g.away)&&colOf(g.home));
+    return `<article class="game ${mult>1?'bonus':''} ${pc?'picked':''} ${haveCols?'split':''}" style="--ac:${ac};--hc:${hc};--ac-ink:${inkFor(ac)};--hc-ink:${inkFor(hc)};${pickedStyle}"><div class="meta"><span class="when">${esc(g.away)} at ${esc(g.home)}, ${esc(fmtTime.format(new Date(g.start)))} ET</span>${tag}${bonus}${lineNote}${lineLive}</div>${w.blurb?`<div class="blurb"><span class="eyebrow">Matchup${stamp?', written '+esc(stamp):''}</span>${esc(w.blurb)}</div>`:''}${inj}${pk}${wnote}${side(g.away)}${side(g.home)}${lockRow}</article>`;}
   function renderHistory(){$('histfilters').innerHTML=['All',...PLAYERS].map(p=>`<button class="chip" data-hist="${esc(p)}" aria-pressed="${S.hist===p}">${esc(p)}</button>`).join('');
     const rows=S.picks.filter(k=>(S.hist==='All'||k.player===S.hist)&&canSee(k)).map(k=>{const g=S.games[k.gameId];const day=k.gameDate||(g&&g.date)||k.pickedAt.slice(0,10);const r=grade(k,g);
       return {k,g,day,r,hs:g&&g.homeScore,as:g&&g.awayScore,home:k.home||(g&&g.home)||'',away:k.away||(g&&g.away)||'',start:k.gameStart||(g&&g.start)||k.pickedAt};}).sort((a,b)=>a.start<b.start?1:a.start>b.start?-1:a.k.player<b.k.player?-1:1);
