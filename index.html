@@ -143,6 +143,50 @@ details.day .daybody{display:flex;flex-direction:column;gap:16px;margin-top:12px
 .cpick{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
 .cpick .team{font-family:var(--display);font-size:20px;font-weight:700;text-transform:uppercase}
 .cpick .team .sp{font-family:var(--mono);font-size:15px;margin-left:4px}
+/* header */
+h1::after{content:"";display:block;width:64px;height:4px;background:var(--accent);margin-top:8px;border-radius:2px}
+.chip{display:inline-flex;align-items:center;gap:7px}
+.chipflag{width:22px;height:15px;object-fit:cover;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.25)}
+/* standings extras */
+.tile.lead{box-shadow:inset 0 -3px 0 #d9a21b}
+.crown{color:#d9a21b;margin-left:6px;vertical-align:-1px}
+.ptsrow{display:flex;align-items:flex-end;justify-content:space-between;gap:8px}
+.spark{width:110px;height:30px;color:var(--ink);opacity:.9;flex:none}
+@media (max-width:620px){.spark{width:80px}}
+.tile::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 50%,color-mix(in srgb,var(--surface) 85%,transparent) 100%);pointer-events:none;z-index:0}
+.tile>*{z-index:1}
+/* tonight strip */
+.strip{display:flex;gap:10px;overflow-x:auto;padding:2px 2px 8px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+.mini{flex:0 0 150px;scroll-snap-align:start;display:flex;flex-direction:column;gap:4px;align-items:flex-start;background:var(--surface);border:1px solid color-mix(in srgb,var(--outline) 14%,transparent);border-radius:10px;padding:10px 12px;text-align:left;box-shadow:0 1px 2px rgba(0,0,0,.15)}
+.mini:hover{border-color:var(--ink)}
+.mini.mine{border-color:var(--pc);box-shadow:0 0 0 1px var(--pc)}
+.mini .logos{display:flex;align-items:center;gap:6px}
+.mini .logos img{width:26px;height:26px;object-fit:contain}
+.mini .at{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.mini .mt{font-family:var(--display);font-size:16px;font-weight:600;text-transform:uppercase}
+.mini .ml{font-size:12px;color:var(--muted)}
+.mini .mp{font-size:12px;font-weight:700;color:var(--muted)}
+.mini.mine .mp{color:color-mix(in srgb,var(--pc) 70%,var(--ink))}
+.game.flash{outline:3px solid var(--accent);outline-offset:3px}
+/* collapsible write-up */
+.wdet>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px}
+.wdet>summary::-webkit-details-marker{display:none}
+.wdet>summary .eyebrow::before{content:"\25B8";display:inline-block;width:1em;color:var(--muted);transition:transform .15s}
+.wdet[open]>summary .eyebrow::before{transform:rotate(90deg)}
+.wdet .wtext{margin:8px 0 0}
+.wblock{margin-top:10px}
+.wblock.wnote{font-size:12px;color:var(--muted)}
+/* result stamp */
+.stamp{position:absolute;top:44px;right:12px;transform:rotate(-12deg);font-family:var(--display);font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:4px 12px;border:3px solid currentColor;border-radius:6px;opacity:.9;pointer-events:none;display:flex;gap:8px;align-items:baseline;background:color-mix(in srgb,var(--surface) 75%,transparent)}
+.stamp small{font-size:14px;font-family:var(--mono)}
+.stamp.win{color:var(--win)}.stamp.loss{color:var(--loss)}.stamp.push{color:var(--push)}
+/* loading skeleton */
+.skel{display:flex;flex-direction:column;gap:16px}
+.skel div{height:150px;border-radius:10px;background:linear-gradient(90deg,var(--surface) 25%,var(--soft) 50%,var(--surface) 75%);background-size:200% 100%;animation:shimmer 1.3s linear infinite}
+@keyframes shimmer{to{background-position:-200% 0}}
+@media (prefers-reduced-motion:reduce){.skel div{animation:none}}
+/* dark mode polish */
+.pickbtn .logo{background:rgba(255,255,255,.08);border-radius:50%;padding:3px}
 .badge{font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;padding:2px 7px;border-radius:3px;background:var(--soft)}
 .badge.bonus{background:var(--accent);color:var(--accent-ink)}
 .badge.live{background:var(--loss);color:#fff}
@@ -221,7 +265,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
         <div class="eyebrow">Regular season, against the spread</div>
         <h1>Meats NBA Calcutta</h1>
       </div>
-      <div class="sub">Kev, Beekie, Mio, Sulliver. 2026-27 regular season.</div>
+      <div class="sub">Four guys, four flags, one season against the number.</div>
     </div>
     <details class="rules" id="rules">
       <summary><h2>The rules</h2><span class="hint">tap to open</span></summary>
@@ -246,10 +290,10 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     </details>
     <div class="who" id="who">
       <span class="eyebrow">Picking as</span>
-      <button class="chip" data-player="Kev" aria-pressed="false">Kev</button>
-      <button class="chip" data-player="Beekie" aria-pressed="false">Beekie</button>
-      <button class="chip" data-player="Mio" aria-pressed="false">Mio</button>
-      <button class="chip" data-player="Sulliver" aria-pressed="false">Sulliver</button>
+      <button class="chip" data-player="Kev" aria-pressed="false"><img class="chipflag" src="assets/flag-poland.svg" alt="">Kev</button>
+      <button class="chip" data-player="Beekie" aria-pressed="false"><img class="chipflag" src="assets/flag-israel.svg" alt="">Beekie</button>
+      <button class="chip" data-player="Mio" aria-pressed="false"><img class="chipflag" src="assets/flag-serbia.svg" alt="">Mio</button>
+      <button class="chip" data-player="Sulliver" aria-pressed="false"><img class="chipflag" src="assets/flag-italy.svg" alt="">Sulliver</button>
       <button class="refresh" id="refresh" type="button">Refresh Button</button>
     </div>
     <div class="status" id="status">Loading the board.<button class="signout" id="signout" type="button" hidden>Sign out</button></div>
@@ -262,7 +306,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     <button role="tab" data-tab="history" aria-selected="false">History</button>
   </div>
 
-  <section id="view-board" class="day" style="gap:22px"></section>
+  <section id="view-board" class="day" style="gap:22px"><div class="skel"><div></div><div></div><div></div></div></section>
 
   <section id="view-history" hidden style="display:flex;flex-direction:column;gap:14px">
     <div class="filters" id="histfilters"></div>
@@ -329,24 +373,38 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
         const day=k.gameDate||(g&&g.date);if(day&&weekKey(day)===thisWk){wkPicks++;if(k.lock)wkLocks++;}
         if(!r){open++;continue;}pts+=r.points;if(r.result==='win')w++;else if(r.result==='loss')l++;else t++;
         if(day&&weekKey(day)===thisWk)wk+=r.points;}
-      return {p,pts,w,l,t,wk,open,wkPicks,wkLocks};}).sort((a,b)=>b.pts-a.pts||b.w-a.w);
+      const series=[S.cfg.start];const graded=S.picks.filter(k=>k.player===p).map(k=>({k,g:S.games[k.gameId],r:grade(k,S.games[k.gameId])})).filter(x=>x.r).sort((a,b)=>(a.k.gameStart||'')<(b.k.gameStart||'')?-1:1);
+      let run=S.cfg.start;for(const x of graded){run+=x.r.points;series.push(run);}
+      return {p,pts,w,l,t,wk,open,wkPicks,wkLocks,series};}).sort((a,b)=>b.pts-a.pts||b.w-a.w);
   }
+  function spark(series){const W=120,H=30;if(series.length<2)series=[series[0],series[0]];const mn=Math.min(...series),mx=Math.max(...series);const span=(mx-mn)||1;
+    const pts=series.map((v,i)=>[(i/(series.length-1))*(W-4)+2,H-3-((v-mn)/span)*(H-8)]);const d=pts.map(p=>p.map(n=>n.toFixed(1)).join(',')).join(' ');const last=pts[pts.length-1];
+    return `<svg class="spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true"><polyline points="${d}" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${last[0].toFixed(1)}" cy="${last[1].toFixed(1)}" r="2.6" fill="currentColor"/></svg>`;}
   function weekPickCount(player,day){const wk=weekKey(day);return S.picks.filter(k=>k.player===player&&weekKey(k.gameDate||(S.games[k.gameId]||{}).date||day)===wk).length;}
   function renderBoard(){const st=standings();const top=st[0]&&st[0].pts;
-    $('board').innerHTML=st.map((s,i)=>`<div class="tile ${s.pts===top&&S.picks.length?'lead':''} ${FLAGS[s.p]||''}"><div class="name"><span>${esc(s.p)}</span><span class="rank num">${i+1}</span></div><div class="pts num">${s.pts}</div><div class="rec num">${s.w}-${s.l}-${s.t} ATS${s.open?` <span>(${s.open} open)</span>`:''}</div><div class="wk num ${s.wk>0?'pos':s.wk<0?'neg':'zero'}">${signed(s.wk)} this week</div><div class="wkp num ${s.wkPicks>=MAX_WEEK?'full':''}">${s.wkPicks} of ${MAX_WEEK} picks used this week${s.wkLocks?`, ${s.wkLocks} lock${s.wkLocks===1?'':'s'}`:''}</div><div class="wkp num">${moneyballOf(s.p)?'Mega Bonus used':'Mega Bonus available'}</div></div>`).join('');}
+    $('board').innerHTML=st.map((s,i)=>`<div class="tile ${s.pts===top&&S.picks.length?'lead':''} ${FLAGS[s.p]||''}"><div class="name"><span>${esc(s.p)}${s.pts===top&&S.picks.length?`<svg class="crown" viewBox="0 0 24 16" width="18" height="12" aria-label="Leader"><path d="M2 14h20l-2-9-5 4-3-7-3 7-5-4z" fill="currentColor"/></svg>`:''}</span><span class="rank num">${i+1}</span></div><div class="ptsrow"><div class="pts num">${s.pts}</div>${spark(s.series)}</div><div class="rec num">${s.w}-${s.l}-${s.t} ATS${s.open?` <span>(${s.open} open)</span>`:''}</div><div class="wk num ${s.wk>0?'pos':s.wk<0?'neg':'zero'}">${signed(s.wk)} this week</div><div class="wkp num ${s.wkPicks>=MAX_WEEK?'full':''}">${s.wkPicks} of ${MAX_WEEK} picks used this week${s.wkLocks?`, ${s.wkLocks} lock${s.wkLocks===1?'':'s'}`:''}</div><div class="wkp num">${moneyballOf(s.p)?'Mega Bonus used':'Mega Bonus available'}</div></div>`).join('');}
   const moneyballOf=player=>S.picks.find(k=>k.player===player&&k.moneyball);
   function renderGames(){const v=$('view-board');const today=nowET();
     const picksBy={};for(const k of S.picks)(picksBy[k.gameId]=picksBy[k.gameId]||[]).push(k);
     const show=gameList().filter(g=>g.status!=='postponed'&&(g.date>=today||!isFinal(g)||(picksBy[g.id]&&g.date>=addDays(today,-2))));
+    if(!S.ready&&!show.length)return;
     if(!show.length){v.innerHTML=`<div class="empty"><strong>No games on the board yet</strong>Tap the Refresh Button to pull today's games and lines.</div>`;return;}
     const days={};for(const g of show)(days[g.date]=days[g.date]||[]).push(g);
     const openDays=S.openDays||(S.openDays=new Set());
-    v.innerHTML=Object.keys(days).sort().map(day=>{const list=days[day].sort((a,b)=>a.start<b.start?-1:1);const lined=list.filter(g=>g.spreadHome!=null).length;
+    const tonight=(days[today]||[]).slice().sort((a,b)=>a.start<b.start?-1:1);
+    const nextDay=Object.keys(days).filter(d=>d>today).sort()[0];
+    const strip=tonight.length?`<div class="strip" aria-label="Tonight at a glance">${tonight.map(g=>{const my=(picksBy[g.id]||[]).find(k=>k.player===S.me);const hex=c=>/^[0-9a-fA-F]{6}$/.test(c||'')?'#'+c:'';const pc=my?hex(my.team===g.home?g.homeColor:g.awayColor):'';
+      const fin=isFinal(g),live=g.status==='inprogress';const score=fin||live?`${g.awayScore??''}-${g.homeScore??''}`:'';
+      return `<button class="mini ${my?'mine':''}" data-jump="g-${esc(g.id)}" ${pc?`style="--pc:${pc}"`:''}><span class="logos">${g.awayLogo?`<img src="${esc(g.awayLogo)}" alt="">`:''}<span class="at">at</span>${g.homeLogo?`<img src="${esc(g.homeLogo)}" alt="">`:''}</span><span class="mt">${esc(g.away)} at ${esc(g.home)}</span><span class="ml num">${fin?'Final '+score:live?'Live '+score:fmtTime.format(new Date(g.start))}</span><span class="mp num">${my?`${esc(my.team)} ${esc(spStr(my.spread))}${my.moneyball?' MB':my.lock?' Lock':''}`:(g.spreadHome!=null?`${esc(g.home)} ${esc(spStr(g.spreadHome))}`:'Line pending')}</span></button>`;}).join('')}</div>`:
+      `<div class="empty"><strong>No games tonight</strong>${nextDay?`Next up: ${esc(fmtLong.format(new Date(nextDay+'T12:00:00Z')))}, ${days[nextDay].length} game${days[nextDay].length===1?'':'s'}.`:'Nothing on the schedule yet.'}</div>`;
+    v.innerHTML=strip+Object.keys(days).sort().map(day=>{const list=days[day].sort((a,b)=>a.start<b.start?-1:1);const lined=list.filter(g=>g.spreadHome!=null).length;
       const head=`<h2>${day===today?'Today, ':day<today?'Earlier, ':''}${fmtLong.format(new Date(day+'T12:00:00Z'))}</h2><span class="cnt num">${list.length} game${list.length===1?'':'s'}${lined<list.length?`, ${list.length-lined} waiting on a line`:''}</span>`;
       const body=list.map(g=>renderGame(g,picksBy[g.id]||[])).join('');
       if(day===today)return `<div class="day"><div class="dayhead">${head}</div>${body}</div>`;
       return `<details class="day" data-day="${esc(day)}" ${openDays.has(day)?'open':''}><summary class="dayhead">${head}</summary><div class="daybody">${body}</div></details>`;}).join('');
-    v.querySelectorAll('details.day').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)openDays.add(d.dataset.day);else openDays.delete(d.dataset.day);}));}
+    v.querySelectorAll('details.day').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)openDays.add(d.dataset.day);else openDays.delete(d.dataset.day);}));
+    const openW=S.openW||(S.openW=new Set());v.querySelectorAll('details.wdet').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)openW.add(d.dataset.w);else openW.delete(d.dataset.w);}));
+    v.querySelectorAll('[data-jump]').forEach(b=>b.addEventListener('click',()=>{const t=document.getElementById(b.dataset.jump);if(t){t.scrollIntoView({behavior:'smooth',block:'start'});t.classList.add('flash');setTimeout(()=>t.classList.remove('flash'),1200);}}));}
   function renderGame(g,picks){const locked=isLocked(g),fin=isFinal(g),live=g.status==='inprogress';const mult=g.multiplier||1;const w=S.writeups[g.id]||{};
     const side=team=>{const name=team===g.home?g.homeName:g.awayName;const sp=sideSpread(g,team);const mine=picks.find(k=>k.player===S.me&&k.team===team);const who=picks.filter(k=>k.team===team&&canSee(k));const busy=S.busy.has(g.id);
       const chips=who.map(k=>{const r=grade(k,g);return `<span class="ini ${r?r.result:''} ${k.player===S.me?'me':''} ${k.moneyball?'mb':k.lock?'lk':''}" title="${esc(k.player)} ${esc(spStr(k.spread))}${k.moneyball?' (mega bonus)':k.lock?' (lock)':''}">${ini(k.player)}</span>`;}).join('');
@@ -359,10 +417,10 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     const lineNote=g.spreadHome!=null&&!locked?`<span>${esc(g.home)} ${esc(spStr(g.spreadHome))}${g.spreadUpdated?`, line as of ${esc(fmtStamp.format(new Date(g.spreadUpdated)))}`:''}</span>`:'';
     const hex=c=>/^[0-9a-fA-F]{6}$/.test(c||'')?'#'+c:'';const colOf=team=>hex(team===g.home?g.homeColor:g.awayColor);const logoOf=team=>team===g.home?g.homeLogo:g.awayLogo;
     const tcStyle=team=>{const c=colOf(team);return c?`style="--tc:${c}"`:'';};
-    const inj=Array.isArray(w.injuries)&&w.injuries.length?`<div class="blurb"><span class="eyebrow">Injuries</span><ul class="inj">${w.injuries.map(x=>`<li><strong class="tcode" ${tcStyle(x.team)}>${esc(x.team)}</strong> ${esc(x.player)} <span class="st ${esc(String(x.status||'').toLowerCase())}">${esc(x.status||'')}</span>${x.stats?`<span class="num hint">${esc(x.stats)}</span>`:''}${x.impact?`<span class="imp ${esc(String(x.impact).toLowerCase())}">${esc(x.impact)} impact</span>`:''}${x.note?`<span>${esc(x.note)}</span>`:''}</li>`).join('')}</ul></div>`:'';
+    const inj=Array.isArray(w.injuries)&&w.injuries.length?`<div class="wblock"><span class="eyebrow">Injuries</span><ul class="inj">${w.injuries.map(x=>`<li><strong class="tcode" ${tcStyle(x.team)}>${esc(x.team)}</strong> ${esc(x.player)} <span class="st ${esc(String(x.status||'').toLowerCase())}">${esc(x.status||'')}</span>${x.stats?`<span class="num hint">${esc(x.stats)}</span>`:''}${x.impact?`<span class="imp ${esc(String(x.impact).toLowerCase())}">${esc(x.impact)} impact</span>`:''}${x.note?`<span>${esc(x.note)}</span>`:''}</li>`).join('')}</ul></div>`:'';
     const pk=w.pick&&w.pick.team?`<div class="blurb cpickwrap" ${tcStyle(w.pick.team)}><span class="eyebrow">Claude's pick</span><div class="cpick"><span class="team">${logoOf(w.pick.team)?`<img class="logo sm" src="${esc(logoOf(w.pick.team))}" alt="">`:''}${esc(w.pick.team)}${w.pick.spread!=null?`<span class="sp">${esc(spStr(w.pick.spread))}</span>`:`<span class="sp">lean</span>`}</span><span>${esc(w.pick.why||'')}</span></div></div>`:'';
     const stamp=w.updated?fmtStamp.format(new Date(w.updated))+' ET':'';
-    const wnote=w.blurb||pk?`<div class="blurb wnote">Write-up${stamp?' from '+esc(stamp):''}. Write-ups refresh each morning and are not live; the lines, scores and picks above and below update every time you tap the Refresh Button.</div>`:'';
+    const wnote=w.blurb||pk?`<div class="wblock wnote">Write-up${stamp?' from '+esc(stamp):''}. Write-ups refresh each morning and are not live; the lines, scores and picks above and below update every time you tap the Refresh Button.</div>`:'';
     const lineLive=!locked?`<span class="live-tag">live when you refresh</span>`:'';
     const myPick=picks.find(k=>k.player===S.me);
     let lockRow='';
@@ -377,7 +435,10 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     const inkFor=c=>lum(c)>0.6?'#15202b':'#ffffff';
     const pickedStyle=pc?`--pc:${pc};--pc-ink:${inkFor(pc)}`:'';
     const haveCols=!!(colOf(g.away)&&colOf(g.home));
-    return `<article class="game ${mult>1?'bonus':''} ${pc?'picked':''} ${haveCols?'split':''}" style="--ac:${ac};--hc:${hc};--ac-ink:${inkFor(ac)};--hc-ink:${inkFor(hc)};${pickedStyle}"><div class="meta"><span class="when">${esc(g.away)} at ${esc(g.home)}, ${esc(fmtTime.format(new Date(g.start)))} ET</span>${tag}${bonus}${lineNote}${lineLive}</div>${w.blurb?`<div class="blurb"><span class="eyebrow">Matchup${stamp?', written '+esc(stamp):''}</span>${esc(w.blurb)}</div>`:''}${inj}${pk}${wnote}${side(g.away)}${side(g.home)}${lockRow}</article>`;}
+    const openW=S.openW||(S.openW=new Set());
+    const wdet=(w.blurb||inj)?`<details class="wdet blurb" data-w="${esc(g.id)}" ${openW.has(g.id)?'open':''}><summary><span class="eyebrow">Matchup and injuries${stamp?', written '+esc(stamp):''}</span></summary>${w.blurb?`<p class="wtext">${esc(w.blurb)}</p>`:''}${inj}${wnote}</details>`:'';
+    let stampEl='';if(fin&&myPick){const r=grade(myPick,g);if(r)stampEl=`<div class="stamp ${r.result}">${r.result==='win'?'Covered':r.result==='loss'?'Missed':'Push'}<small>${signed(r.points)}</small></div>`;}
+    return `<article class="game ${mult>1?'bonus':''} ${pc?'picked':''} ${haveCols?'split':''}" id="g-${esc(g.id)}" style="--ac:${ac};--hc:${hc};--ac-ink:${inkFor(ac)};--hc-ink:${inkFor(hc)};${pickedStyle}"><div class="meta"><span class="when">${esc(g.away)} at ${esc(g.home)}, ${esc(fmtTime.format(new Date(g.start)))} ET</span>${tag}${bonus}${lineNote}${lineLive}</div>${pk}${wdet}${side(g.away)}${side(g.home)}${lockRow}${stampEl}</article>`;}
   function renderHistory(){$('histfilters').innerHTML=['All',...PLAYERS].map(p=>`<button class="chip" data-hist="${esc(p)}" aria-pressed="${S.hist===p}">${esc(p)}</button>`).join('');
     const rows=S.picks.filter(k=>(S.hist==='All'||k.player===S.hist)&&canSee(k)).map(k=>{const g=S.games[k.gameId];const day=k.gameDate||(g&&g.date)||k.pickedAt.slice(0,10);const r=grade(k,g);
       return {k,g,day,r,hs:g&&g.homeScore,as:g&&g.awayScore,home:k.home||(g&&g.home)||'',away:k.away||(g&&g.away)||'',start:k.gameStart||(g&&g.start)||k.pickedAt};}).sort((a,b)=>a.start<b.start?1:a.start>b.start?-1:a.k.player<b.k.player?-1:1);
