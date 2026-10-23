@@ -63,6 +63,14 @@ header{display:flex;flex-direction:column;gap:14px;padding-top:28px;border-botto
 .board{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .tile{background:var(--surface);border:1.5px solid var(--line);border-top:4px solid var(--ink);padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
 .tile.lead{border-top-color:var(--accent)}
+.tile{position:relative;overflow:hidden}
+.tile::before{content:"";position:absolute;inset:0;background:var(--flag,none);background-size:cover;background-position:center;opacity:.26;pointer-events:none}
+.tile>*{position:relative}
+@media (prefers-color-scheme: dark){.tile::before{opacity:.3}}
+.tile.flag-pl{--flag:linear-gradient(180deg,#ffffff 0 50%,#dc143c 50% 100%)}
+.tile.flag-il{--flag:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20220%20160%22%3E%3Crect%20width%3D%22220%22%20height%3D%22160%22%20fill%3D%22%23fff%22%2F%3E%3Crect%20y%3D%2218%22%20width%3D%22220%22%20height%3D%2224%22%20fill%3D%22%230038b8%22%2F%3E%3Crect%20y%3D%22118%22%20width%3D%22220%22%20height%3D%2224%22%20fill%3D%22%230038b8%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%230038b8%22%20stroke-width%3D%226%22%3E%3Cpolygon%20points%3D%22110%2C47%20143%2C104%2077%2C104%22%2F%3E%3Cpolygon%20points%3D%22110%2C113%2077%2C56%20143%2C56%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")}
+.tile.flag-rs{--flag:linear-gradient(180deg,#c6363c 0 33.4%,#0c4076 33.4% 66.7%,#ffffff 66.7% 100%)}
+.tile.flag-it{--flag:linear-gradient(90deg,#009246 0 33.4%,#ffffff 33.4% 66.7%,#ce2b37 66.7% 100%)}
 .tile .name{font-family:var(--display);font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:.03em;display:flex;justify-content:space-between;align-items:baseline}
 .tile .rank{font-size:12px;color:var(--muted);letter-spacing:.1em}
 .tile .pts{font-family:var(--display);font-size:46px;font-weight:700;line-height:1}
@@ -272,6 +280,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
   // Firebase web config for the picks database. Filled in at setup; the page runs read-only until then.
   const FIREBASE_CONFIG = window.FIREBASE_CONFIG || null;
   const PLAYERS=["Kev","Beekie","Mio","Sulliver"];
+  const FLAGS={Kev:'flag-pl',Beekie:'flag-il',Mio:'flag-rs',Sulliver:'flag-it'};
   const DEFAULT_CFG={start:30,win:1,loss:0,lockWin:2,lockLoss:1,moneyballWin:5,moneyballLoss:0,push:0};
   let MAX_WEEK=5;
   const ET='America/New_York';
@@ -325,7 +334,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
   }
   function weekPickCount(player,day){const wk=weekKey(day);return S.picks.filter(k=>k.player===player&&weekKey(k.gameDate||(S.games[k.gameId]||{}).date||day)===wk).length;}
   function renderBoard(){const st=standings();const top=st[0]&&st[0].pts;
-    $('board').innerHTML=st.map((s,i)=>`<div class="tile ${s.pts===top&&S.picks.length?'lead':''}"><div class="name"><span>${esc(s.p)}</span><span class="rank num">${i+1}</span></div><div class="pts num">${s.pts}</div><div class="rec num">${s.w}-${s.l}-${s.t} ATS${s.open?` <span>(${s.open} open)</span>`:''}</div><div class="wk num ${s.wk>0?'pos':s.wk<0?'neg':'zero'}">${signed(s.wk)} this week</div><div class="wkp num ${s.wkPicks>=MAX_WEEK?'full':''}">${s.wkPicks} of ${MAX_WEEK} picks used this week${s.wkLocks?`, ${s.wkLocks} lock${s.wkLocks===1?'':'s'}`:''}</div><div class="wkp num">${moneyballOf(s.p)?'Mega Bonus used':'Mega Bonus available'}</div></div>`).join('');}
+    $('board').innerHTML=st.map((s,i)=>`<div class="tile ${s.pts===top&&S.picks.length?'lead':''} ${FLAGS[s.p]||''}"><div class="name"><span>${esc(s.p)}</span><span class="rank num">${i+1}</span></div><div class="pts num">${s.pts}</div><div class="rec num">${s.w}-${s.l}-${s.t} ATS${s.open?` <span>(${s.open} open)</span>`:''}</div><div class="wk num ${s.wk>0?'pos':s.wk<0?'neg':'zero'}">${signed(s.wk)} this week</div><div class="wkp num ${s.wkPicks>=MAX_WEEK?'full':''}">${s.wkPicks} of ${MAX_WEEK} picks used this week${s.wkLocks?`, ${s.wkLocks} lock${s.wkLocks===1?'':'s'}`:''}</div><div class="wkp num">${moneyballOf(s.p)?'Mega Bonus used':'Mega Bonus available'}</div></div>`).join('');}
   const moneyballOf=player=>S.picks.find(k=>k.player===player&&k.moneyball);
   function renderGames(){const v=$('view-board');const today=nowET();
     const picksBy={};for(const k of S.picks)(picksBy[k.gameId]=picksBy[k.gameId]||[]).push(k);
