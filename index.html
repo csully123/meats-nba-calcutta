@@ -148,8 +148,11 @@ h1::after{content:"";display:block;width:64px;height:4px;background:var(--accent
 .chip{display:inline-flex;align-items:center;gap:7px}
 .chipflag{width:22px;height:15px;object-fit:cover;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.25)}
 /* standings extras */
-.tile.lead{box-shadow:inset 0 -3px 0 #d9a21b}
-.crown{color:#d9a21b;margin-left:6px;vertical-align:-1px}
+.tile.r1{box-shadow:inset 0 -4px 0 #d9a21b}
+.tile.r2{box-shadow:inset 0 -4px 0 #b8bcc4}
+.tile.r3{box-shadow:inset 0 -4px 0 #b87333}
+.crown{margin-left:6px;vertical-align:-1px}
+.crown.r1{color:#d9a21b}.crown.r2{color:#b8bcc4}.crown.r3{color:#b87333}
 .ptsrow{display:flex;align-items:flex-end;justify-content:space-between;gap:8px}
 .spark{width:110px;height:30px;color:var(--ink);opacity:.9;flex:none}
 @media (max-width:620px){.spark{width:80px}}
@@ -394,8 +397,11 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     const pts=series.map((v,i)=>[(i/(series.length-1))*(W-4)+2,H-3-((v-mn)/span)*(H-8)]);const d=pts.map(p=>p.map(n=>n.toFixed(1)).join(',')).join(' ');const last=pts[pts.length-1];
     return `<svg class="spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true"><polyline points="${d}" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${last[0].toFixed(1)}" cy="${last[1].toFixed(1)}" r="2.6" fill="currentColor"/></svg>`;}
   function weekPickCount(player,day){const wk=weekKey(day);return S.picks.filter(k=>k.player===player&&weekKey(k.gameDate||(S.games[k.gameId]||{}).date||day)===wk).length;}
-  function renderBoard(){const st=standings();const top=st[0]&&st[0].pts;
-    $('board').innerHTML=st.map((s,i)=>`<div class="tile ${s.pts===top&&S.picks.length?'lead':''} ${FLAGS[s.p]||''}"><div class="name"><span>${esc(s.p)}${s.pts===top&&S.picks.length?`<svg class="crown" viewBox="0 0 24 16" width="18" height="12" aria-label="Leader"><path d="M2 14h20l-2-9-5 4-3-7-3 7-5-4z" fill="currentColor"/></svg>`:''}</span><span class="rank num">${i+1}</span></div><div class="pts num">${s.pts}</div><div class="rec num">${s.w}-${s.l}-${s.t} ATS${s.open?` <span>(${s.open} open)</span>`:''}</div><div class="wk num ${s.wk>0?'pos':s.wk<0?'neg':'zero'}">${signed(s.wk)} this week</div><div class="wkp num ${s.wkPicks>=MAX_WEEK?'full':''}">${s.wkPicks} of ${MAX_WEEK} picks used this week${s.wkLocks?`, ${s.wkLocks} lock${s.wkLocks===1?'':'s'}`:''}</div><div class="wkp num">${moneyballOf(s.p)?'Mega Bonus used':'Mega Bonus available'}</div></div>`).join('');}
+  function renderBoard(){const st=standings();
+    // dense ranking: tied scores share a place and the same medal
+    let place=0,prev=null;const ranked=st.map(x=>{const key=x.pts+'|'+x.w;if(key!==prev){place++;prev=key;}return {...x,place};});
+    const crown=p=>p<=3?`<svg class="crown r${p}" viewBox="0 0 24 16" width="18" height="12" aria-label="${p===1?'First':p===2?'Second':'Third'} place"><path d="M2 14h20l-2-9-5 4-3-7-3 7-5-4z" fill="currentColor"/></svg>`:'';
+    $('board').innerHTML=ranked.map(s=>`<div class="tile ${s.place<=3?'r'+s.place:''} ${FLAGS[s.p]||''}"><div class="name"><span>${esc(s.p)}${crown(s.place)}</span><span class="rank num">${s.place}</span></div><div class="pts num">${s.pts}</div><div class="rec num">${s.w}-${s.l}-${s.t} ATS${s.open?` <span>(${s.open} open)</span>`:''}</div><div class="wk num ${s.wk>0?'pos':s.wk<0?'neg':'zero'}">${signed(s.wk)} this week</div><div class="wkp num ${s.wkPicks>=MAX_WEEK?'full':''}">${s.wkPicks} of ${MAX_WEEK} picks used this week${s.wkLocks?`, ${s.wkLocks} lock${s.wkLocks===1?'':'s'}`:''}</div><div class="wkp num">${moneyballOf(s.p)?'Mega Bonus used':'Mega Bonus available'}</div></div>`).join('');}
   const moneyballOf=player=>S.picks.find(k=>k.player===player&&k.moneyball);
   function renderGames(){const v=$('view-board');const today=nowET();
     const picksBy={};for(const k of S.picks)(picksBy[k.gameId]=picksBy[k.gameId]||[]).push(k);
