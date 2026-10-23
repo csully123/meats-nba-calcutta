@@ -107,6 +107,10 @@ def main() -> int:
                 "home": hcode, "away": acode,
                 "homeName": home["team"].get("displayName"),
                 "awayName": away["team"].get("displayName"),
+                "homeLogo": home["team"].get("logo"),
+                "awayLogo": away["team"].get("logo"),
+                "homeColor": home["team"].get("color"),
+                "awayColor": away["team"].get("color"),
                 "status": st,
             })
             # Spread: only while the game has not started. ESPN's "spread" is the home team's number.

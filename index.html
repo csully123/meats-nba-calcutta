@@ -124,9 +124,11 @@ details.day .daybody{display:flex;flex-direction:column;gap:10px;margin-top:10px
 .badge.live{background:var(--loss);color:#fff}
 .badge.final{background:var(--ink);color:var(--bg)}
 .badge.lock{background:var(--soft);color:var(--muted)}
-.side{display:flex;flex-direction:column;gap:8px;padding:12px;min-width:0}
+.side{display:flex;flex-direction:column;gap:8px;padding:12px;min-width:0;--tc:var(--line);border-top:4px solid var(--tc);background:linear-gradient(180deg,color-mix(in srgb,var(--tc) 14%,var(--surface)),var(--surface) 70%)}
 .side+.side{border-left:1px solid var(--line)}
-.pickbtn{width:100%;display:flex;justify-content:space-between;align-items:center;gap:8px;border:1.5px solid var(--line);background:var(--bg);padding:10px 12px;text-align:left;border-radius:4px}
+.pickbtn .logo{width:34px;height:34px;object-fit:contain;flex:none}
+.pickbtn .team{flex:1 1 auto;min-width:0}
+.pickbtn{width:100%;display:flex;justify-content:space-between;align-items:center;gap:10px;border:1.5px solid var(--line);background:var(--bg);padding:10px 12px;text-align:left;border-radius:4px}
 .pickbtn .team{font-family:var(--display);font-size:22px;font-weight:600;text-transform:uppercase;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .pickbtn .tname{font-size:12px;color:var(--muted);display:block;font-family:var(--body);font-weight:500;text-transform:none;letter-spacing:0}
 .pickbtn .sp{font-family:var(--mono);font-size:17px;font-weight:600;flex:none}
@@ -320,7 +322,8 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     const side=team=>{const name=team===g.home?g.homeName:g.awayName;const sp=sideSpread(g,team);const mine=picks.find(k=>k.player===S.me&&k.team===team);const who=picks.filter(k=>k.team===team&&canSee(k));const busy=S.busy.has(g.id);
       const chips=who.map(k=>{const r=grade(k,g);return `<span class="ini ${r?r.result:''} ${k.player===S.me?'me':''} ${k.moneyball?'mb':k.lock?'lk':''}" title="${esc(k.player)} ${esc(spStr(k.spread))}${k.moneyball?' (mega bonus)':k.lock?' (lock)':''}">${ini(k.player)}</span>`;}).join('');
       const sc=fin||live?`<span class="score num">${team===g.home?g.homeScore??'':g.awayScore??''}</span>`:'';const spTxt=sp==null?'Line pending':spStr(sp);
-      return `<div class="side"><button class="pickbtn ${sp==null?'nolines':''}" data-game="${esc(g.id)}" data-team="${esc(team)}" aria-pressed="${mine?'true':'false'}" ${locked||sp==null||busy?'disabled':''}><span class="team">${esc(team)}<span class="tname">${esc(name||'')}</span></span>${sc||`<span class="sp num">${esc(spTxt)}</span>`}</button><div class="pickers">${chips}</div></div>`;};
+      const col=(team===g.home?g.homeColor:g.awayColor)||'';const logo=team===g.home?g.homeLogo:g.awayLogo;const safe=/^[0-9a-fA-F]{6}$/.test(col)?'#'+col:'';
+      return `<div class="side" style="${safe?`--tc:${safe}`:''}"><button class="pickbtn ${sp==null?'nolines':''}" data-game="${esc(g.id)}" data-team="${esc(team)}" aria-pressed="${mine?'true':'false'}" ${locked||sp==null||busy?'disabled':''}>${logo?`<img class="logo" src="${esc(logo)}" alt="" loading="lazy">`:''}<span class="team">${esc(team)}<span class="tname">${esc(name||'')}</span></span>${sc||`<span class="sp num">${esc(spTxt)}</span>`}</button><div class="pickers">${chips}</div></div>`;};
     const tag=fin?`<span class="badge final">Final</span>`:live?`<span class="badge live">Live</span>`:locked?`<span class="badge lock">Locked</span>`:'';
     const bonus=mult>1?`<span class="badge bonus">${esc(g.label||'Bonus')} ${mult}x</span>`:'';
     const lineNote=g.spreadHome!=null&&!locked?`<span>${esc(g.home)} ${esc(spStr(g.spreadHome))}${g.spreadUpdated?`, line as of ${esc(fmtStamp.format(new Date(g.spreadUpdated)))}`:''}</span>`:'';
@@ -428,7 +431,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
         if(!(ev.season&&ev.season.type===2)&&!notes.includes('cup'))continue;
         const start=new Date(ev.date);const date=fmtDay.format(start);
         const st=ev.status&&ev.status.type||{};const status=st.completed||st.name==='STATUS_FINAL'?'final':(st.name||'').includes('POSTPONED')?'postponed':st.state==='in'?'inprogress':'scheduled';
-        const id=String(ev.id);const prev=S.games[id]||{};const g={...prev,id,date,start:start.toISOString(),home:ABBR[h.team.abbreviation]||h.team.abbreviation,away:ABBR[a.team.abbreviation]||a.team.abbreviation,homeName:h.team.displayName,awayName:a.team.displayName,status};
+        const id=String(ev.id);const prev=S.games[id]||{};const g={...prev,id,date,start:start.toISOString(),home:ABBR[h.team.abbreviation]||h.team.abbreviation,away:ABBR[a.team.abbreviation]||a.team.abbreviation,homeName:h.team.displayName,awayName:a.team.displayName,homeLogo:h.team.logo||prev.homeLogo||null,awayLogo:a.team.logo||prev.awayLogo||null,homeColor:h.team.color||prev.homeColor||null,awayColor:a.team.color||prev.awayColor||null,status};
         const odds=(comp.odds||[])[0];const tipped=Date.now()>=start.getTime()||status!=='scheduled';
         if(!tipped&&odds&&odds.spread!=null&&Number(odds.spread)!==prev.spreadHome){g.spreadHome=Number(odds.spread);g.spreadSource=(odds.provider&&odds.provider.displayName)||'ESPN';g.spreadUpdated=new Date().toISOString();}
         if(g.spreadHome===undefined)g.spreadHome=null;
