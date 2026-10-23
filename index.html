@@ -157,8 +157,9 @@ h1::after{content:"";display:block;width:64px;height:4px;background:var(--accent
 .tile>*{z-index:1}
 /* tonight strip */
 .slate{display:flex;flex-direction:column;gap:8px}
-.strip{display:flex;gap:10px;overflow-x:auto;padding:2px 2px 8px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
-.mini{flex:0 0 150px;scroll-snap-align:start;display:flex;flex-direction:column;gap:4px;align-items:flex-start;background:var(--surface);border:1px solid color-mix(in srgb,var(--outline) 14%,transparent);border-radius:10px;padding:10px 12px;text-align:left;box-shadow:0 1px 2px rgba(0,0,0,.15)}
+.strip{display:flex;gap:10px;overflow-x:auto;padding:2px 2px 8px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.strip::-webkit-scrollbar{display:none}
+.mini{flex:0 0 150px;display:flex;flex-direction:column;gap:4px;align-items:flex-start;background:var(--surface);border:1px solid color-mix(in srgb,var(--outline) 14%,transparent);border-radius:10px;padding:10px 12px;text-align:left;box-shadow:0 1px 2px rgba(0,0,0,.15)}
 .mini:hover{border-color:var(--ink)}
 .mini.mine{border-color:var(--pc);box-shadow:0 0 0 1px var(--pc)}
 .mini .logos{display:flex;align-items:center;gap:6px}
@@ -397,7 +398,7 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     const openDays=S.openDays||(S.openDays=new Set());
     const tonight=(days[today]||[]).slice().sort((a,b)=>a.start<b.start?-1:1);
     const nextDay=Object.keys(days).filter(d=>d>today).sort()[0];
-    const strip=tonight.length?`<div class="slate"><div class="dayhead"><h2>Today's Slate</h2><span class="cnt num">${tonight.length} game${tonight.length===1?'':'s'}, tap one to jump to it</span></div><div class="strip" aria-label="Today's slate">${tonight.map(g=>{const my=(picksBy[g.id]||[]).find(k=>k.player===S.me);const hex=c=>/^[0-9a-fA-F]{6}$/.test(c||'')?'#'+c:'';const pc=my?hex(my.team===g.home?g.homeColor:g.awayColor):'';
+    const strip=tonight.length?`<div class="slate"><div class="dayhead"><h2>Today's Slate</h2><span class="cnt num">${tonight.length} game${tonight.length===1?'':'s'}, tap one to jump to it</span></div><div class="strip" aria-label="Today's slate">${[...tonight,...tonight].map(g=>{const my=(picksBy[g.id]||[]).find(k=>k.player===S.me);const hex=c=>/^[0-9a-fA-F]{6}$/.test(c||'')?'#'+c:'';const pc=my?hex(my.team===g.home?g.homeColor:g.awayColor):'';
       const fin=isFinal(g),live=g.status==='inprogress';const score=fin||live?`${g.awayScore??''}-${g.homeScore??''}`:'';
       return `<button class="mini ${my?'mine':''}" data-jump="g-${esc(g.id)}" ${pc?`style="--pc:${pc}"`:''}><span class="logos">${g.awayLogo?`<img src="${esc(g.awayLogo)}" alt="">`:''}<span class="at">at</span>${g.homeLogo?`<img src="${esc(g.homeLogo)}" alt="">`:''}</span><span class="mt">${esc(g.away)} at ${esc(g.home)}</span><span class="ml num">${fin?'Final '+score:live?'Live '+score:fmtTime.format(new Date(g.start))}</span><span class="mp num">${my?`${esc(my.team)} ${esc(spStr(my.spread))}${my.moneyball?' MB':my.lock?' Lock':''}`:(g.spreadHome!=null?`${esc(g.home)} ${esc(spStr(g.spreadHome))}`:'Line pending')}</span></button>`;}).join('')}</div></div>`:
       `<div class="empty"><strong>No games tonight</strong>${nextDay?`Next up: ${esc(fmtLong.format(new Date(nextDay+'T12:00:00Z')))}, ${days[nextDay].length} game${days[nextDay].length===1?'':'s'}.`:'Nothing on the schedule yet.'}</div>`;
@@ -408,7 +409,30 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
       return `<details class="day" data-day="${esc(day)}" ${openDays.has(day)?'open':''}><summary class="dayhead">${head}</summary><div class="daybody">${body}</div></details>`;}).join('');
     v.querySelectorAll('details.day').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)openDays.add(d.dataset.day);else openDays.delete(d.dataset.day);}));
     const openW=S.openW||(S.openW=new Set());v.querySelectorAll('details.wdet').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)openW.add(d.dataset.w);else openW.delete(d.dataset.w);}));
+    startMarquee(v.querySelector('.strip'));
     v.querySelectorAll('[data-jump]').forEach(b=>b.addEventListener('click',()=>{const t=document.getElementById(b.dataset.jump);if(t){t.scrollIntoView({behavior:'smooth',block:'start'});t.classList.add('flash');setTimeout(()=>t.classList.remove('flash'),1200);}}));}
+  // Today's Slate drifts left on its own; a touch, drag, wheel or hover pauses it, and it picks back up after a short rest.
+  const MQ={el:null,raf:0,pausedUntil:0,hover:false,pos:0,last:0};
+  function startMarquee(el){
+    if(MQ.raf){cancelAnimationFrame(MQ.raf);MQ.raf=0;}
+    MQ.el=el;if(!el)return;
+    const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const half=()=>el.scrollWidth/2;
+    el.scrollLeft=MQ.pos%Math.max(1,half());
+    const pause=ms=>{MQ.pausedUntil=Date.now()+ms;};
+    el.addEventListener('pointerenter',()=>{MQ.hover=true;});el.addEventListener('pointerleave',()=>{MQ.hover=false;pause(800);});
+    ['pointerdown','touchstart','wheel'].forEach(ev=>el.addEventListener(ev,()=>pause(3000),{passive:true}));
+    el.addEventListener('scroll',()=>{if(Date.now()<MQ.pausedUntil||MQ.hover){MQ.pos=el.scrollLeft;}},{passive:true});
+    if(reduce)return;
+    const speed=28; // px per second
+    MQ.last=performance.now();
+    const step=now=>{if(MQ.el!==el||!el.isConnected){MQ.raf=0;return;}
+      const dt=Math.min(100,now-MQ.last);MQ.last=now;
+      if(!MQ.hover&&Date.now()>=MQ.pausedUntil){MQ.pos+=speed*dt/1000;const h=half();if(h>0&&MQ.pos>=h)MQ.pos-=h;el.scrollLeft=MQ.pos;}
+      else{const h=half();MQ.pos=el.scrollLeft;if(h>0&&MQ.pos>=h){MQ.pos-=h;el.scrollLeft=MQ.pos;}}
+      MQ.raf=requestAnimationFrame(step);};
+    MQ.raf=requestAnimationFrame(step);
+  }
   function renderGame(g,picks){const locked=isLocked(g),fin=isFinal(g),live=g.status==='inprogress';const mult=g.multiplier||1;const w=S.writeups[g.id]||{};
     const side=team=>{const name=team===g.home?g.homeName:g.awayName;const sp=sideSpread(g,team);const mine=picks.find(k=>k.player===S.me&&k.team===team);const who=picks.filter(k=>k.team===team&&canSee(k));const busy=S.busy.has(g.id);
       const chips=who.map(k=>{const r=grade(k,g);return `<span class="ini ${r?r.result:''} ${k.player===S.me?'me':''} ${k.moneyball?'mb':k.lock?'lk':''}" title="${esc(k.player)} ${esc(spStr(k.spread))}${k.moneyball?' (mega bonus)':k.lock?' (lock)':''}">${ini(k.player)}</span>`;}).join('');
