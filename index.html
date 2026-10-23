@@ -63,7 +63,7 @@ header{display:flex;flex-direction:column;gap:14px;padding-top:28px;border-botto
 .tile .wk{font-size:13px;font-weight:600}
 .tile .wkp{font-size:12px;color:var(--muted)}
 .tile .wkp.full{color:var(--ink);font-weight:600}
-.lockbtn{align-self:flex-start;border:1.5px solid var(--accent);background:none;color:var(--accent);border-radius:4px;padding:5px 10px;font-family:var(--display);font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.lockbtn{flex:none;width:190px;max-width:100%;text-align:center;border:1.5px solid var(--accent);background:none;color:var(--accent);border-radius:4px;padding:5px 10px;font-family:var(--display);font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
 .lockbtn[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
 .lockbtn:disabled{opacity:.6;cursor:default}
 .ini.lk{border:2px solid var(--accent);box-shadow:0 0 0 1px var(--surface) inset}
@@ -71,6 +71,7 @@ header{display:flex;flex-direction:column;gap:14px;padding-top:28px;border-botto
 .lockbtn.mb[aria-pressed="true"]{background:var(--push);color:#fff}
 .game .lockrow{flex-direction:column;align-items:stretch;gap:8px}
 .lockline{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.lockline .hint{flex:1 1 220px;min-width:0}
 .ini.mb{border:2px solid var(--push)}
 .lockchip.mb{background:var(--push);color:#fff}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
