@@ -24,6 +24,7 @@
   --soft:#212c39; --lock:#6d7682; color-scheme:dark } }
 *{box-sizing:border-box}
 html,body{margin:0}
+[hidden]{display:none!important}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.45;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 48px}
 .wrap{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
@@ -68,6 +69,13 @@ header{display:flex;flex-direction:column;gap:14px;padding-top:28px;border-botto
 .day{display:flex;flex-direction:column;gap:10px}
 .dayhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
 .dayhead .cnt{font-size:13px;color:var(--muted)}
+details.day>summary{list-style:none;cursor:pointer;padding:10px 12px;background:var(--surface);border:1.5px solid var(--line);border-left:4px solid var(--line)}
+details.day>summary::-webkit-details-marker{display:none}
+details.day>summary h2::before{content:"\25B8";display:inline-block;width:1em;color:var(--muted);transition:transform .15s}
+details.day[open]>summary h2::before{transform:rotate(90deg)}
+details.day>summary:hover{border-color:var(--ink)}
+details.day>summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+details.day .daybody{display:flex;flex-direction:column;gap:10px;margin-top:10px}
 .game{background:var(--surface);border:1.5px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;position:relative}
 .game.bonus{border-color:var(--accent)}
 .game .meta{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;padding:8px 12px;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted)}
@@ -262,8 +270,13 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
     const show=gameList().filter(g=>g.status!=='postponed'&&(g.date>=today||!isFinal(g)||(picksBy[g.id]&&g.date>=addDays(today,-2))));
     if(!show.length){v.innerHTML=`<div class="empty"><strong>No games on the board yet</strong>Tap the Refresh Button to pull today's games and lines.</div>`;return;}
     const days={};for(const g of show)(days[g.date]=days[g.date]||[]).push(g);
+    const openDays=S.openDays||(S.openDays=new Set());
     v.innerHTML=Object.keys(days).sort().map(day=>{const list=days[day].sort((a,b)=>a.start<b.start?-1:1);const lined=list.filter(g=>g.spreadHome!=null).length;
-      return `<div class="day"><div class="dayhead"><h2>${day===today?'Today, ':''}${fmtLong.format(new Date(day+'T12:00:00Z'))}</h2><span class="cnt num">${list.length} game${list.length===1?'':'s'}${lined<list.length?`, ${list.length-lined} waiting on a line`:''}</span></div>${list.map(g=>renderGame(g,picksBy[g.id]||[])).join('')}</div>`;}).join('');}
+      const head=`<h2>${day===today?'Today, ':day<today?'Earlier, ':''}${fmtLong.format(new Date(day+'T12:00:00Z'))}</h2><span class="cnt num">${list.length} game${list.length===1?'':'s'}${lined<list.length?`, ${list.length-lined} waiting on a line`:''}</span>`;
+      const body=list.map(g=>renderGame(g,picksBy[g.id]||[])).join('');
+      if(day===today)return `<div class="day"><div class="dayhead">${head}</div>${body}</div>`;
+      return `<details class="day" data-day="${esc(day)}" ${openDays.has(day)?'open':''}><summary class="dayhead">${head}</summary><div class="daybody">${body}</div></details>`;}).join('');
+    v.querySelectorAll('details.day').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)openDays.add(d.dataset.day);else openDays.delete(d.dataset.day);}));}
   function renderGame(g,picks){const locked=isLocked(g),fin=isFinal(g),live=g.status==='inprogress';const mult=g.multiplier||1;const w=S.writeups[g.id]||{};
     const side=team=>{const name=team===g.home?g.homeName:g.awayName;const sp=sideSpread(g,team);const mine=picks.find(k=>k.player===S.me&&k.team===team);const who=picks.filter(k=>k.team===team);const busy=S.busy.has(g.id);
       const chips=who.map(k=>{const r=grade(k,g);return `<span class="ini ${r?r.result:''} ${k.player===S.me?'me':''}" title="${esc(k.player)} ${esc(spStr(k.spread))}">${ini(k.player)}</span>`;}).join('');
