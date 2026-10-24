@@ -367,8 +367,9 @@ td.legs div{white-space:nowrap}
   function mk(g,id){return (g.markets||[]).find(m=>m.oddID===id);}
   function findM(g,pred){return (g.markets||[]).find(pred);}
   // A slip leg may sit on an alternate line; the button shows the chosen alt when there is one.
-  function legFor(m){return S.slip.find(l=>l.oddID===m.oddID);}
-  function obtn(g,m,label){if(!m)return `<span class="ob na"><span class="l">--</span></span>`;const leg=legFor(m);const on=!!leg;const dis=started(g)||!m.available||(S.me&&stateOf(S.me).fouledOut);
+  const legKey=(eid,oid)=>eid+'|'+oid;
+  function legFor(m,g){const k=legKey((g&&g.eventID)||(S.ladder&&S.ladder.eventID)||'',m.oddID);return S.slip.find(l=>l.key===k);}
+  function obtn(g,m,label){if(!m)return `<span class="ob na"><span class="l">--</span></span>`;const leg=legFor(m,g);const on=!!leg;const dis=started(g)||!m.available||(S.me&&stateOf(S.me).fouledOut);
     const shown=leg&&leg.alt?{...m,line:leg.line,odds:leg.odds}:m;const lbl=leg&&leg.alt?lineStr(shown):(label!=null?label:lineStr(m));
     const hasAlts=Array.isArray(m.alts)&&m.alts.length>0&&!dis;
     return `<span class="obwrap"><button class="ob ${leg&&leg.alt?'alt':''}" data-pick="${esc(g.eventID)}|${esc(m.oddID)}" aria-pressed="${on}" ${dis?'disabled':''} title="${esc(m.name)}"><span class="l num">${esc(lbl)}</span><span class="o num">${esc(E.fmtAmerican(shown.odds))}</span></button>${hasAlts?`<button class="altbtn" data-alt="${esc(g.eventID)}|${esc(m.oddID)}" title="Pick a different number" aria-label="Alternate lines">&#8597;</button>`:''}</span>`;}
@@ -406,8 +407,8 @@ td.legs div{white-space:nowrap}
   function slipGroups(){const singles=S.slip.filter(l=>l.mode==='single');const parlay=S.slip.filter(l=>l.mode!=='single');return {singles,parlay};}
   function stakeOf(key){const v=Number((S.stakes||{})[key]);return isFinite(v)&&v>0?Math.round(v*100)/100:0;}
   function slipBets(){ // the list of bets the slip would place: one per single, one for the parlay (if 2+ legs; a lone parlay leg is a single)
-    const {singles,parlay}=slipGroups();const bets=singles.map(l=>({key:l.oddID,legs:[l],stake:stakeOf(l.oddID)}));
-    if(parlay.length>=2)bets.push({key:'__parlay',legs:parlay,stake:stakeOf('__parlay')});else if(parlay.length===1)bets.push({key:parlay[0].oddID,legs:parlay,stake:stakeOf(parlay[0].oddID)});
+    const {singles,parlay}=slipGroups();const bets=singles.map(l=>({key:l.key,legs:[l],stake:stakeOf(l.key)}));
+    if(parlay.length>=2)bets.push({key:'__parlay',legs:parlay,stake:stakeOf('__parlay')});else if(parlay.length===1)bets.push({key:parlay[0].key,legs:parlay,stake:stakeOf(parlay[0].key)});
     return bets;}
   function slipErrors(){const st=S.me?stateOf(S.me):null;if(!st)return ['Choose your name first.'];const bets=slipBets();const errs=[];let total=0;
     for(const b of bets){if(!b.stake)continue;total+=b.stake;const e=E.validate({stake:b.stake,legs:b.legs},{stack:st.stack},CFG);if(e.length)errs.push((b.legs.length>1?'Parlay: ':b.legs[0].short+': ')+e[0]);}
@@ -422,26 +423,26 @@ td.legs div{white-space:nowrap}
       el.querySelector('#openslip').addEventListener('click',()=>{S.slipOpen=true;renderSlip();});return;}
     el.className='slip';
     const legRow=l=>`<div class="leg"><div class="lt"><span>${esc(l.short)}</span><span class="o num">${esc(E.fmtAmerican(l.odds))}</span><span class="hint">${esc(gameName(l.eventID))}</span></div>
-      <div class="seg" role="group" aria-label="Bet type"><button type="button" data-mode="${esc(l.oddID)}|parlay" aria-pressed="${l.mode!=='single'}">Parlay</button><button type="button" data-mode="${esc(l.oddID)}|single" aria-pressed="${l.mode==='single'}">Single</button></div>
-      <button type="button" class="rm" data-rm="${esc(l.oddID)}" aria-label="Remove">&times;</button></div>`;
+      <div class="seg" role="group" aria-label="Bet type"><button type="button" data-mode="${esc(l.key)}|parlay" aria-pressed="${l.mode!=='single'}">Parlay</button><button type="button" data-mode="${esc(l.key)}|single" aria-pressed="${l.mode==='single'}">Single</button></div>
+      <button type="button" class="rm" data-rm="${esc(l.key)}" aria-label="Remove">&times;</button></div>`;
     const stakeRow=(key,legs,label)=>{const stake=stakeOf(key);const dec=E.parlayDecimal(legs);return `<div class="stakerow"><span class="sl">${esc(label)}</span><input type="number" min="1" step="1" inputmode="decimal" placeholder="Stake" data-stake="${esc(key)}" value="${esc((S.stakes||{})[key]||'')}"><span class="quick"><button type="button" data-q="${esc(key)}|10">10</button><button type="button" data-q="${esc(key)}|20">20</button><button type="button" data-q="${esc(key)}|max">Max</button></span><span class="pay num">${stake?`to win ${fmtPts(stake*dec-stake)}`:''}</span></div>`;};
     el.innerHTML=`<h3><span>Bet slip</span><span><button type="button" id="clearslip" class="signout" style="font-size:12px">Clear</button><button type="button" id="hideslip" class="signout" style="font-size:12px;margin-left:10px">Hide, keep picking</button></span></h3>
-      ${parlay.length?`<div class="grp"><div class="gh"><span>Parlay${parlay.length>=2?` (${parlay.length} legs, ${E.fmtAmerican(E.american(E.parlayDecimal(parlay)))})`:' (needs 2 or more legs, bets as a single for now)'}</span></div><div class="legs">${parlay.map(legRow).join('')}</div>${parlay.length>=2?stakeRow('__parlay',parlay,'Parlay stake'):parlay.length===1?stakeRow(parlay[0].oddID,parlay,'Stake'):''}</div>`:''}
-      ${singles.length?`<div class="grp"><div class="gh"><span>Singles</span></div>${singles.map(l=>`<div class="legs">${legRow(l)}</div>${stakeRow(l.oddID,[l],'Stake')}`).join('')}</div>`:''}
+      ${parlay.length?`<div class="grp"><div class="gh"><span>Parlay${parlay.length>=2?` (${parlay.length} legs, ${E.fmtAmerican(E.american(E.parlayDecimal(parlay)))})`:' (needs 2 or more legs, bets as a single for now)'}</span></div><div class="legs">${parlay.map(legRow).join('')}</div>${parlay.length>=2?stakeRow('__parlay',parlay,'Parlay stake'):parlay.length===1?stakeRow(parlay[0].key,parlay,'Stake'):''}</div>`:''}
+      ${singles.length?`<div class="grp"><div class="gh"><span>Singles</span></div>${singles.map(l=>`<div class="legs">${legRow(l)}</div>${stakeRow(l.key,[l],'Stake')}`).join('')}</div>`:''}
       ${errs.length&&totalStake?`<div class="err">${esc(errs[0])}</div>`:''}
       <div class="pt">${st?`Stack ${fmtPts(st.stack)}. Max per bet ${fmtPts(maxBet)}.`:''} Tap Parlay or Single on each pick to decide how it bets. The numbers on this slip are the official numbers.</div>
       <button type="button" class="place" id="place" ${errs.length||S.busy?'disabled':''}>${S.busy?'Placing':bets.filter(b=>b.stake).length>1?`Place ${bets.filter(b=>b.stake).length} bets (${fmtPts(totalStake)})`:'Place bet'}</button>`;
     el.querySelector('#clearslip').addEventListener('click',()=>{S.slip=[];S.stakes={};render();});
     el.querySelector('#hideslip').addEventListener('click',()=>{S.slipOpen=false;renderSlip();});
-    el.querySelectorAll('[data-rm]').forEach(b=>b.addEventListener('click',()=>{S.slip=S.slip.filter(l=>l.oddID!==b.dataset.rm);render();}));
-    el.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{const [id,mode]=b.dataset.mode.split('|');const l=S.slip.find(x=>x.oddID===id);if(l){l.mode=mode;renderSlip();}}));
-    el.querySelectorAll('[data-q]').forEach(b=>b.addEventListener('click',()=>{const [key,q]=b.dataset.q.split('|');S.stakes=S.stakes||{};S.stakes[key]=q==='max'?String(maxBet):q;renderSlip();}));
+    el.querySelectorAll('[data-rm]').forEach(b=>b.addEventListener('click',()=>{S.slip=S.slip.filter(l=>l.key!==b.dataset.rm);render();}));
+    el.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{const parts=b.dataset.mode.split('|');const mode=parts.pop();const id=parts.join('|');const l=S.slip.find(x=>x.key===id);if(l){l.mode=mode;renderSlip();}}));
+    el.querySelectorAll('[data-q]').forEach(b=>b.addEventListener('click',()=>{const qp=b.dataset.q.split('|');const q=qp.pop();const key=qp.join('|');S.stakes=S.stakes||{};S.stakes[key]=q==='max'?String(maxBet):q;renderSlip();}));
     el.querySelectorAll('[data-stake]').forEach(inp=>inp.addEventListener('input',()=>{S.stakes=S.stakes||{};S.stakes[inp.dataset.stake]=inp.value;const key=inp.dataset.stake;const pos=inp.selectionStart;renderSlip();const n=el.querySelector(`[data-stake="${CSS.escape(key)}"]`);if(n){n.focus();try{n.setSelectionRange(pos,pos);}catch(e){}}}));
     el.querySelector('#place').addEventListener('click',placeBets);}
   function gameName(eid){const g=S.games[eid];return g?`${g.away} at ${g.home}`:'';}
   // Alternate line ladder: a slider over the book's own numbers, plus the main line.
   function ladderOf(m){const rows=(m.alts||[]).map(([line,odds])=>({line,odds}));if(!rows.some(r=>r.line===m.line))rows.push({line:m.line,odds:m.odds,main:true});rows.sort((a,b)=>a.line-b.line);return rows;}
-  function renderLadder(g,m){const rows=ladderOf(m);const leg=legFor(m);const cur=leg?rows.findIndex(r=>r.line===leg.line):rows.findIndex(r=>r.main||r.line===m.line);const i=cur<0?0:cur;const r=rows[i];
+  function renderLadder(g,m){const rows=ladderOf(m);const leg=legFor(m,g);const cur=leg?rows.findIndex(r=>r.line===leg.line):rows.findIndex(r=>r.main||r.line===m.line);const i=cur<0?0:cur;const r=rows[i];
     const who=m.kind==='prop'?m.name:(m.betType==='ou'&&m.entity==='all'?'Game total':m.team+' spread');
     const word=m.betType==='ou'?(m.side==='over'?'Over':'Under'):'';
     return `<div class="ladder" data-ladder="${esc(g.eventID)}|${esc(m.oddID)}"><div class="lhead"><span>${esc(who)}${word?' '+word:''}</span><button type="button" class="signout" data-closeladder="1">close</button></div>
@@ -451,11 +452,11 @@ td.legs div{white-space:nowrap}
   function shortLeg(g,m){const who=m.kind==='prop'?m.name:(m.betType==='ou'&&m.entity==='all'?'Game':m.team||'');
     const what=m.betType==='sp'?(m.line>0?'+':'')+m.line:m.betType==='ou'?(m.side==='over'?'Over ':'Under ')+m.line:m.betType==='ml'?'ML':m.betType==='yn'?(m.side==='yes'?'Yes':'No'):'';
     const per=m.period==='1h'?' (1H)':'';return `${who} ${what}${per}`.trim();}
-  function addLeg(g,m,alt){if(S.me&&stateOf(S.me).fouledOut){toast('You have fouled out. No more bets this season.',true);return;}const i=S.slip.findIndex(l=>l.oddID===m.oddID);
+  function addLeg(g,m,alt){if(S.me&&stateOf(S.me).fouledOut){toast('You have fouled out. No more bets this season.',true);return;}const key=legKey(g.eventID,m.oddID);const i=S.slip.findIndex(l=>l.key===key);
     if(i>=0&&S.slip[i].line===m.line&&!alt&&!S.slip[i].alt){S.slip.splice(i,1);render();return;} // tapping the main price again takes it off
-    if(S.slip.some(l=>l.oddID===m.opposing)){toast('You already have the other side of that on your slip',true);return;}
+    if(S.slip.some(l=>l.key===legKey(g.eventID,m.opposing))){toast('You already have the other side of that on your slip',true);return;}
     const {parlay}=slipGroups();const mode=i>=0?S.slip[i].mode:(parlay.length&&parlay[0].eventID!==g.eventID?'single':'parlay');
-    const leg={eventID:g.eventID,oddID:m.oddID,opposing:m.opposing,odds:m.odds,line:m.line,side:m.side,entity:m.entity,betType:m.betType,stat:m.stat,period:m.period,player:m.player||null,team:m.team||'',name:m.name,book:m.book,alt:!!alt,short:shortLeg(g,m)+(alt?' (alt)':''),started:started(g),mode};
+    const leg={key,eventID:g.eventID,oddID:m.oddID,opposing:m.opposing,odds:m.odds,line:m.line,side:m.side,entity:m.entity,betType:m.betType,stat:m.stat,period:m.period,player:m.player||null,team:m.team||'',name:m.name,book:m.book,alt:!!alt,short:shortLeg(g,m)+(alt?' (alt)':''),started:started(g),mode};
     if(i>=0)S.slip[i]=leg;else S.slip.push(leg); // one leg per market: switching numbers replaces, never stacks
     if(S.slip.length===1)S.slipOpen=true;
     S.ladder=null;render();toast(mode==='single'&&!(i>=0)?`Added as a single (different game from your parlay)`:`Added to slip`);}
@@ -469,7 +470,7 @@ td.legs div{white-space:nowrap}
           status:'open',net:null,payout:null,settledAt:null};
         await S.db.collection('wagers').add(doc);placed++;
         // drop placed legs from the slip as we go so a failure mid-way leaves the rest intact
-        S.slip=S.slip.filter(l=>!b.legs.some(x=>x.oddID===l.oddID));if(S.stakes)delete S.stakes[b.key];}
+        S.slip=S.slip.filter(l=>!b.legs.some(x=>x.key===l.key));if(S.stakes)delete S.stakes[b.key];}
       toast(placed===1?'Bet placed':`${placed} bets placed`);}
     catch(e){console.error(e);toast(placed?`Placed ${placed}, then one failed. The rest are still on your slip.`:'Could not place that bet, try again',true);}
     finally{S.busy=false;render();}}
@@ -528,7 +529,7 @@ td.legs div{white-space:nowrap}
   $('betfilters').addEventListener('click',e=>{const b=e.target.closest('[data-betf]');if(!b)return;S.betf=b.dataset.betf;try{localStorage.setItem('bk.betf',S.betf);}catch(x){}renderBets();});
   $('statfilters').addEventListener('click',e=>{const b=e.target.closest('[data-stat]');if(!b)return;S.stat=b.dataset.stat;try{localStorage.setItem('bk.stat',S.stat);}catch(x){}renderStatsTab();});
   $('view-book').addEventListener('input',e=>{const r=e.target.closest('.lrange');if(!r)return;const box=r.closest('.ladder');const [gid,oid]=box.dataset.ladder.split('|');const g=S.games[gid];const m=mk(g,oid);if(!m)return;
-    const rows=ladderOf(m);const i=Number(r.value);const x=rows[i];const leg=legFor(m);const word=m.betType==='ou'?(m.side==='over'?'Over ':'Under '):'';
+    const rows=ladderOf(m);const i=Number(r.value);const x=rows[i];const leg=legFor(m,g);const word=m.betType==='ou'?(m.side==='over'?'Over ':'Under '):'';
     box.querySelector('.lline').textContent=word+(m.betType==='sp'?((x.line>0?'+':'')+x.line):x.line);box.querySelector('.lodds').textContent=E.fmtAmerican(x.odds);
     const add=box.querySelector('.ladd');add.dataset.pickalt=`${gid}|${oid}|${i}`;add.textContent=leg&&leg.line===x.line?'On slip':leg?'Switch to this':'Add to slip';});
   $('view-book').addEventListener('click',e=>{
