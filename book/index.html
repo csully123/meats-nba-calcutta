@@ -462,7 +462,6 @@ td.legs div{white-space:nowrap}
     const mode=i>=0?S.slip[i].mode:'parlay';
     const leg={key,eventID:g.eventID,oddID:m.oddID,opposing:m.opposing,odds:m.odds,line:m.line,side:m.side,entity:m.entity,betType:m.betType,stat:m.stat,period:m.period,player:m.player||null,team:m.team||'',name:m.name,book:m.book,alt:!!alt,short:shortLeg(g,m)+(alt?' (alt)':''),started:started(g),mode};
     if(i>=0)S.slip[i]=leg;else S.slip.push(leg); // one leg per market: switching numbers replaces, never stacks
-    if(S.slip.length===1)S.slipOpen=true;
     S.ladder=null;render();toast(mode==='single'&&!(i>=0)?`Added as a single (different game from your parlay)`:`Added to slip`);}
   function toggleLeg(g,m){addLeg(g,m,false);}
   async function placeBets(){if(!S.me||!S.db||S.busy)return;if(stateOf(S.me).fouledOut){toast('You have fouled out. No more bets this season.',true);return;}const errs=slipErrors();if(errs.length){toast(errs[0],true);return;}
