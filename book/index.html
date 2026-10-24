@@ -165,7 +165,11 @@ details.day .daybody{display:flex;flex-direction:column;gap:14px;margin-top:10px
 .slip .bar .hint{margin-left:auto}
 .slip h3{display:flex;justify-content:space-between;align-items:center}
 .slip .grp{border:1px solid var(--line);border-radius:8px;padding:8px 10px;display:flex;flex-direction:column;gap:6px}
-.slip .gh{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:700}
+.slip .gh{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:700;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.slip .grp.parlay{border-color:color-mix(in srgb,var(--accent) 55%,var(--line));background:color-mix(in srgb,var(--accent) 6%,transparent)}
+.slip .podds{font-family:var(--mono);font-size:18px;font-weight:700;color:var(--accent);letter-spacing:0;text-transform:none}
+.slip .pnote{font-size:12px;color:var(--muted)}
+.slip .pnote b{color:var(--ink);font-family:var(--mono);font-weight:600}
 .slip .legs{display:flex;flex-direction:column;gap:6px}
 .slip .leg{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:8px;align-items:center;background:var(--bg);border-radius:6px;padding:6px 10px;font-size:14px}
 .slip .leg .lt{display:flex;flex-direction:column;min-width:0}
@@ -419,7 +423,7 @@ td.legs div{white-space:nowrap}
   function renderSlip(){const el=$('slip');if(!S.slip.length){el.hidden=true;S.slipOpen=false;return;}el.hidden=false;
     const st=S.me?stateOf(S.me):null;const maxBet=st?Math.floor(st.stack*CFG.maxBetFraction*100)/100:0;const {singles,parlay}=slipGroups();const bets=slipBets();const errs=slipErrors();
     const totalStake=bets.reduce((a,b)=>a+b.stake,0);const totalWin=bets.reduce((a,b)=>a+(b.stake?b.stake*E.parlayDecimal(b.legs)-b.stake:0),0);
-    if(!S.slipOpen){el.className='slip collapsed';el.innerHTML=`<button type="button" class="bar" id="openslip"><span class="cnt">${S.slip.length}</span><span>Bet slip${parlay.length>=2?`, ${parlay.length}-leg parlay`:''}${singles.length?`, ${singles.length} single${singles.length===1?'':'s'}`:''}</span><span class="hint">${totalStake?`${fmtPts(totalStake)} staked, to win ${fmtPts(totalWin)}`:'tap to open'}</span></button>`;
+    if(!S.slipOpen){el.className='slip collapsed';el.innerHTML=`<button type="button" class="bar" id="openslip"><span class="cnt">${S.slip.length}</span><span>Bet slip${parlay.length>=2?`, ${parlay.length}-leg parlay ${esc(E.fmtAmerican(E.american(E.parlayDecimal(parlay))))}`:''}${singles.length?`, ${singles.length} single${singles.length===1?'':'s'}`:''}</span><span class="hint">${totalStake?`${fmtPts(totalStake)} staked, to win ${fmtPts(totalWin)}`:'tap to open'}</span></button>`;
       el.querySelector('#openslip').addEventListener('click',()=>{S.slipOpen=true;renderSlip();});return;}
     el.className='slip';
     const legRow=l=>`<div class="leg"><div class="lt"><span>${esc(l.short)}</span><span class="o num">${esc(E.fmtAmerican(l.odds))}</span><span class="hint">${esc(gameName(l.eventID))}</span></div>
@@ -427,7 +431,7 @@ td.legs div{white-space:nowrap}
       <button type="button" class="rm" data-rm="${esc(l.key)}" aria-label="Remove">&times;</button></div>`;
     const stakeRow=(key,legs,label)=>{const stake=stakeOf(key);const dec=E.parlayDecimal(legs);return `<div class="stakerow"><span class="sl">${esc(label)}</span><input type="number" min="1" step="1" inputmode="decimal" placeholder="Stake" data-stake="${esc(key)}" value="${esc((S.stakes||{})[key]||'')}"><span class="quick"><button type="button" data-q="${esc(key)}|10">10</button><button type="button" data-q="${esc(key)}|20">20</button><button type="button" data-q="${esc(key)}|max">Max</button></span><span class="pay num">${stake?`to win ${fmtPts(stake*dec-stake)}`:''}</span></div>`;};
     el.innerHTML=`<h3><span>Bet slip</span><span><button type="button" id="clearslip" class="signout" style="font-size:12px">Clear</button><button type="button" id="hideslip" class="signout" style="font-size:12px;margin-left:10px">Hide, keep picking</button></span></h3>
-      ${parlay.length?`<div class="grp"><div class="gh"><span>Parlay${parlay.length>=2?` (${parlay.length} legs, ${E.fmtAmerican(E.american(E.parlayDecimal(parlay)))})`:' (needs 2 or more legs, bets as a single for now)'}</span></div><div class="legs">${parlay.map(legRow).join('')}</div>${parlay.length>=2?stakeRow('__parlay',parlay,'Parlay stake'):parlay.length===1?stakeRow(parlay[0].key,parlay,'Stake'):''}</div>`:''}
+      ${parlay.length?`<div class="grp${parlay.length>=2?' parlay':''}"><div class="gh"><span>Parlay${parlay.length>=2?`, ${parlay.length} legs`:' (needs 2 or more legs, bets as a single for now)'}</span>${parlay.length>=2?`<span class="podds">${esc(E.fmtAmerican(E.american(E.parlayDecimal(parlay))))}</span>`:''}</div>${parlay.length>=2?`<div class="pnote">Combined odds <b>${esc(E.fmtAmerican(E.american(E.parlayDecimal(parlay))))}</b>, pays <b>${(Math.round(E.parlayDecimal(parlay)*100)/100).toFixed(2)}x</b> your stake. ${parlay.length===2?"Both":"All "+parlay.length} legs must hit.</div>`:''}<div class="legs">${parlay.map(legRow).join('')}</div>${parlay.length>=2?stakeRow('__parlay',parlay,'Parlay stake'):parlay.length===1?stakeRow(parlay[0].key,parlay,'Stake'):''}</div>`:''}
       ${singles.length?`<div class="grp"><div class="gh"><span>Singles</span></div>${singles.map(l=>`<div class="legs">${legRow(l)}</div>${stakeRow(l.key,[l],'Stake')}`).join('')}</div>`:''}
       ${errs.length&&totalStake?`<div class="err">${esc(errs[0])}</div>`:''}
       <div class="pt">${st?`Stack ${fmtPts(st.stack)}. Max per bet ${fmtPts(maxBet)}.`:''} Tap Parlay or Single on each pick to decide how it bets. The numbers on this slip are the official numbers.</div>
