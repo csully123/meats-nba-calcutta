@@ -210,6 +210,8 @@ td.legs div{white-space:nowrap}
 .empty{background:var(--surface);border:1.5px dashed var(--line);padding:28px 18px;text-align:center;color:var(--muted)}
 .empty strong{display:block;color:var(--ink);font-family:var(--display);font-size:22px;text-transform:uppercase;margin-bottom:6px}
 .toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:12px 16px;border-radius:8px;font-weight:600;font-size:15px;line-height:1.35;z-index:60;box-shadow:0 6px 24px rgba(0,0,0,.45);max-width:calc(100% - 32px);text-align:center;animation:toastin .18s ease-out}
+.seg.shake{animation:shake .4s cubic-bezier(.36,.07,.19,.97) both;border-color:var(--loss)}
+@keyframes shake{10%,90%{transform:translateX(-1px)}20%,80%{transform:translateX(2px)}30%,50%,70%{transform:translateX(-4px)}40%,60%{transform:translateX(4px)}}
 @keyframes toastin{from{opacity:0;transform:translate(-50%,8px)}to{opacity:1;transform:translate(-50%,0)}}
 .toast.err{background:var(--loss);color:#fff}
 .gate{position:fixed;inset:0;background:var(--bg);display:grid;place-items:center;z-index:30;padding:16px}
@@ -441,7 +443,10 @@ td.legs div{white-space:nowrap}
     el.querySelector('#clearslip').addEventListener('click',()=>{S.slip=[];S.stakes={};render();});
     el.querySelector('#hideslip').addEventListener('click',()=>{S.slipOpen=false;renderSlip();});
     el.querySelectorAll('[data-rm]').forEach(b=>b.addEventListener('click',()=>{S.slip=S.slip.filter(l=>l.key!==b.dataset.rm);render();}));
-    el.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{const parts=b.dataset.mode.split('|');const mode=parts.pop();const id=parts.join('|');const l=S.slip.find(x=>x.key===id);if(l){l.mode=mode;renderSlip();}}));
+    el.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{const parts=b.dataset.mode.split('|');const mode=parts.pop();const id=parts.join('|');const l=S.slip.find(x=>x.key===id);if(!l)return;
+      if(mode==='parlay'&&E.conflict){const other=S.slip.find(x=>x.eventID===l.eventID&&x.key!==l.key&&x.mode!=='single'&&E.conflict(x,l)==='overlap');
+        if(other){const seg=b.closest('.seg');seg.classList.remove('shake');void seg.offsetWidth;seg.classList.add('shake');if(navigator.vibrate)navigator.vibrate(30);toast(`${l.short} and ${other.short} overlap (one already covers the other), so they cannot be in the same parlay.`,true);return;}}
+      l.mode=mode;renderSlip();}));
     el.querySelectorAll('[data-q]').forEach(b=>b.addEventListener('click',()=>{const qp=b.dataset.q.split('|');const q=qp.pop();const key=qp.join('|');S.stakes=S.stakes||{};S.stakes[key]=q==='max'?String(maxBet):q;renderSlip();}));
     el.querySelectorAll('[data-stake]').forEach(inp=>inp.addEventListener('input',()=>{S.stakes=S.stakes||{};S.stakes[inp.dataset.stake]=inp.value;const key=inp.dataset.stake;const pos=inp.selectionStart;renderSlip();const n=el.querySelector(`[data-stake="${CSS.escape(key)}"]`);if(n){n.focus();try{n.setSelectionRange(pos,pos);}catch(e){}}}));
     el.querySelector('#place').addEventListener('click',placeBets);}
