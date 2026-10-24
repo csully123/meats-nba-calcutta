@@ -53,6 +53,7 @@ def fetch(params: dict) -> list:
     while True:
         q = dict(params)
         q["limit"] = "50"
+        q["includeAltLines"] = "true"
         if cursor:
             q["cursor"] = cursor
         req = urllib.request.Request(BASE + "/events/?" + urllib.parse.urlencode(q),
@@ -69,22 +70,40 @@ def fetch(params: dict) -> list:
 SANE_MIN, SANE_MAX = -2000, 2000  # anything wilder than this is a stale or placeholder price, not a bettable market
 
 
+def _price(e: dict):
+    try:
+        p = int(str(e["odds"]).replace("+", ""))
+    except (KeyError, ValueError, TypeError):
+        return None
+    return p if SANE_MIN <= p <= SANE_MAX else None
+
+
+def _line(e: dict):
+    line = e.get("spread") if e.get("spread") is not None else e.get("overUnder")
+    return float(line) if line is not None else None
+
+
 def pick_price(odd: dict):
-    """FanDuel's current number if it is there and available, else the first fallback book that is. Returns (book, odds, line)."""
+    """FanDuel's current number if it is there and available, else the first fallback book that is.
+    Returns (book, odds, line, alts) where alts is the book's ladder of alternate lines [[line, odds], ...] sorted by line."""
     bb = odd.get("byBookmaker") or {}
     for book in [OFFICIAL_BOOK] + FALLBACK_BOOKS:
         e = bb.get(book)
         if not e or e.get("odds") is None or e.get("available") is False:
             continue
-        try:
-            price = int(str(e["odds"]).replace("+", ""))
-        except ValueError:
+        price = _price(e)
+        if price is None:
             continue
-        if price < SANE_MIN or price > SANE_MAX:
-            continue
-        line = e.get("spread") if e.get("spread") is not None else e.get("overUnder")
-        return book, price, (float(line) if line is not None else None)
-    return None, None, None
+        alts = []
+        for a in e.get("altLines") or []:
+            if a.get("available") is False:
+                continue
+            ap, al = _price(a), _line(a)
+            if ap is not None and al is not None:
+                alts.append([al, ap])
+        alts.sort()
+        return book, price, _line(e), alts
+    return None, None, None, []
 
 
 def shape(ev: dict, players: dict) -> dict:
@@ -115,14 +134,17 @@ def shape(ev: dict, players: dict) -> dict:
             kind = "game"
             name = MARKETS[(stat, period, bt)]
             team_short = hs if ent == "home" else as_ if ent == "away" else ""
-        book, price, line = pick_price(o)
+        book, price, line, alts = pick_price(o)
         if price is None:
             continue
-        markets.append({
+        m = {
             "oddID": oid, "opposing": o.get("opposingOddID"), "kind": kind, "name": name, "stat": stat, "period": period,
             "betType": bt, "side": side, "entity": ent, "team": team_short, "player": pid, "line": line, "odds": price, "book": book,
             "available": bool(o.get("bookOddsAvailable", True)) and not bool(o.get("started")),
-        })
+        }
+        if alts and bt in ("sp", "ou"):
+            m["alts"] = alts
+        markets.append(m)
     return {
         "eventID": ev.get("eventID"), "date": date_et, "start": start,
         "home": TEAM_ABBR.get(hs, hs), "away": TEAM_ABBR.get(as_, as_),

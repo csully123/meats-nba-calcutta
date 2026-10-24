@@ -113,6 +113,22 @@ details.day .daybody{display:flex;flex-direction:column;gap:14px;margin-top:10px
 .ob[aria-pressed="true"] .o{color:inherit;opacity:.85}
 .ob:disabled{opacity:.45;cursor:not-allowed}
 .ob.na{opacity:.4}
+
+.obwrap{position:relative;display:flex;min-width:0}
+.obwrap .ob{flex:1 1 auto}
+.altbtn{flex:none;border:1.5px solid var(--line);border-left:0;background:var(--soft);color:var(--accent);border-radius:0 6px 6px 0;padding:0 7px;font-size:14px;line-height:1}
+.altbtn:hover{border-color:var(--ink)}
+.obwrap .ob{border-top-right-radius:0;border-bottom-right-radius:0}
+.obwrap:not(:has(.altbtn)) .ob{border-radius:6px}
+.ob.alt{border-style:dashed}
+.ladder{margin:0 12px 10px;padding:10px 12px;border:1.5px solid var(--accent);border-radius:8px;background:var(--bg);display:flex;flex-direction:column;gap:8px}
+.ladder .lhead{display:flex;justify-content:space-between;align-items:center;font-family:var(--display);font-size:16px;text-transform:uppercase;letter-spacing:.03em}
+.lrange{width:100%;accent-color:var(--accent)}
+.lrow{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.lline{font-family:var(--display);font-size:26px;font-weight:700}
+.lodds{font-family:var(--mono);font-size:18px;color:var(--muted)}
+.ladd{margin-left:auto;border:0;background:var(--accent);color:var(--accent-ink);border-radius:6px;padding:8px 14px;font-family:var(--display);font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.lscale{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
 .more{border-top:1px solid var(--line)}
 .more>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:9px 12px;background:var(--soft);font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
 .more>summary::-webkit-details-marker{display:none}
@@ -217,6 +233,8 @@ td.legs div{white-space:nowrap}
         <dt>Stack</dt><dd>Everyone starts with 100 points. Points are fake; they simulate money. Your total at the end of the regular season is your budget at the playoff auction.</dd>
         <dt>Lines</dt><dd>Real FanDuel prices (another book fills in if FanDuel is missing a market). The number on this page when you place a bet is the official number, even if FanDuel moves after. Prices refresh each morning, around 1 PM, and about an hour before each tip-off window.</dd>
         <dt>Bets</dt><dd>Spreads, totals, moneylines, first-half lines and player props. Straight bets or same-game parlays. Everything on a slip must be from one game. No cross-game parlays.</dd>
+        <dt>Alt lines</dt><dd>Tap the arrows beside a spread, total or prop to slide to a different number at FanDuel's price for it (a player over 20 instead of over 10, a team at -2.5 instead of -7.5). Only numbers FanDuel lists are offered. One leg per market: switching numbers replaces, never stacks.</dd>
+        <dt>Parlay pricing</dt><dd>Legs multiply at their listed prices. FanDuel discounts same-game parlays for correlated legs; this book does not, so a same-game parlay pays a little more here than there. That is the house rule, same for everyone.</dd>
         <dt>Max bet</dt><dd>No single bet can be more than 25% of your stack at the moment you place it.</dd>
         <dt>Minimum</dt><dd>Wager at least 20 points every week, Monday through Sunday.</dd>
         <dt>Bust</dt><dd>Hit zero with nothing pending and you reload to 100 and keep playing. It costs you at the end: after one bust your final total is cut to two thirds, after two to one half, after three to one third, and so on.</dd>
@@ -270,7 +288,7 @@ td.legs div{white-space:nowrap}
   const fmtShort=new Intl.DateTimeFormat('en-US',{timeZone:ET,month:'short',day:'numeric'});
   const fmtStamp=new Intl.DateTimeFormat('en-US',{timeZone:ET,month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
 
-  const S={db:null,me:null,tab:'book',betf:'All',stat:null,games:{},logos:{},wagers:[],slip:[],stake:'',ready:false,signedIn:false,openDays:new Set(),openMore:new Set(),openProps:new Set(),busy:false,pulled:null};
+  const S={db:null,me:null,tab:'book',betf:'All',stat:null,games:{},logos:{},wagers:[],slip:[],stake:'',ready:false,signedIn:false,openDays:new Set(),openMore:new Set(),openProps:new Set(),ladder:null,busy:false,pulled:null};
   try{S.me=localStorage.getItem('bk.me')||null;S.tab=localStorage.getItem('bk.tab')||'book';S.betf=localStorage.getItem('bk.betf')||'All';S.stat=localStorage.getItem('bk.stat')||null;}catch(e){}
   if(!PLAYERS.includes(S.me))S.me=null;if(!['book','bets','stats'].includes(S.tab))S.tab='book';
 
@@ -331,8 +349,12 @@ td.legs div{white-space:nowrap}
       box.querySelectorAll('details.pgrp').forEach(d=>{let any=false;d.querySelectorAll('.proprow').forEach(r=>{const hit=!q||r.dataset.q.includes(q);r.hidden=!hit;if(hit)any=true;});d.hidden=q&&!any;if(q&&any)d.open=true;});}));}
   function mk(g,id){return (g.markets||[]).find(m=>m.oddID===id);}
   function findM(g,pred){return (g.markets||[]).find(pred);}
-  function obtn(g,m,label){if(!m)return `<span class="ob na"><span class="l">--</span></span>`;const on=S.slip.some(l=>l.oddID===m.oddID);const dis=started(g)||!m.available;
-    return `<button class="ob" data-pick="${esc(g.eventID)}|${esc(m.oddID)}" aria-pressed="${on}" ${dis?'disabled':''} title="${esc(m.name)}"><span class="l num">${esc(label!=null?label:lineStr(m))}</span><span class="o num">${esc(E.fmtAmerican(m.odds))}</span></button>`;}
+  // A slip leg may sit on an alternate line; the button shows the chosen alt when there is one.
+  function legFor(m){return S.slip.find(l=>l.oddID===m.oddID);}
+  function obtn(g,m,label){if(!m)return `<span class="ob na"><span class="l">--</span></span>`;const leg=legFor(m);const on=!!leg;const dis=started(g)||!m.available;
+    const shown=leg&&leg.alt?{...m,line:leg.line,odds:leg.odds}:m;const lbl=leg&&leg.alt?lineStr(shown):(label!=null?label:lineStr(m));
+    const hasAlts=Array.isArray(m.alts)&&m.alts.length>0&&!dis;
+    return `<span class="obwrap"><button class="ob ${leg&&leg.alt?'alt':''}" data-pick="${esc(g.eventID)}|${esc(m.oddID)}" aria-pressed="${on}" ${dis?'disabled':''} title="${esc(m.name)}"><span class="l num">${esc(lbl)}</span><span class="o num">${esc(E.fmtAmerican(shown.odds))}</span></button>${hasAlts?`<button class="altbtn" data-alt="${esc(g.eventID)}|${esc(m.oddID)}" title="Pick a different number" aria-label="Alternate lines">&#8597;</button>`:''}</span>`;}
   function renderGame(g){const lg=logosFor(g);const st=started(g);const tag=g.ended?`<span class="badge final">Final</span>`:st?`<span class="badge live">In play</span>`:'';
     const row=(side,team,name,logo)=>{const sp=findM(g,m=>m.kind==='game'&&m.period==='game'&&m.betType==='sp'&&m.entity===side);const ml=findM(g,m=>m.kind==='game'&&m.period==='game'&&m.betType==='ml'&&m.entity===side);
       const ou=findM(g,m=>m.kind==='game'&&m.period==='game'&&m.betType==='ou'&&m.entity==='all'&&m.side===(side==='away'?'over':'under'));
@@ -351,11 +373,14 @@ td.legs div{white-space:nowrap}
     const rowHtml=p=>{const s=p.sides;const a=s.over||s.yes||s.home||s.away||Object.values(s)[0];const b=s.under||s.no||(s.home&&s.away?(a===s.home?s.away:s.home):null);
         const la=a?(a.betType==='ou'?'O '+a.line:a.betType==='sp'?(a.line>0?'+':'')+a.line:a.betType==='yn'?'Yes':a.team||a.side):'';const lb=b?(b.betType==='ou'?'U '+b.line:b.betType==='sp'?(b.line>0?'+':'')+b.line:b.betType==='yn'?'No':b.team||b.side):'';
         const statName=p.key==='1h'?p.name:p.name.replace(/^.*? (Points|Rebounds|Assists|3-pointers made|Pts \+ Reb \+ Ast|Pts \+ Reb|Pts \+ Ast|Reb \+ Ast|Steals|Blocks|Turnovers|Blk \+ Stl|Double-double|Triple-double|First basket)$/,'$1');
-        return `<div class="proprow" data-q="${esc((p.name+' '+(p.team||'')).toLowerCase())}"><div class="pn">${esc(statName)}</div>${obtn(g,a,la)}${b?obtn(g,b,lb):'<span></span>'}</div>`;};
+        const ladHere=S.ladder&&S.ladder.eventID===g.eventID&&((a&&a.oddID===S.ladder.oddID)||(b&&b.oddID===S.ladder.oddID))?renderLadder(g,mk(g,S.ladder.oddID)):'';
+        return `<div class="proprow" data-q="${esc((p.name+' '+(p.team||'')).toLowerCase())}"><div class="pn">${esc(statName)}</div>${obtn(g,a,la)}${b?obtn(g,b,lb):'<span></span>'}</div>${ladHere}`;};
     const propHtml=pairs.length?`<details class="more" data-g="${esc(g.eventID)}" ${S.openMore.has(g.eventID)?'open':''}><summary>Player props and first half (${pairs.length})</summary><div class="props"><input class="propsearch" placeholder="Search a player or stat" aria-label="Search props">
       ${glist.map(([gk,grp])=>{const k=g.eventID+'|'+gk;return `<details class="pgrp" data-pg="${esc(k)}" ${S.openProps.has(k)?'open':''}><summary><span class="pgname">${esc(grp.label)}${grp.team?` <small>${esc(grp.team)}</small>`:''}</span><span class="pgcnt">${grp.rows.length} market${grp.rows.length===1?'':'s'}</span></summary><div class="pgbody">${grp.rows.map(rowHtml).join('')}</div></details>`;}).join('')}</div></details>`:'';
+    const lad=S.ladder&&S.ladder.eventID===g.eventID?(()=>{const m=mk(g,S.ladder.oddID);return m&&m.kind==='game'&&m.period==='game'?renderLadder(g,m):'';})():'';
+    if(S.ladder&&S.ladder.eventID===g.eventID){const m=mk(g,S.ladder.oddID);if(m&&(m.kind==='prop'||m.period==='1h')){S.openMore.add(g.eventID);S.openProps.add(g.eventID+'|'+(m.kind==='prop'?m.player:'__1h'));}}
     return `<article class="game" id="g-${esc(g.eventID)}"><div class="meta"><span class="when">${esc(g.away)} at ${esc(g.home)}</span><span>${esc(fmtTime.format(new Date(g.start)))} ET</span>${tag}<span class="hint">${g.pulledAt?'lines as of '+esc(fmtStamp.format(new Date(g.pulledAt)))+' ET':''}</span></div>
-      <div class="mainlines"><span></span><span class="lbl">Spread</span><span class="lbl">Total</span><span class="lbl">Moneyline</span>${row('away',g.away,g.awayName,lg.a)}${row('home',g.home,g.homeName,lg.h)}</div>${propHtml}${mineHtml}</article>`;}
+      <div class="mainlines"><span></span><span class="lbl">Spread</span><span class="lbl">Total</span><span class="lbl">Moneyline</span>${row('away',g.away,g.awayName,lg.a)}${row('home',g.home,g.homeName,lg.h)}</div>${lad}${propHtml}${mineHtml}</article>`;}
 
   // ---------- slip ----------
   function renderSlip(){const el=$('slip');if(!S.slip.length){el.hidden=true;return;}el.hidden=false;
@@ -373,14 +398,26 @@ td.legs div{white-space:nowrap}
     el.querySelectorAll('[data-q]').forEach(b=>b.addEventListener('click',()=>{S.stake=b.dataset.q==='max'?String(maxBet):b.dataset.q;renderSlip();}));
     const inp=el.querySelector('#stake');inp.addEventListener('input',()=>{S.stake=inp.value;const pos=inp.selectionStart;renderSlip();const n=$('stake');n.focus();try{n.setSelectionRange(pos,pos);}catch(e){}});
     el.querySelector('#place').addEventListener('click',placeBet);}
+  // Alternate line ladder: a slider over the book's own numbers, plus the main line.
+  function ladderOf(m){const rows=(m.alts||[]).map(([line,odds])=>({line,odds}));if(!rows.some(r=>r.line===m.line))rows.push({line:m.line,odds:m.odds,main:true});rows.sort((a,b)=>a.line-b.line);return rows;}
+  function renderLadder(g,m){const rows=ladderOf(m);const leg=legFor(m);const cur=leg?rows.findIndex(r=>r.line===leg.line):rows.findIndex(r=>r.main||r.line===m.line);const i=cur<0?0:cur;const r=rows[i];
+    const who=m.kind==='prop'?m.name:(m.betType==='ou'&&m.entity==='all'?'Game total':m.team+' spread');
+    const word=m.betType==='ou'?(m.side==='over'?'Over':'Under'):'';
+    return `<div class="ladder" data-ladder="${esc(g.eventID)}|${esc(m.oddID)}"><div class="lhead"><span>${esc(who)}${word?' '+word:''}</span><button type="button" class="signout" data-closeladder="1">close</button></div>
+      <input type="range" class="lrange" min="0" max="${rows.length-1}" value="${i}" aria-label="Alternate line">
+      <div class="lrow"><span class="lline num">${esc(word?word+' ':'')}${esc(m.betType==='sp'?((r.line>0?'+':'')+r.line):r.line)}</span><span class="lodds num">${esc(E.fmtAmerican(r.odds))}</span><button type="button" class="ladd" data-pickalt="${esc(g.eventID)}|${esc(m.oddID)}|${i}">${leg&&leg.line===r.line?'On slip':leg?'Switch to this':'Add to slip'}</button></div>
+      <div class="lscale num"><span>${esc(m.betType==='sp'?((rows[0].line>0?'+':'')+rows[0].line):rows[0].line)}</span><span>FanDuel's ladder, ${rows.length} numbers</span><span>${esc(m.betType==='sp'?((rows[rows.length-1].line>0?'+':'')+rows[rows.length-1].line):rows[rows.length-1].line)}</span></div></div>`;}
   function shortLeg(g,m){const who=m.kind==='prop'?m.name:(m.betType==='ou'&&m.entity==='all'?'Game':m.team||'');
     const what=m.betType==='sp'?(m.line>0?'+':'')+m.line:m.betType==='ou'?(m.side==='over'?'Over ':'Under ')+m.line:m.betType==='ml'?'ML':m.betType==='yn'?(m.side==='yes'?'Yes':'No'):'';
     const per=m.period==='1h'?' (1H)':'';return `${who} ${what}${per}`.trim();}
-  function toggleLeg(g,m){const i=S.slip.findIndex(l=>l.oddID===m.oddID);if(i>=0){S.slip.splice(i,1);}
-    else{if(S.slip.length&&S.slip[0].eventID!==g.eventID){toast('One game per slip. Clear the slip to bet on another game.',true);return;}
-      if(S.slip.some(l=>l.oddID===m.opposing)){toast('You already have the other side of that on your slip',true);return;}
-      S.slip.push({eventID:g.eventID,oddID:m.oddID,opposing:m.opposing,odds:m.odds,line:m.line,side:m.side,entity:m.entity,betType:m.betType,stat:m.stat,period:m.period,player:m.player||null,team:m.team||'',name:m.name,book:m.book,short:shortLeg(g,m),started:started(g)});}
-    render();}
+  function addLeg(g,m,alt){const i=S.slip.findIndex(l=>l.oddID===m.oddID);
+    if(i>=0&&S.slip[i].line===m.line&&!alt&&!S.slip[i].alt){S.slip.splice(i,1);render();return;} // tapping the main price again takes it off
+    if(S.slip.length&&S.slip[0].eventID!==g.eventID){toast('One game per slip. Clear the slip to bet on another game.',true);return;}
+    if(S.slip.some(l=>l.oddID===m.opposing)){toast('You already have the other side of that on your slip',true);return;}
+    const leg={eventID:g.eventID,oddID:m.oddID,opposing:m.opposing,odds:m.odds,line:m.line,side:m.side,entity:m.entity,betType:m.betType,stat:m.stat,period:m.period,player:m.player||null,team:m.team||'',name:m.name,book:m.book,alt:!!alt,short:shortLeg(g,m)+(alt?' (alt)':''),started:started(g)};
+    if(i>=0)S.slip[i]=leg;else S.slip.push(leg); // one leg per market: switching numbers replaces, never stacks
+    S.ladder=null;render();}
+  function toggleLeg(g,m){addLeg(g,m,false);}
   async function placeBet(){if(!S.me||!S.db||S.busy)return;const stake=Math.round(Number(S.stake)*100)/100;const st=stateOf(S.me);
     const errs=E.validate({stake,legs:S.slip},{stack:st.stack},CFG);if(errs.length){toast(errs[0],true);return;}
     const g=S.games[S.slip[0].eventID];if(started(g)){toast('This game has already started',true);render();return;}
@@ -446,7 +483,16 @@ td.legs div{white-space:nowrap}
   $('board').addEventListener('click',e=>{const t=e.target.closest('[data-statsfor]');if(!t)return;S.stat=t.dataset.statsfor;S.tab='stats';try{localStorage.setItem('bk.stat',S.stat);localStorage.setItem('bk.tab',S.tab);}catch(x){}renderTabs();renderStatsTab();$('tabs').scrollIntoView({behavior:'smooth',block:'start'});});
   $('betfilters').addEventListener('click',e=>{const b=e.target.closest('[data-betf]');if(!b)return;S.betf=b.dataset.betf;try{localStorage.setItem('bk.betf',S.betf);}catch(x){}renderBets();});
   $('statfilters').addEventListener('click',e=>{const b=e.target.closest('[data-stat]');if(!b)return;S.stat=b.dataset.stat;try{localStorage.setItem('bk.stat',S.stat);}catch(x){}renderStatsTab();});
-  $('view-book').addEventListener('click',e=>{const b=e.target.closest('[data-pick]');if(!b)return;if(b.disabled)return;
+  $('view-book').addEventListener('input',e=>{const r=e.target.closest('.lrange');if(!r)return;const box=r.closest('.ladder');const [gid,oid]=box.dataset.ladder.split('|');const g=S.games[gid];const m=mk(g,oid);if(!m)return;
+    const rows=ladderOf(m);const i=Number(r.value);const x=rows[i];const leg=legFor(m);const word=m.betType==='ou'?(m.side==='over'?'Over ':'Under '):'';
+    box.querySelector('.lline').textContent=word+(m.betType==='sp'?((x.line>0?'+':'')+x.line):x.line);box.querySelector('.lodds').textContent=E.fmtAmerican(x.odds);
+    const add=box.querySelector('.ladd');add.dataset.pickalt=`${gid}|${oid}|${i}`;add.textContent=leg&&leg.line===x.line?'On slip':leg?'Switch to this':'Add to slip';});
+  $('view-book').addEventListener('click',e=>{
+    const ab=e.target.closest('[data-alt]');if(ab){const [gid,oid]=ab.dataset.alt.split('|');S.ladder=S.ladder&&S.ladder.oddID===oid?null:{eventID:gid,oddID:oid};renderBook();const el=document.querySelector('.ladder');if(el)el.scrollIntoView({behavior:'smooth',block:'nearest'});return;}
+    if(e.target.closest('[data-closeladder]')){S.ladder=null;renderBook();return;}
+    const pa=e.target.closest('[data-pickalt]');if(pa){if(!S.me){$('who').classList.add('nudge');toast('Choose your name first');return;}const [gid,oid,idx]=pa.dataset.pickalt.split('|');const g=S.games[gid];const m=mk(g,oid);if(!g||!m)return;if(started(g)){toast('This game has already started',true);return;}
+      const x=ladderOf(m)[Number(idx)];if(!x)return;const alt=!(x.main||x.line===m.line);addLeg(g,{...m,line:x.line,odds:x.odds},alt);return;}
+    const b=e.target.closest('[data-pick]');if(!b)return;if(b.disabled)return;
     if(!S.me){$('who').classList.add('nudge');toast('Choose your name first');$('who').scrollIntoView({behavior:'smooth',block:'center'});return;}
     const [gid,oid]=b.dataset.pick.split('|');const g=S.games[gid];const m=mk(g,oid);if(!g||!m)return;if(started(g)){toast('This game has already started',true);return;}toggleLeg(g,m);});
 
