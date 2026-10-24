@@ -559,6 +559,8 @@ td.legs div{white-space:nowrap}
   async function refresh(force){if(refreshing)return;if(!force&&Date.now()-last<30000)return;refreshing=true;try{await loadOdds();last=Date.now();render();}catch(e){console.warn(e);}finally{refreshing=false;}}
   setInterval(()=>{if(!document.hidden)refresh(false);},180000);
   document.addEventListener('visibilitychange',()=>{if(!document.hidden)refresh(false);});
+  // Tapping anywhere outside the open bet slip collapses it; the tap still lands on whatever was under it, so picking continues.
+  document.addEventListener('pointerdown',e=>{if(!S.slipOpen)return;const slip=$('slip');if(slip.hidden||slip.contains(e.target)||e.target.closest('#gate'))return;S.slipOpen=false;renderSlip();},true);
   setInterval(()=>{if(S.tab==='book')renderBook();},60000);
 
   render();
