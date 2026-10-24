@@ -854,9 +854,9 @@
   "id": "401909858",
   "label": null,
   "multiplier": 1,
-  "spreadHome": 11.5,
+  "spreadHome": 12.5,
   "spreadSource": "ESPN",
-  "spreadUpdated": "2026-10-24T02:58:51Z",
+  "spreadUpdated": "2026-10-24T06:26:02Z",
   "start": "2026-10-25T00:00:00Z",
   "status": "scheduled"
  },
@@ -896,9 +896,9 @@
   "id": "401909860",
   "label": null,
   "multiplier": 1,
-  "spreadHome": -8.5,
+  "spreadHome": -9.5,
   "spreadSource": "ESPN",
-  "spreadUpdated": "2026-10-24T05:56:31Z",
+  "spreadUpdated": "2026-10-24T06:26:02Z",
   "start": "2026-10-25T02:00:00Z",
   "status": "scheduled"
  },
