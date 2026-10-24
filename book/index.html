@@ -210,7 +210,7 @@ td.legs div{white-space:nowrap}
 .empty{background:var(--surface);border:1.5px dashed var(--line);padding:28px 18px;text-align:center;color:var(--muted)}
 .empty strong{display:block;color:var(--ink);font-family:var(--display);font-size:22px;text-transform:uppercase;margin-bottom:6px}
 .toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:12px 16px;border-radius:8px;font-weight:600;font-size:15px;line-height:1.35;z-index:60;box-shadow:0 6px 24px rgba(0,0,0,.45);max-width:calc(100% - 32px);text-align:center;animation:toastin .18s ease-out}
-.seg.shake{animation:shake .4s cubic-bezier(.36,.07,.19,.97) both;border-color:var(--loss)}
+.seg.shake,.ob.shake,[data-pickalt].shake{animation:shake .4s cubic-bezier(.36,.07,.19,.97) both;border-color:var(--loss)}
 @keyframes shake{10%,90%{transform:translateX(-1px)}20%,80%{transform:translateX(2px)}30%,50%,70%{transform:translateX(-4px)}40%,60%{transform:translateX(4px)}}
 @keyframes toastin{from{opacity:0;transform:translate(-50%,8px)}to{opacity:1;transform:translate(-50%,0)}}
 .toast.err{background:var(--loss);color:#fff}
@@ -445,7 +445,7 @@ td.legs div{white-space:nowrap}
     el.querySelectorAll('[data-rm]').forEach(b=>b.addEventListener('click',()=>{S.slip=S.slip.filter(l=>l.key!==b.dataset.rm);render();}));
     el.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{const parts=b.dataset.mode.split('|');const mode=parts.pop();const id=parts.join('|');const l=S.slip.find(x=>x.key===id);if(!l)return;
       if(mode==='parlay'&&E.conflict){const other=S.slip.find(x=>x.eventID===l.eventID&&x.key!==l.key&&x.mode!=='single'&&E.conflict(x,l)==='overlap');
-        if(other){const seg=b.closest('.seg');seg.classList.remove('shake');void seg.offsetWidth;seg.classList.add('shake');if(navigator.vibrate)navigator.vibrate(30);toast(`${l.short} and ${other.short} overlap (one already covers the other), so they cannot be in the same parlay.`,true);return;}}
+        if(other){shakeEl(b.closest('.seg'));toast(`${l.short} and ${other.short} overlap (one already covers the other), so they cannot be in the same parlay.`,true);return;}}
       l.mode=mode;renderSlip();}));
     el.querySelectorAll('[data-q]').forEach(b=>b.addEventListener('click',()=>{const qp=b.dataset.q.split('|');const q=qp.pop();const key=qp.join('|');S.stakes=S.stakes||{};S.stakes[key]=q==='max'?String(maxBet):q;renderSlip();}));
     el.querySelectorAll('[data-stake]').forEach(inp=>inp.addEventListener('input',()=>{S.stakes=S.stakes||{};S.stakes[inp.dataset.stake]=inp.value;const key=inp.dataset.stake;const pos=inp.selectionStart;renderSlip();const n=el.querySelector(`[data-stake="${CSS.escape(key)}"]`);if(n){n.focus();try{n.setSelectionRange(pos,pos);}catch(e){}}}));
@@ -463,19 +463,20 @@ td.legs div{white-space:nowrap}
   function shortLeg(g,m){const who=m.kind==='prop'?m.name:(m.betType==='ou'&&m.entity==='all'?'Game':m.team||'');
     const what=m.betType==='sp'?(m.line>0?'+':'')+m.line:m.betType==='ou'?(m.side==='over'?'Over ':'Under ')+m.line:m.betType==='ml'?'ML':m.betType==='yn'?(m.side==='yes'?'Yes':'No'):'';
     const per=m.period==='1h'?' (1H)':'';return `${who} ${what}${per}`.trim();}
-  function addLeg(g,m,alt){if(S.me&&stateOf(S.me).fouledOut){toast('You have fouled out. No more bets this season.',true);return;}const key=legKey(g.eventID,m.oddID);const i=S.slip.findIndex(l=>l.key===key);
+  function shakeEl(el){if(!el)return;el.classList.remove('shake');void el.offsetWidth;el.classList.add('shake');if(navigator.vibrate)navigator.vibrate(30);}
+  function addLeg(g,m,alt,el){if(S.me&&stateOf(S.me).fouledOut){toast('You have fouled out. No more bets this season.',true);return;}const key=legKey(g.eventID,m.oddID);const i=S.slip.findIndex(l=>l.key===key);
     if(i>=0&&S.slip[i].line===m.line&&!alt&&!S.slip[i].alt){S.slip.splice(i,1);render();return;} // tapping the main price again takes it off
-    if(S.slip.some(l=>l.key===legKey(g.eventID,m.opposing))){toast('You already have the other side of that on your slip',true);return;}
+    if(S.slip.some(l=>l.key===legKey(g.eventID,m.opposing))){shakeEl(el);toast('You already have the other side of that on your slip',true);return;}
     const probe={betType:m.betType,side:m.side,entity:m.entity,line:m.line,period:m.period,player:m.player||null,stat:m.stat};
     const clash=E.conflict?S.slip.find(l=>l.eventID===g.eventID&&l.key!==key&&E.conflict(l,probe)==='impossible'):null;
-    if(clash){toast(`${shortLeg(g,m)} cannot win together with ${clash.short}. Take that off the slip first.`,true);return;}
+    if(clash){shakeEl(el);toast(`${shortLeg(g,m)} cannot win together with ${clash.short}. Take that off the slip first.`,true);return;}
     // A pick that overlaps a parlay leg already on this game (same team's spread and moneyline, two overs on one player) starts as a single.
     const overlaps=E.conflict?S.slip.find(l=>l.eventID===g.eventID&&l.key!==key&&l.mode!=='single'&&E.conflict(l,probe)==='overlap'):null;
     const mode=i>=0?S.slip[i].mode:(overlaps?'single':'parlay');
     const leg={key,eventID:g.eventID,oddID:m.oddID,opposing:m.opposing,odds:m.odds,line:m.line,side:m.side,entity:m.entity,betType:m.betType,stat:m.stat,period:m.period,player:m.player||null,team:m.team||'',name:m.name,book:m.book,alt:!!alt,short:shortLeg(g,m)+(alt?' (alt)':''),started:started(g),mode};
     if(i>=0)S.slip[i]=leg;else S.slip.push(leg); // one leg per market: switching numbers replaces, never stacks
     S.ladder=null;render();toast(i>=0?'Updated on slip':mode==='single'?'Added to slip as a single':'Added to slip');}
-  function toggleLeg(g,m){addLeg(g,m,false);}
+  function toggleLeg(g,m,el){addLeg(g,m,false,el);}
   async function placeBets(){if(!S.me||!S.db||S.busy)return;if(stateOf(S.me).fouledOut){toast('You have fouled out. No more bets this season.',true);return;}const errs=slipErrors();if(errs.length){toast(errs[0],true);return;}
     const bets=slipBets().filter(b=>b.stake);for(const b of bets){const g=S.games[b.legs[0].eventID];if(started(g)){toast(`${g.away} at ${g.home} has already started`,true);render();return;}}
     S.busy=true;renderSlip();let placed=0;
@@ -551,10 +552,10 @@ td.legs div{white-space:nowrap}
     const ab=e.target.closest('[data-alt]');if(ab){const [gid,oid]=ab.dataset.alt.split('|');S.ladder=S.ladder&&S.ladder.oddID===oid?null:{eventID:gid,oddID:oid};renderBook();const el=document.querySelector('.ladder');if(el)el.scrollIntoView({behavior:'smooth',block:'nearest'});return;}
     if(e.target.closest('[data-closeladder]')){S.ladder=null;renderBook();return;}
     const pa=e.target.closest('[data-pickalt]');if(pa){if(!S.me){$('who').classList.add('nudge');toast('Choose your name first');return;}const [gid,oid,idx]=pa.dataset.pickalt.split('|');const g=S.games[gid];const m=mk(g,oid);if(!g||!m)return;if(started(g)){toast('This game has already started',true);return;}
-      const x=ladderOf(m)[Number(idx)];if(!x)return;const alt=!(x.main||x.line===m.line);addLeg(g,{...m,line:x.line,odds:x.odds},alt);return;}
+      const x=ladderOf(m)[Number(idx)];if(!x)return;const alt=!(x.main||x.line===m.line);addLeg(g,{...m,line:x.line,odds:x.odds},alt,pa);return;}
     const b=e.target.closest('[data-pick]');if(!b)return;if(b.disabled)return;
     if(!S.me){$('who').classList.add('nudge');toast('Choose your name first');$('who').scrollIntoView({behavior:'smooth',block:'center'});return;}
-    const [gid,oid]=b.dataset.pick.split('|');const g=S.games[gid];const m=mk(g,oid);if(!g||!m)return;if(started(g)){toast('This game has already started',true);return;}toggleLeg(g,m);});
+    const [gid,oid]=b.dataset.pick.split('|');const g=S.games[gid];const m=mk(g,oid);if(!g||!m)return;if(started(g)){toast('This game has already started',true);return;}toggleLeg(g,m,b);});
 
   // auth
   let unsub=null;
