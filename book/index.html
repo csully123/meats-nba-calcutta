@@ -463,7 +463,7 @@ td.legs div{white-space:nowrap}
   function shortLeg(g,m){const who=m.kind==='prop'?m.name:(m.betType==='ou'&&m.entity==='all'?'Game':m.team||'');
     const what=m.betType==='sp'?(m.line>0?'+':'')+m.line:m.betType==='ou'?(m.side==='over'?'Over ':'Under ')+m.line:m.betType==='ml'?'ML':m.betType==='yn'?(m.side==='yes'?'Yes':'No'):'';
     const per=m.period==='1h'?' (1H)':'';return `${who} ${what}${per}`.trim();}
-  function shakeEl(el){if(!el)return;el.classList.remove('shake');void el.offsetWidth;el.classList.add('shake');if(navigator.vibrate)navigator.vibrate(30);}
+  function shakeEl(el){if(!el)return;el.classList.remove('shake');void el.offsetWidth;el.classList.add('shake');if(navigator.vibrate)navigator.vibrate(30);setTimeout(()=>el.classList.remove('shake'),2500);}
   function addLeg(g,m,alt,el){if(S.me&&stateOf(S.me).fouledOut){toast('You have fouled out. No more bets this season.',true);return;}const key=legKey(g.eventID,m.oddID);const i=S.slip.findIndex(l=>l.key===key);
     if(i>=0&&S.slip[i].line===m.line&&!alt&&!S.slip[i].alt){S.slip.splice(i,1);render();return;} // tapping the main price again takes it off
     if(S.slip.some(l=>l.key===legKey(g.eventID,m.opposing))){shakeEl(el);toast('You already have the other side of that on your slip',true);return;}
