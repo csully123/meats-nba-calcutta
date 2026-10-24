@@ -5,7 +5,7 @@ from pathlib import Path
 KEY=os.environ["ODDS_API_KEY"]
 now=datetime.now(timezone.utc)
 q={"leagueID":"NBA","startsAfter":now.strftime("%Y-%m-%dT%H:%M:%SZ"),"startsBefore":(now+timedelta(hours=30)).strftime("%Y-%m-%dT%H:%M:%SZ"),"limit":"1","includeAltLines":"true"}
-req=urllib.request.Request("https://api.sportsgameodds.com/v2/events/?"+urllib.parse.urlencode(q),headers={"x-api-key":KEY})
+req=urllib.request.Request("https://api.sportsgameodds.com/v2/events/?"+urllib.parse.urlencode(q),headers={"x-api-key":KEY,"User-Agent":"meats-nba-calcutta/1.0","Accept":"application/json"})
 try:
     raw=urllib.request.urlopen(req,timeout=90).read().decode()
 except urllib.error.HTTPError as e:
