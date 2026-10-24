@@ -155,18 +155,28 @@ details.day .daybody{display:flex;flex-direction:column;gap:14px;margin-top:10px
 .mypicks .w.win{box-shadow:inset 3px 0 0 var(--win)}.mypicks .w.loss{box-shadow:inset 3px 0 0 var(--loss)}.mypicks .w.push{box-shadow:inset 3px 0 0 var(--push)}
 
 /* bet slip */
-.slip{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(12px + env(safe-area-inset-bottom,0px));width:min(100% - 24px,520px);background:var(--surface);border:1.5px solid var(--accent);border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,.5);z-index:25;display:flex;flex-direction:column;gap:8px;padding:12px 14px;max-height:60vh;overflow:auto}
+.slip{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(12px + env(safe-area-inset-bottom,0px));width:min(100% - 24px,560px);background:var(--surface);border:1.5px solid var(--accent);border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,.5);z-index:25;display:flex;flex-direction:column;gap:10px;padding:12px 14px;max-height:70vh;overflow:auto}
+.slip.collapsed{padding:0;max-height:none;overflow:visible}
+.slip .bar{width:100%;border:0;background:none;display:flex;align-items:center;gap:10px;padding:12px 14px;text-align:left;font-weight:600}
+.slip .bar .cnt{background:var(--accent);color:var(--accent-ink);border-radius:999px;min-width:26px;height:26px;display:inline-grid;place-items:center;font-family:var(--display);font-size:15px;font-weight:700}
+.slip .bar .hint{margin-left:auto}
 .slip h3{display:flex;justify-content:space-between;align-items:center}
+.slip .grp{border:1px solid var(--line);border-radius:8px;padding:8px 10px;display:flex;flex-direction:column;gap:6px}
+.slip .gh{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:700}
 .slip .legs{display:flex;flex-direction:column;gap:6px}
-.slip .leg{display:flex;justify-content:space-between;align-items:center;gap:8px;background:var(--bg);border-radius:6px;padding:6px 10px;font-size:14px}
-.slip .leg .o{font-family:var(--mono);color:var(--muted)}
-.slip .leg button{border:0;background:none;color:var(--muted);font-size:16px;padding:0 4px}
-.slip .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.slip input[type=number]{width:110px;font:inherit;font-size:18px;padding:8px 10px;border:1.5px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font-family:var(--mono)}
-.slip .quick{display:flex;gap:6px}
-.slip .quick button{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:4px 10px;font-size:12px}
-.slip .pay{margin-left:auto;text-align:right;font-size:13px;color:var(--muted)}
-.slip .pay b{display:block;font-family:var(--display);font-size:22px;color:var(--ink)}
+.slip .leg{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:8px;align-items:center;background:var(--bg);border-radius:6px;padding:6px 10px;font-size:14px}
+.slip .leg .lt{display:flex;flex-direction:column;min-width:0}
+.slip .leg .lt .o{font-family:var(--mono);color:var(--muted);font-size:12px}
+.slip .leg .rm{border:0;background:none;color:var(--muted);font-size:18px;padding:0 4px}
+.seg{display:inline-flex;border:1.5px solid var(--line);border-radius:999px;overflow:hidden}
+.seg button{border:0;background:none;padding:4px 10px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.stakerow{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.stakerow .sl{font-size:12px;color:var(--muted);min-width:80px}
+.stakerow input{width:96px;font:inherit;font-size:16px;padding:6px 10px;border:1.5px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font-family:var(--mono)}
+.stakerow .quick{display:flex;gap:4px}
+.stakerow .quick button{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:3px 9px;font-size:12px}
+.stakerow .pay{margin-left:auto;font-size:13px;color:var(--muted)}
 .slip .place{border:0;background:var(--accent);color:var(--accent-ink);border-radius:8px;padding:12px;font-family:var(--display);font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;width:100%}
 .slip .place:disabled{opacity:.5;cursor:default}
 .slip .err{color:var(--loss);font-size:13px;font-weight:600}
@@ -232,7 +242,7 @@ td.legs div{white-space:nowrap}
       <dl>
         <dt>Stack</dt><dd>Everyone starts with 100 points. Points are fake; they simulate money. Your total at the end of the regular season is your budget at the playoff auction.</dd>
         <dt>Lines</dt><dd>Real FanDuel prices (another book fills in if FanDuel is missing a market). The number on this page when you place a bet is the official number, even if FanDuel moves after. Prices refresh each morning, around 1 PM, and about an hour before each tip-off window.</dd>
-        <dt>Bets</dt><dd>Spreads, totals, moneylines, first-half lines and player props. Straight bets or same-game parlays. Everything on a slip must be from one game. No cross-game parlays.</dd>
+        <dt>Bets</dt><dd>Spreads, totals, moneylines, first-half lines and player props. Add picks to your slip, then mark each one Parlay or Single. The parlay must be from one game (no cross-game parlays); singles can be from any games, and the slip places them all at once.</dd>
         <dt>Alt lines</dt><dd>Tap the arrows beside a spread, total or prop to slide to a different number at FanDuel's price for it (a player over 20 instead of over 10, a team at -2.5 instead of -7.5). Only numbers FanDuel lists are offered. One leg per market: switching numbers replaces, never stacks.</dd>
         <dt>Parlay pricing</dt><dd>Legs multiply at their listed prices. FanDuel discounts same-game parlays for correlated legs; this book does not, so a same-game parlay pays a little more here than there. That is the house rule, same for everyone.</dd>
         <dt>Max bet</dt><dd>No single bet can be more than 25% of your stack at the moment you place it.</dd>
@@ -288,7 +298,7 @@ td.legs div{white-space:nowrap}
   const fmtShort=new Intl.DateTimeFormat('en-US',{timeZone:ET,month:'short',day:'numeric'});
   const fmtStamp=new Intl.DateTimeFormat('en-US',{timeZone:ET,month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
 
-  const S={db:null,me:null,tab:'book',betf:'All',stat:null,games:{},logos:{},wagers:[],slip:[],stake:'',ready:false,signedIn:false,openDays:new Set(),openMore:new Set(),openProps:new Set(),ladder:null,busy:false,pulled:null};
+  const S={db:null,me:null,tab:'book',betf:'All',stat:null,games:{},logos:{},wagers:[],slip:[],stake:'',ready:false,signedIn:false,openDays:new Set(),openMore:new Set(),openProps:new Set(),ladder:null,slipOpen:false,stakes:{},busy:false,pulled:null};
   try{S.me=localStorage.getItem('bk.me')||null;S.tab=localStorage.getItem('bk.tab')||'book';S.betf=localStorage.getItem('bk.betf')||'All';S.stat=localStorage.getItem('bk.stat')||null;}catch(e){}
   if(!PLAYERS.includes(S.me))S.me=null;if(!['book','bets','stats'].includes(S.tab))S.tab='book';
 
@@ -383,21 +393,45 @@ td.legs div{white-space:nowrap}
       <div class="mainlines"><span></span><span class="lbl">Spread</span><span class="lbl">Total</span><span class="lbl">Moneyline</span>${row('away',g.away,g.awayName,lg.a)}${row('home',g.home,g.homeName,lg.h)}</div>${lad}${propHtml}${mineHtml}</article>`;}
 
   // ---------- slip ----------
-  function renderSlip(){const el=$('slip');if(!S.slip.length){el.hidden=true;return;}el.hidden=false;
-    const stake=Number(S.stake)||0;const dec=E.parlayDecimal(S.slip);const payout=stake*dec;const st=S.me?stateOf(S.me):null;
-    const maxBet=st?Math.floor(st.stack*CFG.maxBetFraction*100)/100:0;
-    const errs=S.me?E.validate({stake,legs:S.slip},{stack:st.stack},CFG):['Choose your name first.'];
-    el.innerHTML=`<h3><span>Bet slip${S.slip.length>1?` (${S.slip.length}-leg parlay, ${E.fmtAmerican(E.american(dec))})`:''}</span><button type="button" id="clearslip" class="signout" style="font-size:12px">Clear</button></h3>
-      <div class="legs">${S.slip.map(l=>`<div class="leg"><span>${esc(l.short)}</span><span class="o">${esc(E.fmtAmerican(l.odds))}</span><button type="button" data-rm="${esc(l.oddID)}" aria-label="Remove">&times;</button></div>`).join('')}</div>
-      <div class="row"><input id="stake" type="number" min="1" step="1" inputmode="decimal" placeholder="Stake" value="${esc(S.stake)}"><div class="quick"><button type="button" data-q="10">10</button><button type="button" data-q="20">20</button><button type="button" data-q="max">Max ${fmtPts(maxBet)}</button></div><div class="pay">To win<b class="num">${stake?signed(payout-stake).replace('+',''):'0'}</b>pays ${fmtPts(payout)}</div></div>
-      ${errs.length&&stake?`<div class="err">${esc(errs[0])}</div>`:''}
-      <div class="pt">${st?`Stack ${fmtPts(st.stack)}. Max bet ${fmtPts(maxBet)}.`:''} The number on this slip is the official number.</div>
-      <button type="button" class="place" id="place" ${errs.length||S.busy?'disabled':''}>${S.busy?'Placing':'Place bet'}</button>`;
-    el.querySelector('#clearslip').addEventListener('click',()=>{S.slip=[];S.stake='';render();});
+  // ---------- bet slip ----------
+  // Each selection is either in the parlay (mode 'parlay') or its own single bet (mode 'single').
+  // The slip can hold several games; only the parlay must stay within one game.
+  function slipGroups(){const singles=S.slip.filter(l=>l.mode==='single');const parlay=S.slip.filter(l=>l.mode!=='single');return {singles,parlay};}
+  function stakeOf(key){const v=Number((S.stakes||{})[key]);return isFinite(v)&&v>0?Math.round(v*100)/100:0;}
+  function slipBets(){ // the list of bets the slip would place: one per single, one for the parlay (if 2+ legs; a lone parlay leg is a single)
+    const {singles,parlay}=slipGroups();const bets=singles.map(l=>({key:l.oddID,legs:[l],stake:stakeOf(l.oddID)}));
+    if(parlay.length>=2)bets.push({key:'__parlay',legs:parlay,stake:stakeOf('__parlay')});else if(parlay.length===1)bets.push({key:parlay[0].oddID,legs:parlay,stake:stakeOf(parlay[0].oddID)});
+    return bets;}
+  function slipErrors(){const st=S.me?stateOf(S.me):null;if(!st)return ['Choose your name first.'];const bets=slipBets();const errs=[];let total=0;
+    for(const b of bets){if(!b.stake)continue;total+=b.stake;const e=E.validate({stake:b.stake,legs:b.legs},{stack:st.stack},CFG);if(e.length)errs.push((b.legs.length>1?'Parlay: ':b.legs[0].short+': ')+e[0]);}
+    if(!bets.some(b=>b.stake))errs.push('Enter a stake on at least one bet.');
+    if(total>st.stack+0.0001)errs.push(`These stakes add up to ${fmtPts(total)} but you only have ${fmtPts(st.stack)}.`);
+    const {parlay}=slipGroups();if(parlay.length>=2&&new Set(parlay.map(l=>l.eventID)).size>1)errs.push('Parlay legs must all be from one game. Make the extra game a single.');
+    return errs;}
+  function renderSlip(){const el=$('slip');if(!S.slip.length){el.hidden=true;S.slipOpen=false;return;}el.hidden=false;
+    const st=S.me?stateOf(S.me):null;const maxBet=st?Math.floor(st.stack*CFG.maxBetFraction*100)/100:0;const {singles,parlay}=slipGroups();const bets=slipBets();const errs=slipErrors();
+    const totalStake=bets.reduce((a,b)=>a+b.stake,0);const totalWin=bets.reduce((a,b)=>a+(b.stake?b.stake*E.parlayDecimal(b.legs)-b.stake:0),0);
+    if(!S.slipOpen){el.className='slip collapsed';el.innerHTML=`<button type="button" class="bar" id="openslip"><span class="cnt">${S.slip.length}</span><span>Bet slip${parlay.length>=2?`, ${parlay.length}-leg parlay`:''}${singles.length?`, ${singles.length} single${singles.length===1?'':'s'}`:''}</span><span class="hint">${totalStake?`${fmtPts(totalStake)} staked, to win ${fmtPts(totalWin)}`:'tap to open'}</span></button>`;
+      el.querySelector('#openslip').addEventListener('click',()=>{S.slipOpen=true;renderSlip();});return;}
+    el.className='slip';
+    const legRow=l=>`<div class="leg"><div class="lt"><span>${esc(l.short)}</span><span class="o num">${esc(E.fmtAmerican(l.odds))}</span><span class="hint">${esc(gameName(l.eventID))}</span></div>
+      <div class="seg" role="group" aria-label="Bet type"><button type="button" data-mode="${esc(l.oddID)}|parlay" aria-pressed="${l.mode!=='single'}">Parlay</button><button type="button" data-mode="${esc(l.oddID)}|single" aria-pressed="${l.mode==='single'}">Single</button></div>
+      <button type="button" class="rm" data-rm="${esc(l.oddID)}" aria-label="Remove">&times;</button></div>`;
+    const stakeRow=(key,legs,label)=>{const stake=stakeOf(key);const dec=E.parlayDecimal(legs);return `<div class="stakerow"><span class="sl">${esc(label)}</span><input type="number" min="1" step="1" inputmode="decimal" placeholder="Stake" data-stake="${esc(key)}" value="${esc((S.stakes||{})[key]||'')}"><span class="quick"><button type="button" data-q="${esc(key)}|10">10</button><button type="button" data-q="${esc(key)}|20">20</button><button type="button" data-q="${esc(key)}|max">Max</button></span><span class="pay num">${stake?`to win ${fmtPts(stake*dec-stake)}`:''}</span></div>`;};
+    el.innerHTML=`<h3><span>Bet slip</span><span><button type="button" id="clearslip" class="signout" style="font-size:12px">Clear</button><button type="button" id="hideslip" class="signout" style="font-size:12px;margin-left:10px">Hide, keep picking</button></span></h3>
+      ${parlay.length?`<div class="grp"><div class="gh"><span>Parlay${parlay.length>=2?` (${parlay.length} legs, ${E.fmtAmerican(E.american(E.parlayDecimal(parlay)))})`:' (needs 2 or more legs, bets as a single for now)'}</span></div><div class="legs">${parlay.map(legRow).join('')}</div>${parlay.length>=2?stakeRow('__parlay',parlay,'Parlay stake'):parlay.length===1?stakeRow(parlay[0].oddID,parlay,'Stake'):''}</div>`:''}
+      ${singles.length?`<div class="grp"><div class="gh"><span>Singles</span></div>${singles.map(l=>`<div class="legs">${legRow(l)}</div>${stakeRow(l.oddID,[l],'Stake')}`).join('')}</div>`:''}
+      ${errs.length&&totalStake?`<div class="err">${esc(errs[0])}</div>`:''}
+      <div class="pt">${st?`Stack ${fmtPts(st.stack)}. Max per bet ${fmtPts(maxBet)}.`:''} Tap Parlay or Single on each pick to decide how it bets. The numbers on this slip are the official numbers.</div>
+      <button type="button" class="place" id="place" ${errs.length||S.busy?'disabled':''}>${S.busy?'Placing':bets.filter(b=>b.stake).length>1?`Place ${bets.filter(b=>b.stake).length} bets (${fmtPts(totalStake)})`:'Place bet'}</button>`;
+    el.querySelector('#clearslip').addEventListener('click',()=>{S.slip=[];S.stakes={};render();});
+    el.querySelector('#hideslip').addEventListener('click',()=>{S.slipOpen=false;renderSlip();});
     el.querySelectorAll('[data-rm]').forEach(b=>b.addEventListener('click',()=>{S.slip=S.slip.filter(l=>l.oddID!==b.dataset.rm);render();}));
-    el.querySelectorAll('[data-q]').forEach(b=>b.addEventListener('click',()=>{S.stake=b.dataset.q==='max'?String(maxBet):b.dataset.q;renderSlip();}));
-    const inp=el.querySelector('#stake');inp.addEventListener('input',()=>{S.stake=inp.value;const pos=inp.selectionStart;renderSlip();const n=$('stake');n.focus();try{n.setSelectionRange(pos,pos);}catch(e){}});
-    el.querySelector('#place').addEventListener('click',placeBet);}
+    el.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{const [id,mode]=b.dataset.mode.split('|');const l=S.slip.find(x=>x.oddID===id);if(l){l.mode=mode;renderSlip();}}));
+    el.querySelectorAll('[data-q]').forEach(b=>b.addEventListener('click',()=>{const [key,q]=b.dataset.q.split('|');S.stakes=S.stakes||{};S.stakes[key]=q==='max'?String(maxBet):q;renderSlip();}));
+    el.querySelectorAll('[data-stake]').forEach(inp=>inp.addEventListener('input',()=>{S.stakes=S.stakes||{};S.stakes[inp.dataset.stake]=inp.value;const key=inp.dataset.stake;const pos=inp.selectionStart;renderSlip();const n=el.querySelector(`[data-stake="${CSS.escape(key)}"]`);if(n){n.focus();try{n.setSelectionRange(pos,pos);}catch(e){}}}));
+    el.querySelector('#place').addEventListener('click',placeBets);}
+  function gameName(eid){const g=S.games[eid];return g?`${g.away} at ${g.home}`:'';}
   // Alternate line ladder: a slider over the book's own numbers, plus the main line.
   function ladderOf(m){const rows=(m.alts||[]).map(([line,odds])=>({line,odds}));if(!rows.some(r=>r.line===m.line))rows.push({line:m.line,odds:m.odds,main:true});rows.sort((a,b)=>a.line-b.line);return rows;}
   function renderLadder(g,m){const rows=ladderOf(m);const leg=legFor(m);const cur=leg?rows.findIndex(r=>r.line===leg.line):rows.findIndex(r=>r.main||r.line===m.line);const i=cur<0?0:cur;const r=rows[i];
@@ -412,22 +446,25 @@ td.legs div{white-space:nowrap}
     const per=m.period==='1h'?' (1H)':'';return `${who} ${what}${per}`.trim();}
   function addLeg(g,m,alt){const i=S.slip.findIndex(l=>l.oddID===m.oddID);
     if(i>=0&&S.slip[i].line===m.line&&!alt&&!S.slip[i].alt){S.slip.splice(i,1);render();return;} // tapping the main price again takes it off
-    if(S.slip.length&&S.slip[0].eventID!==g.eventID){toast('One game per slip. Clear the slip to bet on another game.',true);return;}
     if(S.slip.some(l=>l.oddID===m.opposing)){toast('You already have the other side of that on your slip',true);return;}
-    const leg={eventID:g.eventID,oddID:m.oddID,opposing:m.opposing,odds:m.odds,line:m.line,side:m.side,entity:m.entity,betType:m.betType,stat:m.stat,period:m.period,player:m.player||null,team:m.team||'',name:m.name,book:m.book,alt:!!alt,short:shortLeg(g,m)+(alt?' (alt)':''),started:started(g)};
+    const {parlay}=slipGroups();const mode=i>=0?S.slip[i].mode:(parlay.length&&parlay[0].eventID!==g.eventID?'single':'parlay');
+    const leg={eventID:g.eventID,oddID:m.oddID,opposing:m.opposing,odds:m.odds,line:m.line,side:m.side,entity:m.entity,betType:m.betType,stat:m.stat,period:m.period,player:m.player||null,team:m.team||'',name:m.name,book:m.book,alt:!!alt,short:shortLeg(g,m)+(alt?' (alt)':''),started:started(g),mode};
     if(i>=0)S.slip[i]=leg;else S.slip.push(leg); // one leg per market: switching numbers replaces, never stacks
-    S.ladder=null;render();}
+    if(S.slip.length===1)S.slipOpen=true;
+    S.ladder=null;render();toast(mode==='single'&&!(i>=0)?`Added as a single (different game from your parlay)`:`Added to slip`);}
   function toggleLeg(g,m){addLeg(g,m,false);}
-  async function placeBet(){if(!S.me||!S.db||S.busy)return;const stake=Math.round(Number(S.stake)*100)/100;const st=stateOf(S.me);
-    const errs=E.validate({stake,legs:S.slip},{stack:st.stack},CFG);if(errs.length){toast(errs[0],true);return;}
-    const g=S.games[S.slip[0].eventID];if(started(g)){toast('This game has already started',true);render();return;}
-    S.busy=true;renderSlip();
-    try{const doc={player:S.me,stake,placedAt:new Date().toISOString(),eventID:g.eventID,game:`${g.away} at ${g.home}`,gameDate:g.date,gameStart:g.start,
-        legs:S.slip.map(l=>({oddID:l.oddID,opposing:l.opposing,odds:l.odds,line:l.line??null,side:l.side,entity:l.entity||null,betType:l.betType,stat:l.stat,period:l.period,player:l.player,team:l.team,name:l.name,book:l.book,short:l.short})),
-        status:'open',net:null,payout:null,settledAt:null};
-      await S.db.collection('wagers').add(doc);
-      toast(`Bet placed: ${fmtPts(stake)} on ${S.slip.map(l=>l.short).join(' + ')}`);S.slip=[];S.stake='';}
-    catch(e){console.error(e);toast('Could not place that bet, try again',true);}
+  async function placeBets(){if(!S.me||!S.db||S.busy)return;const errs=slipErrors();if(errs.length){toast(errs[0],true);return;}
+    const bets=slipBets().filter(b=>b.stake);for(const b of bets){const g=S.games[b.legs[0].eventID];if(started(g)){toast(`${g.away} at ${g.home} has already started`,true);render();return;}}
+    S.busy=true;renderSlip();let placed=0;
+    try{for(const b of bets){const g=S.games[b.legs[0].eventID];
+        const doc={player:S.me,stake:b.stake,placedAt:new Date().toISOString(),eventID:g.eventID,game:`${g.away} at ${g.home}`,gameDate:g.date,gameStart:g.start,
+          legs:b.legs.map(l=>({oddID:l.oddID,opposing:l.opposing,odds:l.odds,line:l.line??null,side:l.side,entity:l.entity||null,betType:l.betType,stat:l.stat,period:l.period,player:l.player,team:l.team,name:l.name,book:l.book,alt:!!l.alt,short:l.short})),
+          status:'open',net:null,payout:null,settledAt:null};
+        await S.db.collection('wagers').add(doc);placed++;
+        // drop placed legs from the slip as we go so a failure mid-way leaves the rest intact
+        S.slip=S.slip.filter(l=>!b.legs.some(x=>x.oddID===l.oddID));if(S.stakes)delete S.stakes[b.key];}
+      toast(placed===1?'Bet placed':`${placed} bets placed`);}
+    catch(e){console.error(e);toast(placed?`Placed ${placed}, then one failed. The rest are still on your slip.`:'Could not place that bet, try again',true);}
     finally{S.busy=false;render();}}
   async function cancelBet(id){const w=S.wagers.find(x=>x.id===id);if(!w||w.player!==S.me||w.status!=='open')return;const g=S.games[w.eventID];if(g&&started(g)){toast('This game has already started',true);return;}
     try{await S.db.collection('wagers').doc(id).delete();toast('Bet cancelled, stake returned');}catch(e){toast('Could not cancel',true);}}
