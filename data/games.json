@@ -739,13 +739,13 @@
   "awayColor": "98002e",
   "awayLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
   "awayName": "Miami Heat",
-  "awayScore": null,
+  "awayScore": 8,
   "date": "2026-10-24",
   "home": "CHA",
   "homeColor": "008ca8",
   "homeLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png",
   "homeName": "Charlotte Hornets",
-  "homeScore": null,
+  "homeScore": 9,
   "id": "401909853",
   "label": null,
   "multiplier": 1,
@@ -753,7 +753,7 @@
   "spreadSource": "Draft Kings",
   "spreadUpdated": "2026-10-24T21:17:41Z",
   "start": "2026-10-24T22:00:00Z",
-  "status": "scheduled"
+  "status": "inprogress"
  },
  "401909854": {
   "away": "BKN",
@@ -791,9 +791,9 @@
   "id": "401909855",
   "label": null,
   "multiplier": 1,
-  "spreadHome": -12.5,
+  "spreadHome": -13.5,
   "spreadSource": "ESPN",
-  "spreadUpdated": "2026-10-24T20:14:26Z",
+  "spreadUpdated": "2026-10-24T22:17:01Z",
   "start": "2026-10-24T23:30:00Z",
   "status": "scheduled"
  },
@@ -833,9 +833,9 @@
   "id": "401909857",
   "label": null,
   "multiplier": 1,
-  "spreadHome": -2.5,
+  "spreadHome": -1.5,
   "spreadSource": "ESPN",
-  "spreadUpdated": "2026-10-24T15:54:57Z",
+  "spreadUpdated": "2026-10-24T22:17:01Z",
   "start": "2026-10-25T00:00:00Z",
   "status": "scheduled"
  },
