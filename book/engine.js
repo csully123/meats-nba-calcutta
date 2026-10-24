@@ -42,9 +42,14 @@
   };
 
   // End-of-season figure after the proportional bust penalty: first bust x2/3, second x1/2, third x1/3, nth x 1/(n+1)... using factor 2/(n+2).
-  // Agreed penalty: 1 bust keeps 2/3 of the final stack, 2 busts keep 1/2, 3 busts keep 1/3, n busts keep 2/(n+2). (A single factor, not compounded.)
-  E.penaltyFactor=function(busts){busts=Math.max(0,Math.floor(busts||0));return busts===0?1:busts===1?2/3:1/busts;};
-  E.finalTotal=function(stack,busts){return Math.round(stack*E.penaltyFactor(busts)*100)/100;};
+  // Bust penalty: a cumulative percentage of the final stack (10%, 25%, 45%, 70%, then 90% for anything beyond),
+  // with a floor of 20 points per bust so a deliberate bust for the reload is never a good trade.
+  E.PENALTY_PCT=[0,0.10,0.25,0.45,0.70,0.90];
+  E.PENALTY_FLOOR=20;
+  E.penaltyPct=function(busts){busts=Math.max(0,Math.floor(busts||0));return E.PENALTY_PCT[Math.min(busts,E.PENALTY_PCT.length-1)];};
+  E.penaltyAmount=function(stack,busts){busts=Math.max(0,Math.floor(busts||0));if(!busts)return 0;return Math.max(stack*E.penaltyPct(busts),E.PENALTY_FLOOR*busts);};
+  E.penaltyFactor=function(busts){return 1-E.penaltyPct(busts);}; // kept for display; the floor can make the real cut larger
+  E.finalTotal=function(stack,busts){return Math.max(0,Math.round((stack-E.penaltyAmount(stack,busts))*100)/100);};
 
   // Rules checks for a new wager
   E.validate=function(w,state,cfg){

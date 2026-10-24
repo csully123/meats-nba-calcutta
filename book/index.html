@@ -240,14 +240,14 @@ td.legs div{white-space:nowrap}
     <details class="rules" id="rules">
       <summary><h2>The rules</h2><span class="hint">tap to open</span></summary>
       <dl>
-        <dt>Stack</dt><dd>Everyone starts with 100 points. Points are fake; they simulate money. Your total at the end of the regular season is your budget at the playoff auction.</dd>
+        <dt>Stack</dt><dd>Everyone starts with 200 points. Points are fake; they simulate money. Your total at the end of the regular season, after any bust penalty, is your budget at the playoff auction.</dd>
         <dt>Lines</dt><dd>Real FanDuel prices (another book fills in if FanDuel is missing a market). The number on this page when you place a bet is the official number, even if FanDuel moves after. Prices refresh each morning, around 1 PM, and about an hour before each tip-off window.</dd>
         <dt>Bets</dt><dd>Spreads, totals, moneylines, first-half lines and player props. Add picks to your slip, then mark each one Parlay or Single. The parlay must be from one game (no cross-game parlays); singles can be from any games, and the slip places them all at once.</dd>
         <dt>Alt lines</dt><dd>Tap the arrows beside a spread, total or prop to slide to a different number at FanDuel's price for it (a player over 20 instead of over 10, a team at -2.5 instead of -7.5). Only numbers FanDuel lists are offered. One leg per market: switching numbers replaces, never stacks.</dd>
         <dt>Parlay pricing</dt><dd>Legs multiply at their listed prices. FanDuel discounts same-game parlays for correlated legs; this book does not, so a same-game parlay pays a little more here than there. That is the house rule, same for everyone.</dd>
         <dt>Max bet</dt><dd>No single bet can be more than 25% of your stack at the moment you place it.</dd>
         <dt>Minimum</dt><dd>Wager at least 20 points every week, Monday through Sunday.</dd>
-        <dt>Bust</dt><dd>Hit zero with nothing pending and you reload to 100 and keep playing. It costs you at the end: after one bust your final total is cut to two thirds, after two to one half, after three to one third, and so on.</dd>
+        <dt>Bust</dt><dd>Hit zero with nothing pending and you reload to 100 and keep playing. It costs you at the end of the regular season: one bust forfeits 10% of your final total, two busts 25%, three 45%, four 70%, five or more 90%. Each bust forfeits at least 20 points regardless, so busting on purpose for the reload never pays.</dd>
         <dt>Settling</dt><dd>Bets grade overnight from the box score. A leg exactly on the number pushes and drops out of a parlay. A player who does not play voids that leg. A lost leg loses the slip.</dd>
         <dt>Lock</dt><dd>Bets close at tip-off. Until then you can cancel a bet and the stake goes back to your stack.</dd>
         <dt>Who</dt><dd>Tap your name under "Betting as" first. Honor system: bet as yourself only. Other people's open bets stay hidden until tip-off.</dd>
@@ -289,7 +289,7 @@ td.legs div{white-space:nowrap}
   const FIREBASE_CONFIG=window.FIREBASE_CONFIG||null;
   const PLAYERS=["Kev","Beekie","Mio","Sulliver"];
   const FLAGS={Kev:'flag-pl',Beekie:'flag-il',Mio:'flag-rs',Sulliver:'flag-it'};
-  const CFG={start:100,reload:100,maxBetFraction:0.25,minWeekly:20};
+  const CFG={start:200,reload:100,maxBetFraction:0.25,minWeekly:20};
   const POOL_EMAIL='pool@meats-calcutta-picks.firebaseapp.com';
   const ET='America/New_York';
   const fmtDay=new Intl.DateTimeFormat('en-CA',{timeZone:ET,year:'numeric',month:'2-digit',day:'2-digit'});
@@ -339,7 +339,7 @@ td.legs div{white-space:nowrap}
     $('board').innerHTML=ranked.map(s=>`<button type="button" class="tile ${FLAGS[s.p]||''}" data-statsfor="${esc(s.p)}"><div class="name"><span>${esc(s.p)}${crown(s.place)}</span><span class="rank num">${s.place}</span></div>
       <div class="pts num">${fmtPts(s.stack)}${s.pending?`<small>+${fmtPts(s.pending)} live</small>`:''}</div>
       <div class="line num ${s.wkWagered<CFG.minWeekly?'short':''}">${fmtPts(s.wkWagered)} of ${CFG.minWeekly} wagered this week</div>
-      <div class="line num">${s.busts?`${s.busts} bust${s.busts===1?'':'s'}, final counts x${E.penaltyFactor(s.busts).toFixed(2)} (${fmtPts(s.final)})`:'No busts'}</div></button>`).join('');}
+      <div class="line num">${s.busts?`${s.busts} bust${s.busts===1?'':'s'}, ${Math.round(E.penaltyPct(s.busts)*100)}% off at the end (counts as ${fmtPts(s.final)})`:'No busts'}</div></button>`).join('');}
 
   // ---------- book ----------
   function renderBook(){const v=$('view-book');const today=nowET();
