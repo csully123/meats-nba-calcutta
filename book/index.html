@@ -251,7 +251,7 @@ td.legs div{white-space:nowrap}
         <dt>Max bet</dt><dd>No single bet can be more than 25% of your stack at the moment you place it.</dd>
         <dt>Minimum</dt><dd>Wager at least 20 points every week, Monday through Sunday.</dd>
         <dt>Bust</dt><dd>Hit zero with nothing pending and you reload to 100 and keep playing. It costs you at the end of the regular season: one bust forfeits 10% of your final total, two busts 25%, three 45%, four 70%, five 90%. Each bust forfeits at least 20 points regardless, so busting on purpose for the reload never pays.</dd>
-        <dt>Foul out</dt><dd>Six busts and you have fouled out, like a sixth foul. You keep betting for pride, but you are automatically last in the auction order behind everyone still standing. If two or more people foul out, the one with the better win rate on settled bets ranks higher among them (wins as the tiebreaker).</dd>
+        <dt>Foul out</dt><dd>Six busts and you have fouled out, like a sixth foul. Your season is over: no more bets, and you are automatically last in the auction order behind everyone still standing. If two or more people foul out, the one with the better win rate on settled bets ranks higher among them (wins as the tiebreaker).</dd>
         <dt>Settling</dt><dd>Bets grade overnight from the box score. A leg exactly on the number pushes and drops out of a parlay. A player who does not play voids that leg. A lost leg loses the slip.</dd>
         <dt>Lock</dt><dd>Bets close at tip-off. Until then you can cancel a bet and the stake goes back to your stack.</dd>
         <dt>Who</dt><dd>Tap your name under "Betting as" first. Honor system: bet as yourself only. Other people's open bets stay hidden until tip-off.</dd>
@@ -346,7 +346,7 @@ td.legs div{white-space:nowrap}
     $('board').innerHTML=ranked.map(s=>`<button type="button" class="tile ${FLAGS[s.p]||''} ${s.fouledOut?'out':''}" data-statsfor="${esc(s.p)}"><div class="name"><span>${esc(s.p)}${s.fouledOut?'<span class="foul">Fouled out</span>':crown(s.place)}</span><span class="rank num">${s.place}</span></div>
       <div class="pts num">${fmtPts(s.stack)}${s.pending?`<small>+${fmtPts(s.pending)} live</small>`:''}</div>
       <div class="line num ${s.wkWagered<CFG.minWeekly?'short':''}">${fmtPts(s.wkWagered)} of ${CFG.minWeekly} wagered this week</div>
-      <div class="line num">${s.fouledOut?`${s.busts} busts. Fouled out: last at the auction, ranked among the fouled out by win rate (${Math.round(s.winPct*100)}%, ${s.wins}-${s.losses}).`:s.busts?`${s.busts} of ${E.FOUL_OUT} busts, ${Math.round(E.penaltyPct(s.busts)*100)}% off at the end (counts as ${fmtPts(s.final)})`:'No busts'}</div></button>`).join('');}
+      <div class="line num">${s.fouledOut?`${s.busts} busts. Fouled out, no more bets. Last at the auction, ranked among the fouled out by win rate (${Math.round(s.winPct*100)}%, ${s.wins}-${s.losses}).`:s.busts?`${s.busts} of ${E.FOUL_OUT} busts, ${Math.round(E.penaltyPct(s.busts)*100)}% off at the end (counts as ${fmtPts(s.final)})`:'No busts'}</div></button>`).join('');}
 
   // ---------- book ----------
   function renderBook(){const v=$('view-book');const today=nowET();
@@ -368,7 +368,7 @@ td.legs div{white-space:nowrap}
   function findM(g,pred){return (g.markets||[]).find(pred);}
   // A slip leg may sit on an alternate line; the button shows the chosen alt when there is one.
   function legFor(m){return S.slip.find(l=>l.oddID===m.oddID);}
-  function obtn(g,m,label){if(!m)return `<span class="ob na"><span class="l">--</span></span>`;const leg=legFor(m);const on=!!leg;const dis=started(g)||!m.available;
+  function obtn(g,m,label){if(!m)return `<span class="ob na"><span class="l">--</span></span>`;const leg=legFor(m);const on=!!leg;const dis=started(g)||!m.available||(S.me&&stateOf(S.me).fouledOut);
     const shown=leg&&leg.alt?{...m,line:leg.line,odds:leg.odds}:m;const lbl=leg&&leg.alt?lineStr(shown):(label!=null?label:lineStr(m));
     const hasAlts=Array.isArray(m.alts)&&m.alts.length>0&&!dis;
     return `<span class="obwrap"><button class="ob ${leg&&leg.alt?'alt':''}" data-pick="${esc(g.eventID)}|${esc(m.oddID)}" aria-pressed="${on}" ${dis?'disabled':''} title="${esc(m.name)}"><span class="l num">${esc(lbl)}</span><span class="o num">${esc(E.fmtAmerican(shown.odds))}</span></button>${hasAlts?`<button class="altbtn" data-alt="${esc(g.eventID)}|${esc(m.oddID)}" title="Pick a different number" aria-label="Alternate lines">&#8597;</button>`:''}</span>`;}
@@ -451,7 +451,7 @@ td.legs div{white-space:nowrap}
   function shortLeg(g,m){const who=m.kind==='prop'?m.name:(m.betType==='ou'&&m.entity==='all'?'Game':m.team||'');
     const what=m.betType==='sp'?(m.line>0?'+':'')+m.line:m.betType==='ou'?(m.side==='over'?'Over ':'Under ')+m.line:m.betType==='ml'?'ML':m.betType==='yn'?(m.side==='yes'?'Yes':'No'):'';
     const per=m.period==='1h'?' (1H)':'';return `${who} ${what}${per}`.trim();}
-  function addLeg(g,m,alt){const i=S.slip.findIndex(l=>l.oddID===m.oddID);
+  function addLeg(g,m,alt){if(S.me&&stateOf(S.me).fouledOut){toast('You have fouled out. No more bets this season.',true);return;}const i=S.slip.findIndex(l=>l.oddID===m.oddID);
     if(i>=0&&S.slip[i].line===m.line&&!alt&&!S.slip[i].alt){S.slip.splice(i,1);render();return;} // tapping the main price again takes it off
     if(S.slip.some(l=>l.oddID===m.opposing)){toast('You already have the other side of that on your slip',true);return;}
     const {parlay}=slipGroups();const mode=i>=0?S.slip[i].mode:(parlay.length&&parlay[0].eventID!==g.eventID?'single':'parlay');
@@ -460,7 +460,7 @@ td.legs div{white-space:nowrap}
     if(S.slip.length===1)S.slipOpen=true;
     S.ladder=null;render();toast(mode==='single'&&!(i>=0)?`Added as a single (different game from your parlay)`:`Added to slip`);}
   function toggleLeg(g,m){addLeg(g,m,false);}
-  async function placeBets(){if(!S.me||!S.db||S.busy)return;const errs=slipErrors();if(errs.length){toast(errs[0],true);return;}
+  async function placeBets(){if(!S.me||!S.db||S.busy)return;if(stateOf(S.me).fouledOut){toast('You have fouled out. No more bets this season.',true);return;}const errs=slipErrors();if(errs.length){toast(errs[0],true);return;}
     const bets=slipBets().filter(b=>b.stake);for(const b of bets){const g=S.games[b.legs[0].eventID];if(started(g)){toast(`${g.away} at ${g.home} has already started`,true);render();return;}}
     S.busy=true;renderSlip();let placed=0;
     try{for(const b of bets){const g=S.games[b.legs[0].eventID];
@@ -518,7 +518,7 @@ td.legs div{white-space:nowrap}
   function renderTabs(){document.querySelectorAll('#tabs [role=tab]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===S.tab)));for(const t of ['book','bets','stats'])$('view-'+t).hidden=t!==S.tab;}
   function renderStatus(){const el=$('status');if(!S.ready)return;const so=$('signout');
     if(!S.db){el.className='status warn';el.textContent='Bets are not connected, the book is read-only.';return;}
-    el.className='status';el.textContent=(S.pulled?`Lines as of ${fmtStamp.format(new Date(S.pulled))} ET. `:'')+(S.me?`Betting as ${S.me}.`:'Choose your name above to bet.');so.hidden=!S.signedIn;el.appendChild(so);}
+    el.className='status';const fo=S.me&&stateOf(S.me).fouledOut;el.textContent=(S.pulled?`Lines as of ${fmtStamp.format(new Date(S.pulled))} ET. `:'')+(S.me?(fo?`${S.me} has fouled out. No more bets this season; you can still watch the board.`:`Betting as ${S.me}.`):'Choose your name above to bet.');if(fo)el.className='status warn';so.hidden=!S.signedIn;el.appendChild(so);}
   function render(){renderWho();renderTabs();renderBoard();renderBook();renderBets();renderStatsTab();renderStatus();renderSlip();}
   let toastT;function toast(msg,err){let t=document.querySelector('.toast');if(!t){t=document.createElement('div');t.className='toast';document.body.appendChild(t);}t.textContent=msg;t.classList.toggle('err',!!err);clearTimeout(toastT);toastT=setTimeout(()=>t.remove(),3000);}
 
