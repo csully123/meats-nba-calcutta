@@ -53,6 +53,19 @@
   E.fouledOut=function(busts){return (busts||0)>=E.FOUL_OUT;}; // kept for display; the floor can make the real cut larger
   E.finalTotal=function(stack,busts){return Math.max(0,Math.round((stack-E.penaltyAmount(stack,busts))*100)/100);};
 
+  // What a leg says about the game, as a one-sided bound on one quantity: {v, dir:'>'|'<', at}.
+  // Two legs on the same quantity in opposite directions with no room between them cannot both win (SAS -15.5 with DAL ML);
+  // two in the same direction overlap, one already implies the other (SAS -15.5 with SAS ML), which a parlay must not stack.
+  E.legConstraint=function(l){const line=Number(l.line);const per=l.period||'game';
+    if(l.player){if(l.betType==='ou'&&isFinite(line))return {v:'p:'+l.player+':'+l.stat,dir:l.side==='under'?'<':'>',at:line};
+      if(l.betType==='yn')return {v:'p:'+l.player+':'+l.stat,dir:l.side==='no'?'<':'>',at:0.5};return null;}
+    if(l.betType==='ml'&&(l.entity==='home'||l.entity==='away'))return {v:'margin:'+per,dir:l.entity==='home'?'>':'<',at:0};
+    if(l.betType==='sp'&&isFinite(line)&&(l.entity==='home'||l.entity==='away'))return l.entity==='home'?{v:'margin:'+per,dir:'>',at:-line}:{v:'margin:'+per,dir:'<',at:line};
+    if(l.betType==='ou'&&isFinite(line))return {v:'total:'+per,dir:l.side==='under'?'<':'>',at:line};
+    return null;};
+  E.conflict=function(a,b){const x=E.legConstraint(a),y=E.legConstraint(b);if(!x||!y||x.v!==y.v)return null;
+    if(x.dir===y.dir)return 'overlap';const gt=x.dir==='>'?x:y,lt=x.dir==='<'?x:y;return gt.at>=lt.at?'impossible':null;};
+
   // Rules checks for a new wager
   E.validate=function(w,state,cfg){
     const errs=[];const maxFrac=cfg.maxBetFraction||0.25;
@@ -63,7 +76,8 @@
     if(w.legs&&new Set(w.legs.map(l=>l.eventID)).size>1)errs.push('All selections must be from the same game.');
     if(w.legs&&w.legs.some(l=>l.started))errs.push('One of these games has already started.');
     if(w.legs&&w.legs.length>1){const ids=w.legs.map(l=>l.oddID);if(new Set(ids).size!==ids.length)errs.push('Duplicate selection.');
-      const opp=w.legs.some(l=>w.legs.some(m=>m.oddID===l.opposingOddID));if(opp)errs.push('You cannot take both sides of the same market.');}
+      const opp=w.legs.some(l=>{const o=l.opposingOddID||l.opposing;return !!o&&w.legs.some(m=>m.oddID===o);});if(opp)errs.push('You cannot take both sides of the same market.');
+      for(let i=0;i<w.legs.length&&!errs.length;i++)for(let j=i+1;j<w.legs.length;j++){const c=E.conflict(w.legs[i],w.legs[j]);if(c){const a=w.legs[i].short||'one leg',b=w.legs[j].short||'another';errs.push(c==='impossible'?`${a} and ${b} cannot both win.`:`${a} and ${b} overlap (one already covers the other), so they cannot be parlayed.`);break;}}}
     return errs;
   };
 
