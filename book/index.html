@@ -80,6 +80,9 @@ header{display:flex;flex-direction:column;gap:14px;padding-top:28px;border-botto
 .tile .line.short{color:var(--loss);font-weight:600}
 .crown{margin-left:6px;vertical-align:-1px}
 .crown.r1{color:#d9a21b}.crown.r2{color:#b8bcc4}.crown.r3{color:#b87333}
+.tile.out{border-color:var(--loss)}
+.tile.out::before{filter:grayscale(1);opacity:.18}
+.foul{display:inline-block;margin-left:8px;font-size:10px;letter-spacing:.1em;background:var(--loss);color:#fff;padding:2px 6px;border-radius:3px;vertical-align:middle}
 @media (max-width:620px){.board{grid-template-columns:repeat(2,1fr)}.tile .pts{font-size:38px}}
 
 /* tabs */
@@ -247,7 +250,8 @@ td.legs div{white-space:nowrap}
         <dt>Parlay pricing</dt><dd>Legs multiply at their listed prices. FanDuel discounts same-game parlays for correlated legs; this book does not, so a same-game parlay pays a little more here than there. That is the house rule, same for everyone.</dd>
         <dt>Max bet</dt><dd>No single bet can be more than 25% of your stack at the moment you place it.</dd>
         <dt>Minimum</dt><dd>Wager at least 20 points every week, Monday through Sunday.</dd>
-        <dt>Bust</dt><dd>Hit zero with nothing pending and you reload to 100 and keep playing. It costs you at the end of the regular season: one bust forfeits 10% of your final total, two busts 25%, three 45%, four 70%, five or more 90%. Each bust forfeits at least 20 points regardless, so busting on purpose for the reload never pays.</dd>
+        <dt>Bust</dt><dd>Hit zero with nothing pending and you reload to 100 and keep playing. It costs you at the end of the regular season: one bust forfeits 10% of your final total, two busts 25%, three 45%, four 70%, five 90%. Each bust forfeits at least 20 points regardless, so busting on purpose for the reload never pays.</dd>
+        <dt>Foul out</dt><dd>Six busts and you have fouled out, like a sixth foul. You keep betting for pride, but you are automatically last in the auction order behind everyone still standing. If two or more people foul out, the one with the better win rate on settled bets ranks higher among them (wins as the tiebreaker).</dd>
         <dt>Settling</dt><dd>Bets grade overnight from the box score. A leg exactly on the number pushes and drops out of a parlay. A player who does not play voids that leg. A lost leg loses the slip.</dd>
         <dt>Lock</dt><dd>Bets close at tip-off. Until then you can cancel a bet and the stake goes back to your stack.</dd>
         <dt>Who</dt><dd>Tap your name under "Betting as" first. Honor system: bet as yourself only. Other people's open bets stay hidden until tip-off.</dd>
@@ -331,15 +335,18 @@ td.legs div{white-space:nowrap}
 
   // ---------- standings ----------
   function allStates(){return PLAYERS.map(p=>{const b=E.bankroll(p,S.wagers.map(w=>({...w,settled:w.status&&w.status!=='open'?{status:w.status,net:w.net||0}:null})),CFG);
-    const wk=E.weekKey(new Date().toISOString());const wkWagered=b.byWeek[wk]||0;return {p,...b,wkWagered,final:E.finalTotal(b.stack,b.busts)};});}
+    const wk=E.weekKey(new Date().toISOString());const wkWagered=b.byWeek[wk]||0;
+    const mine=S.wagers.filter(w=>w.player===p);const wins=mine.filter(w=>w.status==='win').length,losses=mine.filter(w=>w.status==='loss').length;const winPct=(wins+losses)?wins/(wins+losses):0;
+    return {p,...b,wkWagered,final:E.finalTotal(b.stack,b.busts),fouledOut:E.fouledOut(b.busts),wins,losses,winPct};});}
   function stateOf(p){return allStates().find(s=>s.p===p);}
-  function renderBoard(){const tot=x=>E.finalTotal(x.stack+x.pending,x.busts);const st=allStates().sort((a,b)=>tot(b)-tot(a)||b.stack-a.stack);
-    let place=0,prev=null;const ranked=st.map(x=>{const key=tot(x);if(key!==prev){place++;prev=key;}return {...x,place};});
+  function renderBoard(){const tot=x=>E.finalTotal(x.stack+x.pending,x.busts);
+    const st=allStates().sort((a,b)=>{if(a.fouledOut!==b.fouledOut)return a.fouledOut?1:-1;if(a.fouledOut)return b.winPct-a.winPct||b.wins-a.wins||tot(b)-tot(a);return tot(b)-tot(a)||b.stack-a.stack;});
+    let place=0,prev=null;const ranked=st.map(x=>{const key=x.fouledOut?'out|'+x.winPct+'|'+x.wins:'in|'+tot(x);if(key!==prev){place++;prev=key;}return {...x,place};});
     const crown=p=>p<=3?`<svg class="crown r${p}" viewBox="0 0 24 16" width="18" height="12" aria-hidden="true"><path d="M2 14h20l-2-9-5 4-3-7-3 7-5-4z" fill="currentColor"/></svg>`:'';
-    $('board').innerHTML=ranked.map(s=>`<button type="button" class="tile ${FLAGS[s.p]||''}" data-statsfor="${esc(s.p)}"><div class="name"><span>${esc(s.p)}${crown(s.place)}</span><span class="rank num">${s.place}</span></div>
+    $('board').innerHTML=ranked.map(s=>`<button type="button" class="tile ${FLAGS[s.p]||''} ${s.fouledOut?'out':''}" data-statsfor="${esc(s.p)}"><div class="name"><span>${esc(s.p)}${s.fouledOut?'<span class="foul">Fouled out</span>':crown(s.place)}</span><span class="rank num">${s.place}</span></div>
       <div class="pts num">${fmtPts(s.stack)}${s.pending?`<small>+${fmtPts(s.pending)} live</small>`:''}</div>
       <div class="line num ${s.wkWagered<CFG.minWeekly?'short':''}">${fmtPts(s.wkWagered)} of ${CFG.minWeekly} wagered this week</div>
-      <div class="line num">${s.busts?`${s.busts} bust${s.busts===1?'':'s'}, ${Math.round(E.penaltyPct(s.busts)*100)}% off at the end (counts as ${fmtPts(s.final)})`:'No busts'}</div></button>`).join('');}
+      <div class="line num">${s.fouledOut?`${s.busts} busts. Fouled out: last at the auction, ranked among the fouled out by win rate (${Math.round(s.winPct*100)}%, ${s.wins}-${s.losses}).`:s.busts?`${s.busts} of ${E.FOUL_OUT} busts, ${Math.round(E.penaltyPct(s.busts)*100)}% off at the end (counts as ${fmtPts(s.final)})`:'No busts'}</div></button>`).join('');}
 
   // ---------- book ----------
   function renderBook(){const v=$('view-book');const today=nowET();
