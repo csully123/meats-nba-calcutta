@@ -209,7 +209,8 @@ td.legs div{white-space:nowrap}
 .stat .d{font-size:12px;color:var(--muted)}
 .empty{background:var(--surface);border:1.5px dashed var(--line);padding:28px 18px;text-align:center;color:var(--muted)}
 .empty strong{display:block;color:var(--ink);font-family:var(--display);font-size:22px;text-transform:uppercase;margin-bottom:6px}
-.toast{position:fixed;left:50%;top:16px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:6px;font-weight:600;font-size:14px;z-index:40;box-shadow:0 6px 20px rgba(0,0,0,.25);max-width:calc(100% - 32px)}
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:12px 16px;border-radius:8px;font-weight:600;font-size:15px;line-height:1.35;z-index:60;box-shadow:0 6px 24px rgba(0,0,0,.45);max-width:calc(100% - 32px);text-align:center;animation:toastin .18s ease-out}
+@keyframes toastin{from{opacity:0;transform:translate(-50%,8px)}to{opacity:1;transform:translate(-50%,0)}}
 .toast.err{background:var(--loss);color:#fff}
 .gate{position:fixed;inset:0;background:var(--bg);display:grid;place-items:center;z-index:30;padding:16px}
 .gate form{background:var(--surface);border:1.5px solid var(--line);border-top:4px solid var(--accent);padding:24px 22px;display:flex;flex-direction:column;gap:12px;width:min(100%,380px)}
@@ -528,7 +529,7 @@ td.legs div{white-space:nowrap}
     if(!S.db){el.className='status warn';el.textContent='Bets are not connected, the book is read-only.';return;}
     el.className='status';const fo=S.me&&stateOf(S.me).fouledOut;el.textContent=(S.pulled?`Lines as of ${fmtStamp.format(new Date(S.pulled))} ET. `:'')+(S.me?(fo?`${S.me} has fouled out. No more bets this season; you can still watch the board.`:`Betting as ${S.me}.`):'Choose your name above to bet.');if(fo)el.className='status warn';so.hidden=!S.signedIn;el.appendChild(so);}
   function render(){renderWho();renderTabs();renderBoard();renderBook();renderBets();renderStatsTab();renderStatus();renderSlip();}
-  let toastT;function toast(msg,err){let t=document.querySelector('.toast');if(!t){t=document.createElement('div');t.className='toast';document.body.appendChild(t);}t.textContent=msg;t.classList.toggle('err',!!err);clearTimeout(toastT);toastT=setTimeout(()=>t.remove(),3000);}
+  let toastT;function toast(msg,err){let t=document.querySelector('.toast');if(!t){t=document.createElement('div');t.className='toast';document.body.appendChild(t);}t.textContent=msg;t.classList.toggle('err',!!err);clearTimeout(toastT);toastT=setTimeout(()=>t.remove(),err?6000:2500);}
 
   $('who').addEventListener('click',e=>{const b=e.target.closest('[data-player]');if(!b)return;S.me=b.dataset.player;try{localStorage.setItem('bk.me',S.me);}catch(x){}$('who').classList.remove('nudge');render();});
   $('tabs').addEventListener('click',e=>{const b=e.target.closest('[data-tab]');if(!b)return;S.tab=b.dataset.tab;try{localStorage.setItem('bk.tab',S.tab);}catch(x){}renderTabs();});
