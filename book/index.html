@@ -418,7 +418,7 @@ td.legs div{white-space:nowrap}
     for(const p of parlays){if(p.legs.length>=2)bets.push({key:p.key,legs:p.legs,stake:stakeOf(p.key)});else bets.push({key:p.legs[0].key,legs:p.legs,stake:stakeOf(p.legs[0].key)});}
     return bets;}
   function slipErrors(){const st=S.me?stateOf(S.me):null;if(!st)return ['Choose your name first.'];const bets=slipBets();const errs=[];let total=0;
-    for(const b of bets){if(!b.stake)continue;total+=b.stake;const e=E.validate({stake:b.stake,legs:b.legs},{stack:st.stack},CFG);if(e.length)errs.push((b.legs.length>1?gameName(b.legs[0].eventID)+' parlay: ':b.legs[0].short+': ')+e[0]);}
+    for(const b of bets){total+=b.stake;const e=E.validate({stake:b.stake||Math.min(1,st.stack),legs:b.legs},{stack:st.stack},CFG);if(e.length)errs.push((b.legs.length>1?gameName(b.legs[0].eventID)+' parlay: ':b.legs[0].short+': ')+e[0]);}
     if(!bets.some(b=>b.stake))errs.push('Enter a stake on at least one bet.');
     if(total>st.stack+0.0001)errs.push(`These stakes add up to ${fmtPts(total)} but you only have ${fmtPts(st.stack)}.`);
     return errs;}
@@ -464,10 +464,12 @@ td.legs div{white-space:nowrap}
     const probe={betType:m.betType,side:m.side,entity:m.entity,line:m.line,period:m.period,player:m.player||null,stat:m.stat};
     const clash=E.conflict?S.slip.find(l=>l.eventID===g.eventID&&l.key!==key&&E.conflict(l,probe)==='impossible'):null;
     if(clash){toast(`${shortLeg(g,m)} cannot win together with ${clash.short}. Take that off the slip first.`,true);return;}
-    const mode=i>=0?S.slip[i].mode:'parlay';
+    // A pick that overlaps a parlay leg already on this game (same team's spread and moneyline, two overs on one player) starts as a single.
+    const overlaps=E.conflict?S.slip.find(l=>l.eventID===g.eventID&&l.key!==key&&l.mode!=='single'&&E.conflict(l,probe)==='overlap'):null;
+    const mode=i>=0?S.slip[i].mode:(overlaps?'single':'parlay');
     const leg={key,eventID:g.eventID,oddID:m.oddID,opposing:m.opposing,odds:m.odds,line:m.line,side:m.side,entity:m.entity,betType:m.betType,stat:m.stat,period:m.period,player:m.player||null,team:m.team||'',name:m.name,book:m.book,alt:!!alt,short:shortLeg(g,m)+(alt?' (alt)':''),started:started(g),mode};
     if(i>=0)S.slip[i]=leg;else S.slip.push(leg); // one leg per market: switching numbers replaces, never stacks
-    S.ladder=null;render();toast(i>=0?'Updated on slip':'Added to slip');}
+    S.ladder=null;render();toast(i>=0?'Updated on slip':mode==='single'?'Added to slip as a single':'Added to slip');}
   function toggleLeg(g,m){addLeg(g,m,false);}
   async function placeBets(){if(!S.me||!S.db||S.busy)return;if(stateOf(S.me).fouledOut){toast('You have fouled out. No more bets this season.',true);return;}const errs=slipErrors();if(errs.length){toast(errs[0],true);return;}
     const bets=slipBets().filter(b=>b.stake);for(const b of bets){const g=S.games[b.legs[0].eventID];if(started(g)){toast(`${g.away} at ${g.home} has already started`,true);render();return;}}
