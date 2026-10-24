@@ -292,7 +292,7 @@ td.legs div{white-space:nowrap}
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
 <script src="../firebase-config.js"></script>
-<script src="engine.js"></script>
+<script src="engine.js?v=20261024c"></script>
 <script>
 (function(){
   const E=window.BookEngine;
@@ -462,7 +462,7 @@ td.legs div{white-space:nowrap}
     if(i>=0&&S.slip[i].line===m.line&&!alt&&!S.slip[i].alt){S.slip.splice(i,1);render();return;} // tapping the main price again takes it off
     if(S.slip.some(l=>l.key===legKey(g.eventID,m.opposing))){toast('You already have the other side of that on your slip',true);return;}
     const probe={betType:m.betType,side:m.side,entity:m.entity,line:m.line,period:m.period,player:m.player||null,stat:m.stat};
-    const clash=S.slip.find(l=>l.eventID===g.eventID&&l.key!==key&&E.conflict(l,probe)==='impossible');
+    const clash=E.conflict?S.slip.find(l=>l.eventID===g.eventID&&l.key!==key&&E.conflict(l,probe)==='impossible'):null;
     if(clash){toast(`${shortLeg(g,m)} cannot win together with ${clash.short}. Take that off the slip first.`,true);return;}
     const mode=i>=0?S.slip[i].mode:'parlay';
     const leg={key,eventID:g.eventID,oddID:m.oddID,opposing:m.opposing,odds:m.odds,line:m.line,side:m.side,entity:m.entity,betType:m.betType,stat:m.stat,period:m.period,player:m.player||null,team:m.team||'',name:m.name,book:m.book,alt:!!alt,short:shortLeg(g,m)+(alt?' (alt)':''),started:started(g),mode};
