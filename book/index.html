@@ -529,7 +529,7 @@ td.legs div{white-space:nowrap}
     if(!S.db){el.className='status warn';el.textContent='Bets are not connected, the book is read-only.';return;}
     el.className='status';const fo=S.me&&stateOf(S.me).fouledOut;el.textContent=(S.pulled?`Lines as of ${fmtStamp.format(new Date(S.pulled))} ET. `:'')+(S.me?(fo?`${S.me} has fouled out. No more bets this season; you can still watch the board.`:`Betting as ${S.me}.`):'Choose your name above to bet.');if(fo)el.className='status warn';so.hidden=!S.signedIn;el.appendChild(so);}
   function render(){renderWho();renderTabs();renderBoard();renderBook();renderBets();renderStatsTab();renderStatus();renderSlip();}
-  let toastT;function toast(msg,err){let t=document.querySelector('.toast');if(!t){t=document.createElement('div');t.className='toast';document.body.appendChild(t);}t.textContent=msg;t.classList.toggle('err',!!err);clearTimeout(toastT);toastT=setTimeout(()=>t.remove(),err?6000:2500);}
+  let toastT;function toast(msg,err){let t=document.querySelector('.toast');if(!t){t=document.createElement('div');t.className='toast';document.body.appendChild(t);}t.textContent=msg;t.classList.toggle('err',!!err);clearTimeout(toastT);toastT=setTimeout(()=>t.remove(),2500);}
 
   $('who').addEventListener('click',e=>{const b=e.target.closest('[data-player]');if(!b)return;S.me=b.dataset.player;try{localStorage.setItem('bk.me',S.me);}catch(x){}$('who').classList.remove('nudge');render();});
   $('tabs').addEventListener('click',e=>{const b=e.target.closest('[data-tab]');if(!b)return;S.tab=b.dataset.tab;try{localStorage.setItem('bk.tab',S.tab);}catch(x){}renderTabs();});
