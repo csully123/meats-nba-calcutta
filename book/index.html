@@ -118,8 +118,18 @@ details.day .daybody{display:flex;flex-direction:column;gap:14px;margin-top:10px
 .more>summary::-webkit-details-marker{display:none}
 .more>summary::after{content:"Show \25BE";font-size:11px;font-weight:700;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 55%,var(--line));padding:2px 8px;border-radius:999px}
 .more[open]>summary::after{content:"Hide \25B4"}
-.props{padding:8px 12px 12px;display:flex;flex-direction:column;gap:10px}
+.props{padding:8px 12px 12px;display:flex;flex-direction:column;gap:6px}
 .propgrp h3{margin:6px 0 4px;color:var(--muted);font-size:13px;letter-spacing:.1em}
+.pgrp{border:1px solid var(--line);border-radius:6px;background:var(--bg)}
+.pgrp>summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 10px}
+.pgrp>summary::-webkit-details-marker{display:none}
+.pgrp>summary .pgname{font-family:var(--display);font-size:17px;font-weight:600;text-transform:uppercase;letter-spacing:.02em}
+.pgrp>summary .pgname small{font-family:var(--body);font-size:12px;color:var(--muted);text-transform:none;font-weight:500;margin-left:6px}
+.pgrp>summary .pgcnt{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;font-weight:700;white-space:nowrap}
+.pgrp>summary .pgcnt::after{content:" \25BE"}
+.pgrp[open]>summary .pgcnt::after{content:" \25B4"}
+.pgrp[open]>summary{border-bottom:1px solid var(--line)}
+.pgbody{padding:4px 10px 8px}
 .proprow{display:grid;grid-template-columns:minmax(0,1fr) 92px 92px;gap:6px;align-items:center;padding:3px 0}
 .proprow .pn{font-size:14px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .proprow .pn small{color:var(--muted);display:block;font-size:12px}
@@ -260,7 +270,7 @@ td.legs div{white-space:nowrap}
   const fmtShort=new Intl.DateTimeFormat('en-US',{timeZone:ET,month:'short',day:'numeric'});
   const fmtStamp=new Intl.DateTimeFormat('en-US',{timeZone:ET,month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
 
-  const S={db:null,me:null,tab:'book',betf:'All',stat:null,games:{},logos:{},wagers:[],slip:[],stake:'',ready:false,signedIn:false,openDays:new Set(),openMore:new Set(),busy:false,pulled:null};
+  const S={db:null,me:null,tab:'book',betf:'All',stat:null,games:{},logos:{},wagers:[],slip:[],stake:'',ready:false,signedIn:false,openDays:new Set(),openMore:new Set(),openProps:new Set(),busy:false,pulled:null};
   try{S.me=localStorage.getItem('bk.me')||null;S.tab=localStorage.getItem('bk.tab')||'book';S.betf=localStorage.getItem('bk.betf')||'All';S.stat=localStorage.getItem('bk.stat')||null;}catch(e){}
   if(!PLAYERS.includes(S.me))S.me=null;if(!['book','bets','stats'].includes(S.tab))S.tab='book';
 
@@ -316,7 +326,9 @@ td.legs div{white-space:nowrap}
       return `<details class="day" data-day="${esc(day)}" ${S.openDays.has(day)?'open':''}><summary class="dayhead">${head}</summary><div class="daybody">${body}</div></details>`;}).join('');
     v.querySelectorAll('details.day').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)S.openDays.add(d.dataset.day);else S.openDays.delete(d.dataset.day);}));
     v.querySelectorAll('details.more').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)S.openMore.add(d.dataset.g);else S.openMore.delete(d.dataset.g);}));
-    v.querySelectorAll('.propsearch').forEach(inp=>inp.addEventListener('input',()=>{const q=inp.value.toLowerCase();inp.closest('.props').querySelectorAll('.proprow').forEach(r=>{r.hidden=q&&!r.dataset.q.includes(q);});}));}
+    v.querySelectorAll('details.pgrp').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)S.openProps.add(d.dataset.pg);else S.openProps.delete(d.dataset.pg);}));
+    v.querySelectorAll('.propsearch').forEach(inp=>inp.addEventListener('input',()=>{const q=inp.value.trim().toLowerCase();const box=inp.closest('.props');
+      box.querySelectorAll('details.pgrp').forEach(d=>{let any=false;d.querySelectorAll('.proprow').forEach(r=>{const hit=!q||r.dataset.q.includes(q);r.hidden=!hit;if(hit)any=true;});d.hidden=q&&!any;if(q&&any)d.open=true;});}));}
   function mk(g,id){return (g.markets||[]).find(m=>m.oddID===id);}
   function findM(g,pred){return (g.markets||[]).find(pred);}
   function obtn(g,m,label){if(!m)return `<span class="ob na"><span class="l">--</span></span>`;const on=S.slip.some(l=>l.oddID===m.oddID);const dis=started(g)||!m.available;
@@ -332,10 +344,16 @@ td.legs div{white-space:nowrap}
     const pairs=[];for(const [key,ms] of Object.entries(groups)){const by={};for(const m of ms){const k=m.name+'|'+(m.betType==='sp'?'sp':m.betType==='ml'?'ml':m.stat);(by[k]=by[k]||{}).m=by[k].m||{};by[k].m[m.side]=m;by[k].name=m.name;by[k].team=m.team;}
       for(const [k,v] of Object.entries(by)){const sides=Object.values(v.m);if(!sides.length)continue;pairs.push({key,name:v.name,team:v.team,sides:v.m});}}
     pairs.sort((a,b)=>(a.team||'').localeCompare(b.team||'')||a.name.localeCompare(b.name));
-    const propHtml=pairs.length?`<details class="more" data-g="${esc(g.eventID)}" ${S.openMore.has(g.eventID)?'open':''}><summary>Player props and first half (${pairs.length})</summary><div class="props"><input class="propsearch" placeholder="Search a player or stat" aria-label="Search props">
-      ${pairs.map(p=>{const s=p.sides;const a=s.over||s.yes||s.home||s.away||Object.values(s)[0];const b=s.under||s.no||(s.home&&s.away?(a===s.home?s.away:s.home):null);
+    // group rows: one drop-down per player (and one for first-half lines), each listing that player's stats
+    const groups2={};for(const p of pairs){const isHalf=p.key==='1h';const gk=isHalf?'__1h':p.key;const gl=isHalf?'First half lines':(p.name.replace(/ (Points|Rebounds|Assists|3-pointers made|Pts \+ Reb \+ Ast|Pts \+ Reb|Pts \+ Ast|Reb \+ Ast|Steals|Blocks|Turnovers|Blk \+ Stl|Double-double|Triple-double|First basket)$/,''));
+      (groups2[gk]=groups2[gk]||{label:gl,team:isHalf?'':p.team,rows:[]}).rows.push(p);}
+    const glist=Object.entries(groups2).sort((a,b)=>a[0]==='__1h'?-1:b[0]==='__1h'?1:(a[1].team||'').localeCompare(b[1].team||'')||a[1].label.localeCompare(b[1].label));
+    const rowHtml=p=>{const s=p.sides;const a=s.over||s.yes||s.home||s.away||Object.values(s)[0];const b=s.under||s.no||(s.home&&s.away?(a===s.home?s.away:s.home):null);
         const la=a?(a.betType==='ou'?'O '+a.line:a.betType==='sp'?(a.line>0?'+':'')+a.line:a.betType==='yn'?'Yes':a.team||a.side):'';const lb=b?(b.betType==='ou'?'U '+b.line:b.betType==='sp'?(b.line>0?'+':'')+b.line:b.betType==='yn'?'No':b.team||b.side):'';
-        return `<div class="proprow" data-q="${esc((p.name+' '+(p.team||'')).toLowerCase())}"><div class="pn">${esc(p.name)}<small>${esc(p.team||'')}</small></div>${obtn(g,a,la)}${b?obtn(g,b,lb):'<span></span>'}</div>`;}).join('')}</div></details>`:'';
+        const statName=p.key==='1h'?p.name:p.name.replace(/^.*? (Points|Rebounds|Assists|3-pointers made|Pts \+ Reb \+ Ast|Pts \+ Reb|Pts \+ Ast|Reb \+ Ast|Steals|Blocks|Turnovers|Blk \+ Stl|Double-double|Triple-double|First basket)$/,'$1');
+        return `<div class="proprow" data-q="${esc((p.name+' '+(p.team||'')).toLowerCase())}"><div class="pn">${esc(statName)}</div>${obtn(g,a,la)}${b?obtn(g,b,lb):'<span></span>'}</div>`;};
+    const propHtml=pairs.length?`<details class="more" data-g="${esc(g.eventID)}" ${S.openMore.has(g.eventID)?'open':''}><summary>Player props and first half (${pairs.length})</summary><div class="props"><input class="propsearch" placeholder="Search a player or stat" aria-label="Search props">
+      ${glist.map(([gk,grp])=>{const k=g.eventID+'|'+gk;return `<details class="pgrp" data-pg="${esc(k)}" ${S.openProps.has(k)?'open':''}><summary><span class="pgname">${esc(grp.label)}${grp.team?` <small>${esc(grp.team)}</small>`:''}</span><span class="pgcnt">${grp.rows.length} market${grp.rows.length===1?'':'s'}</span></summary><div class="pgbody">${grp.rows.map(rowHtml).join('')}</div></details>`;}).join('')}</div></details>`:'';
     return `<article class="game" id="g-${esc(g.eventID)}"><div class="meta"><span class="when">${esc(g.away)} at ${esc(g.home)}</span><span>${esc(fmtTime.format(new Date(g.start)))} ET</span>${tag}<span class="hint">${g.pulledAt?'lines as of '+esc(fmtStamp.format(new Date(g.pulledAt)))+' ET':''}</span></div>
       <div class="mainlines"><span></span><span class="lbl">Spread</span><span class="lbl">Total</span><span class="lbl">Moneyline</span>${row('away',g.away,g.awayName,lg.a)}${row('home',g.home,g.homeName,lg.h)}</div>${propHtml}${mineHtml}</article>`;}
 
