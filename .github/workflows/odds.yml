@@ -1,0 +1,65 @@
+name: Pull odds and results
+
+on:
+  schedule:
+    # Times are UTC. ET is UTC-4 (EDT) until Nov 1, then UTC-5 (EST); both sets below cover both, at a small cost in extra pulls.
+    - cron: "40 12 * * *"      # morning pull, 8:40 AM EDT / 7:40 AM EST
+    - cron: "5 17 * * *"       # midday, 1:05 PM EDT / 12:05 PM EST
+    - cron: "5 21,22,23 * * *" # pre-tip windows for 7, 7:30, 8 PM tips
+    - cron: "5 0,1,2 * * *"    # pre-tip windows for 9, 9:30, 10 PM tips
+    - cron: "20 7 * * *"       # overnight results pull, 3:20 AM EDT
+    - cron: "10 16 * * *"      # late results sweep for afternoon games, noon EDT
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "morning, midday, pretip or results"
+        default: "morning"
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Decide the mode from the clock
+        id: mode
+        run: |
+          if [ -n "${{ inputs.mode }}" ]; then echo "mode=${{ inputs.mode }}" >> $GITHUB_OUTPUT; exit 0; fi
+          h=$(date -u +%H)
+          case "$h" in
+            12) echo "mode=morning" >> $GITHUB_OUTPUT ;;
+            17) echo "mode=midday" >> $GITHUB_OUTPUT ;;
+            07|16) echo "mode=results" >> $GITHUB_OUTPUT ;;
+            *) echo "mode=pretip" >> $GITHUB_OUTPUT ;;
+          esac
+      - name: Pull from the odds feed
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python scripts/odds.py ${{ steps.mode.outputs.mode }}
+      - name: Grade wagers
+        if: steps.mode.outputs.mode == 'results'
+        env:
+          POOL_PASSWORD: ${{ secrets.POOL_PASSWORD }}
+        run: python scripts/grade.py
+      - name: Commit
+        run: |
+          git config user.name "calcutta-bot"
+          git config user.email "calcutta-bot@users.noreply.github.com"
+          git add data/odds
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Odds ${{ steps.mode.outputs.mode }} $(date -u +%Y-%m-%dT%H:%MZ)"
+            git pull --rebase origin main
+            git push
+          fi

@@ -77,20 +77,25 @@ def main() -> int:
         return 1
     cfg = firebase_config()
     token = sign_in(cfg["apiKey"], password)
-    base = f"https://firestore.googleapis.com/v1/projects/{cfg['projectId']}/databases/(default)/documents/picks"
     headers = {"Authorization": "Bearer " + token}
-    picks = {}
-    page = None
-    while True:
-        url = base + "?pageSize=1000" + (f"&pageToken={urllib.parse.quote(page)}" if page else "")
-        res = get_json(url, headers)
-        for doc in res.get("documents", []):
-            doc_id = doc["name"].rsplit("/", 1)[-1]
-            picks[doc_id] = {k: unwrap(v) for k, v in (doc.get("fields") or {}).items()}
-            picks[doc_id]["_updated"] = doc.get("updateTime")
-        page = res.get("nextPageToken")
-        if not page:
-            break
+
+    def dump(collection: str) -> dict:
+        base = f"https://firestore.googleapis.com/v1/projects/{cfg['projectId']}/databases/(default)/documents/{collection}"
+        out, page = {}, None
+        while True:
+            url = base + "?pageSize=1000" + (f"&pageToken={urllib.parse.quote(page)}" if page else "")
+            res = get_json(url, headers)
+            for doc in res.get("documents", []):
+                doc_id = doc["name"].rsplit("/", 1)[-1]
+                out[doc_id] = {k: unwrap(v) for k, v in (doc.get("fields") or {}).items()}
+                out[doc_id]["_updated"] = doc.get("updateTime")
+            page = res.get("nextPageToken")
+            if not page:
+                break
+        return out
+
+    picks = dump("picks")
+    wagers = dump("wagers")
     now = datetime.now(timezone.utc)
     stamp = now.astimezone(ZoneInfo("America/New_York")).strftime("%Y-%m-%d")
     OUT.mkdir(parents=True, exist_ok=True)
@@ -98,7 +103,11 @@ def main() -> int:
     text = json.dumps(body, indent=1, sort_keys=True) + "\n"
     (OUT / "picks-latest.json").write_text(text)
     (OUT / f"picks-{stamp}.json").write_text(text)
-    print(f"backed up {len(picks)} picks")
+    wbody = {"backedUpAt": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "count": len(wagers), "wagers": dict(sorted(wagers.items()))}
+    wtext = json.dumps(wbody, indent=1, sort_keys=True) + "\n"
+    (OUT / "wagers-latest.json").write_text(wtext)
+    (OUT / f"wagers-{stamp}.json").write_text(wtext)
+    print(f"backed up {len(picks)} picks and {len(wagers)} wagers")
     return 0
 
 
