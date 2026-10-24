@@ -66,17 +66,24 @@ def fetch(params: dict) -> list:
     return out
 
 
+SANE_MIN, SANE_MAX = -2000, 2000  # anything wilder than this is a stale or placeholder price, not a bettable market
+
+
 def pick_price(odd: dict):
-    """FanDuel's number if it is there, else the first fallback book, else the feed's consensus. Returns (book, odds, line)."""
+    """FanDuel's current number if it is there and available, else the first fallback book that is. Returns (book, odds, line)."""
     bb = odd.get("byBookmaker") or {}
     for book in [OFFICIAL_BOOK] + FALLBACK_BOOKS:
         e = bb.get(book)
-        if e and e.get("odds") is not None:
-            line = e.get("spread") if e.get("spread") is not None else e.get("overUnder")
-            return book, int(str(e["odds"]).replace("+", "")), (float(line) if line is not None else None)
-    if odd.get("bookOdds") is not None:
-        line = odd.get("bookSpread") if odd.get("bookSpread") is not None else odd.get("bookOverUnder")
-        return "consensus", int(str(odd["bookOdds"]).replace("+", "")), (float(line) if line is not None else None)
+        if not e or e.get("odds") is None or e.get("available") is False:
+            continue
+        try:
+            price = int(str(e["odds"]).replace("+", ""))
+        except ValueError:
+            continue
+        if price < SANE_MIN or price > SANE_MAX:
+            continue
+        line = e.get("spread") if e.get("spread") is not None else e.get("overUnder")
+        return book, price, (float(line) if line is not None else None)
     return None, None, None
 
 
