@@ -68316,7 +68316,7 @@
      "line": null,
      "name": "Moneyline",
      "oddID": "points-home-game-ml-home",
-     "odds": -400,
+     "odds": -390,
      "opposing": "points-away-game-ml-away",
      "period": "game",
      "player": null,
@@ -68333,7 +68333,7 @@
      "line": null,
      "name": "Moneyline",
      "oddID": "points-away-game-ml-away",
-     "odds": 315,
+     "odds": 310,
      "opposing": "points-home-game-ml-home",
      "period": "game",
      "player": null,
@@ -68344,104 +68344,108 @@
     {
      "alts": [
       [
+       197.5,
+       -2000
+      ],
+      [
        198.5,
-       -1700
+       -1600
       ],
       [
        199.5,
-       -1450
+       -1400
       ],
       [
        200.5,
-       -1200
+       -1100
       ],
       [
        201.5,
-       -1000
+       -950
       ],
       [
        202.5,
-       -850
+       -800
       ],
       [
        203.5,
-       -720
+       -700
       ],
       [
        204.5,
-       -620
+       -590
       ],
       [
        205.5,
-       -580
+       -550
       ],
       [
        206.5,
-       -480
+       -460
       ],
       [
        207.5,
-       -410
+       -400
       ],
       [
        208.5,
-       -380
+       -360
       ],
       [
        209.5,
-       -340
+       -320
       ],
       [
        210.5,
-       -300
+       -295
       ],
       [
        211.5,
-       -275
+       -265
       ],
       [
        212.5,
-       -260
+       -245
       ],
       [
        213.5,
-       -230
+       -220
       ],
       [
        214.5,
-       -200
+       -198
       ],
       [
        215.5,
-       -190
+       -182
       ],
       [
        216.5,
-       -176
+       -166
       ],
       [
        217.5,
-       -164
+       -158
       ],
       [
        218.5,
-       -146
+       -142
       ],
       [
        219.5,
-       -132
+       -130
       ],
       [
        220.5,
-       -120
+       -118
       ],
       [
        222.5,
-       -102
+       100
       ],
       [
        223.5,
-       108
+       110
       ],
       [
        224.5,
@@ -68457,7 +68461,7 @@
       ],
       [
        227.5,
-       150
+       152
       ],
       [
        228.5,
@@ -68465,11 +68469,11 @@
       ],
       [
        229.5,
-       174
+       176
       ],
       [
        230.5,
-       186
+       190
       ],
       [
        231.5,
@@ -68497,7 +68501,7 @@
       ],
       [
        237.5,
-       350
+       370
       ],
       [
        238.5,
@@ -68509,7 +68513,7 @@
       ],
       [
        240.5,
-       450
+       460
       ],
       [
        241.5,
@@ -68533,11 +68537,11 @@
       ],
       [
        246.5,
-       820
+       800
       ],
       [
        247.5,
-       900
+       880
       ],
       [
        248.5,
@@ -68545,7 +68549,7 @@
       ],
       [
        249.5,
-       1100
+       1000
       ],
       [
        250.5,
@@ -68565,11 +68569,11 @@
       ],
       [
        254.5,
-       1500
+       1600
       ],
       [
        255.5,
-       1600
+       1800
       ],
       [
        256.5,
@@ -68628,107 +68632,107 @@
       ],
       [
        197.5,
-       900
+       880
       ],
       [
        198.5,
-       780
+       750
       ],
       [
        199.5,
-       700
+       680
       ],
       [
        200.5,
-       630
+       600
       ],
       [
        201.5,
-       560
+       540
       ],
       [
        202.5,
-       500
+       480
       ],
       [
        203.5,
-       450
+       440
       ],
       [
        204.5,
-       400
+       390
       ],
       [
        205.5,
-       380
+       370
       ],
       [
        206.5,
-       330
+       320
       ],
       [
        207.5,
-       290
+       285
       ],
       [
        208.5,
-       275
+       260
       ],
       [
        209.5,
-       245
+       235
       ],
       [
        210.5,
-       225
+       220
       ],
       [
        211.5,
-       205
+       200
       ],
       [
        212.5,
-       196
+       186
       ],
       [
        213.5,
-       176
+       170
       ],
       [
        214.5,
-       160
+       158
       ],
       [
        215.5,
-       152
+       144
       ],
       [
        216.5,
-       142
+       134
       ],
       [
        217.5,
-       132
+       128
       ],
       [
        218.5,
-       118
+       116
       ],
       [
        219.5,
-       108
+       106
       ],
       [
        220.5,
-       -102
+       -104
       ],
       [
        222.5,
-       -120
+       -122
       ],
       [
        223.5,
-       -132
+       -136
       ],
       [
        224.5,
@@ -68744,7 +68748,7 @@
       ],
       [
        227.5,
-       -188
+       -190
       ],
       [
        228.5,
@@ -68756,7 +68760,7 @@
       ],
       [
        230.5,
-       -245
+       -250
       ],
       [
        231.5,
@@ -68784,7 +68788,7 @@
       ],
       [
        237.5,
-       -520
+       -550
       ],
       [
        238.5,
@@ -68816,11 +68820,11 @@
       ],
       [
        245.5,
-       -1600
+       -1500
       ],
       [
        246.5,
-       -1900
+       -1800
       ]
      ],
      "available": true,
@@ -68859,7 +68863,7 @@
       ],
       [
        -12.5,
-       1200
+       1100
       ],
       [
        -11.5,
@@ -68867,67 +68871,67 @@
       ],
       [
        -10.5,
-       980
+       920
       ],
       [
        -9.5,
-       870
+       830
       ],
       [
        -8.5,
-       790
+       760
       ],
       [
        -7.5,
-       670
+       630
       ],
       [
        -6.5,
-       540
+       520
       ],
       [
        -5.5,
-       480
+       450
       ],
       [
        -4.5,
-       420
+       400
       ],
       [
        -3.5,
-       360
+       350
       ],
       [
        -2.5,
-       330
+       310
       ],
       [
        -1.5,
-       280
+       275
       ],
       [
        1.5,
-       240
+       235
       ],
       [
        2.5,
-       220
+       215
       ],
       [
        3.5,
-       200
+       196
       ],
       [
        4.5,
-       176
+       172
       ],
       [
        5.5,
-       154
+       150
       ],
       [
        6.5,
-       140
+       138
       ],
       [
        7.5,
@@ -68935,7 +68939,7 @@
       ],
       [
        8.5,
-       104
+       106
       ],
       [
        10.5,
@@ -68943,15 +68947,15 @@
       ],
       [
        11.5,
-       -142
+       -146
       ],
       [
        12.5,
-       -164
+       -166
       ],
       [
        13.5,
-       -182
+       -186
       ],
       [
        14.5,
@@ -68959,11 +68963,11 @@
       ],
       [
        15.5,
-       -240
+       -245
       ],
       [
        16.5,
-       -275
+       -280
       ],
       [
        17.5,
@@ -68971,7 +68975,7 @@
       ],
       [
        18.5,
-       -335
+       -350
       ],
       [
        19.5,
@@ -68979,7 +68983,7 @@
       ],
       [
        20.5,
-       -430
+       -450
       ],
       [
        21.5,
@@ -68991,27 +68995,27 @@
       ],
       [
        23.5,
-       -700
+       -720
       ],
       [
        24.5,
-       -850
+       -900
       ],
       [
        25.5,
-       -950
+       -1000
       ],
       [
        26.5,
-       -1200
+       -1350
       ],
       [
        27.5,
-       -1450
+       -1600
       ],
       [
        28.5,
-       -1800
+       -2000
       ]
      ],
      "available": true,
@@ -69034,15 +69038,15 @@
      "alts": [
       [
        -36.5,
-       1800
+       2000
       ],
       [
        -35.5,
-       1400
+       1800
       ],
       [
        -34.5,
-       1300
+       1400
       ],
       [
        -33.5,
@@ -69050,7 +69054,7 @@
       ],
       [
        -32.5,
-       1100
+       1200
       ],
       [
        -31.5,
@@ -69066,27 +69070,27 @@
       ],
       [
        -28.5,
-       790
+       830
       ],
       [
        -27.5,
-       700
+       760
       ],
       [
        -26.5,
-       630
+       670
       ],
       [
        -25.5,
-       540
+       560
       ],
       [
        -24.5,
-       500
+       520
       ],
       [
        -23.5,
-       440
+       450
       ],
       [
        -22.5,
@@ -69094,11 +69098,11 @@
       ],
       [
        -21.5,
-       350
+       360
       ],
       [
        -20.5,
-       300
+       310
       ],
       [
        -19.5,
@@ -69106,7 +69110,7 @@
       ],
       [
        -18.5,
-       245
+       255
       ],
       [
        -17.5,
@@ -69118,7 +69122,7 @@
       ],
       [
        -15.5,
-       182
+       186
       ],
       [
        -14.5,
@@ -69126,15 +69130,15 @@
       ],
       [
        -13.5,
-       142
+       144
       ],
       [
        -12.5,
-       130
+       132
       ],
       [
        -11.5,
-       116
+       118
       ],
       [
        -10.5,
@@ -69142,7 +69146,7 @@
       ],
       [
        -8.5,
-       -128
+       -130
       ],
       [
        -7.5,
@@ -69150,19 +69154,19 @@
       ],
       [
        -6.5,
-       -180
+       -178
       ],
       [
        -5.5,
-       -200
+       -194
       ],
       [
        -4.5,
-       -230
+       -225
       ],
       [
        -3.5,
-       -265
+       -260
       ],
       [
        -2.5,
@@ -69170,39 +69174,43 @@
       ],
       [
        -1.5,
-       -330
+       -320
       ],
       [
        1.5,
-       -390
+       -385
       ],
       [
        2.5,
-       -480
+       -450
       ],
       [
        3.5,
-       -550
+       -520
       ],
       [
        4.5,
-       -650
+       -620
       ],
       [
        5.5,
-       -800
+       -720
       ],
       [
        6.5,
-       -950
+       -900
       ],
       [
        7.5,
-       -1350
+       -1100
       ],
       [
        8.5,
-       -1800
+       -1600
+      ],
+      [
+       9.5,
+       -2000
       ]
      ],
      "available": true,
@@ -69317,15 +69325,15 @@
       ],
       [
        96.5,
-       -440
+       -430
       ],
       [
        97.5,
-       -370
+       -360
       ],
       [
        98.5,
-       -310
+       -300
       ],
       [
        99.5,
@@ -69337,31 +69345,31 @@
       ],
       [
        101.5,
-       -198
+       -196
       ],
       [
        102.5,
-       -176
+       -174
       ],
       [
        103.5,
-       -156
+       -150
       ],
       [
        104.5,
-       -136
+       -132
       ],
       [
-       105.5,
-       -118
+       106.5,
+       -104
       ],
       [
        107.5,
-       110
+       112
       ],
       [
        108.5,
-       126
+       128
       ],
       [
        109.5,
@@ -69373,7 +69381,7 @@
       ],
       [
        111.5,
-       176
+       182
       ],
       [
        112.5,
@@ -69385,35 +69393,35 @@
       ],
       [
        114.5,
-       270
+       265
       ],
       [
        115.5,
-       310
+       300
       ],
       [
        116.5,
-       370
+       350
       ],
       [
        117.5,
-       430
+       400
       ],
       [
        118.5,
-       500
+       480
       ],
       [
        119.5,
-       600
+       560
       ],
       [
        120.5,
-       680
+       650
       ],
       [
        121.5,
-       800
+       780
       ],
       [
        122.5,
@@ -69425,7 +69433,7 @@
       ],
       [
        124.5,
-       1200
+       1120
       ],
       [
        125.5,
@@ -69437,7 +69445,7 @@
       ],
       [
        127.5,
-       2000
+       1800
       ]
      ],
      "available": true,
@@ -69445,10 +69453,10 @@
      "book": "fanduel",
      "entity": "away",
      "kind": "game",
-     "line": 106.5,
+     "line": 105.5,
      "name": "Total",
      "oddID": "points-away-game-ou-over",
-     "odds": -104,
+     "odds": -118,
      "opposing": "points-away-game-ou-under",
      "period": "game",
      "player": null,
@@ -69460,11 +69468,11 @@
      "alts": [
       [
        85.5,
-       1800
+       2000
       ],
       [
        86.5,
-       1500
+       1600
       ],
       [
        87.5,
@@ -69472,11 +69480,11 @@
       ],
       [
        88.5,
-       1100
+       1120
       ],
       [
        89.5,
-       1000
+       940
       ],
       [
        90.5,
@@ -69504,19 +69512,19 @@
       ],
       [
        96.5,
-       310
+       300
       ],
       [
        97.5,
-       265
+       260
       ],
       [
        98.5,
-       230
+       225
       ],
       [
        99.5,
-       205
+       200
       ],
       [
        100.5,
@@ -69524,31 +69532,31 @@
       ],
       [
        101.5,
-       158
+       156
       ],
       [
        102.5,
-       142
+       140
       ],
       [
        103.5,
-       126
+       122
       ],
       [
        104.5,
-       110
+       108
       ],
       [
-       105.5,
-       -104
+       106.5,
+       -118
       ],
       [
        107.5,
-       -136
+       -138
       ],
       [
        108.5,
-       -156
+       -158
       ],
       [
        109.5,
@@ -69560,7 +69568,7 @@
       ],
       [
        111.5,
-       -230
+       -240
       ],
       [
        112.5,
@@ -69572,35 +69580,35 @@
       ],
       [
        114.5,
-       -380
+       -370
       ],
       [
        115.5,
-       -440
+       -430
       ],
       [
        116.5,
-       -550
+       -520
       ],
       [
        117.5,
-       -670
+       -620
       ],
       [
        118.5,
-       -850
+       -800
       ],
       [
        119.5,
-       -1100
+       -1000
       ],
       [
        120.5,
-       -1400
+       -1300
       ],
       [
        121.5,
-       -1800
+       -1700
       ]
      ],
      "available": true,
@@ -69608,10 +69616,10 @@
      "book": "fanduel",
      "entity": "away",
      "kind": "game",
-     "line": 106.5,
+     "line": 105.5,
      "name": "Total",
      "oddID": "points-away-game-ou-under",
-     "odds": -118,
+     "odds": -104,
      "opposing": "points-away-game-ou-over",
      "period": "game",
      "player": null,
@@ -69627,19 +69635,19 @@
       ],
       [
        101.5,
-       -1500
+       -1450
       ],
       [
        102.5,
-       -1200
+       -1100
       ],
       [
        103.5,
-       -900
+       -850
       ],
       [
        104.5,
-       -700
+       -650
       ],
       [
        105.5,
@@ -69647,11 +69655,11 @@
       ],
       [
        106.5,
-       -460
+       -430
       ],
       [
        107.5,
-       -380
+       -370
       ],
       [
        108.5,
@@ -69659,35 +69667,35 @@
       ],
       [
        109.5,
-       -275
+       -265
       ],
       [
        110.5,
-       -235
+       -230
       ],
       [
        111.5,
-       -198
+       -196
       ],
       [
        112.5,
-       -176
+       -172
       ],
       [
        113.5,
-       -154
+       -148
       ],
       [
        114.5,
-       -130
+       -128
       ],
       [
        116.5,
-       102
+       104
       ],
       [
        117.5,
-       116
+       118
       ],
       [
        118.5,
@@ -69695,23 +69703,23 @@
       ],
       [
        119.5,
-       146
+       150
       ],
       [
        120.5,
-       162
+       164
       ],
       [
        121.5,
-       186
+       190
       ],
       [
        122.5,
-       210
+       220
       ],
       [
        123.5,
-       245
+       255
       ],
       [
        124.5,
@@ -69723,7 +69731,7 @@
       ],
       [
        126.5,
-       390
+       400
       ],
       [
        127.5,
@@ -69731,23 +69739,23 @@
       ],
       [
        128.5,
-       540
+       580
       ],
       [
        129.5,
-       630
+       700
       ],
       [
        130.5,
-       750
+       820
       ],
       [
        131.5,
-       880
+       940
       ],
       [
        132.5,
-       1000
+       1100
       ],
       [
        133.5,
@@ -69755,11 +69763,11 @@
       ],
       [
        134.5,
-       1300
+       1400
       ],
       [
        135.5,
-       1500
+       1600
       ],
       [
        136.5,
@@ -69774,7 +69782,7 @@
      "line": 115.5,
      "name": "Total",
      "oddID": "points-home-game-ou-over",
-     "odds": -114,
+     "odds": -112,
      "opposing": "points-home-game-ou-under",
      "period": "game",
      "player": null,
@@ -69786,11 +69794,11 @@
      "alts": [
       [
        95.5,
-       2000
+       1800
       ],
       [
        96.5,
-       1600
+       1400
       ],
       [
        97.5,
@@ -69802,7 +69810,7 @@
       ],
       [
        99.5,
-       1000
+       940
       ],
       [
        100.5,
@@ -69810,19 +69818,19 @@
       ],
       [
        101.5,
-       720
+       700
       ],
       [
        102.5,
-       630
+       600
       ],
       [
        103.5,
-       520
+       500
       ],
       [
        104.5,
-       440
+       420
       ],
       [
        105.5,
@@ -69830,11 +69838,11 @@
       ],
       [
        106.5,
-       320
+       300
       ],
       [
        107.5,
-       270
+       265
       ],
       [
        108.5,
@@ -69842,35 +69850,35 @@
       ],
       [
        109.5,
-       205
+       200
       ],
       [
        110.5,
-       178
+       176
       ],
       [
        111.5,
-       158
+       156
       ],
       [
        112.5,
-       142
+       138
       ],
       [
        113.5,
-       124
+       120
       ],
       [
        114.5,
-       106
+       104
       ],
       [
        116.5,
-       -126
+       -128
       ],
       [
        117.5,
-       -142
+       -146
       ],
       [
        118.5,
@@ -69878,27 +69886,27 @@
       ],
       [
        119.5,
-       -182
+       -188
       ],
       [
        120.5,
-       -205
+       -210
       ],
       [
        121.5,
-       -245
+       -250
       ],
       [
        122.5,
-       -280
+       -295
       ],
       [
        123.5,
-       -340
+       -350
       ],
       [
        124.5,
-       -390
+       -400
       ],
       [
        125.5,
@@ -69906,7 +69914,7 @@
       ],
       [
        126.5,
-       -590
+       -620
       ],
       [
        127.5,
@@ -69914,15 +69922,15 @@
       ],
       [
        128.5,
-       -950
+       -1050
       ],
       [
        129.5,
-       -1200
+       -1450
       ],
       [
        130.5,
-       -1600
+       -1900
       ]
      ],
      "available": true,
@@ -69933,7 +69941,7 @@
      "line": 115.5,
      "name": "Total",
      "oddID": "points-home-game-ou-under",
-     "odds": -106,
+     "odds": -110,
      "opposing": "points-home-game-ou-over",
      "period": "game",
      "player": null,
@@ -70120,7 +70128,7 @@
      "line": null,
      "name": "Khaman Maluach First basket",
      "oddID": "firstBasket-KHAMAN_MALUACH_1_NBA-game-yn-yes",
-     "odds": 800,
+     "odds": 900,
      "opposing": "firstBasket-KHAMAN_MALUACH_1_NBA-game-yn-no",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -70166,19 +70174,27 @@
      "alts": [
       [
        1.5,
-       -520
+       -470
       ],
       [
        3.5,
-       138
+       148
+      ],
+      [
+       4.5,
+       310
       ],
       [
        5.5,
-       540
+       630
+      ],
+      [
+       6.5,
+       1000
       ],
       [
        7.5,
-       1400
+       1700
       ]
      ],
      "available": true,
@@ -70189,7 +70205,7 @@
      "line": 2.5,
      "name": "Collin Gillespie Assists",
      "oddID": "assists-COLLIN_GILLESPIE_1_NBA-game-ou-over",
-     "odds": -172,
+     "odds": -158,
      "opposing": "assists-COLLIN_GILLESPIE_1_NBA-game-ou-under",
      "period": "game",
      "player": "COLLIN_GILLESPIE_1_NBA",
@@ -70206,7 +70222,7 @@
      "line": 2.5,
      "name": "Collin Gillespie Assists",
      "oddID": "assists-COLLIN_GILLESPIE_1_NBA-game-ou-under",
-     "odds": 134,
+     "odds": 124,
      "opposing": "assists-COLLIN_GILLESPIE_1_NBA-game-ou-over",
      "period": "game",
      "player": "COLLIN_GILLESPIE_1_NBA",
@@ -70217,16 +70233,32 @@
     {
      "alts": [
       [
+       2.5,
+       -2000
+      ],
+      [
        3.5,
        -500
       ],
       [
+       4.5,
+       -225
+      ],
+      [
+       6.5,
+       188
+      ],
+      [
        7.5,
-       350
+       320
+      ],
+      [
+       8.5,
+       630
       ],
       [
        9.5,
-       900
+       880
       ]
      ],
      "available": true,
@@ -70237,7 +70269,7 @@
      "line": 5.5,
      "name": "Devin Booker Assists",
      "oddID": "assists-DEVIN_BOOKER_1_NBA-game-ou-over",
-     "odds": -104,
+     "odds": -102,
      "opposing": "assists-DEVIN_BOOKER_1_NBA-game-ou-under",
      "period": "game",
      "player": "DEVIN_BOOKER_1_NBA",
@@ -70254,7 +70286,7 @@
      "line": 5.5,
      "name": "Devin Booker Assists",
      "oddID": "assists-DEVIN_BOOKER_1_NBA-game-ou-under",
-     "odds": -122,
+     "odds": -125,
      "opposing": "assists-DEVIN_BOOKER_1_NBA-game-ou-over",
      "period": "game",
      "player": "DEVIN_BOOKER_1_NBA",
@@ -70277,7 +70309,7 @@
      "line": 1.5,
      "name": "Dillon Brooks Assists",
      "oddID": "assists-DILLON_BROOKS_1_NBA-game-ou-over",
-     "odds": -148,
+     "odds": -156,
      "opposing": "assists-DILLON_BROOKS_1_NBA-game-ou-under",
      "period": "game",
      "player": "DILLON_BROOKS_1_NBA",
@@ -70294,7 +70326,7 @@
      "line": 1.5,
      "name": "Dillon Brooks Assists",
      "oddID": "assists-DILLON_BROOKS_1_NBA-game-ou-under",
-     "odds": 115,
+     "odds": -105,
      "opposing": "assists-DILLON_BROOKS_1_NBA-game-ou-over",
      "period": "game",
      "player": "DILLON_BROOKS_1_NBA",
@@ -70306,11 +70338,23 @@
      "alts": [
       [
        1.5,
-       -1450
+       -1600
+      ],
+      [
+       2.5,
+       -400
+      ],
+      [
+       4.5,
+       162
       ],
       [
        5.5,
        320
+      ],
+      [
+       6.5,
+       630
       ],
       [
        7.5,
@@ -70325,7 +70369,7 @@
      "line": 3.5,
      "name": "Jalen Green Assists",
      "oddID": "assists-JALEN_GREEN_1_NBA-game-ou-over",
-     "odds": -146,
+     "odds": -142,
      "opposing": "assists-JALEN_GREEN_1_NBA-game-ou-under",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
@@ -70342,7 +70386,7 @@
      "line": 3.5,
      "name": "Jalen Green Assists",
      "oddID": "assists-JALEN_GREEN_1_NBA-game-ou-under",
-     "odds": 114,
+     "odds": 112,
      "opposing": "assists-JALEN_GREEN_1_NBA-game-ou-over",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
@@ -70365,7 +70409,7 @@
      "line": 1.5,
      "name": "Khaman Maluach Assists",
      "oddID": "assists-KHAMAN_MALUACH_1_NBA-game-ou-over",
-     "odds": 164,
+     "odds": 162,
      "opposing": "assists-KHAMAN_MALUACH_1_NBA-game-ou-under",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -70382,7 +70426,7 @@
      "line": 1.5,
      "name": "Khaman Maluach Assists",
      "oddID": "assists-KHAMAN_MALUACH_1_NBA-game-ou-under",
-     "odds": -240,
+     "odds": -225,
      "opposing": "assists-KHAMAN_MALUACH_1_NBA-game-ou-over",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -70394,15 +70438,19 @@
      "alts": [
       [
        1.5,
-       -400
+       -420
       ],
       [
        3.5,
-       200
+       210
+      ],
+      [
+       4.5,
+       450
       ],
       [
        5.5,
-       1000
+       920
       ]
      ],
      "available": true,
@@ -70464,7 +70512,7 @@
      "line": null,
      "name": "Devin Booker Double-double",
      "oddID": "doubleDouble-DEVIN_BOOKER_1_NBA-game-yn-yes",
-     "odds": 750,
+     "odds": 800,
      "opposing": "doubleDouble-DEVIN_BOOKER_1_NBA-game-yn-no",
      "period": "game",
      "player": "DEVIN_BOOKER_1_NBA",
@@ -70515,7 +70563,7 @@
      "line": null,
      "name": "Khaman Maluach Double-double",
      "oddID": "doubleDouble-KHAMAN_MALUACH_1_NBA-game-yn-yes",
-     "odds": 265,
+     "odds": 270,
      "opposing": "doubleDouble-KHAMAN_MALUACH_1_NBA-game-yn-no",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -70549,7 +70597,7 @@
      "line": null,
      "name": "Miles Bridges Double-double",
      "oddID": "doubleDouble-MILES_BRIDGES_1_NBA-game-yn-yes",
-     "odds": 700,
+     "odds": 750,
      "opposing": "doubleDouble-MILES_BRIDGES_1_NBA-game-yn-no",
      "period": "game",
      "player": "MILES_BRIDGES_1_NBA",
@@ -70560,20 +70608,72 @@
     {
      "alts": [
       [
+       5.5,
+       -1400
+      ],
+      [
+       6.5,
+       -700
+      ],
+      [
+       7.5,
+       -470
+      ],
+      [
+       8.5,
+       -320
+      ],
+      [
        9.5,
-       -270
+       -240
+      ],
+      [
+       10.5,
+       -172
+      ],
+      [
+       12.5,
+       106
+      ],
+      [
+       13.5,
+       142
       ],
       [
        14.5,
-       145
+       170
+      ],
+      [
+       15.5,
+       230
+      ],
+      [
+       16.5,
+       300
+      ],
+      [
+       17.5,
+       370
+      ],
+      [
+       18.5,
+       450
       ],
       [
        19.5,
-       550
+       580
       ],
       [
-       24.5,
-       1900
+       20.5,
+       700
+      ],
+      [
+       21.5,
+       880
+      ],
+      [
+       22.5,
+       1000
       ]
      ],
      "available": true,
@@ -70581,10 +70681,10 @@
      "book": "fanduel",
      "entity": "COLLIN_GILLESPIE_1_NBA",
      "kind": "prop",
-     "line": 12.5,
+     "line": 11.5,
      "name": "Collin Gillespie Pts + Ast",
      "oddID": "points+assists-COLLIN_GILLESPIE_1_NBA-game-ou-over",
-     "odds": -108,
+     "odds": -128,
      "opposing": "points+assists-COLLIN_GILLESPIE_1_NBA-game-ou-under",
      "period": "game",
      "player": "COLLIN_GILLESPIE_1_NBA",
@@ -70593,15 +70693,21 @@
      "team": "PHX"
     },
     {
+     "alts": [
+      [
+       12.5,
+       -130
+      ]
+     ],
      "available": true,
      "betType": "ou",
      "book": "fanduel",
      "entity": "COLLIN_GILLESPIE_1_NBA",
      "kind": "prop",
-     "line": 12.5,
+     "line": 11.5,
      "name": "Collin Gillespie Pts + Ast",
      "oddID": "points+assists-COLLIN_GILLESPIE_1_NBA-game-ou-under",
-     "odds": -122,
+     "odds": -104,
      "opposing": "points+assists-COLLIN_GILLESPIE_1_NBA-game-ou-over",
      "period": "game",
      "player": "COLLIN_GILLESPIE_1_NBA",
@@ -70613,23 +70719,103 @@
      "alts": [
       [
        19.5,
-       -1500
+       -2000
+      ],
+      [
+       20.5,
+       -1400
+      ],
+      [
+       21.5,
+       -900
+      ],
+      [
+       22.5,
+       -670
+      ],
+      [
+       23.5,
+       -490
       ],
       [
        24.5,
-       -370
+       -360
+      ],
+      [
+       25.5,
+       -290
+      ],
+      [
+       26.5,
+       -235
+      ],
+      [
+       27.5,
+       -186
+      ],
+      [
+       28.5,
+       -146
+      ],
+      [
+       30.5,
+       104
+      ],
+      [
+       31.5,
+       128
+      ],
+      [
+       32.5,
+       158
+      ],
+      [
+       33.5,
+       194
       ],
       [
        34.5,
-       210
+       225
+      ],
+      [
+       35.5,
+       280
+      ],
+      [
+       36.5,
+       320
+      ],
+      [
+       37.5,
+       390
+      ],
+      [
+       38.5,
+       470
       ],
       [
        39.5,
-       600
+       580
+      ],
+      [
+       40.5,
+       640
+      ],
+      [
+       41.5,
+       800
+      ],
+      [
+       42.5,
+       880
+      ],
+      [
+       43.5,
+       1000
       ],
       [
        44.5,
-       1700
+       1600
       ]
      ],
      "available": true,
@@ -70705,7 +70891,7 @@
      "line": 18.5,
      "name": "Dillon Brooks Pts + Ast",
      "oddID": "points+assists-DILLON_BROOKS_1_NBA-game-ou-under",
-     "odds": -110,
+     "odds": -120,
      "opposing": "points+assists-DILLON_BROOKS_1_NBA-game-ou-over",
      "period": "game",
      "player": "DILLON_BROOKS_1_NBA",
@@ -70716,24 +70902,88 @@
     {
      "alts": [
       [
+       13.5,
+       -2000
+      ],
+      [
        14.5,
-       -1000
+       -1200
+      ],
+      [
+       15.5,
+       -800
+      ],
+      [
+       16.5,
+       -600
+      ],
+      [
+       17.5,
+       -420
+      ],
+      [
+       18.5,
+       -320
       ],
       [
        19.5,
-       -260
+       -250
+      ],
+      [
+       20.5,
+       -200
+      ],
+      [
+       21.5,
+       -158
+      ],
+      [
+       23.5,
+       100
       ],
       [
        24.5,
-       110
+       128
+      ],
+      [
+       25.5,
+       162
+      ],
+      [
+       26.5,
+       194
+      ],
+      [
+       27.5,
+       230
+      ],
+      [
+       28.5,
+       280
       ],
       [
        29.5,
-       330
+       350
+      ],
+      [
+       30.5,
+       410
+      ],
+      [
+       31.5,
+       490
+      ],
+      [
+       32.5,
+       580
+      ],
+      [
+       33.5,
+       700
       ],
       [
        34.5,
-       950
+       880
       ]
      ],
      "available": true,
@@ -70744,7 +70994,7 @@
      "line": 22.5,
      "name": "Jalen Green Pts + Ast",
      "oddID": "points+assists-JALEN_GREEN_1_NBA-game-ou-over",
-     "odds": -128,
+     "odds": -130,
      "opposing": "points+assists-JALEN_GREEN_1_NBA-game-ou-under",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
@@ -70761,7 +71011,7 @@
      "line": 22.5,
      "name": "Jalen Green Pts + Ast",
      "oddID": "points+assists-JALEN_GREEN_1_NBA-game-ou-under",
-     "odds": -104,
+     "odds": -102,
      "opposing": "points+assists-JALEN_GREEN_1_NBA-game-ou-over",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
@@ -70770,25 +71020,15 @@
      "team": "PHX"
     },
     {
-     "alts": [
-      [
-       14.5,
-       330
-      ],
-      [
-       19.5,
-       1400
-      ]
-     ],
      "available": true,
      "betType": "ou",
-     "book": "fanduel",
+     "book": "caesars",
      "entity": "KHAMAN_MALUACH_1_NBA",
      "kind": "prop",
-     "line": 9.5,
+     "line": 10.5,
      "name": "Khaman Maluach Pts + Ast",
      "oddID": "points+assists-KHAMAN_MALUACH_1_NBA-game-ou-over",
-     "odds": -150,
+     "odds": -105,
      "opposing": "points+assists-KHAMAN_MALUACH_1_NBA-game-ou-under",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -70816,24 +71056,80 @@
     {
      "alts": [
       [
-       9.5,
-       -2000
+       10.5,
+       -1400
+      ],
+      [
+       11.5,
+       -750
+      ],
+      [
+       12.5,
+       -550
+      ],
+      [
+       13.5,
+       -360
       ],
       [
        14.5,
-       -280
+       -270
+      ],
+      [
+       15.5,
+       -200
+      ],
+      [
+       16.5,
+       -152
+      ],
+      [
+       18.5,
+       114
       ],
       [
        19.5,
-       130
+       146
+      ],
+      [
+       20.5,
+       182
+      ],
+      [
+       21.5,
+       225
+      ],
+      [
+       22.5,
+       290
+      ],
+      [
+       23.5,
+       360
       ],
       [
        24.5,
        450
       ],
       [
+       25.5,
+       580
+      ],
+      [
+       26.5,
+       700
+      ],
+      [
+       27.5,
+       880
+      ],
+      [
+       28.5,
+       1000
+      ],
+      [
        29.5,
-       1500
+       1600
       ]
      ],
      "available": true,
@@ -70844,7 +71140,7 @@
      "line": 17.5,
      "name": "Miles Bridges Pts + Ast",
      "oddID": "points+assists-MILES_BRIDGES_1_NBA-game-ou-over",
-     "odds": -118,
+     "odds": -114,
      "opposing": "points+assists-MILES_BRIDGES_1_NBA-game-ou-under",
      "period": "game",
      "player": "MILES_BRIDGES_1_NBA",
@@ -70861,7 +71157,7 @@
      "line": 17.5,
      "name": "Miles Bridges Pts + Ast",
      "oddID": "points+assists-MILES_BRIDGES_1_NBA-game-ou-under",
-     "odds": -110,
+     "odds": -114,
      "opposing": "points+assists-MILES_BRIDGES_1_NBA-game-ou-over",
      "period": "game",
      "player": "MILES_BRIDGES_1_NBA",
@@ -70872,16 +71168,68 @@
     {
      "alts": [
       [
+       7.5,
+       -1450
+      ],
+      [
+       8.5,
+       -900
+      ],
+      [
        9.5,
-       -650
+       -530
+      ],
+      [
+       10.5,
+       -400
+      ],
+      [
+       11.5,
+       -300
+      ],
+      [
+       12.5,
+       -225
+      ],
+      [
+       13.5,
+       -172
       ],
       [
        14.5,
-       -142
+       -128
+      ],
+      [
+       16.5,
+       138
+      ],
+      [
+       17.5,
+       174
+      ],
+      [
+       18.5,
+       220
       ],
       [
        19.5,
-       235
+       270
+      ],
+      [
+       20.5,
+       320
+      ],
+      [
+       21.5,
+       400
+      ],
+      [
+       22.5,
+       520
+      ],
+      [
+       23.5,
+       630
       ],
       [
        24.5,
@@ -70900,7 +71248,7 @@
      "line": 15.5,
      "name": "Collin Gillespie Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-COLLIN_GILLESPIE_1_NBA-game-ou-over",
-     "odds": -111,
+     "odds": 106,
      "opposing": "points+rebounds+assists-COLLIN_GILLESPIE_1_NBA-game-ou-under",
      "period": "game",
      "player": "COLLIN_GILLESPIE_1_NBA",
@@ -70909,6 +71257,12 @@
      "team": "PHX"
     },
     {
+     "alts": [
+      [
+       14.5,
+       -102
+      ]
+     ],
      "available": true,
      "betType": "ou",
      "book": "fanduel",
@@ -70917,7 +71271,7 @@
      "line": 15.5,
      "name": "Collin Gillespie Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-COLLIN_GILLESPIE_1_NBA-game-ou-under",
-     "odds": -115,
+     "odds": -122,
      "opposing": "points+rebounds+assists-COLLIN_GILLESPIE_1_NBA-game-ou-over",
      "period": "game",
      "player": "COLLIN_GILLESPIE_1_NBA",
@@ -70928,28 +71282,104 @@
     {
      "alts": [
       [
+       23.5,
+       -1450
+      ],
+      [
        24.5,
-       -1000
+       -1100
+      ],
+      [
+       25.5,
+       -700
+      ],
+      [
+       26.5,
+       -580
+      ],
+      [
+       27.5,
+       -450
+      ],
+      [
+       28.5,
+       -340
       ],
       [
        29.5,
        -265
       ],
       [
+       30.5,
+       -225
+      ],
+      [
+       31.5,
+       -182
+      ],
+      [
+       32.5,
+       -146
+      ],
+      [
        34.5,
        104
       ],
       [
+       35.5,
+       122
+      ],
+      [
+       36.5,
+       152
+      ],
+      [
+       37.5,
+       182
+      ],
+      [
+       38.5,
+       210
+      ],
+      [
        39.5,
-       255
+       250
+      ],
+      [
+       40.5,
+       300
+      ],
+      [
+       41.5,
+       360
+      ],
+      [
+       42.5,
+       410
+      ],
+      [
+       43.5,
+       490
       ],
       [
        44.5,
-       600
+       580
+      ],
+      [
+       45.5,
+       680
+      ],
+      [
+       46.5,
+       800
+      ],
+      [
+       47.5,
+       920
       ],
       [
        49.5,
-       1400
+       1300
       ]
      ],
      "available": true,
@@ -70988,20 +71418,80 @@
     {
      "alts": [
       [
+       13.5,
+       -1600
+      ],
+      [
        14.5,
        -1000
       ],
       [
+       15.5,
+       -670
+      ],
+      [
+       16.5,
+       -490
+      ],
+      [
+       17.5,
+       -380
+      ],
+      [
+       18.5,
+       -280
+      ],
+      [
        19.5,
-       -220
+       -225
+      ],
+      [
+       20.5,
+       -178
+      ],
+      [
+       21.5,
+       -138
+      ],
+      [
+       23.5,
+       116
       ],
       [
        24.5,
        148
       ],
       [
+       25.5,
+       182
+      ],
+      [
+       26.5,
+       225
+      ],
+      [
+       27.5,
+       280
+      ],
+      [
+       28.5,
+       350
+      ],
+      [
        29.5,
-       430
+       420
+      ],
+      [
+       30.5,
+       490
+      ],
+      [
+       31.5,
+       630
+      ],
+      [
+       32.5,
+       750
       ],
       [
        34.5,
@@ -71016,7 +71506,7 @@
      "line": 22.5,
      "name": "Dillon Brooks Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-DILLON_BROOKS_1_NBA-game-ou-over",
-     "odds": -104,
+     "odds": -106,
      "opposing": "points+rebounds+assists-DILLON_BROOKS_1_NBA-game-ou-under",
      "period": "game",
      "player": "DILLON_BROOKS_1_NBA",
@@ -71044,24 +71534,96 @@
     {
      "alts": [
       [
+       17.5,
+       -1450
+      ],
+      [
+       18.5,
+       -1000
+      ],
+      [
        19.5,
-       -670
+       -700
+      ],
+      [
+       20.5,
+       -550
+      ],
+      [
+       21.5,
+       -420
+      ],
+      [
+       22.5,
+       -320
+      ],
+      [
+       23.5,
+       -260
       ],
       [
        24.5,
-       -200
+       -205
+      ],
+      [
+       25.5,
+       -162
+      ],
+      [
+       26.5,
+       -132
+      ],
+      [
+       28.5,
+       114
       ],
       [
        29.5,
-       136
+       142
+      ],
+      [
+       30.5,
+       172
+      ],
+      [
+       31.5,
+       205
+      ],
+      [
+       32.5,
+       240
+      ],
+      [
+       33.5,
+       290
       ],
       [
        34.5,
        350
       ],
       [
+       35.5,
+       400
+      ],
+      [
+       36.5,
+       490
+      ],
+      [
+       37.5,
+       580
+      ],
+      [
+       38.5,
+       680
+      ],
+      [
        39.5,
-       830
+       800
+      ],
+      [
+       40.5,
+       920
       ],
       [
        44.5,
@@ -71076,7 +71638,7 @@
      "line": 27.5,
      "name": "Jalen Green Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-JALEN_GREEN_1_NBA-game-ou-over",
-     "odds": -111,
+     "odds": -108,
      "opposing": "points+rebounds+assists-JALEN_GREEN_1_NBA-game-ou-under",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
@@ -71093,7 +71655,7 @@
      "line": 27.5,
      "name": "Jalen Green Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-JALEN_GREEN_1_NBA-game-ou-under",
-     "odds": -115,
+     "odds": -120,
      "opposing": "points+rebounds+assists-JALEN_GREEN_1_NBA-game-ou-over",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
@@ -71104,35 +71666,91 @@
     {
      "alts": [
       [
-       9.5,
-       -1740
+       11.5,
+       -1600
+      ],
+      [
+       12.5,
+       -1000
+      ],
+      [
+       13.5,
+       -650
       ],
       [
        14.5,
-       -375
+       -430
+      ],
+      [
+       15.5,
+       -320
+      ],
+      [
+       16.5,
+       -245
+      ],
+      [
+       17.5,
+       -188
+      ],
+      [
+       18.5,
+       -146
+      ],
+      [
+       20.5,
+       114
+      ],
+      [
+       21.5,
+       144
+      ],
+      [
+       22.5,
+       178
+      ],
+      [
+       23.5,
+       220
       ],
       [
        24.5,
-       247
+       270
+      ],
+      [
+       25.5,
+       320
+      ],
+      [
+       26.5,
+       400
+      ],
+      [
+       27.5,
+       490
+      ],
+      [
+       28.5,
+       580
       ],
       [
        29.5,
-       700
+       750
       ],
       [
        34.5,
-       1740
+       1700
       ]
      ],
      "available": true,
      "betType": "ou",
-     "book": "draftkings",
+     "book": "fanduel",
      "entity": "KHAMAN_MALUACH_1_NBA",
      "kind": "prop",
      "line": 19.5,
      "name": "Khaman Maluach Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-KHAMAN_MALUACH_1_NBA-game-ou-over",
-     "odds": -117,
+     "odds": -114,
      "opposing": "points+rebounds+assists-KHAMAN_MALUACH_1_NBA-game-ou-under",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -71143,13 +71761,13 @@
     {
      "available": true,
      "betType": "ou",
-     "book": "caesars",
+     "book": "fanduel",
      "entity": "KHAMAN_MALUACH_1_NBA",
      "kind": "prop",
      "line": 19.5,
      "name": "Khaman Maluach Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-KHAMAN_MALUACH_1_NBA-game-ou-under",
-     "odds": -117,
+     "odds": -113,
      "opposing": "points+rebounds+assists-KHAMAN_MALUACH_1_NBA-game-ou-over",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -71161,27 +71779,87 @@
      "alts": [
       [
        14.5,
-       -1800
+       -2000
+      ],
+      [
+       15.5,
+       -1200
+      ],
+      [
+       16.5,
+       -800
+      ],
+      [
+       17.5,
+       -550
+      ],
+      [
+       18.5,
+       -420
       ],
       [
        19.5,
        -310
       ],
       [
+       20.5,
+       -240
+      ],
+      [
+       21.5,
+       -186
+      ],
+      [
+       22.5,
+       -146
+      ],
+      [
        24.5,
-       112
+       110
+      ],
+      [
+       25.5,
+       140
+      ],
+      [
+       26.5,
+       172
+      ],
+      [
+       27.5,
+       210
+      ],
+      [
+       28.5,
+       260
       ],
       [
        29.5,
-       300
+       320
+      ],
+      [
+       30.5,
+       370
+      ],
+      [
+       31.5,
+       470
+      ],
+      [
+       32.5,
+       580
+      ],
+      [
+       33.5,
+       680
       ],
       [
        34.5,
-       830
+       870
       ],
       [
        39.5,
-       1700
+       1800
       ]
      ],
      "available": true,
@@ -71192,7 +71870,7 @@
      "line": 23.5,
      "name": "Miles Bridges Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-MILES_BRIDGES_1_NBA-game-ou-over",
-     "odds": -113,
+     "odds": -114,
      "opposing": "points+rebounds+assists-MILES_BRIDGES_1_NBA-game-ou-under",
      "period": "game",
      "player": "MILES_BRIDGES_1_NBA",
@@ -71220,20 +71898,72 @@
     {
      "alts": [
       [
+       5.5,
+       -1200
+      ],
+      [
+       6.5,
+       -700
+      ],
+      [
+       7.5,
+       -450
+      ],
+      [
+       8.5,
+       -320
+      ],
+      [
        9.5,
-       -245
+       -225
+      ],
+      [
+       10.5,
+       -162
+      ],
+      [
+       12.5,
+       108
+      ],
+      [
+       13.5,
+       146
       ],
       [
        14.5,
-       172
+       196
+      ],
+      [
+       15.5,
+       240
+      ],
+      [
+       16.5,
+       310
+      ],
+      [
+       17.5,
+       390
+      ],
+      [
+       18.5,
+       490
       ],
       [
        19.5,
-       560
+       630
+      ],
+      [
+       20.5,
+       750
+      ],
+      [
+       21.5,
+       880
       ],
       [
        24.5,
-       1500
+       1700
       ]
      ],
      "available": true,
@@ -71241,10 +71971,10 @@
      "book": "fanduel",
      "entity": "COLLIN_GILLESPIE_1_NBA",
      "kind": "prop",
-     "line": 12.5,
+     "line": 11.5,
      "name": "Collin Gillespie Pts + Reb",
      "oddID": "points+rebounds-COLLIN_GILLESPIE_1_NBA-game-ou-over",
-     "odds": 100,
+     "odds": -118,
      "opposing": "points+rebounds-COLLIN_GILLESPIE_1_NBA-game-ou-under",
      "period": "game",
      "player": "COLLIN_GILLESPIE_1_NBA",
@@ -71253,15 +71983,21 @@
      "team": "PHX"
     },
     {
+     "alts": [
+      [
+       12.5,
+       -130
+      ]
+     ],
      "available": true,
      "betType": "ou",
      "book": "fanduel",
      "entity": "COLLIN_GILLESPIE_1_NBA",
      "kind": "prop",
-     "line": 12.5,
+     "line": 11.5,
      "name": "Collin Gillespie Pts + Reb",
      "oddID": "points+rebounds-COLLIN_GILLESPIE_1_NBA-game-ou-under",
-     "odds": -128,
+     "odds": -108,
      "opposing": "points+rebounds-COLLIN_GILLESPIE_1_NBA-game-ou-over",
      "period": "game",
      "player": "COLLIN_GILLESPIE_1_NBA",
@@ -71272,24 +72008,96 @@
     {
      "alts": [
       [
+       18.5,
+       -1450
+      ],
+      [
        19.5,
-       -950
+       -1000
+      ],
+      [
+       20.5,
+       -700
+      ],
+      [
+       21.5,
+       -550
+      ],
+      [
+       22.5,
+       -420
+      ],
+      [
+       23.5,
+       -320
       ],
       [
        24.5,
        -250
       ],
       [
+       25.5,
+       -205
+      ],
+      [
+       26.5,
+       -162
+      ],
+      [
+       27.5,
+       -130
+      ],
+      [
        29.5,
        120
       ],
       [
+       30.5,
+       142
+      ],
+      [
+       31.5,
+       172
+      ],
+      [
+       32.5,
+       205
+      ],
+      [
+       33.5,
+       240
+      ],
+      [
        34.5,
-       310
+       300
+      ],
+      [
+       35.5,
+       360
+      ],
+      [
+       36.5,
+       410
+      ],
+      [
+       37.5,
+       520
+      ],
+      [
+       38.5,
+       630
       ],
       [
        39.5,
-       800
+       750
+      ],
+      [
+       40.5,
+       850
+      ],
+      [
+       41.5,
+       920
       ],
       [
        44.5,
@@ -71304,7 +72112,7 @@
      "line": 28.5,
      "name": "Devin Booker Pts + Reb",
      "oddID": "points+rebounds-DEVIN_BOOKER_1_NBA-game-ou-over",
-     "odds": -102,
+     "odds": -104,
      "opposing": "points+rebounds-DEVIN_BOOKER_1_NBA-game-ou-under",
      "period": "game",
      "player": "DEVIN_BOOKER_1_NBA",
@@ -71321,7 +72129,7 @@
      "line": 28.5,
      "name": "Devin Booker Pts + Reb",
      "oddID": "points+rebounds-DEVIN_BOOKER_1_NBA-game-ou-under",
-     "odds": -125,
+     "odds": -122,
      "opposing": "points+rebounds-DEVIN_BOOKER_1_NBA-game-ou-over",
      "period": "game",
      "player": "DEVIN_BOOKER_1_NBA",
@@ -71332,20 +72140,80 @@
     {
      "alts": [
       [
+       11.5,
+       -2000
+      ],
+      [
+       12.5,
+       -1200
+      ],
+      [
+       13.5,
+       -750
+      ],
+      [
        14.5,
        -520
+      ],
+      [
+       15.5,
+       -400
+      ],
+      [
+       16.5,
+       -300
+      ],
+      [
+       17.5,
+       -230
+      ],
+      [
+       18.5,
+       -178
       ],
       [
        19.5,
        -138
       ],
       [
+       21.5,
+       116
+      ],
+      [
+       22.5,
+       148
+      ],
+      [
+       23.5,
+       182
+      ],
+      [
        24.5,
-       230
+       225
+      ],
+      [
+       25.5,
+       280
+      ],
+      [
+       26.5,
+       350
+      ],
+      [
+       27.5,
+       410
+      ],
+      [
+       28.5,
+       520
       ],
       [
        29.5,
-       630
+       680
+      ],
+      [
+       30.5,
+       750
       ],
       [
        34.5,
@@ -71388,28 +72256,92 @@
     {
      "alts": [
       [
+       13.5,
+       -2000
+      ],
+      [
        14.5,
        -1100
       ],
       [
+       15.5,
+       -850
+      ],
+      [
+       16.5,
+       -600
+      ],
+      [
+       17.5,
+       -450
+      ],
+      [
+       18.5,
+       -340
+      ],
+      [
        19.5,
-       -265
+       -270
+      ],
+      [
+       20.5,
+       -210
+      ],
+      [
+       21.5,
+       -166
+      ],
+      [
+       22.5,
+       -132
       ],
       [
        24.5,
-       116
+       118
+      ],
+      [
+       25.5,
+       146
+      ],
+      [
+       26.5,
+       178
+      ],
+      [
+       27.5,
+       210
+      ],
+      [
+       28.5,
+       250
       ],
       [
        29.5,
        310
       ],
       [
+       30.5,
+       370
+      ],
+      [
+       31.5,
+       430
+      ],
+      [
+       32.5,
+       520
+      ],
+      [
+       33.5,
+       630
+      ],
+      [
        34.5,
-       800
+       750
       ],
       [
        39.5,
-       1500
+       1700
       ]
      ],
      "available": true,
@@ -71420,7 +72352,7 @@
      "line": 23.5,
      "name": "Jalen Green Pts + Reb",
      "oddID": "points+rebounds-JALEN_GREEN_1_NBA-game-ou-over",
-     "odds": -106,
+     "odds": -104,
      "opposing": "points+rebounds-JALEN_GREEN_1_NBA-game-ou-under",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
@@ -71437,7 +72369,7 @@
      "line": 23.5,
      "name": "Jalen Green Pts + Reb",
      "oddID": "points+rebounds-JALEN_GREEN_1_NBA-game-ou-under",
-     "odds": -120,
+     "odds": -122,
      "opposing": "points+rebounds-JALEN_GREEN_1_NBA-game-ou-over",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
@@ -71448,16 +72380,76 @@
     {
      "alts": [
       [
+       10.5,
+       -1450
+      ],
+      [
+       11.5,
+       -900
+      ],
+      [
+       12.5,
+       -600
+      ],
+      [
+       13.5,
+       -440
+      ],
+      [
        14.5,
-       -310
+       -320
+      ],
+      [
+       15.5,
+       -240
+      ],
+      [
+       16.5,
+       -178
+      ],
+      [
+       17.5,
+       -136
       ],
       [
        19.5,
-       126
+       122
+      ],
+      [
+       20.5,
+       154
+      ],
+      [
+       21.5,
+       194
+      ],
+      [
+       22.5,
+       235
+      ],
+      [
+       23.5,
+       290
       ],
       [
        24.5,
-       370
+       360
+      ],
+      [
+       25.5,
+       430
+      ],
+      [
+       26.5,
+       550
+      ],
+      [
+       27.5,
+       640
+      ],
+      [
+       28.5,
+       800
       ],
       [
        29.5,
@@ -71472,7 +72464,7 @@
      "line": 18.5,
      "name": "Khaman Maluach Pts + Reb",
      "oddID": "points+rebounds-KHAMAN_MALUACH_1_NBA-game-ou-over",
-     "odds": 100,
+     "odds": -102,
      "opposing": "points+rebounds-KHAMAN_MALUACH_1_NBA-game-ou-under",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -71489,7 +72481,7 @@
      "line": 18.5,
      "name": "Khaman Maluach Pts + Reb",
      "oddID": "points+rebounds-KHAMAN_MALUACH_1_NBA-game-ou-under",
-     "odds": -128,
+     "odds": -125,
      "opposing": "points+rebounds-KHAMAN_MALUACH_1_NBA-game-ou-over",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -71500,24 +72492,88 @@
     {
      "alts": [
       [
+       12.5,
+       -1600
+      ],
+      [
+       13.5,
+       -1000
+      ],
+      [
        14.5,
-       -620
+       -670
+      ],
+      [
+       15.5,
+       -470
+      ],
+      [
+       16.5,
+       -340
+      ],
+      [
+       17.5,
+       -260
+      ],
+      [
+       18.5,
+       -198
       ],
       [
        19.5,
-       -150
+       -154
+      ],
+      [
+       21.5,
+       104
+      ],
+      [
+       22.5,
+       134
+      ],
+      [
+       23.5,
+       168
       ],
       [
        24.5,
-       210
+       205
+      ],
+      [
+       25.5,
+       260
+      ],
+      [
+       26.5,
+       310
+      ],
+      [
+       27.5,
+       390
+      ],
+      [
+       28.5,
+       470
       ],
       [
        29.5,
-       560
+       580
+      ],
+      [
+       30.5,
+       680
+      ],
+      [
+       31.5,
+       850
+      ],
+      [
+       32.5,
+       920
       ],
       [
        34.5,
-       1400
+       1500
       ]
      ],
      "available": true,
@@ -71556,20 +72612,60 @@
     {
      "alts": [
       [
+       3.5,
+       -700
+      ],
+      [
        4.5,
-       -610
+       -600
+      ],
+      [
+       5.5,
+       -380
+      ],
+      [
+       6.5,
+       -215
+      ],
+      [
+       7.5,
+       -180
       ],
       [
        9.5,
-       110
+       120
+      ],
+      [
+       10.5,
+       148
+      ],
+      [
+       11.5,
+       198
+      ],
+      [
+       12.5,
+       280
+      ],
+      [
+       13.5,
+       320
       ],
       [
        14.5,
-       420
+       430
+      ],
+      [
+       15.5,
+       580
+      ],
+      [
+       16.5,
+       680
       ],
       [
        19.5,
-       1300
+       1400
       ]
      ],
      "available": true,
@@ -71580,7 +72676,7 @@
      "line": 8.5,
      "name": "Collin Gillespie Points",
      "oddID": "points-COLLIN_GILLESPIE_1_NBA-game-ou-over",
-     "odds": -130,
+     "odds": -120,
      "opposing": "points-COLLIN_GILLESPIE_1_NBA-game-ou-under",
      "period": "game",
      "player": "COLLIN_GILLESPIE_1_NBA",
@@ -71597,7 +72693,7 @@
      "line": 8.5,
      "name": "Collin Gillespie Points",
      "oddID": "points-COLLIN_GILLESPIE_1_NBA-game-ou-under",
-     "odds": 102,
+     "odds": -106,
      "opposing": "points-COLLIN_GILLESPIE_1_NBA-game-ou-over",
      "period": "game",
      "player": "COLLIN_GILLESPIE_1_NBA",
@@ -71609,19 +72705,91 @@
      "alts": [
       [
        14.5,
-       -1800
+       -2000
+      ],
+      [
+       15.5,
+       -1400
+      ],
+      [
+       16.5,
+       -900
+      ],
+      [
+       17.5,
+       -650
+      ],
+      [
+       18.5,
+       -450
       ],
       [
        19.5,
        -330
       ],
       [
+       20.5,
+       -270
+      ],
+      [
+       21.5,
+       -210
+      ],
+      [
+       22.5,
+       -166
+      ],
+      [
+       23.5,
+       -130
+      ],
+      [
+       25.5,
+       122
+      ],
+      [
+       26.5,
+       152
+      ],
+      [
+       27.5,
+       182
+      ],
+      [
+       28.5,
+       225
+      ],
+      [
        29.5,
-       285
+       270
+      ],
+      [
+       30.5,
+       320
+      ],
+      [
+       31.5,
+       390
+      ],
+      [
+       32.5,
+       470
+      ],
+      [
+       33.5,
+       580
       ],
       [
        34.5,
-       750
+       680
+      ],
+      [
+       35.5,
+       800
+      ],
+      [
+       36.5,
+       880
       ],
       [
        39.5,
@@ -71636,7 +72804,7 @@
      "line": 24.5,
      "name": "Devin Booker Points",
      "oddID": "points-DEVIN_BOOKER_1_NBA-game-ou-over",
-     "odds": 100,
+     "odds": -102,
      "opposing": "points-DEVIN_BOOKER_1_NBA-game-ou-under",
      "period": "game",
      "player": "DEVIN_BOOKER_1_NBA",
@@ -71664,20 +72832,76 @@
     {
      "alts": [
       [
+       8.5,
+       -2000
+      ],
+      [
        9.5,
        -1100
       ],
       [
+       10.5,
+       -700
+      ],
+      [
+       11.5,
+       -470
+      ],
+      [
+       12.5,
+       -340
+      ],
+      [
+       13.5,
+       -260
+      ],
+      [
        14.5,
-       -188
+       -194
+      ],
+      [
+       15.5,
+       -146
+      ],
+      [
+       17.5,
+       116
+      ],
+      [
+       18.5,
+       152
       ],
       [
        19.5,
-       196
+       188
+      ],
+      [
+       20.5,
+       235
+      ],
+      [
+       21.5,
+       300
+      ],
+      [
+       22.5,
+       370
+      ],
+      [
+       23.5,
+       450
       ],
       [
        24.5,
-       600
+       580
+      ],
+      [
+       25.5,
+       700
+      ],
+      [
+       26.5,
+       880
       ],
       [
        29.5,
@@ -71720,16 +72944,76 @@
     {
      "alts": [
       [
+       10.5,
+       -1600
+      ],
+      [
+       11.5,
+       -1000
+      ],
+      [
+       12.5,
+       -670
+      ],
+      [
+       13.5,
+       -470
+      ],
+      [
        14.5,
-       -340
+       -350
+      ],
+      [
+       15.5,
+       -270
+      ],
+      [
+       16.5,
+       -210
+      ],
+      [
+       17.5,
+       -158
       ],
       [
        19.5,
-       102
+       104
+      ],
+      [
+       20.5,
+       130
+      ],
+      [
+       21.5,
+       164
+      ],
+      [
+       22.5,
+       198
+      ],
+      [
+       23.5,
+       240
       ],
       [
        24.5,
-       300
+       290
+      ],
+      [
+       25.5,
+       360
+      ],
+      [
+       26.5,
+       430
+      ],
+      [
+       27.5,
+       550
+      ],
+      [
+       28.5,
+       640
       ],
       [
        29.5,
@@ -71737,7 +73021,7 @@
       ],
       [
        34.5,
-       1700
+       1800
       ]
      ],
      "available": true,
@@ -71748,7 +73032,7 @@
      "line": 18.5,
      "name": "Jalen Green Points",
      "oddID": "points-JALEN_GREEN_1_NBA-game-ou-over",
-     "odds": -122,
+     "odds": -120,
      "opposing": "points-JALEN_GREEN_1_NBA-game-ou-under",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
@@ -71765,7 +73049,7 @@
      "line": 18.5,
      "name": "Jalen Green Points",
      "oddID": "points-JALEN_GREEN_1_NBA-game-ou-under",
-     "odds": -104,
+     "odds": -106,
      "opposing": "points-JALEN_GREEN_1_NBA-game-ou-over",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
@@ -71776,16 +73060,56 @@
     {
      "alts": [
       [
+       3.5,
+       -1600
+      ],
+      [
        4.5,
-       -610
+       -670
+      ],
+      [
+       5.5,
+       -420
+      ],
+      [
+       6.5,
+       -260
+      ],
+      [
+       7.5,
+       -178
       ],
       [
        9.5,
        118
       ],
       [
+       10.5,
+       162
+      ],
+      [
+       11.5,
+       220
+      ],
+      [
+       12.5,
+       290
+      ],
+      [
+       13.5,
+       370
+      ],
+      [
        14.5,
-       520
+       490
+      ],
+      [
+       15.5,
+       640
+      ],
+      [
+       16.5,
+       850
       ],
       [
        19.5,
@@ -71828,16 +73152,72 @@
     {
      "alts": [
       [
+       7.5,
+       -2000
+      ],
+      [
+       8.5,
+       -1000
+      ],
+      [
        9.5,
-       -590
+       -650
+      ],
+      [
+       10.5,
+       -420
+      ],
+      [
+       11.5,
+       -300
+      ],
+      [
+       12.5,
+       -225
+      ],
+      [
+       13.5,
+       -162
+      ],
+      [
+       15.5,
+       108
+      ],
+      [
+       16.5,
+       144
+      ],
+      [
+       17.5,
+       182
+      ],
+      [
+       18.5,
+       225
       ],
       [
        19.5,
-       290
+       280
+      ],
+      [
+       20.5,
+       360
+      ],
+      [
+       21.5,
+       470
+      ],
+      [
+       22.5,
+       580
+      ],
+      [
+       23.5,
+       750
       ],
       [
        24.5,
-       900
+       880
       ]
      ],
      "available": true,
@@ -71848,7 +73228,7 @@
      "line": 14.5,
      "name": "Miles Bridges Points",
      "oddID": "points-MILES_BRIDGES_1_NBA-game-ou-over",
-     "odds": -122,
+     "odds": -120,
      "opposing": "points-MILES_BRIDGES_1_NBA-game-ou-under",
      "period": "game",
      "player": "MILES_BRIDGES_1_NBA",
@@ -71865,7 +73245,7 @@
      "line": 14.5,
      "name": "Miles Bridges Points",
      "oddID": "points-MILES_BRIDGES_1_NBA-game-ou-under",
-     "odds": -104,
+     "odds": -106,
      "opposing": "points-MILES_BRIDGES_1_NBA-game-ou-over",
      "period": "game",
      "player": "MILES_BRIDGES_1_NBA",
@@ -71876,8 +73256,36 @@
     {
      "alts": [
       [
+       2.5,
+       -2000
+      ],
+      [
+       3.5,
+       -600
+      ],
+      [
        4.5,
-       -310
+       -290
+      ],
+      [
+       5.5,
+       -152
+      ],
+      [
+       7.5,
+       220
+      ],
+      [
+       8.5,
+       360
+      ],
+      [
+       9.5,
+       580
+      ],
+      [
+       10.5,
+       880
       ]
      ],
      "available": true,
@@ -71885,10 +73293,10 @@
      "book": "fanduel",
      "entity": "COLLIN_GILLESPIE_1_NBA",
      "kind": "prop",
-     "line": 9.5,
+     "line": 6.5,
      "name": "Collin Gillespie Reb + Ast",
      "oddID": "rebounds+assists-COLLIN_GILLESPIE_1_NBA-game-ou-over",
-     "odds": 500,
+     "odds": 130,
      "opposing": "rebounds+assists-COLLIN_GILLESPIE_1_NBA-game-ou-under",
      "period": "game",
      "player": "COLLIN_GILLESPIE_1_NBA",
@@ -71916,6 +73324,38 @@
     {
      "alts": [
       [
+       5.5,
+       -1800
+      ],
+      [
+       6.5,
+       -670
+      ],
+      [
+       7.5,
+       -330
+      ],
+      [
+       8.5,
+       -188
+      ],
+      [
+       10.5,
+       146
+      ],
+      [
+       11.5,
+       230
+      ],
+      [
+       12.5,
+       360
+      ],
+      [
+       13.5,
+       580
+      ],
+      [
        14.5,
        870
       ]
@@ -71928,7 +73368,7 @@
      "line": 9.5,
      "name": "Devin Booker Reb + Ast",
      "oddID": "rebounds+assists-DEVIN_BOOKER_1_NBA-game-ou-over",
-     "odds": -113,
+     "odds": -111,
      "opposing": "rebounds+assists-DEVIN_BOOKER_1_NBA-game-ou-under",
      "period": "game",
      "player": "DEVIN_BOOKER_1_NBA",
@@ -71945,7 +73385,7 @@
      "line": 9.5,
      "name": "Devin Booker Reb + Ast",
      "oddID": "rebounds+assists-DEVIN_BOOKER_1_NBA-game-ou-under",
-     "odds": -113,
+     "odds": -115,
      "opposing": "rebounds+assists-DEVIN_BOOKER_1_NBA-game-ou-over",
      "period": "game",
      "player": "DEVIN_BOOKER_1_NBA",
@@ -71968,7 +73408,7 @@
      "line": 4.5,
      "name": "Dillon Brooks Reb + Ast",
      "oddID": "rebounds+assists-DILLON_BROOKS_1_NBA-game-ou-over",
-     "odds": -235,
+     "odds": -240,
      "opposing": "rebounds+assists-DILLON_BROOKS_1_NBA-game-ou-under",
      "period": "game",
      "player": "DILLON_BROOKS_1_NBA",
@@ -71985,7 +73425,7 @@
      "line": 5.5,
      "name": "Dillon Brooks Reb + Ast",
      "oddID": "rebounds+assists-DILLON_BROOKS_1_NBA-game-ou-under",
-     "odds": -105,
+     "odds": -110,
      "opposing": "rebounds+assists-DILLON_BROOKS_1_NBA-game-ou-over",
      "period": "game",
      "player": "DILLON_BROOKS_1_NBA",
@@ -71997,11 +73437,39 @@
      "alts": [
       [
        4.5,
-       -1450
+       -1400
+      ],
+      [
+       5.5,
+       -580
+      ],
+      [
+       6.5,
+       -290
+      ],
+      [
+       7.5,
+       -160
       ],
       [
        9.5,
-       180
+       188
+      ],
+      [
+       10.5,
+       300
+      ],
+      [
+       11.5,
+       430
+      ],
+      [
+       12.5,
+       700
+      ],
+      [
+       13.5,
+       920
       ],
       [
        14.5,
@@ -72016,7 +73484,7 @@
      "line": 8.5,
      "name": "Jalen Green Reb + Ast",
      "oddID": "rebounds+assists-JALEN_GREEN_1_NBA-game-ou-over",
-     "odds": 110,
+     "odds": 114,
      "opposing": "rebounds+assists-JALEN_GREEN_1_NBA-game-ou-under",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
@@ -72033,7 +73501,7 @@
      "line": 8.5,
      "name": "Jalen Green Reb + Ast",
      "oddID": "rebounds+assists-JALEN_GREEN_1_NBA-game-ou-under",
-     "odds": -140,
+     "odds": -146,
      "opposing": "rebounds+assists-JALEN_GREEN_1_NBA-game-ou-over",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
@@ -72044,19 +73512,35 @@
     {
      "alts": [
       [
+       7.5,
+       -390
+      ],
+      [
+       9.5,
+       -160
+      ],
+      [
+       11.5,
+       140
+      ],
+      [
        14.5,
-       430
+       425
+      ],
+      [
+       17.5,
+       1200
       ]
      ],
      "available": true,
      "betType": "ou",
-     "book": "fanduel",
+     "book": "draftkings",
      "entity": "KHAMAN_MALUACH_1_NBA",
      "kind": "prop",
-     "line": 9.5,
+     "line": 10.5,
      "name": "Khaman Maluach Reb + Ast",
      "oddID": "rebounds+assists-KHAMAN_MALUACH_1_NBA-game-ou-over",
-     "odds": -172,
+     "odds": -105,
      "opposing": "rebounds+assists-KHAMAN_MALUACH_1_NBA-game-ou-under",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -72084,8 +73568,36 @@
     {
      "alts": [
       [
+       5.5,
+       -800
+      ],
+      [
+       6.5,
+       -360
+      ],
+      [
+       7.5,
+       -210
+      ],
+      [
        9.5,
-       144
+       146
+      ],
+      [
+       10.5,
+       230
+      ],
+      [
+       11.5,
+       370
+      ],
+      [
+       12.5,
+       580
+      ],
+      [
+       13.5,
+       850
       ],
       [
        14.5,
@@ -72128,8 +73640,20 @@
     {
      "alts": [
       [
+       1.5,
+       -470
+      ],
+      [
+       3.5,
+       162
+      ],
+      [
+       4.5,
+       360
+      ],
+      [
        5.5,
-       700
+       750
       ]
      ],
      "available": true,
@@ -72137,10 +73661,10 @@
      "book": "fanduel",
      "entity": "COLLIN_GILLESPIE_1_NBA",
      "kind": "prop",
-     "line": 3.5,
+     "line": 2.5,
      "name": "Collin Gillespie Rebounds",
      "oddID": "rebounds-COLLIN_GILLESPIE_1_NBA-game-ou-over",
-     "odds": 158,
+     "odds": -154,
      "opposing": "rebounds-COLLIN_GILLESPIE_1_NBA-game-ou-under",
      "period": "game",
      "player": "COLLIN_GILLESPIE_1_NBA",
@@ -72157,7 +73681,7 @@
      "line": 2.5,
      "name": "Collin Gillespie Rebounds",
      "oddID": "rebounds-COLLIN_GILLESPIE_1_NBA-game-ou-under",
-     "odds": 125,
+     "odds": 120,
      "opposing": "rebounds-COLLIN_GILLESPIE_1_NBA-game-ou-over",
      "period": "game",
      "player": "COLLIN_GILLESPIE_1_NBA",
@@ -72168,12 +73692,28 @@
     {
      "alts": [
       [
+       1.5,
+       -2000
+      ],
+      [
+       2.5,
+       -420
+      ],
+      [
+       4.5,
+       144
+      ],
+      [
        5.5,
        300
       ],
       [
+       6.5,
+       580
+      ],
+      [
        7.5,
-       1100
+       1000
       ]
      ],
      "available": true,
@@ -72184,7 +73724,7 @@
      "line": 3.5,
      "name": "Devin Booker Rebounds",
      "oddID": "rebounds-DEVIN_BOOKER_1_NBA-game-ou-over",
-     "odds": -162,
+     "odds": -160,
      "opposing": "rebounds-DEVIN_BOOKER_1_NBA-game-ou-under",
      "period": "game",
      "player": "DEVIN_BOOKER_1_NBA",
@@ -72201,7 +73741,7 @@
      "line": 3.5,
      "name": "Devin Booker Rebounds",
      "oddID": "rebounds-DEVIN_BOOKER_1_NBA-game-ou-under",
-     "odds": 126,
+     "odds": 124,
      "opposing": "rebounds-DEVIN_BOOKER_1_NBA-game-ou-over",
      "period": "game",
      "player": "DEVIN_BOOKER_1_NBA",
@@ -72212,8 +73752,24 @@
     {
      "alts": [
       [
+       1.5,
+       -1450
+      ],
+      [
+       2.5,
+       -330
+      ],
+      [
+       4.5,
+       178
+      ],
+      [
        5.5,
-       350
+       360
+      ],
+      [
+       6.5,
+       680
       ],
       [
        7.5,
@@ -72256,16 +73812,24 @@
     {
      "alts": [
       [
+       2.5,
+       -500
+      ],
+      [
        3.5,
        -192
       ],
       [
        5.5,
-       240
+       230
+      ],
+      [
+       6.5,
+       450
       ],
       [
        7.5,
-       870
+       850
       ],
       [
        9.5,
@@ -72280,7 +73844,7 @@
      "line": 4.5,
      "name": "Jalen Green Rebounds",
      "oddID": "rebounds-JALEN_GREEN_1_NBA-game-ou-over",
-     "odds": 116,
+     "odds": 120,
      "opposing": "rebounds-JALEN_GREEN_1_NBA-game-ou-under",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
@@ -72297,7 +73861,7 @@
      "line": 4.5,
      "name": "Jalen Green Rebounds",
      "oddID": "rebounds-JALEN_GREEN_1_NBA-game-ou-under",
-     "odds": -148,
+     "odds": -154,
      "opposing": "rebounds-JALEN_GREEN_1_NBA-game-ou-over",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
@@ -72312,24 +73876,40 @@
        -1000
       ],
       [
+       6.5,
+       -470
+      ],
+      [
        7.5,
        -250
       ],
       [
        9.5,
-       -104
+       -108
+      ],
+      [
+       10.5,
+       148
       ],
       [
        11.5,
-       240
+       230
+      ],
+      [
+       12.5,
+       360
       ],
       [
        13.5,
-       560
+       520
+      ],
+      [
+       14.5,
+       750
       ],
       [
        15.5,
-       1100
+       1000
       ]
      ],
      "available": true,
@@ -72340,7 +73920,7 @@
      "line": 8.5,
      "name": "Khaman Maluach Rebounds",
      "oddID": "rebounds-KHAMAN_MALUACH_1_NBA-game-ou-over",
-     "odds": -146,
+     "odds": -148,
      "opposing": "rebounds-KHAMAN_MALUACH_1_NBA-game-ou-under",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -72357,7 +73937,7 @@
      "line": 8.5,
      "name": "Khaman Maluach Rebounds",
      "oddID": "rebounds-KHAMAN_MALUACH_1_NBA-game-ou-under",
-     "odds": 114,
+     "odds": 116,
      "opposing": "rebounds-KHAMAN_MALUACH_1_NBA-game-ou-over",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -72369,19 +73949,31 @@
      "alts": [
       [
        3.5,
-       -670
+       -700
+      ],
+      [
+       4.5,
+       -280
+      ],
+      [
+       6.5,
+       148
       ],
       [
        7.5,
-       265
+       260
+      ],
+      [
+       8.5,
+       430
       ],
       [
        9.5,
-       700
+       680
       ],
       [
        11.5,
-       1800
+       1700
       ]
      ],
      "available": true,
@@ -72421,7 +74013,7 @@
      "alts": [
       [
        0.5,
-       -1600
+       -1450
       ],
       [
        1.5,
@@ -72433,7 +74025,7 @@
       ],
       [
        4.5,
-       650
+       750
       ],
       [
        5.5,
@@ -72448,7 +74040,7 @@
      "line": 2.5,
      "name": "Collin Gillespie 3-pointers made",
      "oddID": "threePointersMade-COLLIN_GILLESPIE_1_NBA-game-ou-over",
-     "odds": 124,
+     "odds": 126,
      "opposing": "threePointersMade-COLLIN_GILLESPIE_1_NBA-game-ou-under",
      "period": "game",
      "player": "COLLIN_GILLESPIE_1_NBA",
@@ -72465,7 +74057,7 @@
      "line": 2.5,
      "name": "Collin Gillespie 3-pointers made",
      "oddID": "threePointersMade-COLLIN_GILLESPIE_1_NBA-game-ou-under",
-     "odds": -158,
+     "odds": -162,
      "opposing": "threePointersMade-COLLIN_GILLESPIE_1_NBA-game-ou-over",
      "period": "game",
      "player": "COLLIN_GILLESPIE_1_NBA",
@@ -72482,7 +74074,7 @@
      "line": null,
      "name": "Collin Gillespie 3-pointers made",
      "oddID": "threePointersMade-COLLIN_GILLESPIE_1_NBA-game-yn-yes",
-     "odds": -1600,
+     "odds": -1450,
      "opposing": "threePointersMade-COLLIN_GILLESPIE_1_NBA-game-yn-no",
      "period": "game",
      "player": "COLLIN_GILLESPIE_1_NBA",
@@ -72498,7 +74090,7 @@
       ],
       [
        2.5,
-       265
+       260
       ],
       [
        3.5,
@@ -72506,7 +74098,7 @@
       ],
       [
        4.5,
-       1900
+       1800
       ]
      ],
      "available": true,
@@ -72517,7 +74109,7 @@
      "line": 1.5,
      "name": "Devin Booker 3-pointers made",
      "oddID": "threePointersMade-DEVIN_BOOKER_1_NBA-game-ou-over",
-     "odds": -128,
+     "odds": -125,
      "opposing": "threePointersMade-DEVIN_BOOKER_1_NBA-game-ou-under",
      "period": "game",
      "player": "DEVIN_BOOKER_1_NBA",
@@ -72534,7 +74126,7 @@
      "line": 1.5,
      "name": "Devin Booker 3-pointers made",
      "oddID": "threePointersMade-DEVIN_BOOKER_1_NBA-game-ou-under",
-     "odds": 100,
+     "odds": -102,
      "opposing": "threePointersMade-DEVIN_BOOKER_1_NBA-game-ou-over",
      "period": "game",
      "player": "DEVIN_BOOKER_1_NBA",
@@ -72567,15 +74159,15 @@
       ],
       [
        2.5,
-       200
+       190
       ],
       [
        3.5,
-       500
+       480
       ],
       [
        4.5,
-       1200
+       1100
       ]
      ],
      "available": true,
@@ -72586,7 +74178,7 @@
      "line": 1.5,
      "name": "Dillon Brooks 3-pointers made",
      "oddID": "threePointersMade-DILLON_BROOKS_1_NBA-game-ou-over",
-     "odds": -170,
+     "odds": -172,
      "opposing": "threePointersMade-DILLON_BROOKS_1_NBA-game-ou-under",
      "period": "game",
      "player": "DILLON_BROOKS_1_NBA",
@@ -72603,7 +74195,7 @@
      "line": 1.5,
      "name": "Dillon Brooks 3-pointers made",
      "oddID": "threePointersMade-DILLON_BROOKS_1_NBA-game-ou-under",
-     "odds": 132,
+     "odds": 134,
      "opposing": "threePointersMade-DILLON_BROOKS_1_NBA-game-ou-over",
      "period": "game",
      "player": "DILLON_BROOKS_1_NBA",
@@ -72631,16 +74223,20 @@
     {
      "alts": [
       [
+       0.5,
+       -2000
+      ],
+      [
        1.5,
        -310
       ],
       [
        3.5,
-       255
+       265
       ],
       [
        4.5,
-       600
+       650
       ],
       [
        5.5,
@@ -72683,13 +74279,13 @@
     {
      "available": true,
      "betType": "yn",
-     "book": "draftkings",
+     "book": "fanduel",
      "entity": "JALEN_GREEN_1_NBA",
      "kind": "prop",
      "line": null,
      "name": "Jalen Green 3-pointers made",
      "oddID": "threePointersMade-JALEN_GREEN_1_NBA-game-yn-yes",
-     "odds": -1600,
+     "odds": -2000,
      "opposing": "threePointersMade-JALEN_GREEN_1_NBA-game-yn-no",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
@@ -72705,7 +74301,7 @@
       ],
       [
        2.5,
-       330
+       340
       ],
       [
        3.5,
@@ -72720,7 +74316,7 @@
      "line": 1.5,
      "name": "Miles Bridges 3-pointers made",
      "oddID": "threePointersMade-MILES_BRIDGES_1_NBA-game-ou-over",
-     "odds": 102,
+     "odds": 104,
      "opposing": "threePointersMade-MILES_BRIDGES_1_NBA-game-ou-under",
      "period": "game",
      "player": "MILES_BRIDGES_1_NBA",
@@ -72737,7 +74333,7 @@
      "line": 1.5,
      "name": "Miles Bridges 3-pointers made",
      "oddID": "threePointersMade-MILES_BRIDGES_1_NBA-game-ou-under",
-     "odds": -130,
+     "odds": -132,
      "opposing": "threePointersMade-MILES_BRIDGES_1_NBA-game-ou-over",
      "period": "game",
      "player": "MILES_BRIDGES_1_NBA",
@@ -72766,15 +74362,27 @@
      "alts": [
       [
        1.5,
-       -1000
+       -1200
+      ],
+      [
+       2.5,
+       -330
+      ],
+      [
+       4.5,
+       162
       ],
       [
        5.5,
-       350
+       310
+      ],
+      [
+       6.5,
+       580
       ],
       [
        7.5,
-       1100
+       920
       ]
      ],
      "available": true,
@@ -72785,7 +74393,7 @@
      "line": 3.5,
      "name": "Yaxel Lendeborg Assists",
      "oddID": "assists-YAXEL_LENDEBORG_1_NBA-game-ou-over",
-     "odds": -122,
+     "odds": -136,
      "opposing": "assists-YAXEL_LENDEBORG_1_NBA-game-ou-under",
      "period": "game",
      "player": "YAXEL_LENDEBORG_1_NBA",
@@ -72802,7 +74410,7 @@
      "line": 3.5,
      "name": "Yaxel Lendeborg Assists",
      "oddID": "assists-YAXEL_LENDEBORG_1_NBA-game-ou-under",
-     "odds": -104,
+     "odds": 106,
      "opposing": "assists-YAXEL_LENDEBORG_1_NBA-game-ou-over",
      "period": "game",
      "player": "YAXEL_LENDEBORG_1_NBA",
@@ -72813,24 +74421,88 @@
     {
      "alts": [
       [
+       12.5,
+       -1450
+      ],
+      [
+       13.5,
+       -1000
+      ],
+      [
        14.5,
-       -600
+       -650
+      ],
+      [
+       15.5,
+       -470
+      ],
+      [
+       16.5,
+       -350
+      ],
+      [
+       17.5,
+       -275
+      ],
+      [
+       18.5,
+       -225
       ],
       [
        19.5,
-       -165
+       -178
+      ],
+      [
+       20.5,
+       -138
+      ],
+      [
+       22.5,
+       114
+      ],
+      [
+       23.5,
+       140
       ],
       [
        24.5,
-       175
+       172
+      ],
+      [
+       25.5,
+       205
+      ],
+      [
+       26.5,
+       250
+      ],
+      [
+       27.5,
+       310
+      ],
+      [
+       28.5,
+       370
       ],
       [
        29.5,
-       500
+       450
+      ],
+      [
+       30.5,
+       520
+      ],
+      [
+       31.5,
+       630
+      ],
+      [
+       32.5,
+       750
       ],
       [
        34.5,
-       1400
+       1200
       ]
      ],
      "available": true,
@@ -72838,10 +74510,10 @@
      "book": "fanduel",
      "entity": "YAXEL_LENDEBORG_1_NBA",
      "kind": "prop",
-     "line": 20.5,
+     "line": 21.5,
      "name": "Yaxel Lendeborg Pts + Ast",
      "oddID": "points+assists-YAXEL_LENDEBORG_1_NBA-game-ou-over",
-     "odds": -125,
+     "odds": -110,
      "opposing": "points+assists-YAXEL_LENDEBORG_1_NBA-game-ou-under",
      "period": "game",
      "player": "YAXEL_LENDEBORG_1_NBA",
@@ -72855,10 +74527,10 @@
      "book": "fanduel",
      "entity": "YAXEL_LENDEBORG_1_NBA",
      "kind": "prop",
-     "line": 20.5,
+     "line": 21.5,
      "name": "Yaxel Lendeborg Pts + Ast",
      "oddID": "points+assists-YAXEL_LENDEBORG_1_NBA-game-ou-under",
-     "odds": -106,
+     "odds": -120,
      "opposing": "points+assists-YAXEL_LENDEBORG_1_NBA-game-ou-over",
      "period": "game",
      "player": "YAXEL_LENDEBORG_1_NBA",
@@ -72869,28 +74541,116 @@
     {
      "alts": [
       [
+       17.5,
+       -2000
+      ],
+      [
+       18.5,
+       -1450
+      ],
+      [
        19.5,
-       -850
+       -1100
+      ],
+      [
+       20.5,
+       -750
+      ],
+      [
+       21.5,
+       -580
+      ],
+      [
+       22.5,
+       -450
+      ],
+      [
+       23.5,
+       -360
       ],
       [
        24.5,
-       -250
+       -280
+      ],
+      [
+       25.5,
+       -240
+      ],
+      [
+       26.5,
+       -192
+      ],
+      [
+       27.5,
+       -158
       ],
       [
        29.5,
-       104
+       -104
+      ],
+      [
+       30.5,
+       112
+      ],
+      [
+       31.5,
+       134
+      ],
+      [
+       32.5,
+       162
+      ],
+      [
+       33.5,
+       188
       ],
       [
        34.5,
-       250
+       230
+      ],
+      [
+       35.5,
+       260
+      ],
+      [
+       36.5,
+       310
+      ],
+      [
+       37.5,
+       360
+      ],
+      [
+       38.5,
+       430
       ],
       [
        39.5,
-       560
+       520
+      ],
+      [
+       40.5,
+       580
+      ],
+      [
+       41.5,
+       680
+      ],
+      [
+       42.5,
+       800
+      ],
+      [
+       43.5,
+       880
       ],
       [
        44.5,
        1100
+      ],
+      [
+       49.5,
+       2000
       ]
      ],
      "available": true,
@@ -72901,7 +74661,7 @@
      "line": 28.5,
      "name": "Yaxel Lendeborg Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-YAXEL_LENDEBORG_1_NBA-game-ou-over",
-     "odds": -113,
+     "odds": -130,
      "opposing": "points+rebounds+assists-YAXEL_LENDEBORG_1_NBA-game-ou-under",
      "period": "game",
      "player": "YAXEL_LENDEBORG_1_NBA",
@@ -72912,13 +74672,13 @@
     {
      "available": true,
      "betType": "ou",
-     "book": "fanduel",
+     "book": "draftkings",
      "entity": "YAXEL_LENDEBORG_1_NBA",
      "kind": "prop",
      "line": 28.5,
      "name": "Yaxel Lendeborg Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-YAXEL_LENDEBORG_1_NBA-game-ou-under",
-     "odds": -113,
+     "odds": -117,
      "opposing": "points+rebounds+assists-YAXEL_LENDEBORG_1_NBA-game-ou-over",
      "period": "game",
      "player": "YAXEL_LENDEBORG_1_NBA",
@@ -72930,19 +74690,91 @@
      "alts": [
       [
        14.5,
-       -1600
+       -2000
+      ],
+      [
+       15.5,
+       -1400
+      ],
+      [
+       16.5,
+       -900
+      ],
+      [
+       17.5,
+       -670
+      ],
+      [
+       18.5,
+       -490
       ],
       [
        19.5,
-       -330
+       -390
+      ],
+      [
+       20.5,
+       -310
+      ],
+      [
+       21.5,
+       -245
+      ],
+      [
+       22.5,
+       -200
+      ],
+      [
+       23.5,
+       -160
+      ],
+      [
+       24.5,
+       -132
+      ],
+      [
+       26.5,
+       116
+      ],
+      [
+       27.5,
+       140
+      ],
+      [
+       28.5,
+       168
       ],
       [
        29.5,
-       220
+       194
+      ],
+      [
+       30.5,
+       230
+      ],
+      [
+       31.5,
+       280
+      ],
+      [
+       32.5,
+       320
+      ],
+      [
+       33.5,
+       390
       ],
       [
        34.5,
-       520
+       450
+      ],
+      [
+       35.5,
+       550
+      ],
+      [
+       36.5,
+       640
       ],
       [
        39.5,
@@ -72950,7 +74782,7 @@
       ],
       [
        44.5,
-       2000
+       1800
       ]
      ],
      "available": true,
@@ -72958,10 +74790,10 @@
      "book": "fanduel",
      "entity": "YAXEL_LENDEBORG_1_NBA",
      "kind": "prop",
-     "line": 24.5,
+     "line": 25.5,
      "name": "Yaxel Lendeborg Pts + Reb",
      "oddID": "points+rebounds-YAXEL_LENDEBORG_1_NBA-game-ou-over",
-     "odds": -118,
+     "odds": -104,
      "opposing": "points+rebounds-YAXEL_LENDEBORG_1_NBA-game-ou-under",
      "period": "game",
      "player": "YAXEL_LENDEBORG_1_NBA",
@@ -72975,10 +74807,10 @@
      "book": "fanduel",
      "entity": "YAXEL_LENDEBORG_1_NBA",
      "kind": "prop",
-     "line": 24.5,
+     "line": 25.5,
      "name": "Yaxel Lendeborg Pts + Reb",
      "oddID": "points+rebounds-YAXEL_LENDEBORG_1_NBA-game-ou-under",
-     "odds": -108,
+     "odds": -122,
      "opposing": "points+rebounds-YAXEL_LENDEBORG_1_NBA-game-ou-over",
      "period": "game",
      "player": "YAXEL_LENDEBORG_1_NBA",
@@ -72989,20 +74821,84 @@
     {
      "alts": [
       [
+       8.5,
+       -2000
+      ],
+      [
        9.5,
-       -1100
+       -1400
+      ],
+      [
+       10.5,
+       -800
+      ],
+      [
+       11.5,
+       -580
+      ],
+      [
+       12.5,
+       -420
+      ],
+      [
+       13.5,
+       -310
       ],
       [
        14.5,
-       -210
+       -235
+      ],
+      [
+       15.5,
+       -180
+      ],
+      [
+       16.5,
+       -138
+      ],
+      [
+       18.5,
+       118
       ],
       [
        19.5,
-       158
+       146
+      ],
+      [
+       20.5,
+       178
+      ],
+      [
+       21.5,
+       220
+      ],
+      [
+       22.5,
+       270
+      ],
+      [
+       23.5,
+       320
       ],
       [
        24.5,
-       440
+       390
+      ],
+      [
+       25.5,
+       490
+      ],
+      [
+       26.5,
+       580
+      ],
+      [
+       27.5,
+       680
+      ],
+      [
+       28.5,
+       850
       ],
       [
        29.5,
@@ -73021,7 +74917,7 @@
      "line": 17.5,
      "name": "Yaxel Lendeborg Points",
      "oddID": "points-YAXEL_LENDEBORG_1_NBA-game-ou-over",
-     "odds": 100,
+     "odds": -106,
      "opposing": "points-YAXEL_LENDEBORG_1_NBA-game-ou-under",
      "period": "game",
      "player": "YAXEL_LENDEBORG_1_NBA",
@@ -73038,7 +74934,7 @@
      "line": 17.5,
      "name": "Yaxel Lendeborg Points",
      "oddID": "points-YAXEL_LENDEBORG_1_NBA-game-ou-under",
-     "odds": -128,
+     "odds": -120,
      "opposing": "points-YAXEL_LENDEBORG_1_NBA-game-ou-over",
      "period": "game",
      "player": "YAXEL_LENDEBORG_1_NBA",
@@ -73049,16 +74945,52 @@
     {
      "alts": [
       [
+       6.5,
+       -2000
+      ],
+      [
+       7.5,
+       -900
+      ],
+      [
+       8.5,
+       -470
+      ],
+      [
        9.5,
-       -245
+       -275
+      ],
+      [
+       10.5,
+       -178
+      ],
+      [
+       12.5,
+       132
+      ],
+      [
+       13.5,
+       194
       ],
       [
        14.5,
-       300
+       290
+      ],
+      [
+       15.5,
+       400
+      ],
+      [
+       16.5,
+       580
+      ],
+      [
+       17.5,
+       850
       ],
       [
        19.5,
-       1500
+       1400
       ]
      ],
      "available": true,
@@ -73069,7 +75001,7 @@
      "line": 11.5,
      "name": "Yaxel Lendeborg Reb + Ast",
      "oddID": "rebounds+assists-YAXEL_LENDEBORG_1_NBA-game-ou-over",
-     "odds": 100,
+     "odds": -111,
      "opposing": "rebounds+assists-YAXEL_LENDEBORG_1_NBA-game-ou-under",
      "period": "game",
      "player": "YAXEL_LENDEBORG_1_NBA",
@@ -73086,7 +75018,7 @@
      "line": 11.5,
      "name": "Yaxel Lendeborg Reb + Ast",
      "oddID": "rebounds+assists-YAXEL_LENDEBORG_1_NBA-game-ou-under",
-     "odds": -128,
+     "odds": -115,
      "opposing": "rebounds+assists-YAXEL_LENDEBORG_1_NBA-game-ou-over",
      "period": "game",
      "player": "YAXEL_LENDEBORG_1_NBA",
@@ -73097,16 +75029,36 @@
     {
      "alts": [
       [
+       4.5,
+       -900
+      ],
+      [
        5.5,
-       -350
+       -400
+      ],
+      [
+       6.5,
+       -210
+      ],
+      [
+       8.5,
+       154
       ],
       [
        9.5,
-       235
+       210
+      ],
+      [
+       10.5,
+       350
       ],
       [
        11.5,
-       600
+       580
+      ],
+      [
+       12.5,
+       850
       ],
       [
        13.5,
@@ -73121,7 +75073,7 @@
      "line": 7.5,
      "name": "Yaxel Lendeborg Rebounds",
      "oddID": "rebounds-YAXEL_LENDEBORG_1_NBA-game-ou-over",
-     "odds": -102,
+     "odds": -111,
      "opposing": "rebounds-YAXEL_LENDEBORG_1_NBA-game-ou-under",
      "period": "game",
      "player": "YAXEL_LENDEBORG_1_NBA",
@@ -73138,7 +75090,7 @@
      "line": 7.5,
      "name": "Yaxel Lendeborg Rebounds",
      "oddID": "rebounds-YAXEL_LENDEBORG_1_NBA-game-ou-under",
-     "odds": -125,
+     "odds": -115,
      "opposing": "rebounds-YAXEL_LENDEBORG_1_NBA-game-ou-over",
      "period": "game",
      "player": "YAXEL_LENDEBORG_1_NBA",
@@ -73150,11 +75102,11 @@
      "alts": [
       [
        1.5,
-       468
+       466
       ],
       [
        2.5,
-       1560
+       1540
       ]
      ],
      "available": true,
@@ -73165,7 +75117,7 @@
      "line": 0.5,
      "name": "Khaman Maluach Steals",
      "oddID": "steals-KHAMAN_MALUACH_1_NBA-game-ou-over",
-     "odds": -110,
+     "odds": -108,
      "opposing": "steals-KHAMAN_MALUACH_1_NBA-game-ou-under",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -73182,7 +75134,7 @@
      "line": 0.5,
      "name": "Khaman Maluach Steals",
      "oddID": "steals-KHAMAN_MALUACH_1_NBA-game-ou-under",
-     "odds": -121,
+     "odds": -123,
      "opposing": "steals-KHAMAN_MALUACH_1_NBA-game-ou-over",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -73199,7 +75151,7 @@
      "line": null,
      "name": "Khaman Maluach Steals",
      "oddID": "steals-KHAMAN_MALUACH_1_NBA-game-yn-no",
-     "odds": -121,
+     "odds": -123,
      "opposing": "steals-KHAMAN_MALUACH_1_NBA-game-yn-yes",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -73216,7 +75168,7 @@
      "line": null,
      "name": "Khaman Maluach Steals",
      "oddID": "steals-KHAMAN_MALUACH_1_NBA-game-yn-yes",
-     "odds": -110,
+     "odds": -108,
      "opposing": "steals-KHAMAN_MALUACH_1_NBA-game-yn-no",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -73233,7 +75185,7 @@
      "line": 1.5,
      "name": "Jalen Green Blk + Stl",
      "oddID": "blocks+steals-JALEN_GREEN_1_NBA-game-ou-over",
-     "odds": -106,
+     "odds": -103,
      "opposing": "blocks+steals-JALEN_GREEN_1_NBA-game-ou-under",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
@@ -73250,7 +75202,7 @@
      "line": 1.5,
      "name": "Jalen Green Blk + Stl",
      "oddID": "blocks+steals-JALEN_GREEN_1_NBA-game-ou-under",
-     "odds": -125,
+     "odds": -129,
      "opposing": "blocks+steals-JALEN_GREEN_1_NBA-game-ou-over",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
@@ -73262,19 +75214,19 @@
      "alts": [
       [
        0.5,
-       -720
+       -730
       ],
       [
        2.5,
-       178
+       181
       ],
       [
        3.5,
-       461
+       462
       ],
       [
        4.5,
-       1060
+       1040
       ],
       [
        5.5,
@@ -73289,7 +75241,7 @@
      "line": 1.5,
      "name": "Khaman Maluach Blocks",
      "oddID": "blocks-KHAMAN_MALUACH_1_NBA-game-ou-over",
-     "odds": -160,
+     "odds": -157,
      "opposing": "blocks-KHAMAN_MALUACH_1_NBA-game-ou-under",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -73306,7 +75258,7 @@
      "line": 1.5,
      "name": "Khaman Maluach Blocks",
      "oddID": "blocks-KHAMAN_MALUACH_1_NBA-game-ou-under",
-     "odds": 120,
+     "odds": 118,
      "opposing": "blocks-KHAMAN_MALUACH_1_NBA-game-ou-over",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -73318,7 +75270,7 @@
      "alts": [
       [
        1.5,
-       482
+       474
       ],
       [
        2.5,
@@ -73333,7 +75285,7 @@
      "line": 0.5,
      "name": "Miles Bridges Blocks",
      "oddID": "blocks-MILES_BRIDGES_1_NBA-game-ou-over",
-     "odds": -104,
+     "odds": -105,
      "opposing": "blocks-MILES_BRIDGES_1_NBA-game-ou-under",
      "period": "game",
      "player": "MILES_BRIDGES_1_NBA",
@@ -73350,7 +75302,7 @@
      "line": 0.5,
      "name": "Miles Bridges Blocks",
      "oddID": "blocks-MILES_BRIDGES_1_NBA-game-ou-under",
-     "odds": -127,
+     "odds": -126,
      "opposing": "blocks-MILES_BRIDGES_1_NBA-game-ou-over",
      "period": "game",
      "player": "MILES_BRIDGES_1_NBA",
@@ -73367,7 +75319,7 @@
      "line": null,
      "name": "Miles Bridges Blocks",
      "oddID": "blocks-MILES_BRIDGES_1_NBA-game-yn-no",
-     "odds": -127,
+     "odds": -126,
      "opposing": "blocks-MILES_BRIDGES_1_NBA-game-yn-yes",
      "period": "game",
      "player": "MILES_BRIDGES_1_NBA",
@@ -73384,7 +75336,7 @@
      "line": null,
      "name": "Miles Bridges Blocks",
      "oddID": "blocks-MILES_BRIDGES_1_NBA-game-yn-yes",
-     "odds": -104,
+     "odds": -105,
      "opposing": "blocks-MILES_BRIDGES_1_NBA-game-yn-no",
      "period": "game",
      "player": "MILES_BRIDGES_1_NBA",
@@ -73396,7 +75348,7 @@
      "alts": [
       [
        0.5,
-       -330
+       -320
       ],
       [
        2.5,
@@ -73449,7 +75401,7 @@
      "line": null,
      "name": "Yaxel Lendeborg 3-pointers made",
      "oddID": "threePointersMade-YAXEL_LENDEBORG_1_NBA-game-yn-yes",
-     "odds": -330,
+     "odds": -320,
      "opposing": "threePointersMade-YAXEL_LENDEBORG_1_NBA-game-yn-no",
      "period": "game",
      "player": "YAXEL_LENDEBORG_1_NBA",
@@ -73466,7 +75418,7 @@
      "line": 2.5,
      "name": "Khaman Maluach Blk + Stl",
      "oddID": "blocks+steals-KHAMAN_MALUACH_1_NBA-game-ou-over",
-     "odds": -108,
+     "odds": -109,
      "opposing": "blocks+steals-KHAMAN_MALUACH_1_NBA-game-ou-under",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -73483,7 +75435,7 @@
      "line": 2.5,
      "name": "Khaman Maluach Blk + Stl",
      "oddID": "blocks+steals-KHAMAN_MALUACH_1_NBA-game-ou-under",
-     "odds": -123,
+     "odds": -122,
      "opposing": "blocks+steals-KHAMAN_MALUACH_1_NBA-game-ou-over",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -73500,7 +75452,7 @@
      "line": null,
      "name": "Yaxel Lendeborg Double-double",
      "oddID": "doubleDouble-YAXEL_LENDEBORG_1_NBA-game-yn-no",
-     "odds": -375,
+     "odds": -400,
      "opposing": "doubleDouble-YAXEL_LENDEBORG_1_NBA-game-yn-yes",
      "period": "game",
      "player": "YAXEL_LENDEBORG_1_NBA",
@@ -73517,7 +75469,7 @@
      "line": null,
      "name": "Yaxel Lendeborg Double-double",
      "oddID": "doubleDouble-YAXEL_LENDEBORG_1_NBA-game-yn-yes",
-     "odds": 230,
+     "odds": 225,
      "opposing": "doubleDouble-YAXEL_LENDEBORG_1_NBA-game-yn-no",
      "period": "game",
      "player": "YAXEL_LENDEBORG_1_NBA",
@@ -73534,7 +75486,7 @@
      "line": null,
      "name": "Khaman Maluach Blocks",
      "oddID": "blocks-KHAMAN_MALUACH_1_NBA-game-yn-yes",
-     "odds": -720,
+     "odds": -730,
      "opposing": "blocks-KHAMAN_MALUACH_1_NBA-game-yn-no",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -73545,16 +75497,16 @@
     {
      "alts": [
       [
-       1.5,
-       174
+       0.5,
+       -251
       ],
       [
        2.5,
-       564
+       594
       ],
       [
        3.5,
-       1520
+       1600
       ]
      ],
      "available": true,
@@ -73562,14 +75514,54 @@
      "book": "draftkings",
      "entity": "JALEN_GREEN_1_NBA",
      "kind": "prop",
-     "line": 0.5,
+     "line": 1.5,
      "name": "Jalen Green Steals",
      "oddID": "steals-JALEN_GREEN_1_NBA-game-ou-over",
-     "odds": -262,
+     "odds": 183,
      "opposing": "steals-JALEN_GREEN_1_NBA-game-ou-under",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
      "side": "over",
+     "stat": "steals",
+     "team": "PHX"
+    },
+    {
+     "alts": [
+      [
+       0.5,
+       182
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "JALEN_GREEN_1_NBA",
+     "kind": "prop",
+     "line": 1.5,
+     "name": "Jalen Green Steals",
+     "oddID": "steals-JALEN_GREEN_1_NBA-game-ou-under",
+     "odds": -246,
+     "opposing": "steals-JALEN_GREEN_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JALEN_GREEN_1_NBA",
+     "side": "under",
+     "stat": "steals",
+     "team": "PHX"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "draftkings",
+     "entity": "JALEN_GREEN_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Jalen Green Steals",
+     "oddID": "steals-JALEN_GREEN_1_NBA-game-yn-no",
+     "odds": 182,
+     "opposing": "steals-JALEN_GREEN_1_NBA-game-yn-yes",
+     "period": "game",
+     "player": "JALEN_GREEN_1_NBA",
+     "side": "no",
      "stat": "steals",
      "team": "PHX"
     },
@@ -73582,7 +75574,7 @@
      "line": null,
      "name": "Jalen Green Steals",
      "oddID": "steals-JALEN_GREEN_1_NBA-game-yn-yes",
-     "odds": -262,
+     "odds": -251,
      "opposing": "steals-JALEN_GREEN_1_NBA-game-yn-no",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
@@ -73599,7 +75591,7 @@
      "line": 1.5,
      "name": "Devin Booker Blk + Stl",
      "oddID": "blocks+steals-DEVIN_BOOKER_1_NBA-game-ou-over",
-     "odds": 128,
+     "odds": 130,
      "opposing": "blocks+steals-DEVIN_BOOKER_1_NBA-game-ou-under",
      "period": "game",
      "player": "DEVIN_BOOKER_1_NBA",
@@ -73616,7 +75608,7 @@
      "line": 1.5,
      "name": "Devin Booker Blk + Stl",
      "oddID": "blocks+steals-DEVIN_BOOKER_1_NBA-game-ou-under",
-     "odds": -170,
+     "odds": -173,
      "opposing": "blocks+steals-DEVIN_BOOKER_1_NBA-game-ou-over",
      "period": "game",
      "player": "DEVIN_BOOKER_1_NBA",
@@ -73633,7 +75625,7 @@
      "line": 1.5,
      "name": "Dillon Brooks Blk + Stl",
      "oddID": "blocks+steals-DILLON_BROOKS_1_NBA-game-ou-over",
-     "odds": 126,
+     "odds": 125,
      "opposing": "blocks+steals-DILLON_BROOKS_1_NBA-game-ou-under",
      "period": "game",
      "player": "DILLON_BROOKS_1_NBA",
@@ -73650,7 +75642,7 @@
      "line": 1.5,
      "name": "Dillon Brooks Blk + Stl",
      "oddID": "blocks+steals-DILLON_BROOKS_1_NBA-game-ou-under",
-     "odds": -168,
+     "odds": -167,
      "opposing": "blocks+steals-DILLON_BROOKS_1_NBA-game-ou-over",
      "period": "game",
      "player": "DILLON_BROOKS_1_NBA",
@@ -73667,7 +75659,7 @@
      "line": 1.5,
      "name": "Miles Bridges Blk + Stl",
      "oddID": "blocks+steals-MILES_BRIDGES_1_NBA-game-ou-over",
-     "odds": -109,
+     "odds": -107,
      "opposing": "blocks+steals-MILES_BRIDGES_1_NBA-game-ou-under",
      "period": "game",
      "player": "MILES_BRIDGES_1_NBA",
@@ -73684,7 +75676,7 @@
      "line": 1.5,
      "name": "Miles Bridges Blk + Stl",
      "oddID": "blocks+steals-MILES_BRIDGES_1_NBA-game-ou-under",
-     "odds": -122,
+     "odds": -124,
      "opposing": "blocks+steals-MILES_BRIDGES_1_NBA-game-ou-over",
      "period": "game",
      "player": "MILES_BRIDGES_1_NBA",
@@ -73724,7 +75716,7 @@
      "line": 0.5,
      "name": "Devin Booker Blocks",
      "oddID": "blocks-DEVIN_BOOKER_1_NBA-game-ou-under",
-     "odds": -251,
+     "odds": -250,
      "opposing": "blocks-DEVIN_BOOKER_1_NBA-game-ou-over",
      "period": "game",
      "player": "DEVIN_BOOKER_1_NBA",
@@ -73741,7 +75733,7 @@
      "line": null,
      "name": "Devin Booker Blocks",
      "oddID": "blocks-DEVIN_BOOKER_1_NBA-game-yn-no",
-     "odds": -251,
+     "odds": -250,
      "opposing": "blocks-DEVIN_BOOKER_1_NBA-game-yn-yes",
      "period": "game",
      "player": "DEVIN_BOOKER_1_NBA",
@@ -73770,7 +75762,7 @@
      "alts": [
       [
        1.5,
-       1160
+       1220
       ]
      ],
      "available": true,
@@ -73798,7 +75790,7 @@
      "line": 0.5,
      "name": "Dillon Brooks Blocks",
      "oddID": "blocks-DILLON_BROOKS_1_NBA-game-ou-under",
-     "odds": -293,
+     "odds": -292,
      "opposing": "blocks-DILLON_BROOKS_1_NBA-game-ou-over",
      "period": "game",
      "player": "DILLON_BROOKS_1_NBA",
@@ -73815,7 +75807,7 @@
      "line": null,
      "name": "Dillon Brooks Blocks",
      "oddID": "blocks-DILLON_BROOKS_1_NBA-game-yn-no",
-     "odds": -293,
+     "odds": -292,
      "opposing": "blocks-DILLON_BROOKS_1_NBA-game-yn-yes",
      "period": "game",
      "player": "DILLON_BROOKS_1_NBA",
@@ -73844,7 +75836,7 @@
      "alts": [
       [
        1.5,
-       800
+       790
       ]
      ],
      "available": true,
@@ -73855,7 +75847,7 @@
      "line": 0.5,
      "name": "Jalen Green Blocks",
      "oddID": "blocks-JALEN_GREEN_1_NBA-game-ou-over",
-     "odds": 152,
+     "odds": 150,
      "opposing": "blocks-JALEN_GREEN_1_NBA-game-ou-under",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
@@ -73872,7 +75864,7 @@
      "line": 0.5,
      "name": "Jalen Green Blocks",
      "oddID": "blocks-JALEN_GREEN_1_NBA-game-ou-under",
-     "odds": -204,
+     "odds": -201,
      "opposing": "blocks-JALEN_GREEN_1_NBA-game-ou-over",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
@@ -73889,7 +75881,7 @@
      "line": null,
      "name": "Jalen Green Blocks",
      "oddID": "blocks-JALEN_GREEN_1_NBA-game-yn-no",
-     "odds": -204,
+     "odds": -201,
      "opposing": "blocks-JALEN_GREEN_1_NBA-game-yn-yes",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
@@ -73906,7 +75898,7 @@
      "line": null,
      "name": "Jalen Green Blocks",
      "oddID": "blocks-JALEN_GREEN_1_NBA-game-yn-yes",
-     "odds": 152,
+     "odds": 150,
      "opposing": "blocks-JALEN_GREEN_1_NBA-game-yn-no",
      "period": "game",
      "player": "JALEN_GREEN_1_NBA",
@@ -73918,15 +75910,15 @@
      "alts": [
       [
        1.5,
-       240
+       234
       ],
       [
        2.5,
-       790
+       770
       ],
       [
        3.5,
-       2000
+       1860
       ]
      ],
      "available": true,
@@ -73954,7 +75946,7 @@
      "line": 0.5,
      "name": "Devin Booker Steals",
      "oddID": "steals-DEVIN_BOOKER_1_NBA-game-ou-under",
-     "odds": 147,
+     "odds": 145,
      "opposing": "steals-DEVIN_BOOKER_1_NBA-game-ou-over",
      "period": "game",
      "player": "DEVIN_BOOKER_1_NBA",
@@ -73971,7 +75963,7 @@
      "line": null,
      "name": "Devin Booker Steals",
      "oddID": "steals-DEVIN_BOOKER_1_NBA-game-yn-no",
-     "odds": 147,
+     "odds": 145,
      "opposing": "steals-DEVIN_BOOKER_1_NBA-game-yn-yes",
      "period": "game",
      "player": "DEVIN_BOOKER_1_NBA",
@@ -74000,15 +75992,15 @@
      "alts": [
       [
        1.5,
-       206
+       212
       ],
       [
        2.5,
-       680
+       670
       ],
       [
        3.5,
-       1700
+       1720
       ]
      ],
      "available": true,
@@ -74019,7 +76011,7 @@
      "line": 0.5,
      "name": "Dillon Brooks Steals",
      "oddID": "steals-DILLON_BROOKS_1_NBA-game-ou-over",
-     "odds": -218,
+     "odds": -214,
      "opposing": "steals-DILLON_BROOKS_1_NBA-game-ou-under",
      "period": "game",
      "player": "DILLON_BROOKS_1_NBA",
@@ -74036,7 +76028,7 @@
      "line": 0.5,
      "name": "Dillon Brooks Steals",
      "oddID": "steals-DILLON_BROOKS_1_NBA-game-ou-under",
-     "odds": 162,
+     "odds": 157,
      "opposing": "steals-DILLON_BROOKS_1_NBA-game-ou-over",
      "period": "game",
      "player": "DILLON_BROOKS_1_NBA",
@@ -74053,7 +76045,7 @@
      "line": null,
      "name": "Dillon Brooks Steals",
      "oddID": "steals-DILLON_BROOKS_1_NBA-game-yn-no",
-     "odds": 162,
+     "odds": 157,
      "opposing": "steals-DILLON_BROOKS_1_NBA-game-yn-yes",
      "period": "game",
      "player": "DILLON_BROOKS_1_NBA",
@@ -74070,7 +76062,7 @@
      "line": null,
      "name": "Dillon Brooks Steals",
      "oddID": "steals-DILLON_BROOKS_1_NBA-game-yn-yes",
-     "odds": -218,
+     "odds": -214,
      "opposing": "steals-DILLON_BROOKS_1_NBA-game-yn-no",
      "period": "game",
      "player": "DILLON_BROOKS_1_NBA",
@@ -74082,11 +76074,11 @@
      "alts": [
       [
        1.5,
-       239
+       245
       ],
       [
        2.5,
-       780
+       840
       ],
       [
        3.5,
@@ -74101,7 +76093,7 @@
      "line": 0.5,
      "name": "Miles Bridges Steals",
      "oddID": "steals-MILES_BRIDGES_1_NBA-game-ou-over",
-     "odds": -188,
+     "odds": -190,
      "opposing": "steals-MILES_BRIDGES_1_NBA-game-ou-under",
      "period": "game",
      "player": "MILES_BRIDGES_1_NBA",
@@ -74152,7 +76144,7 @@
      "line": null,
      "name": "Miles Bridges Steals",
      "oddID": "steals-MILES_BRIDGES_1_NBA-game-yn-yes",
-     "odds": -188,
+     "odds": -190,
      "opposing": "steals-MILES_BRIDGES_1_NBA-game-yn-no",
      "period": "game",
      "player": "MILES_BRIDGES_1_NBA",
@@ -74164,7 +76156,7 @@
      "alts": [
       [
        1.5,
-       1040
+       1080
       ]
      ],
      "available": true,
@@ -74175,7 +76167,7 @@
      "line": 0.5,
      "name": "Khaman Maluach 3-pointers made",
      "oddID": "threePointersMade-KHAMAN_MALUACH_1_NBA-game-ou-over",
-     "odds": 185,
+     "odds": 188,
      "opposing": "threePointersMade-KHAMAN_MALUACH_1_NBA-game-ou-under",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -74192,7 +76184,7 @@
      "line": 0.5,
      "name": "Khaman Maluach 3-pointers made",
      "oddID": "threePointersMade-KHAMAN_MALUACH_1_NBA-game-ou-under",
-     "odds": -256,
+     "odds": -250,
      "opposing": "threePointersMade-KHAMAN_MALUACH_1_NBA-game-ou-over",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -74209,7 +76201,7 @@
      "line": null,
      "name": "Khaman Maluach 3-pointers made",
      "oddID": "threePointersMade-KHAMAN_MALUACH_1_NBA-game-yn-no",
-     "odds": -256,
+     "odds": -250,
      "opposing": "threePointersMade-KHAMAN_MALUACH_1_NBA-game-yn-yes",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -74226,7 +76218,7 @@
      "line": null,
      "name": "Khaman Maluach 3-pointers made",
      "oddID": "threePointersMade-KHAMAN_MALUACH_1_NBA-game-yn-yes",
-     "odds": 185,
+     "odds": 188,
      "opposing": "threePointersMade-KHAMAN_MALUACH_1_NBA-game-yn-no",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -74237,24 +76229,92 @@
     {
      "alts": [
       [
+       12.5,
+       -2000
+      ],
+      [
+       13.5,
+       -1200
+      ],
+      [
        14.5,
-       -770
+       -800
+      ],
+      [
+       15.5,
+       -580
+      ],
+      [
+       16.5,
+       -420
+      ],
+      [
+       17.5,
+       -320
+      ],
+      [
+       18.5,
+       -250
       ],
       [
        19.5,
-       -186
+       -198
+      ],
+      [
+       20.5,
+       -154
+      ],
+      [
+       22.5,
+       102
+      ],
+      [
+       23.5,
+       124
       ],
       [
        24.5,
-       164
+       154
+      ],
+      [
+       25.5,
+       182
+      ],
+      [
+       26.5,
+       225
+      ],
+      [
+       27.5,
+       280
+      ],
+      [
+       28.5,
+       320
       ],
       [
        29.5,
-       420
+       400
+      ],
+      [
+       30.5,
+       470
+      ],
+      [
+       31.5,
+       550
+      ],
+      [
+       32.5,
+       640
       ],
       [
        34.5,
-       1060
+       1000
+      ],
+      [
+       39.5,
+       1800
       ]
      ],
      "available": true,
@@ -74265,7 +76325,7 @@
      "line": 21.5,
      "name": "Gui Santos Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-GUI_SANTOS_1_NBA-game-ou-over",
-     "odds": -115,
+     "odds": -122,
      "opposing": "points+rebounds+assists-GUI_SANTOS_1_NBA-game-ou-under",
      "period": "game",
      "player": "GUI_SANTOS_1_NBA",
@@ -74282,7 +76342,7 @@
      "line": 21.5,
      "name": "Gui Santos Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-GUI_SANTOS_1_NBA-game-ou-under",
-     "odds": -111,
+     "odds": -106,
      "opposing": "points+rebounds+assists-GUI_SANTOS_1_NBA-game-ou-over",
      "period": "game",
      "player": "GUI_SANTOS_1_NBA",
@@ -74293,24 +76353,84 @@
     {
      "alts": [
       [
+       10.5,
+       -1400
+      ],
+      [
+       11.5,
+       -900
+      ],
+      [
+       12.5,
+       -580
+      ],
+      [
+       13.5,
+       -420
+      ],
+      [
        14.5,
        -310
       ],
       [
+       15.5,
+       -240
+      ],
+      [
+       16.5,
+       -180
+      ],
+      [
+       17.5,
+       -138
+      ],
+      [
        19.5,
-       120
+       114
+      ],
+      [
+       20.5,
+       142
+      ],
+      [
+       21.5,
+       178
+      ],
+      [
+       22.5,
+       220
+      ],
+      [
+       23.5,
+       265
       ],
       [
        24.5,
-       340
+       320
+      ],
+      [
+       25.5,
+       390
+      ],
+      [
+       26.5,
+       470
+      ],
+      [
+       27.5,
+       580
+      ],
+      [
+       28.5,
+       680
       ],
       [
        29.5,
-       900
+       870
       ],
       [
        34.5,
-       2000
+       1700
       ]
      ],
      "available": true,
@@ -74349,20 +76469,72 @@
     {
      "alts": [
       [
+       6.5,
+       -1200
+      ],
+      [
+       7.5,
+       -670
+      ],
+      [
+       8.5,
+       -440
+      ],
+      [
        9.5,
        -310
       ],
       [
+       10.5,
+       -230
+      ],
+      [
+       11.5,
+       -166
+      ],
+      [
+       13.5,
+       106
+      ],
+      [
        14.5,
-       142
+       140
+      ],
+      [
+       15.5,
+       178
+      ],
+      [
+       16.5,
+       225
+      ],
+      [
+       17.5,
+       280
+      ],
+      [
+       18.5,
+       360
       ],
       [
        19.5,
-       450
+       430
+      ],
+      [
+       20.5,
+       550
+      ],
+      [
+       21.5,
+       640
+      ],
+      [
+       22.5,
+       800
       ],
       [
        24.5,
-       1300
+       1200
       ]
      ],
      "available": true,
@@ -74401,16 +76573,40 @@
     {
      "alts": [
       [
-       4.5,
-       -1800
+       5.5,
+       -850
+      ],
+      [
+       6.5,
+       -420
+      ],
+      [
+       7.5,
+       -230
       ],
       [
        9.5,
-       136
+       126
+      ],
+      [
+       10.5,
+       194
+      ],
+      [
+       11.5,
+       300
+      ],
+      [
+       12.5,
+       430
+      ],
+      [
+       13.5,
+       640
       ],
       [
        14.5,
-       1100
+       1060
       ]
      ],
      "available": true,
@@ -74421,7 +76617,7 @@
      "line": 8.5,
      "name": "Gui Santos Reb + Ast",
      "oddID": "rebounds+assists-GUI_SANTOS_1_NBA-game-ou-over",
-     "odds": -120,
+     "odds": -128,
      "opposing": "rebounds+assists-GUI_SANTOS_1_NBA-game-ou-under",
      "period": "game",
      "player": "GUI_SANTOS_1_NBA",
@@ -74438,7 +76634,7 @@
      "line": 8.5,
      "name": "Gui Santos Reb + Ast",
      "oddID": "rebounds+assists-GUI_SANTOS_1_NBA-game-ou-under",
-     "odds": -106,
+     "odds": 100,
      "opposing": "rebounds+assists-GUI_SANTOS_1_NBA-game-ou-over",
      "period": "game",
      "player": "GUI_SANTOS_1_NBA",
@@ -74449,16 +76645,32 @@
     {
      "alts": [
       [
+       2.5,
+       -1600
+      ],
+      [
        3.5,
-       -430
+       -470
+      ],
+      [
+       4.5,
+       -215
+      ],
+      [
+       6.5,
+       188
       ],
       [
        7.5,
-       340
+       320
+      ],
+      [
+       8.5,
+       580
       ],
       [
        9.5,
-       900
+       850
       ],
       [
        11.5,
@@ -74473,7 +76685,7 @@
      "line": 5.5,
      "name": "Gui Santos Rebounds",
      "oddID": "rebounds-GUI_SANTOS_1_NBA-game-ou-over",
-     "odds": 102,
+     "odds": 100,
      "opposing": "rebounds-GUI_SANTOS_1_NBA-game-ou-under",
      "period": "game",
      "player": "GUI_SANTOS_1_NBA",
@@ -74490,7 +76702,7 @@
      "line": 5.5,
      "name": "Gui Santos Rebounds",
      "oddID": "rebounds-GUI_SANTOS_1_NBA-game-ou-under",
-     "odds": -130,
+     "odds": -128,
      "opposing": "rebounds-GUI_SANTOS_1_NBA-game-ou-over",
      "period": "game",
      "player": "GUI_SANTOS_1_NBA",
@@ -74502,15 +76714,27 @@
      "alts": [
       [
        1.5,
-       -650
+       -700
+      ],
+      [
+       2.5,
+       -225
+      ],
+      [
+       4.5,
+       230
       ],
       [
        5.5,
-       540
+       450
+      ],
+      [
+       6.5,
+       880
       ],
       [
        7.5,
-       1700
+       1500
       ]
      ],
      "available": true,
@@ -74521,7 +76745,7 @@
      "line": 3.5,
      "name": "Gui Santos Assists",
      "oddID": "assists-GUI_SANTOS_1_NBA-game-ou-over",
-     "odds": 126,
+     "odds": 108,
      "opposing": "assists-GUI_SANTOS_1_NBA-game-ou-under",
      "period": "game",
      "player": "GUI_SANTOS_1_NBA",
@@ -74538,7 +76762,7 @@
      "line": 3.5,
      "name": "Gui Santos Assists",
      "oddID": "assists-GUI_SANTOS_1_NBA-game-ou-under",
-     "odds": -162,
+     "odds": -138,
      "opposing": "assists-GUI_SANTOS_1_NBA-game-ou-over",
      "period": "game",
      "player": "GUI_SANTOS_1_NBA",
@@ -74550,19 +76774,19 @@
      "alts": [
       [
        0.5,
-       -500
+       -480
       ],
       [
        2.5,
-       285
+       290
       ],
       [
        3.5,
-       700
+       800
       ],
       [
        4.5,
-       1900
+       2000
       ]
      ],
      "available": true,
@@ -74607,7 +76831,7 @@
      "line": null,
      "name": "Gui Santos 3-pointers made",
      "oddID": "threePointersMade-GUI_SANTOS_1_NBA-game-yn-yes",
-     "odds": -500,
+     "odds": -480,
      "opposing": "threePointersMade-GUI_SANTOS_1_NBA-game-yn-no",
      "period": "game",
      "player": "GUI_SANTOS_1_NBA",
@@ -74618,16 +76842,28 @@
     {
      "alts": [
       [
+       2.5,
+       -700
+      ],
+      [
        3.5,
-       -280
+       -270
       ],
       [
        5.5,
-       154
+       162
+      ],
+      [
+       6.5,
+       290
       ],
       [
        7.5,
-       480
+       490
+      ],
+      [
+       8.5,
+       850
       ],
       [
        9.5,
@@ -74642,7 +76878,7 @@
      "line": 4.5,
      "name": "Brandon Williams Assists",
      "oddID": "assists-BRANDON_WILLIAMS_1_NBA-game-ou-over",
-     "odds": -128,
+     "odds": -122,
      "opposing": "assists-BRANDON_WILLIAMS_1_NBA-game-ou-under",
      "period": "game",
      "player": "BRANDON_WILLIAMS_1_NBA",
@@ -74659,7 +76895,7 @@
      "line": 4.5,
      "name": "Brandon Williams Assists",
      "oddID": "assists-BRANDON_WILLIAMS_1_NBA-game-ou-under",
-     "odds": 100,
+     "odds": -104,
      "opposing": "assists-BRANDON_WILLIAMS_1_NBA-game-ou-over",
      "period": "game",
      "player": "BRANDON_WILLIAMS_1_NBA",
@@ -74670,20 +76906,84 @@
     {
      "alts": [
       [
+       12.5,
+       -1450
+      ],
+      [
+       13.5,
+       -900
+      ],
+      [
        14.5,
        -650
       ],
       [
+       15.5,
+       -470
+      ],
+      [
+       16.5,
+       -350
+      ],
+      [
+       17.5,
+       -270
+      ],
+      [
+       18.5,
+       -215
+      ],
+      [
        19.5,
-       -185
+       -172
+      ],
+      [
+       20.5,
+       -138
+      ],
+      [
+       22.5,
+       112
+      ],
+      [
+       23.5,
+       136
       ],
       [
        24.5,
-       150
+       164
+      ],
+      [
+       25.5,
+       198
+      ],
+      [
+       26.5,
+       230
+      ],
+      [
+       27.5,
+       280
+      ],
+      [
+       28.5,
+       320
       ],
       [
        29.5,
        400
+      ],
+      [
+       30.5,
+       470
+      ],
+      [
+       31.5,
+       550
+      ],
+      [
+       32.5,
+       640
       ],
       [
        34.5,
@@ -74724,15 +77024,113 @@
      "team": "GSW"
     },
     {
+     "alts": [
+      [
+       14.5,
+       -2000
+      ],
+      [
+       15.5,
+       -1200
+      ],
+      [
+       16.5,
+       -850
+      ],
+      [
+       17.5,
+       -600
+      ],
+      [
+       18.5,
+       -450
+      ],
+      [
+       19.5,
+       -350
+      ],
+      [
+       20.5,
+       -280
+      ],
+      [
+       21.5,
+       -230
+      ],
+      [
+       22.5,
+       -188
+      ],
+      [
+       23.5,
+       -154
+      ],
+      [
+       25.5,
+       100
+      ],
+      [
+       26.5,
+       118
+      ],
+      [
+       27.5,
+       144
+      ],
+      [
+       28.5,
+       168
+      ],
+      [
+       29.5,
+       210
+      ],
+      [
+       30.5,
+       235
+      ],
+      [
+       31.5,
+       280
+      ],
+      [
+       32.5,
+       320
+      ],
+      [
+       33.5,
+       390
+      ],
+      [
+       34.5,
+       470
+      ],
+      [
+       35.5,
+       550
+      ],
+      [
+       36.5,
+       630
+      ],
+      [
+       39.5,
+       1000
+      ],
+      [
+       44.5,
+       1700
+      ]
+     ],
      "available": true,
      "betType": "ou",
-     "book": "caesars",
+     "book": "fanduel",
      "entity": "BRANDON_WILLIAMS_1_NBA",
      "kind": "prop",
      "line": 24.5,
      "name": "Brandon Williams Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-BRANDON_WILLIAMS_1_NBA-game-ou-over",
-     "odds": -120,
+     "odds": -125,
      "opposing": "points+rebounds+assists-BRANDON_WILLIAMS_1_NBA-game-ou-under",
      "period": "game",
      "player": "BRANDON_WILLIAMS_1_NBA",
@@ -74743,13 +77141,13 @@
     {
      "available": true,
      "betType": "ou",
-     "book": "caesars",
+     "book": "fanduel",
      "entity": "BRANDON_WILLIAMS_1_NBA",
      "kind": "prop",
      "line": 24.5,
      "name": "Brandon Williams Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-BRANDON_WILLIAMS_1_NBA-game-ou-under",
-     "odds": -112,
+     "odds": -104,
      "opposing": "points+rebounds+assists-BRANDON_WILLIAMS_1_NBA-game-ou-over",
      "period": "game",
      "player": "BRANDON_WILLIAMS_1_NBA",
@@ -74760,16 +77158,84 @@
     {
      "alts": [
       [
+       10.5,
+       -2000
+      ],
+      [
+       11.5,
+       -1200
+      ],
+      [
+       12.5,
+       -800
+      ],
+      [
+       13.5,
+       -580
+      ],
+      [
        14.5,
-       -410
+       -400
+      ],
+      [
+       15.5,
+       -310
+      ],
+      [
+       16.5,
+       -245
+      ],
+      [
+       17.5,
+       -198
+      ],
+      [
+       18.5,
+       -158
+      ],
+      [
+       20.5,
+       -102
+      ],
+      [
+       21.5,
+       120
+      ],
+      [
+       22.5,
+       148
+      ],
+      [
+       23.5,
+       178
       ],
       [
        24.5,
-       220
+       210
+      ],
+      [
+       25.5,
+       250
+      ],
+      [
+       26.5,
+       300
+      ],
+      [
+       27.5,
+       360
+      ],
+      [
+       28.5,
+       410
       ],
       [
        29.5,
-       520
+       490
+      ],
+      [
+       30.5,
+       580
       ],
       [
        34.5,
@@ -74816,24 +77282,80 @@
     {
      "alts": [
       [
+       8.5,
+       -1400
+      ],
+      [
        9.5,
        -850
       ],
       [
+       10.5,
+       -580
+      ],
+      [
+       11.5,
+       -420
+      ],
+      [
+       12.5,
+       -300
+      ],
+      [
+       13.5,
+       -230
+      ],
+      [
        14.5,
-       -172
+       -180
+      ],
+      [
+       15.5,
+       -138
+      ],
+      [
+       17.5,
+       114
+      ],
+      [
+       18.5,
+       140
       ],
       [
        19.5,
-       176
+       172
+      ],
+      [
+       20.5,
+       205
+      ],
+      [
+       21.5,
+       240
+      ],
+      [
+       22.5,
+       300
+      ],
+      [
+       23.5,
+       360
       ],
       [
        24.5,
-       450
+       410
+      ],
+      [
+       25.5,
+       520
+      ],
+      [
+       26.5,
+       630
       ],
       [
        29.5,
-       1060
+       1000
       ],
       [
        34.5,
@@ -74848,7 +77370,7 @@
      "line": 16.5,
      "name": "Brandon Williams Points",
      "oddID": "points-BRANDON_WILLIAMS_1_NBA-game-ou-over",
-     "odds": -108,
+     "odds": -106,
      "opposing": "points-BRANDON_WILLIAMS_1_NBA-game-ou-under",
      "period": "game",
      "player": "BRANDON_WILLIAMS_1_NBA",
@@ -74865,7 +77387,7 @@
      "line": 16.5,
      "name": "Brandon Williams Points",
      "oddID": "points-BRANDON_WILLIAMS_1_NBA-game-ou-under",
-     "odds": -118,
+     "odds": -120,
      "opposing": "points-BRANDON_WILLIAMS_1_NBA-game-ou-over",
      "period": "game",
      "player": "BRANDON_WILLIAMS_1_NBA",
@@ -74877,15 +77399,43 @@
      "alts": [
       [
        4.5,
-       -1200
+       -1100
+      ],
+      [
+       5.5,
+       -500
+      ],
+      [
+       6.5,
+       -270
+      ],
+      [
+       7.5,
+       -158
       ],
       [
        9.5,
-       162
+       176
+      ],
+      [
+       10.5,
+       265
+      ],
+      [
+       11.5,
+       390
+      ],
+      [
+       12.5,
+       580
+      ],
+      [
+       13.5,
+       850
       ],
       [
        14.5,
-       1100
+       1300
       ]
      ],
      "available": true,
@@ -74896,7 +77446,7 @@
      "line": 8.5,
      "name": "Brandon Williams Reb + Ast",
      "oddID": "rebounds+assists-BRANDON_WILLIAMS_1_NBA-game-ou-over",
-     "odds": 102,
+     "odds": 110,
      "opposing": "rebounds+assists-BRANDON_WILLIAMS_1_NBA-game-ou-under",
      "period": "game",
      "player": "BRANDON_WILLIAMS_1_NBA",
@@ -74913,7 +77463,7 @@
      "line": 8.5,
      "name": "Brandon Williams Reb + Ast",
      "oddID": "rebounds+assists-BRANDON_WILLIAMS_1_NBA-game-ou-under",
-     "odds": -130,
+     "odds": -140,
      "opposing": "rebounds+assists-BRANDON_WILLIAMS_1_NBA-game-ou-over",
      "period": "game",
      "player": "BRANDON_WILLIAMS_1_NBA",
@@ -74924,8 +77474,24 @@
     {
      "alts": [
       [
+       1.5,
+       -700
+      ],
+      [
+       2.5,
+       -235
+      ],
+      [
+       4.5,
+       225
+      ],
+      [
        5.5,
-       420
+       430
+      ],
+      [
+       6.5,
+       800
       ],
       [
        7.5,
@@ -74940,7 +77506,7 @@
      "line": 3.5,
      "name": "Brandon Williams Rebounds",
      "oddID": "rebounds-BRANDON_WILLIAMS_1_NBA-game-ou-over",
-     "odds": 100,
+     "odds": 106,
      "opposing": "rebounds-BRANDON_WILLIAMS_1_NBA-game-ou-under",
      "period": "game",
      "player": "BRANDON_WILLIAMS_1_NBA",
@@ -74957,7 +77523,7 @@
      "line": 3.5,
      "name": "Brandon Williams Rebounds",
      "oddID": "rebounds-BRANDON_WILLIAMS_1_NBA-game-ou-under",
-     "odds": -128,
+     "odds": -136,
      "opposing": "rebounds-BRANDON_WILLIAMS_1_NBA-game-ou-over",
      "period": "game",
      "player": "BRANDON_WILLIAMS_1_NBA",
@@ -74969,11 +77535,11 @@
      "alts": [
       [
        0.5,
-       -245
+       -250
       ],
       [
        2.5,
-       630
+       600
       ],
       [
        3.5,
@@ -74988,7 +77554,7 @@
      "line": 1.5,
      "name": "Brandon Williams 3-pointers made",
      "oddID": "threePointersMade-BRANDON_WILLIAMS_1_NBA-game-ou-over",
-     "odds": 200,
+     "odds": 196,
      "opposing": "threePointersMade-BRANDON_WILLIAMS_1_NBA-game-ou-under",
      "period": "game",
      "player": "BRANDON_WILLIAMS_1_NBA",
@@ -75005,7 +77571,7 @@
      "line": 1.5,
      "name": "Brandon Williams 3-pointers made",
      "oddID": "threePointersMade-BRANDON_WILLIAMS_1_NBA-game-ou-under",
-     "odds": -265,
+     "odds": -260,
      "opposing": "threePointersMade-BRANDON_WILLIAMS_1_NBA-game-ou-over",
      "period": "game",
      "player": "BRANDON_WILLIAMS_1_NBA",
@@ -75022,7 +77588,7 @@
      "line": null,
      "name": "Brandon Williams 3-pointers made",
      "oddID": "threePointersMade-BRANDON_WILLIAMS_1_NBA-game-yn-no",
-     "odds": 167,
+     "odds": 162,
      "opposing": "threePointersMade-BRANDON_WILLIAMS_1_NBA-game-yn-yes",
      "period": "game",
      "player": "BRANDON_WILLIAMS_1_NBA",
@@ -75039,12 +77605,29 @@
      "line": null,
      "name": "Brandon Williams 3-pointers made",
      "oddID": "threePointersMade-BRANDON_WILLIAMS_1_NBA-game-yn-yes",
-     "odds": -245,
+     "odds": -250,
      "opposing": "threePointersMade-BRANDON_WILLIAMS_1_NBA-game-yn-no",
      "period": "game",
      "player": "BRANDON_WILLIAMS_1_NBA",
      "side": "yes",
      "stat": "threePointersMade",
+     "team": "GSW"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "espnbet",
+     "entity": "GUI_SANTOS_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Gui Santos Double-double",
+     "oddID": "doubleDouble-GUI_SANTOS_1_NBA-game-yn-no",
+     "odds": -2000,
+     "opposing": "doubleDouble-GUI_SANTOS_1_NBA-game-yn-yes",
+     "period": "game",
+     "player": "GUI_SANTOS_1_NBA",
+     "side": "no",
+     "stat": "doubleDouble",
      "team": "GSW"
     },
     {
@@ -75073,7 +77656,7 @@
      "line": null,
      "name": "Khaman Maluach Assists",
      "oddID": "assists-KHAMAN_MALUACH_1_NBA-game-yn-yes",
-     "odds": -197,
+     "odds": -193,
      "opposing": "assists-KHAMAN_MALUACH_1_NBA-game-yn-no",
      "period": "game",
      "player": "KHAMAN_MALUACH_1_NBA",
@@ -75146,7 +77729,7 @@
      "line": null,
      "name": "Brandon Williams First basket",
      "oddID": "firstBasket-BRANDON_WILLIAMS_1_NBA-game-yn-yes",
-     "odds": 850,
+     "odds": 950,
      "opposing": "firstBasket-BRANDON_WILLIAMS_1_NBA-game-yn-no",
      "period": "game",
      "player": "BRANDON_WILLIAMS_1_NBA",
@@ -75191,24 +77774,80 @@
     {
      "alts": [
       [
+       8.5,
+       -2000
+      ],
+      [
        9.5,
-       -900
+       -1100
+      ],
+      [
+       10.5,
+       -670
+      ],
+      [
+       11.5,
+       -450
+      ],
+      [
+       12.5,
+       -320
+      ],
+      [
+       13.5,
+       -245
       ],
       [
        14.5,
-       -185
+       -188
+      ],
+      [
+       15.5,
+       -144
+      ],
+      [
+       17.5,
+       118
+      ],
+      [
+       18.5,
+       152
       ],
       [
        19.5,
-       185
+       188
+      ],
+      [
+       20.5,
+       230
+      ],
+      [
+       21.5,
+       290
+      ],
+      [
+       22.5,
+       360
+      ],
+      [
+       23.5,
+       430
       ],
       [
        24.5,
-       600
+       550
+      ],
+      [
+       25.5,
+       640
+      ],
+      [
+       26.5,
+       800
       ],
       [
        29.5,
-       2000
+       1800
       ]
      ],
      "available": true,
@@ -75219,7 +77858,7 @@
      "line": 16.5,
      "name": "Gui Santos Pts + Ast",
      "oddID": "points+assists-GUI_SANTOS_1_NBA-game-ou-over",
-     "odds": -102,
+     "odds": -108,
      "opposing": "points+assists-GUI_SANTOS_1_NBA-game-ou-under",
      "period": "game",
      "player": "GUI_SANTOS_1_NBA",
@@ -75236,7 +77875,7 @@
      "line": 16.5,
      "name": "Gui Santos Pts + Ast",
      "oddID": "points+assists-GUI_SANTOS_1_NBA-game-ou-under",
-     "odds": -128,
+     "odds": -122,
      "opposing": "points+assists-GUI_SANTOS_1_NBA-game-ou-over",
      "period": "game",
      "player": "GUI_SANTOS_1_NBA",
@@ -75253,16 +77892,382 @@
      "line": null,
      "name": "Brandon Williams Double-double",
      "oddID": "doubleDouble-BRANDON_WILLIAMS_1_NBA-game-yn-yes",
-     "odds": 1000,
+     "odds": 1100,
      "opposing": "doubleDouble-BRANDON_WILLIAMS_1_NBA-game-yn-no",
      "period": "game",
      "player": "BRANDON_WILLIAMS_1_NBA",
      "side": "yes",
      "stat": "doubleDouble",
      "team": "GSW"
+    },
+    {
+     "alts": [
+      [
+       4.5,
+       -1600
+      ],
+      [
+       5.5,
+       -800
+      ],
+      [
+       6.5,
+       -470
+      ],
+      [
+       7.5,
+       -320
+      ],
+      [
+       8.5,
+       -225
+      ],
+      [
+       9.5,
+       -158
+      ],
+      [
+       11.5,
+       122
+      ],
+      [
+       12.5,
+       164
+      ],
+      [
+       13.5,
+       210
+      ],
+      [
+       14.5,
+       280
+      ],
+      [
+       15.5,
+       360
+      ],
+      [
+       16.5,
+       430
+      ],
+      [
+       17.5,
+       580
+      ],
+      [
+       18.5,
+       700
+      ],
+      [
+       19.5,
+       880
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JORDAN_GOODWIN_1_NBA",
+     "kind": "prop",
+     "line": 10.5,
+     "name": "Jordan Goodwin Pts + Reb",
+     "oddID": "points+rebounds-JORDAN_GOODWIN_1_NBA-game-ou-over",
+     "odds": -111,
+     "opposing": "points+rebounds-JORDAN_GOODWIN_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JORDAN_GOODWIN_1_NBA",
+     "side": "over",
+     "stat": "points+rebounds",
+     "team": "PHX"
+    },
+    {
+     "alts": [
+      [
+       4.5,
+       680
+      ],
+      [
+       5.5,
+       450
+      ],
+      [
+       6.5,
+       310
+      ],
+      [
+       7.5,
+       225
+      ],
+      [
+       8.5,
+       164
+      ],
+      [
+       9.5,
+       118
+      ],
+      [
+       11.5,
+       -162
+      ],
+      [
+       12.5,
+       -225
+      ],
+      [
+       13.5,
+       -300
+      ],
+      [
+       14.5,
+       -400
+      ],
+      [
+       15.5,
+       -580
+      ],
+      [
+       16.5,
+       -750
+      ],
+      [
+       17.5,
+       -1200
+      ],
+      [
+       18.5,
+       -1800
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JORDAN_GOODWIN_1_NBA",
+     "kind": "prop",
+     "line": 10.5,
+     "name": "Jordan Goodwin Pts + Reb",
+     "oddID": "points+rebounds-JORDAN_GOODWIN_1_NBA-game-ou-under",
+     "odds": -115,
+     "opposing": "points+rebounds-JORDAN_GOODWIN_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JORDAN_GOODWIN_1_NBA",
+     "side": "under",
+     "stat": "points+rebounds",
+     "team": "PHX"
+    },
+    {
+     "alts": [
+      [
+       2.5,
+       -670
+      ],
+      [
+       3.5,
+       -440
+      ],
+      [
+       4.5,
+       -245
+      ],
+      [
+       5.5,
+       -162
+      ],
+      [
+       7.5,
+       136
+      ],
+      [
+       8.5,
+       188
+      ],
+      [
+       9.5,
+       265
+      ],
+      [
+       10.5,
+       360
+      ],
+      [
+       11.5,
+       490
+      ],
+      [
+       12.5,
+       640
+      ],
+      [
+       14.5,
+       1100
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JORDAN_GOODWIN_1_NBA",
+     "kind": "prop",
+     "line": 6.5,
+     "name": "Jordan Goodwin Points",
+     "oddID": "points-JORDAN_GOODWIN_1_NBA-game-ou-over",
+     "odds": -106,
+     "opposing": "points-JORDAN_GOODWIN_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JORDAN_GOODWIN_1_NBA",
+     "side": "over",
+     "stat": "points",
+     "team": "PHX"
+    },
+    {
+     "alts": [
+      [
+       1.5,
+       920
+      ],
+      [
+       2.5,
+       400
+      ],
+      [
+       3.5,
+       290
+      ],
+      [
+       4.5,
+       178
+      ],
+      [
+       5.5,
+       122
+      ],
+      [
+       7.5,
+       -186
+      ],
+      [
+       8.5,
+       -260
+      ],
+      [
+       9.5,
+       -390
+      ],
+      [
+       10.5,
+       -580
+      ],
+      [
+       11.5,
+       -900
+      ],
+      [
+       12.5,
+       -1450
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JORDAN_GOODWIN_1_NBA",
+     "kind": "prop",
+     "line": 6.5,
+     "name": "Jordan Goodwin Points",
+     "oddID": "points-JORDAN_GOODWIN_1_NBA-game-ou-under",
+     "odds": -120,
+     "opposing": "points-JORDAN_GOODWIN_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JORDAN_GOODWIN_1_NBA",
+     "side": "under",
+     "stat": "points",
+     "team": "PHX"
+    },
+    {
+     "alts": [
+      [
+       1.5,
+       -1450
+      ],
+      [
+       2.5,
+       -360
+      ],
+      [
+       4.5,
+       136
+      ],
+      [
+       5.5,
+       270
+      ],
+      [
+       6.5,
+       520
+      ],
+      [
+       7.5,
+       850
+      ],
+      [
+       9.5,
+       2000
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JORDAN_GOODWIN_1_NBA",
+     "kind": "prop",
+     "line": 3.5,
+     "name": "Jordan Goodwin Rebounds",
+     "oddID": "rebounds-JORDAN_GOODWIN_1_NBA-game-ou-over",
+     "odds": -154,
+     "opposing": "rebounds-JORDAN_GOODWIN_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JORDAN_GOODWIN_1_NBA",
+     "side": "over",
+     "stat": "rebounds",
+     "team": "PHX"
+    },
+    {
+     "alts": [
+      [
+       1.5,
+       640
+      ],
+      [
+       2.5,
+       255
+      ],
+      [
+       4.5,
+       -182
+      ],
+      [
+       5.5,
+       -400
+      ],
+      [
+       6.5,
+       -900
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JORDAN_GOODWIN_1_NBA",
+     "kind": "prop",
+     "line": 3.5,
+     "name": "Jordan Goodwin Rebounds",
+     "oddID": "rebounds-JORDAN_GOODWIN_1_NBA-game-ou-under",
+     "odds": 120,
+     "opposing": "rebounds-JORDAN_GOODWIN_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JORDAN_GOODWIN_1_NBA",
+     "side": "under",
+     "stat": "rebounds",
+     "team": "PHX"
     }
    ],
-   "pulledAt": "2026-10-25T00:38:20Z",
+   "pulledAt": "2026-10-25T01:32:09Z",
    "start": "2026-10-25T02:00:00.000Z",
    "started": false
   },
