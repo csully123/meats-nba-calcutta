@@ -104,7 +104,7 @@ details.day .daybody{display:flex;flex-direction:column;gap:14px;margin-top:10px
 .game .meta .when{font-weight:600;color:var(--ink);font-family:var(--display);font-size:18px;text-transform:uppercase}
 .badge{font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;padding:2px 7px;border-radius:3px;background:var(--soft)}
 .badge.live{background:var(--loss);color:#fff}.badge.final{background:var(--ink);color:var(--bg)}.badge.lock{background:var(--soft);color:var(--muted)}
-.mainlines{display:grid;grid-template-columns:auto 1fr 1fr 1fr;gap:6px;padding:10px 12px;align-items:center}
+.mainlines{display:grid;grid-template-columns:minmax(0,1.15fr) repeat(3,minmax(0,1fr));gap:6px;padding:10px 12px;align-items:center}
 .mainlines .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);text-align:center}
 .mainlines .teamcell{font-family:var(--display);font-size:18px;font-weight:600;text-transform:uppercase;display:flex;align-items:center;gap:8px;min-width:0;--tc:var(--line);border-left:4px solid var(--tc);background:linear-gradient(90deg,color-mix(in srgb,var(--tc) 22%,transparent),transparent 85%);padding:6px 8px;border-radius:6px}
 .game .split{height:5px;background:linear-gradient(90deg,var(--ac,var(--line)) 0 50%,var(--hc,var(--line)) 50% 100%)}
@@ -145,7 +145,27 @@ details.day .daybody{display:flex;flex-direction:column;gap:14px;margin-top:10px
 .cbet .add.go{border-color:var(--line);color:var(--ink)}
 .wtext{margin:0;font-size:14px}
 .game.flash{outline:3px solid var(--accent);outline-offset:3px}
-.mainlines .teamcell img{width:26px;height:26px;object-fit:contain;background:rgba(255,255,255,.08);border-radius:50%;padding:2px}
+.mainlines .teamcell img{width:26px;height:26px;flex:none;object-fit:contain;background:rgba(255,255,255,.08);border-radius:50%;padding:2px}
+.mainlines .teamcell>span{min-width:0;overflow:hidden}
+.mainlines .teamcell small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ob .l,.ob .o{white-space:nowrap}
+/* Narrow phones and large accessibility text: tighten the grid so the numbers never clip. */
+@media (max-width:430px){
+  .mainlines{gap:4px;padding:8px}
+  .mainlines .teamcell{font-size:15px;gap:6px;padding:5px 6px;border-left-width:3px}
+  .mainlines .teamcell img{width:22px;height:22px}
+  .mainlines .teamcell small{display:none}
+  .mainlines .lbl{font-size:10px;letter-spacing:.06em}
+  .ob{padding:6px 3px}
+  .ob .l{font-size:13px}
+  .ob .o{font-size:11px}
+  .altbtn{padding:0 5px;font-size:13px}
+}
+@media (max-width:360px){
+  .mainlines{grid-template-columns:minmax(0,.9fr) repeat(3,minmax(0,1fr))}
+  .mainlines .teamcell{font-size:14px}
+  .ob .l{font-size:12px}
+}
 .ob{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;border:1.5px solid var(--line);background:var(--bg);border-radius:6px;padding:7px 6px;min-width:0}
 .ob .l{font-family:var(--mono);font-size:14px;font-weight:600}
 .ob .o{font-family:var(--mono);font-size:12px;color:var(--muted)}
