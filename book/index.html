@@ -134,6 +134,14 @@ details.day .daybody{display:flex;flex-direction:column;gap:14px;margin-top:10px
 .cbet .add{border:1.5px solid var(--accent);color:var(--accent);background:none;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
 .cbet .add:disabled{opacity:.45}
 .cbet .moved{font-size:12px;color:var(--muted)}
+.bestbets{display:flex;flex-direction:column;gap:10px;margin:0 0 14px}
+.bestbets .bbhead .eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.cbet.best{border:1px solid color-mix(in srgb,var(--tc,var(--accent)) 40%,var(--line));box-shadow:0 10px 24px -14px rgba(0,0,0,.45)}
+.cbet.best>.eyebrow{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:6px}
+.cbet.best>.eyebrow small{text-transform:none;letter-spacing:0;font-weight:500;margin-left:6px}
+.cbet .add.go{border-color:var(--line);color:var(--ink)}
+.wtext{margin:0;font-size:14px}
+.game.flash{outline:3px solid var(--accent);outline-offset:3px}
 .mainlines .teamcell img{width:26px;height:26px;object-fit:contain;background:rgba(255,255,255,.08);border-radius:50%;padding:2px}
 .ob{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;border:1.5px solid var(--line);background:var(--bg);border-radius:6px;padding:7px 6px;min-width:0}
 .ob .l{font-family:var(--mono);font-size:14px;font-weight:600}
@@ -394,7 +402,7 @@ td.legs div{white-space:nowrap}
     // logos from the picks board's games file, matched by date + teams
     const pg=await fetch('../data/games.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));
     S.logos={};for(const x of Object.values(pg)){S.logos[x.date+'|'+x.away+'|'+x.home]={a:x.awayLogo,h:x.homeLogo,ac:x.awayColor,hc:x.homeColor,stage:x.stage||'regular',series:x.series||null};}
-    S.insights=await fetch('../data/book-insights.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));
+    const ins=await fetch('../data/book-insights.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));S.insights=ins.games||{};S.bestBets=ins.days||{};
   }
   const hexOf=c=>{if(!c)return '';c=String(c).trim();if(/^#[0-9a-fA-F]{6}$/.test(c))return c;if(/^[0-9a-fA-F]{6}$/.test(c))return '#'+c;return '';};
   const lum=c=>{const n=parseInt(c.slice(1),16);const r=(n>>16)&255,gg=(n>>8)&255,b=n&255;return (0.299*r+0.587*gg+0.114*b)/255;};
@@ -435,17 +443,30 @@ td.legs div{white-space:nowrap}
     const days={};for(const g of show)(days[g.date]=days[g.date]||[]).push(g);
     v.innerHTML=Object.keys(days).sort().map(day=>{const list=days[day].sort((a,b)=>a.start<b.start?-1:1);
       const head=`<h2>${day===today?'Today, ':day<today?'Earlier, ':''}${fmtLong.format(new Date(day+'T12:00:00Z'))}</h2><span class="cnt num">${list.length} game${list.length===1?'':'s'}</span>`;
-      const body=list.map(renderGame).join('');
+      const body=renderBestBets(day)+list.map(renderGame).join('');
       if(day===today)return `<div class="day"><div class="dayhead">${head}</div>${body}</div>`;
       return `<details class="day" data-day="${esc(day)}" ${S.openDays.has(day)?'open':''}><summary class="dayhead">${head}</summary><div class="daybody">${body}</div></details>`;}).join('');
     v.querySelectorAll('details.day').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)S.openDays.add(d.dataset.day);else S.openDays.delete(d.dataset.day);}));
     v.querySelectorAll('details.more').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)S.openMore.add(d.dataset.g);else S.openMore.delete(d.dataset.g);}));
     v.querySelectorAll('details.wdet').forEach(d=>d.addEventListener('toggle',()=>{const set=S.openW||(S.openW=new Set());if(d.open)set.add(d.dataset.w);else set.delete(d.dataset.w);}));
     v.querySelectorAll('[data-cadd]').forEach(b=>b.addEventListener('click',()=>{const [eid,kind]=b.dataset.cadd.split('|');addClaudeBet(eid,kind,b);}));
+    v.querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click',()=>{const el=document.getElementById('g-'+b.dataset.goto);if(!el)return;el.scrollIntoView({behavior:'smooth',block:'start'});el.classList.add('flash');setTimeout(()=>el.classList.remove('flash'),1800);}));
     v.querySelectorAll('details.pgrp').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)S.openProps.add(d.dataset.pg);else S.openProps.delete(d.dataset.pg);}));
     v.querySelectorAll('.propsearch').forEach(inp=>inp.addEventListener('input',()=>{const q=inp.value.trim().toLowerCase();const box=inp.closest('.props');
       box.querySelectorAll('details.pgrp').forEach(d=>{let any=false;d.querySelectorAll('.proprow').forEach(r=>{const hit=!q||r.dataset.q.includes(q);r.hidden=!hit;if(hit)any=true;});d.hidden=q&&!any;if(q&&any)d.open=true;});}));}
   function mk(g,id){return (g.markets||[]).find(m=>m.oddID===id);}
+  // Where a suggested leg stands against today's numbers: same line, same line on the alt ladder, or moved.
+  function legState(g,leg){const m=mk(g,leg.oddID);if(!m)return {ok:false,note:'market no longer offered'};if(m.line===leg.line||(m.line==null&&leg.line==null))return {ok:true,m,alt:false,note:m.odds!==leg.odds?`now ${E.fmtAmerican(m.odds)}`:''};
+    const alt=(m.alts||[]).find(a=>a[0]===leg.line);if(alt)return {ok:true,m:{...m,line:alt[0],odds:alt[1]},alt:true,note:alt[1]!==leg.odds?`now ${E.fmtAmerican(alt[1])}`:''};return {ok:true,m,alt:false,note:`line moved to ${lineStr(m)||E.fmtAmerican(m.odds)}`};}
+  // Claude's best single and best parlay across the whole slate, shown under the day header.
+  function renderBestBets(day){const b=(S.bestBets||{})[day];if(!b||(!b.single&&!b.parlay))return '';const stamp=b.updated?fmtStamp.format(new Date(b.updated)):'';
+    const card=(kind,x)=>{if(!x)return '';const g=S.games[x.eventID];if(!g)return '';const legs=kind==='single'?[x]:(x.legs||[]);const states=legs.map(l=>legState(g,l));const ok=states.every(t=>t.ok);const notes=states.map(t=>t.note).filter(Boolean);
+      const canAdd=!started(g)&&S.me&&!stateOf(S.me).fouledOut;const cols=colorsOf(g);const team=kind==='single'?(x.team||''):'';const tc=team===g.home?cols.h:team===g.away?cols.a:'';
+      const price=kind==='single'?x.odds:(x.price!=null?x.price:E.american(legs.reduce((a,l)=>a*(E.decimal(l.odds)||1),1)));
+      return `<div class="cbet best" style="--tc:${tc||'var(--accent)'}"><span class="eyebrow">${kind==='single'?"Claude's best single":"Claude's best parlay"} <small>${esc(g.away)} at ${esc(g.home)}, ${esc(fmtTime.format(new Date(g.start)))} ET</small></span>
+        ${kind==='single'?`<div class="bl"><span>${esc(x.label||'')}</span><span class="o">${esc(E.fmtAmerican(price))}</span></div>`:`<div class="bl"><span>${legs.length}-leg same-game parlay</span><span class="o">${esc(E.fmtAmerican(price))}</span></div><div class="legs">${legs.map(l=>`<div>${esc(l.label||'')} <span class="o num hint">${esc(E.fmtAmerican(l.odds))}</span></div>`).join('')}</div>`}
+        ${x.why?`<p class="why">${esc(x.why)}</p>`:''}<div class="addrow"><button type="button" class="add" data-cadd="${esc(g.eventID)}|${kind}" ${canAdd&&ok?'':'disabled'}>${kind==='single'?'Add to slip':'Add parlay to slip'}</button><button type="button" class="add go" data-goto="${esc(g.eventID)}">Go to game</button>${started(g)?'<span class="moved">already started</span>':notes.length?`<span class="moved">${esc(notes.join('; '))}</span>`:''}</div></div>`;};
+    return `<section class="bestbets"><div class="bbhead"><span class="eyebrow">Claude's best bets${stamp?', written '+esc(stamp):''}</span></div>${card('single',b.single)}${card('parlay',b.parlay)}</section>`;}
   function findM(g,pred){return (g.markets||[]).find(pred);}
   // A slip leg may sit on an alternate line; the button shows the chosen alt when there is one.
   const legKey=(eid,oid)=>eid+'|'+oid;
@@ -463,14 +484,8 @@ td.legs div{white-space:nowrap}
     const insights=(()=>{const w=(S.insights||{})[g.eventID];if(!w)return '';const openW=S.openW||(S.openW=new Set());
       const stamp=w.updated?fmtStamp.format(new Date(w.updated)):'';
       const inj=Array.isArray(w.injuries)&&w.injuries.length?`<div class="wblock"><span class="eyebrow">Injuries</span><ul class="inj">${w.injuries.map(x=>`<li><strong class="tcode" ${tcOf(x.team)}>${esc(x.team)}</strong> ${esc(x.player)} <span class="st ${esc(String(x.status||'').toLowerCase())}">${esc(x.status||'')}</span>${x.stats?`<span class="num hint">${esc(x.stats)}</span>`:''}${x.impact?`<span class="imp ${esc(String(x.impact).toLowerCase())}">${esc(x.impact)} impact</span>`:''}${x.note?`<span>${esc(x.note)}</span>`:''}</li>`).join('')}</ul></div>`:`<div class="wblock"><span class="eyebrow">Injuries</span><div class="hint">Nobody of note listed.</div></div>`;
-      const legState=leg=>{const m=mk(g,leg.oddID);if(!m)return {ok:false,note:'market no longer offered'};if(m.line===leg.line||(m.line==null&&leg.line==null))return {ok:true,m,alt:false,note:m.odds!==leg.odds?`now ${E.fmtAmerican(m.odds)}`:''};
-        const alt=(m.alts||[]).find(a=>a[0]===leg.line);if(alt)return {ok:true,m:{...m,line:alt[0],odds:alt[1]},alt:true,note:alt[1]!==leg.odds?`now ${E.fmtAmerican(alt[1])}`:''};return {ok:true,m,alt:false,note:`line moved to ${lineStr(m)||E.fmtAmerican(m.odds)}`};};
-      const canAdd=!st&&S.me&&!stateOf(S.me).fouledOut;
-      const single=w.single&&w.single.oddID?(()=>{const ls=legState(w.single);const m=mk(g,w.single.oddID);const team=w.single.team||(m&&m.team)||'';
-        return `<div class="wblock"><span class="eyebrow">Claude's top single</span><div class="cbet" ${tcOf(team)}><div class="bl"><span>${esc(w.single.label||'')}</span><span class="o">${esc(E.fmtAmerican(w.single.odds))}</span></div>${w.single.why?`<p class="why">${esc(w.single.why)}</p>`:''}<div class="addrow"><button type="button" class="add" data-cadd="${esc(g.eventID)}|single" ${canAdd&&ls.ok?'':'disabled'}>Add to slip</button>${ls.note?`<span class="moved">${esc(ls.note)}</span>`:''}</div></div></div>`;})():'';
-      const parlay=w.parlay&&Array.isArray(w.parlay.legs)&&w.parlay.legs.length?(()=>{const states=w.parlay.legs.map(legState);const ok=states.every(x=>x.ok);const notes=states.map(x=>x.note).filter(Boolean);const price=w.parlay.price!=null?w.parlay.price:E.american(w.parlay.legs.reduce((a,l)=>a*(E.decimal(l.odds)||1),1));
-        return `<div class="wblock"><span class="eyebrow">Claude's top parlay</span><div class="cbet" style="--tc:var(--accent)"><div class="bl"><span>${w.parlay.legs.length}-leg same-game parlay</span><span class="o">${esc(E.fmtAmerican(price))}</span></div><div class="legs">${w.parlay.legs.map(l=>`<div>${esc(l.label||'')} <span class="o num hint">${esc(E.fmtAmerican(l.odds))}</span></div>`).join('')}</div>${w.parlay.why?`<p class="why">${esc(w.parlay.why)}</p>`:''}<div class="addrow"><button type="button" class="add" data-cadd="${esc(g.eventID)}|parlay" ${canAdd&&ok?'':'disabled'}>Add parlay to slip</button>${notes.length?`<span class="moved">${esc(notes.join('; '))}</span>`:''}</div></div></div>`;})():'';
-      return `<details class="wdet" data-w="${esc(g.eventID)}" ${openW.has(g.eventID)?'open':''}><summary><span class="eyebrow">Game insights${stamp?', written '+esc(stamp):''}</span></summary><div class="wbody">${inj}${single}${parlay}</div></details>`;})();
+      const blurb=w.blurb?`<div class="wblock"><span class="eyebrow">Game report</span><p class="wtext">${esc(w.blurb)}</p></div>`:'';
+      return `<details class="wdet" data-w="${esc(g.eventID)}" ${openW.has(g.eventID)?'open':''}><summary><span class="eyebrow">Game insights${stamp?', written '+esc(stamp):''}</span></summary><div class="wbody">${blurb}${inj}</div></details>`;})();
     const mine=S.wagers.filter(w=>w.eventID===g.eventID&&canSee(w));
     const mineHtml=mine.length?`<div class="mypicks">${mine.map(w=>`<span class="w ${w.status==='open'?'':w.status}">${esc(w.player)}: ${w.legs.map(l=>esc(l.short)).join(' + ')} for ${fmtPts(w.stake)}${w.status!=='open'?` (${w.status}${w.net?` ${signed(w.net)}`:''})`:''}</span>`).join('')}</div>`:'';
     const props=(g.markets||[]).filter(m=>m.kind==='prop'||(m.kind==='game'&&m.period==='1h'));
@@ -571,8 +586,9 @@ td.legs div{white-space:nowrap}
     S.ladder=null;render();toast(i>=0?'Updated on slip':mode==='single'?'Added to slip as a single':'Added to slip');}
   function toggleLeg(g,m,el){addLeg(g,m,false,el);}
   // Put Claude's suggested single or parlay on the slip at today's numbers (an alt line is used when the suggested number is still on the ladder).
-  function addClaudeBet(eid,kind,el){const g=S.games[eid];const w=(S.insights||{})[eid];if(!g||!w)return;if(!S.me){$('who').classList.add('nudge');toast('Choose your name first');return;}if(started(g)){toast('This game has already started',true);return;}
-    const legs=kind==='single'?[w.single]:(w.parlay&&w.parlay.legs)||[];let added=0;
+  function addClaudeBet(eid,kind,el){const g=S.games[eid];if(!g)return;const b=(S.bestBets||{})[g.date]||{};const x=kind==='single'?b.single:b.parlay;if(!x||x.eventID!==eid)return;
+    if(!S.me){$('who').classList.add('nudge');toast('Choose your name first');return;}if(started(g)){toast('This game has already started',true);return;}
+    const legs=kind==='single'?[x]:(x.legs||[]);let added=0;
     for(const leg of legs){const m=mk(g,leg.oddID);if(!m)continue;const alt=m.line!==leg.line&&(m.alts||[]).find(a=>a[0]===leg.line);const use=alt?{...m,line:alt[0],odds:alt[1]}:m;const key=legKey(g.eventID,m.oddID);
       if(S.slip.some(l=>l.key===key&&l.line===use.line)){added++;continue;}
       const before=S.slip.length+(S.slip.some(l=>l.key===key)?1:0);addLeg(g,use,!!alt,el);if(S.slip.some(l=>l.key===key))added++;}
