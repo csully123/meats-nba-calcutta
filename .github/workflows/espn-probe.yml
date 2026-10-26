@@ -1,0 +1,30 @@
+name: ESPN playoff fields probe
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: YYYYMMDD
+        default: "20250419"
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch and print
+        env:
+          D: ${{ inputs.date }}
+        run: |
+          python3 - <<'PY'
+          import json,os,urllib.request
+          d=os.environ['D']
+          for day in (d,"20250415","20250507","20250520","20250605","20241217","20251216"):
+              req=urllib.request.Request(f"https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates={day}&limit=50",headers={"User-Agent":"meats-nba-calcutta/1.0"})
+              try:
+                  j=json.load(urllib.request.urlopen(req,timeout=30))
+              except Exception as e:
+                  print(day,"ERR",e);continue
+              print("=====",day,"leagues.season:",{k:v for k,v in (j.get('leagues') or [{}])[0].get('season',{}).items() if k!='type'}, (j.get('leagues') or [{}])[0].get('season',{}).get('type'))
+              for ev in j.get('events',[])[:4]:
+                  c=ev['competitions'][0]
+                  ser=c.get('series')
+                  print(ev['shortName'],'| season:',ev.get('season'),'| notes:',c.get('notes'),'| series:',{k:ser.get(k) for k in ('type','title','summary','completed','totalCompetitions')} if ser else None,'| type:',c.get('type'))
+          PY
