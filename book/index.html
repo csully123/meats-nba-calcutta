@@ -135,7 +135,10 @@ details.day .daybody{display:flex;flex-direction:column;gap:14px;margin-top:10px
 .cbet .add:disabled{opacity:.45}
 .cbet .moved{font-size:12px;color:var(--muted)}
 .bestbets{display:flex;flex-direction:column;gap:10px;margin:0 0 14px}
+.bestbets .bbhead{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
 .bestbets .bbhead .eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.bestbets .bbhead .record{font-size:12px;color:var(--ink);background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+.cbet.best.win{border-color:color-mix(in srgb,var(--win) 60%,var(--line))}.cbet.best.loss{opacity:.8}
 .cbet.best{border:1px solid color-mix(in srgb,var(--tc,var(--accent)) 40%,var(--line));box-shadow:0 10px 24px -14px rgba(0,0,0,.45)}
 .cbet.best>.eyebrow{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:6px}
 .cbet.best>.eyebrow small{text-transform:none;letter-spacing:0;font-weight:500;margin-left:6px}
@@ -301,7 +304,6 @@ td.legs div{white-space:nowrap}
         <div class="eyebrow">Points sportsbook, regular season</div>
         <h1>Meats Sportsbook</h1>
       </div>
-      <div class="crossnav"><a href="../">Back to the picks board</a></div>
     </div>
     <details class="rules" id="rules">
       <summary><h2>The rules</h2><span class="hint">tap to open</span></summary>
@@ -399,10 +401,10 @@ td.legs div{white-space:nowrap}
     const days=await Promise.all(want.map(d=>fetch(`../data/odds/${d}.json`+bust).then(r=>r.ok?r.json():null).catch(()=>null)));
     const games={};for(const d of days){if(!d)continue;for(const [id,g] of Object.entries(d.games||{}))games[id]=g;}
     S.games=games;
-    // logos from the picks board's games file, matched by date + teams
+    // logos, colors and playoff stage from the ESPN schedule file, matched by date + teams
     const pg=await fetch('../data/games.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));
     S.logos={};for(const x of Object.values(pg)){S.logos[x.date+'|'+x.away+'|'+x.home]={a:x.awayLogo,h:x.homeLogo,ac:x.awayColor,hc:x.homeColor,stage:x.stage||'regular',series:x.series||null};}
-    const ins=await fetch('../data/book-insights.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));S.insights=ins.games||{};S.bestBets=ins.days||{};
+    const ins=await fetch('../data/book-insights.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));S.insights=ins.games||{};S.bestBets=ins.days||{};S.claudeResults=ins.results||{};
   }
   const hexOf=c=>{if(!c)return '';c=String(c).trim();if(/^#[0-9a-fA-F]{6}$/.test(c))return c;if(/^[0-9a-fA-F]{6}$/.test(c))return '#'+c;return '';};
   const lum=c=>{const n=parseInt(c.slice(1),16);const r=(n>>16)&255,gg=(n>>8)&255,b=n&255;return (0.299*r+0.587*gg+0.114*b)/255;};
@@ -459,14 +461,18 @@ td.legs div{white-space:nowrap}
   function legState(g,leg){const m=mk(g,leg.oddID);if(!m)return {ok:false,note:'market no longer offered'};if(m.line===leg.line||(m.line==null&&leg.line==null))return {ok:true,m,alt:false,note:m.odds!==leg.odds?`now ${E.fmtAmerican(m.odds)}`:''};
     const alt=(m.alts||[]).find(a=>a[0]===leg.line);if(alt)return {ok:true,m:{...m,line:alt[0],odds:alt[1]},alt:true,note:alt[1]!==leg.odds?`now ${E.fmtAmerican(alt[1])}`:''};return {ok:true,m,alt:false,note:`line moved to ${lineStr(m)||E.fmtAmerican(m.odds)}`};}
   // Claude's best single and best parlay across the whole slate, shown under the day header.
-  function renderBestBets(day){const b=(S.bestBets||{})[day];if(!b||(!b.single&&!b.parlay))return '';const stamp=b.updated?fmtStamp.format(new Date(b.updated)):'';
+  function claudeRecord(){const rec={single:{w:0,l:0,p:0},parlay:{w:0,l:0,p:0}};for(const d of Object.values(S.claudeResults||{}))for(const k of ['single','parlay']){const r=d[k];if(r==='win')rec[k].w++;else if(r==='loss')rec[k].l++;else if(r==='push')rec[k].p++;}
+    const fmt=(k,x)=>{const n=x.w+x.l;return `${k} ${x.w}-${x.l}${x.p?'-'+x.p:''}${n?` (${Math.round(100*x.w/n)}%)`:''}`;};return {rec,text:`${fmt('singles',rec.single)}, ${fmt('parlays',rec.parlay)}`};}
+  function renderBestBets(day){const b=(S.bestBets||{})[day];if(!b||(!b.single&&!b.parlay))return '';const stamp=b.updated?fmtStamp.format(new Date(b.updated)):'';const res=(S.claudeResults||{})[day]||{};const record=claudeRecord();
     const card=(kind,x)=>{if(!x)return '';const g=S.games[x.eventID];if(!g)return '';const legs=kind==='single'?[x]:(x.legs||[]);const states=legs.map(l=>legState(g,l));const ok=states.every(t=>t.ok);const notes=states.map(t=>t.note).filter(Boolean);
       const canAdd=!started(g)&&S.me&&!stateOf(S.me).fouledOut;const cols=colorsOf(g);const team=kind==='single'?(x.team||''):'';const tc=team===g.home?cols.h:team===g.away?cols.a:'';
       const price=kind==='single'?x.odds:(x.price!=null?x.price:E.american(legs.reduce((a,l)=>a*(E.decimal(l.odds)||1),1)));
-      return `<div class="cbet best" style="--tc:${tc||'var(--accent)'}"><span class="eyebrow">${kind==='single'?"Claude's best single":"Claude's best parlay"} <small>${esc(g.away)} at ${esc(g.home)}, ${esc(fmtTime.format(new Date(g.start)))} ET</small></span>
+      const r=res[kind];const badge=r?`<span class="res ${esc(r)}" style="margin-left:8px">${r==='win'?'Hit':r==='loss'?'Missed':'Push'}</span>`:'';
+      return `<div class="cbet best ${r||''}" style="--tc:${tc||'var(--accent)'}"><span class="eyebrow">${kind==='single'?"Claude's best single":"Claude's best parlay"}${badge} <small>${esc(g.away)} at ${esc(g.home)}, ${esc(fmtTime.format(new Date(g.start)))} ET</small></span>
         ${kind==='single'?`<div class="bl"><span>${esc(x.label||'')}</span><span class="o">${esc(E.fmtAmerican(price))}</span></div>`:`<div class="bl"><span>${legs.length}-leg same-game parlay</span><span class="o">${esc(E.fmtAmerican(price))}</span></div><div class="legs">${legs.map(l=>`<div>${esc(l.label||'')} <span class="o num hint">${esc(E.fmtAmerican(l.odds))}</span></div>`).join('')}</div>`}
         ${x.why?`<p class="why">${esc(x.why)}</p>`:''}<div class="addrow"><button type="button" class="add" data-cadd="${esc(g.eventID)}|${kind}" ${canAdd&&ok?'':'disabled'}>${kind==='single'?'Add to slip':'Add parlay to slip'}</button><button type="button" class="add go" data-goto="${esc(g.eventID)}">Go to game</button>${started(g)?'<span class="moved">already started</span>':notes.length?`<span class="moved">${esc(notes.join('; '))}</span>`:''}</div></div>`;};
-    return `<section class="bestbets"><div class="bbhead"><span class="eyebrow">Claude's best bets${stamp?', written '+esc(stamp):''}</span></div>${card('single',b.single)}${card('parlay',b.parlay)}</section>`;}
+    const n=record.rec.single.w+record.rec.single.l+record.rec.parlay.w+record.rec.parlay.l;
+    return `<section class="bestbets"><div class="bbhead"><span class="eyebrow">Claude's best bets${stamp?', written '+esc(stamp):''}</span><span class="record num" title="Claude's record on these picks this season">${n?'Season: '+esc(record.text):'Season record starts after tonight'}</span></div>${card('single',b.single)}${card('parlay',b.parlay)}</section>`;}
   function findM(g,pred){return (g.markets||[]).find(pred);}
   // A slip leg may sit on an alternate line; the button shows the chosen alt when there is one.
   const legKey=(eid,oid)=>eid+'|'+oid;

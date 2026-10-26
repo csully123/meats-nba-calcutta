@@ -160,7 +160,66 @@ def main() -> int:
         graded += 1
         print(f"settled {doc['name'].rsplit('/',1)[-1]}: {s['status']} net {s['net']}")
     print(f"graded {graded} of {len(rows)} open wagers")
+    grade_claude(games)
     return 0
+
+
+INSIGHTS = ROOT / "data" / "book-insights.json"
+
+
+def grade_claude(games: dict) -> None:
+    """Grade Claude's daily best single and best parlay (data/book-insights.json, key "days") from the same box
+    scores, writing the outcome under key "results" so the site can show a running record. Never touches
+    the entries themselves."""
+    if not INSIGHTS.exists():
+        return
+    data = json.loads(INSIGHTS.read_text())
+    days = data.get("days") or {}
+    results = data.setdefault("results", {})
+    changed = 0
+
+    def leg_full(game: dict, leg: dict):
+        m = next((x for x in game.get("markets", []) if x.get("oddID") == leg.get("oddID")), None)
+        if not m:
+            return None
+        full = dict(m)
+        if leg.get("line") is not None:
+            full["line"] = leg["line"]
+        return full
+
+    def outcome(game: dict, legs: list):
+        rs = []
+        for leg in legs:
+            full = leg_full(game, leg)
+            if not full:
+                return None
+            r = grade_leg(full, game)
+            if r is None:
+                return None
+            rs.append(r)
+        if any(r == "loss" for r in rs):
+            return "loss"
+        if all(r in ("push", "void") for r in rs):
+            return "push"
+        return "win"
+
+    for date, day in days.items():
+        out = results.setdefault(date, {})
+        for kind in ("single", "parlay"):
+            pick = day.get(kind)
+            if not pick or out.get(kind):
+                continue
+            game = games.get(pick.get("eventID"))
+            if not game or not game.get("results"):
+                continue
+            legs = [pick] if kind == "single" else (pick.get("legs") or [])
+            r = outcome(game, legs)
+            if r:
+                out[kind] = r
+                changed += 1
+    if changed:
+        INSIGHTS.write_text(json.dumps(data, indent=1, sort_keys=True) + "\n")
+        print(f"graded {changed} of Claude's picks")
 
 
 if __name__ == "__main__":

@@ -56,7 +56,7 @@ jobs:
         run: |
           git config user.name "calcutta-bot"
           git config user.email "calcutta-bot@users.noreply.github.com"
-          git add data/odds
+          git add data/odds data/book-insights.json
           if git diff --cached --quiet; then
             echo "No changes"
           else
