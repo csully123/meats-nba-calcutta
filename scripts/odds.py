@@ -223,6 +223,14 @@ def main() -> int:
         else:
             if prev.get("results"):
                 g["results"] = prev["results"]
+            # Every (line, odds) pair ever offered on each market, main or alt, so the grader can verify a stored price.
+            seen_prev = {m.get("oddID"): m.get("seen") or [] for m in prev.get("markets", [])}
+            for m in g["markets"]:
+                seen = {tuple(x) for x in seen_prev.get(m["oddID"], [])}
+                seen.add((m.get("line"), m.get("odds")))
+                for al, ap in m.get("alts") or []:
+                    seen.add((al, ap))
+                m["seen"] = sorted([list(x) for x in seen], key=lambda x: (x[0] is None, x[0] if x[0] is not None else 0, x[1]))
         day["games"][g["eventID"]] = g
         touched[g["date"]] = day
         pulled += 1

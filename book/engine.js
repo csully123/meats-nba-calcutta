@@ -17,10 +17,11 @@
     w.legs.forEach((l,i)=>{if(legResults[i]==='win'){dec*=E.decimal(l.odds)||1;live++;}});
     if(live===0)return {status:'push',net:0};
     const mult=(w.boost&&Number(w.boost.mult))||1; // a boost token multiplies the profit, never the stake
-    const profit=Math.round(w.stake*(dec-1)*mult); // whole points: payouts round to the nearest point
+    const profit=Math.floor(w.stake*(dec-1)*mult); // whole points: profit rounds down
     return {status:'win',net:profit,payout:w.stake+profit};
   };
-  E.boostedProfit=function(stake,legs,mult){return Math.round(stake*(E.parlayDecimal(legs)-1)*(mult||1));};
+  E.boostedProfit=function(stake,legs,mult){return Math.floor(stake*(E.parlayDecimal(legs)-1)*(mult||1));};
+  E.MAX_LEGS=4;
 
   // Bankroll replay. wagers: array of {player, stake, placedAt, settled:{status,net}|null}. Config: start, reload.
   // Returns per player: stack, busts, totalWagered, byWeek wagered, history of stack after each settlement.
@@ -69,8 +70,10 @@
     return null;};
   // Pairs that a real book prices as one bet but our multiplication would overpay: first-half and full-game lines on the
   // same quantity, and a player's combined stat with one of its parts. 'related' legs can be singles, never one parlay.
-  E.COMBO_PARTS={'points+rebounds+assists':['points','rebounds','assists'],'points+rebounds':['points','rebounds'],'points+assists':['points','assists'],
-    'rebounds+assists':['rebounds','assists'],'blocks+steals':['blocks','steals'],'doubleDouble':['points','rebounds','assists'],'tripleDouble':['points','rebounds','assists']};
+  // Threes are part of points, so they count as a part of points and of every combo that contains points.
+  E.COMBO_PARTS={'points':['threePointersMade'],'points+rebounds+assists':['points','rebounds','assists','threePointersMade'],'points+rebounds':['points','rebounds','threePointersMade'],
+    'points+assists':['points','assists','threePointersMade'],'rebounds+assists':['rebounds','assists'],'blocks+steals':['blocks','steals'],
+    'doubleDouble':['points','rebounds','assists','threePointersMade'],'tripleDouble':['points','rebounds','assists','threePointersMade']};
   E.related=function(a,b){const pa=a.period||'game',pb=b.period||'game';
     if(!a.player&&!b.player&&pa!==pb){const team=l=>l.betType==='ml'||l.betType==='sp';const total=l=>l.betType==='ou';
       if(team(a)&&team(b))return 'first-half and full-game lines on the same game';
@@ -107,6 +110,7 @@
     if(!w.legs||!w.legs.length)errs.push('Add at least one selection.');
     if(w.legs&&new Set(w.legs.map(l=>l.eventID)).size>1)errs.push('All selections must be from the same game.');
     if(w.legs&&w.legs.some(l=>l.started))errs.push('One of these games has already started.');
+    if(w.legs&&w.legs.length>E.MAX_LEGS)errs.push(`A parlay can have at most ${E.MAX_LEGS} legs.`);
     if(w.legs&&w.legs.length>1){const ids=w.legs.map(l=>l.oddID);if(new Set(ids).size!==ids.length)errs.push('Duplicate selection.');
       const opp=w.legs.some(l=>{const o=l.opposingOddID||l.opposing;return !!o&&w.legs.some(m=>m.oddID===o);});if(opp)errs.push('You cannot take both sides of the same market.');
       for(let i=0;i<w.legs.length&&!errs.length;i++)for(let j=i+1;j<w.legs.length;j++){const c=E.conflict(w.legs[i],w.legs[j]);if(c){const a=w.legs[i].short||'one leg',b=w.legs[j].short||'another';errs.push(c==='impossible'?`${a} and ${b} cannot both win.`:c==='related'?`${a} and ${b} are too closely related to parlay (${E.related(w.legs[i],w.legs[j])}).`:`${a} and ${b} overlap (one already covers the other), so they cannot be parlayed.`);break;}}}

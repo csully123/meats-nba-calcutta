@@ -89,6 +89,32 @@ def grade_leg(leg: dict, game: dict):
     return None
 
 
+def verify(w: dict, g: dict):
+    """Honor-system backstop. A bet is voided (stake returned) when its server-stamped placement time is after tip-off,
+    or when a leg's stored line and price were never offered on that market by the feed."""
+    created = w.get("createdAt")
+    start = g.get("start")
+    if created and start and str(created) > str(start):
+        return f"placed at {created}, after tip-off {start}"
+    markets = {m.get("oddID"): m for m in g.get("markets", [])}
+    for leg in w.get("legs", []):
+        m = markets.get(leg.get("oddID"))
+        if not m:
+            return f"market {leg.get('oddID')} not on file"
+        seen = m.get("seen")
+        if not seen:
+            continue  # older files without price history: nothing to check against
+        line = leg.get("line")
+        try:
+            odds = int(leg.get("odds"))
+        except (TypeError, ValueError):
+            return f"bad odds on {leg.get('short')}"
+        ok = any((x[0] == line or (x[0] is None and line is None) or (x[0] is not None and line is not None and float(x[0]) == float(line))) and int(x[1]) == odds for x in seen)
+        if not ok:
+            return f"{leg.get('short')} at {odds} was never offered"
+    return None
+
+
 def settle(w: dict, leg_results: list):
     if any(r is None for r in leg_results):
         return None
@@ -107,7 +133,7 @@ def settle(w: dict, leg_results: list):
         mult = float(boost.get("mult") or 1)  # a boost token multiplies the profit, never the stake
     except (TypeError, ValueError):
         mult = 1.0
-    profit = float(math.floor(stake * (dec - 1) * mult + 0.5))  # whole points: payouts round to the nearest point (half up)
+    profit = float(math.floor(stake * (dec - 1) * mult))  # whole points: profit rounds down
     return {"status": "win", "net": profit, "payout": stake + profit}
 
 
@@ -139,8 +165,14 @@ def main() -> int:
         g = games.get(w.get("eventID"))
         if not g or not g.get("results"):
             continue
-        leg_results = [grade_leg(leg, g) for leg in w.get("legs", [])]
-        s = settle(w, leg_results)
+        bad = verify(w, g)
+        if bad:
+            leg_results = ["void"] * len(w.get("legs", []))
+            s = {"status": "void", "net": 0.0, "payout": float(w["stake"])}
+            print(f"voiding {doc['name'].rsplit('/',1)[-1]}: {bad}")
+        else:
+            leg_results = [grade_leg(leg, g) for leg in w.get("legs", [])]
+            s = settle(w, leg_results)
         if not s:
             continue
         patch = {"fields": {

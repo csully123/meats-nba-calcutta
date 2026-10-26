@@ -257,7 +257,7 @@ tr:last-child td{border-bottom:0}
 td.legs{font-size:13px}
 td.legs div{white-space:nowrap}
 .res{font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;padding:2px 8px;border-radius:3px;color:#fff;display:inline-block}
-.res.win{background:var(--win)}.res.loss{background:var(--loss)}.res.push{background:var(--push)}.res.open{background:var(--soft);color:var(--muted)}
+.res.win{background:var(--win)}.res.loss{background:var(--loss)}.res.push{background:var(--push)}.res.open{background:var(--soft);color:var(--muted)}.res.void{background:var(--soft);color:var(--muted);text-decoration:line-through}
 .ptcell{font-family:var(--display);font-size:18px;font-weight:700;text-align:right;white-space:nowrap}
 .pos{color:var(--win)}.neg{color:var(--loss)}.zero{color:var(--muted)}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
@@ -335,19 +335,19 @@ td.legs div{white-space:nowrap}
       <dl>
         <dt>Stack</dt><dd>Everyone starts with 200 points. Points are fake; they simulate money. The book runs from opening night through the NBA Finals, and the highest stack after the Finals, after any bust penalty, wins.</dd>
         <dt>Lines</dt><dd>Real FanDuel prices (another book fills in if FanDuel is missing a market). The number on this page when you place a bet is the official number, even if FanDuel moves after. Prices refresh each morning, around 1 PM, and about an hour before each tip-off window.</dd>
-        <dt>Bets</dt><dd>Spreads, totals, moneylines, first-half lines and player props. Add picks to your slip, then mark each one Parlay or Single. Parlays are same-game only, one per game; singles can be from any games, and the slip places them all at once.</dd>
-        <dt>No conflicts in a parlay</dt><dd>Picks on one game that cannot both win (SAS -15.5 with DAL ML, over 228.5 with under 226.5), that overlap, where one already implies the other (SAS -15.5 with SAS ML, two overs on the same player), or that are too closely related for our parlay math (a first-half line with a full-game line on the same game, a first-half total with the full-game total, a player's combined stat such as Pts + Reb + Ast or a double-double with one of its parts) cannot be legs of the same parlay. They are fine as separate singles. Both sides of the exact same market are never allowed together.</dd>
+        <dt>Bets</dt><dd>Spreads, totals, moneylines, first-half lines and player props. Add picks to your slip, then mark each one Parlay or Single. Parlays are same-game only, one per game and at most 4 legs; singles can be from any games, and the slip places them all at once.</dd>
+        <dt>No conflicts in a parlay</dt><dd>Picks on one game that cannot both win (SAS -15.5 with DAL ML, over 228.5 with under 226.5), that overlap, where one already implies the other (SAS -15.5 with SAS ML, two overs on the same stat for the same player), or that are too closely related for our parlay math (a first-half line with a full-game line on the same game, a first-half total with the full-game total, a player's combined stat such as Pts + Reb + Ast or a double-double with one of its parts, a player's points with his 3-pointers) cannot be legs of the same parlay. A player's points with his rebounds, or props on two different players, are fine. They are fine as separate singles. Both sides of the exact same market are never allowed together.</dd>
         <dt>Alt lines</dt><dd>Tap the arrows beside a spread, total or prop to slide to a different number at FanDuel's price for it (a player over 20 instead of over 10, a team at -2.5 instead of -7.5). Only numbers FanDuel lists are offered. One leg per market: switching numbers replaces, never stacks.</dd>
         <dt>Parlay pricing</dt><dd>Legs multiply at their listed prices. FanDuel discounts same-game parlays for correlated legs; this book does not, so a same-game parlay pays a little more here than there. That is the house rule, same for everyone.</dd>
-        <dt>Max bet</dt><dd>Stakes are whole points, and payouts round to the nearest whole point. No single bet can be more than 25% of your stack at the moment you place it, rounded down. Across all your open bets, no more than 50% of your stack can ride on one game, and no more than 25% on one line (adding to a bet at a new number is fine within that). Once your stack, counting open bets, is 20 points or less, the caps lift and you may go all in.</dd>
+        <dt>Max bet</dt><dd>Stakes are whole points, and profit rounds down to a whole point. No single bet can be more than 25% of your stack at the moment you place it, rounded down. Across all your open bets, no more than 50% of your stack can ride on one game, and no more than 25% on one line (adding to a bet at a new number is fine within that). Once your stack, counting open bets, is 20 points or less, the caps lift and you may go all in.</dd>
         <dt>Minimum</dt><dd>Wager at least 20 points every week, Monday through Sunday, or your whole stack if you have less than 20.</dd>
         <dt>Bust</dt><dd>Hit zero with no bets open and you have busted: you reload to 100 and keep playing. It costs you at the end: one bust forfeits 10% of your final total, two busts 25%, three 45%, four 70%, five 90%. Each bust forfeits at least 20 points regardless, so busting on purpose for the reload never pays.</dd>
         <dt>Foul out</dt><dd>Six busts and you have fouled out, like a sixth foul. No more bets, and you are out of the competition. It does not matter what your stack was or how many you had won; you cannot finish anywhere. If everyone fouls out, nobody wins.</dd>
         <dt>Boost tokens</dt><dd>A boost multiplies the profit on one winning bet. Everyone gets the same tokens, each good for one bet inside its window, use it or lose it: a 1.5x token every week (Monday through Sunday, any game that week); a 1.5x token for the NBA Cup championship game; in the playoffs a 1.5x token for each first-round series, a 2x token for each second-round series, a 2.5x token for each conference finals series and a 3x token for the Finals, each usable only on games in that series. Nothing for the play-in. Pick the boost on the slip when you place the bet; it locks in with the bet. Win and the profit multiplies; lose and the token is gone with the stake. A bet that pushes or voids gives the token back. One token per bet, never two. The max-bet rule still applies, and there is no cap on what a boosted bet can win.</dd>
         <dt>Mega Bonus</dt><dd>One 5x token for the whole season, playoffs included, on any bet you like. When it hits, the book lets you know.</dd>
         <dt>Regular-season prize</dt><dd>Highest stack when the regular season ends gets 50 points and an extra 3x token for the Finals. Second place gets an extra 2x token for the second round.</dd>
-        <dt>Settling</dt><dd>Bets grade overnight from the box score. A leg exactly on the number pushes and drops out of a parlay. A player who does not play voids that leg. A lost leg loses the slip.</dd>
-        <dt>Lock</dt><dd>Bets close at tip-off. Until then you can cancel a bet and the stake goes back to your stack.</dd>
+        <dt>Settling</dt><dd>Bets grade overnight from the box score. A leg exactly on the number pushes and drops out of a parlay. A player who does not play voids that leg. A lost leg loses the slip. A voided bet returns its stake and hands back any token.</dd>
+        <dt>Lock</dt><dd>A bet can be cancelled for 10 minutes after you place it, to fix a slip of the thumb; after that it stands. Bets close at tip-off regardless. The time of each bet is stamped by the server, and the grader voids (stake returned) any bet stamped after tip-off or any leg at a price the feed never offered.</dd>
         <dt>Who</dt><dd>Tap your name under "Betting as" first. Honor system: bet as yourself only. Other people's open bets stay hidden until tip-off.</dd>
       </dl>
     </details>
@@ -380,7 +380,7 @@ td.legs div{white-space:nowrap}
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
 <script src="../firebase-config.js"></script>
-<script src="engine.js?v=20261026c"></script>
+<script src="engine.js?v=20261026d"></script>
 <script>
 (function(){
   const E=window.BookEngine;
@@ -585,6 +585,7 @@ td.legs div{white-space:nowrap}
     el.querySelector('#hideslip').addEventListener('click',()=>{S.slipOpen=false;renderSlip();});
     el.querySelectorAll('[data-rm]').forEach(b=>b.addEventListener('click',()=>{S.slip=S.slip.filter(l=>l.key!==b.dataset.rm);if(S.boosts)delete S.boosts[b.dataset.rm];render();}));
     el.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{const parts=b.dataset.mode.split('|');const mode=parts.pop();const id=parts.join('|');const l=S.slip.find(x=>x.key===id);if(!l)return;
+      if(mode==='parlay'&&S.slip.filter(x=>x.eventID===l.eventID&&x.key!==l.key&&x.mode!=='single').length>=E.MAX_LEGS){shakeEl(b.closest('.seg'));toast(`A parlay can have at most ${E.MAX_LEGS} legs.`,true);return;}
       if(mode==='parlay'&&E.conflict){let why=null;const other=S.slip.find(x=>x.eventID===l.eventID&&x.key!==l.key&&x.mode!=='single'&&(why=E.conflict(x,l)));
         if(other){shakeEl(b.closest('.seg'));toast(why==='impossible'?`${l.short} and ${other.short} cannot both win, so they cannot be in the same parlay.`:why==='related'?`${l.short} and ${other.short} are too closely related to parlay (${E.related(l,other)}).`:`${l.short} and ${other.short} overlap (one already covers the other), so they cannot be in the same parlay.`,true);return;}}
       l.mode=mode;renderSlip();}));
@@ -612,10 +613,11 @@ td.legs div{white-space:nowrap}
     const probe={betType:m.betType,side:m.side,entity:m.entity,line:m.line,period:m.period,player:m.player||null,stat:m.stat};
     // A pick that conflicts with a parlay leg already on this game (cannot both win, or one already covers the other) starts as a single.
     const overlaps=E.conflict?S.slip.find(l=>l.eventID===g.eventID&&l.key!==key&&l.mode!=='single'&&E.conflict(l,probe)):null;
-    const mode=i>=0?S.slip[i].mode:(overlaps?'single':'parlay');
+    const full=i<0&&S.slip.filter(l=>l.eventID===g.eventID&&l.mode!=='single').length>=E.MAX_LEGS;
+    const mode=i>=0?S.slip[i].mode:((overlaps||full)?'single':'parlay');
     const leg={key,eventID:g.eventID,oddID:m.oddID,opposing:m.opposing,odds:m.odds,line:m.line,side:m.side,entity:m.entity,betType:m.betType,stat:m.stat,period:m.period,player:m.player||null,team:m.team||'',name:m.name,book:m.book,alt:!!alt,short:shortLeg(g,m)+(alt?' (alt)':''),started:started(g),mode};
     if(i>=0)S.slip[i]=leg;else S.slip.push(leg); // one leg per market: switching numbers replaces, never stacks
-    S.ladder=null;render();toast(i>=0?'Updated on slip':mode==='single'?'Added to slip as a single':'Added to slip');}
+    S.ladder=null;render();toast(i>=0?'Updated on slip':mode==='single'?(full?`Added as a single (parlays max out at ${E.MAX_LEGS} legs)`:'Added to slip as a single'):'Added to slip');}
   function toggleLeg(g,m,el){addLeg(g,m,false,el);}
   // Put Claude's suggested single or parlay on the slip at today's numbers (an alt line is used when the suggested number is still on the ladder).
   function addClaudeBet(eid,kind,el){const g=S.games[eid];if(!g)return;const b=(S.bestBets||{})[g.date]||{};const x=kind==='single'?b.single:b.parlay;if(!x||x.eventID!==eid)return;
@@ -631,7 +633,7 @@ td.legs div{white-space:nowrap}
     try{for(const b of bets){const g=S.games[b.legs[0].eventID];
         const tok=boostFor(b.key,b.legs);if((S.boosts||{})[b.key]&&!tok){toast('That boost is no longer available for this game',true);S.busy=false;render();return;}
         const meta=gameMeta(g);
-        const doc={player:S.me,stake:b.stake,placedAt:new Date().toISOString(),eventID:g.eventID,game:`${g.away} at ${g.home}`,gameDate:g.date,gameStart:g.start,stage:meta.stage,series:meta.series,
+        const doc={player:S.me,stake:b.stake,placedAt:new Date().toISOString(),createdAt:firebase.firestore.FieldValue.serverTimestamp(),eventID:g.eventID,game:`${g.away} at ${g.home}`,gameDate:g.date,gameStart:g.start,stage:meta.stage,series:meta.series,
           boost:tok?{id:tok.id,mult:tok.mult,label:tok.label}:null,
           legs:b.legs.map(l=>({oddID:l.oddID,opposing:l.opposing,odds:l.odds,line:l.line??null,side:l.side,entity:l.entity||null,betType:l.betType,stat:l.stat,period:l.period,player:l.player,team:l.team,name:l.name,book:l.book,alt:!!l.alt,short:l.short})),
           status:'open',net:null,payout:null,settledAt:null};
@@ -641,7 +643,11 @@ td.legs div{white-space:nowrap}
       toast(placed===1?'Bet placed':`${placed} bets placed`);}
     catch(e){console.error(e);toast(placed?`Placed ${placed}, then one failed. The rest are still on your slip.`:'Could not place that bet, try again',true);}
     finally{S.busy=false;render();}}
+  const CANCEL_MINUTES=10;
+  function placedMs(w){const c=w.createdAt;if(c&&typeof c.toMillis==='function')return c.toMillis();if(c&&c.seconds)return c.seconds*1000;return new Date(w.placedAt).getTime();}
+  function canCancel(w){return w.player===S.me&&w.status==='open'&&Date.now()-placedMs(w)<CANCEL_MINUTES*60000;}
   async function cancelBet(id){const w=S.wagers.find(x=>x.id===id);if(!w||w.player!==S.me||w.status!=='open')return;const g=S.games[w.eventID];if(g&&started(g)){toast('This game has already started',true);return;}
+    if(!canCancel(w)){toast(`Bets lock ${CANCEL_MINUTES} minutes after they are placed`,true);return;}
     try{await S.db.collection('wagers').doc(id).delete();toast('Bet cancelled, stake returned');}catch(e){toast('Could not cancel',true);}}
 
   // ---------- bets ledger ----------
@@ -650,10 +656,10 @@ td.legs div{white-space:nowrap}
     if(!rows.length){$('betbody').innerHTML=`<div class="empty"><strong>No bets yet</strong>${S.betf==='All'?'Every bet lands here once its game has started, and your own right away.':S.betf+' has no visible bets yet.'}</div>`;return;}
     let out='',lastWk=null;
     for(const w of rows){const wk=E.weekKey(w.placedAt);if(wk!==lastWk){const wkRows=rows.filter(x=>E.weekKey(x.placedAt)===wk);const tally=wkRows.reduce((a,x)=>a+(x.status!=='open'?(x.net||0):0),0);out+=`<tr><td colspan="7" style="background:var(--soft);font-family:var(--display);font-size:16px;text-transform:uppercase;letter-spacing:.05em;font-weight:600">Week of ${esc(fmtShort.format(new Date(wk+'T12:00:00Z')))}<span class="num" style="float:right">${signed(tally)}</span></td></tr>`;lastWk=wk;}
-      const g=S.games[w.eventID];const canCancel=w.player===S.me&&w.status==='open'&&g&&!started(g);
+      const g=S.games[w.eventID];const cc=canCancel(w)&&g&&!started(g);
       const dec=E.parlayDecimal(w.legs);const bm=(w.boost&&w.boost.mult)||1;
       out+=`<tr><td class="num">${esc(fmtShort.format(new Date(w.placedAt)))}</td><td>${esc(w.player)}</td><td>${esc(w.game||'')}${w.stage&&STAGE_BADGE[w.stage]?`<div class="hint">${esc(STAGE_BADGE[w.stage])}</div>`:''}</td><td class="legs">${w.legs.map((l,i)=>`<div>${esc(l.short)} <span class="hint num">${esc(E.fmtAmerican(l.odds))}</span>${w.legResults&&w.legResults[i]?` <span class="res ${esc(w.legResults[i])}" style="font-size:9px;padding:1px 5px">${esc(w.legResults[i])}</span>`:''}</div>`).join('')}${w.legs.length>1?`<div class="hint">Parlay ${esc(E.fmtAmerican(E.american(dec)))}</div>`:''}${w.boost?`<div><span class="boostbadge ${w.boost.id==='mega'?'mega':''}">${esc(w.boost.label||w.boost.mult+'x boost')}</span></div>`:''}</td>
-        <td class="num">${fmtPts(w.stake)}</td><td><span class="res ${esc(w.status)}">${esc(w.status)}</span>${canCancel?` <button class="signout" data-cancel="${esc(w.id)}">cancel</button>`:''}</td><td class="ptcell num ${w.status==='open'?'zero':(w.net>0?'pos':w.net<0?'neg':'zero')}">${w.status==='open'?`to win ${fmtPts(E.boostedProfit(w.stake,w.legs,bm))}`:signed(w.net||0)}</td></tr>`;}
+        <td class="num">${fmtPts(w.stake)}</td><td><span class="res ${esc(w.status)}">${esc(w.status)}</span>${cc?` <button class="signout" data-cancel="${esc(w.id)}">cancel</button>`:''}</td><td class="ptcell num ${w.status==='open'?'zero':(w.net>0?'pos':w.net<0?'neg':'zero')}">${w.status==='open'?`to win ${fmtPts(E.boostedProfit(w.stake,w.legs,bm))}`:signed(w.net||0)}</td></tr>`;}
     $('betbody').innerHTML=`<div class="tablewrap"><table><thead><tr><th>Placed</th><th>Who</th><th>Game</th><th>Bet</th><th>Stake</th><th>Result</th><th style="text-align:right">Net</th></tr></thead><tbody>${out}</tbody></table></div>`;
     $('betbody').querySelectorAll('[data-cancel]').forEach(b=>b.addEventListener('click',()=>cancelBet(b.dataset.cancel)));}
 
