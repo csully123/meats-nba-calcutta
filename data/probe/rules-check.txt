@@ -1,0 +1,2 @@
+CREATE with boost fields: OK
+DELETE while open: OK
