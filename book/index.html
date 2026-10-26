@@ -673,7 +673,7 @@ td.legs div{white-space:nowrap}
     let seen=null;try{seen=localStorage.getItem('bk.megaSeen');}catch(e){}if(seen===hit.id)return;
     showMega(hit);}
   // Picking the Mega Bonus on the slip: a 3-second pop-up that rocks back and forth in the middle of the screen.
-  const MEGA_ARMED_TEXT='A FINE THRUST MY LEIGE';
+  const MEGA_ARMED_TEXT='A FINE THRUST MY LIEGE';
   function megaArmed(){document.querySelectorAll('.armed').forEach(x=>x.remove());const el=document.createElement('div');el.className='armed';el.setAttribute('role','status');el.innerHTML=`<div class="armedcard">${esc(MEGA_ARMED_TEXT)}</div>`;document.body.appendChild(el);if(navigator.vibrate)navigator.vibrate([40,30,40]);setTimeout(()=>el.remove(),3000);}
   function showMega(w){const ov=document.createElement('div');ov.className='mega-overlay';
     ov.innerHTML=`<canvas></canvas><div class="mega-card"><div class="eyebrow">${esc(S.me)}, you hit it</div><h1>Mega<br>Bonus</h1><div class="amt">+${fmtPts(w.net||0)} points</div><div class="sub">${esc(w.legs.map(l=>l.short).join(' + '))} at 5x profit</div><button type="button" class="dismiss">Back to the book</button></div>`;
