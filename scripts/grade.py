@@ -8,6 +8,7 @@ a leg exactly on the line is a push and drops out of a parlay; a lost leg loses 
 entry (did not play) voids that leg.
 """
 import json
+import math
 import os
 import sys
 import urllib.parse
@@ -100,8 +101,9 @@ def settle(w: dict, leg_results: list):
             live += 1
     if live == 0:
         return {"status": "push", "net": 0.0, "payout": float(w["stake"])}
-    profit = round(float(w["stake"]) * (dec - 1), 2)
-    return {"status": "win", "net": profit, "payout": round(float(w["stake"]) + profit, 2)}
+    stake = float(w["stake"])
+    profit = float(math.floor(stake * (dec - 1) + 0.5))  # whole points: payouts round to the nearest point (half up)
+    return {"status": "win", "net": profit, "payout": stake + profit}
 
 
 def main() -> int:

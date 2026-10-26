@@ -16,8 +16,8 @@
     let dec=1,live=0;
     w.legs.forEach((l,i)=>{if(legResults[i]==='win'){dec*=E.decimal(l.odds)||1;live++;}});
     if(live===0)return {status:'push',net:0};
-    const profit=Math.round(w.stake*(dec-1)*100)/100;
-    return {status:'win',net:profit,payout:Math.round((w.stake+profit)*100)/100};
+    const profit=Math.round(w.stake*(dec-1)); // whole points: payouts round to the nearest point
+    return {status:'win',net:profit,payout:w.stake+profit};
   };
 
   // Bankroll replay. wagers: array of {player, stake, placedAt, settled:{status,net}|null}. Config: start, reload.
@@ -66,12 +66,21 @@
   E.conflict=function(a,b){const x=E.legConstraint(a),y=E.legConstraint(b);if(!x||!y||x.v!==y.v)return null;
     if(x.dir===y.dir)return 'overlap';const gt=x.dir==='>'?x:y,lt=x.dir==='<'?x:y;return gt.at>=lt.at?'impossible':null;};
 
+  // Biggest single bet allowed: 25% of the available stack, rounded down to a whole point. Once the whole bankroll
+  // (available plus open bets) is at or under ALL_IN_AT, the cap lifts and you may bet everything you have left.
+  E.ALL_IN_AT=20;
+  E.allIn=function(state){return (state.stack||0)+(state.pending||0)<=E.ALL_IN_AT+0.0001;};
+  E.maxBet=function(state,cfg){const maxFrac=(cfg&&cfg.maxBetFraction)||0.25;const stack=Math.max(0,state.stack||0);
+    return E.allIn(state)?Math.floor(stack+0.0001):Math.floor(stack*maxFrac+0.0001);};
+
   // Rules checks for a new wager
   E.validate=function(w,state,cfg){
-    const errs=[];const maxFrac=cfg.maxBetFraction||0.25;
+    const errs=[];const maxFrac=(cfg&&cfg.maxBetFraction)||0.25;
     if(!(w.stake>0))errs.push('Enter a stake.');
+    else if(!Number.isInteger(w.stake))errs.push('Stakes are whole points.');
     if(w.stake>state.stack+0.0001)errs.push(`You only have ${state.stack} points available.`);
-    if(w.stake>state.stack*maxFrac+0.0001)errs.push(`Max bet is ${Math.round(maxFrac*100)}% of your stack (${Math.floor(state.stack*maxFrac*100)/100} right now).`);
+    const cap=E.maxBet(state,cfg);
+    if(w.stake>cap+0.0001)errs.push(E.allIn(state)?`You can bet up to your whole ${cap} right now.`:`Max bet is ${Math.round(maxFrac*100)}% of your stack (${cap} right now).`);
     if(!w.legs||!w.legs.length)errs.push('Add at least one selection.');
     if(w.legs&&new Set(w.legs.map(l=>l.eventID)).size>1)errs.push('All selections must be from the same game.');
     if(w.legs&&w.legs.some(l=>l.started))errs.push('One of these games has already started.');

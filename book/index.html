@@ -256,9 +256,9 @@ td.legs div{white-space:nowrap}
         <dt>No conflicts in a parlay</dt><dd>Picks on one game that cannot both win (SAS -15.5 with DAL ML, over 228.5 with under 226.5) or that overlap, where one already implies the other (SAS -15.5 with SAS ML, two overs on the same player), cannot be legs of the same parlay. They are fine as separate singles. Both sides of the exact same market are never allowed together.</dd>
         <dt>Alt lines</dt><dd>Tap the arrows beside a spread, total or prop to slide to a different number at FanDuel's price for it (a player over 20 instead of over 10, a team at -2.5 instead of -7.5). Only numbers FanDuel lists are offered. One leg per market: switching numbers replaces, never stacks.</dd>
         <dt>Parlay pricing</dt><dd>Legs multiply at their listed prices. FanDuel discounts same-game parlays for correlated legs; this book does not, so a same-game parlay pays a little more here than there. That is the house rule, same for everyone.</dd>
-        <dt>Max bet</dt><dd>No single bet can be more than 25% of your stack at the moment you place it.</dd>
-        <dt>Minimum</dt><dd>Wager at least 20 points every week, Monday through Sunday.</dd>
-        <dt>Bust</dt><dd>Hit zero with nothing pending and you reload to 100 and keep playing. It costs you at the end of the regular season: one bust forfeits 10% of your final total, two busts 25%, three 45%, four 70%, five 90%. Each bust forfeits at least 20 points regardless, so busting on purpose for the reload never pays.</dd>
+        <dt>Max bet</dt><dd>Stakes are whole points, and payouts round to the nearest whole point. No single bet can be more than 25% of your stack at the moment you place it, rounded down. Once your stack, counting open bets, is 20 points or less, the cap lifts and you may go all in.</dd>
+        <dt>Minimum</dt><dd>Wager at least 20 points every week, Monday through Sunday, or your whole stack if you have less than 20.</dd>
+        <dt>Bust</dt><dd>Hit zero with no bets open and you have busted: you reload to 100 and keep playing. It costs you at the end of the regular season: one bust forfeits 10% of your final total, two busts 25%, three 45%, four 70%, five 90%. Each bust forfeits at least 20 points regardless, so busting on purpose for the reload never pays.</dd>
         <dt>Foul out</dt><dd>Six busts and you have fouled out, like a sixth foul. Your season is over: no more bets, and you are automatically last in the auction order behind everyone still standing. If two or more people foul out, the one with the better win rate on settled bets ranks higher among them (wins as the tiebreaker).</dd>
         <dt>Settling</dt><dd>Bets grade overnight from the box score. A leg exactly on the number pushes and drops out of a parlay. A player who does not play voids that leg. A lost leg loses the slip.</dd>
         <dt>Lock</dt><dd>Bets close at tip-off. Until then you can cancel a bet and the stake goes back to your stack.</dd>
@@ -294,7 +294,7 @@ td.legs div{white-space:nowrap}
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
 <script src="../firebase-config.js"></script>
-<script src="engine.js?v=20261024c"></script>
+<script src="engine.js?v=20261025a"></script>
 <script>
 (function(){
   const E=window.BookEngine;
@@ -353,7 +353,7 @@ td.legs div{white-space:nowrap}
     const crown=p=>p<=3?`<svg class="crown r${p}" viewBox="0 0 24 16" width="18" height="12" aria-hidden="true"><path d="M2 14h20l-2-9-5 4-3-7-3 7-5-4z" fill="currentColor"/></svg>`:'';
     $('board').innerHTML=ranked.map(s=>`<button type="button" class="tile ${FLAGS[s.p]||''} ${s.fouledOut?'out':''}" data-statsfor="${esc(s.p)}"><div class="name"><span>${esc(s.p)}${s.fouledOut?'<span class="foul">Fouled out</span>':crown(s.place)}</span><span class="rank num">${s.place}</span></div>
       <div class="pts num">${fmtPts(s.stack)}${s.pending?`<small>+${fmtPts(s.pending)} live</small>`:''}</div>
-      <div class="line num ${s.wkWagered<CFG.minWeekly?'short':''}">${fmtPts(s.wkWagered)} of ${CFG.minWeekly} wagered this week</div>
+      <div class="line num ${s.wkWagered<Math.min(CFG.minWeekly,s.stack+s.pending+s.wkWagered)?'short':''}">${fmtPts(s.wkWagered)} of ${Math.min(CFG.minWeekly,Math.floor(s.stack+s.pending+s.wkWagered))} wagered this week</div>
       <div class="line num">${s.fouledOut?`${s.busts} busts. Fouled out, no more bets. Last at the auction, ranked among the fouled out by win rate (${Math.round(s.winPct*100)}%, ${s.wins}-${s.losses}).`:s.busts?`${s.busts} of ${E.FOUL_OUT} busts, ${Math.round(E.penaltyPct(s.busts)*100)}% off at the end (counts as ${fmtPts(s.final)})`:'No busts'}</div></button>`).join('');}
 
   // ---------- book ----------
@@ -414,18 +414,20 @@ td.legs div{white-space:nowrap}
   // Parlays are same-game only, so parlay-mode legs are grouped by game: one parlay per game, each with its own stake.
   function slipGroups(){const singles=S.slip.filter(l=>l.mode==='single');const byGame={};S.slip.filter(l=>l.mode!=='single').forEach(l=>{(byGame[l.eventID]=byGame[l.eventID]||[]).push(l);});
     const parlays=Object.keys(byGame).map(eid=>({eventID:eid,key:'__parlay|'+eid,legs:byGame[eid]}));return {singles,parlays};}
-  function stakeOf(key){const v=Number((S.stakes||{})[key]);return isFinite(v)&&v>0?Math.round(v*100)/100:0;}
+  function stakeOf(key){const v=Number((S.stakes||{})[key]);return isFinite(v)&&v>0?v:0;} // validated as a whole point by the engine
   function slipBets(){ // the list of bets the slip would place: one per single, one for the parlay (if 2+ legs; a lone parlay leg is a single)
     const {singles,parlays}=slipGroups();const bets=singles.map(l=>({key:l.key,legs:[l],stake:stakeOf(l.key)}));
     for(const p of parlays){if(p.legs.length>=2)bets.push({key:p.key,legs:p.legs,stake:stakeOf(p.key)});else bets.push({key:p.legs[0].key,legs:p.legs,stake:stakeOf(p.legs[0].key)});}
     return bets;}
   function slipErrors(){const st=S.me?stateOf(S.me):null;if(!st)return ['Choose your name first.'];const bets=slipBets();const errs=[];let total=0;
-    for(const b of bets){total+=b.stake;const e=E.validate({stake:b.stake||Math.min(1,st.stack),legs:b.legs},{stack:st.stack},CFG);if(e.length)errs.push((b.legs.length>1?gameName(b.legs[0].eventID)+' parlay: ':b.legs[0].short+': ')+e[0]);}
+    let stack=st.stack,pending=st.pending||0; // each bet on the slip is checked as if the ones before it were already placed
+    for(const b of bets){const e=E.validate({stake:b.stake||1,legs:b.legs},{stack,pending},CFG);if(e.length)errs.push((b.legs.length>1?gameName(b.legs[0].eventID)+' parlay: ':b.legs[0].short+': ')+e[0]);
+      if(b.stake>0){total+=b.stake;stack-=b.stake;pending+=b.stake;}}
     if(!bets.some(b=>b.stake))errs.push('Enter a stake on at least one bet.');
     if(total>st.stack+0.0001)errs.push(`These stakes add up to ${fmtPts(total)} but you only have ${fmtPts(st.stack)}.`);
     return errs;}
   function renderSlip(){const el=$('slip');if(!S.slip.length){el.hidden=true;S.slipOpen=false;return;}el.hidden=false;
-    const st=S.me?stateOf(S.me):null;const maxBet=st?Math.floor(st.stack*CFG.maxBetFraction*100)/100:0;const {singles,parlays}=slipGroups();const bets=slipBets();const errs=slipErrors();const realParlays=parlays.filter(p=>p.legs.length>=2);
+    const st=S.me?stateOf(S.me):null;const maxBet=st?E.maxBet(st,CFG):0;const allIn=st?E.allIn(st):false;const {singles,parlays}=slipGroups();const bets=slipBets();const errs=slipErrors();const realParlays=parlays.filter(p=>p.legs.length>=2);
     const totalStake=bets.reduce((a,b)=>a+b.stake,0);const totalWin=bets.reduce((a,b)=>a+(b.stake?b.stake*E.parlayDecimal(b.legs)-b.stake:0),0);
     if(!S.slipOpen){el.className='slip collapsed';el.innerHTML=`<button type="button" class="bar" id="openslip"><span class="cnt">${S.slip.length}</span><span>Bet slip${realParlays.map(p=>`, ${p.legs.length}-leg parlay ${esc(E.fmtAmerican(E.american(E.parlayDecimal(p.legs))))}`).join('')}${singles.length?`, ${singles.length} single${singles.length===1?'':'s'}`:''}</span><span class="hint">${totalStake?`${fmtPts(totalStake)} staked, to win ${fmtPts(totalWin)}`:'tap to open'}</span></button>`;
       el.querySelector('#openslip').addEventListener('click',()=>{S.slipOpen=true;renderSlip();});return;}
@@ -433,12 +435,12 @@ td.legs div{white-space:nowrap}
     const legRow=l=>`<div class="leg"><div class="lt"><span>${esc(l.short)}</span><span class="o num">${esc(E.fmtAmerican(l.odds))}</span><span class="hint">${esc(gameName(l.eventID))}</span></div>
       <div class="seg" role="group" aria-label="Bet type"><button type="button" data-mode="${esc(l.key)}|parlay" aria-pressed="${l.mode!=='single'}">Parlay</button><button type="button" data-mode="${esc(l.key)}|single" aria-pressed="${l.mode==='single'}">Single</button></div>
       <button type="button" class="rm" data-rm="${esc(l.key)}" aria-label="Remove">&times;</button></div>`;
-    const stakeRow=(key,legs,label)=>{const stake=stakeOf(key);const dec=E.parlayDecimal(legs);return `<div class="stakerow"><span class="sl">${esc(label)}</span><input type="number" min="1" step="1" inputmode="decimal" placeholder="Stake" data-stake="${esc(key)}" value="${esc((S.stakes||{})[key]||'')}"><span class="quick"><button type="button" data-q="${esc(key)}|10">10</button><button type="button" data-q="${esc(key)}|20">20</button><button type="button" data-q="${esc(key)}|max">Max</button></span><span class="pay num">${stake?`to win ${fmtPts(stake*dec-stake)}`:''}</span></div>`;};
+    const stakeRow=(key,legs,label)=>{const stake=stakeOf(key);const dec=E.parlayDecimal(legs);return `<div class="stakerow"><span class="sl">${esc(label)}</span><input type="number" min="1" step="1" inputmode="numeric" pattern="[0-9]*" placeholder="Stake" data-stake="${esc(key)}" value="${esc((S.stakes||{})[key]||'')}"><span class="quick"><button type="button" data-q="${esc(key)}|10">10</button><button type="button" data-q="${esc(key)}|20">20</button><button type="button" data-q="${esc(key)}|max">Max</button></span><span class="pay num">${stake?`to win ${fmtPts(stake*dec-stake)}`:''}</span></div>`;};
     el.innerHTML=`<h3><span>Bet slip</span><span><button type="button" id="clearslip" class="signout" style="font-size:12px">Clear</button><button type="button" id="hideslip" class="signout" style="font-size:12px;margin-left:10px">Hide, keep picking</button></span></h3>
       ${parlays.map(p=>{const n=p.legs.length;const price=E.fmtAmerican(E.american(E.parlayDecimal(p.legs)));return `<div class="grp${n>=2?' parlay':''}"><div class="gh"><span>${esc(gameName(p.eventID))} parlay${n>=2?`, ${n} legs`:''}</span>${n>=2?`<span class="podds">${esc(price)}</span>`:''}</div>${n>=2?`<div class="pnote">Combined odds <b>${esc(price)}</b>, pays <b>${(Math.round(E.parlayDecimal(p.legs)*100)/100).toFixed(2)}x</b> your stake. ${n===2?"Both":"All "+n} legs must hit.</div>`:`<div class="pnote">Needs a second pick from ${esc(gameName(p.eventID))} to become a parlay. Bets as a single for now.</div>`}<div class="legs">${p.legs.map(legRow).join('')}</div>${n>=2?stakeRow(p.key,p.legs,'Parlay stake'):stakeRow(p.legs[0].key,p.legs,'Stake')}</div>`;}).join('')}
       ${singles.length?`<div class="grp"><div class="gh"><span>Singles</span></div>${singles.map(l=>`<div class="legs">${legRow(l)}</div>${stakeRow(l.key,[l],'Stake')}`).join('')}</div>`:''}
       ${(()=>{const shown=errs.find(e=>!/^Enter a stake/.test(e))||(totalStake?errs[0]:null);return shown?`<div class="err">${esc(shown)}</div>`:'';})()}
-      <div class="pt">${st?`Stack ${fmtPts(st.stack)}. Max per bet ${fmtPts(maxBet)}.`:''} Tap Parlay or Single on each pick to decide how it bets. Parlays are same-game only, so each game builds its own. The numbers on this slip are the official numbers.</div>
+      <div class="pt">${st?`Stack ${fmtPts(st.stack)}. ${allIn?`You are at ${E.ALL_IN_AT} or under, so you may bet it all.`:`Max per bet ${fmtPts(maxBet)}.`} Whole points only.`:''} Tap Parlay or Single on each pick to decide how it bets. Parlays are same-game only, so each game builds its own. The numbers on this slip are the official numbers.</div>
       <button type="button" class="place" id="place" ${errs.length||S.busy?'disabled':''}>${S.busy?'Placing':bets.filter(b=>b.stake).length>1?`Place ${bets.filter(b=>b.stake).length} bets (${fmtPts(totalStake)})`:'Place bet'}</button>`;
     el.querySelector('#clearslip').addEventListener('click',()=>{S.slip=[];S.stakes={};render();});
     el.querySelector('#hideslip').addEventListener('click',()=>{S.slipOpen=false;renderSlip();});
