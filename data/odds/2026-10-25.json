@@ -13064,7 +13064,7 @@
      "line": null,
      "name": "Moneyline",
      "oddID": "points-away-game-ml-away",
-     "odds": -156,
+     "odds": -168,
      "opposing": "points-home-game-ml-home",
      "period": "game",
      "player": null,
@@ -13081,7 +13081,7 @@
      "line": null,
      "name": "Moneyline",
      "oddID": "points-home-game-ml-home",
-     "odds": 132,
+     "odds": 142,
      "opposing": "points-away-game-ml-away",
      "period": "game",
      "player": null,
@@ -13097,43 +13097,43 @@
       ],
       [
        211.5,
-       -1450
+       -1500
       ],
       [
        212.5,
-       -1200
+       -1300
       ],
       [
        213.5,
-       -1050
+       -1100
       ],
       [
        214.5,
-       -900
+       -950
       ],
       [
        215.5,
-       -750
+       -800
       ],
       [
        216.5,
-       -670
+       -700
       ],
       [
        217.5,
-       -580
+       -590
       ],
       [
        218.5,
-       -500
+       -520
       ],
       [
        219.5,
-       -430
+       -460
       ],
       [
        220.5,
-       -390
+       -400
       ],
       [
        221.5,
@@ -13141,7 +13141,7 @@
       ],
       [
        222.5,
-       -330
+       -340
       ],
       [
        223.5,
@@ -13153,7 +13153,7 @@
       ],
       [
        225.5,
-       -250
+       -245
       ],
       [
        226.5,
@@ -13161,7 +13161,7 @@
       ],
       [
        227.5,
-       -198
+       -200
       ],
       [
        228.5,
@@ -13169,7 +13169,7 @@
       ],
       [
        229.5,
-       -176
+       -174
       ],
       [
        230.5,
@@ -13185,11 +13185,11 @@
       ],
       [
        233.5,
-       -128
+       -126
       ],
       [
        234.5,
-       -114
+       -116
       ],
       [
        236.5,
@@ -13197,11 +13197,11 @@
       ],
       [
        237.5,
-       114
+       112
       ],
       [
        238.5,
-       124
+       122
       ],
       [
        239.5,
@@ -13233,51 +13233,51 @@
       ],
       [
        246.5,
-       220
+       215
       ],
       [
        247.5,
-       235
+       230
       ],
       [
        248.5,
-       265
+       255
       ],
       [
        249.5,
-       280
+       270
       ],
       [
        250.5,
-       310
+       290
       ],
       [
        251.5,
-       340
+       320
       ],
       [
        252.5,
-       380
+       370
       ],
       [
        253.5,
-       400
+       390
       ],
       [
        254.5,
-       450
+       430
       ],
       [
        255.5,
-       500
+       480
       ],
       [
        256.5,
-       540
+       520
       ],
       [
        257.5,
-       600
+       560
       ],
       [
        258.5,
@@ -13285,7 +13285,7 @@
       ],
       [
        259.5,
-       700
+       680
       ],
       [
        260.5,
@@ -13301,7 +13301,7 @@
       ],
       [
        263.5,
-       940
+       1000
       ],
       [
        264.5,
@@ -13325,7 +13325,7 @@
       ],
       [
        269.5,
-       1500
+       1600
       ],
       [
        270.5,
@@ -13333,14 +13333,10 @@
       ],
       [
        271.5,
-       1800
-      ],
-      [
-       272.5,
        2000
       ],
       [
-       273.5,
+       272.5,
        2000
       ]
      ],
@@ -13368,11 +13364,11 @@
       ],
       [
        202.5,
-       1800
+       2000
       ],
       [
        203.5,
-       1500
+       1600
       ],
       [
        204.5,
@@ -13380,7 +13376,7 @@
       ],
       [
        205.5,
-       1200
+       1300
       ],
       [
        206.5,
@@ -13404,39 +13400,39 @@
       ],
       [
        211.5,
-       700
+       720
       ],
       [
        212.5,
-       630
+       650
       ],
       [
        213.5,
-       580
+       600
       ],
       [
        214.5,
-       520
+       540
       ],
       [
        215.5,
-       460
+       480
       ],
       [
        216.5,
-       430
+       440
       ],
       [
        217.5,
-       380
+       390
       ],
       [
        218.5,
-       340
+       350
       ],
       [
        219.5,
-       300
+       320
       ],
       [
        220.5,
@@ -13448,7 +13444,7 @@
       ],
       [
        222.5,
-       240
+       245
       ],
       [
        223.5,
@@ -13460,7 +13456,7 @@
       ],
       [
        225.5,
-       190
+       186
       ],
       [
        226.5,
@@ -13468,7 +13464,7 @@
       ],
       [
        227.5,
-       158
+       160
       ],
       [
        228.5,
@@ -13476,7 +13472,7 @@
       ],
       [
        229.5,
-       142
+       140
       ],
       [
        230.5,
@@ -13492,7 +13488,7 @@
       ],
       [
        233.5,
-       104
+       102
       ],
       [
        234.5,
@@ -13504,11 +13500,11 @@
       ],
       [
        237.5,
-       -140
+       -138
       ],
       [
        238.5,
-       -154
+       -150
       ],
       [
        239.5,
@@ -13540,51 +13536,51 @@
       ],
       [
        246.5,
-       -295
+       -290
       ],
       [
        247.5,
-       -320
+       -310
       ],
       [
        248.5,
-       -370
+       -350
       ],
       [
        249.5,
-       -390
+       -380
       ],
       [
        250.5,
-       -440
+       -410
       ],
       [
        251.5,
-       -500
+       -460
       ],
       [
        252.5,
-       -580
+       -550
       ],
       [
        253.5,
-       -620
+       -590
       ],
       [
        254.5,
-       -720
+       -700
       ],
       [
        255.5,
-       -850
+       -800
       ],
       [
        256.5,
-       -950
+       -900
       ],
       [
        257.5,
-       -1100
+       -1000
       ],
       [
        258.5,
@@ -13592,7 +13588,7 @@
       ],
       [
        259.5,
-       -1450
+       -1400
       ],
       [
        260.5,
@@ -13622,8 +13618,12 @@
     {
      "alts": [
       [
+       -30.5,
+       2000
+      ],
+      [
        -29.5,
-       1800
+       2000
       ],
       [
        -28.5,
@@ -13651,7 +13651,7 @@
       ],
       [
        -22.5,
-       900
+       920
       ],
       [
        -21.5,
@@ -13663,7 +13663,7 @@
       ],
       [
        -19.5,
-       630
+       650
       ],
       [
        -18.5,
@@ -13679,79 +13679,79 @@
       ],
       [
        -15.5,
-       400
+       385
       ],
       [
        -14.5,
-       360
+       340
       ],
       [
        -13.5,
-       300
+       290
       ],
       [
        -12.5,
-       270
+       265
       ],
       [
        -11.5,
-       240
+       235
       ],
       [
        -10.5,
-       220
+       210
       ],
       [
        -9.5,
-       188
+       182
       ],
       [
        -8.5,
-       172
+       164
       ],
       [
        -7.5,
-       148
+       142
       ],
       [
        -6.5,
-       128
+       124
       ],
       [
        -5.5,
-       118
+       112
       ],
       [
        -4.5,
-       104
+       -102
       ],
       [
        -2.5,
-       -120
+       -128
       ],
       [
        -1.5,
-       -138
+       -146
       ],
       [
        1.5,
-       -166
+       -178
       ],
       [
        2.5,
-       -192
+       -210
       ],
       [
        3.5,
-       -215
+       -225
       ],
       [
        4.5,
-       -245
+       -255
       ],
       [
        5.5,
-       -280
+       -300
       ],
       [
        6.5,
@@ -13759,23 +13759,23 @@
       ],
       [
        7.5,
-       -375
+       -385
       ],
       [
        8.5,
-       -450
+       -460
       ],
       [
        9.5,
-       -520
+       -550
       ],
       [
        10.5,
-       -620
+       -650
       ],
       [
        11.5,
-       -750
+       -850
       ],
       [
        12.5,
@@ -13783,15 +13783,15 @@
       ],
       [
        13.5,
-       -1100
+       -1200
       ],
       [
        14.5,
-       -1400
+       -1600
       ],
       [
        15.5,
-       -1800
+       -2000
       ]
      ],
      "available": true,
@@ -13802,7 +13802,7 @@
      "line": -3.5,
      "name": "Spread",
      "oddID": "points-away-game-sp-away",
-     "odds": -110,
+     "odds": -115,
      "opposing": "points-home-game-sp-home",
      "period": "game",
      "player": null,
@@ -13822,7 +13822,7 @@
       ],
       [
        -22.5,
-       1400
+       1800
       ],
       [
        -21.5,
@@ -13834,31 +13834,31 @@
       ],
       [
        -19.5,
-       1100
+       1200
       ],
       [
        -18.5,
-       1000
+       1100
       ],
       [
        -17.5,
-       980
+       1000
       ],
       [
        -16.5,
-       870
+       900
       ],
       [
        -15.5,
-       780
+       830
       ],
       [
        -14.5,
-       690
+       730
       ],
       [
        -13.5,
-       600
+       630
       ],
       [
        -12.5,
@@ -13866,23 +13866,23 @@
       ],
       [
        -11.5,
-       460
+       500
       ],
       [
        -10.5,
-       400
+       420
       ],
       [
        -9.5,
-       350
+       360
       ],
       [
        -8.5,
-       310
+       320
       ],
       [
        -7.5,
-       270
+       275
       ],
       [
        -6.5,
@@ -13890,79 +13890,79 @@
       ],
       [
        -5.5,
-       210
+       220
       ],
       [
        -4.5,
-       186
+       192
       ],
       [
        -3.5,
-       164
+       172
       ],
       [
        -2.5,
-       148
+       162
       ],
       [
        -1.5,
-       132
+       138
       ],
       [
        1.5,
-       112
+       118
       ],
       [
        2.5,
-       -102
+       104
       ],
       [
        4.5,
-       -128
+       -120
       ],
       [
        5.5,
-       -146
+       -138
       ],
       [
        6.5,
-       -160
+       -154
       ],
       [
        7.5,
-       -192
+       -182
       ],
       [
        8.5,
-       -225
+       -215
       ],
       [
        9.5,
-       -250
+       -240
       ],
       [
        10.5,
-       -300
+       -280
       ],
       [
        11.5,
-       -330
+       -320
       ],
       [
        12.5,
-       -375
+       -370
       ],
       [
        13.5,
-       -430
+       -410
       ],
       [
        14.5,
-       -550
+       -500
       ],
       [
        15.5,
-       -620
+       -590
       ],
       [
        16.5,
@@ -13978,7 +13978,7 @@
       ],
       [
        19.5,
-       -1200
+       -1300
       ],
       [
        20.5,
@@ -13997,7 +13997,7 @@
      "line": 3.5,
      "name": "Spread",
      "oddID": "points-home-game-sp-home",
-     "odds": -110,
+     "odds": -105,
      "opposing": "points-away-game-sp-away",
      "period": "game",
      "player": null,
@@ -14006,160 +14006,6 @@
      "team": "SAC"
     },
     {
-     "alts": [
-      [
-       102.5,
-       -2000
-      ],
-      [
-       103.5,
-       -1600
-      ],
-      [
-       104.5,
-       -1300
-      ],
-      [
-       105.5,
-       -1050
-      ],
-      [
-       106.5,
-       -850
-      ],
-      [
-       107.5,
-       -650
-      ],
-      [
-       108.5,
-       -550
-      ],
-      [
-       109.5,
-       -430
-      ],
-      [
-       110.5,
-       -380
-      ],
-      [
-       111.5,
-       -310
-      ],
-      [
-       112.5,
-       -275
-      ],
-      [
-       113.5,
-       -240
-      ],
-      [
-       114.5,
-       -198
-      ],
-      [
-       115.5,
-       -176
-      ],
-      [
-       116.5,
-       -158
-      ],
-      [
-       117.5,
-       -138
-      ],
-      [
-       118.5,
-       -120
-      ],
-      [
-       120.5,
-       108
-      ],
-      [
-       121.5,
-       124
-      ],
-      [
-       122.5,
-       140
-      ],
-      [
-       123.5,
-       156
-      ],
-      [
-       124.5,
-       176
-      ],
-      [
-       125.5,
-       200
-      ],
-      [
-       126.5,
-       230
-      ],
-      [
-       127.5,
-       265
-      ],
-      [
-       128.5,
-       300
-      ],
-      [
-       129.5,
-       370
-      ],
-      [
-       130.5,
-       400
-      ],
-      [
-       131.5,
-       480
-      ],
-      [
-       132.5,
-       560
-      ],
-      [
-       133.5,
-       650
-      ],
-      [
-       134.5,
-       780
-      ],
-      [
-       135.5,
-       900
-      ],
-      [
-       136.5,
-       1100
-      ],
-      [
-       137.5,
-       1200
-      ],
-      [
-       138.5,
-       1300
-      ],
-      [
-       139.5,
-       1600
-      ],
-      [
-       140.5,
-       1800
-      ]
-     ],
      "available": true,
      "betType": "ou",
      "book": "fanduel",
@@ -14168,7 +14014,7 @@
      "line": 119.5,
      "name": "Total",
      "oddID": "points-away-game-ou-over",
-     "odds": -105,
+     "odds": -108,
      "opposing": "points-away-game-ou-under",
      "period": "game",
      "player": null,
@@ -14177,156 +14023,6 @@
      "team": "MEM"
     },
     {
-     "alts": [
-      [
-       97.5,
-       1800
-      ],
-      [
-       98.5,
-       1500
-      ],
-      [
-       99.5,
-       1300
-      ],
-      [
-       100.5,
-       1120
-      ],
-      [
-       101.5,
-       940
-      ],
-      [
-       102.5,
-       880
-      ],
-      [
-       103.5,
-       750
-      ],
-      [
-       104.5,
-       650
-      ],
-      [
-       105.5,
-       580
-      ],
-      [
-       106.5,
-       500
-      ],
-      [
-       107.5,
-       420
-      ],
-      [
-       108.5,
-       370
-      ],
-      [
-       109.5,
-       300
-      ],
-      [
-       110.5,
-       270
-      ],
-      [
-       111.5,
-       230
-      ],
-      [
-       112.5,
-       205
-      ],
-      [
-       113.5,
-       182
-      ],
-      [
-       114.5,
-       158
-      ],
-      [
-       115.5,
-       142
-      ],
-      [
-       116.5,
-       128
-      ],
-      [
-       117.5,
-       112
-      ],
-      [
-       118.5,
-       -102
-      ],
-      [
-       120.5,
-       -132
-      ],
-      [
-       121.5,
-       -154
-      ],
-      [
-       122.5,
-       -174
-      ],
-      [
-       123.5,
-       -196
-      ],
-      [
-       124.5,
-       -230
-      ],
-      [
-       125.5,
-       -265
-      ],
-      [
-       126.5,
-       -310
-      ],
-      [
-       127.5,
-       -370
-      ],
-      [
-       128.5,
-       -430
-      ],
-      [
-       129.5,
-       -550
-      ],
-      [
-       130.5,
-       -620
-      ],
-      [
-       131.5,
-       -800
-      ],
-      [
-       132.5,
-       -1000
-      ],
-      [
-       133.5,
-       -1300
-      ],
-      [
-       134.5,
-       -1700
-      ]
-     ],
      "available": true,
      "betType": "ou",
      "book": "fanduel",
@@ -14335,7 +14031,7 @@
      "line": 119.5,
      "name": "Total",
      "oddID": "points-away-game-ou-under",
-     "odds": -115,
+     "odds": -112,
      "opposing": "points-away-game-ou-over",
      "period": "game",
      "player": null,
@@ -14344,160 +14040,6 @@
      "team": "MEM"
     },
     {
-     "alts": [
-      [
-       100.5,
-       -1900
-      ],
-      [
-       101.5,
-       -1450
-      ],
-      [
-       102.5,
-       -1100
-      ],
-      [
-       103.5,
-       -850
-      ],
-      [
-       104.5,
-       -650
-      ],
-      [
-       105.5,
-       -550
-      ],
-      [
-       106.5,
-       -430
-      ],
-      [
-       107.5,
-       -370
-      ],
-      [
-       108.5,
-       -300
-      ],
-      [
-       109.5,
-       -275
-      ],
-      [
-       110.5,
-       -240
-      ],
-      [
-       111.5,
-       -200
-      ],
-      [
-       112.5,
-       -180
-      ],
-      [
-       113.5,
-       -160
-      ],
-      [
-       114.5,
-       -140
-      ],
-      [
-       115.5,
-       -122
-      ],
-      [
-       117.5,
-       104
-      ],
-      [
-       118.5,
-       118
-      ],
-      [
-       119.5,
-       134
-      ],
-      [
-       120.5,
-       152
-      ],
-      [
-       121.5,
-       164
-      ],
-      [
-       122.5,
-       190
-      ],
-      [
-       123.5,
-       215
-      ],
-      [
-       124.5,
-       245
-      ],
-      [
-       125.5,
-       280
-      ],
-      [
-       126.5,
-       330
-      ],
-      [
-       127.5,
-       380
-      ],
-      [
-       128.5,
-       450
-      ],
-      [
-       129.5,
-       520
-      ],
-      [
-       130.5,
-       630
-      ],
-      [
-       131.5,
-       720
-      ],
-      [
-       132.5,
-       850
-      ],
-      [
-       133.5,
-       940
-      ],
-      [
-       134.5,
-       1100
-      ],
-      [
-       135.5,
-       1200
-      ],
-      [
-       136.5,
-       1400
-      ],
-      [
-       137.5,
-       1800
-      ],
-      [
-       138.5,
-       2000
-      ]
-     ],
      "available": true,
      "betType": "ou",
      "book": "fanduel",
@@ -14506,7 +14048,7 @@
      "line": 116.5,
      "name": "Total",
      "oddID": "points-home-game-ou-over",
-     "odds": -108,
+     "odds": -104,
      "opposing": "points-home-game-ou-under",
      "period": "game",
      "player": null,
@@ -14515,160 +14057,6 @@
      "team": "SAC"
     },
     {
-     "alts": [
-      [
-       94.5,
-       2000
-      ],
-      [
-       95.5,
-       1800
-      ],
-      [
-       96.5,
-       1400
-      ],
-      [
-       97.5,
-       1200
-      ],
-      [
-       98.5,
-       1100
-      ],
-      [
-       99.5,
-       940
-      ],
-      [
-       100.5,
-       820
-      ],
-      [
-       101.5,
-       700
-      ],
-      [
-       102.5,
-       600
-      ],
-      [
-       103.5,
-       500
-      ],
-      [
-       104.5,
-       420
-      ],
-      [
-       105.5,
-       370
-      ],
-      [
-       106.5,
-       300
-      ],
-      [
-       107.5,
-       265
-      ],
-      [
-       108.5,
-       225
-      ],
-      [
-       109.5,
-       205
-      ],
-      [
-       110.5,
-       182
-      ],
-      [
-       111.5,
-       160
-      ],
-      [
-       112.5,
-       144
-      ],
-      [
-       113.5,
-       130
-      ],
-      [
-       114.5,
-       114
-      ],
-      [
-       115.5,
-       100
-      ],
-      [
-       117.5,
-       -128
-      ],
-      [
-       118.5,
-       -146
-      ],
-      [
-       119.5,
-       -166
-      ],
-      [
-       120.5,
-       -190
-      ],
-      [
-       121.5,
-       -210
-      ],
-      [
-       122.5,
-       -250
-      ],
-      [
-       123.5,
-       -290
-      ],
-      [
-       124.5,
-       -340
-      ],
-      [
-       125.5,
-       -390
-      ],
-      [
-       126.5,
-       -480
-      ],
-      [
-       127.5,
-       -580
-      ],
-      [
-       128.5,
-       -720
-      ],
-      [
-       129.5,
-       -900
-      ],
-      [
-       130.5,
-       -1200
-      ],
-      [
-       131.5,
-       -1500
-      ],
-      [
-       132.5,
-       -2000
-      ]
-     ],
      "available": true,
      "betType": "ou",
      "book": "fanduel",
@@ -14677,7 +14065,7 @@
      "line": 116.5,
      "name": "Total",
      "oddID": "points-home-game-ou-under",
-     "odds": -112,
+     "odds": -118,
      "opposing": "points-home-game-ou-over",
      "period": "game",
      "player": null,
@@ -14728,7 +14116,7 @@
      "line": null,
      "name": "1st half moneyline",
      "oddID": "points-home-1h-ml-home",
-     "odds": 118,
+     "odds": 120,
      "opposing": "points-away-1h-ml-away",
      "period": "1h",
      "player": null,
@@ -14757,19 +14145,19 @@
      "alts": [
       [
        3.5,
-       -196
+       -184
       ],
       [
        5.5,
-       230
+       240
       ],
       [
        7.5,
-       830
+       870
       ],
       [
        9.5,
-       1700
+       2000
       ]
      ],
      "available": true,
@@ -14780,7 +14168,7 @@
      "line": 4.5,
      "name": "Cameron Boozer Assists",
      "oddID": "assists-CAMERON_BOOZER_1_NBA-game-ou-over",
-     "odds": 114,
+     "odds": 122,
      "opposing": "assists-CAMERON_BOOZER_1_NBA-game-ou-under",
      "period": "game",
      "player": "CAMERON_BOOZER_1_NBA",
@@ -14797,7 +14185,7 @@
      "line": 4.5,
      "name": "Cameron Boozer Assists",
      "oddID": "assists-CAMERON_BOOZER_1_NBA-game-ou-under",
-     "odds": -146,
+     "odds": -156,
      "opposing": "assists-CAMERON_BOOZER_1_NBA-game-ou-over",
      "period": "game",
      "player": "CAMERON_BOOZER_1_NBA",
@@ -14809,11 +14197,11 @@
      "alts": [
       [
        1.5,
-       -560
+       -520
       ],
       [
        5.5,
-       630
+       600
       ],
       [
        7.5,
@@ -14828,7 +14216,7 @@
      "line": 3.5,
      "name": "Cedric Coward Assists",
      "oddID": "assists-CEDRIC_COWARD_1_NBA-game-ou-over",
-     "odds": 142,
+     "odds": 140,
      "opposing": "assists-CEDRIC_COWARD_1_NBA-game-ou-under",
      "period": "game",
      "player": "CEDRIC_COWARD_1_NBA",
@@ -14845,7 +14233,7 @@
      "line": 3.5,
      "name": "Cedric Coward Assists",
      "oddID": "assists-CEDRIC_COWARD_1_NBA-game-ou-under",
-     "odds": -184,
+     "odds": -180,
      "opposing": "assists-CEDRIC_COWARD_1_NBA-game-ou-over",
      "period": "game",
      "player": "CEDRIC_COWARD_1_NBA",
@@ -14857,11 +14245,11 @@
      "alts": [
       [
        3.5,
-       300
+       285
       ],
       [
        5.5,
-       1300
+       1200
       ]
      ],
      "available": true,
@@ -14901,15 +14289,15 @@
      "alts": [
       [
        3.5,
-       -1600
+       -1400
       ],
       [
        5.5,
-       -245
+       -250
       ],
       [
        7.5,
-       144
+       146
       ],
       [
        9.5,
@@ -14917,7 +14305,7 @@
       ],
       [
        11.5,
-       900
+       1060
       ]
      ],
      "available": true,
@@ -14928,7 +14316,7 @@
      "line": 6.5,
      "name": "Domantas Sabonis Assists",
      "oddID": "assists-DOMANTAS_SABONIS_1_NBA-game-ou-over",
-     "odds": -128,
+     "odds": -125,
      "opposing": "assists-DOMANTAS_SABONIS_1_NBA-game-ou-under",
      "period": "game",
      "player": "DOMANTAS_SABONIS_1_NBA",
@@ -14945,7 +14333,7 @@
      "line": 6.5,
      "name": "Domantas Sabonis Assists",
      "oddID": "assists-DOMANTAS_SABONIS_1_NBA-game-ou-under",
-     "odds": 100,
+     "odds": -102,
      "opposing": "assists-DOMANTAS_SABONIS_1_NBA-game-ou-over",
      "period": "game",
      "player": "DOMANTAS_SABONIS_1_NBA",
@@ -14957,23 +14345,23 @@
      "alts": [
       [
        3.5,
-       -1000
+       -1100
       ],
       [
        5.5,
-       -186
+       -192
       ],
       [
        7.5,
-       190
+       196
       ],
       [
        9.5,
-       480
+       500
       ],
       [
        11.5,
-       1300
+       1400
       ]
      ],
      "available": true,
@@ -14984,7 +14372,7 @@
      "line": 6.5,
      "name": "Ty Jerome Assists",
      "oddID": "assists-TY_JEROME_1_NBA-game-ou-over",
-     "odds": 106,
+     "odds": 102,
      "opposing": "assists-TY_JEROME_1_NBA-game-ou-under",
      "period": "game",
      "player": "TY_JEROME_1_NBA",
@@ -15001,7 +14389,7 @@
      "line": 6.5,
      "name": "Ty Jerome Assists",
      "oddID": "assists-TY_JEROME_1_NBA-game-ou-under",
-     "odds": -136,
+     "odds": -130,
      "opposing": "assists-TY_JEROME_1_NBA-game-ou-over",
      "period": "game",
      "player": "TY_JEROME_1_NBA",
@@ -15013,11 +14401,11 @@
      "alts": [
       [
        1.5,
-       -440
+       -430
       ],
       [
        3.5,
-       176
+       190
       ],
       [
        5.5,
@@ -15032,7 +14420,7 @@
      "line": 2.5,
      "name": "Zach LaVine Assists",
      "oddID": "assists-ZACH_LAVINE_1_NBA-game-ou-over",
-     "odds": -140,
+     "odds": -138,
      "opposing": "assists-ZACH_LAVINE_1_NBA-game-ou-under",
      "period": "game",
      "player": "ZACH_LAVINE_1_NBA",
@@ -15049,7 +14437,7 @@
      "line": 2.5,
      "name": "Zach LaVine Assists",
      "oddID": "assists-ZACH_LAVINE_1_NBA-game-ou-under",
-     "odds": 110,
+     "odds": 108,
      "opposing": "assists-ZACH_LAVINE_1_NBA-game-ou-over",
      "period": "game",
      "player": "ZACH_LAVINE_1_NBA",
@@ -15095,11 +14483,11 @@
      "alts": [
       [
        1.5,
-       385
+       375
       ],
       [
        2.5,
-       1280
+       1220
       ]
      ],
      "available": true,
@@ -15110,7 +14498,7 @@
      "line": 0.5,
      "name": "Cameron Boozer Blocks",
      "oddID": "blocks-CAMERON_BOOZER_1_NBA-game-ou-over",
-     "odds": -125,
+     "odds": -122,
      "opposing": "blocks-CAMERON_BOOZER_1_NBA-game-ou-under",
      "period": "game",
      "player": "CAMERON_BOOZER_1_NBA",
@@ -15127,7 +14515,7 @@
      "line": null,
      "name": "Cameron Boozer Blocks",
      "oddID": "blocks-CAMERON_BOOZER_1_NBA-game-yn-yes",
-     "odds": -125,
+     "odds": -122,
      "opposing": "blocks-CAMERON_BOOZER_1_NBA-game-yn-no",
      "period": "game",
      "player": "CAMERON_BOOZER_1_NBA",
@@ -15139,7 +14527,7 @@
      "alts": [
       [
        14.5,
-       -800
+       -900
       ],
       [
        19.5,
@@ -15151,7 +14539,7 @@
       ],
       [
        29.5,
-       430
+       450
       ],
       [
        34.5,
@@ -15194,24 +14582,24 @@
     {
      "alts": [
       [
+       14.5,
+       -2000
+      ],
+      [
        19.5,
-       -500
+       -390
       ],
       [
        24.5,
-       -160
+       -112
       ],
       [
        29.5,
-       190
+       240
       ],
       [
        34.5,
-       550
-      ],
-      [
-       39.5,
-       1700
+       750
       ]
      ],
      "available": true,
@@ -15222,7 +14610,7 @@
      "line": 25.5,
      "name": "Domantas Sabonis Pts + Ast",
      "oddID": "points+assists-DOMANTAS_SABONIS_1_NBA-game-ou-over",
-     "odds": -114,
+     "odds": -102,
      "opposing": "points+assists-DOMANTAS_SABONIS_1_NBA-game-ou-under",
      "period": "game",
      "player": "DOMANTAS_SABONIS_1_NBA",
@@ -15231,6 +14619,12 @@
      "team": "SAC"
     },
     {
+     "alts": [
+      [
+       24.5,
+       -118
+      ]
+     ],
      "available": true,
      "betType": "ou",
      "book": "fanduel",
@@ -15239,7 +14633,7 @@
      "line": 25.5,
      "name": "Domantas Sabonis Pts + Ast",
      "oddID": "points+assists-DOMANTAS_SABONIS_1_NBA-game-ou-under",
-     "odds": -114,
+     "odds": -130,
      "opposing": "points+assists-DOMANTAS_SABONIS_1_NBA-game-ou-over",
      "period": "game",
      "player": "DOMANTAS_SABONIS_1_NBA",
@@ -15255,15 +14649,15 @@
       ],
       [
        24.5,
-       -360
+       -370
       ],
       [
        29.5,
-       -140
+       -145
       ],
       [
        34.5,
-       175
+       185
       ],
       [
        39.5,
@@ -15282,7 +14676,7 @@
      "line": 30.5,
      "name": "Ty Jerome Pts + Ast",
      "oddID": "points+assists-TY_JEROME_1_NBA-game-ou-over",
-     "odds": -106,
+     "odds": -108,
      "opposing": "points+assists-TY_JEROME_1_NBA-game-ou-under",
      "period": "game",
      "player": "TY_JEROME_1_NBA",
@@ -15299,7 +14693,7 @@
      "line": 30.5,
      "name": "Ty Jerome Pts + Ast",
      "oddID": "points+assists-TY_JEROME_1_NBA-game-ou-under",
-     "odds": -125,
+     "odds": -122,
      "opposing": "points+assists-TY_JEROME_1_NBA-game-ou-over",
      "period": "game",
      "player": "TY_JEROME_1_NBA",
@@ -15323,11 +14717,11 @@
       ],
       [
        34.5,
-       600
+       650
       ],
       [
        39.5,
-       1600
+       1900
       ]
      ],
      "available": true,
@@ -15367,31 +14761,31 @@
      "alts": [
       [
        19.5,
-       -1520
+       -1560
       ],
       [
        24.5,
-       -430
+       -465
       ],
       [
        29.5,
-       -161
+       -165
       ],
       [
        34.5,
-       156
+       151
       ],
       [
        39.5,
-       384
+       358
       ],
       [
        44.5,
-       900
+       850
       ],
       [
        49.5,
-       1860
+       1780
       ]
      ],
      "available": true,
@@ -15402,7 +14796,7 @@
      "line": 31.5,
      "name": "Cameron Boozer Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-CAMERON_BOOZER_1_NBA-game-ou-over",
-     "odds": -111,
+     "odds": -114,
      "opposing": "points+rebounds+assists-CAMERON_BOOZER_1_NBA-game-ou-under",
      "period": "game",
      "player": "CAMERON_BOOZER_1_NBA",
@@ -15419,7 +14813,7 @@
      "line": 31.5,
      "name": "Cameron Boozer Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-CAMERON_BOOZER_1_NBA-game-ou-under",
-     "odds": -118,
+     "odds": -116,
      "opposing": "points+rebounds+assists-CAMERON_BOOZER_1_NBA-game-ou-over",
      "period": "game",
      "player": "CAMERON_BOOZER_1_NBA",
@@ -15431,27 +14825,27 @@
      "alts": [
       [
        14.5,
-       -850
+       -720
       ],
       [
        19.5,
-       -205
+       -186
       ],
       [
        24.5,
-       146
+       154
       ],
       [
        29.5,
-       390
+       400
       ],
       [
        34.5,
-       900
+       1000
       ],
       [
        39.5,
-       1800
+       2000
       ]
      ],
      "available": true,
@@ -15459,10 +14853,10 @@
      "book": "fanduel",
      "entity": "CEDRIC_COWARD_1_NBA",
      "kind": "prop",
-     "line": 22.5,
+     "line": 21.5,
      "name": "Cedric Coward Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-CEDRIC_COWARD_1_NBA-game-ou-over",
-     "odds": -102,
+     "odds": -120,
      "opposing": "points+rebounds+assists-CEDRIC_COWARD_1_NBA-game-ou-under",
      "period": "game",
      "player": "CEDRIC_COWARD_1_NBA",
@@ -15476,10 +14870,10 @@
      "book": "fanduel",
      "entity": "CEDRIC_COWARD_1_NBA",
      "kind": "prop",
-     "line": 22.5,
+     "line": 21.5,
      "name": "Cedric Coward Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-CEDRIC_COWARD_1_NBA-game-ou-under",
-     "odds": -125,
+     "odds": -106,
      "opposing": "points+rebounds+assists-CEDRIC_COWARD_1_NBA-game-ou-over",
      "period": "game",
      "player": "CEDRIC_COWARD_1_NBA",
@@ -15499,15 +14893,11 @@
       ],
       [
        24.5,
-       340
+       350
       ],
       [
        29.5,
        900
-      ],
-      [
-       34.5,
-       2000
       ]
      ],
      "available": true,
@@ -15518,7 +14908,7 @@
      "line": 18.5,
      "name": "De'Andre Hunter Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-DEANDRE_HUNTER_1_NBA-game-ou-over",
-     "odds": -113,
+     "odds": -106,
      "opposing": "points+rebounds+assists-DEANDRE_HUNTER_1_NBA-game-ou-under",
      "period": "game",
      "player": "DEANDRE_HUNTER_1_NBA",
@@ -15535,7 +14925,7 @@
      "line": 18.5,
      "name": "De'Andre Hunter Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-DEANDRE_HUNTER_1_NBA-game-ou-under",
-     "odds": -113,
+     "odds": -120,
      "opposing": "points+rebounds+assists-DEANDRE_HUNTER_1_NBA-game-ou-over",
      "period": "game",
      "player": "DEANDRE_HUNTER_1_NBA",
@@ -15547,30 +14937,38 @@
      "alts": [
       [
        29.5,
-       -900
+       -650
       ],
       [
        34.5,
-       -295
+       -230
+      ],
+      [
+       39.5,
+       102
       ],
       [
        44.5,
-       210
+       235
       ],
       [
        49.5,
-       475
+       520
+      ],
+      [
+       54.5,
+       1100
       ]
      ],
      "available": true,
      "betType": "ou",
-     "book": "betmgm",
+     "book": "fanduel",
      "entity": "DOMANTAS_SABONIS_1_NBA",
      "kind": "prop",
-     "line": 39.5,
+     "line": 38.5,
      "name": "Domantas Sabonis Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-DOMANTAS_SABONIS_1_NBA-game-ou-over",
-     "odds": -115,
+     "odds": -122,
      "opposing": "points+rebounds+assists-DOMANTAS_SABONIS_1_NBA-game-ou-under",
      "period": "game",
      "player": "DOMANTAS_SABONIS_1_NBA",
@@ -15581,13 +14979,13 @@
     {
      "available": true,
      "betType": "ou",
-     "book": "betmgm",
+     "book": "fanduel",
      "entity": "DOMANTAS_SABONIS_1_NBA",
      "kind": "prop",
-     "line": 39.5,
+     "line": 38.5,
      "name": "Domantas Sabonis Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-DOMANTAS_SABONIS_1_NBA-game-ou-under",
-     "odds": -115,
+     "odds": -104,
      "opposing": "points+rebounds+assists-DOMANTAS_SABONIS_1_NBA-game-ou-over",
      "period": "game",
      "player": "DOMANTAS_SABONIS_1_NBA",
@@ -15599,19 +14997,19 @@
      "alts": [
       [
        9.5,
-       -750
+       -670
       ],
       [
        14.5,
-       -154
+       -132
       ],
       [
        19.5,
-       230
+       255
       ],
       [
        24.5,
-       700
+       800
       ],
       [
        29.5,
@@ -15626,7 +15024,7 @@
      "line": 15.5,
      "name": "Jaylen Wells Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-JAYLEN_WELLS_1_NBA-game-ou-over",
-     "odds": -115,
+     "odds": 100,
      "opposing": "points+rebounds+assists-JAYLEN_WELLS_1_NBA-game-ou-under",
      "period": "game",
      "player": "JAYLEN_WELLS_1_NBA",
@@ -15643,7 +15041,7 @@
      "line": 15.5,
      "name": "Jaylen Wells Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-JAYLEN_WELLS_1_NBA-game-ou-under",
-     "odds": -111,
+     "odds": -128,
      "opposing": "points+rebounds+assists-JAYLEN_WELLS_1_NBA-game-ou-over",
      "period": "game",
      "player": "JAYLEN_WELLS_1_NBA",
@@ -15659,23 +15057,23 @@
       ],
       [
        29.5,
-       -240
+       -235
       ],
       [
        34.5,
-       104
+       108
       ],
       [
        39.5,
-       240
+       250
       ],
       [
        44.5,
-       560
+       540
       ],
       [
        49.5,
-       1100
+       1200
       ]
      ],
      "available": true,
@@ -15719,11 +15117,11 @@
       ],
       [
        24.5,
-       -225
+       -220
       ],
       [
        29.5,
-       122
+       126
       ],
       [
        34.5,
@@ -15731,11 +15129,11 @@
       ],
       [
        39.5,
-       680
+       750
       ],
       [
        44.5,
-       1400
+       1500
       ]
      ],
      "available": true,
@@ -15746,7 +15144,7 @@
      "line": 27.5,
      "name": "Zach LaVine Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-ZACH_LAVINE_1_NBA-game-ou-over",
-     "odds": -120,
+     "odds": -115,
      "opposing": "points+rebounds+assists-ZACH_LAVINE_1_NBA-game-ou-under",
      "period": "game",
      "player": "ZACH_LAVINE_1_NBA",
@@ -15763,7 +15161,7 @@
      "line": 27.5,
      "name": "Zach LaVine Pts + Reb + Ast",
      "oddID": "points+rebounds+assists-ZACH_LAVINE_1_NBA-game-ou-under",
-     "odds": -106,
+     "odds": -111,
      "opposing": "points+rebounds+assists-ZACH_LAVINE_1_NBA-game-ou-over",
      "period": "game",
      "player": "ZACH_LAVINE_1_NBA",
@@ -15775,15 +15173,15 @@
      "alts": [
       [
        19.5,
-       -530
+       -590
       ],
       [
        24.5,
-       -166
+       -178
       ],
       [
        29.5,
-       158
+       154
       ],
       [
        34.5,
@@ -15806,7 +15204,7 @@
      "line": 26.5,
      "name": "Cameron Boozer Pts + Reb",
      "oddID": "points+rebounds-CAMERON_BOOZER_1_NBA-game-ou-over",
-     "odds": -113,
+     "odds": -122,
      "opposing": "points+rebounds-CAMERON_BOOZER_1_NBA-game-ou-under",
      "period": "game",
      "player": "CAMERON_BOOZER_1_NBA",
@@ -15823,7 +15221,7 @@
      "line": 26.5,
      "name": "Cameron Boozer Pts + Reb",
      "oddID": "points+rebounds-CAMERON_BOOZER_1_NBA-game-ou-under",
-     "odds": -113,
+     "odds": -104,
      "opposing": "points+rebounds-CAMERON_BOOZER_1_NBA-game-ou-over",
      "period": "game",
      "player": "CAMERON_BOOZER_1_NBA",
@@ -15835,11 +15233,11 @@
      "alts": [
       [
        14.5,
-       -330
+       -310
       ],
       [
        19.5,
-       102
+       108
       ],
       [
        24.5,
@@ -15847,7 +15245,7 @@
       ],
       [
        29.5,
-       800
+       830
       ],
       [
        34.5,
@@ -15862,7 +15260,7 @@
      "line": 18.5,
      "name": "Cedric Coward Pts + Reb",
      "oddID": "points+rebounds-CEDRIC_COWARD_1_NBA-game-ou-over",
-     "odds": -122,
+     "odds": -113,
      "opposing": "points+rebounds-CEDRIC_COWARD_1_NBA-game-ou-under",
      "period": "game",
      "player": "CEDRIC_COWARD_1_NBA",
@@ -15879,7 +15277,7 @@
      "line": 18.5,
      "name": "Cedric Coward Pts + Reb",
      "oddID": "points+rebounds-CEDRIC_COWARD_1_NBA-game-ou-under",
-     "odds": -104,
+     "odds": -113,
      "opposing": "points+rebounds-CEDRIC_COWARD_1_NBA-game-ou-over",
      "period": "game",
      "player": "CEDRIC_COWARD_1_NBA",
@@ -15890,39 +15288,43 @@
     {
      "alts": [
       [
+       19.5,
+       -1060
+      ],
+      [
        24.5,
-       -590
+       -402
       ],
       [
        29.5,
-       -205
+       -171
       ],
       [
        34.5,
-       128
+       127
       ],
       [
        39.5,
-       300
+       280
       ],
       [
        44.5,
-       750
+       610
       ],
       [
        49.5,
-       1500
+       1300
       ]
      ],
      "available": true,
      "betType": "ou",
-     "book": "fanduel",
+     "book": "draftkings",
      "entity": "DOMANTAS_SABONIS_1_NBA",
      "kind": "prop",
      "line": 32.5,
      "name": "Domantas Sabonis Pts + Reb",
      "oddID": "points+rebounds-DOMANTAS_SABONIS_1_NBA-game-ou-over",
-     "odds": -113,
+     "odds": -109,
      "opposing": "points+rebounds-DOMANTAS_SABONIS_1_NBA-game-ou-under",
      "period": "game",
      "player": "DOMANTAS_SABONIS_1_NBA",
@@ -15933,13 +15335,13 @@
     {
      "available": true,
      "betType": "ou",
-     "book": "fanduel",
+     "book": "draftkings",
      "entity": "DOMANTAS_SABONIS_1_NBA",
      "kind": "prop",
      "line": 32.5,
      "name": "Domantas Sabonis Pts + Reb",
      "oddID": "points+rebounds-DOMANTAS_SABONIS_1_NBA-game-ou-under",
-     "odds": -113,
+     "odds": -120,
      "opposing": "points+rebounds-DOMANTAS_SABONIS_1_NBA-game-ou-over",
      "period": "game",
      "player": "DOMANTAS_SABONIS_1_NBA",
@@ -15955,11 +15357,11 @@
       ],
       [
        24.5,
-       -184
+       -180
       ],
       [
        29.5,
-       142
+       148
       ],
       [
        34.5,
@@ -15979,10 +15381,10 @@
      "book": "fanduel",
      "entity": "TY_JEROME_1_NBA",
      "kind": "prop",
-     "line": 27.5,
+     "line": 26.5,
      "name": "Ty Jerome Pts + Reb",
      "oddID": "points+rebounds-TY_JEROME_1_NBA-game-ou-over",
-     "odds": -102,
+     "odds": -120,
      "opposing": "points+rebounds-TY_JEROME_1_NBA-game-ou-under",
      "period": "game",
      "player": "TY_JEROME_1_NBA",
@@ -15996,10 +15398,10 @@
      "book": "fanduel",
      "entity": "TY_JEROME_1_NBA",
      "kind": "prop",
-     "line": 27.5,
+     "line": 26.5,
      "name": "Ty Jerome Pts + Reb",
      "oddID": "points+rebounds-TY_JEROME_1_NBA-game-ou-under",
-     "odds": -125,
+     "odds": -106,
      "opposing": "points+rebounds-TY_JEROME_1_NBA-game-ou-over",
      "period": "game",
      "player": "TY_JEROME_1_NBA",
@@ -16019,15 +15421,15 @@
       ],
       [
        29.5,
-       215
+       220
       ],
       [
        34.5,
-       500
+       520
       ],
       [
        39.5,
-       1100
+       1300
       ]
      ],
      "available": true,
@@ -16071,15 +15473,15 @@
       ],
       [
        14.5,
-       -230
+       -235
       ],
       [
        19.5,
-       148
+       146
       ],
       [
        24.5,
-       420
+       440
       ],
       [
        29.5,
@@ -16094,7 +15496,7 @@
      "line": 17.5,
      "name": "Cameron Boozer Points",
      "oddID": "points-CAMERON_BOOZER_1_NBA-game-ou-over",
-     "odds": -106,
+     "odds": -111,
      "opposing": "points-CAMERON_BOOZER_1_NBA-game-ou-under",
      "period": "game",
      "player": "CAMERON_BOOZER_1_NBA",
@@ -16111,7 +15513,7 @@
      "line": 17.5,
      "name": "Cameron Boozer Points",
      "oddID": "points-CAMERON_BOOZER_1_NBA-game-ou-under",
-     "odds": -120,
+     "odds": -115,
      "opposing": "points-CAMERON_BOOZER_1_NBA-game-ou-over",
      "period": "game",
      "player": "CAMERON_BOOZER_1_NBA",
@@ -16123,19 +15525,19 @@
      "alts": [
       [
        9.5,
-       -370
+       -340
       ],
       [
        14.5,
-       122
+       130
       ],
       [
        19.5,
-       400
+       420
       ],
       [
        24.5,
-       1100
+       1200
       ]
      ],
      "available": true,
@@ -16146,7 +15548,7 @@
      "line": 13.5,
      "name": "Cedric Coward Points",
      "oddID": "points-CEDRIC_COWARD_1_NBA-game-ou-over",
-     "odds": -108,
+     "odds": 100,
      "opposing": "points-CEDRIC_COWARD_1_NBA-game-ou-under",
      "period": "game",
      "player": "CEDRIC_COWARD_1_NBA",
@@ -16163,7 +15565,7 @@
      "line": 13.5,
      "name": "Cedric Coward Points",
      "oddID": "points-CEDRIC_COWARD_1_NBA-game-ou-under",
-     "odds": -118,
+     "odds": -128,
      "opposing": "points-CEDRIC_COWARD_1_NBA-game-ou-over",
      "period": "game",
      "player": "CEDRIC_COWARD_1_NBA",
@@ -16175,7 +15577,7 @@
      "alts": [
       [
        9.5,
-       -220
+       -225
       ],
       [
        14.5,
@@ -16183,7 +15585,7 @@
       ],
       [
        19.5,
-       630
+       680
       ],
       [
        24.5,
@@ -16198,7 +15600,7 @@
      "line": 11.5,
      "name": "De'Andre Hunter Points",
      "oddID": "points-DEANDRE_HUNTER_1_NBA-game-ou-over",
-     "odds": -115,
+     "odds": -120,
      "opposing": "points-DEANDRE_HUNTER_1_NBA-game-ou-under",
      "period": "game",
      "player": "DEANDRE_HUNTER_1_NBA",
@@ -16215,7 +15617,7 @@
      "line": 11.5,
      "name": "De'Andre Hunter Points",
      "oddID": "points-DEANDRE_HUNTER_1_NBA-game-ou-under",
-     "odds": -111,
+     "odds": -106,
      "opposing": "points-DEANDRE_HUNTER_1_NBA-game-ou-over",
      "period": "game",
      "player": "DEANDRE_HUNTER_1_NBA",
@@ -16226,20 +15628,24 @@
     {
      "alts": [
       [
+       9.5,
+       -1600
+      ],
+      [
        14.5,
-       -330
+       -250
       ],
       [
        19.5,
-       116
+       148
       ],
       [
        24.5,
-       350
+       470
       ],
       [
        29.5,
-       1000
+       1300
       ]
      ],
      "available": true,
@@ -16247,7 +15653,7 @@
      "book": "fanduel",
      "entity": "DOMANTAS_SABONIS_1_NBA",
      "kind": "prop",
-     "line": 18.5,
+     "line": 17.5,
      "name": "Domantas Sabonis Points",
      "oddID": "points-DOMANTAS_SABONIS_1_NBA-game-ou-over",
      "odds": -111,
@@ -16264,7 +15670,7 @@
      "book": "fanduel",
      "entity": "DOMANTAS_SABONIS_1_NBA",
      "kind": "prop",
-     "line": 18.5,
+     "line": 17.5,
      "name": "Domantas Sabonis Points",
      "oddID": "points-DOMANTAS_SABONIS_1_NBA-game-ou-under",
      "odds": -115,
@@ -16279,19 +15685,19 @@
      "alts": [
       [
        4.5,
-       -1600
+       -1500
       ],
       [
        9.5,
-       -174
+       -170
       ],
       [
        14.5,
-       240
+       250
       ],
       [
        19.5,
-       830
+       870
       ]
      ],
      "available": true,
@@ -16299,10 +15705,10 @@
      "book": "fanduel",
      "entity": "JAYLEN_WELLS_1_NBA",
      "kind": "prop",
-     "line": 11.5,
+     "line": 10.5,
      "name": "Jaylen Wells Points",
      "oddID": "points-JAYLEN_WELLS_1_NBA-game-ou-over",
-     "odds": 106,
+     "odds": -122,
      "opposing": "points-JAYLEN_WELLS_1_NBA-game-ou-under",
      "period": "game",
      "player": "JAYLEN_WELLS_1_NBA",
@@ -16316,10 +15722,10 @@
      "book": "fanduel",
      "entity": "JAYLEN_WELLS_1_NBA",
      "kind": "prop",
-     "line": 11.5,
+     "line": 10.5,
      "name": "Jaylen Wells Points",
      "oddID": "points-JAYLEN_WELLS_1_NBA-game-ou-under",
-     "odds": -136,
+     "odds": -104,
      "opposing": "points-JAYLEN_WELLS_1_NBA-game-ou-over",
      "period": "game",
      "player": "JAYLEN_WELLS_1_NBA",
@@ -16331,11 +15737,11 @@
      "alts": [
       [
        4.5,
-       -190
+       -198
       ],
       [
        9.5,
-       330
+       310
       ],
       [
        14.5,
@@ -16350,7 +15756,7 @@
      "line": 5.5,
      "name": "Quinten Post Points",
      "oddID": "points-Q_POST_1_NBA-game-ou-over",
-     "odds": -128,
+     "odds": -132,
      "opposing": "points-Q_POST_1_NBA-game-ou-under",
      "period": "game",
      "player": "Q_POST_1_NBA",
@@ -16367,7 +15773,7 @@
      "line": 5.5,
      "name": "Quinten Post Points",
      "oddID": "points-Q_POST_1_NBA-game-ou-under",
-     "odds": 100,
+     "odds": 104,
      "opposing": "points-Q_POST_1_NBA-game-ou-over",
      "period": "game",
      "player": "Q_POST_1_NBA",
@@ -16379,15 +15785,15 @@
      "alts": [
       [
        14.5,
-       -1000
+       -1200
       ],
       [
        19.5,
-       -265
+       -280
       ],
       [
        24.5,
-       106
+       108
       ],
       [
        29.5,
@@ -16410,7 +15816,7 @@
      "line": 23.5,
      "name": "Ty Jerome Points",
      "oddID": "points-TY_JEROME_1_NBA-game-ou-over",
-     "odds": -115,
+     "odds": -113,
      "opposing": "points-TY_JEROME_1_NBA-game-ou-under",
      "period": "game",
      "player": "TY_JEROME_1_NBA",
@@ -16427,7 +15833,7 @@
      "line": 23.5,
      "name": "Ty Jerome Points",
      "oddID": "points-TY_JEROME_1_NBA-game-ou-under",
-     "odds": -111,
+     "odds": -113,
      "opposing": "points-TY_JEROME_1_NBA-game-ou-over",
      "period": "game",
      "player": "TY_JEROME_1_NBA",
@@ -16439,11 +15845,11 @@
      "alts": [
       [
        14.5,
-       -590
+       -620
       ],
       [
        19.5,
-       -164
+       -166
       ],
       [
        24.5,
@@ -16455,7 +15861,7 @@
       ],
       [
        34.5,
-       1060
+       1100
       ]
      ],
      "available": true,
@@ -16499,7 +15905,7 @@
       ],
       [
        14.5,
-       142
+       136
       ],
       [
        19.5,
@@ -16514,7 +15920,7 @@
      "line": 13.5,
      "name": "Cameron Boozer Reb + Ast",
      "oddID": "rebounds+assists-CAMERON_BOOZER_1_NBA-game-ou-over",
-     "odds": -104,
+     "odds": -108,
      "opposing": "rebounds+assists-CAMERON_BOOZER_1_NBA-game-ou-under",
      "period": "game",
      "player": "CAMERON_BOOZER_1_NBA",
@@ -16531,7 +15937,7 @@
      "line": 13.5,
      "name": "Cameron Boozer Reb + Ast",
      "oddID": "rebounds+assists-CAMERON_BOOZER_1_NBA-game-ou-under",
-     "odds": -122,
+     "odds": -118,
      "opposing": "rebounds+assists-CAMERON_BOOZER_1_NBA-game-ou-over",
      "period": "game",
      "player": "CAMERON_BOOZER_1_NBA",
@@ -16543,11 +15949,11 @@
      "alts": [
       [
        4.5,
-       -1600
+       -1400
       ],
       [
        9.5,
-       150
+       154
       ],
       [
        14.5,
@@ -16562,7 +15968,7 @@
      "line": 8.5,
      "name": "Cedric Coward Reb + Ast",
      "oddID": "rebounds+assists-CEDRIC_COWARD_1_NBA-game-ou-over",
-     "odds": -106,
+     "odds": -104,
      "opposing": "rebounds+assists-CEDRIC_COWARD_1_NBA-game-ou-under",
      "period": "game",
      "player": "CEDRIC_COWARD_1_NBA",
@@ -16579,7 +15985,7 @@
      "line": 8.5,
      "name": "Cedric Coward Reb + Ast",
      "oddID": "rebounds+assists-CEDRIC_COWARD_1_NBA-game-ou-under",
-     "odds": -120,
+     "odds": -122,
      "opposing": "rebounds+assists-CEDRIC_COWARD_1_NBA-game-ou-over",
      "period": "game",
      "player": "CEDRIC_COWARD_1_NBA",
@@ -16599,7 +16005,7 @@
       ],
       [
        24.5,
-       255
+       250
       ],
       [
        29.5,
@@ -16614,7 +16020,7 @@
      "line": 20.5,
      "name": "Domantas Sabonis Reb + Ast",
      "oddID": "rebounds+assists-DOMANTAS_SABONIS_1_NBA-game-ou-over",
-     "odds": -122,
+     "odds": -128,
      "opposing": "rebounds+assists-DOMANTAS_SABONIS_1_NBA-game-ou-under",
      "period": "game",
      "player": "DOMANTAS_SABONIS_1_NBA",
@@ -16631,7 +16037,7 @@
      "line": 20.5,
      "name": "Domantas Sabonis Reb + Ast",
      "oddID": "rebounds+assists-DOMANTAS_SABONIS_1_NBA-game-ou-under",
-     "odds": -104,
+     "odds": 100,
      "opposing": "rebounds+assists-DOMANTAS_SABONIS_1_NBA-game-ou-over",
      "period": "game",
      "player": "DOMANTAS_SABONIS_1_NBA",
@@ -16643,7 +16049,7 @@
      "alts": [
       [
        14.5,
-       700
+       800
       ]
      ],
      "available": true,
@@ -16654,7 +16060,7 @@
      "line": 9.5,
      "name": "Ty Jerome Reb + Ast",
      "oddID": "rebounds+assists-TY_JEROME_1_NBA-game-ou-over",
-     "odds": -118,
+     "odds": -113,
      "opposing": "rebounds+assists-TY_JEROME_1_NBA-game-ou-under",
      "period": "game",
      "player": "TY_JEROME_1_NBA",
@@ -16671,7 +16077,7 @@
      "line": 9.5,
      "name": "Ty Jerome Reb + Ast",
      "oddID": "rebounds+assists-TY_JEROME_1_NBA-game-ou-under",
-     "odds": -108,
+     "odds": -113,
      "opposing": "rebounds+assists-TY_JEROME_1_NBA-game-ou-over",
      "period": "game",
      "player": "TY_JEROME_1_NBA",
@@ -16683,23 +16089,27 @@
      "alts": [
       [
        5.5,
-       -850
+       -1000
       ],
       [
        7.5,
-       -225
+       -245
+      ],
+      [
+       9.5,
+       104
       ],
       [
        11.5,
-       285
+       260
       ],
       [
        13.5,
-       680
+       630
       ],
       [
        15.5,
-       1400
+       1300
       ]
      ],
      "available": true,
@@ -16707,10 +16117,10 @@
      "book": "fanduel",
      "entity": "CAMERON_BOOZER_1_NBA",
      "kind": "prop",
-     "line": 9.5,
+     "line": 8.5,
      "name": "Cameron Boozer Rebounds",
      "oddID": "rebounds-CAMERON_BOOZER_1_NBA-game-ou-over",
-     "odds": 110,
+     "odds": -138,
      "opposing": "rebounds-CAMERON_BOOZER_1_NBA-game-ou-under",
      "period": "game",
      "player": "CAMERON_BOOZER_1_NBA",
@@ -16724,10 +16134,10 @@
      "book": "fanduel",
      "entity": "CAMERON_BOOZER_1_NBA",
      "kind": "prop",
-     "line": 9.5,
+     "line": 8.5,
      "name": "Cameron Boozer Rebounds",
      "oddID": "rebounds-CAMERON_BOOZER_1_NBA-game-ou-under",
-     "odds": -140,
+     "odds": 108,
      "opposing": "rebounds-CAMERON_BOOZER_1_NBA-game-ou-over",
      "period": "game",
      "player": "CAMERON_BOOZER_1_NBA",
@@ -16739,11 +16149,11 @@
      "alts": [
       [
        3.5,
-       -430
+       -400
       ],
       [
        7.5,
-       350
+       360
       ],
       [
        9.5,
@@ -16762,7 +16172,7 @@
      "line": 5.5,
      "name": "Cedric Coward Rebounds",
      "oddID": "rebounds-CEDRIC_COWARD_1_NBA-game-ou-over",
-     "odds": 106,
+     "odds": 108,
      "opposing": "rebounds-CEDRIC_COWARD_1_NBA-game-ou-under",
      "period": "game",
      "player": "CEDRIC_COWARD_1_NBA",
@@ -16779,7 +16189,7 @@
      "line": 5.5,
      "name": "Cedric Coward Rebounds",
      "oddID": "rebounds-CEDRIC_COWARD_1_NBA-game-ou-under",
-     "odds": -136,
+     "odds": -138,
      "opposing": "rebounds-CEDRIC_COWARD_1_NBA-game-ou-over",
      "period": "game",
      "player": "CEDRIC_COWARD_1_NBA",
@@ -16791,19 +16201,19 @@
      "alts": [
       [
        3.5,
-       -188
+       -184
       ],
       [
        5.5,
-       230
+       250
       ],
       [
        7.5,
-       830
+       900
       ],
       [
        9.5,
-       1800
+       2000
       ]
      ],
      "available": true,
@@ -16814,7 +16224,7 @@
      "line": 4.5,
      "name": "De'Andre Hunter Rebounds",
      "oddID": "rebounds-DEANDRE_HUNTER_1_NBA-game-ou-over",
-     "odds": 114,
+     "odds": 124,
      "opposing": "rebounds-DEANDRE_HUNTER_1_NBA-game-ou-under",
      "period": "game",
      "player": "DEANDRE_HUNTER_1_NBA",
@@ -16831,7 +16241,7 @@
      "line": 4.5,
      "name": "De'Andre Hunter Rebounds",
      "oddID": "rebounds-DEANDRE_HUNTER_1_NBA-game-ou-under",
-     "odds": -146,
+     "odds": -160,
      "opposing": "rebounds-DEANDRE_HUNTER_1_NBA-game-ou-over",
      "period": "game",
      "player": "DEANDRE_HUNTER_1_NBA",
@@ -16843,15 +16253,15 @@
      "alts": [
       [
        9.5,
-       -1000
+       -950
       ],
       [
        11.5,
-       -320
+       -310
       ],
       [
        15.5,
-       176
+       164
       ]
      ],
      "available": true,
@@ -16862,7 +16272,7 @@
      "line": 13.5,
      "name": "Domantas Sabonis Rebounds",
      "oddID": "rebounds-DOMANTAS_SABONIS_1_NBA-game-ou-over",
-     "odds": -128,
+     "odds": -130,
      "opposing": "rebounds-DOMANTAS_SABONIS_1_NBA-game-ou-under",
      "period": "game",
      "player": "DOMANTAS_SABONIS_1_NBA",
@@ -16879,7 +16289,7 @@
      "line": 13.5,
      "name": "Domantas Sabonis Rebounds",
      "oddID": "rebounds-DOMANTAS_SABONIS_1_NBA-game-ou-under",
-     "odds": 100,
+     "odds": 102,
      "opposing": "rebounds-DOMANTAS_SABONIS_1_NBA-game-ou-over",
      "period": "game",
      "player": "DOMANTAS_SABONIS_1_NBA",
@@ -16891,11 +16301,11 @@
      "alts": [
       [
        3.5,
-       176
+       200
       ],
       [
        5.5,
-       870
+       900
       ]
      ],
      "available": true,
@@ -16906,7 +16316,7 @@
      "line": 2.5,
      "name": "Jaylen Wells Rebounds",
      "oddID": "rebounds-JAYLEN_WELLS_1_NBA-game-ou-over",
-     "odds": -142,
+     "odds": -125,
      "opposing": "rebounds-JAYLEN_WELLS_1_NBA-game-ou-under",
      "period": "game",
      "player": "JAYLEN_WELLS_1_NBA",
@@ -16923,7 +16333,7 @@
      "line": 2.5,
      "name": "Jaylen Wells Rebounds",
      "oddID": "rebounds-JAYLEN_WELLS_1_NBA-game-ou-under",
-     "odds": 112,
+     "odds": -102,
      "opposing": "rebounds-JAYLEN_WELLS_1_NBA-game-ou-over",
      "period": "game",
      "player": "JAYLEN_WELLS_1_NBA",
@@ -16934,12 +16344,64 @@
     {
      "alts": [
       [
+       3.5,
+       -170
+      ],
+      [
        5.5,
-       560
+       240
       ],
       [
        7.5,
+       830
+      ],
+      [
+       9.5,
        1700
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "Q_POST_1_NBA",
+     "kind": "prop",
+     "line": 4.5,
+     "name": "Quinten Post Rebounds",
+     "oddID": "rebounds-Q_POST_1_NBA-game-ou-over",
+     "odds": 126,
+     "opposing": "rebounds-Q_POST_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "Q_POST_1_NBA",
+     "side": "over",
+     "stat": "rebounds",
+     "team": "MEM"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "Q_POST_1_NBA",
+     "kind": "prop",
+     "line": 4.5,
+     "name": "Quinten Post Rebounds",
+     "oddID": "rebounds-Q_POST_1_NBA-game-ou-under",
+     "odds": -162,
+     "opposing": "rebounds-Q_POST_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "Q_POST_1_NBA",
+     "side": "under",
+     "stat": "rebounds",
+     "team": "MEM"
+    },
+    {
+     "alts": [
+      [
+       5.5,
+       630
+      ],
+      [
+       7.5,
+       2000
       ]
      ],
      "available": true,
@@ -16950,7 +16412,7 @@
      "line": 3.5,
      "name": "Ty Jerome Rebounds",
      "oddID": "rebounds-TY_JEROME_1_NBA-game-ou-over",
-     "odds": 120,
+     "odds": 130,
      "opposing": "rebounds-TY_JEROME_1_NBA-game-ou-under",
      "period": "game",
      "player": "TY_JEROME_1_NBA",
@@ -16967,7 +16429,7 @@
      "line": 3.5,
      "name": "Ty Jerome Rebounds",
      "oddID": "rebounds-TY_JEROME_1_NBA-game-ou-under",
-     "odds": -154,
+     "odds": -166,
      "opposing": "rebounds-TY_JEROME_1_NBA-game-ou-over",
      "period": "game",
      "player": "TY_JEROME_1_NBA",
@@ -16979,7 +16441,7 @@
      "alts": [
       [
        5.5,
-       420
+       450
       ],
       [
        7.5,
@@ -16994,7 +16456,7 @@
      "line": 3.5,
      "name": "Zach LaVine Rebounds",
      "oddID": "rebounds-ZACH_LAVINE_1_NBA-game-ou-over",
-     "odds": -111,
+     "odds": -106,
      "opposing": "rebounds-ZACH_LAVINE_1_NBA-game-ou-under",
      "period": "game",
      "player": "ZACH_LAVINE_1_NBA",
@@ -17011,7 +16473,7 @@
      "line": 3.5,
      "name": "Zach LaVine Rebounds",
      "oddID": "rebounds-ZACH_LAVINE_1_NBA-game-ou-under",
-     "odds": -115,
+     "odds": -120,
      "opposing": "rebounds-ZACH_LAVINE_1_NBA-game-ou-over",
      "period": "game",
      "player": "ZACH_LAVINE_1_NBA",
@@ -17023,15 +16485,15 @@
      "alts": [
       [
        1.5,
-       181
+       185
       ],
       [
        2.5,
-       598
+       597
       ],
       [
        3.5,
-       1560
+       1580
       ]
      ],
      "available": true,
@@ -17042,7 +16504,7 @@
      "line": 0.5,
      "name": "Cameron Boozer Steals",
      "oddID": "steals-CAMERON_BOOZER_1_NBA-game-ou-over",
-     "odds": -249,
+     "odds": -242,
      "opposing": "steals-CAMERON_BOOZER_1_NBA-game-ou-under",
      "period": "game",
      "player": "CAMERON_BOOZER_1_NBA",
@@ -17059,7 +16521,7 @@
      "line": null,
      "name": "Cameron Boozer Steals",
      "oddID": "steals-CAMERON_BOOZER_1_NBA-game-yn-yes",
-     "odds": -249,
+     "odds": -242,
      "opposing": "steals-CAMERON_BOOZER_1_NBA-game-yn-no",
      "period": "game",
      "player": "CAMERON_BOOZER_1_NBA",
@@ -17071,11 +16533,11 @@
      "alts": [
       [
        1.5,
-       270
+       274
       ],
       [
        2.5,
-       910
+       930
       ]
      ],
      "available": true,
@@ -17086,7 +16548,7 @@
      "line": 0.5,
      "name": "Cedric Coward Steals",
      "oddID": "steals-CEDRIC_COWARD_1_NBA-game-ou-over",
-     "odds": -169,
+     "odds": -171,
      "opposing": "steals-CEDRIC_COWARD_1_NBA-game-ou-under",
      "period": "game",
      "player": "CEDRIC_COWARD_1_NBA",
@@ -17103,7 +16565,7 @@
      "line": null,
      "name": "Cedric Coward Steals",
      "oddID": "steals-CEDRIC_COWARD_1_NBA-game-yn-yes",
-     "odds": -169,
+     "odds": -171,
      "opposing": "steals-CEDRIC_COWARD_1_NBA-game-yn-no",
      "period": "game",
      "player": "CEDRIC_COWARD_1_NBA",
@@ -17115,15 +16577,11 @@
      "alts": [
       [
        1.5,
-       242
+       245
       ],
       [
        2.5,
-       780
-      ],
-      [
-       3.5,
-       1980
+       800
       ]
      ],
      "available": true,
@@ -17134,7 +16592,7 @@
      "line": 0.5,
      "name": "Domantas Sabonis Steals",
      "oddID": "steals-DOMANTAS_SABONIS_1_NBA-game-ou-over",
-     "odds": -190,
+     "odds": -183,
      "opposing": "steals-DOMANTAS_SABONIS_1_NBA-game-ou-under",
      "period": "game",
      "player": "DOMANTAS_SABONIS_1_NBA",
@@ -17151,7 +16609,7 @@
      "line": null,
      "name": "Domantas Sabonis Steals",
      "oddID": "steals-DOMANTAS_SABONIS_1_NBA-game-yn-yes",
-     "odds": -190,
+     "odds": -183,
      "opposing": "steals-DOMANTAS_SABONIS_1_NBA-game-yn-no",
      "period": "game",
      "player": "DOMANTAS_SABONIS_1_NBA",
@@ -17163,15 +16621,15 @@
      "alts": [
       [
        1.5,
-       185
+       187
       ],
       [
        2.5,
-       586
+       620
       ],
       [
        3.5,
-       1520
+       1620
       ]
      ],
      "available": true,
@@ -17182,7 +16640,7 @@
      "line": 0.5,
      "name": "Jaylen Wells Steals",
      "oddID": "steals-JAYLEN_WELLS_1_NBA-game-ou-over",
-     "odds": -246,
+     "odds": -240,
      "opposing": "steals-JAYLEN_WELLS_1_NBA-game-ou-under",
      "period": "game",
      "player": "JAYLEN_WELLS_1_NBA",
@@ -17199,7 +16657,7 @@
      "line": null,
      "name": "Jaylen Wells Steals",
      "oddID": "steals-JAYLEN_WELLS_1_NBA-game-yn-yes",
-     "odds": -246,
+     "odds": -240,
      "opposing": "steals-JAYLEN_WELLS_1_NBA-game-yn-no",
      "period": "game",
      "player": "JAYLEN_WELLS_1_NBA",
@@ -17210,16 +16668,64 @@
     {
      "alts": [
       [
-       0.5,
-       -312
+       1.5,
+       200
       ],
       [
        2.5,
-       458
+       640
       ],
       [
        3.5,
-       1180
+       1500
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "Q_POST_1_NBA",
+     "kind": "prop",
+     "line": 0.5,
+     "name": "Quinten Post Steals",
+     "oddID": "steals-Q_POST_1_NBA-game-ou-over",
+     "odds": -240,
+     "opposing": "steals-Q_POST_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "Q_POST_1_NBA",
+     "side": "over",
+     "stat": "steals",
+     "team": "MEM"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "Q_POST_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Quinten Post Steals",
+     "oddID": "steals-Q_POST_1_NBA-game-yn-yes",
+     "odds": -240,
+     "opposing": "steals-Q_POST_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "Q_POST_1_NBA",
+     "side": "yes",
+     "stat": "steals",
+     "team": "MEM"
+    },
+    {
+     "alts": [
+      [
+       0.5,
+       -305
+      ],
+      [
+       2.5,
+       459
+      ],
+      [
+       3.5,
+       1200
       ]
      ],
      "available": true,
@@ -17230,7 +16736,7 @@
      "line": 1.5,
      "name": "Ty Jerome Steals",
      "oddID": "steals-TY_JEROME_1_NBA-game-ou-over",
-     "odds": 142,
+     "odds": 146,
      "opposing": "steals-TY_JEROME_1_NBA-game-ou-under",
      "period": "game",
      "player": "TY_JEROME_1_NBA",
@@ -17247,7 +16753,7 @@
      "line": null,
      "name": "Ty Jerome Steals",
      "oddID": "steals-TY_JEROME_1_NBA-game-yn-yes",
-     "odds": -312,
+     "odds": -305,
      "opposing": "steals-TY_JEROME_1_NBA-game-yn-no",
      "period": "game",
      "player": "TY_JEROME_1_NBA",
@@ -17259,11 +16765,11 @@
      "alts": [
       [
        1.5,
-       252
+       255
       ],
       [
        2.5,
-       850
+       860
       ]
      ],
      "available": true,
@@ -17274,7 +16780,7 @@
      "line": 0.5,
      "name": "Zach LaVine Steals",
      "oddID": "steals-ZACH_LAVINE_1_NBA-game-ou-over",
-     "odds": -184,
+     "odds": -181,
      "opposing": "steals-ZACH_LAVINE_1_NBA-game-ou-under",
      "period": "game",
      "player": "ZACH_LAVINE_1_NBA",
@@ -17291,7 +16797,7 @@
      "line": null,
      "name": "Zach LaVine Steals",
      "oddID": "steals-ZACH_LAVINE_1_NBA-game-yn-yes",
-     "odds": -184,
+     "odds": -181,
      "opposing": "steals-ZACH_LAVINE_1_NBA-game-yn-no",
      "period": "game",
      "player": "ZACH_LAVINE_1_NBA",
@@ -17303,15 +16809,19 @@
      "alts": [
       [
        0.5,
-       -520
+       -530
       ],
       [
        2.5,
-       290
+       285
       ],
       [
        3.5,
        800
+      ],
+      [
+       4.5,
+       2000
       ]
      ],
      "available": true,
@@ -17322,7 +16832,7 @@
      "line": 1.5,
      "name": "Cameron Boozer 3-pointers made",
      "oddID": "threePointersMade-CAMERON_BOOZER_1_NBA-game-ou-over",
-     "odds": -108,
+     "odds": -111,
      "opposing": "threePointersMade-CAMERON_BOOZER_1_NBA-game-ou-under",
      "period": "game",
      "player": "CAMERON_BOOZER_1_NBA",
@@ -17339,7 +16849,7 @@
      "line": 1.5,
      "name": "Cameron Boozer 3-pointers made",
      "oddID": "threePointersMade-CAMERON_BOOZER_1_NBA-game-ou-under",
-     "odds": -118,
+     "odds": -115,
      "opposing": "threePointersMade-CAMERON_BOOZER_1_NBA-game-ou-over",
      "period": "game",
      "player": "CAMERON_BOOZER_1_NBA",
@@ -17351,15 +16861,19 @@
      "alts": [
       [
        0.5,
-       -500
+       -520
       ],
       [
        2.5,
-       300
+       290
       ],
       [
        3.5,
-       870
+       800
+      ],
+      [
+       4.5,
+       2000
       ]
      ],
      "available": true,
@@ -17370,7 +16884,7 @@
      "line": 1.5,
      "name": "Cedric Coward 3-pointers made",
      "oddID": "threePointersMade-CEDRIC_COWARD_1_NBA-game-ou-over",
-     "odds": -104,
+     "odds": -102,
      "opposing": "threePointersMade-CEDRIC_COWARD_1_NBA-game-ou-under",
      "period": "game",
      "player": "CEDRIC_COWARD_1_NBA",
@@ -17387,7 +16901,7 @@
      "line": 1.5,
      "name": "Cedric Coward 3-pointers made",
      "oddID": "threePointersMade-CEDRIC_COWARD_1_NBA-game-ou-under",
-     "odds": -122,
+     "odds": -125,
      "opposing": "threePointersMade-CEDRIC_COWARD_1_NBA-game-ou-over",
      "period": "game",
      "player": "CEDRIC_COWARD_1_NBA",
@@ -17503,23 +17017,23 @@
      "alts": [
       [
        1.5,
-       -440
+       -500
       ],
       [
        3.5,
-       190
+       164
       ],
       [
        4.5,
-       420
+       400
       ],
       [
        5.5,
-       870
+       800
       ],
       [
        6.5,
-       1500
+       1400
       ]
      ],
      "available": true,
@@ -17530,7 +17044,7 @@
      "line": 2.5,
      "name": "Ty Jerome 3-pointers made",
      "oddID": "threePointersMade-TY_JEROME_1_NBA-game-ou-over",
-     "odds": -142,
+     "odds": -158,
      "opposing": "threePointersMade-TY_JEROME_1_NBA-game-ou-under",
      "period": "game",
      "player": "TY_JEROME_1_NBA",
@@ -17547,7 +17061,7 @@
      "line": 2.5,
      "name": "Ty Jerome 3-pointers made",
      "oddID": "threePointersMade-TY_JEROME_1_NBA-game-ou-under",
-     "odds": 112,
+     "odds": 124,
      "opposing": "threePointersMade-TY_JEROME_1_NBA-game-ou-over",
      "period": "game",
      "player": "TY_JEROME_1_NBA",
@@ -17559,11 +17073,11 @@
      "alts": [
       [
        1.5,
-       -350
+       -390
       ],
       [
        3.5,
-       220
+       230
       ],
       [
        4.5,
@@ -17575,7 +17089,7 @@
       ],
       [
        6.5,
-       2000
+       1800
       ]
      ],
      "available": true,
@@ -17648,30 +17162,13 @@
     {
      "available": true,
      "betType": "yn",
-     "book": "espnbet",
-     "entity": "CAMERON_BOOZER_1_NBA",
-     "kind": "prop",
-     "line": null,
-     "name": "Cameron Boozer Double-double",
-     "oddID": "doubleDouble-CAMERON_BOOZER_1_NBA-game-yn-no",
-     "odds": -160,
-     "opposing": "doubleDouble-CAMERON_BOOZER_1_NBA-game-yn-yes",
-     "period": "game",
-     "player": "CAMERON_BOOZER_1_NBA",
-     "side": "no",
-     "stat": "doubleDouble",
-     "team": "MEM"
-    },
-    {
-     "available": true,
-     "betType": "yn",
      "book": "fanduel",
      "entity": "CAMERON_BOOZER_1_NBA",
      "kind": "prop",
      "line": null,
      "name": "Cameron Boozer Double-double",
      "oddID": "doubleDouble-CAMERON_BOOZER_1_NBA-game-yn-yes",
-     "odds": 118,
+     "odds": 114,
      "opposing": "doubleDouble-CAMERON_BOOZER_1_NBA-game-yn-no",
      "period": "game",
      "player": "CAMERON_BOOZER_1_NBA",
@@ -17699,47 +17196,13 @@
     {
      "available": true,
      "betType": "yn",
-     "book": "draftkings",
-     "entity": "DEANDRE_HUNTER_1_NBA",
-     "kind": "prop",
-     "line": null,
-     "name": "De'Andre Hunter Double-double",
-     "oddID": "doubleDouble-DEANDRE_HUNTER_1_NBA-game-yn-yes",
-     "odds": 2000,
-     "opposing": "doubleDouble-DEANDRE_HUNTER_1_NBA-game-yn-no",
-     "period": "game",
-     "player": "DEANDRE_HUNTER_1_NBA",
-     "side": "yes",
-     "stat": "doubleDouble",
-     "team": "SAC"
-    },
-    {
-     "available": true,
-     "betType": "yn",
-     "book": "espnbet",
-     "entity": "DOMANTAS_SABONIS_1_NBA",
-     "kind": "prop",
-     "line": null,
-     "name": "Domantas Sabonis Double-double",
-     "oddID": "doubleDouble-DOMANTAS_SABONIS_1_NBA-game-yn-no",
-     "odds": 340,
-     "opposing": "doubleDouble-DOMANTAS_SABONIS_1_NBA-game-yn-yes",
-     "period": "game",
-     "player": "DOMANTAS_SABONIS_1_NBA",
-     "side": "no",
-     "stat": "doubleDouble",
-     "team": "SAC"
-    },
-    {
-     "available": true,
-     "betType": "yn",
      "book": "fanduel",
      "entity": "DOMANTAS_SABONIS_1_NBA",
      "kind": "prop",
      "line": null,
      "name": "Domantas Sabonis Double-double",
      "oddID": "doubleDouble-DOMANTAS_SABONIS_1_NBA-game-yn-yes",
-     "odds": -700,
+     "odds": -650,
      "opposing": "doubleDouble-DOMANTAS_SABONIS_1_NBA-game-yn-no",
      "period": "game",
      "player": "DOMANTAS_SABONIS_1_NBA",
@@ -17750,30 +17213,13 @@
     {
      "available": true,
      "betType": "yn",
-     "book": "espnbet",
-     "entity": "TY_JEROME_1_NBA",
-     "kind": "prop",
-     "line": null,
-     "name": "Ty Jerome Double-double",
-     "oddID": "doubleDouble-TY_JEROME_1_NBA-game-yn-no",
-     "odds": -800,
-     "opposing": "doubleDouble-TY_JEROME_1_NBA-game-yn-yes",
-     "period": "game",
-     "player": "TY_JEROME_1_NBA",
-     "side": "no",
-     "stat": "doubleDouble",
-     "team": "MEM"
-    },
-    {
-     "available": true,
-     "betType": "yn",
      "book": "fanduel",
      "entity": "TY_JEROME_1_NBA",
      "kind": "prop",
      "line": null,
      "name": "Ty Jerome Double-double",
      "oddID": "doubleDouble-TY_JEROME_1_NBA-game-yn-yes",
-     "odds": 470,
+     "odds": 490,
      "opposing": "doubleDouble-TY_JEROME_1_NBA-game-yn-no",
      "period": "game",
      "player": "TY_JEROME_1_NBA",
@@ -17785,7 +17231,7 @@
      "alts": [
       [
        3.5,
-       700
+       870
       ]
      ],
      "available": true,
@@ -17796,7 +17242,7 @@
      "line": 1.5,
      "name": "Jaylen Wells Assists",
      "oddID": "assists-JAYLEN_WELLS_1_NBA-game-ou-over",
-     "odds": -113,
+     "odds": 104,
      "opposing": "assists-JAYLEN_WELLS_1_NBA-game-ou-under",
      "period": "game",
      "player": "JAYLEN_WELLS_1_NBA",
@@ -17813,7 +17259,7 @@
      "line": null,
      "name": "Cameron Boozer First basket",
      "oddID": "firstBasket-CAMERON_BOOZER_1_NBA-game-yn-yes",
-     "odds": 800,
+     "odds": 750,
      "opposing": "firstBasket-CAMERON_BOOZER_1_NBA-game-yn-no",
      "period": "game",
      "player": "CAMERON_BOOZER_1_NBA",
@@ -17864,7 +17310,7 @@
      "line": null,
      "name": "Domantas Sabonis First basket",
      "oddID": "firstBasket-DOMANTAS_SABONIS_1_NBA-game-yn-yes",
-     "odds": 550,
+     "odds": 500,
      "opposing": "firstBasket-DOMANTAS_SABONIS_1_NBA-game-yn-no",
      "period": "game",
      "player": "DOMANTAS_SABONIS_1_NBA",
@@ -17881,7 +17327,7 @@
      "line": null,
      "name": "Isaiah Stewart First basket",
      "oddID": "firstBasket-ISAIAH_STEWART_1_NBA-game-yn-yes",
-     "odds": 900,
+     "odds": 950,
      "opposing": "firstBasket-ISAIAH_STEWART_1_NBA-game-yn-no",
      "period": "game",
      "player": "ISAIAH_STEWART_1_NBA",
@@ -17949,7 +17395,7 @@
      "line": null,
      "name": "Cameron Boozer 3-pointers made",
      "oddID": "threePointersMade-CAMERON_BOOZER_1_NBA-game-yn-yes",
-     "odds": -520,
+     "odds": -530,
      "opposing": "threePointersMade-CAMERON_BOOZER_1_NBA-game-yn-no",
      "period": "game",
      "player": "CAMERON_BOOZER_1_NBA",
@@ -17966,7 +17412,7 @@
      "line": null,
      "name": "Cedric Coward 3-pointers made",
      "oddID": "threePointersMade-CEDRIC_COWARD_1_NBA-game-yn-yes",
-     "odds": -500,
+     "odds": -520,
      "opposing": "threePointersMade-CEDRIC_COWARD_1_NBA-game-yn-no",
      "period": "game",
      "player": "CEDRIC_COWARD_1_NBA",
@@ -18040,7 +17486,7 @@
      "line": 4.5,
      "name": "De'Andre Hunter Reb + Ast",
      "oddID": "rebounds+assists-DEANDRE_HUNTER_1_NBA-game-ou-over",
-     "odds": -440,
+     "odds": -430,
      "opposing": "rebounds+assists-DEANDRE_HUNTER_1_NBA-game-ou-under",
      "period": "game",
      "player": "DEANDRE_HUNTER_1_NBA",
@@ -18057,7 +17503,7 @@
      "line": 6.5,
      "name": "De'Andre Hunter Reb + Ast",
      "oddID": "rebounds+assists-DEANDRE_HUNTER_1_NBA-game-ou-under",
-     "odds": -130,
+     "odds": -125,
      "opposing": "rebounds+assists-DEANDRE_HUNTER_1_NBA-game-ou-over",
      "period": "game",
      "player": "DEANDRE_HUNTER_1_NBA",
@@ -18074,7 +17520,7 @@
      "line": 4.5,
      "name": "Jaylen Wells Reb + Ast",
      "oddID": "rebounds+assists-JAYLEN_WELLS_1_NBA-game-ou-over",
-     "odds": -111,
+     "odds": 114,
      "opposing": "rebounds+assists-JAYLEN_WELLS_1_NBA-game-ou-under",
      "period": "game",
      "player": "JAYLEN_WELLS_1_NBA",
@@ -18091,7 +17537,7 @@
      "line": 4.5,
      "name": "Jaylen Wells Reb + Ast",
      "oddID": "rebounds+assists-JAYLEN_WELLS_1_NBA-game-ou-under",
-     "odds": -107,
+     "odds": -127,
      "opposing": "rebounds+assists-JAYLEN_WELLS_1_NBA-game-ou-over",
      "period": "game",
      "player": "JAYLEN_WELLS_1_NBA",
@@ -18103,11 +17549,11 @@
      "alts": [
       [
        4.5,
-       -410
+       -400
       ],
       [
        9.5,
-       500
+       560
       ]
      ],
      "available": true,
@@ -18118,7 +17564,7 @@
      "line": 6.5,
      "name": "Zach LaVine Reb + Ast",
      "oddID": "rebounds+assists-ZACH_LAVINE_1_NBA-game-ou-over",
-     "odds": -106,
+     "odds": 102,
      "opposing": "rebounds+assists-ZACH_LAVINE_1_NBA-game-ou-under",
      "period": "game",
      "player": "ZACH_LAVINE_1_NBA",
@@ -18135,7 +17581,7 @@
      "line": 6.5,
      "name": "Zach LaVine Reb + Ast",
      "oddID": "rebounds+assists-ZACH_LAVINE_1_NBA-game-ou-under",
-     "odds": -120,
+     "odds": -130,
      "opposing": "rebounds+assists-ZACH_LAVINE_1_NBA-game-ou-over",
      "period": "game",
      "player": "ZACH_LAVINE_1_NBA",
@@ -18152,7 +17598,7 @@
      "line": 1.5,
      "name": "Jaylen Wells Assists",
      "oddID": "assists-JAYLEN_WELLS_1_NBA-game-ou-under",
-     "odds": -119,
+     "odds": -154,
      "opposing": "assists-JAYLEN_WELLS_1_NBA-game-ou-over",
      "period": "game",
      "player": "JAYLEN_WELLS_1_NBA",
@@ -18169,7 +17615,7 @@
      "line": null,
      "name": "Isaiah Stewart Double-double",
      "oddID": "doubleDouble-ISAIAH_STEWART_1_NBA-game-yn-yes",
-     "odds": 1000,
+     "odds": 1100,
      "opposing": "doubleDouble-ISAIAH_STEWART_1_NBA-game-yn-no",
      "period": "game",
      "player": "ISAIAH_STEWART_1_NBA",
@@ -18181,23 +17627,23 @@
      "alts": [
       [
        9.5,
-       -1100
+       -1000
       ],
       [
        14.5,
-       -210
+       -195
       ],
       [
        19.5,
-       160
+       175
       ],
       [
        24.5,
-       500
+       550
       ],
       [
        29.5,
-       1600
+       1800
       ]
      ],
      "available": true,
@@ -18208,7 +17654,7 @@
      "line": 16.5,
      "name": "Cedric Coward Pts + Ast",
      "oddID": "points+assists-CEDRIC_COWARD_1_NBA-game-ou-over",
-     "odds": -114,
+     "odds": -108,
      "opposing": "points+assists-CEDRIC_COWARD_1_NBA-game-ou-under",
      "period": "game",
      "player": "CEDRIC_COWARD_1_NBA",
@@ -18225,7 +17671,7 @@
      "line": 16.5,
      "name": "Cedric Coward Pts + Ast",
      "oddID": "points+assists-CEDRIC_COWARD_1_NBA-game-ou-under",
-     "odds": -114,
+     "odds": -122,
      "opposing": "points+assists-CEDRIC_COWARD_1_NBA-game-ou-over",
      "period": "game",
      "player": "CEDRIC_COWARD_1_NBA",
@@ -18237,19 +17683,19 @@
      "alts": [
       [
        9.5,
-       -306
+       -258
       ],
       [
        14.5,
-       134
+       159
       ],
       [
        19.5,
-       456
+       538
       ],
       [
        24.5,
-       1320
+       1560
       ]
      ],
      "available": true,
@@ -18260,7 +17706,7 @@
      "line": 12.5,
      "name": "Jaylen Wells Pts + Ast",
      "oddID": "points+assists-JAYLEN_WELLS_1_NBA-game-ou-over",
-     "odds": -124,
+     "odds": -107,
      "opposing": "points+assists-JAYLEN_WELLS_1_NBA-game-ou-under",
      "period": "game",
      "player": "JAYLEN_WELLS_1_NBA",
@@ -18277,7 +17723,7 @@
      "line": 12.5,
      "name": "Jaylen Wells Pts + Ast",
      "oddID": "points+assists-JAYLEN_WELLS_1_NBA-game-ou-under",
-     "odds": -106,
+     "odds": -123,
      "opposing": "points+assists-JAYLEN_WELLS_1_NBA-game-ou-over",
      "period": "game",
      "player": "JAYLEN_WELLS_1_NBA",
@@ -18289,15 +17735,19 @@
      "alts": [
       [
        9.5,
-       -330
+       -500
       ],
       [
        19.5,
-       400
+       300
       ],
       [
        24.5,
-       1060
+       870
+      ],
+      [
+       29.5,
+       1800
       ]
      ],
      "available": true,
@@ -18308,7 +17758,7 @@
      "line": 14.5,
      "name": "Isaiah Stewart Pts + Reb",
      "oddID": "points+rebounds-ISAIAH_STEWART_1_NBA-game-ou-over",
-     "odds": 126,
+     "odds": -104,
      "opposing": "points+rebounds-ISAIAH_STEWART_1_NBA-game-ou-under",
      "period": "game",
      "player": "ISAIAH_STEWART_1_NBA",
@@ -18319,13 +17769,13 @@
     {
      "available": true,
      "betType": "ou",
-     "book": "espnbet",
+     "book": "fanduel",
      "entity": "ISAIAH_STEWART_1_NBA",
      "kind": "prop",
-     "line": 13.5,
+     "line": 14.5,
      "name": "Isaiah Stewart Pts + Reb",
      "oddID": "points+rebounds-ISAIAH_STEWART_1_NBA-game-ou-under",
-     "odds": -115,
+     "odds": -120,
      "opposing": "points+rebounds-ISAIAH_STEWART_1_NBA-game-ou-over",
      "period": "game",
      "player": "ISAIAH_STEWART_1_NBA",
@@ -18337,15 +17787,19 @@
      "alts": [
       [
        9.5,
-       -454
+       -408
+      ],
+      [
+       13.5,
+       -124
       ],
       [
        19.5,
-       302
+       340
       ],
       [
        24.5,
-       850
+       1000
       ]
      ],
      "available": true,
@@ -18356,7 +17810,7 @@
      "line": 14.5,
      "name": "Jaylen Wells Pts + Reb",
      "oddID": "points+rebounds-JAYLEN_WELLS_1_NBA-game-ou-over",
-     "odds": -108,
+     "odds": 105,
      "opposing": "points+rebounds-JAYLEN_WELLS_1_NBA-game-ou-under",
      "period": "game",
      "player": "JAYLEN_WELLS_1_NBA",
@@ -18365,6 +17819,12 @@
      "team": "MEM"
     },
     {
+     "alts": [
+      [
+       13.5,
+       -106
+      ]
+     ],
      "available": true,
      "betType": "ou",
      "book": "draftkings",
@@ -18373,7 +17833,7 @@
      "line": 14.5,
      "name": "Jaylen Wells Pts + Reb",
      "oddID": "points+rebounds-JAYLEN_WELLS_1_NBA-game-ou-under",
-     "odds": -122,
+     "odds": -128,
      "opposing": "points+rebounds-JAYLEN_WELLS_1_NBA-game-ou-over",
      "period": "game",
      "player": "JAYLEN_WELLS_1_NBA",
@@ -18385,15 +17845,19 @@
      "alts": [
       [
        4.5,
-       -430
+       -710
+      ],
+      [
+       9.5,
+       104
       ],
       [
        14.5,
-       630
+       430
       ],
       [
        19.5,
-       1800
+       1400
       ]
      ],
      "available": true,
@@ -18401,10 +17865,10 @@
      "book": "fanduel",
      "entity": "ISAIAH_STEWART_1_NBA",
      "kind": "prop",
-     "line": 9.5,
+     "line": 8.5,
      "name": "Isaiah Stewart Points",
      "oddID": "points-ISAIAH_STEWART_1_NBA-game-ou-over",
-     "odds": 154,
+     "odds": -136,
      "opposing": "points-ISAIAH_STEWART_1_NBA-game-ou-under",
      "period": "game",
      "player": "ISAIAH_STEWART_1_NBA",
@@ -18415,13 +17879,13 @@
     {
      "available": true,
      "betType": "ou",
-     "book": "espnbet",
+     "book": "fanduel",
      "entity": "ISAIAH_STEWART_1_NBA",
      "kind": "prop",
-     "line": 7.5,
+     "line": 8.5,
      "name": "Isaiah Stewart Points",
      "oddID": "points-ISAIAH_STEWART_1_NBA-game-ou-under",
-     "odds": -105,
+     "odds": 106,
      "opposing": "points-ISAIAH_STEWART_1_NBA-game-ou-over",
      "period": "game",
      "player": "ISAIAH_STEWART_1_NBA",
@@ -18432,8 +17896,12 @@
     {
      "alts": [
       [
+       4.5,
+       -2000
+      ],
+      [
        9.5,
-       -220
+       -225
       ],
       [
        14.5,
@@ -18456,7 +17924,7 @@
      "line": 11.5,
      "name": "Jerami Grant Points",
      "oddID": "points-JERAMI_GRANT_1_NBA-game-ou-over",
-     "odds": -122,
+     "odds": -125,
      "opposing": "points-JERAMI_GRANT_1_NBA-game-ou-under",
      "period": "game",
      "player": "JERAMI_GRANT_1_NBA",
@@ -18473,7 +17941,7 @@
      "line": 11.5,
      "name": "Jerami Grant Points",
      "oddID": "points-JERAMI_GRANT_1_NBA-game-ou-under",
-     "odds": -104,
+     "odds": -102,
      "opposing": "points-JERAMI_GRANT_1_NBA-game-ou-over",
      "period": "game",
      "player": "JERAMI_GRANT_1_NBA",
@@ -18485,19 +17953,19 @@
      "alts": [
       [
        3.5,
-       -340
+       -350
       ],
       [
        7.5,
-       350
+       370
       ],
       [
        9.5,
-       830
+       900
       ],
       [
        11.5,
-       1700
+       1800
       ]
      ],
      "available": true,
@@ -18508,7 +17976,7 @@
      "line": 5.5,
      "name": "Isaiah Stewart Rebounds",
      "oddID": "rebounds-ISAIAH_STEWART_1_NBA-game-ou-over",
-     "odds": 116,
+     "odds": 120,
      "opposing": "rebounds-ISAIAH_STEWART_1_NBA-game-ou-under",
      "period": "game",
      "player": "ISAIAH_STEWART_1_NBA",
@@ -18519,13 +17987,13 @@
     {
      "available": true,
      "betType": "ou",
-     "book": "espnbet",
+     "book": "fanduel",
      "entity": "ISAIAH_STEWART_1_NBA",
      "kind": "prop",
      "line": 5.5,
      "name": "Isaiah Stewart Rebounds",
      "oddID": "rebounds-ISAIAH_STEWART_1_NBA-game-ou-under",
-     "odds": -145,
+     "odds": -154,
      "opposing": "rebounds-ISAIAH_STEWART_1_NBA-game-ou-over",
      "period": "game",
      "player": "ISAIAH_STEWART_1_NBA",
@@ -18537,7 +18005,7 @@
      "alts": [
       [
        0.5,
-       -590
+       -520
       ],
       [
        2.5,
@@ -18545,11 +18013,11 @@
       ],
       [
        3.5,
-       680
+       750
       ],
       [
        4.5,
-       1600
+       1700
       ]
      ],
      "available": true,
@@ -18594,7 +18062,7 @@
      "line": null,
      "name": "Jerami Grant 3-pointers made",
      "oddID": "threePointersMade-JERAMI_GRANT_1_NBA-game-yn-yes",
-     "odds": -590,
+     "odds": -520,
      "opposing": "threePointersMade-JERAMI_GRANT_1_NBA-game-yn-no",
      "period": "game",
      "player": "JERAMI_GRANT_1_NBA",
@@ -18610,7 +18078,7 @@
       ],
       [
        19.5,
-       320
+       330
       ],
       [
        24.5,
@@ -18641,7 +18109,7 @@
       ],
       [
        14.5,
-       -172
+       -170
       ],
       [
        19.5,
@@ -18649,7 +18117,7 @@
       ],
       [
        24.5,
-       600
+       630
       ],
       [
        29.5,
@@ -18661,10 +18129,10 @@
      "book": "fanduel",
      "entity": "DEANDRE_HUNTER_1_NBA",
      "kind": "prop",
-     "line": 16.5,
+     "line": 15.5,
      "name": "De'Andre Hunter Pts + Reb",
      "oddID": "points+rebounds-DEANDRE_HUNTER_1_NBA-game-ou-over",
-     "odds": 100,
+     "odds": -128,
      "opposing": "points+rebounds-DEANDRE_HUNTER_1_NBA-game-ou-under",
      "period": "game",
      "player": "DEANDRE_HUNTER_1_NBA",
@@ -18678,10 +18146,10 @@
      "book": "fanduel",
      "entity": "DEANDRE_HUNTER_1_NBA",
      "kind": "prop",
-     "line": 16.5,
+     "line": 15.5,
      "name": "De'Andre Hunter Pts + Reb",
      "oddID": "points+rebounds-DEANDRE_HUNTER_1_NBA-game-ou-under",
-     "odds": -128,
+     "odds": 100,
      "opposing": "points+rebounds-DEANDRE_HUNTER_1_NBA-game-ou-over",
      "period": "game",
      "player": "DEANDRE_HUNTER_1_NBA",
@@ -18732,7 +18200,7 @@
      "line": 61.5,
      "name": "1st half total",
      "oddID": "points-away-1h-ou-over",
-     "odds": -114,
+     "odds": -115,
      "opposing": "points-away-1h-ou-under",
      "period": "1h",
      "player": null,
@@ -18749,7 +18217,7 @@
      "line": 61.5,
      "name": "1st half total",
      "oddID": "points-away-1h-ou-under",
-     "odds": -106,
+     "odds": -105,
      "opposing": "points-away-1h-ou-over",
      "period": "1h",
      "player": null,
@@ -18794,23 +18262,6 @@
     {
      "available": true,
      "betType": "yn",
-     "book": "bovada",
-     "entity": "JAYLEN_WELLS_1_NBA",
-     "kind": "prop",
-     "line": null,
-     "name": "Jaylen Wells Assists",
-     "oddID": "assists-JAYLEN_WELLS_1_NBA-game-yn-yes",
-     "odds": -575,
-     "opposing": "assists-JAYLEN_WELLS_1_NBA-game-yn-no",
-     "period": "game",
-     "player": "JAYLEN_WELLS_1_NBA",
-     "side": "yes",
-     "stat": "assists",
-     "team": "MEM"
-    },
-    {
-     "available": true,
-     "betType": "yn",
      "book": "fanduel",
      "entity": "PRECIOUS_ACHIUWA_1_NBA",
      "kind": "prop",
@@ -18833,11 +18284,11 @@
       ],
       [
        9.5,
-       -138
+       -142
       ],
       [
        14.5,
-       320
+       310
       ],
       [
        19.5,
@@ -18880,10 +18331,6 @@
     {
      "alts": [
       [
-       3.5,
-       -2000
-      ],
-      [
        5.5,
        -310
       ],
@@ -18893,7 +18340,7 @@
       ],
       [
        11.5,
-       700
+       680
       ],
       [
        13.5,
@@ -18936,23 +18383,6 @@
     {
      "available": true,
      "betType": "yn",
-     "book": "espnbet",
-     "entity": "PRECIOUS_ACHIUWA_1_NBA",
-     "kind": "prop",
-     "line": null,
-     "name": "Precious Achiuwa Double-double",
-     "oddID": "doubleDouble-PRECIOUS_ACHIUWA_1_NBA-game-yn-no",
-     "odds": -700,
-     "opposing": "doubleDouble-PRECIOUS_ACHIUWA_1_NBA-game-yn-yes",
-     "period": "game",
-     "player": "PRECIOUS_ACHIUWA_1_NBA",
-     "side": "no",
-     "stat": "doubleDouble",
-     "team": "SAC"
-    },
-    {
-     "available": true,
-     "betType": "yn",
      "book": "fanduel",
      "entity": "PRECIOUS_ACHIUWA_1_NBA",
      "kind": "prop",
@@ -18975,11 +18405,11 @@
       ],
       [
        14.5,
-       -265
+       -260
       ],
       [
        19.5,
-       144
+       138
       ],
       [
        24.5,
@@ -18987,7 +18417,7 @@
       ],
       [
        29.5,
-       1200
+       1100
       ]
      ],
      "available": true,
@@ -18998,7 +18428,7 @@
      "line": 17.5,
      "name": "Precious Achiuwa Pts + Reb",
      "oddID": "points+rebounds-PRECIOUS_ACHIUWA_1_NBA-game-ou-over",
-     "odds": -113,
+     "odds": -118,
      "opposing": "points+rebounds-PRECIOUS_ACHIUWA_1_NBA-game-ou-under",
      "period": "game",
      "player": "PRECIOUS_ACHIUWA_1_NBA",
@@ -19015,16 +18445,64 @@
      "line": 17.5,
      "name": "Precious Achiuwa Pts + Reb",
      "oddID": "points+rebounds-PRECIOUS_ACHIUWA_1_NBA-game-ou-under",
-     "odds": -113,
+     "odds": -108,
      "opposing": "points+rebounds-PRECIOUS_ACHIUWA_1_NBA-game-ou-over",
      "period": "game",
      "player": "PRECIOUS_ACHIUWA_1_NBA",
      "side": "under",
      "stat": "points+rebounds",
      "team": "SAC"
+    },
+    {
+     "alts": [
+      [
+       9.5,
+       -142
+      ],
+      [
+       14.5,
+       300
+      ],
+      [
+       19.5,
+       1060
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "Q_POST_1_NBA",
+     "kind": "prop",
+     "line": 10.5,
+     "name": "Quinten Post Pts + Reb",
+     "oddID": "points+rebounds-Q_POST_1_NBA-game-ou-over",
+     "odds": -102,
+     "opposing": "points+rebounds-Q_POST_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "Q_POST_1_NBA",
+     "side": "over",
+     "stat": "points+rebounds",
+     "team": "MEM"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "Q_POST_1_NBA",
+     "kind": "prop",
+     "line": 10.5,
+     "name": "Quinten Post Pts + Reb",
+     "oddID": "points+rebounds-Q_POST_1_NBA-game-ou-under",
+     "odds": -125,
+     "opposing": "points+rebounds-Q_POST_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "Q_POST_1_NBA",
+     "side": "under",
+     "stat": "points+rebounds",
+     "team": "MEM"
     }
    ],
-   "pulledAt": "2026-10-25T23:22:44Z",
+   "pulledAt": "2026-10-26T00:52:39Z",
    "start": "2026-10-26T01:00:00.000Z",
    "started": false
   },
