@@ -336,7 +336,7 @@ td.legs div{white-space:nowrap}
         <dt>Stack</dt><dd>Everyone starts with 200 points. Points are fake; they simulate money. The book runs from opening night through the NBA Finals, and the highest stack after the Finals, after any bust penalty, wins.</dd>
         <dt>Lines</dt><dd>Real FanDuel prices (another book fills in if FanDuel is missing a market). The number on this page when you place a bet is the official number, even if FanDuel moves after. Prices refresh each morning, around 1 PM, and about an hour before each tip-off window.</dd>
         <dt>Bets</dt><dd>Spreads, totals, moneylines, first-half lines and player props. Add picks to your slip, then mark each one Parlay or Single. Parlays are same-game only, one per game; singles can be from any games, and the slip places them all at once.</dd>
-        <dt>No conflicts in a parlay</dt><dd>Picks on one game that cannot both win (SAS -15.5 with DAL ML, over 228.5 with under 226.5) or that overlap, where one already implies the other (SAS -15.5 with SAS ML, two overs on the same player), cannot be legs of the same parlay. They are fine as separate singles. Both sides of the exact same market are never allowed together.</dd>
+        <dt>No conflicts in a parlay</dt><dd>Picks on one game that cannot both win (SAS -15.5 with DAL ML, over 228.5 with under 226.5), that overlap, where one already implies the other (SAS -15.5 with SAS ML, two overs on the same player), or that are too closely related for our parlay math (a first-half line with a full-game line on the same game, a first-half total with the full-game total, a player's combined stat such as Pts + Reb + Ast or a double-double with one of its parts) cannot be legs of the same parlay. They are fine as separate singles. Both sides of the exact same market are never allowed together.</dd>
         <dt>Alt lines</dt><dd>Tap the arrows beside a spread, total or prop to slide to a different number at FanDuel's price for it (a player over 20 instead of over 10, a team at -2.5 instead of -7.5). Only numbers FanDuel lists are offered. One leg per market: switching numbers replaces, never stacks.</dd>
         <dt>Parlay pricing</dt><dd>Legs multiply at their listed prices. FanDuel discounts same-game parlays for correlated legs; this book does not, so a same-game parlay pays a little more here than there. That is the house rule, same for everyone.</dd>
         <dt>Max bet</dt><dd>Stakes are whole points, and payouts round to the nearest whole point. No single bet can be more than 25% of your stack at the moment you place it, rounded down. Once your stack, counting open bets, is 20 points or less, the cap lifts and you may go all in.</dd>
@@ -380,7 +380,7 @@ td.legs div{white-space:nowrap}
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
 <script src="../firebase-config.js"></script>
-<script src="engine.js?v=20261026a"></script>
+<script src="engine.js?v=20261026b"></script>
 <script>
 (function(){
   const E=window.BookEngine;
@@ -585,7 +585,7 @@ td.legs div{white-space:nowrap}
     el.querySelectorAll('[data-rm]').forEach(b=>b.addEventListener('click',()=>{S.slip=S.slip.filter(l=>l.key!==b.dataset.rm);if(S.boosts)delete S.boosts[b.dataset.rm];render();}));
     el.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{const parts=b.dataset.mode.split('|');const mode=parts.pop();const id=parts.join('|');const l=S.slip.find(x=>x.key===id);if(!l)return;
       if(mode==='parlay'&&E.conflict){let why=null;const other=S.slip.find(x=>x.eventID===l.eventID&&x.key!==l.key&&x.mode!=='single'&&(why=E.conflict(x,l)));
-        if(other){shakeEl(b.closest('.seg'));toast(why==='impossible'?`${l.short} and ${other.short} cannot both win, so they cannot be in the same parlay.`:`${l.short} and ${other.short} overlap (one already covers the other), so they cannot be in the same parlay.`,true);return;}}
+        if(other){shakeEl(b.closest('.seg'));toast(why==='impossible'?`${l.short} and ${other.short} cannot both win, so they cannot be in the same parlay.`:why==='related'?`${l.short} and ${other.short} are too closely related to parlay (${E.related(l,other)}).`:`${l.short} and ${other.short} overlap (one already covers the other), so they cannot be in the same parlay.`,true);return;}}
       l.mode=mode;renderSlip();}));
     el.querySelectorAll('[data-boost]').forEach(b=>b.addEventListener('click',()=>{const key=b.dataset.bkey;const id=b.dataset.boost;S.boosts=S.boosts||{};if(id)S.boosts[key]=id;else delete S.boosts[key];renderSlip();if(id==='mega')megaArmed();}));
     el.querySelectorAll('[data-q]').forEach(b=>b.addEventListener('click',()=>{const qp=b.dataset.q.split('|');const q=qp.pop();const key=qp.join('|');S.stakes=S.stakes||{};S.stakes[key]=q==='max'?String(maxBet):q;renderSlip();}));

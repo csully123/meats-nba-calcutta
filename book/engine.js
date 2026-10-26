@@ -67,8 +67,20 @@
     if(l.betType==='sp'&&isFinite(line)&&(l.entity==='home'||l.entity==='away'))return l.entity==='home'?{v:'margin:'+per,dir:'>',at:-line}:{v:'margin:'+per,dir:'<',at:line};
     if(l.betType==='ou'&&isFinite(line))return {v:'total:'+per,dir:l.side==='under'?'<':'>',at:line};
     return null;};
-  E.conflict=function(a,b){const x=E.legConstraint(a),y=E.legConstraint(b);if(!x||!y||x.v!==y.v)return null;
-    if(x.dir===y.dir)return 'overlap';const gt=x.dir==='>'?x:y,lt=x.dir==='<'?x:y;return gt.at>=lt.at?'impossible':null;};
+  // Pairs that a real book prices as one bet but our multiplication would overpay: first-half and full-game lines on the
+  // same quantity, and a player's combined stat with one of its parts. 'related' legs can be singles, never one parlay.
+  E.COMBO_PARTS={'points+rebounds+assists':['points','rebounds','assists'],'points+rebounds':['points','rebounds'],'points+assists':['points','assists'],
+    'rebounds+assists':['rebounds','assists'],'blocks+steals':['blocks','steals'],'doubleDouble':['points','rebounds','assists'],'tripleDouble':['points','rebounds','assists']};
+  E.related=function(a,b){const pa=a.period||'game',pb=b.period||'game';
+    if(!a.player&&!b.player&&pa!==pb){const team=l=>l.betType==='ml'||l.betType==='sp';const total=l=>l.betType==='ou';
+      if(team(a)&&team(b))return 'first-half and full-game lines on the same game';
+      if(total(a)&&total(b))return 'first-half and full-game totals';}
+    if(a.player&&b.player&&a.player===b.player&&a.stat!==b.stat){const A=E.COMBO_PARTS[a.stat]||[],B=E.COMBO_PARTS[b.stat]||[];
+      if(A.includes(b.stat)||B.includes(a.stat)||A.some(x=>B.includes(x)))return 'a combined stat and one of its parts for the same player';}
+    return null;};
+  E.conflict=function(a,b){const x=E.legConstraint(a),y=E.legConstraint(b);
+    if(x&&y&&x.v===y.v){if(x.dir===y.dir)return 'overlap';const gt=x.dir==='>'?x:y,lt=x.dir==='<'?x:y;return gt.at>=lt.at?'impossible':null;}
+    return E.related(a,b)?'related':null;};
 
   // Biggest single bet allowed: 25% of the available stack, rounded down to a whole point. Once the whole bankroll
   // (available plus open bets) is at or under ALL_IN_AT, the cap lifts and you may bet everything you have left.
@@ -90,7 +102,7 @@
     if(w.legs&&w.legs.some(l=>l.started))errs.push('One of these games has already started.');
     if(w.legs&&w.legs.length>1){const ids=w.legs.map(l=>l.oddID);if(new Set(ids).size!==ids.length)errs.push('Duplicate selection.');
       const opp=w.legs.some(l=>{const o=l.opposingOddID||l.opposing;return !!o&&w.legs.some(m=>m.oddID===o);});if(opp)errs.push('You cannot take both sides of the same market.');
-      for(let i=0;i<w.legs.length&&!errs.length;i++)for(let j=i+1;j<w.legs.length;j++){const c=E.conflict(w.legs[i],w.legs[j]);if(c){const a=w.legs[i].short||'one leg',b=w.legs[j].short||'another';errs.push(c==='impossible'?`${a} and ${b} cannot both win.`:`${a} and ${b} overlap (one already covers the other), so they cannot be parlayed.`);break;}}}
+      for(let i=0;i<w.legs.length&&!errs.length;i++)for(let j=i+1;j<w.legs.length;j++){const c=E.conflict(w.legs[i],w.legs[j]);if(c){const a=w.legs[i].short||'one leg',b=w.legs[j].short||'another';errs.push(c==='impossible'?`${a} and ${b} cannot both win.`:c==='related'?`${a} and ${b} are too closely related to parlay (${E.related(w.legs[i],w.legs[j])}).`:`${a} and ${b} overlap (one already covers the other), so they cannot be parlayed.`);break;}}}
     return errs;
   };
 
