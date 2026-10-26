@@ -8,12 +8,16 @@ on:
 jobs:
   probe:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
+      - uses: actions/checkout@v4
       - name: Fetch and print
         env:
           D: ${{ inputs.date }}
         run: |
-          python3 - <<'PY'
+          mkdir -p data/probe
+          python3 - > data/probe/espn.txt <<'PY'
           import json,os,urllib.request
           d=os.environ['D']
           for day in (d,"20250415","20250507","20250520","20250605","20241217","20251216"):
@@ -28,3 +32,11 @@ jobs:
                   ser=c.get('series')
                   print(ev['shortName'],'| season:',ev.get('season'),'| notes:',c.get('notes'),'| series:',{k:ser.get(k) for k in ('type','title','summary','completed','totalCompetitions')} if ser else None,'| type:',c.get('type'))
           PY
+      - name: Commit
+        run: |
+          git config user.name "meats-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/probe/espn.txt
+          git commit -m "ESPN probe output" || exit 0
+          git pull --rebase origin main
+          git push
