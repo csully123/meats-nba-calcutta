@@ -339,7 +339,7 @@ td.legs div{white-space:nowrap}
         <dt>No conflicts in a parlay</dt><dd>Picks on one game that cannot both win (SAS -15.5 with DAL ML, over 228.5 with under 226.5), that overlap, where one already implies the other (SAS -15.5 with SAS ML, two overs on the same player), or that are too closely related for our parlay math (a first-half line with a full-game line on the same game, a first-half total with the full-game total, a player's combined stat such as Pts + Reb + Ast or a double-double with one of its parts) cannot be legs of the same parlay. They are fine as separate singles. Both sides of the exact same market are never allowed together.</dd>
         <dt>Alt lines</dt><dd>Tap the arrows beside a spread, total or prop to slide to a different number at FanDuel's price for it (a player over 20 instead of over 10, a team at -2.5 instead of -7.5). Only numbers FanDuel lists are offered. One leg per market: switching numbers replaces, never stacks.</dd>
         <dt>Parlay pricing</dt><dd>Legs multiply at their listed prices. FanDuel discounts same-game parlays for correlated legs; this book does not, so a same-game parlay pays a little more here than there. That is the house rule, same for everyone.</dd>
-        <dt>Max bet</dt><dd>Stakes are whole points, and payouts round to the nearest whole point. No single bet can be more than 25% of your stack at the moment you place it, rounded down. Once your stack, counting open bets, is 20 points or less, the cap lifts and you may go all in.</dd>
+        <dt>Max bet</dt><dd>Stakes are whole points, and payouts round to the nearest whole point. No single bet can be more than 25% of your stack at the moment you place it, rounded down. Across all your open bets, no more than 50% of your stack can ride on one game, and no more than 25% on one line (adding to a bet at a new number is fine within that). Once your stack, counting open bets, is 20 points or less, the caps lift and you may go all in.</dd>
         <dt>Minimum</dt><dd>Wager at least 20 points every week, Monday through Sunday, or your whole stack if you have less than 20.</dd>
         <dt>Bust</dt><dd>Hit zero with no bets open and you have busted: you reload to 100 and keep playing. It costs you at the end: one bust forfeits 10% of your final total, two busts 25%, three 45%, four 70%, five 90%. Each bust forfeits at least 20 points regardless, so busting on purpose for the reload never pays.</dd>
         <dt>Foul out</dt><dd>Six busts and you have fouled out, like a sixth foul. No more bets, and you are out of the competition. It does not matter what your stack was or how many you had won; you cannot finish anywhere. If everyone fouls out, nobody wins.</dd>
@@ -380,7 +380,7 @@ td.legs div{white-space:nowrap}
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
 <script src="../firebase-config.js"></script>
-<script src="engine.js?v=20261026b"></script>
+<script src="engine.js?v=20261026c"></script>
 <script>
 (function(){
   const E=window.BookEngine;
@@ -554,8 +554,9 @@ td.legs div{white-space:nowrap}
   function boostFor(key,legs){const id=(S.boosts||{})[key];if(!id||!S.me)return null;const g=S.games[legs[0].eventID];if(!g)return null;return E.availableTokens(gameMeta(g),CFG,S.me,S.wagers).find(t=>t.id===id)||null;}
   function slipErrors(){const st=S.me?stateOf(S.me):null;if(!st)return ['Choose your name first.'];const bets=slipBets();const errs=[];let total=0;
     let stack=st.stack,pending=st.pending||0; // each bet on the slip is checked as if the ones before it were already placed
-    for(const b of bets){const e=E.validate({stake:b.stake||1,legs:b.legs},{stack,pending},CFG);if(e.length)errs.push((b.legs.length>1?gameName(b.legs[0].eventID)+' parlay: ':b.legs[0].short+': ')+e[0]);
-      if(b.stake>0){total+=b.stake;stack-=b.stake;pending+=b.stake;}}
+    const open=S.wagers.filter(w=>w.player===S.me&&w.status==='open').map(w=>({eventID:w.eventID,stake:w.stake,legs:w.legs}));
+    for(const b of bets){const e=E.validate({stake:b.stake||1,legs:b.legs},{stack,pending,open},CFG);if(e.length)errs.push((b.legs.length>1?gameName(b.legs[0].eventID)+' parlay: ':b.legs[0].short+': ')+e[0]);
+      if(b.stake>0){total+=b.stake;stack-=b.stake;pending+=b.stake;open.push({eventID:b.legs[0].eventID,stake:b.stake,legs:b.legs});}}
     if(!bets.some(b=>b.stake))errs.push('Enter a stake on at least one bet.');
     if(total>st.stack+0.0001)errs.push(`These stakes add up to ${fmtPts(total)} but you only have ${fmtPts(st.stack)}.`);
     return errs;}

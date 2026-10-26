@@ -97,6 +97,13 @@
     if(w.stake>state.stack+0.0001)errs.push(`You only have ${state.stack} points available.`);
     const cap=E.maxBet(state,cfg);
     if(w.stake>cap+0.0001)errs.push(E.allIn(state)?`You can bet up to your whole ${cap} right now.`:`Max bet is ${Math.round(maxFrac*100)}% of your stack (${cap} right now).`);
+    // Exposure caps, measured against the whole bankroll (available plus open): 50% of it on any one game across all
+    // open bets, and 25% of it on any one market across open singles (adding to a bet at a new number is fine up to that).
+    if(!E.allIn(state)&&Array.isArray(state.open)&&w.legs&&w.legs.length){const bank=(state.stack||0)+(state.pending||0);const eid=w.legs[0].eventID;
+      const gameFrac=(cfg&&cfg.maxGameFraction)||0.5;const onGame=state.open.filter(o=>o.eventID===eid).reduce((a,o)=>a+(Number(o.stake)||0),0);const gameCap=Math.floor(bank*gameFrac+0.0001);
+      if(onGame+w.stake>gameCap+0.0001)errs.push(onGame?`You already have ${onGame} on this game and ${Math.round(gameFrac*100)}% of your stack is ${gameCap}, so this bet can be at most ${Math.max(0,gameCap-onGame)}.`:`Max on one game is ${Math.round(gameFrac*100)}% of your stack (${gameCap}).`);
+      if(w.legs.length===1){const oid=w.legs[0].oddID;const onMkt=state.open.filter(o=>o.eventID===eid&&o.legs&&o.legs.length===1&&o.legs[0].oddID===oid).reduce((a,o)=>a+(Number(o.stake)||0),0);const mktCap=Math.floor(bank*maxFrac+0.0001);
+        if(onMkt&&onMkt+w.stake>mktCap+0.0001)errs.push(`You already have ${onMkt} on ${w.legs[0].short||'this line'} and ${Math.round(maxFrac*100)}% of your stack is ${mktCap}, so you can add at most ${Math.max(0,mktCap-onMkt)}.`);}}
     if(!w.legs||!w.legs.length)errs.push('Add at least one selection.');
     if(w.legs&&new Set(w.legs.map(l=>l.eventID)).size>1)errs.push('All selections must be from the same game.');
     if(w.legs&&w.legs.some(l=>l.started))errs.push('One of these games has already started.');
