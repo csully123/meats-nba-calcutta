@@ -18,4 +18,6 @@ Boost tokens (profit multipliers, one per bet, chosen on the slip at placement) 
 
 Regular-season prize (50 points and an extra 3x Finals token for first, an extra 2x second-round token for second): when the regular season ends, set `CFG.prizes.first` and `CFG.prizes.second` to the player names and add `{player, points: 50, at: <ISO time>, note}` to `CFG.adjustments` in `book/index.html`.
 
+`data/book-insights.json` holds the sportsbook's morning "Game insights" (injuries, Claude's top single and top parlay per game, keyed by the odds feed's eventID), written once per game by the same scheduled Claude task that writes `data/writeups.json`; the page offers an Add-to-slip button for each at the current numbers.
+
 The picks board ignores play-in and playoff games (`stage` other than regular, cup, cupfinal); the sportsbook shows them.

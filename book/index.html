@@ -106,7 +106,34 @@ details.day .daybody{display:flex;flex-direction:column;gap:14px;margin-top:10px
 .badge.live{background:var(--loss);color:#fff}.badge.final{background:var(--ink);color:var(--bg)}.badge.lock{background:var(--soft);color:var(--muted)}
 .mainlines{display:grid;grid-template-columns:auto 1fr 1fr 1fr;gap:6px;padding:10px 12px;align-items:center}
 .mainlines .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);text-align:center}
-.mainlines .teamcell{font-family:var(--display);font-size:18px;font-weight:600;text-transform:uppercase;display:flex;align-items:center;gap:8px;min-width:0}
+.mainlines .teamcell{font-family:var(--display);font-size:18px;font-weight:600;text-transform:uppercase;display:flex;align-items:center;gap:8px;min-width:0;--tc:var(--line);border-left:4px solid var(--tc);background:linear-gradient(90deg,color-mix(in srgb,var(--tc) 22%,transparent),transparent 85%);padding:6px 8px;border-radius:6px}
+.game .split{height:5px;background:linear-gradient(90deg,var(--ac,var(--line)) 0 50%,var(--hc,var(--line)) 50% 100%)}
+/* Game insights: injuries plus Claude's top single and parlay, written once each morning */
+.wdet{padding:8px 12px 0}
+.wdet>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;background:var(--soft);border:1.5px solid var(--line);border-radius:6px;padding:8px 12px}
+.wdet>summary:hover{border-color:color-mix(in srgb,var(--accent) 50%,var(--line))}
+.wdet>summary::-webkit-details-marker{display:none}
+.wdet>summary .eyebrow{color:var(--ink);font-size:12px;letter-spacing:.08em;font-weight:600;text-transform:uppercase}
+.wdet>summary::after{content:"Show \25BE";font-size:11px;font-weight:700;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 55%,var(--line));padding:2px 8px;border-radius:999px;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
+.wdet[open]>summary::after{content:"Hide \25B4"}
+.wbody{display:flex;flex-direction:column;gap:12px;padding:10px 2px 4px}
+.wblock .eyebrow{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:6px}
+.inj{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px;font-size:14px}
+.inj li{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline}
+.inj .tcode{color:color-mix(in srgb,var(--tc,var(--ink)) 70%,var(--ink));padding:0 5px;border-radius:3px;background:color-mix(in srgb,var(--tc,var(--line)) 14%,transparent);font-weight:700}
+.inj .st{font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;padding:1px 6px;border-radius:3px;background:var(--soft);color:var(--muted)}
+.inj .st.out{background:var(--loss);color:#fff}.inj .st.doubtful{background:var(--loss);color:#fff;opacity:.75}.inj .st.questionable{background:var(--push);color:#fff}
+.inj .imp{font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--muted)}
+.inj .imp.high{color:var(--loss)}
+.cbet{border-left:5px solid var(--tc,var(--accent));background:linear-gradient(90deg,color-mix(in srgb,var(--tc,var(--accent)) 16%,var(--surface)),var(--surface) 60%);border-radius:6px;padding:10px 12px}
+.cbet .bl{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;font-family:var(--display);font-size:19px;font-weight:700;text-transform:uppercase}
+.cbet .bl .o{font-family:var(--mono);font-size:14px;font-weight:600;color:var(--muted);text-transform:none}
+.cbet .legs{display:flex;flex-direction:column;gap:2px;font-family:var(--display);font-size:17px;font-weight:600;text-transform:uppercase}
+.cbet .why{margin:6px 0 0;font-size:14px;color:var(--ink)}
+.cbet .addrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:8px}
+.cbet .add{border:1.5px solid var(--accent);color:var(--accent);background:none;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.cbet .add:disabled{opacity:.45}
+.cbet .moved{font-size:12px;color:var(--muted)}
 .mainlines .teamcell img{width:26px;height:26px;object-fit:contain;background:rgba(255,255,255,.08);border-radius:50%;padding:2px}
 .ob{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;border:1.5px solid var(--line);background:var(--bg);border-radius:6px;padding:7px 6px;min-width:0}
 .ob .l{font-family:var(--mono);font-size:14px;font-weight:600}
@@ -366,8 +393,13 @@ td.legs div{white-space:nowrap}
     S.games=games;
     // logos from the picks board's games file, matched by date + teams
     const pg=await fetch('../data/games.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));
-    S.logos={};for(const x of Object.values(pg)){S.logos[x.date+'|'+x.away+'|'+x.home]={a:x.awayLogo,h:x.homeLogo,stage:x.stage||'regular',series:x.series||null};}
+    S.logos={};for(const x of Object.values(pg)){S.logos[x.date+'|'+x.away+'|'+x.home]={a:x.awayLogo,h:x.homeLogo,ac:x.awayColor,hc:x.homeColor,stage:x.stage||'regular',series:x.series||null};}
+    S.insights=await fetch('../data/book-insights.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));
   }
+  const hexOf=c=>{if(!c)return '';c=String(c).trim();if(/^#[0-9a-fA-F]{6}$/.test(c))return c;if(/^[0-9a-fA-F]{6}$/.test(c))return '#'+c;return '';};
+  const lum=c=>{const n=parseInt(c.slice(1),16);const r=(n>>16)&255,gg=(n>>8)&255,b=n&255;return (0.299*r+0.587*gg+0.114*b)/255;};
+  const inkFor=c=>lum(c)>0.6?'#15202b':'#ffffff';
+  function colorsOf(g){const m=logosFor(g);return {a:hexOf(m.ac)||hexOf(g.awayColor),h:hexOf(m.hc)||hexOf(g.homeColor)};}
   function logosFor(g){return S.logos[g.date+'|'+g.away+'|'+g.home]||{};}
   // What a game is for token purposes: its stage (regular, cup, cupfinal, playin, r1, r2, cf, finals) and series.
   function gameMeta(g){const m=logosFor(g);return {start:g.start,stage:m.stage||'regular',series:m.series||((m.stage==='r1'||m.stage==='r2'||m.stage==='cf'||m.stage==='finals')?E.seriesKey(g.home,g.away):null)};}
@@ -408,6 +440,8 @@ td.legs div{white-space:nowrap}
       return `<details class="day" data-day="${esc(day)}" ${S.openDays.has(day)?'open':''}><summary class="dayhead">${head}</summary><div class="daybody">${body}</div></details>`;}).join('');
     v.querySelectorAll('details.day').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)S.openDays.add(d.dataset.day);else S.openDays.delete(d.dataset.day);}));
     v.querySelectorAll('details.more').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)S.openMore.add(d.dataset.g);else S.openMore.delete(d.dataset.g);}));
+    v.querySelectorAll('details.wdet').forEach(d=>d.addEventListener('toggle',()=>{const set=S.openW||(S.openW=new Set());if(d.open)set.add(d.dataset.w);else set.delete(d.dataset.w);}));
+    v.querySelectorAll('[data-cadd]').forEach(b=>b.addEventListener('click',()=>{const [eid,kind]=b.dataset.cadd.split('|');addClaudeBet(eid,kind,b);}));
     v.querySelectorAll('details.pgrp').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)S.openProps.add(d.dataset.pg);else S.openProps.delete(d.dataset.pg);}));
     v.querySelectorAll('.propsearch').forEach(inp=>inp.addEventListener('input',()=>{const q=inp.value.trim().toLowerCase();const box=inp.closest('.props');
       box.querySelectorAll('details.pgrp').forEach(d=>{let any=false;d.querySelectorAll('.proprow').forEach(r=>{const hit=!q||r.dataset.q.includes(q);r.hidden=!hit;if(hit)any=true;});d.hidden=q&&!any;if(q&&any)d.open=true;});}));}
@@ -423,7 +457,20 @@ td.legs div{white-space:nowrap}
   function renderGame(g){const lg=logosFor(g);const st=started(g);const tag=g.ended?`<span class="badge final">Final</span>`:st?`<span class="badge live">In play</span>`:'';
     const row=(side,team,name,logo)=>{const sp=findM(g,m=>m.kind==='game'&&m.period==='game'&&m.betType==='sp'&&m.entity===side);const ml=findM(g,m=>m.kind==='game'&&m.period==='game'&&m.betType==='ml'&&m.entity===side);
       const ou=findM(g,m=>m.kind==='game'&&m.period==='game'&&m.betType==='ou'&&m.entity==='all'&&m.side===(side==='away'?'over':'under'));
-      return `<div class="teamcell">${logo?`<img src="${esc(logo)}" alt="">`:''}<span>${esc(team)}<br><small class="hint" style="font-family:var(--body);text-transform:none;font-weight:500">${esc(name||'')}</small></span></div>${obtn(g,sp)}${obtn(g,ou)}${obtn(g,ml,'ML')}`;};
+      const tc=side==='home'?colorsOf(g).h:colorsOf(g).a;
+      return `<div class="teamcell" ${tc?`style="--tc:${tc}"`:''}>${logo?`<img src="${esc(logo)}" alt="">`:''}<span>${esc(team)}<br><small class="hint" style="font-family:var(--body);text-transform:none;font-weight:500">${esc(name||'')}</small></span></div>${obtn(g,sp)}${obtn(g,ou)}${obtn(g,ml,'ML')}`;};
+    const cols=colorsOf(g);const tcOf=team=>{const c=team===g.home?cols.h:team===g.away?cols.a:'';return c?`style="--tc:${c}"`:'';};
+    const insights=(()=>{const w=(S.insights||{})[g.eventID];if(!w)return '';const openW=S.openW||(S.openW=new Set());
+      const stamp=w.updated?fmtStamp.format(new Date(w.updated)):'';
+      const inj=Array.isArray(w.injuries)&&w.injuries.length?`<div class="wblock"><span class="eyebrow">Injuries</span><ul class="inj">${w.injuries.map(x=>`<li><strong class="tcode" ${tcOf(x.team)}>${esc(x.team)}</strong> ${esc(x.player)} <span class="st ${esc(String(x.status||'').toLowerCase())}">${esc(x.status||'')}</span>${x.stats?`<span class="num hint">${esc(x.stats)}</span>`:''}${x.impact?`<span class="imp ${esc(String(x.impact).toLowerCase())}">${esc(x.impact)} impact</span>`:''}${x.note?`<span>${esc(x.note)}</span>`:''}</li>`).join('')}</ul></div>`:`<div class="wblock"><span class="eyebrow">Injuries</span><div class="hint">Nobody of note listed.</div></div>`;
+      const legState=leg=>{const m=mk(g,leg.oddID);if(!m)return {ok:false,note:'market no longer offered'};if(m.line===leg.line||(m.line==null&&leg.line==null))return {ok:true,m,alt:false,note:m.odds!==leg.odds?`now ${E.fmtAmerican(m.odds)}`:''};
+        const alt=(m.alts||[]).find(a=>a[0]===leg.line);if(alt)return {ok:true,m:{...m,line:alt[0],odds:alt[1]},alt:true,note:alt[1]!==leg.odds?`now ${E.fmtAmerican(alt[1])}`:''};return {ok:true,m,alt:false,note:`line moved to ${lineStr(m)||E.fmtAmerican(m.odds)}`};};
+      const canAdd=!st&&S.me&&!stateOf(S.me).fouledOut;
+      const single=w.single&&w.single.oddID?(()=>{const ls=legState(w.single);const m=mk(g,w.single.oddID);const team=w.single.team||(m&&m.team)||'';
+        return `<div class="wblock"><span class="eyebrow">Claude's top single</span><div class="cbet" ${tcOf(team)}><div class="bl"><span>${esc(w.single.label||'')}</span><span class="o">${esc(E.fmtAmerican(w.single.odds))}</span></div>${w.single.why?`<p class="why">${esc(w.single.why)}</p>`:''}<div class="addrow"><button type="button" class="add" data-cadd="${esc(g.eventID)}|single" ${canAdd&&ls.ok?'':'disabled'}>Add to slip</button>${ls.note?`<span class="moved">${esc(ls.note)}</span>`:''}</div></div></div>`;})():'';
+      const parlay=w.parlay&&Array.isArray(w.parlay.legs)&&w.parlay.legs.length?(()=>{const states=w.parlay.legs.map(legState);const ok=states.every(x=>x.ok);const notes=states.map(x=>x.note).filter(Boolean);const price=w.parlay.price!=null?w.parlay.price:E.american(w.parlay.legs.reduce((a,l)=>a*(E.decimal(l.odds)||1),1));
+        return `<div class="wblock"><span class="eyebrow">Claude's top parlay</span><div class="cbet" style="--tc:var(--accent)"><div class="bl"><span>${w.parlay.legs.length}-leg same-game parlay</span><span class="o">${esc(E.fmtAmerican(price))}</span></div><div class="legs">${w.parlay.legs.map(l=>`<div>${esc(l.label||'')} <span class="o num hint">${esc(E.fmtAmerican(l.odds))}</span></div>`).join('')}</div>${w.parlay.why?`<p class="why">${esc(w.parlay.why)}</p>`:''}<div class="addrow"><button type="button" class="add" data-cadd="${esc(g.eventID)}|parlay" ${canAdd&&ok?'':'disabled'}>Add parlay to slip</button>${notes.length?`<span class="moved">${esc(notes.join('; '))}</span>`:''}</div></div></div>`;})():'';
+      return `<details class="wdet" data-w="${esc(g.eventID)}" ${openW.has(g.eventID)?'open':''}><summary><span class="eyebrow">Game insights${stamp?', written '+esc(stamp):''}</span></summary><div class="wbody">${inj}${single}${parlay}</div></details>`;})();
     const mine=S.wagers.filter(w=>w.eventID===g.eventID&&canSee(w));
     const mineHtml=mine.length?`<div class="mypicks">${mine.map(w=>`<span class="w ${w.status==='open'?'':w.status}">${esc(w.player)}: ${w.legs.map(l=>esc(l.short)).join(' + ')} for ${fmtPts(w.stake)}${w.status!=='open'?` (${w.status}${w.net?` ${signed(w.net)}`:''})`:''}</span>`).join('')}</div>`:'';
     const props=(g.markets||[]).filter(m=>m.kind==='prop'||(m.kind==='game'&&m.period==='1h'));
@@ -444,7 +491,7 @@ td.legs div{white-space:nowrap}
       ${glist.map(([gk,grp])=>{const k=g.eventID+'|'+gk;return `<details class="pgrp" data-pg="${esc(k)}" ${S.openProps.has(k)?'open':''}><summary><span class="pgname">${esc(grp.label)}${grp.team?` <small>${esc(grp.team)}</small>`:''}</span><span class="pgcnt">${grp.rows.length} market${grp.rows.length===1?'':'s'}</span></summary><div class="pgbody">${grp.rows.map(rowHtml).join('')}</div></details>`;}).join('')}</div></details>`:'';
     const lad=S.ladder&&S.ladder.eventID===g.eventID?(()=>{const m=mk(g,S.ladder.oddID);return m&&m.kind==='game'&&m.period==='game'?renderLadder(g,m):'';})():'';
     if(S.ladder&&S.ladder.eventID===g.eventID){const m=mk(g,S.ladder.oddID);if(m&&(m.kind==='prop'||m.period==='1h')){S.openMore.add(g.eventID);S.openProps.add(g.eventID+'|'+(m.kind==='prop'?m.player:'__1h'));}}
-    return `<article class="game" id="g-${esc(g.eventID)}"><div class="meta"><span class="when">${esc(g.away)} at ${esc(g.home)}</span><span>${esc(fmtTime.format(new Date(g.start)))} ET</span>${tag}${(()=>{const m=gameMeta(g);return STAGE_BADGE[m.stage]?`<span class="stagebadge ${esc(m.stage)}">${esc(STAGE_BADGE[m.stage])}</span>`:'';})()}<span class="hint">${g.pulledAt?'lines as of '+esc(fmtStamp.format(new Date(g.pulledAt)))+' ET':''}</span></div>
+    return `<article class="game" id="g-${esc(g.eventID)}" style="${cols.a?`--ac:${cols.a};`:''}${cols.h?`--hc:${cols.h};`:''}"><div class="meta"><span class="when">${esc(g.away)} at ${esc(g.home)}</span><span>${esc(fmtTime.format(new Date(g.start)))} ET</span>${tag}${(()=>{const m=gameMeta(g);return STAGE_BADGE[m.stage]?`<span class="stagebadge ${esc(m.stage)}">${esc(STAGE_BADGE[m.stage])}</span>`:'';})()}<span class="hint">${g.pulledAt?'lines as of '+esc(fmtStamp.format(new Date(g.pulledAt)))+' ET':''}</span></div>${cols.a&&cols.h?'<div class="split"></div>':''}${insights}
       <div class="mainlines"><span></span><span class="lbl">Spread</span><span class="lbl">Total</span><span class="lbl">Moneyline</span>${row('away',g.away,g.awayName,lg.a)}${row('home',g.home,g.homeName,lg.h)}</div>${lad}${propHtml}${mineHtml}</article>`;}
 
   // ---------- slip ----------
@@ -523,6 +570,13 @@ td.legs div{white-space:nowrap}
     if(i>=0)S.slip[i]=leg;else S.slip.push(leg); // one leg per market: switching numbers replaces, never stacks
     S.ladder=null;render();toast(i>=0?'Updated on slip':mode==='single'?'Added to slip as a single':'Added to slip');}
   function toggleLeg(g,m,el){addLeg(g,m,false,el);}
+  // Put Claude's suggested single or parlay on the slip at today's numbers (an alt line is used when the suggested number is still on the ladder).
+  function addClaudeBet(eid,kind,el){const g=S.games[eid];const w=(S.insights||{})[eid];if(!g||!w)return;if(!S.me){$('who').classList.add('nudge');toast('Choose your name first');return;}if(started(g)){toast('This game has already started',true);return;}
+    const legs=kind==='single'?[w.single]:(w.parlay&&w.parlay.legs)||[];let added=0;
+    for(const leg of legs){const m=mk(g,leg.oddID);if(!m)continue;const alt=m.line!==leg.line&&(m.alts||[]).find(a=>a[0]===leg.line);const use=alt?{...m,line:alt[0],odds:alt[1]}:m;const key=legKey(g.eventID,m.oddID);
+      if(S.slip.some(l=>l.key===key&&l.line===use.line)){added++;continue;}
+      const before=S.slip.length+(S.slip.some(l=>l.key===key)?1:0);addLeg(g,use,!!alt,el);if(S.slip.some(l=>l.key===key))added++;}
+    if(added){for(const l of S.slip)if(l.eventID===eid&&legs.some(x=>x.oddID===l.oddID))l.mode=kind==='single'?'single':'parlay';render();toast(kind==='single'?'Claude\'s single is on your slip':`Claude's parlay is on your slip (${added} legs)`);}}
   async function placeBets(){if(!S.me||!S.db||S.busy)return;if(stateOf(S.me).fouledOut){toast('You have fouled out. No more bets this season.',true);return;}const errs=slipErrors();if(errs.length){toast(errs[0],true);return;}
     const bets=slipBets().filter(b=>b.stake);for(const b of bets){const g=S.games[b.legs[0].eventID];if(started(g)){toast(`${g.away} at ${g.home} has already started`,true);render();return;}}
     S.busy=true;renderSlip();let placed=0;

@@ -3,7 +3,7 @@ name: Pull odds and results
 on:
   schedule:
     # Times are UTC. ET is UTC-4 (EDT) until Nov 1, then UTC-5 (EST); both sets below cover both, at a small cost in extra pulls.
-    - cron: "40 12 * * *"      # morning pull, 8:40 AM EDT / 7:40 AM EST
+    - cron: "10 12 * * *"      # morning pull, 8:10 AM EDT / 7:10 AM EST, before the 8:40 write-ups task
     - cron: "5 17 * * *"       # midday, 1:05 PM EDT / 12:05 PM EST
     - cron: "5 21,22,23 * * *" # pre-tip windows for 7, 7:30, 8 PM tips
     - cron: "5 0,1,2 * * *"    # pre-tip windows for 9, 9:30, 10 PM tips
