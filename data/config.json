@@ -24,5 +24,6 @@
     }
   },
   "bonusGameIds": {},
-  "maxPicksPerWeek": 5
-}
+  "maxPicksPerWeek": 5,
+  "playoffsEnd": "2027-06-30"
+}\n

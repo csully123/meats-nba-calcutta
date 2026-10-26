@@ -102,7 +102,12 @@ def settle(w: dict, leg_results: list):
     if live == 0:
         return {"status": "push", "net": 0.0, "payout": float(w["stake"])}
     stake = float(w["stake"])
-    profit = float(math.floor(stake * (dec - 1) + 0.5))  # whole points: payouts round to the nearest point (half up)
+    boost = w.get("boost") or {}
+    try:
+        mult = float(boost.get("mult") or 1)  # a boost token multiplies the profit, never the stake
+    except (TypeError, ValueError):
+        mult = 1.0
+    profit = float(math.floor(stake * (dec - 1) * mult + 0.5))  # whole points: payouts round to the nearest point (half up)
     return {"status": "win", "net": profit, "payout": stake + profit}
 
 

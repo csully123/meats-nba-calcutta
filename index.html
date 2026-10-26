@@ -558,7 +558,8 @@ tr.wkrow td{background:var(--soft);font-family:var(--display);font-size:16px;tex
       fetch('data/writeups.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({})),
       fetch('data/config.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({})),
     ]);
-    S.games=g||{};S.writeups=w||{};S.cfg={...DEFAULT_CFG,...(c.scoring||{})};S.bonusDates=c.bonusDates||{};S.bonusIds=c.bonusGameIds||{};if(c.maxPicksPerWeek)MAX_WEEK=c.maxPicksPerWeek;
+    S.games={};for(const [id,x] of Object.entries(g||{}))if(!['playin','r1','r2','cf','finals'].includes(x.stage))S.games[id]=x; // the picks pool ends with the regular season; playoff games are for the sportsbook only
+    S.writeups=w||{};S.cfg={...DEFAULT_CFG,...(c.scoring||{})};S.bonusDates=c.bonusDates||{};S.bonusIds=c.bonusGameIds||{};if(c.maxPicksPerWeek)MAX_WEEK=c.maxPicksPerWeek;
     S.dataUpdated=Object.values(S.games).reduce((m,x)=>x.spreadUpdated&&x.spreadUpdated>m?x.spreadUpdated:m,'')||null;
   }
   async function loadLive(){

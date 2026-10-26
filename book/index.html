@@ -210,6 +210,27 @@ td.legs div{white-space:nowrap}
 .empty{background:var(--surface);border:1.5px dashed var(--line);padding:28px 18px;text-align:center;color:var(--muted)}
 .empty strong{display:block;color:var(--ink);font-family:var(--display);font-size:22px;text-transform:uppercase;margin-bottom:6px}
 .toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:12px 16px;border-radius:8px;font-weight:600;font-size:15px;line-height:1.35;z-index:60;box-shadow:0 6px 24px rgba(0,0,0,.45);max-width:calc(100% - 32px);text-align:center;animation:toastin .18s ease-out}
+.boostrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:2px}
+.boostrow .sl{font-size:12px;color:var(--muted);min-width:80px}
+.seg.boosts{flex-wrap:wrap;border-radius:10px}
+.seg.boosts button{padding:5px 10px;text-transform:none;letter-spacing:0;font-size:12px}
+.seg.boosts button.mega[aria-pressed="true"]{background:linear-gradient(135deg,#ffd166,#ff7b54);color:#1a1200}
+.seg.boosts button.mega{color:#ffd166}
+.boosted{color:var(--accent);font-family:var(--mono)}
+.boostbadge{display:inline-block;margin-top:3px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:2px 7px;border-radius:999px;background:color-mix(in srgb,var(--accent) 18%,transparent);color:var(--accent)}
+.boostbadge.mega{background:linear-gradient(135deg,#ffd166,#ff7b54);color:#1a1200}
+.stagebadge{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:2px 7px;border-radius:4px;background:color-mix(in srgb,var(--accent) 18%,transparent);color:var(--accent)}
+.stagebadge.finals,.stagebadge.cupfinal{background:linear-gradient(135deg,#ffd166,#ff7b54);color:#1a1200}
+/* Mega Bonus celebration */
+.mega-overlay{position:fixed;inset:0;z-index:80;background:rgba(5,8,14,.86);display:grid;place-items:center;text-align:center;padding:24px;cursor:pointer}
+.mega-overlay canvas{position:absolute;inset:0;width:100%;height:100%}
+.mega-card{position:relative;z-index:1;animation:megain .7s cubic-bezier(.2,1.4,.4,1) both}
+.mega-card .eyebrow{color:#ffd166;letter-spacing:.3em}
+.mega-card h1{font-family:var(--display);font-size:clamp(48px,14vw,120px);line-height:.95;text-transform:uppercase;font-weight:800;background:linear-gradient(180deg,#fff2b3,#ffd166 45%,#ff7b54);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 24px rgba(255,160,60,.45));margin:6px 0 10px}
+.mega-card .amt{font-family:var(--mono);font-size:clamp(28px,8vw,56px);font-weight:700;color:#fff}
+.mega-card .sub{color:var(--muted);margin-top:10px;font-size:15px}
+.mega-card .dismiss{margin-top:22px;border:1.5px solid #ffd166;color:#ffd166;background:none;border-radius:999px;padding:10px 20px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+@keyframes megain{from{opacity:0;transform:scale(.6) translateY(30px)}to{opacity:1;transform:none}}
 .seg.shake,.ob.shake,[data-pickalt].shake{animation:shake .4s cubic-bezier(.36,.07,.19,.97) both;border-color:var(--loss)}
 @keyframes shake{10%,90%{transform:translateX(-1px)}20%,80%{transform:translateX(2px)}30%,50%,70%{transform:translateX(-4px)}40%,60%{transform:translateX(4px)}}
 @keyframes toastin{from{opacity:0;transform:translate(-50%,8px)}to{opacity:1;transform:translate(-50%,0)}}
@@ -250,7 +271,7 @@ td.legs div{white-space:nowrap}
     <details class="rules" id="rules">
       <summary><h2>The rules</h2><span class="hint">tap to open</span></summary>
       <dl>
-        <dt>Stack</dt><dd>Everyone starts with 200 points. Points are fake; they simulate money. Your total at the end of the regular season, after any bust penalty, is your budget at the playoff auction.</dd>
+        <dt>Stack</dt><dd>Everyone starts with 200 points. Points are fake; they simulate money. The book runs from opening night through the NBA Finals, and the highest stack after the Finals, after any bust penalty, wins.</dd>
         <dt>Lines</dt><dd>Real FanDuel prices (another book fills in if FanDuel is missing a market). The number on this page when you place a bet is the official number, even if FanDuel moves after. Prices refresh each morning, around 1 PM, and about an hour before each tip-off window.</dd>
         <dt>Bets</dt><dd>Spreads, totals, moneylines, first-half lines and player props. Add picks to your slip, then mark each one Parlay or Single. Parlays are same-game only, one per game; singles can be from any games, and the slip places them all at once.</dd>
         <dt>No conflicts in a parlay</dt><dd>Picks on one game that cannot both win (SAS -15.5 with DAL ML, over 228.5 with under 226.5) or that overlap, where one already implies the other (SAS -15.5 with SAS ML, two overs on the same player), cannot be legs of the same parlay. They are fine as separate singles. Both sides of the exact same market are never allowed together.</dd>
@@ -258,8 +279,11 @@ td.legs div{white-space:nowrap}
         <dt>Parlay pricing</dt><dd>Legs multiply at their listed prices. FanDuel discounts same-game parlays for correlated legs; this book does not, so a same-game parlay pays a little more here than there. That is the house rule, same for everyone.</dd>
         <dt>Max bet</dt><dd>Stakes are whole points, and payouts round to the nearest whole point. No single bet can be more than 25% of your stack at the moment you place it, rounded down. Once your stack, counting open bets, is 20 points or less, the cap lifts and you may go all in.</dd>
         <dt>Minimum</dt><dd>Wager at least 20 points every week, Monday through Sunday, or your whole stack if you have less than 20.</dd>
-        <dt>Bust</dt><dd>Hit zero with no bets open and you have busted: you reload to 100 and keep playing. It costs you at the end of the regular season: one bust forfeits 10% of your final total, two busts 25%, three 45%, four 70%, five 90%. Each bust forfeits at least 20 points regardless, so busting on purpose for the reload never pays.</dd>
-        <dt>Foul out</dt><dd>Six busts and you have fouled out, like a sixth foul. Your season is over: no more bets, and you are automatically last in the auction order behind everyone still standing. If two or more people foul out, the one with the better win rate on settled bets ranks higher among them (wins as the tiebreaker).</dd>
+        <dt>Bust</dt><dd>Hit zero with no bets open and you have busted: you reload to 100 and keep playing. It costs you at the end: one bust forfeits 10% of your final total, two busts 25%, three 45%, four 70%, five 90%. Each bust forfeits at least 20 points regardless, so busting on purpose for the reload never pays.</dd>
+        <dt>Foul out</dt><dd>Six busts and you have fouled out, like a sixth foul. No more bets, and you are out of the competition. It does not matter what your stack was or how many you had won; you cannot finish anywhere. If everyone fouls out, nobody wins.</dd>
+        <dt>Boost tokens</dt><dd>A boost multiplies the profit on one winning bet. Everyone gets the same tokens, each good for one bet inside its window, use it or lose it: a 1.5x token every week (Monday through Sunday, any game that week); a 1.5x token for the NBA Cup championship game; in the playoffs a 1.5x token for each first-round series, a 2x token for each second-round series, a 2.5x token for each conference finals series and a 3x token for the Finals, each usable only on games in that series. Nothing for the play-in. Pick the boost on the slip when you place the bet; it locks in with the bet. Win and the profit multiplies; lose and the token is gone with the stake. A bet that pushes or voids gives the token back. One token per bet, never two. The max-bet rule still applies, and there is no cap on what a boosted bet can win.</dd>
+        <dt>Mega Bonus</dt><dd>One 5x token for the whole season, playoffs included, on any bet you like. When it hits, the book lets you know.</dd>
+        <dt>Regular-season prize</dt><dd>Highest stack when the regular season ends gets 50 points and an extra 3x token for the Finals. Second place gets an extra 2x token for the second round.</dd>
         <dt>Settling</dt><dd>Bets grade overnight from the box score. A leg exactly on the number pushes and drops out of a parlay. A player who does not play voids that leg. A lost leg loses the slip.</dd>
         <dt>Lock</dt><dd>Bets close at tip-off. Until then you can cancel a bet and the stake goes back to your stack.</dd>
         <dt>Who</dt><dd>Tap your name under "Betting as" first. Honor system: bet as yourself only. Other people's open bets stay hidden until tip-off.</dd>
@@ -294,14 +318,19 @@ td.legs div{white-space:nowrap}
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
 <script src="../firebase-config.js"></script>
-<script src="engine.js?v=20261025a"></script>
+<script src="engine.js?v=20261026a"></script>
 <script>
 (function(){
   const E=window.BookEngine;
   const FIREBASE_CONFIG=window.FIREBASE_CONFIG||null;
   const PLAYERS=["Kev","Beekie","Mio","Sulliver"];
   const FLAGS={Kev:'flag-pl',Beekie:'flag-il',Mio:'flag-rs',Sulliver:'flag-it'};
-  const CFG={start:200,reload:100,maxBetFraction:0.25,minWeekly:20};
+  const CFG={start:200,reload:100,maxBetFraction:0.25,minWeekly:20,
+    tokens:{week:1.5,cupFinal:1.5,r1:1.5,r2:2,cf:2.5,finals:3,mega:5},
+    // Regular-season prizes, filled in by the commissioner when the regular season ends (names exactly as above).
+    prizes:{first:null,firstMult:3,second:null,secondMult:2},
+    // Point adjustments outside of bets: the regular-season winner's 50, applied at the moment given.
+    adjustments:[]};
   const POOL_EMAIL='pool@meats-calcutta-picks.firebaseapp.com';
   const ET='America/New_York';
   const fmtDay=new Intl.DateTimeFormat('en-CA',{timeZone:ET,year:'numeric',month:'2-digit',day:'2-digit'});
@@ -337,9 +366,12 @@ td.legs div{white-space:nowrap}
     S.games=games;
     // logos from the picks board's games file, matched by date + teams
     const pg=await fetch('../data/games.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));
-    S.logos={};for(const x of Object.values(pg)){S.logos[x.date+'|'+x.away+'|'+x.home]={a:x.awayLogo,h:x.homeLogo};}
+    S.logos={};for(const x of Object.values(pg)){S.logos[x.date+'|'+x.away+'|'+x.home]={a:x.awayLogo,h:x.homeLogo,stage:x.stage||'regular',series:x.series||null};}
   }
   function logosFor(g){return S.logos[g.date+'|'+g.away+'|'+g.home]||{};}
+  // What a game is for token purposes: its stage (regular, cup, cupfinal, playin, r1, r2, cf, finals) and series.
+  function gameMeta(g){const m=logosFor(g);return {start:g.start,stage:m.stage||'regular',series:m.series||((m.stage==='r1'||m.stage==='r2'||m.stage==='cf'||m.stage==='finals')?E.seriesKey(g.home,g.away):null)};}
+  const STAGE_BADGE={cup:'NBA Cup',cupfinal:'NBA Cup final',playin:'Play-in',r1:'First round',r2:'Second round',cf:'Conference finals',finals:'NBA Finals'};
 
   // ---------- standings ----------
   function allStates(){return PLAYERS.map(p=>{const b=E.bankroll(p,S.wagers.map(w=>({...w,settled:w.status&&w.status!=='open'?{status:w.status,net:w.net||0}:null})),CFG);
@@ -348,13 +380,20 @@ td.legs div{white-space:nowrap}
     return {p,...b,wkWagered,final:E.finalTotal(b.stack,b.busts),fouledOut:E.fouledOut(b.busts),wins,losses,winPct};});}
   function stateOf(p){return allStates().find(s=>s.p===p);}
   function renderBoard(){const tot=x=>E.finalTotal(x.stack+x.pending,x.busts);
-    const st=allStates().sort((a,b)=>{if(a.fouledOut!==b.fouledOut)return a.fouledOut?1:-1;if(a.fouledOut)return b.winPct-a.winPct||b.wins-a.wins||tot(b)-tot(a);return tot(b)-tot(a)||b.stack-a.stack;});
-    let place=0,prev=null;const ranked=st.map(x=>{const key=x.fouledOut?'out|'+x.winPct+'|'+x.wins:'in|'+tot(x);if(key!==prev){place++;prev=key;}return {...x,place};});
+    const st=allStates().sort((a,b)=>{if(a.fouledOut!==b.fouledOut)return a.fouledOut?1:-1;if(a.fouledOut)return 0;return tot(b)-tot(a)||b.stack-a.stack;});
+    let place=0,prev=null;const ranked=st.map(x=>{if(x.fouledOut)return {...x,place:null};const key='in|'+tot(x);if(key!==prev){place++;prev=key;}return {...x,place};});
+    const tokenLine=p=>{const spent=E.spentTokenIds(p,S.wagers);const now=new Date().toISOString();const parts=[];
+      parts.push(spent.has('week:'+E.weekKey(now))?'weekly 1.5x used':'weekly 1.5x ready');
+      parts.push(spent.has('mega')?'Mega Bonus used':'Mega Bonus ready');
+      const stages={};for(const g of gameList()){const m=gameMeta(g);if(m.stage==='r1'||m.stage==='r2'||m.stage==='cf')(stages[m.stage]=stages[m.stage]||new Set()).add(m.series);}
+      for(const [stg,set] of Object.entries(stages)){const left=[...set].filter(sk=>!spent.has(stg+':'+sk)).length;parts.push(`${left} of ${set.size} ${E.ROUND_NAMES[stg]} boosts left`);}
+      return parts.join(', ');};
     const crown=p=>p<=3?`<svg class="crown r${p}" viewBox="0 0 24 16" width="18" height="12" aria-hidden="true"><path d="M2 14h20l-2-9-5 4-3-7-3 7-5-4z" fill="currentColor"/></svg>`:'';
-    $('board').innerHTML=ranked.map(s=>`<button type="button" class="tile ${FLAGS[s.p]||''} ${s.fouledOut?'out':''}" data-statsfor="${esc(s.p)}"><div class="name"><span>${esc(s.p)}${s.fouledOut?'<span class="foul">Fouled out</span>':crown(s.place)}</span><span class="rank num">${s.place}</span></div>
+    $('board').innerHTML=ranked.map(s=>`<button type="button" class="tile ${FLAGS[s.p]||''} ${s.fouledOut?'out':''}" data-statsfor="${esc(s.p)}"><div class="name"><span>${esc(s.p)}${s.fouledOut?'<span class="foul">Out</span>':crown(s.place)}</span><span class="rank num">${s.fouledOut?'':s.place}</span></div>
       <div class="pts num">${fmtPts(s.stack)}${s.pending?`<small>+${fmtPts(s.pending)} live</small>`:''}</div>
       <div class="line num ${s.wkWagered<Math.min(CFG.minWeekly,s.stack+s.pending+s.wkWagered)?'short':''}">${fmtPts(s.wkWagered)} of ${Math.min(CFG.minWeekly,Math.floor(s.stack+s.pending+s.wkWagered))} wagered this week</div>
-      <div class="line num">${s.fouledOut?`${s.busts} busts. Fouled out, no more bets. Last at the auction, ranked among the fouled out by win rate (${Math.round(s.winPct*100)}%, ${s.wins}-${s.losses}).`:s.busts?`${s.busts} of ${E.FOUL_OUT} busts, ${Math.round(E.penaltyPct(s.busts)*100)}% off at the end (counts as ${fmtPts(s.final)})`:'No busts'}</div></button>`).join('');}
+      <div class="line num">${s.fouledOut?`${s.busts} busts. Fouled out: no more bets, out of the running.`:s.busts?`${s.busts} of ${E.FOUL_OUT} busts, ${Math.round(E.penaltyPct(s.busts)*100)}% off at the end (counts as ${fmtPts(s.final)})`:'No busts'}</div>
+      <div class="line num">${esc(tokenLine(s.p))}</div></button>`).join('');}
 
   // ---------- book ----------
   function renderBook(){const v=$('view-book');const today=nowET();
@@ -405,7 +444,7 @@ td.legs div{white-space:nowrap}
       ${glist.map(([gk,grp])=>{const k=g.eventID+'|'+gk;return `<details class="pgrp" data-pg="${esc(k)}" ${S.openProps.has(k)?'open':''}><summary><span class="pgname">${esc(grp.label)}${grp.team?` <small>${esc(grp.team)}</small>`:''}</span><span class="pgcnt">${grp.rows.length} market${grp.rows.length===1?'':'s'}</span></summary><div class="pgbody">${grp.rows.map(rowHtml).join('')}</div></details>`;}).join('')}</div></details>`:'';
     const lad=S.ladder&&S.ladder.eventID===g.eventID?(()=>{const m=mk(g,S.ladder.oddID);return m&&m.kind==='game'&&m.period==='game'?renderLadder(g,m):'';})():'';
     if(S.ladder&&S.ladder.eventID===g.eventID){const m=mk(g,S.ladder.oddID);if(m&&(m.kind==='prop'||m.period==='1h')){S.openMore.add(g.eventID);S.openProps.add(g.eventID+'|'+(m.kind==='prop'?m.player:'__1h'));}}
-    return `<article class="game" id="g-${esc(g.eventID)}"><div class="meta"><span class="when">${esc(g.away)} at ${esc(g.home)}</span><span>${esc(fmtTime.format(new Date(g.start)))} ET</span>${tag}<span class="hint">${g.pulledAt?'lines as of '+esc(fmtStamp.format(new Date(g.pulledAt)))+' ET':''}</span></div>
+    return `<article class="game" id="g-${esc(g.eventID)}"><div class="meta"><span class="when">${esc(g.away)} at ${esc(g.home)}</span><span>${esc(fmtTime.format(new Date(g.start)))} ET</span>${tag}${(()=>{const m=gameMeta(g);return STAGE_BADGE[m.stage]?`<span class="stagebadge ${esc(m.stage)}">${esc(STAGE_BADGE[m.stage])}</span>`:'';})()}<span class="hint">${g.pulledAt?'lines as of '+esc(fmtStamp.format(new Date(g.pulledAt)))+' ET':''}</span></div>
       <div class="mainlines"><span></span><span class="lbl">Spread</span><span class="lbl">Total</span><span class="lbl">Moneyline</span>${row('away',g.away,g.awayName,lg.a)}${row('home',g.home,g.homeName,lg.h)}</div>${lad}${propHtml}${mineHtml}</article>`;}
 
   // ---------- slip ----------
@@ -419,6 +458,7 @@ td.legs div{white-space:nowrap}
     const {singles,parlays}=slipGroups();const bets=singles.map(l=>({key:l.key,legs:[l],stake:stakeOf(l.key)}));
     for(const p of parlays){if(p.legs.length>=2)bets.push({key:p.key,legs:p.legs,stake:stakeOf(p.key)});else bets.push({key:p.legs[0].key,legs:p.legs,stake:stakeOf(p.legs[0].key)});}
     return bets;}
+  function boostFor(key,legs){const id=(S.boosts||{})[key];if(!id||!S.me)return null;const g=S.games[legs[0].eventID];if(!g)return null;return E.availableTokens(gameMeta(g),CFG,S.me,S.wagers).find(t=>t.id===id)||null;}
   function slipErrors(){const st=S.me?stateOf(S.me):null;if(!st)return ['Choose your name first.'];const bets=slipBets();const errs=[];let total=0;
     let stack=st.stack,pending=st.pending||0; // each bet on the slip is checked as if the ones before it were already placed
     for(const b of bets){const e=E.validate({stake:b.stake||1,legs:b.legs},{stack,pending},CFG);if(e.length)errs.push((b.legs.length>1?gameName(b.legs[0].eventID)+' parlay: ':b.legs[0].short+': ')+e[0]);
@@ -435,20 +475,26 @@ td.legs div{white-space:nowrap}
     const legRow=l=>`<div class="leg"><div class="lt"><span>${esc(l.short)}</span><span class="o num">${esc(E.fmtAmerican(l.odds))}</span><span class="hint">${esc(gameName(l.eventID))}</span></div>
       <div class="seg" role="group" aria-label="Bet type"><button type="button" data-mode="${esc(l.key)}|parlay" aria-pressed="${l.mode!=='single'}">Parlay</button><button type="button" data-mode="${esc(l.key)}|single" aria-pressed="${l.mode==='single'}">Single</button></div>
       <button type="button" class="rm" data-rm="${esc(l.key)}" aria-label="Remove">&times;</button></div>`;
-    const stakeRow=(key,legs,label)=>{const stake=stakeOf(key);const dec=E.parlayDecimal(legs);return `<div class="stakerow"><span class="sl">${esc(label)}</span><input type="number" min="1" step="1" inputmode="numeric" pattern="[0-9]*" placeholder="Stake" data-stake="${esc(key)}" value="${esc((S.stakes||{})[key]||'')}"><span class="quick"><button type="button" data-q="${esc(key)}|10">10</button><button type="button" data-q="${esc(key)}|20">20</button><button type="button" data-q="${esc(key)}|max">Max</button></span><span class="pay num">${stake?`to win ${fmtPts(stake*dec-stake)}`:''}</span></div>`;};
+    const stakeRow=(key,legs,label)=>{const stake=stakeOf(key);const tok=boostFor(key,legs);const mult=tok?tok.mult:1;const win=stake?E.boostedProfit(stake,legs,mult):0;
+      return `<div class="stakerow"><span class="sl">${esc(label)}</span><input type="number" min="1" step="1" inputmode="numeric" pattern="[0-9]*" placeholder="Stake" data-stake="${esc(key)}" value="${esc((S.stakes||{})[key]||'')}"><span class="quick"><button type="button" data-q="${esc(key)}|10">10</button><button type="button" data-q="${esc(key)}|20">20</button><button type="button" data-q="${esc(key)}|max">Max</button></span><span class="pay num">${stake?`to win ${fmtPts(win)}${tok?` <b class="boosted">${esc(tok.mult)}x</b>`:''}`:''}</span></div>${boostRow(key,legs)}`;};
+    // Boost picker: the tokens this player may attach to a bet on this game, minus ones already spent or chosen for another bet on the slip.
+    const boostRow=(key,legs)=>{if(!S.me)return '';const g=S.games[legs[0].eventID];if(!g)return '';const avail=E.availableTokens(gameMeta(g),CFG,S.me,S.wagers).filter(t=>!Object.entries(S.boosts||{}).some(([k,id])=>k!==key&&id===t.id));
+      const cur=(S.boosts||{})[key]||'';if(!avail.length&&!cur)return '';
+      return `<div class="boostrow"><span class="sl">Boost</span><div class="seg boosts" role="group" aria-label="Boost token"><button type="button" data-boost="${esc(key)}|" aria-pressed="${!cur}">None</button>${avail.map(t=>`<button type="button" data-boost="${esc(key)}|${esc(t.id)}" aria-pressed="${cur===t.id}" class="${t.mega?'mega':''}">${esc(t.label)}</button>`).join('')}</div></div>`;};
     el.innerHTML=`<h3><span>Bet slip</span><span><button type="button" id="clearslip" class="signout" style="font-size:12px">Clear</button><button type="button" id="hideslip" class="signout" style="font-size:12px;margin-left:10px">Hide, keep picking</button></span></h3>
       ${parlays.map(p=>{const n=p.legs.length;const price=E.fmtAmerican(E.american(E.parlayDecimal(p.legs)));return `<div class="grp${n>=2?' parlay':''}"><div class="gh"><span>${esc(gameName(p.eventID))} parlay${n>=2?`, ${n} legs`:''}</span>${n>=2?`<span class="podds">${esc(price)}</span>`:''}</div>${n>=2?`<div class="pnote">Combined odds <b>${esc(price)}</b>, pays <b>${(Math.round(E.parlayDecimal(p.legs)*100)/100).toFixed(2)}x</b> your stake. ${n===2?"Both":"All "+n} legs must hit.</div>`:`<div class="pnote">Needs a second pick from ${esc(gameName(p.eventID))} to become a parlay. Bets as a single for now.</div>`}<div class="legs">${p.legs.map(legRow).join('')}</div>${n>=2?stakeRow(p.key,p.legs,'Parlay stake'):stakeRow(p.legs[0].key,p.legs,'Stake')}</div>`;}).join('')}
       ${singles.length?`<div class="grp"><div class="gh"><span>Singles</span></div>${singles.map(l=>`<div class="legs">${legRow(l)}</div>${stakeRow(l.key,[l],'Stake')}`).join('')}</div>`:''}
       ${(()=>{const shown=errs.find(e=>!/^Enter a stake/.test(e))||(totalStake?errs[0]:null);return shown?`<div class="err">${esc(shown)}</div>`:'';})()}
       <div class="pt">${st?`Stack ${fmtPts(st.stack)}. ${allIn?`You are at ${E.ALL_IN_AT} or under, so you may bet it all.`:`Max per bet ${fmtPts(maxBet)}.`} Whole points only.`:''} Tap Parlay or Single on each pick to decide how it bets. Parlays are same-game only, so each game builds its own. The numbers on this slip are the official numbers.</div>
       <button type="button" class="place" id="place" ${errs.length||S.busy?'disabled':''}>${S.busy?'Placing':bets.filter(b=>b.stake).length>1?`Place ${bets.filter(b=>b.stake).length} bets (${fmtPts(totalStake)})`:'Place bet'}</button>`;
-    el.querySelector('#clearslip').addEventListener('click',()=>{S.slip=[];S.stakes={};render();});
+    el.querySelector('#clearslip').addEventListener('click',()=>{S.slip=[];S.stakes={};S.boosts={};render();});
     el.querySelector('#hideslip').addEventListener('click',()=>{S.slipOpen=false;renderSlip();});
-    el.querySelectorAll('[data-rm]').forEach(b=>b.addEventListener('click',()=>{S.slip=S.slip.filter(l=>l.key!==b.dataset.rm);render();}));
+    el.querySelectorAll('[data-rm]').forEach(b=>b.addEventListener('click',()=>{S.slip=S.slip.filter(l=>l.key!==b.dataset.rm);if(S.boosts)delete S.boosts[b.dataset.rm];render();}));
     el.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{const parts=b.dataset.mode.split('|');const mode=parts.pop();const id=parts.join('|');const l=S.slip.find(x=>x.key===id);if(!l)return;
       if(mode==='parlay'&&E.conflict){let why=null;const other=S.slip.find(x=>x.eventID===l.eventID&&x.key!==l.key&&x.mode!=='single'&&(why=E.conflict(x,l)));
         if(other){shakeEl(b.closest('.seg'));toast(why==='impossible'?`${l.short} and ${other.short} cannot both win, so they cannot be in the same parlay.`:`${l.short} and ${other.short} overlap (one already covers the other), so they cannot be in the same parlay.`,true);return;}}
       l.mode=mode;renderSlip();}));
+    el.querySelectorAll('[data-boost]').forEach(b=>b.addEventListener('click',()=>{const parts=b.dataset.boost.split('|');const key=parts.shift();const id=parts.join('|');S.boosts=S.boosts||{};if(id)S.boosts[key]=id;else delete S.boosts[key];renderSlip();}));
     el.querySelectorAll('[data-q]').forEach(b=>b.addEventListener('click',()=>{const qp=b.dataset.q.split('|');const q=qp.pop();const key=qp.join('|');S.stakes=S.stakes||{};S.stakes[key]=q==='max'?String(maxBet):q;renderSlip();}));
     el.querySelectorAll('[data-stake]').forEach(inp=>inp.addEventListener('input',()=>{S.stakes=S.stakes||{};S.stakes[inp.dataset.stake]=inp.value;const key=inp.dataset.stake;const pos=inp.selectionStart;renderSlip();const n=el.querySelector(`[data-stake="${CSS.escape(key)}"]`);if(n){n.focus();try{n.setSelectionRange(pos,pos);}catch(e){}}}));
     el.querySelector('#place').addEventListener('click',placeBets);}
@@ -481,12 +527,15 @@ td.legs div{white-space:nowrap}
     const bets=slipBets().filter(b=>b.stake);for(const b of bets){const g=S.games[b.legs[0].eventID];if(started(g)){toast(`${g.away} at ${g.home} has already started`,true);render();return;}}
     S.busy=true;renderSlip();let placed=0;
     try{for(const b of bets){const g=S.games[b.legs[0].eventID];
-        const doc={player:S.me,stake:b.stake,placedAt:new Date().toISOString(),eventID:g.eventID,game:`${g.away} at ${g.home}`,gameDate:g.date,gameStart:g.start,
+        const tok=boostFor(b.key,b.legs);if((S.boosts||{})[b.key]&&!tok){toast('That boost is no longer available for this game',true);S.busy=false;render();return;}
+        const meta=gameMeta(g);
+        const doc={player:S.me,stake:b.stake,placedAt:new Date().toISOString(),eventID:g.eventID,game:`${g.away} at ${g.home}`,gameDate:g.date,gameStart:g.start,stage:meta.stage,series:meta.series,
+          boost:tok?{id:tok.id,mult:tok.mult,label:tok.label}:null,
           legs:b.legs.map(l=>({oddID:l.oddID,opposing:l.opposing,odds:l.odds,line:l.line??null,side:l.side,entity:l.entity||null,betType:l.betType,stat:l.stat,period:l.period,player:l.player,team:l.team,name:l.name,book:l.book,alt:!!l.alt,short:l.short})),
           status:'open',net:null,payout:null,settledAt:null};
         await S.db.collection('wagers').add(doc);placed++;
         // drop placed legs from the slip as we go so a failure mid-way leaves the rest intact
-        S.slip=S.slip.filter(l=>!b.legs.some(x=>x.key===l.key));if(S.stakes)delete S.stakes[b.key];}
+        S.slip=S.slip.filter(l=>!b.legs.some(x=>x.key===l.key));if(S.stakes)delete S.stakes[b.key];if(S.boosts)delete S.boosts[b.key];}
       toast(placed===1?'Bet placed':`${placed} bets placed`);}
     catch(e){console.error(e);toast(placed?`Placed ${placed}, then one failed. The rest are still on your slip.`:'Could not place that bet, try again',true);}
     finally{S.busy=false;render();}}
@@ -500,9 +549,9 @@ td.legs div{white-space:nowrap}
     let out='',lastWk=null;
     for(const w of rows){const wk=E.weekKey(w.placedAt);if(wk!==lastWk){const wkRows=rows.filter(x=>E.weekKey(x.placedAt)===wk);const tally=wkRows.reduce((a,x)=>a+(x.status!=='open'?(x.net||0):0),0);out+=`<tr><td colspan="7" style="background:var(--soft);font-family:var(--display);font-size:16px;text-transform:uppercase;letter-spacing:.05em;font-weight:600">Week of ${esc(fmtShort.format(new Date(wk+'T12:00:00Z')))}<span class="num" style="float:right">${signed(tally)}</span></td></tr>`;lastWk=wk;}
       const g=S.games[w.eventID];const canCancel=w.player===S.me&&w.status==='open'&&g&&!started(g);
-      const dec=E.parlayDecimal(w.legs);
-      out+=`<tr><td class="num">${esc(fmtShort.format(new Date(w.placedAt)))}</td><td>${esc(w.player)}</td><td>${esc(w.game||'')}</td><td class="legs">${w.legs.map((l,i)=>`<div>${esc(l.short)} <span class="hint num">${esc(E.fmtAmerican(l.odds))}</span>${w.legResults&&w.legResults[i]?` <span class="res ${esc(w.legResults[i])}" style="font-size:9px;padding:1px 5px">${esc(w.legResults[i])}</span>`:''}</div>`).join('')}${w.legs.length>1?`<div class="hint">Parlay ${esc(E.fmtAmerican(E.american(dec)))}</div>`:''}</td>
-        <td class="num">${fmtPts(w.stake)}</td><td><span class="res ${esc(w.status)}">${esc(w.status)}</span>${canCancel?` <button class="signout" data-cancel="${esc(w.id)}">cancel</button>`:''}</td><td class="ptcell num ${w.status==='open'?'zero':(w.net>0?'pos':w.net<0?'neg':'zero')}">${w.status==='open'?`to win ${fmtPts(w.stake*dec-w.stake)}`:signed(w.net||0)}</td></tr>`;}
+      const dec=E.parlayDecimal(w.legs);const bm=(w.boost&&w.boost.mult)||1;
+      out+=`<tr><td class="num">${esc(fmtShort.format(new Date(w.placedAt)))}</td><td>${esc(w.player)}</td><td>${esc(w.game||'')}${w.stage&&STAGE_BADGE[w.stage]?`<div class="hint">${esc(STAGE_BADGE[w.stage])}</div>`:''}</td><td class="legs">${w.legs.map((l,i)=>`<div>${esc(l.short)} <span class="hint num">${esc(E.fmtAmerican(l.odds))}</span>${w.legResults&&w.legResults[i]?` <span class="res ${esc(w.legResults[i])}" style="font-size:9px;padding:1px 5px">${esc(w.legResults[i])}</span>`:''}</div>`).join('')}${w.legs.length>1?`<div class="hint">Parlay ${esc(E.fmtAmerican(E.american(dec)))}</div>`:''}${w.boost?`<div><span class="boostbadge ${w.boost.id==='mega'?'mega':''}">${esc(w.boost.label||w.boost.mult+'x boost')}</span></div>`:''}</td>
+        <td class="num">${fmtPts(w.stake)}</td><td><span class="res ${esc(w.status)}">${esc(w.status)}</span>${canCancel?` <button class="signout" data-cancel="${esc(w.id)}">cancel</button>`:''}</td><td class="ptcell num ${w.status==='open'?'zero':(w.net>0?'pos':w.net<0?'neg':'zero')}">${w.status==='open'?`to win ${fmtPts(E.boostedProfit(w.stake,w.legs,bm))}`:signed(w.net||0)}</td></tr>`;}
     $('betbody').innerHTML=`<div class="tablewrap"><table><thead><tr><th>Placed</th><th>Who</th><th>Game</th><th>Bet</th><th>Stake</th><th>Result</th><th style="text-align:right">Net</th></tr></thead><tbody>${out}</tbody></table></div>`;
     $('betbody').querySelectorAll('[data-cancel]').forEach(b=>b.addEventListener('click',()=>cancelBet(b.dataset.cancel)));}
 
@@ -535,8 +584,32 @@ td.legs div{white-space:nowrap}
   function renderTabs(){document.querySelectorAll('#tabs [role=tab]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===S.tab)));for(const t of ['book','bets','stats'])$('view-'+t).hidden=t!==S.tab;}
   function renderStatus(){const el=$('status');if(!S.ready)return;const so=$('signout');
     if(!S.db){el.className='status warn';el.textContent='Bets are not connected, the book is read-only.';return;}
-    el.className='status';const fo=S.me&&stateOf(S.me).fouledOut;el.textContent=(S.pulled?`Lines as of ${fmtStamp.format(new Date(S.pulled))} ET. `:'')+(S.me?(fo?`${S.me} has fouled out. No more bets this season; you can still watch the board.`:`Betting as ${S.me}.`):'Choose your name above to bet.');if(fo)el.className='status warn';so.hidden=!S.signedIn;el.appendChild(so);}
-  function render(){renderWho();renderTabs();renderBoard();renderBook();renderBets();renderStatsTab();renderStatus();renderSlip();}
+    el.className='status';const fo=S.me&&stateOf(S.me).fouledOut;el.textContent=(S.pulled?`Lines as of ${fmtStamp.format(new Date(S.pulled))} ET. `:'')+(S.me?(fo?`${S.me} has fouled out and is out of the running. No more bets this season; you can still watch the board.`:`Betting as ${S.me}.`):'Choose your name above to bet.');if(fo)el.className='status warn';so.hidden=!S.signedIn;el.appendChild(so);}
+  function render(){renderWho();renderTabs();renderBoard();renderBook();renderBets();renderStatsTab();renderStatus();renderSlip();checkMega();}
+  // ---------- Mega Bonus celebration: the first time you open the book after your Mega Bonus bet wins ----------
+  function checkMega(){if(!S.me||document.querySelector('.mega-overlay'))return;
+    const hit=S.wagers.find(w=>w.player===S.me&&w.boost&&w.boost.id==='mega'&&w.status==='win');if(!hit)return;
+    let seen=null;try{seen=localStorage.getItem('bk.megaSeen');}catch(e){}if(seen===hit.id)return;
+    showMega(hit);}
+  function showMega(w){const ov=document.createElement('div');ov.className='mega-overlay';
+    ov.innerHTML=`<canvas></canvas><div class="mega-card"><div class="eyebrow">${esc(S.me)}, you hit it</div><h1>Mega<br>Bonus</h1><div class="amt">+${fmtPts(w.net||0)} points</div><div class="sub">${esc(w.legs.map(l=>l.short).join(' + '))} at 5x profit</div><button type="button" class="dismiss">Back to the book</button></div>`;
+    document.body.appendChild(ov);
+    const done=()=>{try{localStorage.setItem('bk.megaSeen',w.id);}catch(e){}ov.remove();};
+    ov.addEventListener('click',done);
+    fireworks(ov.querySelector('canvas'));
+    if(navigator.vibrate)navigator.vibrate([60,40,60,40,120]);}
+  function fireworks(cv){const ctx=cv.getContext('2d');const dpr=Math.min(2,window.devicePixelRatio||1);
+    const size=()=>{cv.width=innerWidth*dpr;cv.height=innerHeight*dpr;};size();window.addEventListener('resize',size);
+    const colors=['#ffd166','#ff7b54','#6ea0ff','#ffffff','#7ee787','#ff5c8a'];const parts=[];let last=performance.now(),t0=last;
+    const burst=(x,y)=>{const c=colors[Math.floor(Math.random()*colors.length)];const n=70+Math.random()*50;for(let i=0;i<n;i++){const a=Math.random()*Math.PI*2,v=(2+Math.random()*5)*dpr;parts.push({x,y,vx:Math.cos(a)*v,vy:Math.sin(a)*v,life:1,decay:.008+Math.random()*.012,c,r:(1.2+Math.random()*1.8)*dpr});}};
+    const frame=now=>{if(!cv.isConnected)return;const dt=Math.min(32,now-last)/16;last=now;
+      ctx.fillStyle='rgba(5,8,14,.22)';ctx.fillRect(0,0,cv.width,cv.height);
+      if(now-t0<9000&&Math.random()<.06*dt)burst(cv.width*(.1+Math.random()*.8),cv.height*(.1+Math.random()*.5));
+      for(let i=parts.length-1;i>=0;i--){const p=parts[i];p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=.06*dpr*dt;p.vx*=.985;p.vy*=.985;p.life-=p.decay*dt;if(p.life<=0){parts.splice(i,1);continue;}
+        ctx.globalAlpha=Math.max(0,p.life);ctx.fillStyle=p.c;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();}
+      ctx.globalAlpha=1;requestAnimationFrame(frame);};
+    for(let i=0;i<4;i++)setTimeout(()=>burst(cv.width*(.2+Math.random()*.6),cv.height*(.15+Math.random()*.35)),i*180);
+    requestAnimationFrame(frame);}
   let toastT;function toast(msg,err){let t=document.querySelector('.toast');if(!t){t=document.createElement('div');t.className='toast';document.body.appendChild(t);}t.textContent=msg;t.classList.toggle('err',!!err);clearTimeout(toastT);toastT=setTimeout(()=>t.remove(),2500);}
 
   $('who').addEventListener('click',e=>{const b=e.target.closest('[data-player]');if(!b)return;S.me=b.dataset.player;try{localStorage.setItem('bk.me',S.me);}catch(x){}$('who').classList.remove('nudge');render();});

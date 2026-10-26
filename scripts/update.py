@@ -45,13 +45,44 @@ def status_of(ev: dict) -> str:
 
 
 def counts(ev: dict) -> bool:
-    """Regular-season games plus every NBA Cup game (the Cup final included)."""
+    """Regular season, NBA Cup, play-in and playoffs. The picks board keeps only regular season and Cup; the
+    sportsbook runs through the Finals. Preseason (type 1) and all-star events are left out."""
     st = (ev.get("season") or {}).get("type")
-    if st == 2:
+    if st in (2, 3, 5):
         return True
     comp = (ev.get("competitions") or [{}])[0]
     notes = " ".join((n.get("headline") or "") for n in comp.get("notes") or [])
     return "cup" in notes.lower()
+
+
+ROUND_BY_TYPE = {"RD16": "r1", "QTR": "r2", "SEMI": "cf", "FINAL": "finals", "CC": "cupfinal"}
+
+
+def stage_of(ev: dict) -> str:
+    """regular | cup | cupfinal | playin | r1 | r2 | cf | finals, from ESPN's season type, competition type and notes."""
+    st = (ev.get("season") or {}).get("type")
+    comp = (ev.get("competitions") or [{}])[0]
+    abbr = ((comp.get("type") or {}).get("abbreviation") or "").upper()
+    notes = " ".join((n.get("headline") or "") for n in comp.get("notes") or []).lower()
+    if abbr == "CC" or ("cup" in notes and "championship" in notes):
+        return "cupfinal"
+    if st == 5 or "play-in" in notes:
+        return "playin"
+    if st == 3:
+        if abbr in ROUND_BY_TYPE:
+            return ROUND_BY_TYPE[abbr]
+        if "1st round" in notes or "first round" in notes:
+            return "r1"
+        if "semifinal" in notes:
+            return "r2"
+        if "nba finals" in notes:
+            return "finals"
+        if "finals" in notes:
+            return "cf"
+        return "r1"
+    if "cup" in notes:
+        return "cup"
+    return "regular"
 
 
 def label_of(ev: dict) -> str | None:
@@ -68,7 +99,7 @@ def main() -> int:
     bonus_dates = cfg.get("bonusDates", {})
     bonus_ids = cfg.get("bonusGameIds", {})
     season_start = cfg.get("seasonStart", "2026-10-01")
-    season_end = cfg.get("seasonEnd", "2027-04-30")
+    season_end = cfg.get("playoffsEnd") or cfg.get("seasonEnd", "2027-06-30")  # the sportsbook runs through the Finals
 
     now = datetime.now(timezone.utc)
     today = now.astimezone(ET).date()
@@ -99,9 +130,12 @@ def main() -> int:
             hcode = ABBR.get(home["team"]["abbreviation"], home["team"]["abbreviation"])
             acode = ABBR.get(away["team"]["abbreviation"], away["team"]["abbreviation"])
             st = status_of(ev)
+            stage = stage_of(ev)
             new = dict(g)
             new.update({
                 "id": gid,
+                "stage": stage,
+                "series": "-".join(sorted([hcode, acode])) if stage in ("r1", "r2", "cf", "finals") else None,
                 "date": date_et,
                 "start": start.strftime("%Y-%m-%dT%H:%M:%SZ"),
                 "home": hcode, "away": acode,

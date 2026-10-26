@@ -16,9 +16,11 @@
     let dec=1,live=0;
     w.legs.forEach((l,i)=>{if(legResults[i]==='win'){dec*=E.decimal(l.odds)||1;live++;}});
     if(live===0)return {status:'push',net:0};
-    const profit=Math.round(w.stake*(dec-1)); // whole points: payouts round to the nearest point
+    const mult=(w.boost&&Number(w.boost.mult))||1; // a boost token multiplies the profit, never the stake
+    const profit=Math.round(w.stake*(dec-1)*mult); // whole points: payouts round to the nearest point
     return {status:'win',net:profit,payout:w.stake+profit};
   };
+  E.boostedProfit=function(stake,legs,mult){return Math.round(stake*(E.parlayDecimal(legs)-1)*(mult||1));};
 
   // Bankroll replay. wagers: array of {player, stake, placedAt, settled:{status,net}|null}. Config: start, reload.
   // Returns per player: stack, busts, totalWagered, byWeek wagered, history of stack after each settlement.
@@ -30,10 +32,12 @@
     // in settlement order to keep "stack at placement" honest.
     const timeline=[];
     for(const w of mine){timeline.push({t:w.placedAt||'',kind:'place',w});if(w.settled&&w.settledAt)timeline.push({t:w.settledAt,kind:'settle',w});}
+    for(const a of (cfg.adjustments||[]))if(a.player===player&&a.at&&a.at<=new Date().toISOString())timeline.push({t:a.at,kind:'adjust',a});
     timeline.sort((a,b)=>a.t<b.t?-1:a.t>b.t?1:(a.kind==='place'?-1:1));
     let wagered=0;const byWeek={};
     for(const ev of timeline){
-      if(ev.kind==='place'){stack-=ev.w.stake;pending+=ev.w.stake;wagered+=ev.w.stake;const wk=E.weekKey(ev.w.placedAt);byWeek[wk]=(byWeek[wk]||0)+ev.w.stake;}
+      if(ev.kind==='adjust'){stack+=Number(ev.a.points)||0;}
+      else if(ev.kind==='place'){stack-=ev.w.stake;pending+=ev.w.stake;wagered+=ev.w.stake;const wk=E.weekKey(ev.w.placedAt);byWeek[wk]=(byWeek[wk]||0)+ev.w.stake;}
       else{pending-=ev.w.stake;const s=ev.w.settled;if(s.status==='win')stack+=ev.w.stake+s.net;else if(s.status==='push'||s.status==='void')stack+=ev.w.stake;
         if(stack<=0.005&&pending<=0.005){busts++;events.push({t:ev.t,bust:busts});stack=reload;}}
       events.push({t:ev.t,stack:Math.round(stack*100)/100});
@@ -45,7 +49,7 @@
   // Bust penalty: a cumulative percentage of the final stack (10%, 25%, 45%, 70%, then 90% for anything beyond),
   // with a floor of 20 points per bust so a deliberate bust for the reload is never a good trade.
   E.PENALTY_PCT=[0,0.10,0.25,0.45,0.70,0.90];
-  E.FOUL_OUT=6; // six busts and you have fouled out: last place at the auction, behind everyone still standing
+  E.FOUL_OUT=6; // six busts and you have fouled out: out of the competition entirely
   E.PENALTY_FLOOR=20;
   E.penaltyPct=function(busts){busts=Math.max(0,Math.floor(busts||0));return E.PENALTY_PCT[Math.min(busts,E.PENALTY_PCT.length-1)];};
   E.penaltyAmount=function(stack,busts){busts=Math.max(0,Math.floor(busts||0));if(!busts)return 0;return Math.max(stack*E.penaltyPct(busts),E.PENALTY_FLOOR*busts);};
@@ -89,6 +93,27 @@
       for(let i=0;i<w.legs.length&&!errs.length;i++)for(let j=i+1;j<w.legs.length;j++){const c=E.conflict(w.legs[i],w.legs[j]);if(c){const a=w.legs[i].short||'one leg',b=w.legs[j].short||'another';errs.push(c==='impossible'?`${a} and ${b} cannot both win.`:`${a} and ${b} overlap (one already covers the other), so they cannot be parlayed.`);break;}}}
     return errs;
   };
+
+  // ---------- boost tokens ----------
+  // Every player gets the same tokens. Each is good for one bet inside its window and is spent by any open, won or
+  // lost bet carrying it; a bet that pushes or voids hands it back. Ids are stable so a wager can carry them.
+  E.ROUND_NAMES={r1:'first round',r2:'second round',cf:'conference finals',finals:'NBA Finals'};
+  E.seriesKey=function(a,b){return [a,b].sort().join('-');};
+  // Tokens usable on game g ({start, stage, series}) by this player, before removing the ones already spent.
+  E.tokensForGame=function(g,cfg,player){const T=(cfg&&cfg.tokens)||{};const out=[];const prizes=(cfg&&cfg.prizes)||{};
+    const wk=E.weekKey(g.start);if(wk&&T.week)out.push({id:'week:'+wk,mult:T.week,label:`${T.week}x weekly`,why:'this week'});
+    if(g.stage==='cupfinal'&&T.cupFinal)out.push({id:'cupfinal',mult:T.cupFinal,label:`${T.cupFinal}x Cup final`,why:'NBA Cup championship'});
+    if((g.stage==='r1'||g.stage==='r2'||g.stage==='cf')&&g.series&&T[g.stage])out.push({id:g.stage+':'+g.series,mult:T[g.stage],label:`${T[g.stage]}x series`,why:`${E.ROUND_NAMES[g.stage]} series`});
+    if(g.stage==='finals'&&T.finals){out.push({id:'finals',mult:T.finals,label:`${T.finals}x Finals`,why:'NBA Finals'});
+      if(prizes.first===player&&prizes.firstMult)out.push({id:'prize:first',mult:prizes.firstMult,label:`${prizes.firstMult}x Finals (season prize)`,why:'regular-season winner'});}
+    if(g.stage==='r2'&&prizes.second===player&&prizes.secondMult)out.push({id:'prize:second',mult:prizes.secondMult,label:`${prizes.secondMult}x second round (season prize)`,why:'regular-season runner-up'});
+    if(T.mega)out.push({id:'mega',mult:T.mega,label:`${T.mega}x Mega Bonus`,why:'once a season',mega:true});
+    return out;};
+  E.tokenSpentBy=function(w){return !!(w.boost&&w.boost.id)&&w.status!=='push'&&w.status!=='void';};
+  E.spentTokenIds=function(player,wagers){const s=new Set();for(const w of wagers)if(w.player===player&&E.tokenSpentBy(w))s.add(w.boost.id);return s;};
+  E.availableTokens=function(g,cfg,player,wagers){const spent=E.spentTokenIds(player,wagers);return E.tokensForGame(g,cfg,player).filter(t=>!spent.has(t.id));};
+  // Can this token be attached to a bet on this game? (window check at placement and again when grading nothing; grading trusts the stored mult)
+  E.tokenAllowed=function(tokenId,g,cfg,player,wagers){return E.availableTokens(g,cfg,player,wagers).some(t=>t.id===tokenId);};
 
   E.weekKey=function(iso){if(!iso)return '';const d=new Date(iso);const et=new Date(d.toLocaleString('en-US',{timeZone:'America/New_York'}));const day=(et.getDay()+6)%7;et.setDate(et.getDate()-day);return et.getFullYear()+'-'+String(et.getMonth()+1).padStart(2,'0')+'-'+String(et.getDate()).padStart(2,'0');};
 
