@@ -86,7 +86,7 @@ header{display:flex;flex-direction:column;gap:14px;padding-top:28px;border-botto
 @media (max-width:620px){.board{grid-template-columns:repeat(2,1fr)}.tile .pts{font-size:38px}}
 
 /* tabs */
-.tabs{display:flex;gap:4px;border-bottom:1.5px solid var(--line);overflow-x:auto}
+.tabs{display:flex;gap:4px;border-bottom:1.5px solid var(--line);flex-wrap:wrap}
 .tabs button{background:none;border:0;padding:10px 14px;font-family:var(--display);font-size:18px;text-transform:uppercase;letter-spacing:.05em;font-weight:600;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-1.5px;white-space:nowrap}
 .tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
 
