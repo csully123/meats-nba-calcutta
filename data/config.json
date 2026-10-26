@@ -5,25 +5,7 @@
     "Mio",
     "Sulliver"
   ],
-  "scoring": {
-    "start": 30,
-    "win": 1,
-    "loss": 0,
-    "lockWin": 2,
-    "lockLoss": 1,
-    "moneyballWin": 5,
-    "moneyballLoss": 0,
-    "push": 0
-  },
   "seasonStart": "2026-10-20",
   "seasonEnd": "2027-04-12",
-  "bonusDates": {
-    "2026-12-25": {
-      "multiplier": 2,
-      "label": "Christmas"
-    }
-  },
-  "bonusGameIds": {},
-  "maxPicksPerWeek": 5,
   "playoffsEnd": "2027-06-30"
-}\n
+}
