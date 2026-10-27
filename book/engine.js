@@ -16,11 +16,13 @@
     let dec=1,live=0;
     w.legs.forEach((l,i)=>{if(legResults[i]==='win'){dec*=E.decimal(l.odds)||1;live++;}});
     if(live===0)return {status:'push',net:0};
-    const mult=(w.boost&&Number(w.boost.mult))||1; // a boost token multiplies the profit, never the stake
-    const profit=Math.floor(w.stake*(dec-1)*mult); // whole points: profit rounds down
+    const mult=(w.boost&&Number(w.boost.mult))||1; // a boost token multiplies the profit on the first BOOST_STAKE points of stake
+    const profit=E.profitWithBoost(w.stake,dec,mult); // whole points: profit rounds down
     return {status:'win',net:profit,payout:w.stake+profit};
   };
-  E.boostedProfit=function(stake,legs,mult){return Math.floor(stake*(E.parlayDecimal(legs)-1)*(mult||1));};
+  E.BOOST_STAKE=20; // a token boosts the profit on this much of a bet's stake; the rest pays at the normal price
+  E.profitWithBoost=function(stake,dec,mult){const m=mult||1;const boosted=Math.min(stake,E.BOOST_STAKE);return Math.floor(stake*(dec-1)+boosted*(dec-1)*(m-1));};
+  E.boostedProfit=function(stake,legs,mult){return E.profitWithBoost(stake,E.parlayDecimal(legs),mult);};
   E.MAX_LEGS=4;
 
   // Bankroll replay. wagers: array of {player, stake, placedAt, settled:{status,net}|null}. Config: start, reload.

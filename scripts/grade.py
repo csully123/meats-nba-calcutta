@@ -134,7 +134,8 @@ def settle(w: dict, leg_results: list):
         mult = float(boost.get("mult") or 1)  # a boost token multiplies the profit, never the stake
     except (TypeError, ValueError):
         mult = 1.0
-    profit = float(math.floor(stake * (dec - 1) * mult))  # whole points: profit rounds down
+    boosted = min(stake, 20.0)  # a token boosts the profit on the first 20 points of stake
+    profit = float(math.floor(stake * (dec - 1) + boosted * (dec - 1) * (mult - 1)))  # whole points: profit rounds down
     return {"status": "win", "net": profit, "payout": stake + profit}
 
 
