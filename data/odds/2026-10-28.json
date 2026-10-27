@@ -1,0 +1,990 @@
+{
+ "date": "2026-10-28",
+ "games": {
+  "0EnJsxeRoj5sV5LsdUsH": {
+   "away": "NYK",
+   "awayColor": "#006BB6",
+   "awayName": "New York Knicks",
+   "cancelled": false,
+   "date": "2026-10-28",
+   "display": "",
+   "ended": false,
+   "eventID": "0EnJsxeRoj5sV5LsdUsH",
+   "finalized": false,
+   "home": "CHI",
+   "homeColor": "#CE1141",
+   "homeName": "Chicago Bulls",
+   "markets": [],
+   "pulledAt": "2026-10-27T12:48:58Z",
+   "start": "2026-10-29T00:00:00.000Z",
+   "started": false
+  },
+  "8uIInmiylQtohc2dcYWr": {
+   "away": "WAS",
+   "awayColor": "#F5002F",
+   "awayName": "Washington Wizards",
+   "cancelled": false,
+   "date": "2026-10-28",
+   "display": "",
+   "ended": false,
+   "eventID": "8uIInmiylQtohc2dcYWr",
+   "finalized": false,
+   "home": "CLE",
+   "homeColor": "#871539",
+   "homeName": "Cleveland Cavaliers",
+   "markets": [],
+   "pulledAt": "2026-10-27T12:48:58Z",
+   "start": "2026-10-28T23:00:00.000Z",
+   "started": false
+  },
+  "9VAfjQwS2XwkqkRTdkiz": {
+   "away": "CHA",
+   "awayColor": "#008CA8",
+   "awayName": "Charlotte Hornets",
+   "cancelled": false,
+   "date": "2026-10-28",
+   "display": "",
+   "ended": false,
+   "eventID": "9VAfjQwS2XwkqkRTdkiz",
+   "finalized": false,
+   "home": "DET",
+   "homeColor": "#006BB6",
+   "homeName": "Detroit Pistons",
+   "markets": [],
+   "pulledAt": "2026-10-27T12:48:58Z",
+   "start": "2026-10-28T23:00:00.000Z",
+   "started": false
+  },
+  "NaF7pEWPWlzf9fKdgfF5": {
+   "away": "OKC",
+   "awayColor": "#DD4B33",
+   "awayName": "Oklahoma City Thunder",
+   "cancelled": false,
+   "date": "2026-10-28",
+   "display": "",
+   "ended": false,
+   "eventID": "NaF7pEWPWlzf9fKdgfF5",
+   "finalized": false,
+   "home": "DAL",
+   "homeColor": "#007DC5",
+   "homeName": "Dallas Mavericks",
+   "markets": [],
+   "pulledAt": "2026-10-27T12:48:58Z",
+   "start": "2026-10-29T01:30:00.000Z",
+   "started": false
+  },
+  "P32jcA7bITijPFs2qW0c": {
+   "away": "ORL",
+   "awayColor": "#007DC5",
+   "awayName": "Orlando Magic",
+   "cancelled": false,
+   "date": "2026-10-28",
+   "display": "",
+   "ended": false,
+   "eventID": "P32jcA7bITijPFs2qW0c",
+   "finalized": false,
+   "home": "TOR",
+   "homeColor": "#CE1141",
+   "homeName": "Toronto Raptors",
+   "markets": [],
+   "pulledAt": "2026-10-27T12:48:58Z",
+   "start": "2026-10-28T23:30:00.000Z",
+   "started": false
+  },
+  "PPlI0xLCa4SgGC6LKFTf": {
+   "away": "DEN",
+   "awayColor": "#4FA8FF",
+   "awayName": "Denver Nuggets",
+   "cancelled": false,
+   "date": "2026-10-28",
+   "display": "",
+   "ended": false,
+   "eventID": "PPlI0xLCa4SgGC6LKFTf",
+   "finalized": false,
+   "home": "NOP",
+   "homeColor": "#002B5C",
+   "homeName": "New Orleans Pelicans",
+   "markets": [],
+   "pulledAt": "2026-10-27T12:48:58Z",
+   "start": "2026-10-29T00:00:00.000Z",
+   "started": false
+  },
+  "VGJWBj7vPgHtBMUiei6o": {
+   "away": "PHI",
+   "awayColor": "#006BB6",
+   "awayName": "Philadelphia 76ers",
+   "cancelled": false,
+   "date": "2026-10-28",
+   "display": "",
+   "ended": false,
+   "eventID": "VGJWBj7vPgHtBMUiei6o",
+   "finalized": false,
+   "home": "IND",
+   "homeColor": "#00275D",
+   "homeName": "Indiana Pacers",
+   "markets": [
+    {
+     "available": true,
+     "betType": "ml",
+     "book": "fanduel",
+     "entity": "away",
+     "kind": "game",
+     "line": null,
+     "name": "Moneyline",
+     "oddID": "points-away-game-ml-away",
+     "odds": -126,
+     "opposing": "points-home-game-ml-home",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       null,
+       -126
+      ]
+     ],
+     "side": "away",
+     "stat": "points",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ml",
+     "book": "fanduel",
+     "entity": "home",
+     "kind": "game",
+     "line": null,
+     "name": "Moneyline",
+     "oddID": "points-home-game-ml-home",
+     "odds": 108,
+     "opposing": "points-away-game-ml-away",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       null,
+       108
+      ]
+     ],
+     "side": "home",
+     "stat": "points",
+     "team": "IND"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "kind": "game",
+     "line": 238.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-over",
+     "odds": -110,
+     "opposing": "points-all-game-ou-under",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       238.5,
+       -110
+      ]
+     ],
+     "side": "over",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "kind": "game",
+     "line": 238.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-under",
+     "odds": -110,
+     "opposing": "points-all-game-ou-over",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       238.5,
+       -110
+      ]
+     ],
+     "side": "under",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "available": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "away",
+     "kind": "game",
+     "line": -1.5,
+     "name": "Spread",
+     "oddID": "points-away-game-sp-away",
+     "odds": -120,
+     "opposing": "points-home-game-sp-home",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       -1.5,
+       -120
+      ]
+     ],
+     "side": "away",
+     "stat": "points",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "home",
+     "kind": "game",
+     "line": 1.5,
+     "name": "Spread",
+     "oddID": "points-home-game-sp-home",
+     "odds": -102,
+     "opposing": "points-away-game-sp-away",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       1.5,
+       -102
+      ]
+     ],
+     "side": "home",
+     "stat": "points",
+     "team": "IND"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "bovada",
+     "entity": "away",
+     "kind": "game",
+     "line": 120.5,
+     "name": "Total",
+     "oddID": "points-away-game-ou-over",
+     "odds": -115,
+     "opposing": "points-away-game-ou-under",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       120.5,
+       -115
+      ]
+     ],
+     "side": "over",
+     "stat": "points",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "bovada",
+     "entity": "away",
+     "kind": "game",
+     "line": 120.5,
+     "name": "Total",
+     "oddID": "points-away-game-ou-under",
+     "odds": -115,
+     "opposing": "points-away-game-ou-over",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       120.5,
+       -115
+      ]
+     ],
+     "side": "under",
+     "stat": "points",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       109.5,
+       -434
+      ],
+      [
+       110.5,
+       -373
+      ],
+      [
+       111.5,
+       -321
+      ],
+      [
+       112.5,
+       -279
+      ],
+      [
+       113.5,
+       -244
+      ],
+      [
+       114.5,
+       -213
+      ],
+      [
+       115.5,
+       -186
+      ],
+      [
+       116.5,
+       -162
+      ],
+      [
+       118.5,
+       -124
+      ],
+      [
+       120.5,
+       103
+      ],
+      [
+       121.5,
+       117
+      ],
+      [
+       122.5,
+       134
+      ],
+      [
+       123.5,
+       152
+      ],
+      [
+       124.5,
+       173
+      ],
+      [
+       125.5,
+       196
+      ],
+      [
+       126.5,
+       222
+      ],
+      [
+       127.5,
+       251
+      ],
+      [
+       128.5,
+       281
+      ],
+      [
+       129.5,
+       322
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "home",
+     "kind": "game",
+     "line": 117.5,
+     "name": "Total",
+     "oddID": "points-home-game-ou-over",
+     "odds": -142,
+     "opposing": "points-home-game-ou-under",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       109.5,
+       -434
+      ],
+      [
+       110.5,
+       -373
+      ],
+      [
+       111.5,
+       -321
+      ],
+      [
+       112.5,
+       -279
+      ],
+      [
+       113.5,
+       -244
+      ],
+      [
+       114.5,
+       -213
+      ],
+      [
+       115.5,
+       -186
+      ],
+      [
+       116.5,
+       -162
+      ],
+      [
+       117.5,
+       -142
+      ],
+      [
+       118.5,
+       -124
+      ],
+      [
+       120.5,
+       103
+      ],
+      [
+       121.5,
+       117
+      ],
+      [
+       122.5,
+       134
+      ],
+      [
+       123.5,
+       152
+      ],
+      [
+       124.5,
+       173
+      ],
+      [
+       125.5,
+       196
+      ],
+      [
+       126.5,
+       222
+      ],
+      [
+       127.5,
+       251
+      ],
+      [
+       128.5,
+       281
+      ],
+      [
+       129.5,
+       322
+      ]
+     ],
+     "side": "over",
+     "stat": "points",
+     "team": "IND"
+    },
+    {
+     "alts": [
+      [
+       109.5,
+       316
+      ],
+      [
+       110.5,
+       278
+      ],
+      [
+       111.5,
+       244
+      ],
+      [
+       112.5,
+       216
+      ],
+      [
+       113.5,
+       191
+      ],
+      [
+       114.5,
+       168
+      ],
+      [
+       115.5,
+       148
+      ],
+      [
+       116.5,
+       130
+      ],
+      [
+       118.5,
+       100
+      ],
+      [
+       120.5,
+       -128
+      ],
+      [
+       121.5,
+       -146
+      ],
+      [
+       122.5,
+       -167
+      ],
+      [
+       123.5,
+       -191
+      ],
+      [
+       124.5,
+       -220
+      ],
+      [
+       125.5,
+       -252
+      ],
+      [
+       126.5,
+       -288
+      ],
+      [
+       127.5,
+       -331
+      ],
+      [
+       128.5,
+       -378
+      ],
+      [
+       129.5,
+       -443
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "home",
+     "kind": "game",
+     "line": 117.5,
+     "name": "Total",
+     "oddID": "points-home-game-ou-under",
+     "odds": 114,
+     "opposing": "points-home-game-ou-over",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       109.5,
+       316
+      ],
+      [
+       110.5,
+       278
+      ],
+      [
+       111.5,
+       244
+      ],
+      [
+       112.5,
+       216
+      ],
+      [
+       113.5,
+       191
+      ],
+      [
+       114.5,
+       168
+      ],
+      [
+       115.5,
+       148
+      ],
+      [
+       116.5,
+       130
+      ],
+      [
+       117.5,
+       114
+      ],
+      [
+       118.5,
+       100
+      ],
+      [
+       120.5,
+       -128
+      ],
+      [
+       121.5,
+       -146
+      ],
+      [
+       122.5,
+       -167
+      ],
+      [
+       123.5,
+       -191
+      ],
+      [
+       124.5,
+       -220
+      ],
+      [
+       125.5,
+       -252
+      ],
+      [
+       126.5,
+       -288
+      ],
+      [
+       127.5,
+       -331
+      ],
+      [
+       128.5,
+       -378
+      ],
+      [
+       129.5,
+       -443
+      ]
+     ],
+     "side": "under",
+     "stat": "points",
+     "team": "IND"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "AARON_NESMITH_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Aaron Nesmith First basket",
+     "oddID": "firstBasket-AARON_NESMITH_1_NBA-game-yn-yes",
+     "odds": 900,
+     "opposing": "firstBasket-AARON_NESMITH_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "AARON_NESMITH_1_NBA",
+     "seen": [
+      [
+       null,
+       900
+      ]
+     ],
+     "side": "yes",
+     "stat": "firstBasket",
+     "team": "IND"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "ANDREW_NEMBHARD_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Andrew Nembhard First basket",
+     "oddID": "firstBasket-ANDREW_NEMBHARD_1_NBA-game-yn-yes",
+     "odds": 750,
+     "opposing": "firstBasket-ANDREW_NEMBHARD_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "ANDREW_NEMBHARD_1_NBA",
+     "seen": [
+      [
+       null,
+       750
+      ]
+     ],
+     "side": "yes",
+     "stat": "firstBasket",
+     "team": "IND"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "JAYLEN_BROWN_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Jaylen Brown First basket",
+     "oddID": "firstBasket-JAYLEN_BROWN_1_NBA-game-yn-yes",
+     "odds": 700,
+     "opposing": "firstBasket-JAYLEN_BROWN_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "JAYLEN_BROWN_1_NBA",
+     "seen": [
+      [
+       null,
+       700
+      ]
+     ],
+     "side": "yes",
+     "stat": "firstBasket",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "JAY_HUFF_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Jay Huff First basket",
+     "oddID": "firstBasket-JAY_HUFF_1_NBA-game-yn-yes",
+     "odds": 950,
+     "opposing": "firstBasket-JAY_HUFF_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "JAY_HUFF_1_NBA",
+     "seen": [
+      [
+       null,
+       950
+      ]
+     ],
+     "side": "yes",
+     "stat": "firstBasket",
+     "team": "IND"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "JOEL_EMBIID_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Joel Embiid First basket",
+     "oddID": "firstBasket-JOEL_EMBIID_1_NBA-game-yn-yes",
+     "odds": 550,
+     "opposing": "firstBasket-JOEL_EMBIID_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "JOEL_EMBIID_1_NBA",
+     "seen": [
+      [
+       null,
+       550
+      ]
+     ],
+     "side": "yes",
+     "stat": "firstBasket",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "LEBRON_JAMES_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "LeBron James First basket",
+     "oddID": "firstBasket-LEBRON_JAMES_1_NBA-game-yn-yes",
+     "odds": 1000,
+     "opposing": "firstBasket-LEBRON_JAMES_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "LEBRON_JAMES_1_NBA",
+     "seen": [
+      [
+       null,
+       1000
+      ]
+     ],
+     "side": "yes",
+     "stat": "firstBasket",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "PASCAL_SIAKAM_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Pascal Siakam First basket",
+     "oddID": "firstBasket-PASCAL_SIAKAM_1_NBA-game-yn-yes",
+     "odds": 550,
+     "opposing": "firstBasket-PASCAL_SIAKAM_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "PASCAL_SIAKAM_1_NBA",
+     "seen": [
+      [
+       null,
+       550
+      ]
+     ],
+     "side": "yes",
+     "stat": "firstBasket",
+     "team": "IND"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "TYRESE_HALIBURTON_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Tyrese Haliburton First basket",
+     "oddID": "firstBasket-TYRESE_HALIBURTON_1_NBA-game-yn-yes",
+     "odds": 850,
+     "opposing": "firstBasket-TYRESE_HALIBURTON_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "TYRESE_HALIBURTON_1_NBA",
+     "seen": [
+      [
+       null,
+       850
+      ]
+     ],
+     "side": "yes",
+     "stat": "firstBasket",
+     "team": "IND"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "TYRESE_MAXEY_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Tyrese Maxey First basket",
+     "oddID": "firstBasket-TYRESE_MAXEY_1_NBA-game-yn-yes",
+     "odds": 700,
+     "opposing": "firstBasket-TYRESE_MAXEY_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "TYRESE_MAXEY_1_NBA",
+     "seen": [
+      [
+       null,
+       700
+      ]
+     ],
+     "side": "yes",
+     "stat": "firstBasket",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "VJ Edgecombe First basket",
+     "oddID": "firstBasket-VJ_EDGECOMBE_1_NBA-game-yn-yes",
+     "odds": 1000,
+     "opposing": "firstBasket-VJ_EDGECOMBE_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       null,
+       1000
+      ]
+     ],
+     "side": "yes",
+     "stat": "firstBasket",
+     "team": "PHI"
+    }
+   ],
+   "pulledAt": "2026-10-27T12:48:58Z",
+   "start": "2026-10-28T23:00:00.000Z",
+   "started": false
+  },
+  "du4xB1SR4g52k6Lps9iC": {
+   "away": "LAL",
+   "awayColor": "#552582",
+   "awayName": "Los Angeles Lakers",
+   "cancelled": false,
+   "date": "2026-10-28",
+   "display": "",
+   "ended": false,
+   "eventID": "du4xB1SR4g52k6Lps9iC",
+   "finalized": false,
+   "home": "LAC",
+   "homeColor": "#006BB6",
+   "homeName": "Los Angeles Clippers",
+   "markets": [],
+   "pulledAt": "2026-10-27T12:48:58Z",
+   "start": "2026-10-29T02:30:00.000Z",
+   "started": false
+  },
+  "jG7R4zImb4TtrIhNvcY5": {
+   "away": "HOU",
+   "awayColor": "#CE1141",
+   "awayName": "Houston Rockets",
+   "cancelled": false,
+   "date": "2026-10-28",
+   "display": "",
+   "ended": false,
+   "eventID": "jG7R4zImb4TtrIhNvcY5",
+   "finalized": false,
+   "home": "MIL",
+   "homeColor": "#00471B",
+   "homeName": "Milwaukee Bucks",
+   "markets": [],
+   "pulledAt": "2026-10-27T12:48:58Z",
+   "start": "2026-10-29T00:00:00.000Z",
+   "started": false
+  },
+  "mk6VPvBcthdZUChFqFco": {
+   "away": "SAS",
+   "awayColor": "#A6AFAF",
+   "awayName": "San Antonio Spurs",
+   "cancelled": false,
+   "date": "2026-10-28",
+   "display": "",
+   "ended": false,
+   "eventID": "mk6VPvBcthdZUChFqFco",
+   "finalized": false,
+   "home": "UTA",
+   "homeColor": "#002B5C",
+   "homeName": "Utah Jazz",
+   "markets": [],
+   "pulledAt": "2026-10-27T12:48:58Z",
+   "start": "2026-10-29T01:00:00.000Z",
+   "started": false
+  },
+  "pQsF6kYuDrEQXgaXnmGI": {
+   "away": "GSW",
+   "awayColor": "#006BB6",
+   "awayName": "Golden State Warriors",
+   "cancelled": false,
+   "date": "2026-10-28",
+   "display": "",
+   "ended": false,
+   "eventID": "pQsF6kYuDrEQXgaXnmGI",
+   "finalized": false,
+   "home": "MIN",
+   "homeColor": "#005083",
+   "homeName": "Minnesota Timberwolves",
+   "markets": [],
+   "pulledAt": "2026-10-27T12:48:58Z",
+   "start": "2026-10-29T00:00:00.000Z",
+   "started": false
+  },
+  "wXpf48J3m5ksYcM21vc5": {
+   "away": "MIA",
+   "awayColor": "#98002E",
+   "awayName": "Miami Heat",
+   "cancelled": false,
+   "date": "2026-10-28",
+   "display": "",
+   "ended": false,
+   "eventID": "wXpf48J3m5ksYcM21vc5",
+   "finalized": false,
+   "home": "ATL",
+   "homeColor": "#E03A3E",
+   "homeName": "Atlanta Hawks",
+   "markets": [],
+   "pulledAt": "2026-10-27T12:48:58Z",
+   "start": "2026-10-28T23:00:00.000Z",
+   "started": false
+  }
+ }
+}
