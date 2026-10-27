@@ -61,6 +61,8 @@ jobs:
             echo "No changes"
           else
             git commit -m "Odds ${{ steps.mode.outputs.mode }} $(date -u +%Y-%m-%dT%H:%MZ)"
-            git pull --rebase origin main
-            git push
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push && break
+              echo "push attempt $i failed, retrying"; sleep $((i * 10))
+            done
           fi

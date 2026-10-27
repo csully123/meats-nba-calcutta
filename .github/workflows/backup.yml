@@ -33,6 +33,8 @@ jobs:
             echo "No changes"
           else
             git commit -m "Picks backup $(date -u +%Y-%m-%d)"
-            git pull --rebase origin main
-            git push
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push && break
+              echo "push attempt $i failed, retrying"; sleep $((i * 10))
+            done
           fi
