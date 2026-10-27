@@ -102,8 +102,9 @@ def verify(w: dict, g: dict):
         if not m:
             return f"market {leg.get('oddID')} not on file"
         seen = m.get("seen")
-        if not seen:
-            continue  # older files without price history: nothing to check against
+        since = m.get("seenSince")
+        if not seen or not created or not since or str(created) < str(since):
+            continue  # no price history for the time this bet was placed: nothing to check against
         line = leg.get("line")
         try:
             odds = int(leg.get("odds"))

@@ -225,7 +225,9 @@ def main() -> int:
                 g["results"] = prev["results"]
             # Every (line, odds) pair ever offered on each market, main or alt, so the grader can verify a stored price.
             seen_prev = {m.get("oddID"): m.get("seen") or [] for m in prev.get("markets", [])}
+            since_prev = {m.get("oddID"): m.get("seenSince") for m in prev.get("markets", [])}
             for m in g["markets"]:
+                m["seenSince"] = since_prev.get(m["oddID"]) or g["pulledAt"]  # price history is only complete from here on
                 seen = {tuple(x) for x in seen_prev.get(m["oddID"], [])}
                 seen.add((m.get("line"), m.get("odds")))
                 for al, ap in m.get("alts") or []:
