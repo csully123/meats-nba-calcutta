@@ -1,420 +1,426 @@
 {
-  "games": {
-    "8G8Zcws9ZpYrEyvqTRIK": {
-      "date": "2026-10-26",
-      "away": "WAS",
-      "home": "CHA",
-      "blurb": "Two 2-1 teams in Charlotte. The Wizards dropped a 112-102 home game to Toronto, then went into Chicago and won 124-120 on Saturday. The Hornets got run out of their own gym 128-81 by Atlanta before holding off Miami 115-110 after coughing up a 23-point lead. Charlotte at -1.5 with a 228.5 total says the book sees a coin flip, with the Hornets' health the swing factor.",
-      "injuries": [
-        {
-          "team": "CHA",
-          "player": "Kon Knueppel",
-          "status": "Questionable",
-          "stats": "18.5 pts, 5.3 reb, 3.4 ast last season",
-          "impact": "High",
-          "note": "Left hamstring; he has not played yet this season and Charlotte is missing its second leading scorer from a year ago."
-        },
-        {
-          "team": "CHA",
-          "player": "Coby White",
-          "status": "Questionable",
-          "stats": "17.4 pts, 3.4 reb, 4.0 ast last season",
-          "impact": "High",
-          "note": "Left calf; still ramping up and yet to debut for the Hornets, so Charlotte is short a starting-caliber guard and scorer."
-        },
-        {
-          "team": "CHA",
-          "player": "Grant Williams",
-          "status": "Questionable",
-          "stats": "Veteran forward, physical defender and floor spacer",
-          "impact": "Medium",
-          "note": "Right hamstring; Charlotte loses a sturdy frontcourt defender if he sits."
-        },
-        {
-          "team": "WAS",
-          "player": "AJ Dybantsa",
-          "status": "Out",
-          "stats": "Rookie wing",
-          "impact": "Medium",
-          "note": "Left ankle; Washington is without a young scoring wing from its rotation."
-        },
-        {
-          "team": "WAS",
-          "player": "Tristan Vukcevic",
-          "status": "Out",
-          "stats": "Reserve big",
-          "impact": "Low",
-          "note": "Left hip; thins the Wizards' bench behind Anthony Davis and Alex Sarr."
-        }
-      ],
-      "updated": "2026-10-26T14:03:59Z"
-    },
-    "B9RBbJYxAWGnbX7cq6QB": {
-      "date": "2026-10-26",
-      "away": "GSW",
-      "home": "DEN",
-      "blurb": "Golden State is 0-3 and limping into Denver, having lost 111-108 at home to Memphis and 131-122 in Phoenix with Jimmy Butler, Kristaps Porzingis and Moses Moody all out. Denver is 1-1 after an 84-96 dud in Oklahoma City and a 141-135 shootout win over New Orleans. Nuggets -7.5 with a 236.5 total expects Jokic to feast on a thin Warriors frontcourt in a high-scoring game.",
-      "injuries": [
-        {
-          "team": "GSW",
-          "player": "Jimmy Butler III",
-          "status": "Out",
-          "stats": "20.0 pts, 5.6 reb, 4.9 ast last season",
-          "impact": "High",
-          "note": "Right knee; the Warriors lose their second creator and best wing defender alongside Curry."
-        },
-        {
-          "team": "GSW",
-          "player": "Kristaps Porzingis",
-          "status": "Out",
-          "stats": "16.7 pts, 5.2 reb, 1.2 blk last season",
-          "impact": "High",
-          "note": "Illness; Golden State has no stretch big or rim protector to throw at Jokic."
-        },
-        {
-          "team": "GSW",
-          "player": "Moses Moody",
-          "status": "Out",
-          "stats": "12.1 pts, 3.3 reb, 1.6 ast last season",
-          "impact": "Medium",
-          "note": "Left knee; another rotation wing and shooter gone from an already short bench."
-        },
-        {
-          "team": "GSW",
-          "player": "Gui Santos",
-          "status": "Questionable",
-          "stats": "Reserve forward",
-          "impact": "Low",
-          "note": "Left knee tendinitis; bench depth only."
-        },
-        {
-          "team": "DEN",
-          "player": "Cameron Johnson",
-          "status": "Doubtful",
-          "stats": "12.2 pts, 3.8 reb, 2.4 ast last season",
-          "impact": "Medium",
-          "note": "Right ankle; Denver loses a starting wing shooter and would lean harder on Braun and the bench."
-        },
-        {
-          "team": "DEN",
-          "player": "Julian Strawther",
-          "status": "Out",
-          "stats": "Rotation wing, shooter",
-          "impact": "Low",
-          "note": "Left knee; bench scoring takes a small hit."
-        }
-      ],
-      "updated": "2026-10-26T14:03:59Z"
-    },
-    "Dk3koXoncNVgfZYn5TH6": {
-      "date": "2026-10-26",
-      "away": "PHX",
-      "home": "OKC",
-      "blurb": "A rematch of last spring's first-round sweep. Oklahoma City is 2-0 after beating Denver 96-84 and the Clippers 108-101 on Sunday, but that win cost them Jalen Williams to a severe leg injury, and this is the second night of a back-to-back. Phoenix is 1-1 after a 124-83 loss in Portland and a 131-122 win over Golden State behind Devin Booker's 43. OKC -9.5 and a 218.5 total say the book still trusts the Thunder defense to grind it out.",
-      "injuries": [
-        {
-          "team": "OKC",
-          "player": "Jalen Williams",
-          "status": "Out",
-          "stats": "17.1 pts, 4.6 reb, 5.5 ast last season",
-          "impact": "High",
-          "note": "Severe left leg injury suffered Sunday; the Thunder lose their second-best scorer and playmaker for a long stretch."
-        },
-        {
-          "team": "OKC",
-          "player": "Cason Wallace",
-          "status": "Questionable",
-          "stats": "Rotation guard, point-of-attack defender",
-          "impact": "Medium",
-          "note": "Left shoulder after leaving Sunday's game early; OKC's perimeter defense gets thinner."
-        },
-        {
-          "team": "OKC",
-          "player": "Jaylin Williams",
-          "status": "Questionable",
-          "stats": "Reserve big, floor spacer",
-          "impact": "Low",
-          "note": "Right wrist after leaving Sunday's game in the first quarter; backup frontcourt minutes."
-        },
-        {
-          "team": "OKC",
-          "player": "Nikola Topic",
-          "status": "Out",
-          "stats": "Reserve guard",
-          "impact": "Low",
-          "note": "Back; backup ballhandling only."
-        },
-        {
-          "team": "OKC",
-          "player": "Thomas Sorber",
-          "status": "Out",
-          "stats": "Reserve big",
-          "impact": "Low",
-          "note": "Right knee; bench frontcourt depth."
-        },
-        {
-          "team": "PHX",
-          "player": "Mark Williams",
-          "status": "Out",
-          "stats": "11.7 pts, 8.0 reb, 0.9 blk last season",
-          "impact": "High",
-          "note": "Left shoulder; Phoenix is without its starting center and rim protector against Holmgren and a Thunder team that already crushes the glass against them."
-        },
-        {
-          "team": "PHX",
-          "player": "Oso Ighodaro",
-          "status": "Doubtful",
-          "stats": "Backup big",
-          "impact": "Medium",
-          "note": "Right oblique strain; with Williams also out, the Suns' frontcourt rotation is very thin."
-        }
-      ],
-      "updated": "2026-10-26T14:03:59Z"
-    },
-    "GsucmgAiRzFwcIkKvDYq": {
-      "date": "2026-10-26",
-      "away": "CHI",
-      "home": "BOS",
-      "blurb": "Boston is 1-1 after blowing a 22-point lead in a 121-113 loss at Detroit, then beating the Knicks 107-103 behind 36 from Jayson Tatum. Chicago is 1-2, a 132-125 win in Milwaukee sandwiched by a 135-92 loss in Toronto and a 124-120 home loss to Washington, shooting 22.6 percent from three. It is the first night of a back-to-back for the Celtics. Boston -13.5 and 233.5 says the Bulls' turnovers and cold shooting get punished at TD Garden.",
-      "injuries": [
-        {
-          "team": "CHI",
-          "player": "Nic Claxton",
-          "status": "Out",
-          "stats": "11.7 pts, 6.9 reb, 3.7 ast, 1.1 blk last season",
-          "impact": "High",
-          "note": "Hamstring; the Bulls lose their starting center and rim protector, leaving Jalen Smith to handle Mitchell Robinson and Neemias Queta."
-        },
-        {
-          "team": "CHI",
-          "player": "Patrick Williams",
-          "status": "Questionable",
-          "stats": "Starting forward, wing defender",
-          "impact": "Medium",
-          "note": "Groin; he missed Saturday's loss and Chicago needs his size against Tatum and Paul George."
-        },
-        {
-          "team": "CHI",
-          "player": "Noa Essengue",
-          "status": "Questionable",
-          "stats": "Second-year forward",
-          "impact": "Low",
-          "note": "Head contusion; a rotation forward who also sat Saturday."
-        }
-      ],
-      "updated": "2026-10-26T14:03:59Z"
-    },
-    "K4LhWzNf5pgRJ5gARYEa": {
-      "date": "2026-10-26",
-      "away": "IND",
-      "home": "MIL",
-      "blurb": "Indiana is 2-1 and on the second night of a back-to-back after blasting Brooklyn 136-109 on Sunday, with Tyrese Haliburton putting up 24 points and 10 assists in his third game back from the Achilles. Milwaukee is 0-3 and bleeding 129 points a game, losing 132-125 at home to Chicago and 127-116 in Philadelphia. Pacers -4.5 with a 239.5 total is the book expecting a track meet that Indiana's offense wins even without Ivica Zubac.",
-      "injuries": [
-        {
-          "team": "IND",
-          "player": "Ivica Zubac",
-          "status": "Doubtful",
-          "stats": "14.1 pts, 10.6 reb, 2.2 ast last season",
-          "impact": "High",
-          "note": "Sprained left ankle suffered Sunday in Brooklyn; Rick Carlisle called him unlikely for Monday, so Jay Huff and Larry Nance take the center minutes."
-        },
-        {
-          "team": "IND",
-          "player": "T.J. McConnell",
-          "status": "Out",
-          "stats": "9.4 pts, 2.2 reb, 5.1 ast last season",
-          "impact": "Medium",
-          "note": "Hamstring strain; Indiana's backup point guard and bench pace-setter is out with no timeline."
-        },
-        {
-          "team": "IND",
-          "player": "Ben Sheppard",
-          "status": "Out",
-          "stats": "Rotation wing",
-          "impact": "Low",
-          "note": "Left meniscus tear; out for weeks, thinning the wing depth."
-        }
-      ],
-      "updated": "2026-10-26T14:03:59Z"
-    },
-    "PWXCLmDP0ynCsKwSKUoQ": {
-      "date": "2026-10-26",
-      "away": "MEM",
-      "home": "UTA",
-      "blurb": "Second meeting in a week. Memphis is 3-0 after beating Golden State 111-108 and Sacramento 123-112 on Sunday, and already handled Utah 123-103 on opening night with Ty Jerome dropping 45. The Jazz are 1-2, edging New Orleans 120-119 before falling 132-123 to the Lakers on Sunday. Both teams are on the second night of a back-to-back. Utah -1.5 with a 238.5 total is basically a pick'em, with Zach Edey out for Memphis and Jusuf Nurkic out for Utah.",
-      "injuries": [
-        {
-          "team": "MEM",
-          "player": "Zach Edey",
-          "status": "Out",
-          "stats": "13.6 pts, 11.1 reb in 11 games last season",
-          "impact": "High",
-          "note": "Left ankle; Memphis loses its starting center and best rebounder, so the Jazz frontcourt gets a lighter night inside."
-        },
-        {
-          "team": "MEM",
-          "player": "Karim Lopez",
-          "status": "Out",
-          "stats": "Reserve forward",
-          "impact": "Low",
-          "note": "Right knee; bench depth only."
-        },
-        {
-          "team": "UTA",
-          "player": "Jusuf Nurkic",
-          "status": "Out",
-          "stats": "10.9 pts, 10.4 reb, 4.8 ast last season",
-          "impact": "Medium",
-          "note": "Right foot; Utah is without its veteran center and passing hub, with Jaxson Hayes carrying the middle."
-        }
-      ],
-      "updated": "2026-10-26T14:03:59Z"
-    },
-    "U4p86iACMrQFsKkBauNA": {
-      "date": "2026-10-26",
-      "away": "DAL",
-      "home": "MIA",
-      "blurb": "Dallas is 1-2, beating Indiana 121-105 before getting handled 122-106 at home by San Antonio, and arrives in Miami with most of its frontcourt on the shelf. The Heat are 0-3, losing 128-111 to Detroit and then 115-110 in Charlotte after erasing a 23-point deficit, with Giannis fouling out. Kyrie Irving is carrying Dallas at 28.5 a night. Miami -8.5 with a 237.5 total expects Giannis and Bam to bully a Mavs roster down to Daniel Gafford inside.",
-      "injuries": [
-        {
-          "team": "DAL",
-          "player": "Cooper Flagg",
-          "status": "Questionable",
-          "stats": "21.0 pts, 6.7 reb, 4.5 ast last season",
-          "impact": "High",
-          "note": "Left shoulder; without him Dallas loses its best two-way player and leans almost entirely on Kyrie Irving to create."
-        },
-        {
-          "team": "DAL",
-          "player": "Dereck Lively II",
-          "status": "Out",
-          "stats": "Starting center, rim protector",
-          "impact": "High",
-          "note": "Right foot; the Mavs' lob threat and shot blocker is out against Giannis and Bam Adebayo."
-        },
-        {
-          "team": "DAL",
-          "player": "Naji Marshall",
-          "status": "Out",
-          "stats": "15.2 pts, 4.7 reb, 3.3 ast last season",
-          "impact": "Medium",
-          "note": "Illness; Dallas loses a starting-caliber wing who was averaging 5.7 assists this season."
-        },
-        {
-          "team": "DAL",
-          "player": "Santi Aldama",
-          "status": "Out",
-          "stats": "14.0 pts, 6.7 reb, 2.9 ast last season",
-          "impact": "Medium",
-          "note": "Right knee; another frontcourt scorer and floor spacer out, leaving Daniel Gafford as the main rim protector."
-        },
-        {
-          "team": "DAL",
-          "player": "Caleb Martin",
-          "status": "Doubtful",
-          "stats": "Rotation wing",
-          "impact": "Low",
-          "note": "Right thumb; bench wing depth gets even thinner."
-        }
-      ],
-      "updated": "2026-10-26T14:03:59Z"
-    },
-    "UToSAuvJM1apdys0zLQd": {
-      "date": "2026-10-26",
-      "away": "ATL",
-      "home": "HOU",
-      "blurb": "A rematch of Saturday's game in Atlanta, where Houston won 121-114 on the second night of a back-to-back without Fred VanVleet or Marcus Smart. The Rockets are 3-0 after also winning 114-110 in San Antonio, and get this one at home with their guards possibly back. Atlanta is 2-1, with a 128-81 blowout of Charlotte before that loss. Rockets -5.5 and a 230.5 total trusts the Houston defense and glass to control a rested rematch.",
-      "injuries": [
-        {
-          "team": "HOU",
-          "player": "Fred VanVleet",
-          "status": "Questionable",
-          "stats": "Starting point guard, lead ballhandler",
-          "impact": "High",
-          "note": "Rest after missing Saturday; if he sits again Houston runs the offense through Sengun and Amen Thompson."
-        },
-        {
-          "team": "HOU",
-          "player": "Marcus Smart",
-          "status": "Questionable",
-          "stats": "Veteran guard, defensive stopper",
-          "impact": "Medium",
-          "note": "Left forearm; Houston's point-of-attack defender against Jalen Johnson and the Hawks guards."
-        },
-        {
-          "team": "HOU",
-          "player": "Steven Adams",
-          "status": "Questionable",
-          "stats": "Backup center, offensive rebounder",
-          "impact": "Medium",
-          "note": "Right calf and rest; Houston's second-unit size and offensive rebounding takes a hit if he sits."
-        },
-        {
-          "team": "ATL",
-          "player": "Mouhamed Gueye",
-          "status": "Out",
-          "stats": "Reserve forward",
-          "impact": "Low",
-          "note": "Left foot; bench frontcourt depth."
-        }
-      ],
-      "updated": "2026-10-26T14:03:59Z"
-    },
-    "esdpKX8UceAcDAF2okWV": {
-      "date": "2026-10-26",
-      "away": "MIN",
-      "home": "CLE",
-      "blurb": "Minnesota is 3-0 and on the second night of a back-to-back after blowing out Toronto 117-94 on Sunday, following a 115-93 win in Orlando. Cleveland is 1-1, losing 114-106 in Philadelphia and then holding off Brooklyn 125-121 at home with Donovan Mitchell, James Harden and Evan Mobley leading the way. Cavs -4.5 with a 233.5 total says the book expects the home team's guards to go at Gobert's drop coverage while the tired Wolves cool off.",
-      "injuries": [
-        {
-          "team": "MIN",
-          "player": "Donte DiVincenzo",
-          "status": "Out",
-          "stats": "12.2 pts, 4.1 reb, 3.8 ast last season",
-          "impact": "Medium",
-          "note": "Right Achilles; Minnesota is without a starting-caliber guard and shooter for the season."
-        }
-      ],
-      "updated": "2026-10-26T14:03:59Z"
-    }
-  },
-  "days": {
-    "2026-10-26": {
-      "single": {
-        "eventID": "Dk3koXoncNVgfZYn5TH6",
-        "oddID": "points-away-game-sp-away",
-        "line": 9.5,
-        "odds": -108,
-        "label": "PHX +9.5",
-        "team": "PHX",
-        "why": "Oklahoma City lost Jalen Williams to a severe leg injury on Sunday, Cason Wallace and Jaylin Williams both left that game early, and the Thunder now play the second night of a back-to-back. They scored only 96 and 108 in their two wins, so a 9.5-point cushion is a lot to ask from a shorthanded, tired offense. Phoenix just hung 131 on Golden State with Devin Booker scoring 43 and only needs to keep it inside double digits."
-      },
-      "parlay": {
-        "eventID": "U4p86iACMrQFsKkBauNA",
-        "legs": [
-          {
-            "oddID": "points-home-game-sp-home",
-            "line": -8.5,
-            "odds": -114,
-            "label": "MIA -8.5"
-          },
-          {
-            "oddID": "points-GIANNIS_ANTETOKOUNMPO_1_NBA-game-ou-over",
-            "line": 30.5,
-            "odds": -122,
-            "label": "Giannis Antetokounmpo over 30.5 points"
-          },
-          {
-            "oddID": "points-KYRIE_IRVING_1_NBA-game-ou-over",
-            "line": 22.5,
-            "odds": -112,
-            "label": "Kyrie Irving over 22.5 points"
-          }
-        ],
-        "price": "+547",
-        "why": "Dallas shows up in Miami without Dereck Lively, Santi Aldama and Naji Marshall, with Cooper Flagg questionable and Caleb Martin doubtful, so Daniel Gafford is the only rim protector standing between Giannis and the basket. Giannis is averaging 28.3 on an 0-3 Heat team that needs a win badly. On the other end, with Flagg likely out, Kyrie Irving keeps all the usage; he is already scoring 28.5 a night and Miami gave up 118.5 per game last season."
-      },
-      "updated": "2026-10-26T14:03:59Z"
-    }
+ "days": {
+  "2026-10-26": {
+   "parlay": {
+    "eventID": "U4p86iACMrQFsKkBauNA",
+    "legs": [
+     {
+      "label": "MIA -8.5",
+      "line": -8.5,
+      "oddID": "points-home-game-sp-home",
+      "odds": -114
+     },
+     {
+      "label": "Giannis Antetokounmpo over 30.5 points",
+      "line": 30.5,
+      "oddID": "points-GIANNIS_ANTETOKOUNMPO_1_NBA-game-ou-over",
+      "odds": -122
+     },
+     {
+      "label": "Kyrie Irving over 22.5 points",
+      "line": 22.5,
+      "oddID": "points-KYRIE_IRVING_1_NBA-game-ou-over",
+      "odds": -112
+     }
+    ],
+    "price": "+547",
+    "why": "Dallas shows up in Miami without Dereck Lively, Santi Aldama and Naji Marshall, with Cooper Flagg questionable and Caleb Martin doubtful, so Daniel Gafford is the only rim protector standing between Giannis and the basket. Giannis is averaging 28.3 on an 0-3 Heat team that needs a win badly. On the other end, with Flagg likely out, Kyrie Irving keeps all the usage; he is already scoring 28.5 a night and Miami gave up 118.5 per game last season."
+   },
+   "single": {
+    "eventID": "Dk3koXoncNVgfZYn5TH6",
+    "label": "PHX +9.5",
+    "line": 9.5,
+    "oddID": "points-away-game-sp-away",
+    "odds": -108,
+    "team": "PHX",
+    "why": "Oklahoma City lost Jalen Williams to a severe leg injury on Sunday, Cason Wallace and Jaylin Williams both left that game early, and the Thunder now play the second night of a back-to-back. They scored only 96 and 108 in their two wins, so a 9.5-point cushion is a lot to ask from a shorthanded, tired offense. Phoenix just hung 131 on Golden State with Devin Booker scoring 43 and only needs to keep it inside double digits."
+   },
+   "updated": "2026-10-26T14:03:59Z"
   }
+ },
+ "games": {
+  "8G8Zcws9ZpYrEyvqTRIK": {
+   "away": "WAS",
+   "blurb": "Two 2-1 teams in Charlotte. The Wizards dropped a 112-102 home game to Toronto, then went into Chicago and won 124-120 on Saturday. The Hornets got run out of their own gym 128-81 by Atlanta before holding off Miami 115-110 after coughing up a 23-point lead. Charlotte at -1.5 with a 228.5 total says the book sees a coin flip, with the Hornets' health the swing factor.",
+   "date": "2026-10-26",
+   "home": "CHA",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Left hamstring; he has not played yet this season and Charlotte is missing its second leading scorer from a year ago.",
+     "player": "Kon Knueppel",
+     "stats": "18.5 pts, 5.3 reb, 3.4 ast last season",
+     "status": "Questionable",
+     "team": "CHA"
+    },
+    {
+     "impact": "High",
+     "note": "Left calf; still ramping up and yet to debut for the Hornets, so Charlotte is short a starting-caliber guard and scorer.",
+     "player": "Coby White",
+     "stats": "17.4 pts, 3.4 reb, 4.0 ast last season",
+     "status": "Questionable",
+     "team": "CHA"
+    },
+    {
+     "impact": "Medium",
+     "note": "Right hamstring; Charlotte loses a sturdy frontcourt defender if he sits.",
+     "player": "Grant Williams",
+     "stats": "Veteran forward, physical defender and floor spacer",
+     "status": "Questionable",
+     "team": "CHA"
+    },
+    {
+     "impact": "Medium",
+     "note": "Left ankle; Washington is without a young scoring wing from its rotation.",
+     "player": "AJ Dybantsa",
+     "stats": "Rookie wing",
+     "status": "Out",
+     "team": "WAS"
+    },
+    {
+     "impact": "Low",
+     "note": "Left hip; thins the Wizards' bench behind Anthony Davis and Alex Sarr.",
+     "player": "Tristan Vukcevic",
+     "stats": "Reserve big",
+     "status": "Out",
+     "team": "WAS"
+    }
+   ],
+   "updated": "2026-10-26T14:03:59Z"
+  },
+  "B9RBbJYxAWGnbX7cq6QB": {
+   "away": "GSW",
+   "blurb": "Golden State is 0-3 and limping into Denver, having lost 111-108 at home to Memphis and 131-122 in Phoenix with Jimmy Butler, Kristaps Porzingis and Moses Moody all out. Denver is 1-1 after an 84-96 dud in Oklahoma City and a 141-135 shootout win over New Orleans. Nuggets -7.5 with a 236.5 total expects Jokic to feast on a thin Warriors frontcourt in a high-scoring game.",
+   "date": "2026-10-26",
+   "home": "DEN",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Right knee; the Warriors lose their second creator and best wing defender alongside Curry.",
+     "player": "Jimmy Butler III",
+     "stats": "20.0 pts, 5.6 reb, 4.9 ast last season",
+     "status": "Out",
+     "team": "GSW"
+    },
+    {
+     "impact": "High",
+     "note": "Illness; Golden State has no stretch big or rim protector to throw at Jokic.",
+     "player": "Kristaps Porzingis",
+     "stats": "16.7 pts, 5.2 reb, 1.2 blk last season",
+     "status": "Out",
+     "team": "GSW"
+    },
+    {
+     "impact": "Medium",
+     "note": "Left knee; another rotation wing and shooter gone from an already short bench.",
+     "player": "Moses Moody",
+     "stats": "12.1 pts, 3.3 reb, 1.6 ast last season",
+     "status": "Out",
+     "team": "GSW"
+    },
+    {
+     "impact": "Low",
+     "note": "Left knee tendinitis; bench depth only.",
+     "player": "Gui Santos",
+     "stats": "Reserve forward",
+     "status": "Questionable",
+     "team": "GSW"
+    },
+    {
+     "impact": "Medium",
+     "note": "Right ankle; Denver loses a starting wing shooter and would lean harder on Braun and the bench.",
+     "player": "Cameron Johnson",
+     "stats": "12.2 pts, 3.8 reb, 2.4 ast last season",
+     "status": "Doubtful",
+     "team": "DEN"
+    },
+    {
+     "impact": "Low",
+     "note": "Left knee; bench scoring takes a small hit.",
+     "player": "Julian Strawther",
+     "stats": "Rotation wing, shooter",
+     "status": "Out",
+     "team": "DEN"
+    }
+   ],
+   "updated": "2026-10-26T14:03:59Z"
+  },
+  "Dk3koXoncNVgfZYn5TH6": {
+   "away": "PHX",
+   "blurb": "A rematch of last spring's first-round sweep. Oklahoma City is 2-0 after beating Denver 96-84 and the Clippers 108-101 on Sunday, but that win cost them Jalen Williams to a severe leg injury, and this is the second night of a back-to-back. Phoenix is 1-1 after a 124-83 loss in Portland and a 131-122 win over Golden State behind Devin Booker's 43. OKC -9.5 and a 218.5 total say the book still trusts the Thunder defense to grind it out.",
+   "date": "2026-10-26",
+   "home": "OKC",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Severe left leg injury suffered Sunday; the Thunder lose their second-best scorer and playmaker for a long stretch.",
+     "player": "Jalen Williams",
+     "stats": "17.1 pts, 4.6 reb, 5.5 ast last season",
+     "status": "Out",
+     "team": "OKC"
+    },
+    {
+     "impact": "Medium",
+     "note": "Left shoulder after leaving Sunday's game early; OKC's perimeter defense gets thinner.",
+     "player": "Cason Wallace",
+     "stats": "Rotation guard, point-of-attack defender",
+     "status": "Questionable",
+     "team": "OKC"
+    },
+    {
+     "impact": "Low",
+     "note": "Right wrist after leaving Sunday's game in the first quarter; backup frontcourt minutes.",
+     "player": "Jaylin Williams",
+     "stats": "Reserve big, floor spacer",
+     "status": "Questionable",
+     "team": "OKC"
+    },
+    {
+     "impact": "Low",
+     "note": "Back; backup ballhandling only.",
+     "player": "Nikola Topic",
+     "stats": "Reserve guard",
+     "status": "Out",
+     "team": "OKC"
+    },
+    {
+     "impact": "Low",
+     "note": "Right knee; bench frontcourt depth.",
+     "player": "Thomas Sorber",
+     "stats": "Reserve big",
+     "status": "Out",
+     "team": "OKC"
+    },
+    {
+     "impact": "High",
+     "note": "Left shoulder; Phoenix is without its starting center and rim protector against Holmgren and a Thunder team that already crushes the glass against them.",
+     "player": "Mark Williams",
+     "stats": "11.7 pts, 8.0 reb, 0.9 blk last season",
+     "status": "Out",
+     "team": "PHX"
+    },
+    {
+     "impact": "Medium",
+     "note": "Right oblique strain; with Williams also out, the Suns' frontcourt rotation is very thin.",
+     "player": "Oso Ighodaro",
+     "stats": "Backup big",
+     "status": "Doubtful",
+     "team": "PHX"
+    }
+   ],
+   "updated": "2026-10-26T14:03:59Z"
+  },
+  "GsucmgAiRzFwcIkKvDYq": {
+   "away": "CHI",
+   "blurb": "Boston is 1-1 after blowing a 22-point lead in a 121-113 loss at Detroit, then beating the Knicks 107-103 behind 36 from Jayson Tatum. Chicago is 1-2, a 132-125 win in Milwaukee sandwiched by a 135-92 loss in Toronto and a 124-120 home loss to Washington, shooting 22.6 percent from three. It is the first night of a back-to-back for the Celtics. Boston -13.5 and 233.5 says the Bulls' turnovers and cold shooting get punished at TD Garden.",
+   "date": "2026-10-26",
+   "home": "BOS",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Hamstring; the Bulls lose their starting center and rim protector, leaving Jalen Smith to handle Mitchell Robinson and Neemias Queta.",
+     "player": "Nic Claxton",
+     "stats": "11.7 pts, 6.9 reb, 3.7 ast, 1.1 blk last season",
+     "status": "Out",
+     "team": "CHI"
+    },
+    {
+     "impact": "Medium",
+     "note": "Groin; he missed Saturday's loss and Chicago needs his size against Tatum and Paul George.",
+     "player": "Patrick Williams",
+     "stats": "Starting forward, wing defender",
+     "status": "Questionable",
+     "team": "CHI"
+    },
+    {
+     "impact": "Low",
+     "note": "Head contusion; a rotation forward who also sat Saturday.",
+     "player": "Noa Essengue",
+     "stats": "Second-year forward",
+     "status": "Questionable",
+     "team": "CHI"
+    }
+   ],
+   "updated": "2026-10-26T14:03:59Z"
+  },
+  "K4LhWzNf5pgRJ5gARYEa": {
+   "away": "IND",
+   "blurb": "Indiana is 2-1 and on the second night of a back-to-back after blasting Brooklyn 136-109 on Sunday, with Tyrese Haliburton putting up 24 points and 10 assists in his third game back from the Achilles. Milwaukee is 0-3 and bleeding 129 points a game, losing 132-125 at home to Chicago and 127-116 in Philadelphia. Pacers -4.5 with a 239.5 total is the book expecting a track meet that Indiana's offense wins even without Ivica Zubac.",
+   "date": "2026-10-26",
+   "home": "MIL",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Sprained left ankle suffered Sunday in Brooklyn; Rick Carlisle called him unlikely for Monday, so Jay Huff and Larry Nance take the center minutes.",
+     "player": "Ivica Zubac",
+     "stats": "14.1 pts, 10.6 reb, 2.2 ast last season",
+     "status": "Doubtful",
+     "team": "IND"
+    },
+    {
+     "impact": "Medium",
+     "note": "Hamstring strain; Indiana's backup point guard and bench pace-setter is out with no timeline.",
+     "player": "T.J. McConnell",
+     "stats": "9.4 pts, 2.2 reb, 5.1 ast last season",
+     "status": "Out",
+     "team": "IND"
+    },
+    {
+     "impact": "Low",
+     "note": "Left meniscus tear; out for weeks, thinning the wing depth.",
+     "player": "Ben Sheppard",
+     "stats": "Rotation wing",
+     "status": "Out",
+     "team": "IND"
+    }
+   ],
+   "updated": "2026-10-26T14:03:59Z"
+  },
+  "PWXCLmDP0ynCsKwSKUoQ": {
+   "away": "MEM",
+   "blurb": "Second meeting in a week. Memphis is 3-0 after beating Golden State 111-108 and Sacramento 123-112 on Sunday, and already handled Utah 123-103 on opening night with Ty Jerome dropping 45. The Jazz are 1-2, edging New Orleans 120-119 before falling 132-123 to the Lakers on Sunday. Both teams are on the second night of a back-to-back. Utah -1.5 with a 238.5 total is basically a pick'em, with Zach Edey out for Memphis and Jusuf Nurkic out for Utah.",
+   "date": "2026-10-26",
+   "home": "UTA",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Left ankle; Memphis loses its starting center and best rebounder, so the Jazz frontcourt gets a lighter night inside.",
+     "player": "Zach Edey",
+     "stats": "13.6 pts, 11.1 reb in 11 games last season",
+     "status": "Out",
+     "team": "MEM"
+    },
+    {
+     "impact": "Low",
+     "note": "Right knee; bench depth only.",
+     "player": "Karim Lopez",
+     "stats": "Reserve forward",
+     "status": "Out",
+     "team": "MEM"
+    },
+    {
+     "impact": "Medium",
+     "note": "Right foot; Utah is without its veteran center and passing hub, with Jaxson Hayes carrying the middle.",
+     "player": "Jusuf Nurkic",
+     "stats": "10.9 pts, 10.4 reb, 4.8 ast last season",
+     "status": "Out",
+     "team": "UTA"
+    }
+   ],
+   "updated": "2026-10-26T14:03:59Z"
+  },
+  "U4p86iACMrQFsKkBauNA": {
+   "away": "DAL",
+   "blurb": "Dallas is 1-2, beating Indiana 121-105 before getting handled 122-106 at home by San Antonio, and arrives in Miami with most of its frontcourt on the shelf. The Heat are 0-3, losing 128-111 to Detroit and then 115-110 in Charlotte after erasing a 23-point deficit, with Giannis fouling out. Kyrie Irving is carrying Dallas at 28.5 a night. Miami -8.5 with a 237.5 total expects Giannis and Bam to bully a Mavs roster down to Daniel Gafford inside.",
+   "date": "2026-10-26",
+   "home": "MIA",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Left shoulder; without him Dallas loses its best two-way player and leans almost entirely on Kyrie Irving to create.",
+     "player": "Cooper Flagg",
+     "stats": "21.0 pts, 6.7 reb, 4.5 ast last season",
+     "status": "Questionable",
+     "team": "DAL"
+    },
+    {
+     "impact": "High",
+     "note": "Right foot; the Mavs' lob threat and shot blocker is out against Giannis and Bam Adebayo.",
+     "player": "Dereck Lively II",
+     "stats": "Starting center, rim protector",
+     "status": "Out",
+     "team": "DAL"
+    },
+    {
+     "impact": "Medium",
+     "note": "Illness; Dallas loses a starting-caliber wing who was averaging 5.7 assists this season.",
+     "player": "Naji Marshall",
+     "stats": "15.2 pts, 4.7 reb, 3.3 ast last season",
+     "status": "Out",
+     "team": "DAL"
+    },
+    {
+     "impact": "Medium",
+     "note": "Right knee; another frontcourt scorer and floor spacer out, leaving Daniel Gafford as the main rim protector.",
+     "player": "Santi Aldama",
+     "stats": "14.0 pts, 6.7 reb, 2.9 ast last season",
+     "status": "Out",
+     "team": "DAL"
+    },
+    {
+     "impact": "Low",
+     "note": "Right thumb; bench wing depth gets even thinner.",
+     "player": "Caleb Martin",
+     "stats": "Rotation wing",
+     "status": "Doubtful",
+     "team": "DAL"
+    }
+   ],
+   "updated": "2026-10-26T14:03:59Z"
+  },
+  "UToSAuvJM1apdys0zLQd": {
+   "away": "ATL",
+   "blurb": "A rematch of Saturday's game in Atlanta, where Houston won 121-114 on the second night of a back-to-back without Fred VanVleet or Marcus Smart. The Rockets are 3-0 after also winning 114-110 in San Antonio, and get this one at home with their guards possibly back. Atlanta is 2-1, with a 128-81 blowout of Charlotte before that loss. Rockets -5.5 and a 230.5 total trusts the Houston defense and glass to control a rested rematch.",
+   "date": "2026-10-26",
+   "home": "HOU",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Rest after missing Saturday; if he sits again Houston runs the offense through Sengun and Amen Thompson.",
+     "player": "Fred VanVleet",
+     "stats": "Starting point guard, lead ballhandler",
+     "status": "Questionable",
+     "team": "HOU"
+    },
+    {
+     "impact": "Medium",
+     "note": "Left forearm; Houston's point-of-attack defender against Jalen Johnson and the Hawks guards.",
+     "player": "Marcus Smart",
+     "stats": "Veteran guard, defensive stopper",
+     "status": "Questionable",
+     "team": "HOU"
+    },
+    {
+     "impact": "Medium",
+     "note": "Right calf and rest; Houston's second-unit size and offensive rebounding takes a hit if he sits.",
+     "player": "Steven Adams",
+     "stats": "Backup center, offensive rebounder",
+     "status": "Questionable",
+     "team": "HOU"
+    },
+    {
+     "impact": "Low",
+     "note": "Left foot; bench frontcourt depth.",
+     "player": "Mouhamed Gueye",
+     "stats": "Reserve forward",
+     "status": "Out",
+     "team": "ATL"
+    }
+   ],
+   "updated": "2026-10-26T14:03:59Z"
+  },
+  "esdpKX8UceAcDAF2okWV": {
+   "away": "MIN",
+   "blurb": "Minnesota is 3-0 and on the second night of a back-to-back after blowing out Toronto 117-94 on Sunday, following a 115-93 win in Orlando. Cleveland is 1-1, losing 114-106 in Philadelphia and then holding off Brooklyn 125-121 at home with Donovan Mitchell, James Harden and Evan Mobley leading the way. Cavs -4.5 with a 233.5 total says the book expects the home team's guards to go at Gobert's drop coverage while the tired Wolves cool off.",
+   "date": "2026-10-26",
+   "home": "CLE",
+   "injuries": [
+    {
+     "impact": "Medium",
+     "note": "Right Achilles; Minnesota is without a starting-caliber guard and shooter for the season.",
+     "player": "Donte DiVincenzo",
+     "stats": "12.2 pts, 4.1 reb, 3.8 ast last season",
+     "status": "Out",
+     "team": "MIN"
+    }
+   ],
+   "updated": "2026-10-26T14:03:59Z"
+  }
+ },
+ "results": {
+  "2026-10-26": {
+   "parlay": "loss",
+   "single": "loss"
+  }
+ }
 }
