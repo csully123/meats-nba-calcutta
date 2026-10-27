@@ -452,7 +452,6 @@ td.legs div{white-space:nowrap}
     const tokenLine=p=>{const spent=E.spentTokenIds(p,S.wagers);const now=new Date().toISOString();const parts=[];
       parts.push(spent.has('week:'+E.weekKey(now))?'weekly 1.5x used':'weekly 1.5x ready');
       parts.push(spent.has('mega')?'Mega Bonus used':'Mega Bonus ready');
-      if(CFG.christmasDate&&nowET()<=CFG.christmasDate)parts.push(spent.has('christmas')?'Christmas 1.5x used':'Christmas 1.5x ready');
       const stages={};for(const g of gameList()){const m=gameMeta(g);if(m.stage==='r1'||m.stage==='r2'||m.stage==='cf')(stages[m.stage]=stages[m.stage]||new Set()).add(m.series);}
       for(const [stg,set] of Object.entries(stages)){const left=[...set].filter(sk=>!spent.has(stg+':'+sk)).length;parts.push(`${left} of ${set.size} ${E.ROUND_NAMES[stg]} boosts left`);}
       return parts.join(', ');};
