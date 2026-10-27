@@ -1,18 +1,18 @@
 {
- "backedUpAt": "2026-10-27T08:42:41Z",
+ "backedUpAt": "2026-10-27T16:58:58Z",
  "count": 6,
  "wagers": {
   "EhDun7mY9NyggHX8znj4": {
-   "_updated": "2026-10-27T07:56:38.983318Z",
+   "_updated": "2026-10-27T16:58:31.964321Z",
    "boost": null,
    "eventID": "K4LhWzNf5pgRJ5gARYEa",
    "game": "IND at MIL",
    "gameDate": "2026-10-26",
    "gameStart": "2026-10-27T00:00:00.000Z",
    "legResults": [
-    "void",
-    "void",
-    "void"
+    "loss",
+    "loss",
+    "loss"
    ],
    "legs": [
     {
@@ -67,18 +67,18 @@
      "team": "IND"
     }
    ],
-   "net": 0,
-   "payout": 5,
+   "net": -5,
+   "payout": 0,
    "placedAt": "2026-10-26T17:49:23.576Z",
    "player": "Beekie",
    "series": null,
-   "settledAt": "2026-10-27T07:56:38Z",
+   "settledAt": "2026-10-27T16:58:31Z",
    "stage": "regular",
    "stake": 5,
-   "status": "void"
+   "status": "loss"
   },
   "FhE8GGLlgmOEobqOYn1Y": {
-   "_updated": "2026-10-27T07:56:39.144633Z",
+   "_updated": "2026-10-27T16:58:32.082808Z",
    "boost": {
     "id": "week:2026-10-26",
     "label": "1.5x weekly",
@@ -89,9 +89,9 @@
    "gameDate": "2026-10-26",
    "gameStart": "2026-10-26T23:30:00.000Z",
    "legResults": [
-    "void",
-    "void",
-    "void"
+    "loss",
+    "loss",
+    "loss"
    ],
    "legs": [
     {
@@ -146,18 +146,18 @@
      "team": "DAL"
     }
    ],
-   "net": 0,
-   "payout": 10,
+   "net": -10,
+   "payout": 0,
    "placedAt": "2026-10-26T14:10:22.601Z",
    "player": "Sulliver",
    "series": null,
-   "settledAt": "2026-10-27T07:56:38Z",
+   "settledAt": "2026-10-27T16:58:31Z",
    "stage": "regular",
    "stake": 10,
-   "status": "void"
+   "status": "loss"
   },
   "HdcbEGsGqkpOdNjkYmIl": {
-   "_updated": "2026-10-27T07:56:39.312295Z",
+   "_updated": "2026-10-27T16:58:32.188438Z",
    "boost": {
     "id": "week:2026-10-26",
     "label": "1.5x weekly",
@@ -168,9 +168,9 @@
    "gameDate": "2026-10-26",
    "gameStart": "2026-10-27T00:00:00.000Z",
    "legResults": [
-    "void",
-    "void",
-    "void"
+    "win",
+    "loss",
+    "loss"
    ],
    "legs": [
     {
@@ -225,25 +225,25 @@
      "team": "PHX"
     }
    ],
-   "net": 0,
-   "payout": 5,
+   "net": -5,
+   "payout": 0,
    "placedAt": "2026-10-26T17:48:47.112Z",
    "player": "Beekie",
    "series": null,
-   "settledAt": "2026-10-27T07:56:38Z",
+   "settledAt": "2026-10-27T16:58:31Z",
    "stage": "regular",
    "stake": 5,
-   "status": "void"
+   "status": "loss"
   },
   "OLIClsFR6EMnvvg9Dra8": {
-   "_updated": "2026-10-27T07:56:39.469384Z",
+   "_updated": "2026-10-27T16:58:32.322628Z",
    "boost": null,
    "eventID": "Dk3koXoncNVgfZYn5TH6",
    "game": "PHX at OKC",
    "gameDate": "2026-10-26",
    "gameStart": "2026-10-27T00:00:00.000Z",
    "legResults": [
-    "void"
+    "loss"
    ],
    "legs": [
     {
@@ -264,27 +264,27 @@
      "team": "PHX"
     }
    ],
-   "net": 0,
-   "payout": 10,
+   "net": -10,
+   "payout": 0,
    "placedAt": "2026-10-26T14:07:18.310Z",
    "player": "Sulliver",
    "series": null,
-   "settledAt": "2026-10-27T07:56:38Z",
+   "settledAt": "2026-10-27T16:58:31Z",
    "stage": "regular",
    "stake": 10,
-   "status": "void"
+   "status": "loss"
   },
   "UKy4bVxEciIKooHWhJ1G": {
-   "_updated": "2026-10-27T07:56:39.611363Z",
+   "_updated": "2026-10-27T16:58:32.488986Z",
    "boost": null,
    "eventID": "esdpKX8UceAcDAF2okWV",
    "game": "MIN at CLE",
    "gameDate": "2026-10-26",
    "gameStart": "2026-10-26T23:00:00.000Z",
    "legResults": [
-    "void",
-    "void",
-    "void"
+    "loss",
+    "loss",
+    "loss"
    ],
    "legs": [
     {
@@ -339,27 +339,27 @@
      "team": "MIN"
     }
    ],
-   "net": 0,
-   "payout": 5,
+   "net": -5,
+   "payout": 0,
    "placedAt": "2026-10-26T17:50:29.942Z",
    "player": "Beekie",
    "series": null,
-   "settledAt": "2026-10-27T07:56:38Z",
+   "settledAt": "2026-10-27T16:58:31Z",
    "stage": "regular",
    "stake": 5,
-   "status": "void"
+   "status": "loss"
   },
   "hRrSmZyCKCK6AlvVjGEk": {
-   "_updated": "2026-10-27T07:56:39.748806Z",
+   "_updated": "2026-10-27T16:58:32.597814Z",
    "boost": null,
    "eventID": "B9RBbJYxAWGnbX7cq6QB",
    "game": "GSW at DEN",
    "gameDate": "2026-10-26",
    "gameStart": "2026-10-27T02:00:00.000Z",
    "legResults": [
-    "void",
-    "void",
-    "void"
+    "loss",
+    "win",
+    "win"
    ],
    "legs": [
     {
@@ -414,15 +414,15 @@
      "team": "DEN"
     }
    ],
-   "net": 0,
-   "payout": 5,
+   "net": -5,
+   "payout": 0,
    "placedAt": "2026-10-26T17:49:50.712Z",
    "player": "Beekie",
    "series": null,
-   "settledAt": "2026-10-27T07:56:38Z",
+   "settledAt": "2026-10-27T16:58:31Z",
    "stage": "regular",
    "stake": 5,
-   "status": "void"
+   "status": "loss"
   }
  }
 }
