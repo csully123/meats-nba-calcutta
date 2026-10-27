@@ -128,6 +128,7 @@
   E.tokensForGame=function(g,cfg,player){const T=(cfg&&cfg.tokens)||{};const out=[];const prizes=(cfg&&cfg.prizes)||{};
     const wk=E.weekKey(g.start);if(wk&&T.week)out.push({id:'week:'+wk,mult:T.week,label:`${T.week}x weekly`,why:'this week'});
     if(g.stage==='cupfinal'&&T.cupFinal)out.push({id:'cupfinal',mult:T.cupFinal,label:`${T.cupFinal}x Cup final`,why:'NBA Cup championship'});
+    if(T.christmas&&cfg.christmasDate&&E.gameDate(g.start)===cfg.christmasDate)out.push({id:'christmas',mult:T.christmas,label:`${T.christmas}x Christmas`,why:'Christmas Day, one game of your choice'});
     if((g.stage==='r1'||g.stage==='r2'||g.stage==='cf')&&g.series&&T[g.stage])out.push({id:g.stage+':'+g.series,mult:T[g.stage],label:`${T[g.stage]}x series`,why:`${E.ROUND_NAMES[g.stage]} series`});
     if(g.stage==='finals'&&T.finals){out.push({id:'finals',mult:T.finals,label:`${T.finals}x Finals`,why:'NBA Finals'});
       if(prizes.first===player&&prizes.firstMult)out.push({id:'prize:first',mult:prizes.firstMult,label:`${prizes.firstMult}x Finals (season prize)`,why:'regular-season winner'});}
@@ -140,6 +141,7 @@
   // Can this token be attached to a bet on this game? (window check at placement and again when grading nothing; grading trusts the stored mult)
   E.tokenAllowed=function(tokenId,g,cfg,player,wagers){return E.availableTokens(g,cfg,player,wagers).some(t=>t.id===tokenId);};
 
+  E.gameDate=function(iso){if(!iso)return '';return new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(iso));};
   E.weekKey=function(iso){if(!iso)return '';const d=new Date(iso);const et=new Date(d.toLocaleString('en-US',{timeZone:'America/New_York'}));const day=(et.getDay()+6)%7;et.setDate(et.getDate()-day);return et.getFullYear()+'-'+String(et.getMonth()+1).padStart(2,'0')+'-'+String(et.getDate()).padStart(2,'0');};
 
   if(typeof module!=='undefined'&&module.exports)module.exports=E;else root.BookEngine=E;

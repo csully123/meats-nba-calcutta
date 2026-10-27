@@ -343,7 +343,7 @@ td.legs div{white-space:nowrap}
         <dt>Minimum</dt><dd>Wager at least 20 points every week, Monday through Sunday, or your whole stack if you have less than 20.</dd>
         <dt>Bust</dt><dd>Hit zero with no bets open and you have busted: you reload to 100 and keep playing. It costs you at the end: one bust forfeits 10% of your final total, two busts 25%, three 45%, four 70%, five 90%. Each bust forfeits at least 20 points regardless, so busting on purpose for the reload never pays.</dd>
         <dt>Foul out</dt><dd>Six busts and you have fouled out, like a sixth foul. No more bets, and you are out of the competition. It does not matter what your stack was or how many you had won; you cannot finish anywhere. If everyone fouls out, nobody wins.</dd>
-        <dt>Boost tokens</dt><dd>A boost multiplies the profit on one winning bet. Everyone gets the same tokens, each good for one bet inside its window, use it or lose it: a 1.5x token every week (Monday through Sunday, any game that week); a 1.5x token for the NBA Cup championship game; in the playoffs a 1.5x token for each first-round series, a 2x token for each second-round series, a 2.5x token for each conference finals series and a 3x token for the Finals, each usable only on games in that series. Nothing for the play-in. Pick the boost on the slip when you place the bet; it locks in with the bet. Win and the profit multiplies; lose and the token is gone with the stake. A bet that pushes or voids gives the token back. One token per bet, never two. A boost applies to the first 20 points of a bet's stake: those 20 points pay at the boosted rate and anything above them pays at the normal price. The max-bet rule still applies.</dd>
+        <dt>Boost tokens</dt><dd>A boost multiplies the profit on one winning bet. Everyone gets the same tokens, each good for one bet inside its window, use it or lose it: a 1.5x token every week (Monday through Sunday, any game that week); a 1.5x token for the NBA Cup championship game; a 1.5x token for one Christmas Day game of your choice; in the playoffs a 1.5x token for each first-round series, a 2x token for each second-round series, a 2.5x token for each conference finals series and a 3x token for the Finals, each usable only on games in that series. Nothing for the play-in. Pick the boost on the slip when you place the bet; it locks in with the bet. Win and the profit multiplies; lose and the token is gone with the stake. A bet that pushes or voids gives the token back. One token per bet, never two. A boost applies to the first 20 points of a bet's stake: those 20 points pay at the boosted rate and anything above them pays at the normal price. The max-bet rule still applies.</dd>
         <dt>Mega Bonus</dt><dd>One 5x token for the whole season, playoffs included, on any bet you like. When it hits, the book lets you know.</dd>
         <dt>Regular-season prize</dt><dd>Highest stack when the regular season ends gets 25 points and an extra 3x token for the Finals. Second place gets an extra 2x token for the second round.</dd>
         <dt>Settling</dt><dd>Bets grade overnight from the box score. A leg exactly on the number pushes and drops out of a parlay. A player who does not play voids that leg. A lost leg loses the slip. A voided bet returns its stake and hands back any token.</dd>
@@ -380,7 +380,7 @@ td.legs div{white-space:nowrap}
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
 <script src="../firebase-config.js"></script>
-<script src="engine.js?v=20261027a"></script>
+<script src="engine.js?v=20261027b"></script>
 <script>
 (function(){
   const E=window.BookEngine;
@@ -388,7 +388,7 @@ td.legs div{white-space:nowrap}
   const PLAYERS=["Kev","Beekie","Mio","Sulliver"];
   const FLAGS={Kev:'flag-pl',Beekie:'flag-il',Mio:'flag-rs',Sulliver:'flag-it'};
   const CFG={start:200,reload:100,maxBetFraction:0.25,minWeekly:20,
-    tokens:{week:1.5,cupFinal:1.5,r1:1.5,r2:2,cf:2.5,finals:3,mega:5},
+    tokens:{week:1.5,cupFinal:1.5,christmas:1.5,r1:1.5,r2:2,cf:2.5,finals:3,mega:5},christmasDate:'2026-12-25',
     // Regular-season prizes, filled in by the commissioner when the regular season ends (names exactly as above).
     prizes:{first:null,firstMult:3,second:null,secondMult:2},
     // Point adjustments outside of bets: the regular-season winner's 25, applied at the moment given.
@@ -452,6 +452,7 @@ td.legs div{white-space:nowrap}
     const tokenLine=p=>{const spent=E.spentTokenIds(p,S.wagers);const now=new Date().toISOString();const parts=[];
       parts.push(spent.has('week:'+E.weekKey(now))?'weekly 1.5x used':'weekly 1.5x ready');
       parts.push(spent.has('mega')?'Mega Bonus used':'Mega Bonus ready');
+      if(CFG.christmasDate&&nowET()<=CFG.christmasDate)parts.push(spent.has('christmas')?'Christmas 1.5x used':'Christmas 1.5x ready');
       const stages={};for(const g of gameList()){const m=gameMeta(g);if(m.stage==='r1'||m.stage==='r2'||m.stage==='cf')(stages[m.stage]=stages[m.stage]||new Set()).add(m.series);}
       for(const [stg,set] of Object.entries(stages)){const left=[...set].filter(sk=>!spent.has(stg+':'+sk)).length;parts.push(`${left} of ${set.size} ${E.ROUND_NAMES[stg]} boosts left`);}
       return parts.join(', ');};
