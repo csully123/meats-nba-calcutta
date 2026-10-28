@@ -26,7 +26,7 @@ jobs:
         run: |
           git config user.name "calcutta-bot"
           git config user.email "calcutta-bot@users.noreply.github.com"
-          git add data/games.json data/status.json
+          git add data/games.json data/status.json data/rosters.json 2>/dev/null || git add data/games.json data/status.json
           if git diff --cached --quiet; then
             echo "No changes"
           else

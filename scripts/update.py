@@ -93,6 +93,49 @@ def label_of(ev: dict) -> str | None:
     return None
 
 
+ROSTERS = ROOT / "data" / "rosters.json"
+TEAMS_FEED = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams"
+ROSTER_FEED = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/{id}/roster"
+
+
+def get_json(url: str) -> dict:
+    req = urllib.request.Request(url, headers={"User-Agent": "meats-nba-calcutta/1.0"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.load(r)
+
+
+def refresh_rosters(now: datetime) -> None:
+    """Once a day: every NBA player's team and listed position from ESPN, for the bettor profiles (guards vs bigs)."""
+    if ROSTERS.exists():
+        try:
+            prev = json.loads(ROSTERS.read_text())
+            if (now - datetime.fromisoformat(prev.get("updated", "2000-01-01T00:00:00+00:00"))).total_seconds() < 20 * 3600:
+                return
+        except (ValueError, TypeError):
+            pass
+    try:
+        teams = [t["team"] for t in get_json(TEAMS_FEED)["sports"][0]["leagues"][0]["teams"]]
+    except Exception as e:  # noqa: BLE001
+        print(f"roster refresh skipped: {e}", file=sys.stderr)
+        return
+    players = {}
+    for t in teams:
+        try:
+            r = get_json(ROSTER_FEED.format(id=t["id"]))
+        except Exception as e:  # noqa: BLE001
+            print(f"roster fetch failed for {t.get('abbreviation')}: {e}", file=sys.stderr)
+            continue
+        code = ABBR.get(t.get("abbreviation"), t.get("abbreviation"))
+        for a in r.get("athletes") or []:
+            pos = (a.get("position") or {}).get("abbreviation")
+            name = a.get("displayName") or a.get("fullName")
+            if name:
+                players[name] = {"team": code, "pos": pos}
+    if players:
+        ROSTERS.write_text(json.dumps({"updated": now.isoformat(), "players": dict(sorted(players.items()))}, indent=1) + "\n")
+        print(f"rosters: {len(players)} players")
+
+
 def main() -> int:
     games = json.loads(GAMES.read_text()) if GAMES.exists() else {}
     cfg = json.loads(CONFIG.read_text()) if CONFIG.exists() else {}
@@ -186,6 +229,7 @@ def main() -> int:
 
     out = {"updated": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "games": dict(sorted(games.items(), key=lambda kv: kv[1]["start"]))}
     GAMES.write_text(json.dumps(out["games"], indent=1, sort_keys=True) + "\n")
+    refresh_rosters(now)
     (ROOT / "data" / "status.json").write_text(json.dumps({"updated": out["updated"], "changed": changed}) + "\n")
     print(f"{len(games)} games on file, {changed} changed")
     return 0
