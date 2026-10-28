@@ -1027,5 +1027,14 @@
    "parlay": "loss",
    "single": "loss"
   }
+ },
+ "winOdds": {
+  "odds": {
+   "Beekie": 23,
+   "Kev": 28,
+   "Mio": 26,
+   "Sulliver": 23
+  },
+  "updated": "2026-10-28T15:19:02Z"
  }
 }
