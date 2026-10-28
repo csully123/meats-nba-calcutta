@@ -1334,13 +1334,13 @@
   "awayColor": "1d428a",
   "awayLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/det.png",
   "awayName": "Detroit Pistons",
-  "awayScore": 84,
+  "awayScore": 97,
   "date": "2026-10-27",
   "home": "NYK",
   "homeColor": "1d428a",
   "homeLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
   "homeName": "New York Knicks",
-  "homeScore": 99,
+  "homeScore": 111,
   "id": "401909878",
   "label": null,
   "multiplier": 1,
@@ -1350,7 +1350,7 @@
   "spreadUpdated": "2026-10-27T23:00:04Z",
   "stage": "regular",
   "start": "2026-10-28T00:00:00Z",
-  "status": "inprogress"
+  "status": "final"
  },
  "401909879": {
   "away": "SAC",
@@ -1380,13 +1380,13 @@
   "awayColor": "e03a3e",
   "awayLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png",
   "awayName": "Portland Trail Blazers",
-  "awayScore": null,
+  "awayScore": 22,
   "date": "2026-10-27",
   "home": "LAL",
   "homeColor": "552583",
   "homeLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lal.png",
   "homeName": "Los Angeles Lakers",
-  "homeScore": null,
+  "homeScore": 27,
   "id": "401909880",
   "label": null,
   "multiplier": 1,
@@ -1396,7 +1396,7 @@
   "spreadUpdated": "2026-10-27T17:12:03Z",
   "stage": "regular",
   "start": "2026-10-28T03:00:00Z",
-  "status": "scheduled"
+  "status": "inprogress"
  },
  "401909881": {
   "away": "MIA",
