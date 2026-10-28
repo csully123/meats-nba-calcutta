@@ -99,6 +99,8 @@ details.day>summary::-webkit-details-marker{display:none}
 details.day>summary h2::before{content:"\25B8";display:inline-block;width:1em;color:var(--muted)}
 details.day[open]>summary h2::before{transform:rotate(90deg)}
 details.day .daybody{display:flex;flex-direction:column;gap:14px;margin-top:10px}
+details.pastdays>summary{background:var(--soft)}
+details.pastdays>.daybody{gap:10px;padding-left:10px;border-left:2px solid var(--line)}
 .game{background:var(--surface);border:1px solid color-mix(in srgb,var(--outline) 14%,transparent);border-radius:10px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.18),0 10px 24px -14px rgba(0,0,0,.45)}
 .game .meta{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;padding:10px 12px;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted)}
 .game .meta .when{font-weight:600;color:var(--ink);font-family:var(--display);font-size:18px;text-transform:uppercase}
@@ -422,7 +424,7 @@ td.legs div{white-space:nowrap}
     const idx=await fetch('../data/odds/index.json'+bust).then(r=>r.ok?r.json():null).catch(()=>null);
     if(!idx)return;
     S.pulled=idx.updated||null;
-    const today=nowET();const want=(idx.dates||[]).filter(d=>d>=addDays(today,-2));
+    const today=nowET();const wk=E.weekKey(new Date().toISOString());const want=(idx.dates||[]).filter(d=>d>=(wk<addDays(today,-2)?wk:addDays(today,-2)));
     const days=await Promise.all(want.map(d=>fetch(`../data/odds/${d}.json`+bust).then(r=>r.ok?r.json():null).catch(()=>null)));
     const games={};for(const d of days){if(!d)continue;for(const [id,g] of Object.entries(d.games||{}))games[id]=g;}
     S.games=games;
@@ -463,16 +465,20 @@ td.legs div{white-space:nowrap}
       <div class="line num">${esc(tokenLine(s.p))}</div></button>`).join('');}
 
   // ---------- book ----------
-  function renderBook(){const v=$('view-book');const today=nowET();
-    const show=gameList().filter(g=>!g.cancelled&&(g.date>=today||(g.date>=addDays(today,-2)&&S.wagers.some(w=>w.eventID===g.eventID&&canSee(w)))));
+  function renderBook(){const v=$('view-book');const today=nowET();const weekStart=E.weekKey(new Date().toISOString());
+    // Today and upcoming days as usual; earlier days from this week (Monday on) tucked under "Past days". A new week starts clean.
+    const show=gameList().filter(g=>!g.cancelled&&(g.date>=today||g.date>=weekStart));
     if(!S.ready&&!show.length)return;
     if(!show.length){v.innerHTML=`<div class="empty"><strong>No lines yet</strong>Lines load each morning around 8:40 AM ET.</div>`;return;}
     const days={};for(const g of show)(days[g.date]=days[g.date]||[]).push(g);
-    v.innerHTML=Object.keys(days).sort().map(day=>{const list=days[day].sort((a,b)=>a.start<b.start?-1:1);
+    const dayHtml=day=>{const list=days[day].sort((a,b)=>a.start<b.start?-1:1);
       const head=`<h2>${day===today?'Today, ':day<today?'Earlier, ':''}${fmtLong.format(new Date(day+'T12:00:00Z'))}</h2><span class="cnt num">${list.length} game${list.length===1?'':'s'}</span>`;
       const body=renderBestBets(day)+list.map(renderGame).join('');
       if(day===today)return `<div class="day"><div class="dayhead">${head}</div>${body}</div>`;
-      return `<details class="day" data-day="${esc(day)}" ${S.openDays.has(day)?'open':''}><summary class="dayhead">${head}</summary><div class="daybody">${body}</div></details>`;}).join('');
+      return `<details class="day" data-day="${esc(day)}" ${S.openDays.has(day)?'open':''}><summary class="dayhead">${head}</summary><div class="daybody">${body}</div></details>`;};
+    const all=Object.keys(days).sort();const past=all.filter(d=>d<today).reverse();const ahead=all.filter(d=>d>=today);
+    const pastHtml=past.length?`<details class="day pastdays" data-day="__past" ${S.openDays.has('__past')?'open':''}><summary class="dayhead"><h2>Past days</h2><span class="cnt num">${past.length} day${past.length===1?'':'s'} this week</span></summary><div class="daybody">${past.map(dayHtml).join('')}</div></details>`:'';
+    v.innerHTML=ahead.map(dayHtml).join('')+pastHtml;
     v.querySelectorAll('details.day').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)S.openDays.add(d.dataset.day);else S.openDays.delete(d.dataset.day);}));
     v.querySelectorAll('details.more').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)S.openMore.add(d.dataset.g);else S.openMore.delete(d.dataset.g);}));
     v.querySelectorAll('details.wdet').forEach(d=>d.addEventListener('toggle',()=>{const set=S.openW||(S.openW=new Set());if(d.open)set.add(d.dataset.w);else set.delete(d.dataset.w);}));
