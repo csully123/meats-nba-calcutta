@@ -68,15 +68,16 @@ def price_band(a) -> str:
 
 
 def pos_group(pos):
+    """ESPN lists positions as G, F or C (sometimes PG, SG, SF, PF, G-F, F-C): group into guard, forward, center."""
     if not pos:
         return None
     p = pos.upper()
-    if p in ("PG", "SG", "G"):
+    if p in ("PG", "SG", "G", "G-F"):
         return "guard"
-    if p in ("SF", "GF", "G-F", "F", "F-G"):
-        return "wing/forward"
-    if p in ("PF", "C", "F-C", "C-F"):
-        return "big"
+    if p in ("SF", "PF", "F", "F-G"):
+        return "forward"
+    if p in ("C", "F-C", "C-F"):
+        return "center"
     return None
 
 
