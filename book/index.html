@@ -142,8 +142,12 @@ details.pastdays>.daybody{gap:10px;padding-left:10px;border-left:2px solid var(-
 .bestbets .bbhead .record{font-size:16px;font-weight:600;color:var(--ink);background:var(--soft);border:1.5px solid var(--line);border-radius:999px;padding:6px 14px}
 .cbet.best.win{border-color:color-mix(in srgb,var(--win) 60%,var(--line))}.cbet.best.loss{opacity:.8}
 .cbet.best{border:1px solid color-mix(in srgb,var(--tc,var(--accent)) 40%,var(--line));box-shadow:0 10px 24px -14px rgba(0,0,0,.45)}
-.cbet.best>.eyebrow{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:6px}
-.cbet.best>.eyebrow small{text-transform:none;letter-spacing:0;font-weight:500;margin-left:6px}
+.cbet.best .besttop{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:6px}
+.cbet.best .besttop .eyebrow{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;min-width:0}
+.cbet.best .besttop .eyebrow small{text-transform:none;letter-spacing:0;font-weight:500;margin-left:6px}
+.cbet.best .recpill{flex:none;display:flex;flex-direction:column;align-items:flex-end;line-height:1.05;font-family:var(--display);font-size:22px;font-weight:700;color:var(--accent-ink);background:var(--accent);border-radius:10px;padding:6px 12px;box-shadow:0 4px 14px -6px color-mix(in srgb,var(--accent) 70%,transparent)}
+.cbet.best .recpill small{font-family:var(--body);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.8}
+.cbet.best.loss .recpill{opacity:1}
 .cbet .add.go{border-color:var(--line);color:var(--ink)}
 .wtext{margin:0;font-size:14px}
 .game.flash{outline:3px solid var(--accent);outline-offset:3px}
@@ -499,11 +503,11 @@ td.legs div{white-space:nowrap}
       const canAdd=!started(g)&&S.me&&!stateOf(S.me).fouledOut;const cols=colorsOf(g);const team=kind==='single'?(x.team||''):'';const tc=team===g.home?cols.h:team===g.away?cols.a:'';
       const price=kind==='single'?x.odds:(x.price!=null?x.price:E.american(legs.reduce((a,l)=>a*(E.decimal(l.odds)||1),1)));
       const r=res[kind];const badge=r?`<span class="res ${esc(r)}" style="margin-left:8px">${r==='win'?'Hit':r==='loss'?'Missed':'Push'}</span>`:'';
-      return `<div class="cbet best ${r||''}" style="--tc:${tc||'var(--accent)'}"><span class="eyebrow">${kind==='single'?"Claude's best single":"Claude's best parlay"}${badge} <small>${esc(g.away)} at ${esc(g.home)}, ${esc(fmtTime.format(new Date(g.start)))} ET</small></span>
+      const rk=record.rec[kind];const rn=rk.w+rk.l;const recTxt=rn||rk.p?`${rk.w}-${rk.l}${rk.p?'-'+rk.p:''}${rn?` (${Math.round(100*rk.w/rn)}%)`:''}`:'0-0';
+      return `<div class="cbet best ${r||''}" style="--tc:${tc||'var(--accent)'}"><div class="besttop"><span class="eyebrow">${kind==='single'?"Claude's best single":"Claude's best parlay"}${badge} <small>${esc(g.away)} at ${esc(g.home)}, ${esc(fmtTime.format(new Date(g.start)))} ET</small></span><span class="recpill num" title="Claude's ${kind==='single'?'singles':'parlays'} record this season"><small>${kind==='single'?'Singles':'Parlays'}</small>${esc(recTxt)}</span></div>
         ${kind==='single'?`<div class="bl"><span>${esc(x.label||'')}</span><span class="o">${esc(E.fmtAmerican(price))}</span></div>`:`<div class="bl"><span>${legs.length}-leg same-game parlay</span><span class="o">${esc(E.fmtAmerican(price))}</span></div><div class="legs">${legs.map(l=>`<div>${esc(l.label||'')} <span class="o num hint">${esc(E.fmtAmerican(l.odds))}</span></div>`).join('')}</div>`}
         ${x.why?`<p class="why">${esc(x.why)}</p>`:''}<div class="addrow"><button type="button" class="add" data-cadd="${esc(g.eventID)}|${kind}" ${canAdd&&ok?'':'disabled'}>${kind==='single'?'Add to slip':'Add parlay to slip'}</button><button type="button" class="add go" data-goto="${esc(g.eventID)}">Go to game</button>${started(g)?'<span class="moved">already started</span>':notes.length?`<span class="moved">${esc(notes.join('; '))}</span>`:''}</div></div>`;};
-    const n=record.rec.single.w+record.rec.single.l+record.rec.parlay.w+record.rec.parlay.l;
-    return `<section class="bestbets"><div class="bbhead"><span class="eyebrow">Claude's best bets${stamp?', written '+esc(stamp):''}</span><span class="record num" title="Claude's record on these picks this season">${n?'Season: '+esc(record.text):'Season record starts after tonight'}</span></div>${card('single',b.single)}${card('parlay',b.parlay)}</section>`;}
+    return `<section class="bestbets"><div class="bbhead"><span class="eyebrow">Claude's best bets${stamp?', written '+esc(stamp):''}</span></div>${card('single',b.single)}${card('parlay',b.parlay)}</section>`;}
   function findM(g,pred){return (g.markets||[]).find(pred);}
   // A slip leg may sit on an alternate line; the button shows the chosen alt when there is one.
   const legKey=(eid,oid)=>eid+'|'+oid;
