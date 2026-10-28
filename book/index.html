@@ -136,6 +136,10 @@ details.pastdays>.daybody{gap:10px;padding-left:10px;border-left:2px solid var(-
 .cbet .add{border:1.5px solid var(--accent);color:var(--accent);background:none;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
 .cbet .add:disabled{opacity:.45}
 .cbet .moved{font-size:12px;color:var(--muted)}
+.bread{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;padding:10px 14px}
+.bread .eyebrow{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:4px}
+.bread .eyebrow small{text-transform:none;letter-spacing:0;font-weight:500}
+.bread p{margin:0;font-size:14px;line-height:1.5}
 .bestbets{display:flex;flex-direction:column;gap:10px;margin:0 0 14px}
 .bestbets .bbhead{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
 .bestbets .bbhead .eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
@@ -376,8 +380,8 @@ td.legs div{white-space:nowrap}
   </div>
 
   <section id="view-book" class="day" style="gap:22px"><div class="skel"><div></div><div></div></div></section>
-  <section id="view-bets" hidden style="display:flex;flex-direction:column;gap:14px"><div class="filters" id="betfilters"></div><div id="betbody"></div></section>
-  <section id="view-stats" hidden style="display:flex;flex-direction:column;gap:14px"><div class="filters" id="statfilters"></div><div id="statbody"></div></section>
+  <section id="view-bets" hidden style="display:flex;flex-direction:column;gap:14px"><div class="filters" id="betfilters"></div><div id="betread"></div><div id="betbody"></div></section>
+  <section id="view-stats" hidden style="display:flex;flex-direction:column;gap:14px"><div class="filters" id="statfilters"></div><div id="statread"></div><div id="statbody"></div></section>
 </div>
 
 <div class="slip" id="slip" hidden></div>
@@ -435,7 +439,7 @@ td.legs div{white-space:nowrap}
     // logos, colors and playoff stage from the ESPN schedule file, matched by date + teams
     const pg=await fetch('../data/games.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));
     S.logos={};for(const x of Object.values(pg)){S.logos[x.date+'|'+x.away+'|'+x.home]={a:x.awayLogo,h:x.homeLogo,ac:x.awayColor,hc:x.homeColor,stage:x.stage||'regular',series:x.series||null};}
-    const ins=await fetch('../data/book-insights.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));S.insights=ins.games||{};S.bestBets=ins.days||{};S.claudeResults=ins.results||{};
+    const ins=await fetch('../data/book-insights.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));S.insights=ins.games||{};S.bestBets=ins.days||{};S.claudeResults=ins.results||{};S.profiles=ins.players||{};
   }
   const hexOf=c=>{if(!c)return '';c=String(c).trim();if(/^#[0-9a-fA-F]{6}$/.test(c))return c;if(/^[0-9a-fA-F]{6}$/.test(c))return '#'+c;return '';};
   const lum=c=>{const n=parseInt(c.slice(1),16);const r=(n>>16)&255,gg=(n>>8)&255,b=n&255;return (0.299*r+0.587*gg+0.114*b)/255;};
@@ -660,8 +664,14 @@ td.legs div{white-space:nowrap}
     if(!canCancel(w)){toast(`Bets lock ${CANCEL_MINUTES} minutes after they are placed`,true);return;}
     try{await S.db.collection('wagers').doc(id).delete();toast('Bet cancelled, stake returned');}catch(e){toast('Could not cancel',true);}}
 
+  // ---------- Claude's read on each bettor (written each morning from settled bets) ----------
+  function readHtml(p){if(!PLAYERS.includes(p))return '';const r=(S.profiles||{})[p];
+    if(!r||!r.text)return `<div class="bread"><span class="eyebrow">Claude's read on ${esc(p)}</span><p class="hint">Not enough settled bets yet. The read starts once ${esc(p)} has a few bets graded, and gets sharper every week.</p></div>`;
+    const stamp=r.updated?fmtStamp.format(new Date(r.updated)):'';
+    return `<div class="bread"><span class="eyebrow">Claude's read on ${esc(p)}${r.settled?` <small>from ${esc(r.settled)} settled bet${r.settled===1?'':'s'}${stamp?', '+esc(stamp):''}</small>`:''}</span><p>${esc(r.text)}</p></div>`;}
+
   // ---------- bets ledger ----------
-  function renderBets(){$('betfilters').innerHTML=['All',...PLAYERS].map(p=>`<button class="chip" data-betf="${esc(p)}" aria-pressed="${S.betf===p}">${esc(p)}</button>`).join('');
+  function renderBets(){$('betread').innerHTML=readHtml(S.betf);$('betfilters').innerHTML=['All',...PLAYERS].map(p=>`<button class="chip" data-betf="${esc(p)}" aria-pressed="${S.betf===p}">${esc(p)}</button>`).join('');
     const rows=S.wagers.filter(w=>(S.betf==='All'||w.player===S.betf)&&canSee(w)).sort((a,b)=>a.placedAt<b.placedAt?1:-1);
     if(!rows.length){$('betbody').innerHTML=`<div class="empty"><strong>No bets yet</strong>${S.betf==='All'?'Every bet lands here once its game has started, and your own right away.':S.betf+' has no visible bets yet.'}</div>`;return;}
     let out='',lastWk=null;
@@ -674,7 +684,7 @@ td.legs div{white-space:nowrap}
     $('betbody').querySelectorAll('[data-cancel]').forEach(b=>b.addEventListener('click',()=>cancelBet(b.dataset.cancel)));}
 
   // ---------- stats ----------
-  function renderStatsTab(){const who=PLAYERS.includes(S.stat)?S.stat:(S.me||PLAYERS[0]);S.stat=who;
+  function renderStatsTab(){const who=PLAYERS.includes(S.stat)?S.stat:(S.me||PLAYERS[0]);S.stat=who;$('statread').innerHTML=readHtml(who);
     $('statfilters').innerHTML=PLAYERS.map(p=>`<button class="chip" data-stat="${esc(p)}" aria-pressed="${who===p}">${esc(p)}</button>`).join('');
     const mine=S.wagers.filter(w=>w.player===who&&canSee(w));if(!mine.length){$('statbody').innerHTML=`<div class="empty"><strong>No numbers yet</strong>${esc(who)} has no visible bets yet.</div>`;return;}
     const st=stateOf(who);const settled=mine.filter(w=>w.status!=='open');const wins=settled.filter(w=>w.status==='win'),losses=settled.filter(w=>w.status==='loss');
