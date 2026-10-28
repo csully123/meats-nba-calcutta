@@ -74,7 +74,15 @@ header{display:flex;flex-direction:column;gap:14px;padding-top:28px;border-botto
 .tile.flag-it{--flag:url("../assets/flag-italy.svg")}
 .tile .name{font-family:var(--display);font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:.03em;display:flex;justify-content:space-between;align-items:baseline}
 .tile .rank{font-size:12px;letter-spacing:.1em;display:flex;align-items:baseline;gap:8px}
-.tile .rank .wodds{font-family:var(--body);font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:rgba(0,0,0,.45);color:#fff;border-radius:999px;padding:2px 7px;white-space:nowrap}
+.tile .rank .wodds{font-family:var(--body);font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:rgba(0,0,0,.45);color:#fff;border-radius:999px;padding:2px 3px 2px 7px;white-space:nowrap;display:inline-flex;align-items:center;gap:5px}
+.tile .rank .whelp{display:inline-grid;place-items:center;width:15px;height:15px;border-radius:50%;background:rgba(255,255,255,.22);font-size:10px;font-weight:800;cursor:pointer;letter-spacing:0}
+.tile .rank .whelp:hover{background:rgba(255,255,255,.4)}
+.help-overlay{position:fixed;inset:0;z-index:75;background:rgba(5,8,14,.7);display:grid;place-items:center;padding:16px}
+.help-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;max-width:440px;width:100%;padding:18px 20px;box-shadow:0 20px 60px rgba(0,0,0,.5);max-height:85vh;overflow:auto}
+.help-card h3{font-family:var(--display);font-size:22px;text-transform:uppercase;margin:0 0 8px}
+.help-card p,.help-card li{font-size:14px;line-height:1.5}
+.help-card ul{padding-left:18px;margin:8px 0;display:flex;flex-direction:column;gap:6px}
+.help-card .dismiss{margin-top:8px;border:1.5px solid var(--accent);color:var(--accent);background:none;border-radius:999px;padding:7px 16px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
 .tile .pts{font-family:var(--display);font-size:46px;font-weight:700;line-height:1}
 .tile .pts small{font-size:16px;font-weight:600;color:var(--muted);margin-left:4px}
 .tile .line{font-size:12px}
@@ -472,7 +480,7 @@ td.legs div{white-space:nowrap}
       for(const [stg,set] of Object.entries(stages)){const left=[...set].filter(sk=>!spent.has(stg+':'+sk)).length;parts.push(`${left} of ${set.size} ${E.ROUND_NAMES[stg]} boosts left`);}
       return parts.join(', ');};
     const crown=p=>p<=3?`<svg class="crown r${p}" viewBox="0 0 24 16" width="18" height="12" aria-hidden="true"><path d="M2 14h20l-2-9-5 4-3-7-3 7-5-4z" fill="currentColor"/></svg>`:'';
-    $('board').innerHTML=ranked.map(s=>`<button type="button" class="tile ${FLAGS[s.p]||''} ${s.fouledOut?'out':''}" data-statsfor="${esc(s.p)}"><div class="name"><span>${esc(s.p)}${s.fouledOut?'<span class="foul">Out</span>':crown(s.place)}</span><span class="rank num">${(()=>{const o=S.winOdds&&S.winOdds.odds;const v=o&&o[s.p];return !s.fouledOut&&v!=null?`<small class="wodds" title="Claude's chance ${esc(s.p)} wins the season">${v}% to win</small>`:'';})()}${s.fouledOut?'':s.place}</span></div>
+    $('board').innerHTML=ranked.map(s=>`<button type="button" class="tile ${FLAGS[s.p]||''} ${s.fouledOut?'out':''}" data-statsfor="${esc(s.p)}"><div class="name"><span>${esc(s.p)}${s.fouledOut?'<span class="foul">Out</span>':crown(s.place)}</span><span class="rank num">${(()=>{const o=S.winOdds&&S.winOdds.odds;const v=o&&o[s.p];return !s.fouledOut&&v!=null?`<small class="wodds" title="Claude's chance ${esc(s.p)} wins the season">${v}% to win<span class="whelp" role="button" tabindex="0" data-oddshelp aria-label="How is this calculated?">?</span></small>`:'';})()}${s.fouledOut?'':s.place}</span></div>
       <div class="pts num">${fmtPts(s.stack)}${s.pending?`<small>+${fmtPts(s.pending)} live</small>`:''}</div>
       <div class="line num ${s.wkWagered<Math.min(CFG.minWeekly,s.stack+s.pending+s.wkWagered)?'short':''}">${fmtPts(s.wkWagered)} of ${Math.min(CFG.minWeekly,Math.floor(s.stack+s.pending+s.wkWagered))} wagered this week</div>
       <div class="line num">${s.fouledOut?`${s.busts} busts. Fouled out: no more bets, out of the running.`:s.busts?`${s.busts} of ${E.FOUL_OUT} busts, ${Math.round(E.penaltyPct(s.busts)*100)}% off at the end (counts as ${fmtPts(s.final)})`:'No busts'}</div>
@@ -721,6 +729,19 @@ td.legs div{white-space:nowrap}
     el.className='status';const fo=S.me&&stateOf(S.me).fouledOut;el.textContent=(S.pulled?`Lines as of ${fmtStamp.format(new Date(S.pulled))} ET. `:'')+(S.me?(fo?`${S.me} has fouled out and is out of the running. No more bets this season; you can still watch the board.`:`Betting as ${S.me}.`):'Choose your name above to bet.');if(fo)el.className='status warn';so.hidden=!S.signedIn;el.appendChild(so);}
   function render(){renderWho();renderTabs();renderBoard();renderBook();renderBets();renderStatsTab();renderStatus();renderSlip();checkMega();}
   // ---------- Mega Bonus celebration: the first time you open the book after your Mega Bonus bet wins ----------
+  // Explainer for the chance-to-win badge
+  function showOddsHelp(){if(document.querySelector('.help-overlay'))return;const u=S.winOdds&&S.winOdds.updated?fmtStamp.format(new Date(S.winOdds.updated)):'';
+    const ov=document.createElement('div');ov.className='help-overlay';ov.setAttribute('role','dialog');ov.setAttribute('aria-label',"How Claude's chance to win works");
+    ov.innerHTML=`<div class="help-card"><h3>Chance to win</h3>
+      <p>Claude's estimate of how likely each person is to finish the season with the highest stack. It is a simulation, not a guess.</p>
+      <ul><li>It starts from everyone's real stack and bust count today, rebuilt from every bet placed.</li>
+      <li>It then plays out the rest of the season 4,000 times. In each run, everyone keeps betting the way they actually bet: their usual prices, parlay sizes, stake sizes and how often they bet.</li>
+      <li>Every run follows the house rules: the book's cut on every bet, the weekly 1.5x boost, the 25% bet cap, the 20-point weekly minimum, bust reloads and the end-of-season bust penalty. Six busts means out.</li>
+      <li>Early on, with only a few bets per person, each style is blended with the group average, so one lucky night does not make anyone the favorite. As bets pile up, each person's own record counts for more.</li>
+      <li>The percentage is the share of those 4,000 seasons that person wins. The four always add up to 100.</li></ul>
+      <p class="hint">Refreshed every morning${u?`; last updated ${esc(u)} ET`:''}.</p>
+      <button type="button" class="dismiss">Got it</button></div>`;
+    document.body.appendChild(ov);const close=()=>ov.remove();ov.addEventListener('click',e=>{if(e.target===ov||e.target.closest('.dismiss'))close();});}
   function checkMega(){if(!S.me||document.querySelector('.mega-overlay'))return;
     const hit=S.wagers.find(w=>w.player===S.me&&w.boost&&w.boost.id==='mega'&&w.status==='win');if(!hit)return;
     let seen=null;try{seen=localStorage.getItem('bk.megaSeen');}catch(e){}if(seen===hit.id)return;
@@ -751,7 +772,7 @@ td.legs div{white-space:nowrap}
 
   $('who').addEventListener('click',e=>{const b=e.target.closest('[data-player]');if(!b)return;S.me=b.dataset.player;try{localStorage.setItem('bk.me',S.me);}catch(x){}$('who').classList.remove('nudge');render();});
   $('tabs').addEventListener('click',e=>{const b=e.target.closest('[data-tab]');if(!b)return;S.tab=b.dataset.tab;try{localStorage.setItem('bk.tab',S.tab);}catch(x){}renderTabs();});
-  $('board').addEventListener('click',e=>{const t=e.target.closest('[data-statsfor]');if(!t)return;S.stat=t.dataset.statsfor;S.tab='stats';try{localStorage.setItem('bk.stat',S.stat);localStorage.setItem('bk.tab',S.tab);}catch(x){}renderTabs();renderStatsTab();$('tabs').scrollIntoView({behavior:'smooth',block:'start'});});
+  $('board').addEventListener('click',e=>{if(e.target.closest('[data-oddshelp]')){e.preventDefault();e.stopPropagation();showOddsHelp();return;}const t=e.target.closest('[data-statsfor]');if(!t)return;S.stat=t.dataset.statsfor;S.tab='stats';try{localStorage.setItem('bk.stat',S.stat);localStorage.setItem('bk.tab',S.tab);}catch(x){}renderTabs();renderStatsTab();$('tabs').scrollIntoView({behavior:'smooth',block:'start'});});
   $('betfilters').addEventListener('click',e=>{const b=e.target.closest('[data-betf]');if(!b)return;S.betf=b.dataset.betf;try{localStorage.setItem('bk.betf',S.betf);}catch(x){}renderBets();});
   $('statfilters').addEventListener('click',e=>{const b=e.target.closest('[data-stat]');if(!b)return;S.stat=b.dataset.stat;try{localStorage.setItem('bk.stat',S.stat);}catch(x){}renderStatsTab();});
   $('view-book').addEventListener('input',e=>{const r=e.target.closest('.lrange');if(!r)return;const box=r.closest('.ladder');const [gid,oid]=box.dataset.ladder.split('|');const g=S.games[gid];const m=mk(g,oid);if(!m)return;
