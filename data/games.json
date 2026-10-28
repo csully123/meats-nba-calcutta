@@ -1414,9 +1414,9 @@
   "label": null,
   "multiplier": 1,
   "series": null,
-  "spreadHome": -2.5,
+  "spreadHome": -1.5,
   "spreadSource": "Draft Kings",
-  "spreadUpdated": "2026-10-28T13:48:22Z",
+  "spreadUpdated": "2026-10-28T15:15:07Z",
   "stage": "regular",
   "start": "2026-10-28T23:00:00Z",
   "status": "scheduled"
@@ -1575,9 +1575,9 @@
   "label": null,
   "multiplier": 1,
   "series": null,
-  "spreadHome": -3.5,
+  "spreadHome": -4.5,
   "spreadSource": "ESPN",
-  "spreadUpdated": "2026-10-27T23:31:36Z",
+  "spreadUpdated": "2026-10-28T15:15:07Z",
   "stage": "regular",
   "start": "2026-10-29T00:00:00Z",
   "status": "scheduled"
