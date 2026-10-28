@@ -1380,13 +1380,13 @@
   "awayColor": "e03a3e",
   "awayLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png",
   "awayName": "Portland Trail Blazers",
-  "awayScore": 114,
+  "awayScore": 136,
   "date": "2026-10-27",
   "home": "LAL",
   "homeColor": "552583",
   "homeLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lal.png",
   "homeName": "Los Angeles Lakers",
-  "homeScore": 112,
+  "homeScore": 129,
   "id": "401909880",
   "label": null,
   "multiplier": 1,
@@ -1396,7 +1396,7 @@
   "spreadUpdated": "2026-10-27T17:12:03Z",
   "stage": "regular",
   "start": "2026-10-28T03:00:00Z",
-  "status": "inprogress"
+  "status": "final"
  },
  "401909881": {
   "away": "MIA",
