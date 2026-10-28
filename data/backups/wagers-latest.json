@@ -1,7 +1,47 @@
 {
- "backedUpAt": "2026-10-27T16:58:58Z",
- "count": 6,
+ "backedUpAt": "2026-10-28T08:51:39Z",
+ "count": 10,
  "wagers": {
+  "2dzNbNNGFzlTZAffuZ8z": {
+   "_updated": "2026-10-28T08:09:33.555867Z",
+   "boost": null,
+   "createdAt": "2026-10-27T20:48:55.863Z",
+   "eventID": "jHX9XeeKJsLkc910NrDz",
+   "game": "POR at LAL",
+   "gameDate": "2026-10-27",
+   "gameStart": "2026-10-28T03:00:00.000Z",
+   "legResults": [
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": false,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "away",
+     "line": 2.5,
+     "name": "Spread",
+     "oddID": "points-away-game-sp-away",
+     "odds": -118,
+     "opposing": "points-home-game-sp-home",
+     "period": "game",
+     "player": null,
+     "short": "POR +2.5",
+     "side": "away",
+     "stat": "points",
+     "team": "POR"
+    }
+   ],
+   "net": 8,
+   "payout": 18,
+   "placedAt": "2026-10-27T20:48:54.950Z",
+   "player": "Kev",
+   "series": null,
+   "settledAt": "2026-10-28T08:09:33Z",
+   "stage": "regular",
+   "stake": 10,
+   "status": "win"
+  },
   "EhDun7mY9NyggHX8znj4": {
    "_updated": "2026-10-27T16:58:31.964321Z",
    "boost": null,
@@ -349,6 +389,112 @@
    "stake": 5,
    "status": "loss"
   },
+  "Wcm3pXodR1e7pL0DYZr7": {
+   "_updated": "2026-10-28T08:09:33.722959Z",
+   "boost": {
+    "id": "week:2026-10-26",
+    "label": "1.5x weekly",
+    "mult": 1.5
+   },
+   "createdAt": "2026-10-28T02:22:24.029Z",
+   "eventID": "jHX9XeeKJsLkc910NrDz",
+   "game": "POR at LAL",
+   "gameDate": "2026-10-27",
+   "gameStart": "2026-10-28T03:00:00.000Z",
+   "legResults": [
+    "win",
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "line": 219.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-over",
+     "odds": -380,
+     "opposing": "points-all-game-ou-under",
+     "period": "game",
+     "player": null,
+     "short": "Game Over 219.5 (alt)",
+     "side": "over",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "alt": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "home",
+     "line": 10.5,
+     "name": "Spread",
+     "oddID": "points-home-game-sp-home",
+     "odds": -480,
+     "opposing": "points-away-game-sp-away",
+     "period": "game",
+     "player": null,
+     "short": "LAL +10.5 (alt)",
+     "side": "home",
+     "stat": "points",
+     "team": "LAL"
+    }
+   ],
+   "net": 31,
+   "payout": 81,
+   "placedAt": "2026-10-28T02:22:22.546Z",
+   "player": "Mio",
+   "series": null,
+   "settledAt": "2026-10-28T08:09:33Z",
+   "stage": "regular",
+   "stake": 50,
+   "status": "win"
+  },
+  "XCKnFxDU3vvhylispaW2": {
+   "_updated": "2026-10-28T08:09:33.866651Z",
+   "boost": {
+    "id": "week:2026-10-26",
+    "label": "1.5x weekly",
+    "mult": 1.5
+   },
+   "createdAt": "2026-10-27T21:20:42.519Z",
+   "eventID": "jHX9XeeKJsLkc910NrDz",
+   "game": "POR at LAL",
+   "gameDate": "2026-10-27",
+   "gameStart": "2026-10-28T03:00:00.000Z",
+   "legResults": [
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": false,
+     "betType": "ml",
+     "book": "fanduel",
+     "entity": "away",
+     "line": null,
+     "name": "Moneyline",
+     "oddID": "points-away-game-ml-away",
+     "odds": 108,
+     "opposing": "points-home-game-ml-home",
+     "period": "game",
+     "player": null,
+     "short": "POR ML",
+     "side": "away",
+     "stat": "points",
+     "team": "POR"
+    }
+   ],
+   "net": 16,
+   "payout": 26,
+   "placedAt": "2026-10-27T21:20:41.529Z",
+   "player": "Kev",
+   "series": null,
+   "settledAt": "2026-10-28T08:09:33Z",
+   "stage": "regular",
+   "stake": 10,
+   "status": "win"
+  },
   "hRrSmZyCKCK6AlvVjGEk": {
    "_updated": "2026-10-27T16:58:32.597814Z",
    "boost": null,
@@ -420,6 +566,46 @@
    "player": "Beekie",
    "series": null,
    "settledAt": "2026-10-27T16:58:31Z",
+   "stage": "regular",
+   "stake": 5,
+   "status": "loss"
+  },
+  "u6hvTLHErrtaSes9gCHD": {
+   "_updated": "2026-10-28T08:09:34.037592Z",
+   "boost": null,
+   "createdAt": "2026-10-27T22:06:11.282Z",
+   "eventID": "LSAP9CHT1dRVpWfZmju8",
+   "game": "SAC at SAS",
+   "gameDate": "2026-10-27",
+   "gameStart": "2026-10-28T00:00:00.000Z",
+   "legResults": [
+    "loss"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "VICTOR_WEMBANYAMA_1_NBA",
+     "line": 2.5,
+     "name": "Victor Wembanyama 3-pointers made",
+     "oddID": "threePointersMade-VICTOR_WEMBANYAMA_1_NBA-game-ou-over",
+     "odds": 220,
+     "opposing": "threePointersMade-VICTOR_WEMBANYAMA_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "VICTOR_WEMBANYAMA_1_NBA",
+     "short": "Victor Wembanyama 3-pointers made Over 2.5 (alt)",
+     "side": "over",
+     "stat": "threePointersMade",
+     "team": "SAS"
+    }
+   ],
+   "net": -5,
+   "payout": 0,
+   "placedAt": "2026-10-27T22:06:09.837Z",
+   "player": "Sulliver",
+   "series": null,
+   "settledAt": "2026-10-28T08:09:33Z",
    "stage": "regular",
    "stake": 5,
    "status": "loss"
