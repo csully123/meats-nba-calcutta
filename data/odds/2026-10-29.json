@@ -1,0 +1,59 @@
+{
+ "date": "2026-10-29",
+ "games": {
+  "FNszYqIYdfrKiqFx0PWs": {
+   "away": "CLE",
+   "awayColor": "#871539",
+   "awayName": "Cleveland Cavaliers",
+   "cancelled": false,
+   "date": "2026-10-29",
+   "display": "",
+   "ended": false,
+   "eventID": "FNszYqIYdfrKiqFx0PWs",
+   "finalized": false,
+   "home": "ATL",
+   "homeColor": "#E03A3E",
+   "homeName": "Atlanta Hawks",
+   "markets": [],
+   "pulledAt": "2026-10-28T12:57:56Z",
+   "start": "2026-10-30T00:00:00.000Z",
+   "started": false
+  },
+  "Gnx52Lw1qtWsIC0mHYxp": {
+   "away": "MEM",
+   "awayColor": "#23375B",
+   "awayName": "Memphis Grizzlies",
+   "cancelled": false,
+   "date": "2026-10-29",
+   "display": "",
+   "ended": false,
+   "eventID": "Gnx52Lw1qtWsIC0mHYxp",
+   "finalized": false,
+   "home": "POR",
+   "homeColor": "#F0163A",
+   "homeName": "Portland Trail Blazers",
+   "markets": [],
+   "pulledAt": "2026-10-28T12:57:56Z",
+   "start": "2026-10-30T02:00:00.000Z",
+   "started": false
+  },
+  "LRhY8kYfHreD6OVlzYzs": {
+   "away": "SAC",
+   "awayColor": "#724C9F",
+   "awayName": "Sacramento Kings",
+   "cancelled": false,
+   "date": "2026-10-29",
+   "display": "",
+   "ended": false,
+   "eventID": "LRhY8kYfHreD6OVlzYzs",
+   "finalized": false,
+   "home": "NOP",
+   "homeColor": "#002B5C",
+   "homeName": "New Orleans Pelicans",
+   "markets": [],
+   "pulledAt": "2026-10-28T12:57:56Z",
+   "start": "2026-10-30T00:00:00.000Z",
+   "started": false
+  }
+ }
+}
