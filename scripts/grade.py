@@ -251,6 +251,18 @@ def grade_claude(games: dict) -> None:
             if r:
                 out[kind] = r
                 changed += 1
+        # each person's own bet of the day: {name: {eventID, legs: [...]}}
+        for name, pick in (day.get("personal") or {}).items():
+            per = out.setdefault("personal", {})
+            if not pick or per.get(name):
+                continue
+            game = games.get(pick.get("eventID"))
+            if not game or not game.get("results"):
+                continue
+            r = outcome(game, pick.get("legs") or [])
+            if r:
+                per[name] = r
+                changed += 1
     if changed:
         INSIGHTS.write_text(json.dumps(data, indent=1, sort_keys=True) + "\n")
         print(f"graded {changed} of Claude's picks")

@@ -63,6 +63,78 @@
     "price": 601,
     "why": "Both rosters are gutted, so the minutes and touches concentrate. With Holmgren out, Hartenstein is the only real big Oklahoma City has left to rebound. With Williams, Wallace and Caruso out and Mitchell hobbled, Shai has to create everything, which means assists as well as shots. Dallas is missing five rotation players and maybe Kyrie, so Flagg gets the ball constantly."
    },
+   "personal": {
+    "Beekie": {
+     "eventID": "du4xB1SR4g52k6Lps9iC",
+     "legs": [
+      {
+       "label": "Over 228.5",
+       "line": 228.5,
+       "oddID": "points-all-game-ou-over",
+       "odds": -110
+      },
+      {
+       "label": "Luka Doncic over 32.5 points",
+       "line": 32.5,
+       "oddID": "points-LUKA_DONCIC_1_NBA-game-ou-over",
+       "odds": -118
+      },
+      {
+       "label": "Darius Garland over 24.5 points",
+       "line": 24.5,
+       "oddID": "points-DARIUS_GARLAND_1_NBA-game-ou-over",
+       "odds": -125
+      }
+     ],
+     "price": 535,
+     "why": "Your formula, pointed at the right game: the total plus two star guards' points, all in one direction. The Lakers just played a 136-129 shootout and stay in the same building. The Clippers are missing four forwards, so the ball lives in Garland's hands, and Luka is scoring 34 a night. If one game tonight breaks your way all at once, it's this one."
+    },
+    "Kev": {
+     "eventID": "9VAfjQwS2XwkqkRTdkiz",
+     "legs": [
+      {
+       "label": "CHA ML",
+       "line": null,
+       "oddID": "points-away-game-ml-away",
+       "odds": 220
+      }
+     ],
+     "price": 220,
+     "why": "Your best bets so far have been road underdogs you believe in, and this is the best one on the board. Detroit is on the second night of a back-to-back after losing in New York, and it's without Jalen Duren. Charlotte is 3-1 with Brandon Miller and Naz Reid carrying the scoring. A plain moneyline at +220, no boost needed, is exactly your kind of shot."
+    },
+    "Mio": {
+     "eventID": "mk6VPvBcthdZUChFqFco",
+     "legs": [
+      {
+       "label": "SAS -1.5 (alt)",
+       "line": -1.5,
+       "oddID": "points-away-game-sp-away",
+       "odds": -480
+      },
+      {
+       "label": "Over 220.5 (alt)",
+       "line": 220.5,
+       "oddID": "points-all-game-ou-over",
+       "odds": -400
+      }
+     ],
+     "price": -196,
+     "why": "Same shape as your winner: two alt lines bought down to near-certain numbers and parlayed to a playable price. Utah is without Jaren Jackson Jr. and Jusuf Nurkic, and Lauri Markkanen is questionable. San Antonio only needs to win by two, and the game only needs 221 when the main total is 234.5. The back-to-back is the risk, which is why the numbers are bought down this far."
+    },
+    "Sulliver": {
+     "eventID": "NaF7pEWPWlzf9fKdgfF5",
+     "legs": [
+      {
+       "label": "Shai Gilgeous-Alexander over 31.5 points",
+       "line": 31.5,
+       "oddID": "points-SHAI_GILGEOUSALEXANDER_1_NBA-game-ou-over",
+       "odds": -110
+      }
+     ],
+     "price": -110,
+     "why": "You like overs on star scorers, but your parlays have needed three things to go right. Take the star over by itself. Oklahoma City is down Jalen Williams, Chet Holmgren, Cason Wallace and Alex Caruso, and Ajay Mitchell is questionable, so Shai has to carry the scoring load almost alone. One leg, one read, close to even money."
+    }
+   },
    "single": {
     "eventID": "pQsF6kYuDrEQXgaXnmGI",
     "label": "GSW +3.5",
