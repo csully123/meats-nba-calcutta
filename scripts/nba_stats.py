@@ -226,6 +226,16 @@ def house():
                      "w": sum(1 for x in gs if x["side"] == "away" and x["pts"] > x["oppPts"])},
         }
 
+    # league ranks (1 = best for that team): offense high is good, defense low is good, pace high = fastest
+    def rank(key, high_good=True):
+        order = sorted((c for c in teams if teams[c].get(key) is not None), key=lambda c: teams[c][key], reverse=high_good)
+        for i, c in enumerate(order, 1):
+            teams[c].setdefault("rank", {})[key] = i
+    for key, hg in (("offRtg", True), ("defRtg", False), ("netRtg", True), ("pace", True), ("avgTotal", True), ("efg", True),
+                    ("oppEfg", False), ("tovPct", False), ("oppTovPct", True), ("orebPct", True), ("drebPct", True), ("ftRate", True),
+                    ("threeRate", True), ("threePct", True), ("oppThreePct", False), ("oppThreesMade", False)):
+        rank(key, hg)
+
     rosters = {}
     rp = ROOT / "data" / "rosters.json"
     if rp.exists():
@@ -282,7 +292,7 @@ def house():
 def main():
     out = {"updated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "season": SEASON,
            "about": {"nba": "stats.nba.com advanced, four factors, opponent, per-game, home/road, player advanced/per-game/last 5",
-                     "house": "same ideas computed from our stored box scores (data/odds); pace is possessions per game"}}
+                     "house": "same ideas computed from our stored box scores (data/odds); pace is possessions per game; rank is the league rank out of 30, 1 = best (fastest for pace, highest for avgTotal)"}}
     try:
         out["nba"] = pull_nba()
         print(f"nba.com: {len(out['nba']['teams'])} teams, {len(out['nba']['players'])} players")

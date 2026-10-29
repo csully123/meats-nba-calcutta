@@ -128,6 +128,11 @@ details.pastdays>.daybody{gap:10px;padding-left:10px;border-left:2px solid var(-
 .wdet>summary::after{content:"Show \25BE";font-size:11px;font-weight:700;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 55%,var(--line));padding:2px 8px;border-radius:999px;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
 .wdet[open]>summary::after{content:"Hide \25B4"}
 .wbody{display:flex;flex-direction:column;gap:12px;padding:10px 2px 4px}
+.angles{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.angles span{font-size:12px;font-weight:600;line-height:1.25;padding:4px 9px;border-radius:999px;border:1px solid color-mix(in srgb,var(--accent) 45%,var(--line));background:color-mix(in srgb,var(--accent) 10%,var(--soft));color:var(--ink)}
+.sit{margin:4px 0 0;padding-left:18px;font-size:13px;line-height:1.4;color:var(--ink)}
+.sit li{margin:2px 0}
+.sit li.edge{font-weight:700}
 .wblock .eyebrow{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:6px}
 .inj{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px;font-size:14px}
 .inj li{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline}
@@ -462,6 +467,7 @@ td.legs div{white-space:nowrap}
     const pg=await fetch('../data/games.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));
     S.logos={};for(const x of Object.values(pg)){S.logos[x.date+'|'+x.away+'|'+x.home]={a:x.awayLogo,h:x.homeLogo,ac:x.awayColor,hc:x.homeColor,stage:x.stage||'regular',series:x.series||null};}
     S.actuals=await fetch('../data/leg-actuals.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));
+    S.situations={};try{const sc=await fetch('../data/schedule-context.json'+bust).then(r=>r.ok?r.json():{});for(const [d,gs] of Object.entries(sc.days||{}))for(const x of Object.values(gs))S.situations[d+'|'+x.matchup]=x.notes||[];}catch(e){}
     const ins=await fetch('../data/book-insights.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));S.insights=ins.games||{};S.bestBets=ins.days||{};S.claudeResults=ins.results||{};S.profiles=ins.players||{};S.winOdds=ins.winOdds||null;
   }
   const hexOf=c=>{if(!c)return '';c=String(c).trim();if(/^#[0-9a-fA-F]{6}$/.test(c))return c;if(/^[0-9a-fA-F]{6}$/.test(c))return '#'+c;return '';};
@@ -558,11 +564,13 @@ td.legs div{white-space:nowrap}
       const tc=side==='home'?colorsOf(g).h:colorsOf(g).a;
       return `<div class="teamcell" ${tc?`style="--tc:${tc}"`:''}>${logo?`<img src="${esc(logo)}" alt="">`:''}<span>${esc(team)}<br><small class="hint" style="font-family:var(--body);text-transform:none;font-weight:500">${esc(name||'')}</small></span></div>${obtn(g,sp)}${obtn(g,ou)}${obtn(g,ml,'ML')}`;};
     const cols=colorsOf(g);const tcOf=team=>{const c=team===g.home?cols.h:team===g.away?cols.a:'';return c?`style="--tc:${c}"`:'';};
-    const insights=(()=>{const w=(S.insights||{})[g.eventID];if(!w)return '';const openW=S.openW||(S.openW=new Set());
+    const insights=(()=>{const sit=(S.situations||{})[g.date+'|'+g.away+' at '+g.home]||[];const w=(S.insights||{})[g.eventID]||(sit.length?{}:null);if(!w)return '';const openW=S.openW||(S.openW=new Set());
       const stamp=w.updated?fmtStamp.format(new Date(w.updated)):'';
-      const inj=Array.isArray(w.injuries)&&w.injuries.length?`<div class="wblock"><span class="eyebrow">Injuries</span><ul class="inj">${w.injuries.map(x=>`<li><strong class="tcode" ${tcOf(x.team)}>${esc(x.team)}</strong> ${esc(x.player)} <span class="st ${esc(String(x.status||'').toLowerCase())}">${esc(x.status||'')}</span>${x.stats?`<span class="num hint">${esc(x.stats)}</span>`:''}${x.impact?`<span class="imp ${esc(String(x.impact).toLowerCase())}">${esc(x.impact)} impact</span>`:''}${x.note?`<span>${esc(x.note)}</span>`:''}</li>`).join('')}</ul></div>`:`<div class="wblock"><span class="eyebrow">Injuries</span><div class="hint">Nobody of note listed.</div></div>`;
+      const inj=!w.updated?'':Array.isArray(w.injuries)&&w.injuries.length?`<div class="wblock"><span class="eyebrow">Injuries</span><ul class="inj">${w.injuries.map(x=>`<li><strong class="tcode" ${tcOf(x.team)}>${esc(x.team)}</strong> ${esc(x.player)} <span class="st ${esc(String(x.status||'').toLowerCase())}">${esc(x.status||'')}</span>${x.stats?`<span class="num hint">${esc(x.stats)}</span>`:''}${x.impact?`<span class="imp ${esc(String(x.impact).toLowerCase())}">${esc(x.impact)} impact</span>`:''}${x.note?`<span>${esc(x.note)}</span>`:''}</li>`).join('')}</ul></div>`:`<div class="wblock"><span class="eyebrow">Injuries</span><div class="hint">Nobody of note listed.</div></div>`;
       const blurb=w.blurb?`<div class="wblock"><span class="eyebrow">Game report</span><p class="wtext">${esc(w.blurb)}</p></div>`:'';
-      return `<details class="wdet" data-w="${esc(g.eventID)}" ${openW.has(g.eventID)?'open':''}><summary><span class="eyebrow">Game insights${stamp?', written '+esc(stamp):''}</span></summary><div class="wbody">${blurb}${inj}</div></details>`;})();
+      const angles=Array.isArray(w.angles)&&w.angles.length?`<div class="wblock"><span class="eyebrow">Angles</span><div class="angles">${w.angles.map(a=>`<span>${esc(a)}</span>`).join('')}</div></div>`:'';
+      const situation=sit.length?`<div class="wblock"><span class="eyebrow">Rest and travel</span><ul class="sit">${sit.map((n,i)=>`<li class="${i===0&&/^(Rest edge|Even rest)/.test(n)?'edge':''}">${esc(n)}</li>`).join('')}</ul></div>`:'';
+      return `<details class="wdet" data-w="${esc(g.eventID)}" ${openW.has(g.eventID)?'open':''}><summary><span class="eyebrow">Game insights${stamp?', written '+esc(stamp):''}</span></summary><div class="wbody">${blurb}${angles}${situation}${inj}</div></details>`;})();
     const mine=S.wagers.filter(w=>w.eventID===g.eventID&&canSee(w));
     const mineHtml=mine.length?`<div class="mypicks">${mine.map(w=>`<span class="w ${w.status==='open'?'':w.status}">${esc(w.player)}: ${w.legs.map(l=>esc(l.short)).join(' + ')} for ${fmtPts(w.stake)}${w.status!=='open'?` (${w.status}${w.net?` ${signed(w.net)}`:''})`:''}</span>`).join('')}</div>`:'';
     const props=(g.markets||[]).filter(m=>m.kind==='prop'||(m.kind==='game'&&m.period==='1h'));

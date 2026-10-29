@@ -22,4 +22,10 @@ Regular-season prize (25 points and an extra 3x Finals token for first, an extra
 
 `data/book-insights.json` holds the sportsbook's morning "Game insights": `games` (keyed by the odds feed's eventID: a short game report plus the injury list) and `days` (keyed by New York date: Claude's best single and best parlay across the whole slate). A scheduled Claude task writes it once each morning; the page shows the day's best bets under the day header with Add-to-slip and Go-to-game buttons. The picks board (`index.html`, `data/writeups.json`) is retired and no longer updated.
 
+Two context files feed the morning write-ups and the page, refreshed by `.github/workflows/context.yml` at 7:50 AM ET (free, on GitHub):
+
+- `data/nba-advanced.json` (`scripts/nba_stats.py`): `nba` is the data behind nba.com/stats (team advanced, last 10, four factors, opponent, home/road, player advanced, per-game and last 5) when stats.nba.com lets the runner in; it usually does not (the site blocks cloud addresses), so `nbaError` is set and `nba` is null. `house` is always present: offensive and defensive rating, pace, eFG%, turnover and rebound rates, three-point volume and what opponents hit, league ranks, last-3 form, and per-player per-game lines, usage, true shooting and recent box scores, all computed from the box scores stored in `data/odds/`.
+- `data/schedule-context.json` (`scripts/schedule_context.py`): for today's and tomorrow's games, each team's rest days, back-to-back with an estimated overnight landing time (a flight model: final buzzer about 2h25m after tip, wheels up two hours later, about 480 mph plus 55 minutes), third game in four nights, fourth in six, road-trip or homestand position, time zones crossed, altitude, last game's result and overtime, next game, plus readable `notes` with the rest edge first. The page shows the notes as "Rest and travel" inside each game's insights; the morning task reads both files, searches the news for each game's storylines, and writes an `angles` list of short chips per game.
+
+
 The picks board ignores play-in and playoff games (`stage` other than regular, cup, cupfinal); the sportsbook shows them.

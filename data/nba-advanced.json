@@ -1,12 +1,12 @@
 {
- "updated": "2026-10-29T14:38:20+00:00",
+ "updated": "2026-10-29T14:43:58+00:00",
  "season": "2026-27",
  "about": {
   "nba": "stats.nba.com advanced, four factors, opponent, per-game, home/road, player advanced/per-game/last 5",
-  "house": "same ideas computed from our stored box scores (data/odds); pace is possessions per game"
+  "house": "same ideas computed from our stored box scores (data/odds); pace is possessions per game; rank is the league rank out of 30, 1 = best (fastest for pace, highest for avgTotal)"
  },
  "nba": null,
- "nbaError": "leaguedashteamstats Advanced None: The read operation timed out",
+ "nbaError": "leaguedashteamstats Advanced None: <urlopen error Tunnel connection failed: 403 Forbidden>",
  "house": {
   "teams": {
    "ATL": {
@@ -50,6 +50,24 @@
     "away": {
      "gp": 2,
      "w": 1
+    },
+    "rank": {
+     "offRtg": 11,
+     "defRtg": 10,
+     "netRtg": 12,
+     "pace": 16,
+     "avgTotal": 16,
+     "efg": 13,
+     "oppEfg": 13,
+     "tovPct": 6,
+     "oppTovPct": 4,
+     "orebPct": 15,
+     "drebPct": 28,
+     "ftRate": 29,
+     "threeRate": 14,
+     "threePct": 18,
+     "oppThreePct": 6,
+     "oppThreesMade": 3
     }
    },
    "BKN": {
@@ -93,6 +111,24 @@
     "away": {
      "gp": 2,
      "w": 0
+    },
+    "rank": {
+     "offRtg": 23,
+     "defRtg": 26,
+     "netRtg": 25,
+     "pace": 1,
+     "avgTotal": 3,
+     "efg": 24,
+     "oppEfg": 30,
+     "tovPct": 15,
+     "oppTovPct": 14,
+     "orebPct": 18,
+     "drebPct": 2,
+     "ftRate": 8,
+     "threeRate": 3,
+     "threePct": 16,
+     "oppThreePct": 28,
+     "oppThreesMade": 28
     }
    },
    "BOS": {
@@ -136,6 +172,24 @@
     "away": {
      "gp": 0,
      "w": 0
+    },
+    "rank": {
+     "offRtg": 7,
+     "defRtg": 4,
+     "netRtg": 2,
+     "pace": 11,
+     "avgTotal": 14,
+     "efg": 8,
+     "oppEfg": 9,
+     "tovPct": 18,
+     "oppTovPct": 5,
+     "orebPct": 8,
+     "drebPct": 18,
+     "ftRate": 9,
+     "threeRate": 9,
+     "threePct": 9,
+     "oppThreePct": 9,
+     "oppThreesMade": 23
     }
    },
    "CHA": {
@@ -179,6 +233,24 @@
     "away": {
      "gp": 1,
      "w": 0
+    },
+    "rank": {
+     "offRtg": 28,
+     "defRtg": 17,
+     "netRtg": 28,
+     "pace": 30,
+     "avgTotal": 29,
+     "efg": 30,
+     "oppEfg": 18,
+     "tovPct": 29,
+     "oppTovPct": 24,
+     "orebPct": 3,
+     "drebPct": 5,
+     "ftRate": 28,
+     "threeRate": 1,
+     "threePct": 26,
+     "oppThreePct": 23,
+     "oppThreesMade": 15
     }
    },
    "CHI": {
@@ -222,6 +294,24 @@
     "away": {
      "gp": 2,
      "w": 1
+    },
+    "rank": {
+     "offRtg": 16,
+     "defRtg": 27,
+     "netRtg": 24,
+     "pace": 2,
+     "avgTotal": 2,
+     "efg": 21,
+     "oppEfg": 27,
+     "tovPct": 11,
+     "oppTovPct": 13,
+     "orebPct": 23,
+     "drebPct": 23,
+     "ftRate": 5,
+     "threeRate": 6,
+     "threePct": 24,
+     "oppThreePct": 30,
+     "oppThreesMade": 30
     }
    },
    "CLE": {
@@ -265,6 +355,24 @@
     "away": {
      "gp": 0,
      "w": 0
+    },
+    "rank": {
+     "offRtg": 6,
+     "defRtg": 19,
+     "netRtg": 11,
+     "pace": 7,
+     "avgTotal": 5,
+     "efg": 5,
+     "oppEfg": 16,
+     "tovPct": 12,
+     "oppTovPct": 17,
+     "orebPct": 9,
+     "drebPct": 16,
+     "ftRate": 6,
+     "threeRate": 13,
+     "threePct": 3,
+     "oppThreePct": 11,
+     "oppThreesMade": 20
     }
    },
    "DAL": {
@@ -308,6 +416,24 @@
     "away": {
      "gp": 2,
      "w": 2
+    },
+    "rank": {
+     "offRtg": 12,
+     "defRtg": 6,
+     "netRtg": 6,
+     "pace": 19,
+     "avgTotal": 22,
+     "efg": 6,
+     "oppEfg": 6,
+     "tovPct": 9,
+     "oppTovPct": 18,
+     "orebPct": 14,
+     "drebPct": 12,
+     "ftRate": 30,
+     "threeRate": 20,
+     "threePct": 15,
+     "oppThreePct": 1,
+     "oppThreesMade": 1
     }
    },
    "DEN": {
@@ -351,6 +477,24 @@
     "away": {
      "gp": 1,
      "w": 1
+    },
+    "rank": {
+     "offRtg": 10,
+     "defRtg": 22,
+     "netRtg": 16,
+     "pace": 10,
+     "avgTotal": 6,
+     "efg": 9,
+     "oppEfg": 24,
+     "tovPct": 4,
+     "oppTovPct": 6,
+     "orebPct": 27,
+     "drebPct": 14,
+     "ftRate": 7,
+     "threeRate": 21,
+     "threePct": 17,
+     "oppThreePct": 17,
+     "oppThreesMade": 17
     }
    },
    "DET": {
@@ -394,6 +538,24 @@
     "away": {
      "gp": 3,
      "w": 2
+    },
+    "rank": {
+     "offRtg": 21,
+     "defRtg": 3,
+     "netRtg": 9,
+     "pace": 29,
+     "avgTotal": 30,
+     "efg": 12,
+     "oppEfg": 1,
+     "tovPct": 19,
+     "oppTovPct": 9,
+     "orebPct": 13,
+     "drebPct": 20,
+     "ftRate": 21,
+     "threeRate": 18,
+     "threePct": 8,
+     "oppThreePct": 5,
+     "oppThreesMade": 7
     }
    },
    "GSW": {
@@ -437,6 +599,24 @@
     "away": {
      "gp": 3,
      "w": 2
+    },
+    "rank": {
+     "offRtg": 5,
+     "defRtg": 24,
+     "netRtg": 13,
+     "pace": 21,
+     "avgTotal": 8,
+     "efg": 10,
+     "oppEfg": 28,
+     "tovPct": 28,
+     "oppTovPct": 8,
+     "orebPct": 1,
+     "drebPct": 15,
+     "ftRate": 3,
+     "threeRate": 8,
+     "threePct": 1,
+     "oppThreePct": 19,
+     "oppThreesMade": 18
     }
    },
    "HOU": {
@@ -480,6 +660,24 @@
     "away": {
      "gp": 3,
      "w": 3
+    },
+    "rank": {
+     "offRtg": 3,
+     "defRtg": 8,
+     "netRtg": 1,
+     "pace": 23,
+     "avgTotal": 15,
+     "efg": 4,
+     "oppEfg": 4,
+     "tovPct": 20,
+     "oppTovPct": 20,
+     "orebPct": 12,
+     "drebPct": 19,
+     "ftRate": 4,
+     "threeRate": 27,
+     "threePct": 5,
+     "oppThreePct": 2,
+     "oppThreesMade": 9
     }
    },
    "IND": {
@@ -523,6 +721,24 @@
     "away": {
      "gp": 2,
      "w": 1
+    },
+    "rank": {
+     "offRtg": 19,
+     "defRtg": 11,
+     "netRtg": 17,
+     "pace": 13,
+     "avgTotal": 18,
+     "efg": 15,
+     "oppEfg": 10,
+     "tovPct": 14,
+     "oppTovPct": 23,
+     "orebPct": 26,
+     "drebPct": 13,
+     "ftRate": 12,
+     "threeRate": 10,
+     "threePct": 22,
+     "oppThreePct": 13,
+     "oppThreesMade": 14
     }
    },
    "LAC": {
@@ -566,6 +782,24 @@
     "away": {
      "gp": 2,
      "w": 0
+    },
+    "rank": {
+     "offRtg": 29,
+     "defRtg": 12,
+     "netRtg": 27,
+     "pace": 22,
+     "avgTotal": 28,
+     "efg": 19,
+     "oppEfg": 20,
+     "tovPct": 30,
+     "oppTovPct": 3,
+     "orebPct": 21,
+     "drebPct": 26,
+     "ftRate": 15,
+     "threeRate": 12,
+     "threePct": 6,
+     "oppThreePct": 16,
+     "oppThreesMade": 2
     }
    },
    "LAL": {
@@ -609,6 +843,24 @@
     "away": {
      "gp": 2,
      "w": 2
+    },
+    "rank": {
+     "offRtg": 4,
+     "defRtg": 18,
+     "netRtg": 8,
+     "pace": 18,
+     "avgTotal": 9,
+     "efg": 2,
+     "oppEfg": 25,
+     "tovPct": 21,
+     "oppTovPct": 2,
+     "orebPct": 24,
+     "drebPct": 22,
+     "ftRate": 2,
+     "threeRate": 5,
+     "threePct": 4,
+     "oppThreePct": 26,
+     "oppThreesMade": 19
     }
    },
    "MEM": {
@@ -652,6 +904,24 @@
     "away": {
      "gp": 3,
      "w": 3
+    },
+    "rank": {
+     "offRtg": 9,
+     "defRtg": 9,
+     "netRtg": 7,
+     "pace": 28,
+     "avgTotal": 21,
+     "efg": 14,
+     "oppEfg": 3,
+     "tovPct": 26,
+     "oppTovPct": 15,
+     "orebPct": 2,
+     "drebPct": 25,
+     "ftRate": 19,
+     "threeRate": 16,
+     "threePct": 2,
+     "oppThreePct": 7,
+     "oppThreesMade": 5
     }
    },
    "MIA": {
@@ -695,6 +965,24 @@
     "away": {
      "gp": 2,
      "w": 1
+    },
+    "rank": {
+     "offRtg": 20,
+     "defRtg": 16,
+     "netRtg": 20,
+     "pace": 6,
+     "avgTotal": 13,
+     "efg": 22,
+     "oppEfg": 22,
+     "tovPct": 5,
+     "oppTovPct": 16,
+     "orebPct": 22,
+     "drebPct": 9,
+     "ftRate": 18,
+     "threeRate": 19,
+     "threePct": 20,
+     "oppThreePct": 27,
+     "oppThreesMade": 27
     }
    },
    "MIL": {
@@ -738,6 +1026,24 @@
     "away": {
      "gp": 1,
      "w": 0
+    },
+    "rank": {
+     "offRtg": 27,
+     "defRtg": 25,
+     "netRtg": 26,
+     "pace": 5,
+     "avgTotal": 11,
+     "efg": 18,
+     "oppEfg": 15,
+     "tovPct": 23,
+     "oppTovPct": 28,
+     "orebPct": 6,
+     "drebPct": 6,
+     "ftRate": 25,
+     "threeRate": 11,
+     "threePct": 21,
+     "oppThreePct": 14,
+     "oppThreesMade": 25
     }
    },
    "MIN": {
@@ -781,6 +1087,24 @@
     "away": {
      "gp": 2,
      "w": 1
+    },
+    "rank": {
+     "offRtg": 14,
+     "defRtg": 2,
+     "netRtg": 4,
+     "pace": 4,
+     "avgTotal": 19,
+     "efg": 7,
+     "oppEfg": 2,
+     "tovPct": 22,
+     "oppTovPct": 21,
+     "orebPct": 11,
+     "drebPct": 8,
+     "ftRate": 14,
+     "threeRate": 17,
+     "threePct": 10,
+     "oppThreePct": 4,
+     "oppThreesMade": 8
     }
    },
    "NOP": {
@@ -824,6 +1148,24 @@
     "away": {
      "gp": 2,
      "w": 0
+    },
+    "rank": {
+     "offRtg": 24,
+     "defRtg": 20,
+     "netRtg": 23,
+     "pace": 3,
+     "avgTotal": 10,
+     "efg": 17,
+     "oppEfg": 21,
+     "tovPct": 25,
+     "oppTovPct": 19,
+     "orebPct": 25,
+     "drebPct": 11,
+     "ftRate": 11,
+     "threeRate": 29,
+     "threePct": 30,
+     "oppThreePct": 15,
+     "oppThreesMade": 16
     }
    },
    "NYK": {
@@ -867,6 +1209,24 @@
     "away": {
      "gp": 2,
      "w": 1
+    },
+    "rank": {
+     "offRtg": 13,
+     "defRtg": 13,
+     "netRtg": 14,
+     "pace": 26,
+     "avgTotal": 23,
+     "efg": 23,
+     "oppEfg": 14,
+     "tovPct": 16,
+     "oppTovPct": 27,
+     "orebPct": 5,
+     "drebPct": 10,
+     "ftRate": 24,
+     "threeRate": 15,
+     "threePct": 12,
+     "oppThreePct": 22,
+     "oppThreesMade": 24
     }
    },
    "OKC": {
@@ -910,6 +1270,24 @@
     "away": {
      "gp": 1,
      "w": 0
+    },
+    "rank": {
+     "offRtg": 17,
+     "defRtg": 14,
+     "netRtg": 19,
+     "pace": 27,
+     "avgTotal": 25,
+     "efg": 26,
+     "oppEfg": 19,
+     "tovPct": 17,
+     "oppTovPct": 12,
+     "orebPct": 7,
+     "drebPct": 17,
+     "ftRate": 23,
+     "threeRate": 30,
+     "threePct": 29,
+     "oppThreePct": 21,
+     "oppThreesMade": 29
     }
    },
    "ORL": {
@@ -953,6 +1331,24 @@
     "away": {
      "gp": 2,
      "w": 1
+    },
+    "rank": {
+     "offRtg": 30,
+     "defRtg": 15,
+     "netRtg": 29,
+     "pace": 15,
+     "avgTotal": 27,
+     "efg": 27,
+     "oppEfg": 8,
+     "tovPct": 27,
+     "oppTovPct": 25,
+     "orebPct": 29,
+     "drebPct": 21,
+     "ftRate": 17,
+     "threeRate": 7,
+     "threePct": 23,
+     "oppThreePct": 12,
+     "oppThreesMade": 13
     }
    },
    "PHI": {
@@ -996,6 +1392,24 @@
     "away": {
      "gp": 1,
      "w": 1
+    },
+    "rank": {
+     "offRtg": 25,
+     "defRtg": 7,
+     "netRtg": 15,
+     "pace": 12,
+     "avgTotal": 24,
+     "efg": 29,
+     "oppEfg": 7,
+     "tovPct": 2,
+     "oppTovPct": 7,
+     "orebPct": 28,
+     "drebPct": 27,
+     "ftRate": 10,
+     "threeRate": 24,
+     "threePct": 14,
+     "oppThreePct": 8,
+     "oppThreesMade": 6
     }
    },
    "PHX": {
@@ -1038,6 +1452,24 @@
     "away": {
      "gp": 1,
      "w": 0
+    },
+    "rank": {
+     "offRtg": 2,
+     "defRtg": 29,
+     "netRtg": 18,
+     "pace": 24,
+     "avgTotal": 4,
+     "efg": 3,
+     "oppEfg": 23,
+     "tovPct": 7,
+     "oppTovPct": 11,
+     "orebPct": 16,
+     "drebPct": 30,
+     "ftRate": 20,
+     "threeRate": 2,
+     "threePct": 11,
+     "oppThreePct": 29,
+     "oppThreesMade": 22
     }
    },
    "POR": {
@@ -1080,6 +1512,24 @@
     "away": {
      "gp": 2,
      "w": 2
+    },
+    "rank": {
+     "offRtg": 1,
+     "defRtg": 28,
+     "netRtg": 5,
+     "pace": 8,
+     "avgTotal": 1,
+     "efg": 1,
+     "oppEfg": 29,
+     "tovPct": 1,
+     "oppTovPct": 22,
+     "orebPct": 20,
+     "drebPct": 3,
+     "ftRate": 1,
+     "threeRate": 4,
+     "threePct": 7,
+     "oppThreePct": 10,
+     "oppThreesMade": 12
     }
    },
    "SAC": {
@@ -1123,6 +1573,24 @@
     "away": {
      "gp": 1,
      "w": 0
+    },
+    "rank": {
+     "offRtg": 18,
+     "defRtg": 30,
+     "netRtg": 30,
+     "pace": 20,
+     "avgTotal": 7,
+     "efg": 25,
+     "oppEfg": 26,
+     "tovPct": 8,
+     "oppTovPct": 30,
+     "orebPct": 17,
+     "drebPct": 24,
+     "ftRate": 26,
+     "threeRate": 28,
+     "threePct": 25,
+     "oppThreePct": 20,
+     "oppThreesMade": 26
     }
    },
    "SAS": {
@@ -1166,6 +1634,24 @@
     "away": {
      "gp": 2,
      "w": 2
+    },
+    "rank": {
+     "offRtg": 8,
+     "defRtg": 5,
+     "netRtg": 3,
+     "pace": 17,
+     "avgTotal": 17,
+     "efg": 11,
+     "oppEfg": 12,
+     "tovPct": 3,
+     "oppTovPct": 10,
+     "orebPct": 19,
+     "drebPct": 7,
+     "ftRate": 27,
+     "threeRate": 22,
+     "threePct": 13,
+     "oppThreePct": 25,
+     "oppThreesMade": 10
     }
    },
    "TOR": {
@@ -1209,6 +1695,24 @@
     "away": {
      "gp": 2,
      "w": 1
+    },
+    "rank": {
+     "offRtg": 26,
+     "defRtg": 1,
+     "netRtg": 10,
+     "pace": 9,
+     "avgTotal": 26,
+     "efg": 28,
+     "oppEfg": 11,
+     "tovPct": 13,
+     "oppTovPct": 1,
+     "orebPct": 10,
+     "drebPct": 4,
+     "ftRate": 22,
+     "threeRate": 25,
+     "threePct": 28,
+     "oppThreePct": 18,
+     "oppThreesMade": 11
     }
    },
    "UTA": {
@@ -1252,6 +1756,24 @@
     "away": {
      "gp": 0,
      "w": 0
+    },
+    "rank": {
+     "offRtg": 15,
+     "defRtg": 23,
+     "netRtg": 21,
+     "pace": 14,
+     "avgTotal": 12,
+     "efg": 20,
+     "oppEfg": 17,
+     "tovPct": 24,
+     "oppTovPct": 29,
+     "orebPct": 4,
+     "drebPct": 1,
+     "ftRate": 13,
+     "threeRate": 23,
+     "threePct": 19,
+     "oppThreePct": 24,
+     "oppThreesMade": 21
     }
    },
    "WAS": {
@@ -1295,6 +1817,24 @@
     "away": {
      "gp": 3,
      "w": 1
+    },
+    "rank": {
+     "offRtg": 22,
+     "defRtg": 21,
+     "netRtg": 22,
+     "pace": 25,
+     "avgTotal": 20,
+     "efg": 16,
+     "oppEfg": 5,
+     "tovPct": 10,
+     "oppTovPct": 26,
+     "orebPct": 30,
+     "drebPct": 29,
+     "ftRate": 16,
+     "threeRate": 26,
+     "threePct": 27,
+     "oppThreePct": 3,
+     "oppThreesMade": 4
     }
    }
   },
