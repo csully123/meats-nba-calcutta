@@ -1,6 +1,6 @@
 {
- "backedUpAt": "2026-10-28T08:51:39Z",
- "count": 10,
+ "backedUpAt": "2026-10-29T08:53:36Z",
+ "count": 15,
  "wagers": {
   "2dzNbNNGFzlTZAffuZ8z": {
    "_updated": "2026-10-28T08:09:33.555867Z",
@@ -40,6 +40,46 @@
    "settledAt": "2026-10-28T08:09:33Z",
    "stage": "regular",
    "stake": 10,
+   "status": "win"
+  },
+  "4h8COUZPDkm3ASVMzR4k": {
+   "_updated": "2026-10-29T08:12:10.967051Z",
+   "boost": null,
+   "createdAt": "2026-10-28T13:08:36.840Z",
+   "eventID": "jG7R4zImb4TtrIhNvcY5",
+   "game": "HOU at MIL",
+   "gameDate": "2026-10-28",
+   "gameStart": "2026-10-29T00:00:00.000Z",
+   "legResults": [
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": false,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "away",
+     "line": -8.5,
+     "name": "Spread",
+     "oddID": "points-away-game-sp-away",
+     "odds": -102,
+     "opposing": "points-home-game-sp-home",
+     "period": "game",
+     "player": null,
+     "short": "HOU -8.5",
+     "side": "away",
+     "stat": "points",
+     "team": "HOU"
+    }
+   ],
+   "net": 19,
+   "payout": 39,
+   "placedAt": "2026-10-28T13:08:34.597Z",
+   "player": "Kev",
+   "series": null,
+   "settledAt": "2026-10-29T08:12:10Z",
+   "stage": "regular",
+   "stake": 20,
    "status": "win"
   },
   "EhDun7mY9NyggHX8znj4": {
@@ -275,6 +315,46 @@
    "stake": 5,
    "status": "loss"
   },
+  "JAb80p3qk61QiGWgPtWq": {
+   "_updated": "2026-10-29T08:12:11.157506Z",
+   "boost": null,
+   "createdAt": "2026-10-28T16:04:31.152Z",
+   "eventID": "pQsF6kYuDrEQXgaXnmGI",
+   "game": "GSW at MIN",
+   "gameDate": "2026-10-28",
+   "gameStart": "2026-10-29T00:00:00.000Z",
+   "legResults": [
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": false,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "away",
+     "line": 3.5,
+     "name": "Spread",
+     "oddID": "points-away-game-sp-away",
+     "odds": -110,
+     "opposing": "points-home-game-sp-home",
+     "period": "game",
+     "player": null,
+     "short": "GSW +3.5",
+     "side": "away",
+     "stat": "points",
+     "team": "GSW"
+    }
+   ],
+   "net": 9,
+   "payout": 19,
+   "placedAt": "2026-10-28T16:04:28.780Z",
+   "player": "Sulliver",
+   "series": null,
+   "settledAt": "2026-10-29T08:12:10Z",
+   "stage": "regular",
+   "stake": 10,
+   "status": "win"
+  },
   "OLIClsFR6EMnvvg9Dra8": {
    "_updated": "2026-10-27T16:58:32.322628Z",
    "boost": null,
@@ -313,6 +393,64 @@
    "stage": "regular",
    "stake": 10,
    "status": "loss"
+  },
+  "U3TJHnVg7En3DN7BZgGL": {
+   "_updated": "2026-10-29T08:12:11.429912Z",
+   "boost": null,
+   "createdAt": "2026-10-28T15:00:51.375Z",
+   "eventID": "0EnJsxeRoj5sV5LsdUsH",
+   "game": "NYK at CHI",
+   "gameDate": "2026-10-28",
+   "gameStart": "2026-10-29T00:00:00.000Z",
+   "legResults": [
+    "win",
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": false,
+     "betType": "ml",
+     "book": "fanduel",
+     "entity": "away",
+     "line": null,
+     "name": "Moneyline",
+     "oddID": "points-away-game-ml-away",
+     "odds": -245,
+     "opposing": "points-home-game-ml-home",
+     "period": "game",
+     "player": null,
+     "short": "NYK ML",
+     "side": "away",
+     "stat": "points",
+     "team": "NYK"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JALEN_BRUNSON_1_NBA",
+     "line": 29.5,
+     "name": "Jalen Brunson Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-JALEN_BRUNSON_1_NBA-game-ou-over",
+     "odds": -440,
+     "opposing": "points+rebounds+assists-JALEN_BRUNSON_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JALEN_BRUNSON_1_NBA",
+     "short": "Jalen Brunson Pts + Reb + Ast Over 29.5 (alt)",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "NYK"
+    }
+   ],
+   "net": 21,
+   "payout": 51,
+   "placedAt": "2026-10-28T15:00:42.998Z",
+   "player": "Mio",
+   "series": null,
+   "settledAt": "2026-10-29T08:12:10Z",
+   "stage": "regular",
+   "stake": 30,
+   "status": "win"
   },
   "UKy4bVxEciIKooHWhJ1G": {
    "_updated": "2026-10-27T16:58:32.488986Z",
@@ -494,6 +632,122 @@
    "stage": "regular",
    "stake": 10,
    "status": "win"
+  },
+  "aD7l26HQx7yLdjZ3nRic": {
+   "_updated": "2026-10-29T08:12:11.601411Z",
+   "boost": null,
+   "createdAt": "2026-10-28T16:06:07.447Z",
+   "eventID": "NaF7pEWPWlzf9fKdgfF5",
+   "game": "OKC at DAL",
+   "gameDate": "2026-10-28",
+   "gameStart": "2026-10-29T01:30:00.000Z",
+   "legResults": [
+    "win",
+    "win",
+    "loss"
+   ],
+   "legs": [
+    {
+     "alt": false,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "C_FLAGG_1_NBA",
+     "line": 24.5,
+     "name": "Cooper Flagg Points",
+     "oddID": "points-C_FLAGG_1_NBA-game-ou-over",
+     "odds": -114,
+     "opposing": "points-C_FLAGG_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "C_FLAGG_1_NBA",
+     "short": "Cooper Flagg Points Over 24.5",
+     "side": "over",
+     "stat": "points",
+     "team": "DAL"
+    },
+    {
+     "alt": false,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "ISAIAH_HARTENSTEIN_1_NBA",
+     "line": 9.5,
+     "name": "Isaiah Hartenstein Rebounds",
+     "oddID": "rebounds-ISAIAH_HARTENSTEIN_1_NBA-game-ou-over",
+     "odds": -118,
+     "opposing": "rebounds-ISAIAH_HARTENSTEIN_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "ISAIAH_HARTENSTEIN_1_NBA",
+     "short": "Isaiah Hartenstein Rebounds Over 9.5",
+     "side": "over",
+     "stat": "rebounds",
+     "team": "OKC"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "SHAI_GILGEOUSALEXANDER_1_NBA",
+     "line": 5.5,
+     "name": "Shai Gilgeous-Alexander Assists",
+     "oddID": "assists-SHAI_GILGEOUSALEXANDER_1_NBA-game-ou-over",
+     "odds": -188,
+     "opposing": "assists-SHAI_GILGEOUSALEXANDER_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "SHAI_GILGEOUSALEXANDER_1_NBA",
+     "short": "Shai Gilgeous-Alexander Assists Over 5.5 (alt)",
+     "side": "over",
+     "stat": "assists",
+     "team": "OKC"
+    }
+   ],
+   "net": -5,
+   "payout": 0,
+   "placedAt": "2026-10-28T16:06:07.324Z",
+   "player": "Sulliver",
+   "series": null,
+   "settledAt": "2026-10-29T08:12:10Z",
+   "stage": "regular",
+   "stake": 5,
+   "status": "loss"
+  },
+  "dpel7mf20wKde3HPi0pk": {
+   "_updated": "2026-10-29T08:12:11.777598Z",
+   "boost": null,
+   "createdAt": "2026-10-28T16:04:31.270Z",
+   "eventID": "NaF7pEWPWlzf9fKdgfF5",
+   "game": "OKC at DAL",
+   "gameDate": "2026-10-28",
+   "gameStart": "2026-10-29T01:30:00.000Z",
+   "legResults": [
+    "loss"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "SHAI_GILGEOUSALEXANDER_1_NBA",
+     "line": 29.5,
+     "name": "Shai Gilgeous-Alexander Points",
+     "oddID": "points-SHAI_GILGEOUSALEXANDER_1_NBA-game-ou-over",
+     "odds": -160,
+     "opposing": "points-SHAI_GILGEOUSALEXANDER_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "SHAI_GILGEOUSALEXANDER_1_NBA",
+     "short": "Shai Gilgeous-Alexander Points Over 29.5 (alt)",
+     "side": "over",
+     "stat": "points",
+     "team": "OKC"
+    }
+   ],
+   "net": -5,
+   "payout": 0,
+   "placedAt": "2026-10-28T16:04:31.150Z",
+   "player": "Sulliver",
+   "series": null,
+   "settledAt": "2026-10-29T08:12:10Z",
+   "stage": "regular",
+   "stake": 5,
+   "status": "loss"
   },
   "hRrSmZyCKCK6AlvVjGEk": {
    "_updated": "2026-10-27T16:58:32.597814Z",
