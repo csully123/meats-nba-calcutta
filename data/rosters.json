@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T15:15:07.203488+00:00",
+ "updated": "2026-10-29T11:32:44.378219+00:00",
  "players": {
   "AJ Dybantsa": {
    "team": "WAS",
@@ -1305,6 +1305,10 @@
    "team": "UTA",
    "pos": "F"
   },
+  "Lawson Lovering": {
+   "team": "LAL",
+   "pos": "C"
+  },
   "LeBron James": {
    "team": "PHI",
    "pos": "F"
@@ -1580,10 +1584,6 @@
   "Oso Ighodaro": {
    "team": "PHX",
    "pos": "F"
-  },
-  "Otega Oweh": {
-   "team": "OKC",
-   "pos": "G"
   },
   "Ousmane Dieng": {
    "team": "MIL",
