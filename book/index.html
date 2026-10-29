@@ -145,6 +145,8 @@ details.pastdays>.daybody{gap:10px;padding-left:10px;border-left:2px solid var(-
 .cbet .add{border:1.5px solid var(--accent);color:var(--accent);background:none;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
 .cbet .add:disabled{opacity:.45}
 .cbet .moved{font-size:12px;color:var(--muted)}
+td.legs .actual{font-size:12px;color:var(--muted);margin:1px 0 4px}
+td.legs .actual.pos{color:var(--win)}td.legs .actual.neg{color:var(--loss)}
 .cbet.best.mine{position:relative;border-left:0;padding-left:20px;overflow:hidden;background:linear-gradient(90deg,color-mix(in srgb,var(--accent) 10%,var(--surface)),var(--surface) 60%)}
 .cbet.best.mine::before{content:"";position:absolute;left:0;top:0;bottom:0;width:7px;background:var(--stripe,var(--accent))}
 .cbet.best.mine.flag-pl{--stripe:linear-gradient(180deg,#ffffff 0 50%,#dc143c 50% 100%)}
@@ -459,6 +461,7 @@ td.legs div{white-space:nowrap}
     // logos, colors and playoff stage from the ESPN schedule file, matched by date + teams
     const pg=await fetch('../data/games.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));
     S.logos={};for(const x of Object.values(pg)){S.logos[x.date+'|'+x.away+'|'+x.home]={a:x.awayLogo,h:x.homeLogo,ac:x.awayColor,hc:x.homeColor,stage:x.stage||'regular',series:x.series||null};}
+    S.actuals=await fetch('../data/leg-actuals.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));
     const ins=await fetch('../data/book-insights.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));S.insights=ins.games||{};S.bestBets=ins.days||{};S.claudeResults=ins.results||{};S.profiles=ins.players||{};S.winOdds=ins.winOdds||null;
   }
   const hexOf=c=>{if(!c)return '';c=String(c).trim();if(/^#[0-9a-fA-F]{6}$/.test(c))return c;if(/^[0-9a-fA-F]{6}$/.test(c))return '#'+c;return '';};
@@ -708,7 +711,7 @@ td.legs div{white-space:nowrap}
     for(const w of rows){const wk=E.weekKey(w.placedAt);if(wk!==lastWk){const wkRows=rows.filter(x=>E.weekKey(x.placedAt)===wk);const tally=wkRows.reduce((a,x)=>a+(x.status!=='open'?(x.net||0):0),0);out+=`<tr><td colspan="7" style="background:var(--soft);font-family:var(--display);font-size:16px;text-transform:uppercase;letter-spacing:.05em;font-weight:600">Week of ${esc(fmtShort.format(new Date(wk+'T12:00:00Z')))}<span class="num" style="float:right">${signed(tally)}</span></td></tr>`;lastWk=wk;}
       const g=S.games[w.eventID];const cc=canCancel(w)&&g&&!started(g);
       const dec=E.parlayDecimal(w.legs);const bm=(w.boost&&w.boost.mult)||1;
-      out+=`<tr><td class="num">${esc(fmtShort.format(new Date(w.placedAt)))}</td><td>${esc(w.player)}</td><td>${esc(w.game||'')}${w.stage&&STAGE_BADGE[w.stage]?`<div class="hint">${esc(STAGE_BADGE[w.stage])}</div>`:''}</td><td class="legs">${w.legs.map((l,i)=>`<div>${esc(l.short)} <span class="hint num">${esc(E.fmtAmerican(l.odds))}</span>${w.legResults&&w.legResults[i]?` <span class="res ${esc(w.legResults[i])}" style="font-size:9px;padding:1px 5px">${esc(w.legResults[i])}</span>`:''}</div>`).join('')}${w.legs.length>1?`<div class="hint">Parlay ${esc(E.fmtAmerican(E.american(dec)))}</div>`:''}${w.boost?`<div><span class="boostbadge ${w.boost.id==='mega'?'mega':''}">${esc(w.boost.label||w.boost.mult+'x boost')}</span></div>`:''}</td>
+      out+=`<tr><td class="num">${esc(fmtShort.format(new Date(w.placedAt)))}</td><td>${esc(w.player)}</td><td>${esc(w.game||'')}${w.stage&&STAGE_BADGE[w.stage]?`<div class="hint">${esc(STAGE_BADGE[w.stage])}</div>`:''}</td><td class="legs">${w.legs.map((l,i)=>{const a=((S.actuals||{})[w.id]||[])[i];return `<div>${esc(l.short)} <span class="hint num">${esc(E.fmtAmerican(l.odds))}</span>${w.legResults&&w.legResults[i]?` <span class="res ${esc(w.legResults[i])}" style="font-size:9px;padding:1px 5px">${esc(w.legResults[i])}</span>`:''}${a&&a.text?`<div class="actual num ${a.margin==null?'':a.margin>0?'pos':a.margin<0?'neg':''}">${esc(a.text)}</div>`:''}</div>`;}).join('')}${w.legs.length>1?`<div class="hint">Parlay ${esc(E.fmtAmerican(E.american(dec)))}</div>`:''}${w.boost?`<div><span class="boostbadge ${w.boost.id==='mega'?'mega':''}">${esc(w.boost.label||w.boost.mult+'x boost')}</span></div>`:''}</td>
         <td class="num">${fmtPts(w.stake)}</td><td><span class="res ${esc(w.status)}">${esc(w.status)}</span>${cc?` <button class="signout" data-cancel="${esc(w.id)}">cancel</button>`:''}</td><td class="ptcell num ${w.status==='open'?'zero':(w.net>0?'pos':w.net<0?'neg':'zero')}">${w.status==='open'?`to win ${fmtPts(E.boostedProfit(w.stake,w.legs,bm))}`:signed(w.net||0)}</td></tr>`;}
     $('betbody').innerHTML=`<div class="tablewrap"><table><thead><tr><th>Placed</th><th>Who</th><th>Game</th><th>Bet</th><th>Stake</th><th>Result</th><th style="text-align:right">Net</th></tr></thead><tbody>${out}</tbody></table></div>`;
     $('betbody').querySelectorAll('[data-cancel]').forEach(b=>b.addEventListener('click',()=>cancelBet(b.dataset.cancel)));}
