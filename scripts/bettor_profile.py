@@ -27,6 +27,17 @@ STAT_NAMES = {"points": "points", "rebounds": "rebounds", "assists": "assists", 
               "blocks+steals": "combo", "doubleDouble": "double-double", "tripleDouble": "triple-double", "firstBasket": "first basket"}
 
 
+ROSTER_BY_NORM = {}
+
+
+def pretty_name(text: str) -> str:
+    """Raw feed ids in a leg label (ZACH_LAVINE_1_NBA Points) become the ESPN roster spelling."""
+    def fix(m):
+        guess = " ".join(w.capitalize() for w in m.group(0).rsplit("_", 2)[0].split("_") if w)
+        return ROSTER_BY_NORM.get(norm(guess), guess)
+    return re.sub(r"\b[A-Z][A-Z0-9']*(?:_[A-Z0-9']+)*_\d+_NBA\b", fix, text or "")
+
+
 def norm(name: str) -> str:
     s = unicodedata.normalize("NFKD", name or "").encode("ascii", "ignore").decode().lower()
     return re.sub(r"[^a-z ]", "", s.replace(" jr", "").replace(" sr", "").replace(" iii", "").replace(" ii", "")).strip()
@@ -91,6 +102,8 @@ def load(path: Path, default):
 def main():
     wagers = list(load(ROOT / "data" / "backups" / "wagers-latest.json", {}).get("wagers", {}).values())
     rosters = {norm(k): v for k, v in load(ROOT / "data" / "rosters.json", {}).get("players", {}).items()}
+    for k in load(ROOT / "data" / "rosters.json", {}).get("players", {}):
+        ROSTER_BY_NORM.setdefault(norm(k), k)
     insights = load(ROOT / "data" / "book-insights.json", {})
     # Claude's picks: (eventID, oddID) pairs for singles, and each parlay's leg set
     claude_singles, claude_parlays = set(), []
@@ -148,7 +161,7 @@ def main():
 
         # props: who, what stat, positions, over/under
         prop_legs = [(w, l) for w, l in legs if l.get("player")]
-        prop_names = Counter(STAT_WORDS.sub("", l.get("short", "")).strip() for _, l in prop_legs)
+        prop_names = Counter(STAT_WORDS.sub("", pretty_name(l.get("short", ""))).strip() for _, l in prop_legs)
         prop_stats = Counter(STAT_NAMES.get(l.get("stat"), l.get("stat") or "other") for _, l in prop_legs)
         pos = Counter()
         unknown_pos = []

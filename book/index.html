@@ -453,6 +453,8 @@ td.legs div{white-space:nowrap}
   if(!PLAYERS.includes(S.me))S.me=null;if(!['book','bets','stats'].includes(S.tab))S.tab='book';
 
   const $=id=>document.getElementById(id);
+  const normName=n=>String(n||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/ (jr|sr|iii|ii)\b/g,'').replace(/[^a-z ]/g,'').trim();
+  const fixName=s=>String(s||'').replace(/\b[A-Z][A-Z0-9']*(?:_[A-Z0-9']+)*_\d+_NBA\b/g,id=>{const guess=id.replace(/_\d+_NBA$/,'').split('_').filter(Boolean).map(w=>w[0]+w.slice(1).toLowerCase()).join(' ');return (S.rosterNames||{})[normName(guess)]||guess;});
   const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const nowET=()=>fmtDay.format(new Date());
   function addDays(day,n){const [y,m,d]=day.split('-').map(Number);return new Date(Date.UTC(y,m-1,d+n)).toISOString().slice(0,10);}
@@ -472,6 +474,9 @@ td.legs div{white-space:nowrap}
     const today=nowET();const wk=E.weekKey(new Date().toISOString());const want=(idx.dates||[]).filter(d=>d>=(wk<addDays(today,-2)?wk:addDays(today,-2)));
     const days=await Promise.all(want.map(d=>fetch(`../data/odds/${d}.json`+bust).then(r=>r.ok?r.json():null).catch(()=>null)));
     const games={};for(const d of days){if(!d)continue;for(const [id,g] of Object.entries(d.games||{}))games[id]=g;}
+    // Player names: the feed sometimes names a prop by its raw id (ZACH_LAVINE_1_NBA); swap in the ESPN roster spelling
+    try{const ro=await fetch('../data/rosters.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));S.rosterNames={};for(const n of Object.keys(ro.players||{}))S.rosterNames[normName(n)]=S.rosterNames[normName(n)]||n;}catch(e){S.rosterNames={};}
+    for(const g of Object.values(games))for(const m of g.markets||[])if(m.kind==='prop'&&m.name)m.name=fixName(m.name);
     S.games=games;
     // logos, colors and playoff stage from the ESPN schedule file, matched by date + teams
     const pg=await fetch('../data/games.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));
@@ -827,7 +832,7 @@ td.legs div{white-space:nowrap}
 
   // auth
   let unsub=null;
-  function watch(){if(unsub)unsub();unsub=S.db.collection('wagers').onSnapshot(snap=>{S.wagers=snap.docs.map(d=>({id:d.id,...d.data()}));render();},err=>console.error(err));}
+  function watch(){if(unsub)unsub();unsub=S.db.collection('wagers').onSnapshot(snap=>{S.wagers=snap.docs.map(d=>({id:d.id,...d.data()}));for(const w of S.wagers)for(const l of w.legs||[]){if(l.short)l.short=fixName(l.short);if(l.name)l.name=fixName(l.name);}render();},err=>console.error(err));}
   function showGate(show){$('gate').hidden=!show;if(show)setTimeout(()=>$('pw').focus(),50);}
   $('gateform').addEventListener('submit',async e=>{e.preventDefault();const btn=$('gatebtn'),err=$('gateerr');btn.disabled=true;err.textContent='';
     try{await firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL);await firebase.auth().signInWithEmailAndPassword(POOL_EMAIL,$('pw').value);$('pw').value='';}

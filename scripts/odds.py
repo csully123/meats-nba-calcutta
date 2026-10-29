@@ -106,6 +106,33 @@ def pick_price(odd: dict):
     return None, None, None, []
 
 
+_ROSTER_NAMES = None
+
+
+def _norm(name: str) -> str:
+    import unicodedata
+    t = unicodedata.normalize("NFKD", name or "").encode("ascii", "ignore").decode().lower()
+    return re.sub(r"[^a-z ]", "", t.replace(" jr", "").replace(" sr", "").replace(" iii", "").replace(" ii", "")).strip()
+
+
+def pretty_name(pid: str) -> str:
+    """A display name for a feed player id the feed did not name (ZACH_LAVINE_1_NBA): the ESPN roster spelling when
+    the normalized name matches, otherwise Title Case of the id."""
+    global _ROSTER_NAMES
+    if _ROSTER_NAMES is None:
+        _ROSTER_NAMES = {}
+        rp = Path(__file__).resolve().parent.parent / "data" / "rosters.json"
+        if rp.exists():
+            try:
+                for n in json.loads(rp.read_text()).get("players", {}):
+                    _ROSTER_NAMES.setdefault(_norm(n), n)
+            except Exception:  # noqa: BLE001
+                pass
+    words = re.sub(r"_\d+_NBA$", "", pid or "").split("_")
+    guess = " ".join(w.capitalize() for w in words if w)
+    return _ROSTER_NAMES.get(_norm(guess), guess)
+
+
 def shape(ev: dict, players: dict) -> dict:
     st = ev.get("status") or {}
     teams = ev.get("teams") or {}
@@ -123,7 +150,7 @@ def shape(ev: dict, players: dict) -> dict:
             if period != "game" or stat not in PLAYER_STATS:
                 continue
             p = players.get(pid) or {}
-            label = p.get("name") or pid
+            label = p.get("name") or pretty_name(pid)
             team = p.get("teamID")
             team_short = hs if team == home.get("teamID") else as_ if team == away.get("teamID") else ""
             kind = "prop"
