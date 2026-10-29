@@ -135,8 +135,38 @@ def settle(w: dict, leg_results: list):
     except (TypeError, ValueError):
         mult = 1.0
     boosted = min(stake, 20.0)  # a token boosts the profit on the first 20 points of stake
-    profit = float(math.floor(stake * (dec - 1) + boosted * (dec - 1) * (mult - 1)))  # whole points: profit rounds down
-    return {"status": "win", "net": profit, "payout": stake + profit}
+    profit = math.floor((stake * (dec - 1) + boosted * (dec - 1) * (mult - 1)) * 100 + 1e-6) / 100  # profit rounds down to the hundredth
+    return {"status": "win", "net": profit, "payout": round(stake + profit, 2)}
+
+
+def repay_wins(base: str, headers: dict) -> None:
+    """Points went from whole numbers to two decimals on 2026-10-29. Wins settled before that had their profit rounded
+    down to a whole point; recompute every settled win from its stored leg results and patch any whose net differs.
+    Idempotent: once every win carries its exact two-decimal profit, this changes nothing."""
+    body = {"structuredQuery": {"from": [{"collectionId": "wagers"}], "where": {"fieldFilter": {"field": {"fieldPath": "status"}, "op": "EQUAL", "value": {"stringValue": "win"}}}, "limit": 1000}}
+    req = urllib.request.Request(base + ":runQuery", data=json.dumps(body).encode(), headers=headers)
+    with urllib.request.urlopen(req, timeout=60) as r:
+        rows = json.load(r)
+    fixed = 0
+    for row in rows:
+        doc = row.get("document")
+        if not doc:
+            continue
+        w = {k: unwrap(v) for k, v in (doc.get("fields") or {}).items()}
+        results = w.get("legResults") or []
+        if len(results) != len(w.get("legs") or []):
+            continue
+        s = settle(w, results)
+        if not s or s["status"] != "win" or abs(float(w.get("net") or 0) - s["net"]) < 0.005:
+            continue
+        patch = {"fields": {"net": {"doubleValue": s["net"]}, "payout": {"doubleValue": s["payout"]}}}
+        mask = "&".join("updateMask.fieldPaths=" + k for k in patch["fields"])
+        req = urllib.request.Request(f"https://firestore.googleapis.com/v1/{doc['name']}?{mask}", data=json.dumps(patch).encode(), headers=headers, method="PATCH")
+        with urllib.request.urlopen(req, timeout=60) as r:
+            r.read()
+        fixed += 1
+        print(f"repaid {doc['name'].rsplit('/',1)[-1]}: net {w.get('net')} -> {s['net']}")
+    print(f"repaid {fixed} settled wins to two decimals")
 
 
 def main() -> int:
@@ -194,6 +224,7 @@ def main() -> int:
         graded += 1
         print(f"settled {doc['name'].rsplit('/',1)[-1]}: {s['status']} net {s['net']}")
     print(f"graded {graded} of {len(rows)} open wagers")
+    repay_wins(base, headers)
     grade_claude(games)
     return 0
 

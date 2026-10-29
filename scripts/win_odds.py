@@ -111,7 +111,7 @@ def main():
                     if stack < 1:
                         break
                     d, legs = rng.choice(own if rng.random() < k else pool)
-                    cap = stack if stack + 0 <= 20 else math.floor(stack * .25)
+                    cap = stack if stack + 0 <= 20 else math.floor(stack * 25) / 100
                     stake = max(1.0, min(cap, round(stack * frac)))
                     if i == n - 1 and wagered + stake < 20:
                         stake = max(stake, min(cap, 20 - wagered))
@@ -120,7 +120,7 @@ def main():
                     stack -= stake
                     if rng.random() < p_win:
                         boosted = min(stake, 20) if i == 0 else 0  # weekly 1.5x on the first bet
-                        stack += stake + math.floor(stake * (d - 1) + boosted * (d - 1) * 0.5)
+                        stack += stake + math.floor((stake * (d - 1) + boosted * (d - 1) * 0.5) * 100) / 100
                     if stack < 1:
                         busts += 1
                         stack = RELOAD

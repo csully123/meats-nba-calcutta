@@ -5,6 +5,10 @@
   // American odds helpers
   E.decimal=function(american){const a=Number(american);if(!isFinite(a)||a===0)return null;return a>0?1+a/100:1+100/Math.abs(a);};
   E.american=function(decimal){const d=Number(decimal);if(!isFinite(d)||d<=1)return null;const p=d-1;return p>=1?Math.round(p*100):-Math.round(100/p);};
+  // Points carry two decimals. cents() rounds to the nearest hundredth, floorCents() rounds down to it (the book's side).
+  E.cents=function(x){return Math.round((Number(x)||0)*100+1e-7)/100;};
+  E.floorCents=function(x){return Math.floor((Number(x)||0)*100+1e-6)/100;};
+  E.fmtPts=function(x){return E.cents(x).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});};
   E.fmtAmerican=function(a){if(a==null)return '';return (a>0?'+':'')+a;};
   E.parlayDecimal=function(legs){return legs.reduce((acc,l)=>acc*(E.decimal(l.odds)||1),1);};
 
@@ -17,11 +21,11 @@
     w.legs.forEach((l,i)=>{if(legResults[i]==='win'){dec*=E.decimal(l.odds)||1;live++;}});
     if(live===0)return {status:'push',net:0};
     const mult=(w.boost&&Number(w.boost.mult))||1; // a boost token multiplies the profit on the first BOOST_STAKE points of stake
-    const profit=E.profitWithBoost(w.stake,dec,mult); // whole points: profit rounds down
+    const profit=E.profitWithBoost(w.stake,dec,mult); // profit rounds down to the hundredth
     return {status:'win',net:profit,payout:w.stake+profit};
   };
   E.BOOST_STAKE=20; // a token boosts the profit on this much of a bet's stake; the rest pays at the normal price
-  E.profitWithBoost=function(stake,dec,mult){const m=mult||1;const boosted=Math.min(stake,E.BOOST_STAKE);return Math.floor(stake*(dec-1)+boosted*(dec-1)*(m-1));};
+  E.profitWithBoost=function(stake,dec,mult){const m=mult||1;const boosted=Math.min(stake,E.BOOST_STAKE);return E.floorCents(stake*(dec-1)+boosted*(dec-1)*(m-1));};
   E.boostedProfit=function(stake,legs,mult){return E.profitWithBoost(stake,E.parlayDecimal(legs),mult);};
   E.MAX_LEGS=4;
 
@@ -43,6 +47,7 @@
       else if(ev.kind==='place'){stack-=ev.w.stake;pending+=ev.w.stake;wagered+=ev.w.stake;const wk=E.weekKey(ev.w.placedAt);byWeek[wk]=(byWeek[wk]||0)+ev.w.stake;}
       else{pending-=ev.w.stake;const s=ev.w.settled;if(s.status==='win')stack+=ev.w.stake+s.net;else if(s.status==='push'||s.status==='void')stack+=ev.w.stake;
         if(stack<=0.005&&pending<=0.005){busts++;events.push({t:ev.t,bust:busts});stack=reload;}}
+      stack=E.cents(stack);pending=E.cents(pending);wagered=E.cents(wagered);
       events.push({t:ev.t,stack:Math.round(stack*100)/100});
     }
     return {stack:Math.round(stack*100)/100,pending:Math.round(pending*100)/100,busts,wagered:Math.round(wagered*100)/100,byWeek,events};
@@ -87,28 +92,28 @@
     if(x&&y&&x.v===y.v){if(x.dir===y.dir)return 'overlap';const gt=x.dir==='>'?x:y,lt=x.dir==='<'?x:y;return gt.at>=lt.at?'impossible':null;}
     return E.related(a,b)?'related':null;};
 
-  // Biggest single bet allowed: 25% of the available stack, rounded down to a whole point. Once the whole bankroll
+  // Biggest single bet allowed: 25% of the available stack, rounded down to the hundredth. Once the whole bankroll
   // (available plus open bets) is at or under ALL_IN_AT, the cap lifts and you may bet everything you have left.
   E.ALL_IN_AT=20;
   E.allIn=function(state){return (state.stack||0)+(state.pending||0)<=E.ALL_IN_AT+0.0001;};
   E.maxBet=function(state,cfg){const maxFrac=(cfg&&cfg.maxBetFraction)||0.25;const stack=Math.max(0,state.stack||0);
-    return E.allIn(state)?Math.floor(stack+0.0001):Math.floor(stack*maxFrac+0.0001);};
+    return E.allIn(state)?E.floorCents(stack):E.floorCents(stack*maxFrac);};
 
   // Rules checks for a new wager
   E.validate=function(w,state,cfg){
     const errs=[];const maxFrac=(cfg&&cfg.maxBetFraction)||0.25;
     if(!(w.stake>0))errs.push('Enter a stake.');
-    else if(!Number.isInteger(w.stake))errs.push('Stakes are whole points.');
-    if(w.stake>state.stack+0.0001)errs.push(`You only have ${state.stack} points available.`);
+    else if(Math.abs(w.stake*100-Math.round(w.stake*100))>1e-6)errs.push('Stakes go to two decimal places at most.');
+    if(w.stake>state.stack+0.0001)errs.push(`You only have ${E.fmtPts(state.stack)} points available.`);
     const cap=E.maxBet(state,cfg);
-    if(w.stake>cap+0.0001)errs.push(E.allIn(state)?`You can bet up to your whole ${cap} right now.`:`Max bet is ${Math.round(maxFrac*100)}% of your stack (${cap} right now).`);
+    if(w.stake>cap+0.0001)errs.push(E.allIn(state)?`You can bet up to your whole ${E.fmtPts(cap)} right now.`:`Max bet is ${Math.round(maxFrac*100)}% of your stack (${E.fmtPts(cap)} right now).`);
     // Exposure caps, measured against the whole bankroll (available plus open): 50% of it on any one game across all
     // open bets, and 25% of it on any one market across open singles (adding to a bet at a new number is fine up to that).
     if(!E.allIn(state)&&Array.isArray(state.open)&&w.legs&&w.legs.length){const bank=(state.stack||0)+(state.pending||0);const eid=w.legs[0].eventID;
-      const gameFrac=(cfg&&cfg.maxGameFraction)||0.5;const onGame=state.open.filter(o=>o.eventID===eid).reduce((a,o)=>a+(Number(o.stake)||0),0);const gameCap=Math.floor(bank*gameFrac+0.0001);
-      if(onGame+w.stake>gameCap+0.0001)errs.push(onGame?`You already have ${onGame} on this game and ${Math.round(gameFrac*100)}% of your stack is ${gameCap}, so this bet can be at most ${Math.max(0,gameCap-onGame)}.`:`Max on one game is ${Math.round(gameFrac*100)}% of your stack (${gameCap}).`);
-      if(w.legs.length===1){const oid=w.legs[0].oddID;const onMkt=state.open.filter(o=>o.eventID===eid&&o.legs&&o.legs.length===1&&o.legs[0].oddID===oid).reduce((a,o)=>a+(Number(o.stake)||0),0);const mktCap=Math.floor(bank*maxFrac+0.0001);
-        if(onMkt&&onMkt+w.stake>mktCap+0.0001)errs.push(`You already have ${onMkt} on ${w.legs[0].short||'this line'} and ${Math.round(maxFrac*100)}% of your stack is ${mktCap}, so you can add at most ${Math.max(0,mktCap-onMkt)}.`);}}
+      const gameFrac=(cfg&&cfg.maxGameFraction)||0.5;const onGame=state.open.filter(o=>o.eventID===eid).reduce((a,o)=>a+(Number(o.stake)||0),0);const gameCap=E.floorCents(bank*gameFrac);
+      if(onGame+w.stake>gameCap+0.0001)errs.push(onGame?`You already have ${E.fmtPts(onGame)} on this game and ${Math.round(gameFrac*100)}% of your stack is ${E.fmtPts(gameCap)}, so this bet can be at most ${E.fmtPts(Math.max(0,gameCap-onGame))}.`:`Max on one game is ${Math.round(gameFrac*100)}% of your stack (${E.fmtPts(gameCap)}).`);
+      if(w.legs.length===1){const oid=w.legs[0].oddID;const onMkt=state.open.filter(o=>o.eventID===eid&&o.legs&&o.legs.length===1&&o.legs[0].oddID===oid).reduce((a,o)=>a+(Number(o.stake)||0),0);const mktCap=E.floorCents(bank*maxFrac);
+        if(onMkt&&onMkt+w.stake>mktCap+0.0001)errs.push(`You already have ${E.fmtPts(onMkt)} on ${w.legs[0].short||'this line'} and ${Math.round(maxFrac*100)}% of your stack is ${E.fmtPts(mktCap)}, so you can add at most ${E.fmtPts(Math.max(0,mktCap-onMkt))}.`);}}
     if(!w.legs||!w.legs.length)errs.push('Add at least one selection.');
     if(w.legs&&new Set(w.legs.map(l=>l.eventID)).size>1)errs.push('All selections must be from the same game.');
     if(w.legs&&w.legs.some(l=>l.started))errs.push('One of these games has already started.');

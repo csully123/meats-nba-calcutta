@@ -228,7 +228,7 @@ def main():
         out[p] = {
             "settledBets": len(mine),
             "record": rec(graded),
-            "net": round(sum(float(w.get("net") or 0) for w in mine), 1),
+            "net": round(sum(float(w.get("net") or 0) for w in mine), 2),
             "singles": {"count": len(singles), "record": rec([w for w in singles if w in graded])},
             "parlays": {"count": len(parlays), "record": rec([w for w in parlays if w in graded]),
                         "avgLegs": round(sum(len(w["legs"]) for w in parlays) / len(parlays), 1) if parlays else None,
