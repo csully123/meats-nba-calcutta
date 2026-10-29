@@ -145,6 +145,103 @@
     "why": "Minnesota just lost Anthony Edwards to a knee injury until late December, and he was scoring 33.3 a night. Golden State is rested and coming off a 134-114 demolition in Denver, and Stephen Curry has his legs. A home team missing a third of its offense laying only 3.5 should be getting more. Take the points; the Warriors can win this outright."
    },
    "updated": "2026-10-28T14:56:19Z"
+  },
+  "2026-10-29": {
+   "single": {
+    "eventID": "LRhY8kYfHreD6OVlzYzs",
+    "oddID": "rebounds-DOMANTAS_SABONIS_1_NBA-game-ou-over",
+    "line": 14.5,
+    "odds": 100,
+    "label": "Sabonis over 14.5 rebounds",
+    "team": "SAC",
+    "why": "Sabonis is averaging 16 rebounds in nearly 37 minutes, and even money only asks for 15. New Orleans is without center Yves Missi, leaving Derik Queen and DeAndre Jordan to box him out, and the Pelicans are on the second night of a back-to-back while the Kings had a day off. A Pelicans team shooting 27.7% from three, 30th in the league, will miss plenty, and he gets first crack at every one."
+   },
+   "parlay": {
+    "eventID": "Gnx52Lw1qtWsIC0mHYxp",
+    "legs": [
+     {
+      "oddID": "points-away-game-sp-away",
+      "line": 7.5,
+      "odds": -110,
+      "label": "Grizzlies +7.5"
+     },
+     {
+      "oddID": "points-TY_JEROME_1_NBA-game-ou-over",
+      "line": 23.5,
+      "odds": -122,
+      "label": "Ty Jerome over 23.5 points"
+     }
+    ],
+    "price": 247,
+    "why": "The script is Memphis dragging Portland into its game: the Grizzlies play at the 28th-ranked pace, have two days of rest to Portland's one, and face a Blazers defense that ranks 28th in rating. Ty Jerome runs that offense with a 37% usage rate and is averaging 29.8 points, per Sportsradio Z104. If Memphis stays within a possession or two, Jerome is the one doing it."
+   },
+   "updated": "2026-10-29T15:13:09Z",
+   "personal": {
+    "Kev": {
+     "eventID": "LRhY8kYfHreD6OVlzYzs",
+     "legs": [
+      {
+       "oddID": "points-away-game-sp-away",
+       "line": 5.5,
+       "odds": -102,
+       "label": "Kings +5.5"
+      }
+     ],
+     "price": -102,
+     "why": "You have been cashing near-even road sides, and this is the cleanest one tonight. Sacramento had a day off while New Orleans plays the second night of a back-to-back, Keegan Murray is out but Sabonis is eating on the glass, and the Pelicans shoot 27.7% from three. At -102 it is right in your price range, a straight single with no extra legs."
+    },
+    "Beekie": {
+     "eventID": "LRhY8kYfHreD6OVlzYzs",
+     "legs": [
+      {
+       "oddID": "points-ZACH_LAVINE_1_NBA-game-ou-over",
+       "line": 21.5,
+       "odds": -110,
+       "label": "LaVine over 21.5 points"
+      },
+      {
+       "oddID": "points-ZION_WILLIAMSON_1_NBA-game-ou-over",
+       "line": 21.5,
+       "odds": -106,
+       "label": "Zion over 21.5 points"
+      }
+     ],
+     "price": 271,
+     "why": "You love points props in parlays, but three-leg long shots are 0-4, so this is your idea with two legs. LaVine averages 27 against a Pelicans defense ranked 20th, and Zion just scored 25 on 14 shots and now faces the league's worst defensive rating. A fast New Orleans pace helps both scorers."
+    },
+    "Mio": {
+     "eventID": "FNszYqIYdfrKiqFx0PWs",
+     "legs": [
+      {
+       "oddID": "points-all-game-ou-under",
+       "line": 249.5,
+       "odds": -290,
+       "label": "Under 249.5 (alt)"
+      },
+      {
+       "oddID": "points-DONOVAN_MITCHELL_1_NBA-game-ou-over",
+       "line": 19.5,
+       "odds": -310,
+       "label": "Mitchell over 19.5 points (alt)"
+      }
+     ],
+     "price": -128,
+     "why": "Your two-leg parlays with safer alt numbers are 2-0, so here is another one. Both teams are on a back-to-back, Cleveland landed around 1:30 am, and the total has already dropped, so the under at 249.5 gives you real cushion. Mitchell averages 24.7 and 26.8 for his career against Atlanta, so 20 is a bought-down number."
+    },
+    "Sulliver": {
+     "eventID": "Gnx52Lw1qtWsIC0mHYxp",
+     "legs": [
+      {
+       "oddID": "points-JA_MORANT_1_NBA-game-ou-over",
+       "line": 17.5,
+       "odds": -106,
+       "label": "Morant over 17.5 points"
+      }
+     ],
+     "price": -106,
+     "why": "You are a player-prop overs guy, but your multi-leg tickets and alt numbers have not landed, so keep this one a straight single. Morant is shooting 58.8% in Portland, scored 23 his last time out, and faces Memphis for the first time since the trade. Portland's offense ranks first in rating, so the shots will be there."
+    }
+   }
   }
  },
  "games": {
@@ -1070,28 +1167,157 @@
     }
    ],
    "updated": "2026-10-28T14:56:19Z"
+  },
+  "FNszYqIYdfrKiqFx0PWs": {
+   "date": "2026-10-29",
+   "away": "CLE",
+   "home": "ATL",
+   "blurb": "Cleveland is 3-1 and has won three straight, closing a home back-to-back with a 121-111 win over Washington last night. Atlanta is 2-3 after three losses in a row, the latest a 129-117 home loss to Miami. The Cavs are third in three-point percentage at 39.7% this season, while the Hawks are sixth in opponent three-point percentage but 28th in defensive rebounding. Both teams are on the second night of a back-to-back and Cleveland landed around 1:30 am, with tipoff pushed to 8 pm for the WNBA Finals, per Deadspin. A near pick'em at 238.5 says coin flip on the side; two tired teams lean under.",
+   "angles": [
+    "Both teams on a back-to-back",
+    "CLE landed about 1:30 am",
+    "CLE 3rd in 3-point percentage",
+    "ATL 28th in defensive rebounding",
+    "Total dropped, money on the under",
+    "Mitchell 26.8 ppg career vs ATL"
+   ],
+   "injuries": [
+    {
+     "team": "CLE",
+     "player": "Nae'Qwan Tomlin",
+     "status": "Out",
+     "stats": "Rotation forward",
+     "impact": "Low",
+     "note": "Lower back stress reaction, expected to miss at least 3 to 4 weeks; costs Cleveland some frontcourt depth."
+    },
+    {
+     "team": "ATL",
+     "player": "Mouhamed Gueye",
+     "status": "Out",
+     "stats": "Rotation forward",
+     "impact": "Medium",
+     "note": "Recovering from surgery on a fractured left foot; Atlanta loses a physical backup big on a night it faces Mobley and Allen."
+    },
+    {
+     "team": "ATL",
+     "player": "Henri Veesaar",
+     "status": "Out",
+     "stats": "Center",
+     "impact": "Low",
+     "note": "Torn right ACL, out for the season; thins the center rotation behind Okongwu and Landale."
+    }
+   ],
+   "updated": "2026-10-29T15:13:09Z"
+  },
+  "LRhY8kYfHreD6OVlzYzs": {
+   "date": "2026-10-29",
+   "away": "SAC",
+   "home": "NOP",
+   "blurb": "Two 0-4 teams meet in New Orleans. Sacramento lost 130-103 at San Antonio on Tuesday, and the Pelicans fell 104-91 to Denver last night despite 25 from Zion Williamson. The Kings rank 30th in defensive rating and 26th in opponent eFG% this season, but New Orleans is 30th in three-point percentage at 27.7% and plays at the 3rd-fastest pace. The Pelicans are on a back-to-back while the Kings had a day off, and SI rates Doug Christie's hot seat an 8 out of 10. New Orleans -5.5 asks a tired, winless team to win by six; the rest edge leans Sacramento.",
+   "angles": [
+    "NOP back-to-back, SAC rested",
+    "SAC 30th in defensive rating",
+    "NOP 30th in 3-point percentage",
+    "Sabonis 16 reb a game, Missi out",
+    "Christie hot seat 8 of 10, per SI"
+   ],
+   "injuries": [
+    {
+     "team": "SAC",
+     "player": "Keegan Murray",
+     "status": "Out",
+     "stats": "Starting forward",
+     "impact": "High",
+     "note": "Ankle injury, re-evaluated in 10 to 14 days; Sacramento loses its best wing defender and a floor spacer."
+    },
+    {
+     "team": "SAC",
+     "player": "Maxime Raynaud",
+     "status": "Out",
+     "stats": "Center",
+     "impact": "Medium",
+     "note": "Knee injury, re-evaluation in about two weeks; leaves the Kings thin behind Sabonis up front."
+    },
+    {
+     "team": "SAC",
+     "player": "Dylan Cardwell",
+     "status": "Out",
+     "stats": "Backup center",
+     "impact": "Low",
+     "note": "Calf injury, re-evaluated in a week; one less big body for Sacramento."
+    },
+    {
+     "team": "SAC",
+     "player": "Ben Simmons",
+     "status": "Out",
+     "stats": "Guard",
+     "impact": "Low",
+     "note": "Recovering from surgery on a torn right Achilles tendon."
+    },
+    {
+     "team": "NOP",
+     "player": "Yves Missi",
+     "status": "Out",
+     "stats": "Center",
+     "impact": "Medium",
+     "note": "Left knee bone bruise; New Orleans is down to Derik Queen and DeAndre Jordan at center against Sabonis."
+    },
+    {
+     "team": "NOP",
+     "player": "Jordan Poole",
+     "status": "Questionable",
+     "stats": "6.7 pts in 16 min",
+     "impact": "Low",
+     "note": "Listed day-to-day after playing seven minutes last night; a bench scorer the second unit can do without."
+    }
+   ],
+   "updated": "2026-10-29T15:13:09Z"
+  },
+  "Gnx52Lw1qtWsIC0mHYxp": {
+   "date": "2026-10-29",
+   "away": "MEM",
+   "home": "POR",
+   "blurb": "Memphis is 4-0 after a 110-105 win at Utah on Monday, and the Blazers are 3-0 after winning 136-129 at the Lakers on Tuesday. Portland leads the league in offensive rating at 127.8 but sits 28th in defensive rating, while Memphis plays the 28th-slowest pace and holds opponents to the 3rd-lowest eFG%. Memphis has two days off to Portland's one, though it is the last game of a four-game trip. It is Ja Morant's first game against the team that traded him, and he says he holds no grudge, per Yahoo Sports. Portland -7.5 is a big number for a game Memphis can slow down; lean Grizzlies.",
+   "angles": [
+    "Morant faces Memphis for first time",
+    "MEM rest edge, 2 days vs 1",
+    "POR 28th in defensive rating",
+    "MEM 28th in pace, slows games down",
+    "85% of spread tickets on POR"
+   ],
+   "injuries": [
+    {
+     "team": "POR",
+     "player": "Shaedon Sharpe",
+     "status": "Out",
+     "stats": "Starting wing",
+     "impact": "High",
+     "note": "Torn meniscus, not expected back until March; Portland loses a scoring wing and leans harder on Avdija and its guards."
+    }
+   ],
+   "updated": "2026-10-29T15:13:09Z"
   }
  },
  "players": {
   "Beekie": {
+   "text": "Beekie is the most consistent shape in the book and the unluckiest: all four bets are 5-point, three-leg long-shot parlays built from a game total plus star points props, and all four lost for -20. Six of the eight props were on guards, overs and unders split evenly, and only 3 of 12 legs hit, with props going 2-6 and totals 1-3. The weekly boost went on a +608 parlay that missed. All four went in during one sitting about six hours before tip. The reads are not crazy, but needing three legs at once is the leak. Read: a game-script parlay builder who should try two legs.",
    "settled": 4,
-   "text": "The most systematic bettor in the group, and so far the unluckiest. All four bets are 5-point, three-leg long-shot parlays pairing a game total with two star scorers' points, two all-over and two all-under, and six of his eight props are on guards. He never bets sides, singles or alt lines, spent his weekly boost on a +608 parlay, and placed all four in one sitting about six hours before tip. Only 3 of 12 legs have hit, so 0-4 for -20, though the tiny stakes keep it cheap. Read: a game-script parlay builder who needs everything to break together.",
-   "updated": "2026-10-29T13:07:03Z"
+   "updated": "2026-10-29T15:13:09Z"
   },
   "Kev": {
+   "text": "Kev is the road-side single bettor of the group, and it is working: 3-0 for +43. All three bets were singles priced near even money on away teams, two spreads and a boosted moneyline, with Portland backed twice and both underdogs cashing. No parlays, props, totals or alt lines so far, and stakes stay modest at 10 to 20 points. He bets early, about seven and a half hours before tip, and has not copied Claude once. Nothing has gone wrong yet; the test is whether the dog reads hold over a bigger sample. Read: a disciplined road-dog side bettor.",
    "settled": 3,
-   "text": "Three bets, three wins, +43, all of them singles near even money on sides: Portland +2.5, the boosted Portland moneyline at +108, then Houston -8.5 with a 20-point stake, his biggest yet. Every bet has been on a road team and two of three on underdogs, and he has never touched a total, a prop or an alt line. He bets about seven and a half hours before tip, never in the final hour, and has not copied Claude once. Everything has worked so far; the one new wrinkle is doubling his stake on a road favorite. Read: a road-side bettor who trusts his own number.",
-   "updated": "2026-10-29T13:07:03Z"
+   "updated": "2026-10-29T15:13:09Z"
   },
   "Mio": {
+   "text": "Small sample, but a clear style: two bets, both two-leg parlays priced as favorites, both cashed for +52 on the biggest stakes in the group at 30 to 50 points. Three of the four legs were alt lines bought down to safer numbers, and the boost went on a -190 parlay. Read: a grinder who buys safety and presses the stake.",
    "settled": 2,
-   "text": "Small sample, but a sharp signature: two-leg parlays at 30 to 50 points, the biggest stakes in the group, with three of four legs alternate lines bought down to safer numbers (Over 219.5, Lakers +10.5, Brunson Pts+Reb+Ast over 29.5) so each slip lands at a favorite's price. All four legs hit for 2-0 and +52, the best net in the book, though at those stakes one bad leg would hand a lot of it back. Read: a grinder who buys safety.",
-   "updated": "2026-10-29T13:07:03Z"
+   "updated": "2026-10-29T15:13:09Z"
   },
   "Sulliver": {
+   "text": "Sulliver is the Claude follower: four of his six settled bets copied Claude's pick, and the results are 1-5 for -26. He loves player-prop overs, seven of seven, with Shai backed twice, but those legs are 2-5 and his three alt legs are 0-3. He mixes four singles (1-3) with two three-leg parlays (0-2) at prices ranging from favorite to long shot, on 5 to 10 point stakes, usually about eight hours before tip. Spreads have gone 1-2. The overs instinct is fine; the long parlays and alt numbers are what bled. Read: no settled pattern of his own yet, a props-overs fan riding Claude.",
    "settled": 6,
-   "text": "Sulliver leans on Claude more than anyone: four of his six settled bets came from Claude's picks of the day, including Golden State +3.5, his only win. His own instinct is star props, and all seven of his prop legs have been overs, split between guards and forwards, but only two have hit. Alt lines are 0-3, whether he bought a safer number on Shai or reached for Wembanyama threes at +220, and both parlays missed, one boosted to +547. Stakes stay at 5 to 10 points. Singles 1-3, parlays 0-2, -26 overall. Read: a Claude follower with an itch for star overs.",
-   "updated": "2026-10-29T13:07:03Z"
+   "updated": "2026-10-29T15:13:09Z"
   }
  },
  "results": {
@@ -1111,11 +1337,11 @@
  },
  "winOdds": {
   "odds": {
-   "Beekie": 24,
    "Kev": 30,
+   "Beekie": 24,
    "Mio": 25,
    "Sulliver": 21
   },
-  "updated": "2026-10-29T13:07:03Z"
+  "updated": "2026-10-29T15:13:09Z"
  }
 }
