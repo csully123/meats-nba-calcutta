@@ -139,6 +139,14 @@ details.pastdays>.daybody{gap:10px;padding-left:10px;border-left:2px solid var(-
 .sit{margin:4px 0 0;padding-left:18px;font-size:13px;line-height:1.4;color:var(--ink)}
 .sit li{margin:2px 0}
 .sit li.edge{font-weight:700}
+.teamrec{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--muted);margin:4px 0 8px}
+.teamrec .tcode{color:var(--tc,var(--ink))}
+.wbody .cbet.best{margin-top:8px}
+.cteams{padding:0}
+.cteamtbl{width:100%;border-collapse:collapse;font-size:14px}
+.cteamtbl th,.cteamtbl td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left}
+.cteamtbl th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.cteamtbl .num{text-align:right}
 .wblock .eyebrow{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:6px}
 .inj{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px;font-size:14px}
 .inj li{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline}
@@ -418,7 +426,7 @@ td.legs div{white-space:nowrap}
 
   <section id="view-book" class="day" style="gap:22px"><div class="skel"><div></div><div></div></div></section>
   <section id="view-bets" hidden style="display:flex;flex-direction:column;gap:14px"><div class="filters" id="betfilters"></div><div id="betread"></div><div id="betbody"></div></section>
-  <section id="view-stats" hidden style="display:flex;flex-direction:column;gap:14px"><div class="filters" id="statfilters"></div><div id="statread"></div><div id="statbody"></div></section>
+  <section id="view-stats" hidden style="display:flex;flex-direction:column;gap:14px"><div class="filters" id="statfilters"></div><div id="statread"></div><div id="statbody"></div><div id="statteams"></div></section>
 </div>
 
 <div class="slip" id="slip" hidden></div>
@@ -546,15 +554,23 @@ td.legs div{white-space:nowrap}
   // Claude's best single and best parlay across the whole slate, shown under the day header.
   function claudeRecord(){const rec={single:{w:0,l:0,p:0},parlay:{w:0,l:0,p:0}};for(const d of Object.values(S.claudeResults||{}))for(const k of ['single','parlay']){const r=d[k];if(r==='win')rec[k].w++;else if(r==='loss')rec[k].l++;else if(r==='push')rec[k].p++;}
     const fmt=(k,x)=>{const n=x.w+x.l;return `${k} ${x.w}-${x.l}${x.p?'-'+x.p:''}${n?` (${Math.round(100*x.w/n)}%)`:''}`;};return {rec,text:`${fmt('singles',rec.single)}, ${fmt('parlays',rec.parlay)}`};}
+  const recText=x=>{const n=x.w+x.l;return n||x.p?`${x.w}-${x.l}${x.p?'-'+x.p:''}${n?` (${Math.round(100*x.w/n)}%)`:''}`:'0-0';};
+  // One card for any of Claude's picks: the day's best single or parlay, or a game's own single or parlay.
+  // o: {kind:'single'|'parlay', x: the pick, g: the game, title, r: graded result, recLabel, rec:{w,l,p}, addKind, goto, extra}
+  function claudeCard(o){const {kind,x,g}=o;if(!x||!g)return '';const legs=kind==='single'?[x]:(x.legs||[]);const states=legs.map(l=>legState(g,l));const ok=states.every(t=>t.ok);const notes=states.map(t=>t.note).filter(Boolean);
+    const canAdd=!started(g)&&S.me&&!stateOf(S.me).fouledOut;const cols=colorsOf(g);const team=kind==='single'?(x.team||''):'';const tc=team===g.home?cols.h:team===g.away?cols.a:'';
+    const price=kind==='single'?x.odds:(x.price!=null?x.price:E.american(legs.reduce((a,l)=>a*(E.decimal(l.odds)||1),1)));
+    const r=o.r;const badge=r?`<span class="res ${esc(r)}" style="margin-left:8px">${r==='win'?'Hit':r==='loss'?'Missed':'Push'}</span>`:'';
+    return `<div class="cbet best ${r||''}" style="--tc:${tc||'var(--accent)'}"><div class="besttop"><span class="eyebrow">${o.title}${badge} <small>${esc(g.away)} at ${esc(g.home)}, ${esc(fmtTime.format(new Date(g.start)))} ET</small></span>${o.rec?`<span class="recpill num" title="${esc(o.recTitle||'')}"><small>${esc(o.recLabel||'')}</small>${esc(recText(o.rec))}</span>`:''}</div>
+      ${kind==='single'?`<div class="bl"><span>${esc(x.label||'')}</span><span class="o">${esc(E.fmtAmerican(price))}</span></div>`:`<div class="bl"><span>${legs.length}-leg same-game parlay</span><span class="o">${esc(E.fmtAmerican(price))}</span></div><div class="legs">${legs.map(l=>`<div>${esc(l.label||'')} <span class="o num hint">${esc(E.fmtAmerican(l.odds))}</span></div>`).join('')}</div>`}
+      ${x.why?`<p class="why">${esc(x.why)}</p>`:''}${o.extra||''}<div class="addrow"><button type="button" class="add" data-cadd="${esc(g.eventID)}|${esc(o.addKind)}" ${canAdd&&ok?'':'disabled'}>${kind==='single'?'Add to slip':'Add parlay to slip'}</button>${o.goto===false?'':`<button type="button" class="add go" data-goto="${esc(g.eventID)}">Go to game</button>`}${started(g)?'<span class="moved">already started</span>':notes.length?`<span class="moved">${esc(notes.join('; '))}</span>`:''}</div></div>`;}
+  // Claude's per-game picks: records by kind and by team, from the graded picks in results.games
+  function gamePickRecords(){const rec={single:{w:0,l:0,p:0},parlay:{w:0,l:0,p:0}};const teams={};for(const v of Object.values((S.claudeResults||{}).games||{}))for(const k of ['single','parlay']){const o=v[k];if(!o||!o.r)continue;const key=o.r==='win'?'w':o.r==='loss'?'l':'p';rec[k][key]++;for(const t of o.teams||[]){teams[t]=teams[t]||{w:0,l:0,p:0};teams[t][key]++;}}return {rec,teams};}
+  function renderGamePicks(g){const w=(S.insights||{})[g.eventID];if(!w||(!w.single&&!w.parlay))return '';const res=((S.claudeResults||{}).games||{})[g.eventID]||{};const gp=gamePickRecords();
+    const teamLine=`<div class="teamrec">${[g.away,g.home].map(t=>{const x=gp.teams[t]||{w:0,l:0,p:0};const tc=t===g.home?colorsOf(g).h:colorsOf(g).a;return `<span><strong class="tcode" ${tc?`style="--tc:${tc}"`:''}>${esc(t)}</strong> picks ${esc(recText(x))}</span>`;}).join('')}</div>`;
+    return `<div class="wblock"><span class="eyebrow">Claude's picks for this game</span>${teamLine}${claudeCard({kind:'single',x:w.single,g,title:'Best single, this game',r:(res.single||{}).r,recLabel:'Game singles',recTitle:"Claude's record on game-by-game singles",rec:gp.rec.single,addKind:'gsingle',goto:false})}${claudeCard({kind:'parlay',x:w.parlay,g,title:'Best parlay, this game',r:(res.parlay||{}).r,recLabel:'Game parlays',recTitle:"Claude's record on game-by-game parlays",rec:gp.rec.parlay,addKind:'gparlay',goto:false})}</div>`;}
   function renderBestBets(day){const b=(S.bestBets||{})[day];if(!b||(!b.single&&!b.parlay))return '';const stamp=b.updated?fmtStamp.format(new Date(b.updated)):'';const res=(S.claudeResults||{})[day]||{};const record=claudeRecord();
-    const card=(kind,x)=>{if(!x)return '';const g=S.games[x.eventID];if(!g)return '';const legs=kind==='single'?[x]:(x.legs||[]);const states=legs.map(l=>legState(g,l));const ok=states.every(t=>t.ok);const notes=states.map(t=>t.note).filter(Boolean);
-      const canAdd=!started(g)&&S.me&&!stateOf(S.me).fouledOut;const cols=colorsOf(g);const team=kind==='single'?(x.team||''):'';const tc=team===g.home?cols.h:team===g.away?cols.a:'';
-      const price=kind==='single'?x.odds:(x.price!=null?x.price:E.american(legs.reduce((a,l)=>a*(E.decimal(l.odds)||1),1)));
-      const r=res[kind];const badge=r?`<span class="res ${esc(r)}" style="margin-left:8px">${r==='win'?'Hit':r==='loss'?'Missed':'Push'}</span>`:'';
-      const rk=record.rec[kind];const rn=rk.w+rk.l;const recTxt=rn||rk.p?`${rk.w}-${rk.l}${rk.p?'-'+rk.p:''}${rn?` (${Math.round(100*rk.w/rn)}%)`:''}`:'0-0';
-      return `<div class="cbet best ${r||''}" style="--tc:${tc||'var(--accent)'}"><div class="besttop"><span class="eyebrow">${kind==='single'?"Claude's best single":"Claude's best parlay"}${badge} <small>${esc(g.away)} at ${esc(g.home)}, ${esc(fmtTime.format(new Date(g.start)))} ET</small></span><span class="recpill num" title="Claude's ${kind==='single'?'singles':'parlays'} record this season"><small>${kind==='single'?'Singles':'Parlays'}</small>${esc(recTxt)}</span></div>
-        ${kind==='single'?`<div class="bl"><span>${esc(x.label||'')}</span><span class="o">${esc(E.fmtAmerican(price))}</span></div>`:`<div class="bl"><span>${legs.length}-leg same-game parlay</span><span class="o">${esc(E.fmtAmerican(price))}</span></div><div class="legs">${legs.map(l=>`<div>${esc(l.label||'')} <span class="o num hint">${esc(E.fmtAmerican(l.odds))}</span></div>`).join('')}</div>`}
-        ${x.why?`<p class="why">${esc(x.why)}</p>`:''}<div class="addrow"><button type="button" class="add" data-cadd="${esc(g.eventID)}|${kind}" ${canAdd&&ok?'':'disabled'}>${kind==='single'?'Add to slip':'Add parlay to slip'}</button><button type="button" class="add go" data-goto="${esc(g.eventID)}">Go to game</button>${started(g)?'<span class="moved">already started</span>':notes.length?`<span class="moved">${esc(notes.join('; '))}</span>`:''}</div></div>`;};
+    const card=(kind,x)=>x?claudeCard({kind,x,g:S.games[x.eventID],title:kind==='single'?"Claude's best single":"Claude's best parlay",r:res[kind],recLabel:kind==='single'?'Singles':'Parlays',recTitle:`Claude's ${kind==='single'?'singles':'parlays'} record this season`,rec:record.rec[kind],addKind:kind}):'';
     // The person's own bet of the day: shown only to whoever is "Betting as" that name.
     const mineCard=(()=>{const x=S.me&&b.personal&&b.personal[S.me];if(!x)return '';const g=S.games[x.eventID];if(!g)return '';const legs=x.legs||[];const states=legs.map(l=>legState(g,l));const ok=states.every(t=>t.ok);const notes=states.map(t=>t.note).filter(Boolean);
       const canAdd=!started(g)&&!stateOf(S.me).fouledOut;const price=x.price!=null?x.price:E.american(legs.reduce((a,l)=>a*(E.decimal(l.odds)||1),1));
@@ -585,7 +601,7 @@ td.legs div{white-space:nowrap}
       const blurb=w.blurb?`<div class="wblock"><span class="eyebrow">Game report</span><p class="wtext">${esc(w.blurb)}</p></div>`:'';
       const angles=Array.isArray(w.angles)&&w.angles.length?`<div class="wblock"><span class="eyebrow">Angles</span><div class="angles">${w.angles.map(a=>`<span>${esc(a)}</span>`).join('')}</div></div>`:'';
       const situation=sit.length?`<div class="wblock"><span class="eyebrow">Rest and travel</span><ul class="sit">${sit.map((n,i)=>`<li class="${i===0&&/^(Rest edge|Even rest)/.test(n)?'edge':''}">${esc(n)}</li>`).join('')}</ul></div>`:'';
-      return `<details class="wdet" data-w="${esc(g.eventID)}" ${openW.has(g.eventID)?'open':''}><summary><span class="eyebrow">Game insights${stamp?', written '+esc(stamp):''}</span></summary><div class="wbody">${blurb}${angles}${situation}${inj}</div></details>`;})();
+      return `<details class="wdet" data-w="${esc(g.eventID)}" ${openW.has(g.eventID)?'open':''}><summary><span class="eyebrow">Game insights${stamp?', written '+esc(stamp):''}</span></summary><div class="wbody">${blurb}${angles}${situation}${renderGamePicks(g)}${inj}</div></details>`;})();
     const mine=S.wagers.filter(w=>w.eventID===g.eventID&&canSee(w));
     const mineHtml=mine.length?`<div class="mypicks">${mine.map(w=>`<span class="w ${w.status==='open'?'':w.status}">${esc(w.player)}: ${w.legs.map(l=>esc(l.short)).join(' + ')} for ${fmtPts(w.stake)}${w.status!=='open'?` (${w.status}${w.net?` ${signed(w.net)}`:''})`:''}</span>`).join('')}</div>`:'';
     const props=(g.markets||[]).filter(m=>m.kind==='prop'||(m.kind==='game'&&m.period==='1h'));
@@ -691,7 +707,8 @@ td.legs div{white-space:nowrap}
   // Put Claude's suggested single or parlay on the slip at today's numbers (an alt line is used when the suggested number is still on the ladder).
   function addClaudeBet(eid,kind,el){const g=S.games[eid];if(!g)return;const b=(S.bestBets||{})[g.date]||{};
     if(!S.me){$('who').classList.add('nudge');toast('Choose your name first');return;}if(started(g)){toast('This game has already started',true);return;}
-    const x=kind==='single'?b.single:kind==='parlay'?b.parlay:((b.personal||{})[S.me]);if(!x||x.eventID!==eid)return;
+    const gi=(S.insights||{})[eid]||{};const x=kind==='single'?b.single:kind==='parlay'?b.parlay:kind==='gsingle'?gi.single:kind==='gparlay'?gi.parlay:((b.personal||{})[S.me]);if(!x||(x.eventID&&x.eventID!==eid))return;
+    if(kind==='gsingle')kind='single';else if(kind==='gparlay')kind='parlay';
     const legs=kind==='single'?[x]:(x.legs||[]);if(kind==='personal')kind=legs.length===1?'single':'parlay';let added=0;
     for(const leg of legs){const m=mk(g,leg.oddID);if(!m)continue;const alt=m.line!==leg.line&&(m.alts||[]).find(a=>a[0]===leg.line);const use=alt?{...m,line:alt[0],odds:alt[1]}:m;const key=legKey(g.eventID,m.oddID);
       if(S.slip.some(l=>l.key===key&&l.line===use.line)){added++;continue;}
@@ -740,7 +757,10 @@ td.legs div{white-space:nowrap}
     $('betbody').querySelectorAll('[data-cancel]').forEach(b=>b.addEventListener('click',()=>cancelBet(b.dataset.cancel)));}
 
   // ---------- stats ----------
-  function renderStatsTab(){const who=PLAYERS.includes(S.stat)?S.stat:(S.me||PLAYERS[0]);S.stat=who;$('statread').innerHTML=readHtml(who);
+  function claudeTeamsHtml(){const gp=gamePickRecords();const rows=Object.entries(gp.teams).filter(([,x])=>x.w+x.l+x.p>0).sort((a,b)=>{const pa=a[1].w/Math.max(1,a[1].w+a[1].l),pb=b[1].w/Math.max(1,b[1].w+b[1].l);return pb-pa||(b[1].w-a[1].w)||a[0].localeCompare(b[0]);});
+    if(!rows.length)return '';const n=gp.rec.single.w+gp.rec.single.l+gp.rec.parlay.w+gp.rec.parlay.l;
+    return `<details class="wdet cteams"><summary><span class="eyebrow">Claude by team</span></summary><div class="wbody"><p class="hint">Every game-by-game pick Claude has made, counted for each team the bet rode on (a parlay counts for each team in it, a total for neither). Game singles ${esc(recText(gp.rec.single))}, game parlays ${esc(recText(gp.rec.parlay))}, ${n} graded.</p><table class="tbl cteamtbl"><thead><tr><th>Team</th><th class="num">Record</th><th class="num">Hit rate</th></tr></thead><tbody>${rows.map(([t,x])=>{const tot=x.w+x.l;return `<tr><td><strong>${esc(t)}</strong></td><td class="num">${x.w}-${x.l}${x.p?'-'+x.p:''}</td><td class="num">${tot?Math.round(100*x.w/tot)+'%':'n/a'}</td></tr>`;}).join('')}</tbody></table></div></details>`;}
+  function renderStatsTab(){const who=PLAYERS.includes(S.stat)?S.stat:(S.me||PLAYERS[0]);S.stat=who;$('statread').innerHTML=readHtml(who);$('statteams').innerHTML=claudeTeamsHtml();
     $('statfilters').innerHTML=PLAYERS.map(p=>`<button class="chip" data-stat="${esc(p)}" aria-pressed="${who===p}">${esc(p)}</button>`).join('');
     const mine=S.wagers.filter(w=>w.player===who&&canSee(w));if(!mine.length){$('statbody').innerHTML=`<div class="empty"><strong>No numbers yet</strong>${esc(who)} has no visible bets yet.</div>`;return;}
     const st=stateOf(who);const settled=mine.filter(w=>w.status!=='open');const wins=settled.filter(w=>w.status==='win'),losses=settled.filter(w=>w.status==='loss');

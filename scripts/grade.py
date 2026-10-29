@@ -263,6 +263,37 @@ def grade_claude(games: dict) -> None:
             if r:
                 per[name] = r
                 changed += 1
+    # each game's own best single and parlay (key "games"): graded into results.games[eventID] with the teams the
+    # bet rode on, so the site can keep a record per team
+    def teams_of(game: dict, legs: list, fallback: str = ""):
+        out = []
+        for leg in legs:
+            m = next((x for x in game.get("markets", []) if x.get("oddID") == leg.get("oddID")), None)
+            t = (m or {}).get("team") or (leg.get("team") if m is None else "")
+            if t and t not in out:
+                out.append(t)
+        if not out and fallback:
+            out.append(fallback)
+        return out
+
+    gres = results.setdefault("games", {})
+    for eid, entry in (data.get("games") or {}).items():
+        game = games.get(eid)
+        if not game or not game.get("results"):
+            continue
+        out = gres.setdefault(eid, {})
+        for kind in ("single", "parlay"):
+            pick = entry.get(kind)
+            if not pick or out.get(kind):
+                continue
+            legs = [pick] if kind == "single" else (pick.get("legs") or [])
+            r = outcome(game, legs)
+            if r:
+                out[kind] = {"r": r, "teams": teams_of(game, legs, pick.get("team", "") if kind == "single" else ""),
+                             "date": entry.get("date")}
+                changed += 1
+        if not out:
+            gres.pop(eid, None)
     if changed:
         INSIGHTS.write_text(json.dumps(data, indent=1, sort_keys=True) + "\n")
         print(f"graded {changed} of Claude's picks")
