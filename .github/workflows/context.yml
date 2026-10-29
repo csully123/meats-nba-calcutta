@@ -1,0 +1,40 @@
+name: Advanced stats and schedule context
+
+on:
+  schedule:
+    - cron: "50 11 * * *"   # 7:50 AM ET, before the morning write-ups
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  context:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Advanced team and player stats (nba.com plus our own box scores)
+        run: python scripts/nba_stats.py
+      - name: Rest, travel and schedule notes for today and tomorrow
+        run: python scripts/schedule_context.py
+      - name: Commit
+        run: |
+          git config user.name "calcutta-bot"
+          git config user.email "calcutta-bot@users.noreply.github.com"
+          git add data/nba-advanced.json data/schedule-context.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Context $(date -u +%Y-%m-%d)"
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push && break
+              echo "push attempt $i failed, retrying"; sleep $((i * 10))
+            done
+          fi
