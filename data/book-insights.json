@@ -1098,6 +1098,15 @@
   "2026-10-26": {
    "parlay": "loss",
    "single": "loss"
+  },
+  "2026-10-28": {
+   "parlay": "loss",
+   "personal": {
+    "Kev": "loss",
+    "Mio": "win",
+    "Sulliver": "loss"
+   },
+   "single": "win"
   }
  },
  "winOdds": {
