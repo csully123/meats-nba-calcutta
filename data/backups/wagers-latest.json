@@ -1,9 +1,9 @@
 {
- "backedUpAt": "2026-10-29T08:53:36Z",
- "count": 15,
+ "backedUpAt": "2026-10-30T08:53:34Z",
+ "count": 19,
  "wagers": {
   "2dzNbNNGFzlTZAffuZ8z": {
-   "_updated": "2026-10-28T08:09:33.555867Z",
+   "_updated": "2026-10-30T00:15:21.735126Z",
    "boost": null,
    "createdAt": "2026-10-27T20:48:55.863Z",
    "eventID": "jHX9XeeKJsLkc910NrDz",
@@ -32,8 +32,8 @@
      "team": "POR"
     }
    ],
-   "net": 8,
-   "payout": 18,
+   "net": 8.47,
+   "payout": 18.47,
    "placedAt": "2026-10-27T20:48:54.950Z",
    "player": "Kev",
    "series": null,
@@ -43,7 +43,7 @@
    "status": "win"
   },
   "4h8COUZPDkm3ASVMzR4k": {
-   "_updated": "2026-10-29T08:12:10.967051Z",
+   "_updated": "2026-10-30T00:15:21.902719Z",
    "boost": null,
    "createdAt": "2026-10-28T13:08:36.840Z",
    "eventID": "jG7R4zImb4TtrIhNvcY5",
@@ -72,8 +72,8 @@
      "team": "HOU"
     }
    ],
-   "net": 19,
-   "payout": 39,
+   "net": 19.6,
+   "payout": 39.6,
    "placedAt": "2026-10-28T13:08:34.597Z",
    "player": "Kev",
    "series": null,
@@ -157,6 +157,46 @@
    "stake": 5,
    "status": "loss"
   },
+  "FTXBgF1z4dUnPekyydhT": {
+   "_updated": "2026-10-30T08:12:01.373489Z",
+   "boost": null,
+   "createdAt": "2026-10-29T21:10:19.850Z",
+   "eventID": "Gnx52Lw1qtWsIC0mHYxp",
+   "game": "MEM at POR",
+   "gameDate": "2026-10-29",
+   "gameStart": "2026-10-30T02:00:00.000Z",
+   "legResults": [
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JA_MORANT_1_NBA",
+     "line": 0.5,
+     "name": "Ja Morant 3-pointers made",
+     "oddID": "threePointersMade-JA_MORANT_1_NBA-game-ou-over",
+     "odds": -400,
+     "opposing": "threePointersMade-JA_MORANT_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JA_MORANT_1_NBA",
+     "short": "Ja Morant 3-pointers made Over 0.5 (alt)",
+     "side": "over",
+     "stat": "threePointersMade",
+     "team": "POR"
+    }
+   ],
+   "net": 7.5,
+   "payout": 37.5,
+   "placedAt": "2026-10-29T21:10:18.497Z",
+   "player": "Kev",
+   "series": null,
+   "settledAt": "2026-10-30T08:12:01Z",
+   "stage": "regular",
+   "stake": 30,
+   "status": "win"
+  },
   "FhE8GGLlgmOEobqOYn1Y": {
    "_updated": "2026-10-27T16:58:32.082808Z",
    "boost": {
@@ -234,6 +274,46 @@
    "settledAt": "2026-10-27T16:58:31Z",
    "stage": "regular",
    "stake": 10,
+   "status": "loss"
+  },
+  "GaS0pa7qH1vNcLG4UtlX": {
+   "_updated": "2026-10-30T08:12:01.610254Z",
+   "boost": null,
+   "createdAt": "2026-10-29T13:23:35.682Z",
+   "eventID": "FNszYqIYdfrKiqFx0PWs",
+   "game": "CLE at ATL",
+   "gameDate": "2026-10-29",
+   "gameStart": "2026-10-30T00:00:00.000Z",
+   "legResults": [
+    "loss"
+   ],
+   "legs": [
+    {
+     "alt": false,
+     "betType": "ml",
+     "book": "fanduel",
+     "entity": "away",
+     "line": null,
+     "name": "Moneyline",
+     "oddID": "points-away-game-ml-away",
+     "odds": -108,
+     "opposing": "points-home-game-ml-home",
+     "period": "game",
+     "player": null,
+     "short": "CLE ML",
+     "side": "away",
+     "stat": "points",
+     "team": "CLE"
+    }
+   ],
+   "net": -43,
+   "payout": 0,
+   "placedAt": "2026-10-29T13:23:33.983Z",
+   "player": "Sulliver",
+   "series": null,
+   "settledAt": "2026-10-30T08:12:01Z",
+   "stage": "regular",
+   "stake": 43,
    "status": "loss"
   },
   "HdcbEGsGqkpOdNjkYmIl": {
@@ -316,7 +396,7 @@
    "status": "loss"
   },
   "JAb80p3qk61QiGWgPtWq": {
-   "_updated": "2026-10-29T08:12:11.157506Z",
+   "_updated": "2026-10-30T00:15:22.085542Z",
    "boost": null,
    "createdAt": "2026-10-28T16:04:31.152Z",
    "eventID": "pQsF6kYuDrEQXgaXnmGI",
@@ -345,8 +425,8 @@
      "team": "GSW"
     }
    ],
-   "net": 9,
-   "payout": 19,
+   "net": 9.09,
+   "payout": 19.09,
    "placedAt": "2026-10-28T16:04:28.780Z",
    "player": "Sulliver",
    "series": null,
@@ -395,7 +475,7 @@
    "status": "loss"
   },
   "U3TJHnVg7En3DN7BZgGL": {
-   "_updated": "2026-10-29T08:12:11.429912Z",
+   "_updated": "2026-10-30T00:15:22.243397Z",
    "boost": null,
    "createdAt": "2026-10-28T15:00:51.375Z",
    "eventID": "0EnJsxeRoj5sV5LsdUsH",
@@ -442,8 +522,8 @@
      "team": "NYK"
     }
    ],
-   "net": 21,
-   "payout": 51,
+   "net": 21.84,
+   "payout": 51.84,
    "placedAt": "2026-10-28T15:00:42.998Z",
    "player": "Mio",
    "series": null,
@@ -528,7 +608,7 @@
    "status": "loss"
   },
   "Wcm3pXodR1e7pL0DYZr7": {
-   "_updated": "2026-10-28T08:09:33.722959Z",
+   "_updated": "2026-10-30T00:15:22.479090Z",
    "boost": {
     "id": "week:2026-10-26",
     "label": "1.5x weekly",
@@ -579,8 +659,8 @@
      "team": "LAL"
     }
    ],
-   "net": 31,
-   "payout": 81,
+   "net": 31.57,
+   "payout": 81.57,
    "placedAt": "2026-10-28T02:22:22.546Z",
    "player": "Mio",
    "series": null,
@@ -590,7 +670,7 @@
    "status": "win"
   },
   "XCKnFxDU3vvhylispaW2": {
-   "_updated": "2026-10-28T08:09:33.866651Z",
+   "_updated": "2026-10-30T00:15:22.623336Z",
    "boost": {
     "id": "week:2026-10-26",
     "label": "1.5x weekly",
@@ -623,8 +703,8 @@
      "team": "POR"
     }
    ],
-   "net": 16,
-   "payout": 26,
+   "net": 16.2,
+   "payout": 26.2,
    "placedAt": "2026-10-27T21:20:41.529Z",
    "player": "Kev",
    "series": null,
@@ -749,6 +829,46 @@
    "stake": 5,
    "status": "loss"
   },
+  "g4QBHJkF8qZ12jkYL9Ot": {
+   "_updated": "2026-10-30T08:12:01.833554Z",
+   "boost": null,
+   "createdAt": "2026-10-29T15:38:05.327Z",
+   "eventID": "Gnx52Lw1qtWsIC0mHYxp",
+   "game": "MEM at POR",
+   "gameDate": "2026-10-29",
+   "gameStart": "2026-10-30T02:00:00.000Z",
+   "legResults": [
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "away",
+     "line": 12.5,
+     "name": "Spread",
+     "oddID": "points-away-game-sp-away",
+     "odds": -225,
+     "opposing": "points-home-game-sp-home",
+     "period": "game",
+     "player": null,
+     "short": "MEM +12.5 (alt)",
+     "side": "away",
+     "stat": "points",
+     "team": "MEM"
+    }
+   ],
+   "net": 11.11,
+   "payout": 36.11,
+   "placedAt": "2026-10-29T15:38:04.052Z",
+   "player": "Mio",
+   "series": null,
+   "settledAt": "2026-10-30T08:12:01Z",
+   "stage": "regular",
+   "stake": 25,
+   "status": "win"
+  },
   "hRrSmZyCKCK6AlvVjGEk": {
    "_updated": "2026-10-27T16:58:32.597814Z",
    "boost": null,
@@ -823,6 +943,64 @@
    "stage": "regular",
    "stake": 5,
    "status": "loss"
+  },
+  "oQdMp7iN1HRslYTqcpKG": {
+   "_updated": "2026-10-30T08:12:02.000501Z",
+   "boost": null,
+   "createdAt": "2026-10-29T14:05:15.331Z",
+   "eventID": "LRhY8kYfHreD6OVlzYzs",
+   "game": "SAC at NOP",
+   "gameDate": "2026-10-29",
+   "gameStart": "2026-10-30T00:00:00.000Z",
+   "legResults": [
+    "win",
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "ZACH_LAVINE_1_NBA",
+     "line": 19.5,
+     "name": "ZACH_LAVINE_1_NBA Points",
+     "oddID": "points-ZACH_LAVINE_1_NBA-game-ou-over",
+     "odds": -170,
+     "opposing": "points-ZACH_LAVINE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "ZACH_LAVINE_1_NBA",
+     "short": "ZACH_LAVINE_1_NBA Points Over 19.5 (alt)",
+     "side": "over",
+     "stat": "points",
+     "team": "SAC"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DOMANTAS_SABONIS_1_NBA",
+     "line": 29.5,
+     "name": "DOMANTAS_SABONIS_1_NBA Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-DOMANTAS_SABONIS_1_NBA-game-ou-over",
+     "odds": -530,
+     "opposing": "points+rebounds+assists-DOMANTAS_SABONIS_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "DOMANTAS_SABONIS_1_NBA",
+     "short": "DOMANTAS_SABONIS_1_NBA Pts + Reb + Ast Over 29.5 (alt)",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "SAC"
+    }
+   ],
+   "net": 17.75,
+   "payout": 37.75,
+   "placedAt": "2026-10-29T14:05:14.442Z",
+   "player": "Mio",
+   "series": null,
+   "settledAt": "2026-10-30T08:12:01Z",
+   "stage": "regular",
+   "stake": 20,
+   "status": "win"
   },
   "u6hvTLHErrtaSes9gCHD": {
    "_updated": "2026-10-28T08:09:34.037592Z",
