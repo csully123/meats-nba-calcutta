@@ -178,6 +178,9 @@ def main() -> int:
     token = sign_in(cfg["apiKey"], password)
     base = f"https://firestore.googleapis.com/v1/projects/{cfg['projectId']}/databases/(default)/documents"
     headers = {"Authorization": "Bearer " + token, "Content-Type": "application/json"}
+    if "--repay-only" in sys.argv:  # re-pay settled wins to two decimals without grading anything else
+        repay_wins(base, headers)
+        return 0
     games = {}
     for p in ODDS_DIR.glob("????-??-??.json"):
         for gid, g in json.loads(p.read_text()).get("games", {}).items():
