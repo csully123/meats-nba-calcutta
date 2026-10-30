@@ -10,7 +10,7 @@
    "display": "F",
    "ended": true,
    "eventID": "0EnJsxeRoj5sV5LsdUsH",
-   "finalized": false,
+   "finalized": true,
    "home": "CHI",
    "homeColor": "#CE1141",
    "homeName": "Chicago Bulls",
@@ -27016,7 +27016,7 @@
      "team": "NYK"
     }
    ],
-   "pulledAt": "2026-10-29T16:56:42Z",
+   "pulledAt": "2026-10-30T08:12:00Z",
    "results": {
     "1h": {
      "away": {
@@ -27561,7 +27561,7 @@
    "display": "F",
    "ended": true,
    "eventID": "8uIInmiylQtohc2dcYWr",
-   "finalized": false,
+   "finalized": true,
    "home": "CLE",
    "homeColor": "#871539",
    "homeName": "Cleveland Cavaliers",
@@ -63245,7 +63245,7 @@
      "team": "WAS"
     }
    ],
-   "pulledAt": "2026-10-29T16:56:42Z",
+   "pulledAt": "2026-10-30T08:12:00Z",
    "results": {
     "1h": {
      "away": {
@@ -63784,7 +63784,7 @@
    "display": "F",
    "ended": true,
    "eventID": "9VAfjQwS2XwkqkRTdkiz",
-   "finalized": false,
+   "finalized": true,
    "home": "DET",
    "homeColor": "#006BB6",
    "homeName": "Detroit Pistons",
@@ -92670,7 +92670,7 @@
      "team": "CHA"
     }
    ],
-   "pulledAt": "2026-10-29T16:56:42Z",
+   "pulledAt": "2026-10-30T08:12:00Z",
    "results": {
     "1h": {
      "away": {
@@ -93283,7 +93283,7 @@
    "display": "F",
    "ended": true,
    "eventID": "NaF7pEWPWlzf9fKdgfF5",
-   "finalized": false,
+   "finalized": true,
    "home": "DAL",
    "homeColor": "#007DC5",
    "homeName": "Dallas Mavericks",
@@ -116967,7 +116967,7 @@
      "team": "OKC"
     }
    ],
-   "pulledAt": "2026-10-29T16:56:42Z",
+   "pulledAt": "2026-10-30T08:12:00Z",
    "results": {
     "1h": {
      "away": {
@@ -117573,7 +117573,7 @@
    "display": "F",
    "ended": true,
    "eventID": "P32jcA7bITijPFs2qW0c",
-   "finalized": false,
+   "finalized": true,
    "home": "TOR",
    "homeColor": "#CE1141",
    "homeName": "Toronto Raptors",
@@ -143997,7 +143997,7 @@
      "team": "ORL"
     }
    ],
-   "pulledAt": "2026-10-29T16:56:42Z",
+   "pulledAt": "2026-10-30T08:12:00Z",
    "results": {
     "1h": {
      "away": {
@@ -144676,7 +144676,7 @@
    "display": "F",
    "ended": true,
    "eventID": "PPlI0xLCa4SgGC6LKFTf",
-   "finalized": false,
+   "finalized": true,
    "home": "NOP",
    "homeColor": "#002B5C",
    "homeName": "New Orleans Pelicans",
@@ -173778,7 +173778,7 @@
      "team": "DEN"
     }
    ],
-   "pulledAt": "2026-10-29T16:56:42Z",
+   "pulledAt": "2026-10-30T08:12:00Z",
    "results": {
     "1h": {
      "away": {
@@ -174367,7 +174367,7 @@
    "display": "F",
    "ended": true,
    "eventID": "VGJWBj7vPgHtBMUiei6o",
-   "finalized": false,
+   "finalized": true,
    "home": "IND",
    "homeColor": "#00275D",
    "homeName": "Indiana Pacers",
@@ -205873,7 +205873,7 @@
      "team": "IND"
     }
    ],
-   "pulledAt": "2026-10-29T16:56:42Z",
+   "pulledAt": "2026-10-30T08:12:00Z",
    "results": {
     "1h": {
      "away": {
@@ -206459,7 +206459,7 @@
    "display": "F",
    "ended": true,
    "eventID": "du4xB1SR4g52k6Lps9iC",
-   "finalized": false,
+   "finalized": true,
    "home": "LAC",
    "homeColor": "#006BB6",
    "homeName": "Los Angeles Clippers",
@@ -236923,7 +236923,7 @@
      "team": "LAL"
     }
    ],
-   "pulledAt": "2026-10-29T16:56:42Z",
+   "pulledAt": "2026-10-30T08:12:00Z",
    "results": {
     "1h": {
      "away": {
@@ -237510,7 +237510,7 @@
    "display": "F",
    "ended": true,
    "eventID": "jG7R4zImb4TtrIhNvcY5",
-   "finalized": false,
+   "finalized": true,
    "home": "MIL",
    "homeColor": "#00471B",
    "homeName": "Milwaukee Bucks",
@@ -269550,7 +269550,7 @@
      "team": "MIL"
     }
    ],
-   "pulledAt": "2026-10-29T16:56:42Z",
+   "pulledAt": "2026-10-30T08:12:00Z",
    "results": {
     "1h": {
      "away": {
@@ -270257,7 +270257,7 @@
    "display": "F (OT)",
    "ended": true,
    "eventID": "mk6VPvBcthdZUChFqFco",
-   "finalized": false,
+   "finalized": true,
    "home": "UTA",
    "homeColor": "#002B5C",
    "homeName": "Utah Jazz",
@@ -297671,7 +297671,7 @@
      "team": "UTA"
     }
    ],
-   "pulledAt": "2026-10-29T16:56:42Z",
+   "pulledAt": "2026-10-30T08:12:00Z",
    "results": {
     "1h": {
      "away": {
@@ -298234,7 +298234,7 @@
    "display": "F",
    "ended": true,
    "eventID": "pQsF6kYuDrEQXgaXnmGI",
-   "finalized": false,
+   "finalized": true,
    "home": "MIN",
    "homeColor": "#005083",
    "homeName": "Minnesota Timberwolves",
@@ -326662,7 +326662,7 @@
      "team": "GSW"
     }
    ],
-   "pulledAt": "2026-10-29T16:56:42Z",
+   "pulledAt": "2026-10-30T08:12:00Z",
    "results": {
     "1h": {
      "away": {
@@ -327227,7 +327227,7 @@
    "display": "F",
    "ended": true,
    "eventID": "wXpf48J3m5ksYcM21vc5",
-   "finalized": false,
+   "finalized": true,
    "home": "ATL",
    "homeColor": "#E03A3E",
    "homeName": "Atlanta Hawks",
@@ -358407,7 +358407,7 @@
      "team": "ATL"
     }
    ],
-   "pulledAt": "2026-10-29T16:56:42Z",
+   "pulledAt": "2026-10-30T08:12:00Z",
    "results": {
     "1h": {
      "away": {
