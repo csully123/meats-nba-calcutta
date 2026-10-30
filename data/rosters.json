@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T11:32:44.378219+00:00",
+ "updated": "2026-10-30T07:51:43.034032+00:00",
  "players": {
   "AJ Dybantsa": {
    "team": "WAS",
@@ -188,6 +188,10 @@
   "Blake Hinson": {
    "team": "UTA",
    "pos": "F"
+  },
+  "Blake Wesley": {
+   "team": "LAC",
+   "pos": "G"
   },
   "Bobby Portis": {
    "team": "MIA",
@@ -632,6 +636,10 @@
   "Enrique Freeman": {
    "team": "MIN",
    "pos": "F"
+  },
+  "Ernest Udeh Jr.": {
+   "team": "CLE",
+   "pos": "C"
   },
   "Evan Mobley": {
    "team": "CLE",
