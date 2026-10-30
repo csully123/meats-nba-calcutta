@@ -94,16 +94,33 @@ def pick_price(odd: dict):
         price = _price(e)
         if price is None:
             continue
-        alts = []
-        for a in e.get("altLines") or []:
-            if a.get("available") is False:
-                continue
-            ap, al = _price(a), _line(a)
-            if ap is not None and al is not None:
-                alts.append([al, ap])
-        alts.sort()
-        return book, price, _line(e), alts
-    return None, None, None, []
+        alts = _alts(e)
+        alt_book = book if alts else None
+        if not alts:
+            # FanDuel lists alternate numbers for overs but rarely for unders (its prop ladders are "20+ points" style),
+            # so a side with no ladder at the pricing book borrows the first other major book's ladder, at that book's prices.
+            for other in [OFFICIAL_BOOK] + FALLBACK_BOOKS:
+                oe = bb.get(other)
+                if other == book or not oe or oe.get("available") is False:
+                    continue
+                alts = _alts(oe)
+                if alts:
+                    alt_book = other
+                    break
+        return book, price, _line(e), alts, alt_book
+    return None, None, None, [], None
+
+
+def _alts(e: dict):
+    alts = []
+    for a in e.get("altLines") or []:
+        if a.get("available") is False:
+            continue
+        ap, al = _price(a), _line(a)
+        if ap is not None and al is not None:
+            alts.append([al, ap])
+    alts.sort()
+    return alts
 
 
 _ROSTER_NAMES = None
@@ -161,7 +178,7 @@ def shape(ev: dict, players: dict) -> dict:
             kind = "game"
             name = MARKETS[(stat, period, bt)]
             team_short = hs if ent == "home" else as_ if ent == "away" else ""
-        book, price, line, alts = pick_price(o)
+        book, price, line, alts, alt_book = pick_price(o)
         if price is None:
             continue
         m = {
@@ -171,6 +188,8 @@ def shape(ev: dict, players: dict) -> dict:
         }
         if alts and bt in ("sp", "ou"):
             m["alts"] = alts
+            if alt_book and alt_book != book:
+                m["altBook"] = alt_book
         markets.append(m)
     return {
         "eventID": ev.get("eventID"), "date": date_et, "start": start,
