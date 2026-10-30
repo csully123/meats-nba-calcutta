@@ -73,6 +73,14 @@ header{position:relative}
 .trend{margin-top:12px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 12px 8px}
 .trend .thead{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between;margin-bottom:6px}
 .trend .thead h2{margin:0;font-family:var(--display);font-size:20px;font-weight:800;letter-spacing:.01em;text-transform:none}
+.trend .ttl{display:inline-flex;align-items:center;gap:10px;background:none;border:0;padding:0;color:var(--ink);cursor:pointer;text-align:left}
+.trend .ttl .caret{font-size:11px;font-weight:700;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 55%,var(--line));padding:2px 8px;border-radius:999px;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
+.trend.closed{padding-bottom:12px}
+.trend .mini{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--muted);width:100%}
+.trend .mini span{display:inline-flex;align-items:center;gap:5px}
+.trend .mini i{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.trend .mini b{color:var(--ink);font-family:var(--mono)}
+.trend .mini .d{display:none}
 .trend .ranges{display:flex;gap:4px}
 .trend .ranges button{border:1px solid var(--line);background:none;color:var(--muted);font:700 11px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:5px 8px;border-radius:6px;cursor:pointer}
 .trend .ranges button[aria-pressed=true]{background:var(--soft);color:var(--ink);border-color:color-mix(in srgb,var(--accent) 50%,var(--line))}
@@ -841,9 +849,12 @@ td.legs div{white-space:nowrap}
       return `<path class="line ${S.trendFocus&&S.trendFocus!==n?'dim':''}" d="${d}" stroke="${c}"/><circle cx="${X(last.t).toFixed(1)}" cy="${Y(v).toFixed(1)}" r="4" fill="${c}" stroke="#0b1118" stroke-width="1.5"/><rect x="${W-R+4}" y="${(e.y-8).toFixed(1)}" width="38" height="16" rx="4" fill="${c}"/><text class="endlab" x="${W-R+23}" y="${(e.y+4).toFixed(1)}" text-anchor="middle">${v}%</text>`;}).join('');
     const legend=[...PLAYERS].sort((a,b)=>(+last.odds[b]||0)-(+last.odds[a]||0)).map(n=>{const v=+last.odds[n]||0,d=v-(+first.odds[n]||0);return `<span style="--c:${TREND_COLORS[n]}" data-focus="${esc(n)}"><i></i>${esc(n)} <b>${v}%</b><em class="d ${d>0?'up':d<0?'down':''}">${d>0?'+':''}${d||'0'}</em></span>`;}).join('');
     const stamp=fmtStamp.format(new Date(last.t));
-    el.innerHTML=`<div class="thead"><h2>Who wins the Meats Sportsbook?</h2><div class="ranges">${TREND_RANGES.map(r=>`<button type="button" data-range="${r[0]}" aria-pressed="${S.trendRange===r[0]}">${r[0]}</button>`).join('')}</div></div>
-      <div class="legend">${legend}</div><div class="wrap"><svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-label="Chance to win over time">${grid}${xl}${lines}<g class="hover"></g></svg><div class="tip" hidden></div></div>
-      <div class="foot">Claude's simulation of the rest of the season, rerun every night after grading. As of ${esc(stamp)} ET.</div>`;
+    if(S.trendOpen==null){try{S.trendOpen=localStorage.getItem('bk.trendOpen')!=='0';}catch(e){S.trendOpen=true;}}
+    el.classList.toggle('closed',!S.trendOpen);
+    el.innerHTML=`<div class="thead"><button type="button" class="ttl" data-ttoggle aria-expanded="${S.trendOpen}"><h2>Who wins the Meats Sportsbook?</h2><span class="caret">${S.trendOpen?'Hide \u25B4':'Show \u25BE'}</span></button>${S.trendOpen?`<div class="ranges">${TREND_RANGES.map(r=>`<button type="button" data-range="${r[0]}" aria-pressed="${S.trendRange===r[0]}">${r[0]}</button>`).join('')}</div>`:`<div class="mini">${legend}</div>`}</div>
+      ${S.trendOpen?`<div class="legend">${legend}</div>`:''}<div class="wrap" ${S.trendOpen?'':'hidden'}><svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-label="Chance to win over time">${grid}${xl}${lines}<g class="hover"></g></svg><div class="tip" hidden></div></div>
+      <div class="foot" ${S.trendOpen?'':'hidden'}>Claude's simulation of the rest of the season, rerun every night after grading. As of ${esc(stamp)} ET.</div>`;
+    el.querySelector('[data-ttoggle]').addEventListener('click',()=>{S.trendOpen=!S.trendOpen;try{localStorage.setItem('bk.trendOpen',S.trendOpen?'1':'0');}catch(e){}renderTrend();});
     el.querySelectorAll('[data-range]').forEach(b=>b.addEventListener('click',()=>{S.trendRange=b.dataset.range;renderTrend();}));
     el.querySelectorAll('[data-focus]').forEach(b=>b.addEventListener('click',()=>{S.trendFocus=S.trendFocus===b.dataset.focus?null:b.dataset.focus;renderTrend();}));
     // crosshair: hover or touch shows every line's value at the nearest point
