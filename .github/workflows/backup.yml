@@ -26,11 +26,13 @@ jobs:
         run: python scripts/backup.py
       - name: Leg results for the Bets tab
         run: python scripts/leg_actuals.py
+      - name: Tonight's point on the chance-to-win chart
+        run: python scripts/win_odds_history.py
       - name: Commit the backup
         run: |
           git config user.name "calcutta-bot"
           git config user.email "calcutta-bot@users.noreply.github.com"
-          git add data/backups data/leg-actuals.json
+          git add data/backups data/leg-actuals.json data/win-odds-history.json
           if git diff --cached --quiet; then
             echo "No changes"
           else

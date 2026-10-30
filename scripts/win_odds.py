@@ -76,9 +76,8 @@ def style(player, wagers, weeks_active):
     return {"shapes": shapes, "stakeFrac": sum(stake_frac) / len(stake_frac), "perWeek": per_week, "n": len(settled)}
 
 
-def main():
-    wagers = list(json.loads((ROOT / "data" / "backups" / "wagers-latest.json").read_text()).get("wagers", {}).values())
-    today = datetime.now(timezone.utc).date()
+def simulate(wagers, today, seed=20261028):
+    """The whole model for one moment: wagers as of that moment, today's date. Returns the printed dict."""
     first = min((w.get("placedAt", "")[:10] for w in wagers if w.get("placedAt")), default=str(today))
     weeks_active = max(1.0, (today - date.fromisoformat(first)).days / 7)
     weeks_left = max(0, (SEASON_END - today).days // 7)
@@ -89,7 +88,7 @@ def main():
     avg_frac = sum(st[p]["stakeFrac"] for p in PLAYERS) / len(PLAYERS)
     avg_vol = max(2.0, sum(st[p]["perWeek"] for p in PLAYERS) / len(PLAYERS))
 
-    rng = random.Random(20261028)
+    rng = random.Random(seed)
     wins = {p: 0.0 for p in PLAYERS}
     finals = {p: [] for p in PLAYERS}
     for _ in range(SIMS):
@@ -142,9 +141,14 @@ def main():
     if diff:
         lead = max(PLAYERS, key=lambda p: wins[p])
         pct[lead] += diff
-    out = {"odds": pct, "weeksLeft": weeks_left,
-           "now": {p: {"stack": round(now[p][0], 1), "pending": round(now[p][1], 1), "busts": now[p][2]} for p in PLAYERS},
-           "medianFinal": {p: round(sorted(finals[p])[len(finals[p]) // 2]) for p in PLAYERS}}
+    return {"odds": pct, "weeksLeft": weeks_left,
+            "now": {p: {"stack": round(now[p][0], 1), "pending": round(now[p][1], 1), "busts": now[p][2]} for p in PLAYERS},
+            "medianFinal": {p: round(sorted(finals[p])[len(finals[p]) // 2]) for p in PLAYERS}}
+
+
+def main():
+    wagers = list(json.loads((ROOT / "data" / "backups" / "wagers-latest.json").read_text()).get("wagers", {}).values())
+    out = simulate(wagers, datetime.now(timezone.utc).date())
     json.dump(out, sys.stdout, indent=1)
     print()
 
