@@ -141,9 +141,9 @@
   "label": "NBA Cup",
   "multiplier": 1,
   "series": null,
-  "spreadHome": -1.5,
+  "spreadHome": 1.5,
   "spreadSource": "DraftKings",
-  "spreadUpdated": "2026-10-29T23:27:30Z",
+  "spreadUpdated": "2026-10-30T16:16:11Z",
   "stage": "cup",
   "start": "2026-10-30T23:00:00Z",
   "status": "scheduled"
