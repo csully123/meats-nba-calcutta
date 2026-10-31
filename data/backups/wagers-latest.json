@@ -1,6 +1,6 @@
 {
- "backedUpAt": "2026-10-30T08:53:34Z",
- "count": 19,
+ "backedUpAt": "2026-10-31T08:44:02Z",
+ "count": 22,
  "wagers": {
   "2dzNbNNGFzlTZAffuZ8z": {
    "_updated": "2026-10-30T00:15:21.735126Z",
@@ -474,6 +474,64 @@
    "stake": 10,
    "status": "loss"
   },
+  "R3qs6BTd9PkLiA6NiriI": {
+   "_updated": "2026-10-31T07:59:22.574418Z",
+   "boost": null,
+   "createdAt": "2026-10-30T18:28:45.433Z",
+   "eventID": "TxjP4qSLBad69wfVJi5S",
+   "game": "LAL at GSW",
+   "gameDate": "2026-10-30",
+   "gameStart": "2026-10-31T02:00:00.000Z",
+   "legResults": [
+    "loss",
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "YAXEL_LENDEBORG_1_NBA",
+     "line": 14.5,
+     "name": "Yaxel Lendeborg Points",
+     "oddID": "points-YAXEL_LENDEBORG_1_NBA-game-ou-over",
+     "odds": -400,
+     "opposing": "points-YAXEL_LENDEBORG_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "YAXEL_LENDEBORG_1_NBA",
+     "short": "Yaxel Lendeborg Points Over 14.5 (alt)",
+     "side": "over",
+     "stat": "points",
+     "team": "GSW"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "LUKA_DONCIC_1_NBA",
+     "line": 29.5,
+     "name": "Luka Don\u010di\u0107 Points",
+     "oddID": "points-LUKA_DONCIC_1_NBA-game-ou-over",
+     "odds": -265,
+     "opposing": "points-LUKA_DONCIC_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "LUKA_DONCIC_1_NBA",
+     "short": "Luka Don\u010di\u0107 Points Over 29.5 (alt)",
+     "side": "over",
+     "stat": "points",
+     "team": "LAL"
+    }
+   ],
+   "net": -13.86,
+   "payout": 0,
+   "placedAt": "2026-10-30T18:28:41.848Z",
+   "player": "Mio",
+   "series": null,
+   "settledAt": "2026-10-31T07:59:22Z",
+   "stage": "cup",
+   "stake": 13.86,
+   "status": "loss"
+  },
   "U3TJHnVg7En3DN7BZgGL": {
    "_updated": "2026-10-30T00:15:22.243397Z",
    "boost": null,
@@ -606,6 +664,64 @@
    "stage": "regular",
    "stake": 5,
    "status": "loss"
+  },
+  "Vb8pouU6UoMQBFvYqiHj": {
+   "_updated": "2026-10-31T07:59:22.741961Z",
+   "boost": null,
+   "createdAt": "2026-10-30T18:23:28.135Z",
+   "eventID": "QSWs05icrjA8EcQHNGXh",
+   "game": "NYK at PHI",
+   "gameDate": "2026-10-30",
+   "gameStart": "2026-10-30T23:30:00.000Z",
+   "legResults": [
+    "win",
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JALEN_BRUNSON_1_NBA",
+     "line": 29.5,
+     "name": "Jalen Brunson Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-JALEN_BRUNSON_1_NBA-game-ou-over",
+     "odds": -440,
+     "opposing": "points+rebounds+assists-JALEN_BRUNSON_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JALEN_BRUNSON_1_NBA",
+     "short": "Jalen Brunson Pts + Reb + Ast Over 29.5 (alt)",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "NYK"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "KARLANTHONY_TOWNS_1_NBA",
+     "line": 29.5,
+     "name": "Karl-Anthony Towns Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-KARLANTHONY_TOWNS_1_NBA-game-ou-over",
+     "odds": -310,
+     "opposing": "points+rebounds+assists-KARLANTHONY_TOWNS_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "KARLANTHONY_TOWNS_1_NBA",
+     "short": "Karl-Anthony Towns Pts + Reb + Ast Over 29.5 (alt)",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "NYK"
+    }
+   ],
+   "net": 10,
+   "payout": 26.06,
+   "placedAt": "2026-10-30T18:23:24.878Z",
+   "player": "Mio",
+   "series": null,
+   "settledAt": "2026-10-31T07:59:22Z",
+   "stage": "cup",
+   "stake": 16.06,
+   "status": "win"
   },
   "Wcm3pXodR1e7pL0DYZr7": {
    "_updated": "2026-10-30T00:15:22.479090Z",
@@ -1000,6 +1116,64 @@
    "settledAt": "2026-10-30T08:12:01Z",
    "stage": "regular",
    "stake": 20,
+   "status": "win"
+  },
+  "qRXThnZS8owLCjepqtvS": {
+   "_updated": "2026-10-31T07:59:22.881666Z",
+   "boost": null,
+   "createdAt": "2026-10-30T18:26:20.686Z",
+   "eventID": "ln9zfUaeeHXXmSA5ykMh",
+   "game": "CHI at BOS",
+   "gameDate": "2026-10-30",
+   "gameStart": "2026-10-30T23:30:00.000Z",
+   "legResults": [
+    "win",
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "line": 225.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-over",
+     "odds": -250,
+     "opposing": "points-all-game-ou-under",
+     "period": "game",
+     "player": null,
+     "short": "Game Over 225.5 (alt)",
+     "side": "over",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "alt": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "home",
+     "line": -0.5,
+     "name": "1st half spread",
+     "oddID": "points-home-1h-sp-home",
+     "odds": -385,
+     "opposing": "points-away-1h-sp-away",
+     "period": "1h",
+     "player": null,
+     "short": "BOS -0.5 (1H) (alt)",
+     "side": "home",
+     "stat": "points",
+     "team": "BOS"
+    }
+   ],
+   "net": 10,
+   "payout": 23.1,
+   "placedAt": "2026-10-30T18:26:17.284Z",
+   "player": "Mio",
+   "series": null,
+   "settledAt": "2026-10-31T07:59:22Z",
+   "stage": "cup",
+   "stake": 13.1,
    "status": "win"
   },
   "u6hvTLHErrtaSes9gCHD": {
