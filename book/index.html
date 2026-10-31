@@ -337,8 +337,14 @@ td.legs .actual.pos{color:var(--win)}td.legs .actual.neg{color:var(--loss)}
 
 /* ledger and stats */
 .filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-.tablewrap{overflow-x:auto;border:1.5px solid var(--line);background:var(--surface)}
+.tablewrap{overflow-x:auto;border:1.5px solid var(--line);background:var(--surface);touch-action:pan-x pan-y}
 table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px}
+/* Bets tab: the table can be scaled down to fit a phone (buttons, or pinch on the table) */
+#betbody table{zoom:var(--tz,1)}
+.sizer{display:inline-flex;align-items:center;gap:4px;margin-left:auto}
+.sizer button{border:1px solid var(--line);background:none;color:var(--muted);font:700 12px/1 var(--mono);padding:6px 9px;border-radius:6px;cursor:pointer;min-width:34px}
+.sizer button[aria-pressed=true]{color:var(--ink);border-color:color-mix(in srgb,var(--accent) 50%,var(--line));background:var(--soft)}
+.sizer .lvl{font:600 11px var(--mono);color:var(--muted);min-width:38px;text-align:center}
 th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);padding:10px 12px;border-bottom:1.5px solid var(--line)}
 td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 tr:last-child td{border-bottom:0}
@@ -792,7 +798,12 @@ td.legs div{white-space:nowrap}
     return `<div class="bread ${FLAGS[p]||''}"><span class="eyebrow">Claude's read on ${esc(p)}${r.settled?` <small>from ${esc(r.settled)} settled bet${r.settled===1?'':'s'}${stamp?', '+esc(stamp):''}</small>`:''}</span><p>${esc(r.text)}</p></div>`;}
 
   // ---------- bets ledger ----------
-  function renderBets(){$('betread').innerHTML=readHtml(S.betf);$('betfilters').innerHTML=['All',...PLAYERS].map(p=>`<button class="chip" data-betf="${esc(p)}" aria-pressed="${S.betf===p}">${esc(p)}</button>`).join('');
+  function tableZoom(){if(S.tz==null){try{S.tz=parseFloat(localStorage.getItem('bk.tz'))||1;}catch(e){S.tz=1;}}return S.tz;}
+  function setTableZoom(z,fit){S.tz=Math.max(0.45,Math.min(1.3,Math.round(z*100)/100));S.tzFit=!!fit;try{localStorage.setItem('bk.tz',String(S.tz));}catch(e){}$('betbody').style.setProperty('--tz',S.tz);const l=$('betfilters').querySelector('.sizer .lvl');if(l)l.textContent=Math.round(S.tz*100)+'%';const f=$('betfilters').querySelector('[data-tz="fit"]');if(f)f.setAttribute('aria-pressed',String(!!fit));}
+  function fitTableZoom(){const wrap=$('betbody').querySelector('.tablewrap');const t=wrap&&wrap.querySelector('table');if(!t)return;const z=Math.min(1,wrap.clientWidth/640);setTableZoom(z,true);}
+  function renderBets(){$('betread').innerHTML=readHtml(S.betf);$('betfilters').innerHTML=['All',...PLAYERS].map(p=>`<button class="chip" data-betf="${esc(p)}" aria-pressed="${S.betf===p}">${esc(p)}</button>`).join('')+`<span class="sizer" title="Text size for the table; you can also pinch on the table"><button type="button" data-tz="out" aria-label="Smaller">A-</button><span class="lvl">${Math.round(tableZoom()*100)}%</span><button type="button" data-tz="in" aria-label="Bigger">A+</button><button type="button" data-tz="fit" aria-pressed="${!!S.tzFit}">Fit</button></span>`;
+    $('betfilters').querySelectorAll('[data-tz]').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.tz;if(k==='fit')fitTableZoom();else setTableZoom(tableZoom()+(k==='in'?0.1:-0.1));}));
+    $('betbody').style.setProperty('--tz',tableZoom());
     const rows=S.wagers.filter(w=>(S.betf==='All'||w.player===S.betf)&&canSee(w)).sort((a,b)=>a.placedAt<b.placedAt?1:-1);
     if(!rows.length){$('betbody').innerHTML=`<div class="empty"><strong>No bets yet</strong>${S.betf==='All'?'Every bet lands here once its game has started, and your own right away.':S.betf+' has no visible bets yet.'}</div>`;return;}
     let out='',lastWk=null;
@@ -802,7 +813,14 @@ td.legs div{white-space:nowrap}
       out+=`<tr><td class="num">${esc(fmtShort.format(new Date(w.placedAt)))}</td><td>${esc(w.player)}</td><td>${esc(w.game||'')}${w.stage&&STAGE_BADGE[w.stage]?`<div class="hint">${esc(STAGE_BADGE[w.stage])}</div>`:''}</td><td class="legs">${w.legs.map((l,i)=>{const a=((S.actuals||{})[w.id]||[])[i];return `<div>${esc(l.short)} <span class="hint num">${esc(E.fmtAmerican(l.odds))}</span>${w.legResults&&w.legResults[i]?` <span class="res ${esc(w.legResults[i])}" style="font-size:9px;padding:1px 5px">${esc(w.legResults[i])}</span>`:''}${a&&a.text?`<div class="actual num ${a.margin==null?'':a.margin>0?'pos':a.margin<0?'neg':''}">${esc(a.text)}</div>`:''}</div>`;}).join('')}${w.legs.length>1?`<div class="hint">Parlay ${esc(E.fmtAmerican(E.american(dec)))}</div>`:''}${w.boost?`<div><span class="boostbadge ${w.boost.id==='mega'?'mega':''}">${esc(w.boost.label||w.boost.mult+'x boost')}</span></div>`:''}</td>
         <td class="num">${fmtPts(w.stake)}</td><td><span class="res ${esc(w.status)}">${esc(w.status)}</span>${cc?` <button class="signout" data-cancel="${esc(w.id)}">cancel</button>`:''}</td><td class="ptcell num ${w.status==='open'?'zero':(w.net>0?'pos':w.net<0?'neg':'zero')}">${w.status==='open'?`to win ${fmtPts(E.boostedProfit(w.stake,w.legs,bm))}`:signed(w.net||0)}</td></tr>`;}
     $('betbody').innerHTML=`<div class="tablewrap"><table><thead><tr><th>Placed</th><th>Who</th><th>Game</th><th>Bet</th><th>Stake</th><th>Result</th><th style="text-align:right">Net</th></tr></thead><tbody>${out}</tbody></table></div>`;
-    $('betbody').querySelectorAll('[data-cancel]').forEach(b=>b.addEventListener('click',()=>cancelBet(b.dataset.cancel)));}
+    $('betbody').querySelectorAll('[data-cancel]').forEach(b=>b.addEventListener('click',()=>cancelBet(b.dataset.cancel)));
+    if(S.tzFit)fitTableZoom();
+    // pinch on the table scales it (two fingers), instead of zooming the whole page
+    const wrap=$('betbody').querySelector('.tablewrap');let pinch=null;
+    const dist=t=>Math.hypot(t[0].clientX-t[1].clientX,t[0].clientY-t[1].clientY);
+    wrap.addEventListener('touchstart',e=>{if(e.touches.length===2){pinch={d:dist(e.touches),z:tableZoom()};}},{passive:true});
+    wrap.addEventListener('touchmove',e=>{if(pinch&&e.touches.length===2){e.preventDefault();setTableZoom(pinch.z*dist(e.touches)/pinch.d,false);}},{passive:false});
+    wrap.addEventListener('touchend',()=>{pinch=null;},{passive:true});}
 
   // ---------- stats ----------
   function claudeTeamsHtml(){const gp=gamePickRecords();const rows=Object.entries(gp.teams).filter(([,x])=>x.w+x.l+x.p>0).sort((a,b)=>{const pa=a[1].w/Math.max(1,a[1].w+a[1].l),pb=b[1].w/Math.max(1,b[1].w+b[1].l);return pb-pa||(b[1].w-a[1].w)||a[0].localeCompare(b[0]);});
