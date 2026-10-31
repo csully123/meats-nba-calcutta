@@ -1978,13 +1978,13 @@
   "awayColor": "1d428a",
   "awayLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
   "awayName": "Philadelphia 76ers",
-  "awayScore": null,
+  "awayScore": 18,
   "date": "2026-10-31",
   "home": "CHA",
   "homeColor": "008ca8",
   "homeLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png",
   "homeName": "Charlotte Hornets",
-  "homeScore": null,
+  "homeScore": 29,
   "id": "401909897",
   "label": null,
   "multiplier": 1,
@@ -1994,7 +1994,7 @@
   "spreadUpdated": "2026-10-31T18:35:10Z",
   "stage": "regular",
   "start": "2026-10-31T22:00:00Z",
-  "status": "scheduled"
+  "status": "inprogress"
  },
  "401909898": {
   "away": "ATL",
