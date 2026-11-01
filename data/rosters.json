@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T04:33:58.508377+00:00",
+ "updated": "2026-11-01T00:51:03.003106+00:00",
  "players": {
   "AJ Dybantsa": {
    "team": "WAS",
@@ -184,10 +184,6 @@
   "Bilal Coulibaly": {
    "team": "WAS",
    "pos": "G"
-  },
-  "Blake Hinson": {
-   "team": "UTA",
-   "pos": "F"
   },
   "Blake Wesley": {
    "team": "LAC",
@@ -1245,6 +1241,10 @@
    "team": "IND",
    "pos": "G"
   },
+  "Kobe Bufkin": {
+   "team": "UTA",
+   "pos": "G"
+  },
   "Kobe Sanders": {
    "team": "LAC",
    "pos": "G"
@@ -1576,10 +1576,6 @@
   "Obi Toppin": {
    "team": "IND",
    "pos": "F"
-  },
-  "Ochai Agbaji": {
-   "team": "OKC",
-   "pos": "G"
   },
   "Olivier-Maxence Prosper": {
    "team": "MEM",
