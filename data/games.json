@@ -2116,13 +2116,13 @@
   "awayColor": "008348",
   "awayLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bos.png",
   "awayName": "Boston Celtics",
-  "awayScore": null,
+  "awayScore": 19,
   "date": "2026-11-01",
   "home": "ORL",
   "homeColor": "0150b5",
   "homeLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/orl.png",
   "homeName": "Orlando Magic",
-  "homeScore": null,
+  "homeScore": 20,
   "id": "401909903",
   "label": null,
   "multiplier": 1,
@@ -2132,7 +2132,7 @@
   "spreadUpdated": "2026-11-01T16:36:19Z",
   "stage": "regular",
   "start": "2026-11-01T20:30:00Z",
-  "status": "scheduled"
+  "status": "inprogress"
  },
  "401909904": {
   "away": "BKN",
