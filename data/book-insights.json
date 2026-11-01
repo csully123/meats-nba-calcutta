@@ -446,6 +446,104 @@
     "updated": "2026-10-31T13:00:35Z",
     "why": "Keyonte George over 22.5 points is the best number on the board. He is averaging 25.0 points with a 34.8 percent usage rate and has scored 27.0 over his last three, and Jaren Jackson Jr.'s 30.5 percent usage is gone for six to eight weeks. Portland ranks 28th in defensive rating and arrives at altitude on one day of rest against Utah's two. The line sits below his average just as his role got bigger."
    }
+  },
+  "2026-11-01": {
+   "single": {
+    "eventID": "seEe6mpwUF3444ekpwYz",
+    "oddID": "threePointersMade-LUKA_DONCIC_1_NBA-game-ou-over",
+    "line": 4.5,
+    "odds": 102,
+    "label": "Luka over 4.5 threes",
+    "team": "LAL",
+    "why": "Luka is averaging 5.5 threes and has made at least six in each of his last three games, yet the line sits at 4.5 with plus money. Toronto allows 40.4% from three, 27th in the league, and is without Kawhi Leonard, its best big wing defender. The Raptors also just flew three time zones west to open a four-game trip, and tired legs show up first in closeouts.",
+    "updated": "2026-11-01T13:51:11Z"
+   },
+   "parlay": {
+    "eventID": "2Di3i9y9aQ0E79QYVI6n",
+    "legs": [
+     {
+      "oddID": "points-away-game-sp-away",
+      "line": -6.5,
+      "odds": -110,
+      "label": "Celtics -6.5"
+     },
+     {
+      "oddID": "assists-JAYSON_TATUM_1_NBA-game-ou-over",
+      "line": 6.5,
+      "odds": -130,
+      "label": "Tatum over 6.5 assists"
+     }
+    ],
+    "price": 238,
+    "why": "Boston is +13.1 in net rating, 2nd in the league, and Orlando sits 27th on offense while missing Banchero, Suggs and Isaac. The script is a controlled Celtics win where Tatum, averaging 7.0 assists, picks apart a defense that allows 30.8 assists a game. The public is on Boston, but the gap in our numbers is bigger than 6.5, and his assists are how the cover happens.",
+    "updated": "2026-11-01T13:51:11Z"
+   },
+   "personal": {
+    "Kev": {
+     "eventID": "VFlfBUxippPN99LBUVl9",
+     "legs": [
+      {
+       "oddID": "points-away-game-sp-away",
+       "line": 3.5,
+       "odds": -105,
+       "label": "Nets +3.5"
+      }
+     ],
+     "price": -105,
+     "why": "You're 2-0 on underdogs and all four of your sides have been road teams, so here's tonight's road dog at a near-even price. Indiana has lost three straight, is 0-2 at home, ranks 25th in defensive rating and is missing Haliburton and Zubac. Brooklyn is winless, but 3.5 is a lot to lay with that Pacers roster."
+    },
+    "Beekie": {
+     "eventID": "seEe6mpwUF3444ekpwYz",
+     "legs": [
+      {
+       "oddID": "points-LUKA_DONCIC_1_NBA-game-ou-over",
+       "line": 34.5,
+       "odds": -114,
+       "label": "Luka over 34.5 points"
+      },
+      {
+       "oddID": "points-all-game-ou-over",
+       "line": 228.5,
+       "odds": -105,
+       "label": "Over 228.5"
+      }
+     ],
+     "price": 266,
+     "why": "You like guard points props with a total, but your three-leggers keep dying on one leg, so this is the same idea in two legs at +266. Luka is averaging 38.2 points with 37 or more in each of his last three, and both defenses rank 21st or worse in opponent eFG, so the over rides the same script."
+    },
+    "Mio": {
+     "eventID": "2Di3i9y9aQ0E79QYVI6n",
+     "legs": [
+      {
+       "oddID": "points-away-game-sp-away",
+       "line": -2.5,
+       "odds": -180,
+       "label": "Celtics -2.5 (alt)"
+      },
+      {
+       "oddID": "points+rebounds+assists-JAYSON_TATUM_1_NBA-game-ou-over",
+       "line": 39.5,
+       "odds": -190,
+       "label": "Tatum over 39.5 pts+reb+ast (alt)"
+      }
+     ],
+     "price": 137,
+     "why": "This is your formula: two legs, both alt numbers bought down. Tatum is averaging 45.2 points, rebounds and assists, so 39.5 leaves room, and Boston only has to win by three against an Orlando team missing Banchero, Suggs and Isaac with the 27th-ranked offense."
+    },
+    "Sulliver": {
+     "eventID": "rjxbD1V9ROfL3lFcGdte",
+     "legs": [
+      {
+       "oddID": "points-YAXEL_LENDEBORG_1_NBA-game-ou-over",
+       "line": 21.5,
+       "odds": 100,
+       "label": "Lendeborg over 21.5 points"
+      }
+     ],
+     "price": 100,
+     "why": "You keep backing star overs, so here's the cleanest version: one single at even money on a player whose role just grew. With Curry and Green resting, Lendeborg (21.4 points a game, 31 and 26 before Friday's short night) is Golden State's first option against a Clippers defense allowing 57.0% eFG. No alt line, no extra legs."
+    }
+   }
   }
  },
  "games": {
@@ -2942,28 +3040,397 @@
     }
    ],
    "updated": "2026-10-28T14:56:19Z"
+  },
+  "2Di3i9y9aQ0E79QYVI6n": {
+   "date": "2026-11-01",
+   "away": "BOS",
+   "home": "ORL",
+   "blurb": "Boston has won four straight, all at home, most recently 125-111 over Chicago, while Orlando (2-3) split two in Toronto and won the second 121-114. The gap is wide in our numbers: Boston is +13.1 in net rating (2nd), Orlando is -9.1 with the 27th-ranked offense, and the Magic are still without Banchero, Suggs and Isaac. Both teams play again tomorrow, and Orlando is home for the first time after a three-game trip. Per TheSpread, 73% of spread tickets are on Boston while the moneyline has drifted toward Orlando, but at -6.5 and 222.5 the numbers still lean Celtics.",
+   "angles": [
+    "ORL without Banchero, Suggs and Isaac",
+    "BOS +13.1 net, ORL 27th offense",
+    "ORL allows 30.8 assists a game",
+    "Both teams first leg of a back-to-back",
+    "Public on BOS, moneyline drifting ORL"
+   ],
+   "injuries": [
+    {
+     "team": "ORL",
+     "player": "Paolo Banchero",
+     "status": "Out",
+     "stats": "14.0 pts in 1 game",
+     "impact": "High",
+     "note": "Right high ankle sprain; Orlando loses its best player and a second creator next to Franz Wagner."
+    },
+    {
+     "team": "ORL",
+     "player": "Jalen Suggs",
+     "status": "Out",
+     "stats": "9.0 pts, 6.0 ast in 2 games",
+     "impact": "High",
+     "note": "Knee; Orlando loses its top perimeter defender and a secondary ball handler."
+    },
+    {
+     "team": "ORL",
+     "player": "Jonathan Isaac",
+     "status": "Out",
+     "impact": "Medium",
+     "note": "Left knee; a key switchable defender off the bench is missing."
+    },
+    {
+     "team": "ORL",
+     "player": "Noah Penda",
+     "status": "Out",
+     "impact": "Low",
+     "note": "Right hamstring; thins the wing rotation."
+    },
+    {
+     "team": "BOS",
+     "player": "Mitchell Robinson",
+     "status": "Questionable",
+     "stats": "7.2 pts, 5.0 reb this season",
+     "impact": "Medium",
+     "note": "Rest designation per TheSpread; if he sits, Queta takes more of the center minutes."
+    },
+    {
+     "team": "BOS",
+     "player": "Devin Carter",
+     "status": "Out",
+     "impact": "Low",
+     "note": "Illness; has not played this season, so nothing changes for Boston."
+    }
+   ],
+   "single": {
+    "oddID": "assists-JAYSON_TATUM_1_NBA-game-ou-over",
+    "line": 6.5,
+    "odds": -130,
+    "label": "Tatum over 6.5 assists",
+    "team": "BOS",
+    "why": "Tatum is averaging 7.0 assists and has hit seven or more in four of five games per TheSpread, and Orlando gives up 30.8 assists a game in our numbers. With Suggs and Isaac out, the Magic lack the defenders to stop Boston's actions at the point, so the offense runs through Tatum's reads."
+   },
+   "parlay": {
+    "legs": [
+     {
+      "oddID": "points-away-game-sp-away",
+      "line": -6.5,
+      "odds": -110,
+      "label": "Celtics -6.5"
+     },
+     {
+      "oddID": "assists-JAYSON_TATUM_1_NBA-game-ou-over",
+      "line": 6.5,
+      "odds": -130,
+      "label": "Tatum over 6.5 assists"
+     }
+    ],
+    "price": 238,
+    "why": "Script: Boston's +13.1 net rating against a short-handed Orlando team with the 27th offense turns into a comfortable win, with Tatum creating most of it. If the Celtics cover by seven, his passing is usually why, so the two legs ride the same game."
+   },
+   "updated": "2026-11-01T13:51:11Z"
+  },
+  "VFlfBUxippPN99LBUVl9": {
+   "date": "2026-11-01",
+   "away": "BKN",
+   "home": "IND",
+   "blurb": "Brooklyn is 0-5 and scored 94 in Friday's home loss to Detroit, while Indiana (2-4) has dropped three straight, the last a 145-125 beating in Miami. Neither team defends: the Nets allow a 57.3% effective field goal rate (28th) and the Pacers rank 25th in defensive rating, while Brooklyn plays at the 3rd-fastest pace. Indiana is without Haliburton and Zubac, Brooklyn without rookies Mikel Brown Jr. and Egor Demin, and both play again tomorrow. IND -3.5 looks fair, but these teams have averaged 236 and 235 total points, so the 229.5 total leans over.",
+   "angles": [
+    "Haliburton and Zubac out for IND",
+    "BKN 3rd in pace, 28th in opp eFG",
+    "IND 25th in defensive rating",
+    "Teams average 236 and 235 totals",
+    "Nembhard 8.7 assists over last 3"
+   ],
+   "injuries": [
+    {
+     "team": "IND",
+     "player": "Tyrese Haliburton",
+     "status": "Out",
+     "stats": "21.3 pts, 8.7 ast in 3 games",
+     "impact": "High",
+     "note": "Hamstring strain, week to week; Nembhard takes over the point and Siakam the scoring load."
+    },
+    {
+     "team": "IND",
+     "player": "Ivica Zubac",
+     "status": "Out",
+     "impact": "Medium",
+     "note": "Left ankle; Indiana is thin at center and leans on Jay Huff."
+    },
+    {
+     "team": "IND",
+     "player": "Obi Toppin",
+     "status": "Questionable",
+     "stats": "14.0 pts, 5.5 reb this season",
+     "impact": "Medium",
+     "note": "Back, day to day; a bench scorer who adds pace if he plays."
+    },
+    {
+     "team": "IND",
+     "player": "T.J. McConnell",
+     "status": "Out",
+     "impact": "Medium",
+     "note": "Hamstring rehab, yet to debut; removes the backup point guard with Haliburton already out."
+    },
+    {
+     "team": "BKN",
+     "player": "Mikel Brown Jr.",
+     "status": "Out",
+     "stats": "10.3 pts per the AP preview",
+     "impact": "Medium",
+     "note": "Back; the lottery pick is out, so Traore and Ellis get more of the ball."
+    },
+    {
+     "team": "BKN",
+     "player": "Egor Demin",
+     "status": "Out",
+     "stats": "9.0 pts in 3 games",
+     "impact": "Medium",
+     "note": "Right leg; another young guard missing, which puts more creation on Randle."
+    }
+   ],
+   "single": {
+    "oddID": "points-all-game-ou-over",
+    "line": 229.5,
+    "odds": -115,
+    "label": "Over 229.5",
+    "team": "",
+    "why": "These teams have averaged 236 and 235 total points, both defenses are bottom-eight by opponent eFG, and Brooklyn plays at the 3rd-fastest pace. With Haliburton and Zubac out, Indiana's defense gets worse, not slower, so 229.5 is a shade low."
+   },
+   "parlay": {
+    "legs": [
+     {
+      "oddID": "points-all-game-ou-over",
+      "line": 229.5,
+      "odds": -115,
+      "label": "Over 229.5"
+     },
+     {
+      "oddID": "assists-ANDREW_NEMBHARD_1_NBA-game-ou-over",
+      "line": 9.5,
+      "odds": -102,
+      "label": "Nembhard over 9.5 assists"
+     }
+    ],
+    "price": 270,
+    "why": "Script: a fast, sloppy game between two bad defenses, with Nembhard running the point full time and piling up assists on Indiana's makes. He has 14 and 9 assists in his last two and Brooklyn allows 30.2 a game."
+   },
+   "updated": "2026-11-01T13:51:11Z"
+  },
+  "rjxbD1V9ROfL3lFcGdte": {
+   "date": "2026-11-01",
+   "away": "LAC",
+   "home": "GSW",
+   "blurb": "Golden State (3-3) has won three straight, coming back from 25 down to beat the Lakers 112-95 on Friday, but it rests Stephen Curry and Draymond Green tonight with Phoenix up tomorrow. The Clippers (1-4) have lost four straight, the last 127-101 in Minnesota, and their offense ranks 30th with the league's worst turnover rate (23.1%) against a Warriors defense that forces turnovers at the 4th-best rate. Butler, Moody and Porzingis are also out for Golden State, while the Clippers miss Ingram, Beal and Strus. A near pick'em at 219.5 says the market sees two thin rosters; lean under and lean on Lendeborg.",
+   "angles": [
+    "Curry and Green resting, front of a back-to-back",
+    "LAC 30th offense, 30th turnover rate",
+    "GSW 1st in offensive rebound rate",
+    "Lendeborg usage up without Curry",
+    "LAC crossed two time zones west"
+   ],
+   "injuries": [
+    {
+     "team": "GSW",
+     "player": "Stephen Curry",
+     "status": "Out",
+     "stats": "33.0 pts, 5.7 3PM in 3 games",
+     "impact": "High",
+     "note": "Rest (right knee management) on the front of a back-to-back; Golden State loses its offense and a 40% usage rate."
+    },
+    {
+     "team": "GSW",
+     "player": "Draymond Green",
+     "status": "Out",
+     "stats": "7.0 ast this season",
+     "impact": "High",
+     "note": "Rest (back); the Warriors lose their defensive organizer and lead passer."
+    },
+    {
+     "team": "GSW",
+     "player": "Jimmy Butler III",
+     "status": "Out",
+     "impact": "High",
+     "note": "Recovering from knee surgery; out until later in the season."
+    },
+    {
+     "team": "GSW",
+     "player": "Kristaps Porzingis",
+     "status": "Out",
+     "impact": "Medium",
+     "note": "Illness, away from the team; no stretch big for Golden State."
+    },
+    {
+     "team": "GSW",
+     "player": "Moses Moody",
+     "status": "Out",
+     "impact": "Medium",
+     "note": "Recovering from knee surgery; one fewer wing defender."
+    },
+    {
+     "team": "GSW",
+     "player": "Gui Santos",
+     "status": "Probable",
+     "stats": "6.8 pts this season",
+     "impact": "Low",
+     "note": "Knee tendinitis; expected to play his usual bench minutes."
+    },
+    {
+     "team": "LAC",
+     "player": "Brandon Ingram",
+     "status": "Out",
+     "impact": "High",
+     "note": "Achilles; the Clippers lose their second scorer behind Garland."
+    },
+    {
+     "team": "LAC",
+     "player": "Bradley Beal",
+     "status": "Out",
+     "impact": "High",
+     "note": "Right knee; trending in the right direction but not back, so more falls on Garland and Wagler."
+    },
+    {
+     "team": "LAC",
+     "player": "Max Strus",
+     "status": "Out",
+     "impact": "Medium",
+     "note": "Right foot; removes a floor-spacing wing."
+    },
+    {
+     "team": "LAC",
+     "player": "Yanic Konan Niederhauser",
+     "status": "Out",
+     "impact": "Low",
+     "note": "Lisfranc; backup center minutes go to Isaiah Jackson and Lopez."
+    }
+   ],
+   "single": {
+    "oddID": "points-YAXEL_LENDEBORG_1_NBA-game-ou-over",
+    "line": 21.5,
+    "odds": 100,
+    "label": "Lendeborg over 21.5 points",
+    "team": "GSW",
+    "why": "Curry's 40% usage rate is off the floor, and Lendeborg (21.4 points a game, with 31 and 26 before a 24-minute night in Friday's blowout) is the first option left. The Clippers allow a 57.0% effective field goal rate (26th), and plus money on a points line he clears on volume alone is the play."
+   },
+   "parlay": {
+    "legs": [
+     {
+      "oddID": "points-all-game-ou-under",
+      "line": 219.5,
+      "odds": -115,
+      "label": "Under 219.5"
+     },
+     {
+      "oddID": "points-YAXEL_LENDEBORG_1_NBA-game-ou-over",
+      "line": 21.5,
+      "odds": 100,
+      "label": "Lendeborg over 21.5 points"
+     }
+    ],
+    "price": 274,
+    "why": "Script: two depleted rosters grind out a low-scoring game, with the Clippers' 30th-ranked offense coughing it up and Golden State playing without its top two creators. In that game Lendeborg has to carry the Warriors' scoring, so the under and his over fit together."
+   },
+   "updated": "2026-11-01T13:51:11Z"
+  },
+  "seEe6mpwUF3444ekpwYz": {
+   "date": "2026-11-01",
+   "away": "TOR",
+   "home": "LAL",
+   "blurb": "The Lakers (4-2) let Golden State erase a 25-point lead and lost 112-95 on Friday, while Toronto (3-2) split two at home with Orlando, losing the second 121-114. Luka Doncic is averaging 38.2 points and 5.5 threes in our box scores, and Toronto allows 40.4% from three (27th) with Kawhi Leonard out. The Raptors flew three time zones west to open a four-game trip and play the Clippers tomorrow, while the Lakers are on their 4th game in 6 nights. LAL -4.5 and 228.5 look about right on the side; the edge is Luka's shooting against a leaky perimeter.",
+   "angles": [
+    "Kawhi out, Barnes usage up",
+    "TOR 27th in opp three-point pct",
+    "TOR three time zones west, trip opener",
+    "LAL 4th game in 6 nights",
+    "Luka 6+ threes in each of last 3"
+   ],
+   "injuries": [
+    {
+     "team": "TOR",
+     "player": "Kawhi Leonard",
+     "status": "Out",
+     "stats": "16.0 pts, 9.0 reb in 1 game",
+     "impact": "High",
+     "note": "Left knee; Toronto loses a starting wing scorer and leans harder on Barnes and Barrett."
+    },
+    {
+     "team": "TOR",
+     "player": "Nate Bittle",
+     "status": "Questionable",
+     "impact": "Low",
+     "note": "Foot, day to day; deep reserve big."
+    },
+    {
+     "team": "LAL",
+     "player": "Ziaire Williams",
+     "status": "Questionable",
+     "stats": "12.0 pts in 3 games",
+     "impact": "Medium",
+     "note": "Left foot, day to day; if he sits, Thybulle and LaRavia take the starting wing minutes."
+    },
+    {
+     "team": "LAL",
+     "player": "Adou Thiero",
+     "status": "Questionable",
+     "impact": "Low",
+     "note": "Injury management, day to day; reserve forward."
+    },
+    {
+     "team": "LAL",
+     "player": "Cameron Carr",
+     "status": "Questionable",
+     "impact": "Low",
+     "note": "Oblique, day to day; end of the rotation."
+    }
+   ],
+   "single": {
+    "oddID": "threePointersMade-LUKA_DONCIC_1_NBA-game-ou-over",
+    "line": 4.5,
+    "odds": 102,
+    "label": "Luka over 4.5 threes",
+    "team": "LAL",
+    "why": "Luka has made 8, 6 and 6 threes in his last three and averages 5.5, and Toronto allows 40.4% from three, 27th in the league. With Kawhi out the Raptors have one fewer big wing to throw at him, and plus money on a line a full make under his average is the best price on the board."
+   },
+   "parlay": {
+    "legs": [
+     {
+      "oddID": "points-home-game-sp-home",
+      "line": -4.5,
+      "odds": -110,
+      "label": "Lakers -4.5"
+     },
+     {
+      "oddID": "points-LUKA_DONCIC_1_NBA-game-ou-over",
+      "line": 34.5,
+      "odds": -114,
+      "label": "Luka over 34.5 points"
+     }
+    ],
+    "price": 258,
+    "why": "Script: Luka scores at will against a Raptors team that just flew three time zones west without Kawhi, and the Lakers pull away late. He is averaging 38.2 points with 37 or more in each of his last three, so a cover and his over usually arrive together."
+   },
+   "updated": "2026-11-01T13:51:11Z"
   }
  },
  "players": {
   "Beekie": {
+   "text": "Beekie swings for the fences: all four settled bets are three-leg parlays at long-shot prices on flat 5-point stakes, and all four lost (-20). The legs are props and totals only, 2-6 on player points props and 1-3 on totals, with six of eight prop legs on guards like Shai, Booker and Curry, split evenly over and under. The weekly boost went on a +608 parlay that missed. Legs have hit just 3 of 9, so one miss sinks every ticket, and all four went in within two minutes on one afternoon. Read: a lottery-ticket prop parlayer who would do better with two legs.",
    "settled": 4,
-   "text": "Beekie swings for the fences: all four bets were three-leg parlays priced +301 or longer, and all four lost, for -20.00. The legs went 3-9, with player points props 2-6 and totals 1-3. Every prop was points, six of eight on guards, split evenly between overs and unders, and the totals split two and two as well. Stakes are a flat 5 points, the boost went on a +608 parlay that missed, and there are no alt lines or Claude copies. Hitting a third of legs makes three-leggers nearly impossible to cash. Read: a lottery-ticket parlay builder who should try two legs.",
-   "updated": "2026-10-31T13:00:35Z"
+   "updated": "2026-11-01T13:51:11Z"
   },
   "Kev": {
-   "settled": 4,
-   "text": "Kev is still perfect: four bets, four wins, +51.77, all singles and no parlays. He lives near even money, with three of four bets between -130 and +130, likes road teams (three of four) and underdogs (2-0), and Portland is his team, backed twice. His only prop, a Ja Morant threes over, cashed, he bought a safer alt number once, and his boost went on a +108 moneyline that won. Stakes run 10 to 30 points about seven hours before tip, and he has never copied Claude. Nothing has broken yet. Read: a disciplined road-dog side bettor.",
-   "updated": "2026-10-31T13:00:35Z"
+   "text": "Kev is the steady singles guy: all five settled bets are straight bets, 4-1 for +31.8, mostly at near-even prices (3-1 there). He leans on spreads (2-1 on spread legs), every one of his four sides has been a road team, and he is 2-0 on underdogs, with Portland his most-backed team. His one boost went on a +108 moneyline that cashed, his one alt line bought a safer number and hit, and his lone prop, a Ja Morant threes over, won. Stakes run 10 to 30, placed about seven hours before tip. Small sample, but the read is a disciplined road-dog singles bettor.",
+   "settled": 5,
+   "updated": "2026-11-01T13:51:11Z"
   },
   "Mio": {
-   "settled": 7,
-   "text": "Mio is the safety buyer, and it is working: 6-1 for +88.41. Six of seven bets were two-leg parlays (5-1), and the legs are 11-1. Twelve of thirteen legs were alternate lines bought down to a safer number, so most bets land between -131 and -199. Props are the core, 6-1 and all overs, with four points-rebounds-assists combos, and Jalen Brunson is the only repeat name. Totals and spreads are 2-0 each. Stakes average 24 points with a 50-point top, the boost went on a -190 parlay that hit, and Mio has never copied Claude. Read: a grinder who buys safety.",
-   "updated": "2026-10-31T13:00:35Z"
+   "text": "Mio is the buy-the-safe-number specialist: 16 of 17 legs used an alternate line moved to a shorter price, and those legs are 15-1. Eight of nine settled bets are two-leg parlays (7-1), mostly priced as a favorite (5-1 in the -131 to -199 band), for +128.3 overall, the best in the group. Props carry it, all overs and mostly points-rebounds-assists combos (Brunson twice, Lendeborg, Luka), paired with spreads (4-0) and overs (2-0). Stakes average about 24 with a 50 top, and the boost went on a -190 parlay that won. Read: a grinder who buys safety and stacks two near-locks.",
+   "settled": 9,
+   "updated": "2026-11-01T13:51:11Z"
   },
   "Sulliver": {
+   "text": "Sulliver bets the stars and is the only one who copies Claude, four times so far. The results have been rough: 1-6 for -68.9, 1-4 on singles and 0-2 on parlays. All seven prop legs were overs on big names (Shai twice, Giannis, Wemby, Flagg, Kyrie), 2-5 overall, and alternate lines are 0-3, including one moved for a bigger payout. Favorites are 0-2 and underdogs 1-1, and the boost went on a +547 parlay that missed. Stakes swing from 5 to 43, placed about eight hours before tip. Read: a star-prop over bettor who needs simpler, closer-to-even tickets.",
    "settled": 7,
-   "text": "Sulliver leans on Claude more than anyone, with four of seven bets matching Claude's pick of the day, and the results are 1-6 for -68.91. Singles are 1-4 and both three-leg parlays missed. Prop legs are 2-5, all overs, on stars like Shai Gilgeous-Alexander (twice), Wembanyama and Flagg. Favorites are 0-2 and underdogs 1-1, and alt lines are 0-3, including one moved for a bigger payout. Stakes swing from 5 to 43 points, and the boost went on a +547 parlay that lost. Bets go in about eight hours early. Read: a star-prop over bettor who needs more selective spots.",
-   "updated": "2026-10-31T13:00:35Z"
+   "updated": "2026-11-01T13:51:11Z"
   }
  },
  "results": {
@@ -3329,11 +3796,11 @@
  },
  "winOdds": {
   "odds": {
-   "Beekie": 25,
-   "Kev": 35,
-   "Mio": 21,
-   "Sulliver": 19
+   "Kev": 31,
+   "Beekie": 29,
+   "Mio": 18,
+   "Sulliver": 22
   },
-  "updated": "2026-10-31T13:00:35Z"
+  "updated": "2026-11-01T13:51:11Z"
  }
 }
