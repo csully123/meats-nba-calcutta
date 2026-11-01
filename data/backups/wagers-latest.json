@@ -1,7 +1,47 @@
 {
- "backedUpAt": "2026-10-31T08:44:02Z",
- "count": 22,
+ "backedUpAt": "2026-11-01T08:48:58Z",
+ "count": 25,
  "wagers": {
+  "1wJJVy2vR2PsyYoQ5rnK": {
+   "_updated": "2026-11-01T08:08:08.688564Z",
+   "boost": null,
+   "createdAt": "2026-10-31T16:02:06.840Z",
+   "eventID": "OZyXK8insHu0FHhzUaA3",
+   "game": "ATL at NOP",
+   "gameDate": "2026-10-31",
+   "gameStart": "2026-10-31T23:00:00.000Z",
+   "legResults": [
+    "loss"
+   ],
+   "legs": [
+    {
+     "alt": false,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "away",
+     "line": -4.5,
+     "name": "Spread",
+     "oddID": "points-away-game-sp-away",
+     "odds": -105,
+     "opposing": "points-home-game-sp-home",
+     "period": "game",
+     "player": null,
+     "short": "ATL -4.5",
+     "side": "away",
+     "stat": "points",
+     "team": "ATL"
+    }
+   ],
+   "net": -20,
+   "payout": 0,
+   "placedAt": "2026-10-31T16:02:03.988Z",
+   "player": "Kev",
+   "series": null,
+   "settledAt": "2026-11-01T08:08:08Z",
+   "stage": "regular",
+   "stake": 20,
+   "status": "loss"
+  },
   "2dzNbNNGFzlTZAffuZ8z": {
    "_updated": "2026-10-30T00:15:21.735126Z",
    "boost": null,
@@ -78,6 +118,64 @@
    "player": "Kev",
    "series": null,
    "settledAt": "2026-10-29T08:12:10Z",
+   "stage": "regular",
+   "stake": 20,
+   "status": "win"
+  },
+  "8KZOKT2nPpnGs0loUeAO": {
+   "_updated": "2026-11-01T08:08:08.834450Z",
+   "boost": null,
+   "createdAt": "2026-10-31T15:07:46.125Z",
+   "eventID": "LfbFERKd3fKR0dLhaITZ",
+   "game": "MIN at SAS",
+   "gameDate": "2026-10-31",
+   "gameStart": "2026-11-01T00:00:00.000Z",
+   "legResults": [
+    "win",
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "home",
+     "line": -3.5,
+     "name": "Spread",
+     "oddID": "points-home-game-sp-home",
+     "odds": -350,
+     "opposing": "points-away-game-sp-away",
+     "period": "game",
+     "player": null,
+     "short": "SAS -3.5 (alt)",
+     "side": "home",
+     "stat": "points",
+     "team": "SAS"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "VICTOR_WEMBANYAMA_1_NBA",
+     "line": 2.5,
+     "name": "Victor Wembanyama Blocks",
+     "oddID": "blocks-VICTOR_WEMBANYAMA_1_NBA-game-ou-over",
+     "odds": -182,
+     "opposing": "blocks-VICTOR_WEMBANYAMA_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "VICTOR_WEMBANYAMA_1_NBA",
+     "short": "Victor Wembanyama Blocks Over 2.5 (alt)",
+     "side": "over",
+     "stat": "blocks",
+     "team": "SAS"
+    }
+   ],
+   "net": 19.84,
+   "payout": 39.84,
+   "placedAt": "2026-10-31T15:07:43.538Z",
+   "player": "Mio",
+   "series": null,
+   "settledAt": "2026-11-01T08:08:08Z",
    "stage": "regular",
    "stake": 20,
    "status": "win"
@@ -531,6 +629,64 @@
    "stage": "cup",
    "stake": 13.86,
    "status": "loss"
+  },
+  "RrFZ8BW2rdq3cHKsg8I2": {
+   "_updated": "2026-11-01T08:08:08.962430Z",
+   "boost": null,
+   "createdAt": "2026-10-31T15:06:20.330Z",
+   "eventID": "1xrVU4jsBZYwThQRrgXp",
+   "game": "SAC at MEM",
+   "gameDate": "2026-10-31",
+   "gameStart": "2026-11-01T00:00:00.000Z",
+   "legResults": [
+    "win",
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "home",
+     "line": -2.5,
+     "name": "Spread",
+     "oddID": "points-home-game-sp-home",
+     "odds": -320,
+     "opposing": "points-away-game-sp-away",
+     "period": "game",
+     "player": null,
+     "short": "MEM -2.5 (alt)",
+     "side": "home",
+     "stat": "points",
+     "team": "MEM"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "CAMERON_BOOZER_1_NBA",
+     "line": 24.5,
+     "name": "Cameron Boozer Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-CAMERON_BOOZER_1_NBA-game-ou-over",
+     "odds": -370,
+     "opposing": "points+rebounds+assists-CAMERON_BOOZER_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "CAMERON_BOOZER_1_NBA",
+     "short": "Cameron Boozer Pts + Reb + Ast Over 24.5 (alt)",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "MEM"
+    }
+   ],
+   "net": 20.01,
+   "payout": 50.01,
+   "placedAt": "2026-10-31T15:06:17.937Z",
+   "player": "Mio",
+   "series": null,
+   "settledAt": "2026-11-01T08:08:08Z",
+   "stage": "regular",
+   "stake": 30,
+   "status": "win"
   },
   "U3TJHnVg7En3DN7BZgGL": {
    "_updated": "2026-10-30T00:15:22.243397Z",
