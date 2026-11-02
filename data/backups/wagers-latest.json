@@ -1,7 +1,65 @@
 {
- "backedUpAt": "2026-11-01T08:48:58Z",
- "count": 25,
+ "backedUpAt": "2026-11-02T09:01:57Z",
+ "count": 26,
  "wagers": {
+  "14UdpQ6CLjt5ixeLfELL": {
+   "_updated": "2026-11-02T08:30:36.355154Z",
+   "boost": null,
+   "createdAt": "2026-11-01T19:43:32.922Z",
+   "eventID": "2Di3i9y9aQ0E79QYVI6n",
+   "game": "BOS at ORL",
+   "gameDate": "2026-11-01",
+   "gameStart": "2026-11-01T20:30:00.000Z",
+   "legResults": [
+    "win",
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": false,
+     "betType": "ml",
+     "book": "fanduel",
+     "entity": "away",
+     "line": null,
+     "name": "Moneyline",
+     "oddID": "points-away-game-ml-away",
+     "odds": -250,
+     "opposing": "points-home-game-ml-home",
+     "period": "game",
+     "player": null,
+     "short": "BOS ML",
+     "side": "away",
+     "stat": "points",
+     "team": "BOS"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYSON_TATUM_1_NBA",
+     "line": 34.5,
+     "name": "Jayson Tatum Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-JAYSON_TATUM_1_NBA-game-ou-over",
+     "odds": -480,
+     "opposing": "points+rebounds+assists-JAYSON_TATUM_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JAYSON_TATUM_1_NBA",
+     "short": "Jayson Tatum Pts + Reb + Ast Over 34.5 (alt)",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "BOS"
+    }
+   ],
+   "net": 10,
+   "payout": 24.46,
+   "placedAt": "2026-11-01T19:43:30.800Z",
+   "player": "Mio",
+   "series": null,
+   "settledAt": "2026-11-02T08:30:36Z",
+   "stage": "regular",
+   "stake": 14.46,
+   "status": "win"
+  },
   "1wJJVy2vR2PsyYoQ5rnK": {
    "_updated": "2026-11-01T08:08:08.688564Z",
    "boost": null,
