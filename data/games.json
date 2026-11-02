@@ -2162,13 +2162,13 @@
   "awayColor": "12173f",
   "awayLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
   "awayName": "LA Clippers",
-  "awayScore": null,
+  "awayScore": 22,
   "date": "2026-11-01",
   "home": "GSW",
   "homeColor": "fdb927",
   "homeLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/gs.png",
   "homeName": "Golden State Warriors",
-  "homeScore": null,
+  "homeScore": 18,
   "id": "401909905",
   "label": null,
   "multiplier": 1,
@@ -2178,7 +2178,7 @@
   "spreadUpdated": "2026-11-01T23:26:39Z",
   "stage": "regular",
   "start": "2026-11-02T01:30:00Z",
-  "status": "scheduled"
+  "status": "inprogress"
  },
  "401909906": {
   "away": "TOR",
@@ -2357,9 +2357,9 @@
   "label": null,
   "multiplier": 1,
   "series": null,
-  "spreadHome": null,
-  "spreadSource": null,
-  "spreadUpdated": null,
+  "spreadHome": -9.5,
+  "spreadSource": "ESPN",
+  "spreadUpdated": "2026-11-02T01:57:04Z",
   "stage": "regular",
   "start": "2026-11-03T01:00:00Z",
   "status": "scheduled"
