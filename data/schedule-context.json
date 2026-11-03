@@ -1,13 +1,47 @@
 {
- "updated": "2026-11-02T12:40:00+00:00",
+ "updated": "2026-11-03T12:38:49+00:00",
  "days": {
-  "2026-11-02": {
-   "401909907": {
-    "matchup": "OKC at CLE",
+  "2026-11-04": {
+   "401909922": {
+    "matchup": "PHI at DET",
     "tipET": "7:00 PM ET",
     "away": {
-     "team": "OKC",
+     "team": "PHI",
      "site": "away",
+     "tipLocal": "7:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 4,
+     "gamesIn7Nights": 4,
+     "restDays": 1,
+     "lastGame": {
+      "opp": "CHI",
+      "where": "home",
+      "result": "W 126-107",
+      "margin": 19,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-02",
+     "tzShiftSinceLast": 0.0,
+     "streak": {
+      "kind": "roadTrip",
+      "game": 1,
+      "of": 3
+     },
+     "nextGame": {
+      "date": "2026-11-06",
+      "opp": "CLE",
+      "where": "away",
+      "daysUntil": 2
+     },
+     "notes": [
+      "PHI playing its 4th game in 6 nights",
+      "PHI game 1 of a 3-game road trip"
+     ]
+    },
+    "home": {
+     "team": "DET",
+     "site": "home",
      "tipLocal": "7:00 pm",
      "altitude": null,
      "gamesIn4Nights": 2,
@@ -15,325 +49,199 @@
      "gamesIn7Nights": 3,
      "restDays": 1,
      "lastGame": {
-      "opp": "HOU",
+      "opp": "CHA",
       "where": "away",
-      "result": "L 98-119",
-      "margin": -21,
+      "result": "W 124-91",
+      "margin": 33,
       "overtime": false
      },
-     "lastGameDate": "2026-10-31",
-     "tzShiftSinceLast": 1.0,
+     "lastGameDate": "2026-11-02",
+     "tzShiftSinceLast": 0.0,
+     "streak": {
+      "kind": "homestand",
+      "game": 1,
+      "of": 3
+     },
+     "nextGame": {
+      "date": "2026-11-08",
+      "opp": "LAL",
+      "where": "home",
+      "daysUntil": 4
+     },
+     "notes": []
+    },
+    "notes": [
+     "Even rest: both teams 1 day off",
+     "PHI playing its 4th game in 6 nights",
+     "PHI game 1 of a 3-game road trip"
+    ]
+   },
+   "401909923": {
+    "matchup": "ATL at WAS",
+    "tipET": "7:00 PM ET",
+    "away": {
+     "team": "ATL",
+     "site": "away",
+     "tipLocal": "7:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 4,
+     "restDays": 1,
+     "lastGame": {
+      "opp": "IND",
+      "where": "away",
+      "result": "W 108-104",
+      "margin": 4,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-02",
+     "tzShiftSinceLast": 0.0,
      "streak": {
       "kind": "roadTrip",
       "game": 3,
       "of": 3
      },
      "nextGame": {
-      "date": "2026-11-04",
-      "opp": "CLE",
+      "date": "2026-11-06",
+      "opp": "WAS",
       "where": "home",
       "daysUntil": 2
      },
      "notes": [
-      "OKC last game of a 3-game road trip"
+      "ATL last game of a 3-game road trip"
      ]
     },
     "home": {
-     "team": "CLE",
+     "team": "WAS",
      "site": "home",
      "tipLocal": "7:00 pm",
      "altitude": null,
      "gamesIn4Nights": 2,
-     "gamesIn6Nights": 4,
-     "gamesIn7Nights": 4,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 3,
      "restDays": 1,
      "lastGame": {
-      "opp": "MIL",
+      "opp": "ORL",
       "where": "away",
-      "result": "W 136-111",
-      "margin": 25,
+      "result": "W 103-94",
+      "margin": 9,
       "overtime": false
      },
-     "lastGameDate": "2026-10-31",
-     "tzShiftSinceLast": 1.0,
+     "lastGameDate": "2026-11-02",
+     "tzShiftSinceLast": 0.0,
      "streak": {
       "kind": "homestand",
       "game": 1,
       "of": 1
      },
      "nextGame": {
-      "date": "2026-11-04",
-      "opp": "OKC",
+      "date": "2026-11-06",
+      "opp": "ATL",
       "where": "away",
       "daysUntil": 2
      },
-     "notes": [
-      "CLE playing its 4th game in 6 nights"
-     ]
+     "notes": []
     },
     "notes": [
      "Even rest: both teams 1 day off",
-     "OKC last game of a 3-game road trip",
-     "CLE playing its 4th game in 6 nights"
+     "ATL last game of a 3-game road trip"
     ]
    },
-   "401909908": {
-    "matchup": "DET at CHA",
+   "401909924": {
+    "matchup": "MIL at BOS",
     "tipET": "7:30 PM ET",
     "away": {
-     "team": "DET",
-     "site": "away",
-     "tipLocal": "7:30 pm",
-     "altitude": null,
-     "gamesIn4Nights": 2,
-     "gamesIn6Nights": 3,
-     "gamesIn7Nights": 4,
-     "restDays": 2,
-     "lastGame": {
-      "opp": "BKN",
-      "where": "away",
-      "result": "W 110-94",
-      "margin": 16,
-      "overtime": false
-     },
-     "lastGameDate": "2026-10-30",
-     "tzShiftSinceLast": 0.0,
-     "streak": {
-      "kind": "roadTrip",
-      "game": 2,
-      "of": 2
-     },
-     "nextGame": {
-      "date": "2026-11-04",
-      "opp": "PHI",
-      "where": "home",
-      "daysUntil": 2
-     },
-     "notes": []
-    },
-    "home": {
-     "team": "CHA",
-     "site": "home",
-     "tipLocal": "7:30 pm",
-     "altitude": null,
-     "gamesIn4Nights": 3,
-     "gamesIn6Nights": 4,
-     "gamesIn7Nights": 4,
-     "restDays": 1,
-     "lastGame": {
-      "opp": "PHI",
-      "where": "home",
-      "result": "L 104-109",
-      "margin": -5,
-      "overtime": false
-     },
-     "lastGameDate": "2026-10-31",
-     "streak": {
-      "kind": "homestand",
-      "game": 2,
-      "of": 2
-     },
-     "nextGame": {
-      "date": "2026-11-04",
-      "opp": "BKN",
-      "where": "away",
-      "daysUntil": 2
-     },
-     "notes": [
-      "CHA playing its 3rd game in 4 nights",
-      "CHA playing its 4th game in 6 nights"
-     ]
-    },
-    "notes": [
-     "Rest edge DET: 2 days off vs 1 for CHA",
-     "CHA playing its 3rd game in 4 nights",
-     "CHA playing its 4th game in 6 nights"
-    ]
-   },
-   "401909909": {
-    "matchup": "ATL at IND",
-    "tipET": "7:30 PM ET",
-    "away": {
-     "team": "ATL",
-     "site": "away",
-     "tipLocal": "7:30 pm",
-     "altitude": null,
-     "gamesIn4Nights": 2,
-     "gamesIn6Nights": 4,
-     "gamesIn7Nights": 4,
-     "restDays": 1,
-     "lastGame": {
-      "opp": "NOP",
-      "where": "away",
-      "result": "L 99-121",
-      "margin": -22,
-      "overtime": false
-     },
-     "lastGameDate": "2026-10-31",
-     "tzShiftSinceLast": 1.0,
-     "streak": {
-      "kind": "roadTrip",
-      "game": 2,
-      "of": 3
-     },
-     "nextGame": {
-      "date": "2026-11-04",
-      "opp": "WAS",
-      "where": "away",
-      "daysUntil": 2
-     },
-     "notes": [
-      "ATL playing its 4th game in 6 nights",
-      "ATL game 2 of a 3-game road trip"
-     ]
-    },
-    "home": {
-     "team": "IND",
-     "site": "home",
-     "tipLocal": "7:30 pm",
-     "altitude": null,
-     "gamesIn4Nights": 3,
-     "gamesIn6Nights": 4,
-     "gamesIn7Nights": 4,
-     "restDays": 0,
-     "lastGame": {
-      "opp": "BKN",
-      "where": "home",
-      "result": "L 90-98",
-      "margin": -8,
-      "overtime": false
-     },
-     "lastGameDate": "2026-11-01",
-     "backToBack": true,
-     "streak": {
-      "kind": "homestand",
-      "game": 2,
-      "of": 2
-     },
-     "nextGame": {
-      "date": "2026-11-04",
-      "opp": "MEM",
-      "where": "away",
-      "daysUntil": 2
-     },
-     "notes": [
-      "IND on a back-to-back with no travel (played at home last night)",
-      "IND playing its 3rd game in 4 nights",
-      "IND playing its 4th game in 6 nights"
-     ]
-    },
-    "notes": [
-     "Rest edge ATL: 1 day off vs 0 for IND (IND on a back-to-back)",
-     "ATL playing its 4th game in 6 nights",
-     "ATL game 2 of a 3-game road trip",
-     "IND on a back-to-back with no travel (played at home last night)",
-     "IND playing its 3rd game in 4 nights",
-     "IND playing its 4th game in 6 nights"
-    ]
-   },
-   "401909910": {
-    "matchup": "BKN at NYK",
-    "tipET": "7:30 PM ET",
-    "away": {
-     "team": "BKN",
-     "site": "away",
-     "tipLocal": "7:30 pm",
-     "altitude": null,
-     "gamesIn4Nights": 3,
-     "gamesIn6Nights": 3,
-     "gamesIn7Nights": 4,
-     "restDays": 0,
-     "lastGame": {
-      "opp": "IND",
-      "where": "away",
-      "result": "W 98-90",
-      "margin": 8,
-      "overtime": false
-     },
-     "lastGameDate": "2026-11-01",
-     "backToBack": true,
-     "travel": {
-      "from": "Indianapolis",
-      "to": "New York",
-      "miles": 644,
-      "estLanding": "11:40 pm",
-      "estHotel": "12:25 am",
-      "tzShift": 0.0
-     },
-     "tzShiftSinceLast": 0.0,
-     "streak": {
-      "kind": "roadTrip",
-      "game": 2,
-      "of": 2
-     },
-     "nextGame": {
-      "date": "2026-11-04",
-      "opp": "CHA",
-      "where": "home",
-      "daysUntil": 2
-     },
-     "notes": [
-      "BKN on a back-to-back: played in Indianapolis last night, flew 644 miles and landed in New York around 11:40 pm; estimate, check the news for delays",
-      "BKN playing its 3rd game in 4 nights"
-     ]
-    },
-    "home": {
-     "team": "NYK",
-     "site": "home",
-     "tipLocal": "7:30 pm",
-     "altitude": null,
-     "gamesIn4Nights": 2,
-     "gamesIn6Nights": 3,
-     "gamesIn7Nights": 4,
-     "restDays": 2,
-     "lastGame": {
-      "opp": "PHI",
-      "where": "away",
-      "result": "L 93-98",
-      "margin": -5,
-      "overtime": false
-     },
-     "lastGameDate": "2026-10-30",
-     "tzShiftSinceLast": 0.0,
-     "streak": {
-      "kind": "homestand",
-      "game": 1,
-      "of": 2
-     },
-     "nextGame": {
-      "date": "2026-11-04",
-      "opp": "CHI",
-      "where": "home",
-      "daysUntil": 2
-     },
-     "notes": []
-    },
-    "notes": [
-     "Rest edge NYK: 2 days off vs 0 for BKN (BKN on a back-to-back)",
-     "BKN on a back-to-back: played in Indianapolis last night, flew 644 miles and landed in New York around 11:40 pm; estimate, check the news for delays",
-     "BKN playing its 3rd game in 4 nights"
-    ]
-   },
-   "401909911": {
-    "matchup": "WAS at ORL",
-    "tipET": "7:30 PM ET",
-    "away": {
-     "team": "WAS",
+     "team": "MIL",
      "site": "away",
      "tipLocal": "7:30 pm",
      "altitude": null,
      "gamesIn4Nights": 2,
      "gamesIn6Nights": 3,
      "gamesIn7Nights": 3,
-     "restDays": 2,
+     "restDays": 1,
      "lastGame": {
-      "opp": "CHA",
-      "where": "home",
-      "result": "W 95-79",
-      "margin": 16,
+      "opp": "MIN",
+      "where": "away",
+      "result": "L 100-112",
+      "margin": -12,
       "overtime": false
      },
-     "lastGameDate": "2026-10-30",
+     "lastGameDate": "2026-11-02",
+     "tzShiftSinceLast": 1.0,
+     "streak": {
+      "kind": "roadTrip",
+      "game": 2,
+      "of": 2
+     },
+     "nextGame": {
+      "date": "2026-11-06",
+      "opp": "TOR",
+      "where": "home",
+      "daysUntil": 2
+     },
+     "notes": []
+    },
+    "home": {
+     "team": "BOS",
+     "site": "home",
+     "tipLocal": "7:30 pm",
+     "altitude": null,
+     "gamesIn4Nights": 3,
+     "gamesIn6Nights": 4,
+     "gamesIn7Nights": 4,
+     "restDays": 1,
+     "lastGame": {
+      "opp": "HOU",
+      "where": "away",
+      "result": "L 93-109",
+      "margin": -16,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-02",
+     "tzShiftSinceLast": 1.0,
+     "streak": {
+      "kind": "homestand",
+      "game": 1,
+      "of": 1
+     },
+     "nextGame": {
+      "date": "2026-11-06",
+      "opp": "CHA",
+      "where": "away",
+      "daysUntil": 2
+     },
+     "notes": [
+      "BOS playing its 3rd game in 4 nights",
+      "BOS playing its 4th game in 6 nights"
+     ]
+    },
+    "notes": [
+     "Even rest: both teams 1 day off",
+     "BOS playing its 3rd game in 4 nights",
+     "BOS playing its 4th game in 6 nights"
+    ]
+   },
+   "401909925": {
+    "matchup": "CHA at BKN",
+    "tipET": "7:30 PM ET",
+    "away": {
+     "team": "CHA",
+     "site": "away",
+     "tipLocal": "7:30 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 4,
+     "gamesIn7Nights": 4,
+     "restDays": 1,
+     "lastGame": {
+      "opp": "DET",
+      "where": "home",
+      "result": "L 91-124",
+      "margin": -33,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-02",
      "tzShiftSinceLast": 0.0,
      "streak": {
       "kind": "roadTrip",
@@ -341,57 +249,58 @@
       "of": 1
      },
      "nextGame": {
-      "date": "2026-11-04",
-      "opp": "ATL",
+      "date": "2026-11-06",
+      "opp": "BOS",
       "where": "home",
       "daysUntil": 2
      },
-     "notes": []
+     "notes": [
+      "CHA playing its 4th game in 6 nights"
+     ]
     },
     "home": {
-     "team": "ORL",
+     "team": "BKN",
      "site": "home",
      "tipLocal": "7:30 pm",
      "altitude": null,
      "gamesIn4Nights": 3,
      "gamesIn6Nights": 4,
      "gamesIn7Nights": 4,
-     "restDays": 0,
+     "restDays": 1,
      "lastGame": {
-      "opp": "BOS",
-      "where": "home",
-      "result": "L 97-108",
-      "margin": -11,
+      "opp": "NYK",
+      "where": "away",
+      "result": "L 90-103",
+      "margin": -13,
       "overtime": false
      },
-     "lastGameDate": "2026-11-01",
-     "backToBack": true,
+     "lastGameDate": "2026-11-02",
+     "tzShiftSinceLast": 0.0,
      "streak": {
       "kind": "homestand",
-      "game": 2,
-      "of": 2
+      "game": 1,
+      "of": 1
      },
      "nextGame": {
-      "date": "2026-11-05",
-      "opp": "PHX",
+      "date": "2026-11-07",
+      "opp": "ATL",
       "where": "away",
       "daysUntil": 3
      },
      "notes": [
-      "ORL on a back-to-back with no travel (played at home last night)",
-      "ORL playing its 3rd game in 4 nights",
-      "ORL playing its 4th game in 6 nights"
+      "BKN playing its 3rd game in 4 nights",
+      "BKN playing its 4th game in 6 nights"
      ]
     },
     "notes": [
-     "Rest edge WAS: 2 days off vs 0 for ORL (ORL on a back-to-back)",
-     "ORL on a back-to-back with no travel (played at home last night)",
-     "ORL playing its 3rd game in 4 nights",
-     "ORL playing its 4th game in 6 nights"
+     "Even rest: both teams 1 day off",
+     "CHA playing its 4th game in 6 nights",
+     "BKN playing its 3rd game in 4 nights",
+     "BKN playing its 4th game in 6 nights"
     ]
    },
-   "401909912": {
-    "matchup": "CHI at PHI",
+   "401909926": {
+    "matchup": "CHI at NYK",
     "tipET": "7:30 PM ET",
     "away": {
      "team": "CHI",
@@ -401,177 +310,101 @@
      "gamesIn4Nights": 2,
      "gamesIn6Nights": 3,
      "gamesIn7Nights": 3,
-     "restDays": 2,
+     "restDays": 1,
      "lastGame": {
-      "opp": "BOS",
+      "opp": "PHI",
       "where": "away",
-      "result": "L 111-125",
-      "margin": -14,
+      "result": "L 107-126",
+      "margin": -19,
       "overtime": false
      },
-     "lastGameDate": "2026-10-30",
+     "lastGameDate": "2026-11-02",
      "tzShiftSinceLast": 0.0,
      "streak": {
       "kind": "roadTrip",
-      "game": 2,
+      "game": 3,
       "of": 3
      },
      "nextGame": {
-      "date": "2026-11-04",
-      "opp": "NYK",
-      "where": "away",
-      "daysUntil": 2
+      "date": "2026-11-08",
+      "opp": "PHI",
+      "where": "home",
+      "daysUntil": 4
      },
      "notes": [
-      "CHI game 2 of a 3-game road trip"
+      "CHI last game of a 3-game road trip"
      ]
     },
     "home": {
-     "team": "PHI",
+     "team": "NYK",
      "site": "home",
      "tipLocal": "7:30 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 3,
+     "restDays": 1,
+     "lastGame": {
+      "opp": "BKN",
+      "where": "home",
+      "result": "W 103-90",
+      "margin": 13,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-02",
+     "streak": {
+      "kind": "homestand",
+      "game": 2,
+      "of": 2
+     },
+     "nextGame": {
+      "date": "2026-11-07",
+      "opp": "CLE",
+      "where": "away",
+      "daysUntil": 3
+     },
+     "notes": []
+    },
+    "notes": [
+     "Even rest: both teams 1 day off",
+     "CHI last game of a 3-game road trip"
+    ]
+   },
+   "401909927": {
+    "matchup": "IND at MEM",
+    "tipET": "8:00 PM ET",
+    "away": {
+     "team": "IND",
+     "site": "away",
+     "tipLocal": "7:00 pm",
      "altitude": null,
      "gamesIn4Nights": 3,
      "gamesIn6Nights": 4,
      "gamesIn7Nights": 4,
      "restDays": 1,
      "lastGame": {
-      "opp": "CHA",
-      "where": "away",
-      "result": "W 109-104",
-      "margin": 5,
-      "overtime": false
-     },
-     "lastGameDate": "2026-10-31",
-     "tzShiftSinceLast": 0.0,
-     "streak": {
-      "kind": "homestand",
-      "game": 1,
-      "of": 1
-     },
-     "nextGame": {
-      "date": "2026-11-04",
-      "opp": "DET",
-      "where": "away",
-      "daysUntil": 2
-     },
-     "notes": [
-      "PHI playing its 3rd game in 4 nights",
-      "PHI playing its 4th game in 6 nights"
-     ]
-    },
-    "notes": [
-     "Rest edge CHI: 2 days off vs 1 for PHI",
-     "CHI game 2 of a 3-game road trip",
-     "PHI playing its 3rd game in 4 nights",
-     "PHI playing its 4th game in 6 nights"
-    ]
-   },
-   "401909913": {
-    "matchup": "SAC at DAL",
-    "tipET": "8:00 PM ET",
-    "away": {
-     "team": "SAC",
-     "site": "away",
-     "tipLocal": "7:00 pm",
-     "altitude": null,
-     "gamesIn4Nights": 2,
-     "gamesIn6Nights": 3,
-     "gamesIn7Nights": 4,
-     "restDays": 1,
-     "lastGame": {
-      "opp": "MEM",
-      "where": "away",
-      "result": "L 105-136",
-      "margin": -31,
-      "overtime": false
-     },
-     "lastGameDate": "2026-10-31",
-     "tzShiftSinceLast": 0.0,
-     "streak": {
-      "kind": "roadTrip",
-      "game": 4,
-      "of": 4
-     },
-     "nextGame": {
-      "date": "2026-11-04",
-      "opp": "LAL",
-      "where": "home",
-      "daysUntil": 2
-     },
-     "notes": [
-      "SAC last game of a 4-game road trip"
-     ]
-    },
-    "home": {
-     "team": "DAL",
-     "site": "home",
-     "tipLocal": "7:00 pm",
-     "altitude": null,
-     "gamesIn4Nights": 2,
-     "gamesIn6Nights": 3,
-     "gamesIn7Nights": 3,
-     "restDays": 2,
-     "lastGame": {
-      "opp": "HOU",
-      "where": "home",
-      "result": "W 116-111",
-      "margin": 5,
-      "overtime": false
-     },
-     "lastGameDate": "2026-10-30",
-     "streak": {
-      "kind": "homestand",
-      "game": 3,
-      "of": 3
-     },
-     "nextGame": {
-      "date": "2026-11-04",
-      "opp": "SAS",
-      "where": "away",
-      "daysUntil": 2
-     },
-     "notes": []
-    },
-    "notes": [
-     "Rest edge DAL: 2 days off vs 1 for SAC",
-     "SAC last game of a 4-game road trip"
-    ]
-   },
-   "401909914": {
-    "matchup": "NOP at MEM",
-    "tipET": "8:00 PM ET",
-    "away": {
-     "team": "NOP",
-     "site": "away",
-     "tipLocal": "7:00 pm",
-     "altitude": null,
-     "gamesIn4Nights": 2,
-     "gamesIn6Nights": 4,
-     "gamesIn7Nights": 4,
-     "restDays": 1,
-     "lastGame": {
       "opp": "ATL",
       "where": "home",
-      "result": "W 121-99",
-      "margin": 22,
+      "result": "L 104-108",
+      "margin": -4,
       "overtime": false
      },
-     "lastGameDate": "2026-10-31",
-     "tzShiftSinceLast": 0.0,
+     "lastGameDate": "2026-11-02",
+     "tzShiftSinceLast": -1.0,
      "streak": {
       "kind": "roadTrip",
       "game": 1,
       "of": 1
      },
      "nextGame": {
-      "date": "2026-11-04",
-      "opp": "UTA",
+      "date": "2026-11-07",
+      "opp": "DEN",
       "where": "home",
-      "daysUntil": 2
+      "daysUntil": 3
      },
      "notes": [
-      "NOP playing its 4th game in 6 nights"
+      "IND playing its 3rd game in 4 nights",
+      "IND playing its 4th game in 6 nights"
      ]
     },
     "home": {
@@ -581,40 +414,150 @@
      "altitude": null,
      "gamesIn4Nights": 2,
      "gamesIn6Nights": 3,
+     "gamesIn7Nights": 4,
+     "restDays": 1,
+     "lastGame": {
+      "opp": "NOP",
+      "where": "home",
+      "result": "L 134-135",
+      "margin": -1,
+      "overtime": true
+     },
+     "lastGameDate": "2026-11-02",
+     "streak": {
+      "kind": "homestand",
+      "game": 3,
+      "of": 4
+     },
+     "nextGame": {
+      "date": "2026-11-06",
+      "opp": "OKC",
+      "where": "home",
+      "daysUntil": 2
+     },
+     "notes": [
+      "MEM went to overtime last game"
+     ]
+    },
+    "notes": [
+     "Even rest: both teams 1 day off",
+     "IND playing its 3rd game in 4 nights",
+     "IND playing its 4th game in 6 nights",
+     "MEM went to overtime last game"
+    ]
+   },
+   "401909928": {
+    "matchup": "UTA at NOP",
+    "tipET": "8:00 PM ET",
+    "away": {
+     "team": "UTA",
+     "site": "away",
+     "tipLocal": "7:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 3,
      "gamesIn7Nights": 3,
      "restDays": 1,
      "lastGame": {
-      "opp": "SAC",
-      "where": "home",
-      "result": "W 136-105",
-      "margin": 31,
+      "opp": "SAS",
+      "where": "away",
+      "result": "L 97-119",
+      "margin": -22,
       "overtime": false
      },
-     "lastGameDate": "2026-10-31",
+     "lastGameDate": "2026-11-02",
+     "tzShiftSinceLast": 0.0,
      "streak": {
-      "kind": "homestand",
+      "kind": "roadTrip",
       "game": 2,
       "of": 4
      },
      "nextGame": {
-      "date": "2026-11-04",
-      "opp": "IND",
+      "date": "2026-11-06",
+      "opp": "DAL",
+      "where": "away",
+      "daysUntil": 2
+     },
+     "notes": [
+      "UTA game 2 of a 4-game road trip"
+     ]
+    },
+    "home": {
+     "team": "NOP",
+     "site": "home",
+     "tipLocal": "7:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 4,
+     "restDays": 1,
+     "lastGame": {
+      "opp": "MEM",
+      "where": "away",
+      "result": "W 135-134",
+      "margin": 1,
+      "overtime": true
+     },
+     "lastGameDate": "2026-11-02",
+     "tzShiftSinceLast": 0.0,
+     "streak": {
+      "kind": "homestand",
+      "game": 1,
+      "of": 2
+     },
+     "nextGame": {
+      "date": "2026-11-06",
+      "opp": "MIN",
+      "where": "home",
+      "daysUntil": 2
+     },
+     "notes": [
+      "NOP went to overtime last game"
+     ]
+    },
+    "notes": [
+     "Even rest: both teams 1 day off",
+     "UTA game 2 of a 4-game road trip",
+     "NOP went to overtime last game"
+    ]
+   },
+   "401909929": {
+    "matchup": "CLE at OKC",
+    "tipET": "8:00 PM ET",
+    "away": {
+     "team": "CLE",
+     "site": "away",
+     "tipLocal": "7:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 4,
+     "restDays": 1,
+     "lastGame": {
+      "opp": "OKC",
+      "where": "home",
+      "result": "L 112-117",
+      "margin": -5,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-02",
+     "tzShiftSinceLast": -1.0,
+     "streak": {
+      "kind": "roadTrip",
+      "game": 1,
+      "of": 1
+     },
+     "nextGame": {
+      "date": "2026-11-06",
+      "opp": "PHI",
       "where": "home",
       "daysUntil": 2
      },
      "notes": []
     },
-    "notes": [
-     "Even rest: both teams 1 day off",
-     "NOP playing its 4th game in 6 nights"
-    ]
-   },
-   "401909915": {
-    "matchup": "MIL at MIN",
-    "tipET": "8:00 PM ET",
-    "away": {
-     "team": "MIL",
-     "site": "away",
+    "home": {
+     "team": "OKC",
+     "site": "home",
      "tipLocal": "7:00 pm",
      "altitude": null,
      "gamesIn4Nights": 2,
@@ -623,110 +566,67 @@
      "restDays": 1,
      "lastGame": {
       "opp": "CLE",
-      "where": "home",
-      "result": "L 111-136",
-      "margin": -25,
+      "where": "away",
+      "result": "W 117-112",
+      "margin": 5,
       "overtime": false
      },
-     "lastGameDate": "2026-10-31",
-     "tzShiftSinceLast": 0.0,
-     "streak": {
-      "kind": "roadTrip",
-      "game": 1,
-      "of": 2
-     },
-     "nextGame": {
-      "date": "2026-11-04",
-      "opp": "BOS",
-      "where": "away",
-      "daysUntil": 2
-     },
-     "notes": []
-    },
-    "home": {
-     "team": "MIN",
-     "site": "home",
-     "tipLocal": "7:00 pm",
-     "altitude": null,
-     "gamesIn4Nights": 3,
-     "gamesIn6Nights": 4,
-     "gamesIn7Nights": 4,
-     "restDays": 1,
-     "lastGame": {
-      "opp": "SAS",
-      "where": "away",
-      "result": "L 111-121",
-      "margin": -10,
-      "overtime": false
-     },
-     "lastGameDate": "2026-10-31",
-     "tzShiftSinceLast": 0.0,
+     "lastGameDate": "2026-11-02",
+     "tzShiftSinceLast": -1.0,
      "streak": {
       "kind": "homestand",
       "game": 1,
       "of": 1
      },
      "nextGame": {
-      "date": "2026-11-04",
-      "opp": "HOU",
+      "date": "2026-11-06",
+      "opp": "MEM",
       "where": "away",
       "daysUntil": 2
      },
      "notes": [
-      "MIN playing its 3rd game in 4 nights",
-      "MIN playing its 4th game in 6 nights"
+      "OKC first game home after a 3-game road trip"
      ]
     },
     "notes": [
      "Even rest: both teams 1 day off",
-     "MIN playing its 3rd game in 4 nights",
-     "MIN playing its 4th game in 6 nights"
+     "OKC first game home after a 3-game road trip"
     ]
    },
-   "401909916": {
-    "matchup": "BOS at HOU",
+   "401909930": {
+    "matchup": "MIN at HOU",
     "tipET": "8:30 PM ET",
     "away": {
-     "team": "BOS",
+     "team": "MIN",
      "site": "away",
      "tipLocal": "7:30 pm",
      "altitude": null,
-     "gamesIn4Nights": 3,
-     "gamesIn6Nights": 3,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 4,
      "gamesIn7Nights": 4,
-     "restDays": 0,
+     "restDays": 1,
      "lastGame": {
-      "opp": "ORL",
-      "where": "away",
-      "result": "W 108-97",
-      "margin": 11,
+      "opp": "MIL",
+      "where": "home",
+      "result": "W 112-100",
+      "margin": 12,
       "overtime": false
      },
-     "lastGameDate": "2026-11-01",
-     "backToBack": true,
-     "travel": {
-      "from": "Orlando",
-      "to": "Houston",
-      "miles": 847,
-      "estLanding": "9:35 pm",
-      "estHotel": "10:20 pm",
-      "tzShift": -1.0
-     },
-     "tzShiftSinceLast": -1.0,
+     "lastGameDate": "2026-11-02",
+     "tzShiftSinceLast": 0.0,
      "streak": {
       "kind": "roadTrip",
-      "game": 2,
+      "game": 1,
       "of": 2
      },
      "nextGame": {
-      "date": "2026-11-04",
-      "opp": "MIL",
-      "where": "home",
+      "date": "2026-11-06",
+      "opp": "NOP",
+      "where": "away",
       "daysUntil": 2
      },
      "notes": [
-      "BOS on a back-to-back: played in Orlando last night, flew 847 miles and landed in Houston around 9:35 pm, 1 time zone west; estimate, check the news for delays",
-      "BOS playing its 3rd game in 4 nights"
+      "MIN playing its 4th game in 6 nights"
      ]
     },
     "home": {
@@ -734,148 +634,76 @@
      "site": "home",
      "tipLocal": "7:30 pm",
      "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 4,
+     "gamesIn7Nights": 4,
+     "restDays": 1,
+     "lastGame": {
+      "opp": "BOS",
+      "where": "home",
+      "result": "W 109-93",
+      "margin": 16,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-02",
+     "streak": {
+      "kind": "homestand",
+      "game": 3,
+      "of": 3
+     },
+     "nextGame": {
+      "date": "2026-11-07",
+      "opp": "PHX",
+      "where": "away",
+      "daysUntil": 3
+     },
+     "notes": [
+      "HOU playing its 4th game in 6 nights"
+     ]
+    },
+    "notes": [
+     "Even rest: both teams 1 day off",
+     "MIN playing its 4th game in 6 nights",
+     "HOU playing its 4th game in 6 nights"
+    ]
+   },
+   "401909931": {
+    "matchup": "TOR at DEN",
+    "tipET": "9:00 PM ET",
+    "away": {
+     "team": "TOR",
+     "site": "away",
+     "tipLocal": "7:00 pm",
+     "altitude": 5280,
      "gamesIn4Nights": 3,
      "gamesIn6Nights": 4,
      "gamesIn7Nights": 4,
      "restDays": 1,
      "lastGame": {
-      "opp": "OKC",
-      "where": "home",
-      "result": "W 119-98",
-      "margin": 21,
+      "opp": "LAC",
+      "where": "away",
+      "result": "W 125-118",
+      "margin": 7,
       "overtime": false
      },
-     "lastGameDate": "2026-10-31",
-     "streak": {
-      "kind": "homestand",
-      "game": 2,
-      "of": 3
-     },
-     "nextGame": {
-      "date": "2026-11-04",
-      "opp": "MIN",
-      "where": "home",
-      "daysUntil": 2
-     },
-     "notes": [
-      "HOU playing its 3rd game in 4 nights",
-      "HOU playing its 4th game in 6 nights"
-     ]
-    },
-    "notes": [
-     "Rest edge HOU: 1 day off vs 0 for BOS (BOS on a back-to-back)",
-     "BOS on a back-to-back: played in Orlando last night, flew 847 miles and landed in Houston around 9:35 pm, 1 time zone west; estimate, check the news for delays",
-     "BOS playing its 3rd game in 4 nights",
-     "HOU playing its 3rd game in 4 nights",
-     "HOU playing its 4th game in 6 nights"
-    ]
-   },
-   "401909917": {
-    "matchup": "UTA at SAS",
-    "tipET": "8:30 PM ET",
-    "away": {
-     "team": "UTA",
-     "site": "away",
-     "tipLocal": "7:30 pm",
-     "altitude": null,
-     "gamesIn4Nights": 2,
-     "gamesIn6Nights": 3,
-     "gamesIn7Nights": 3,
-     "restDays": 1,
-     "lastGame": {
-      "opp": "POR",
-      "where": "home",
-      "result": "L 90-112",
-      "margin": -22,
-      "overtime": false
-     },
-     "lastGameDate": "2026-10-31",
+     "lastGameDate": "2026-11-02",
      "tzShiftSinceLast": 1.0,
      "streak": {
       "kind": "roadTrip",
-      "game": 1,
+      "game": 3,
       "of": 4
      },
      "nextGame": {
-      "date": "2026-11-04",
-      "opp": "NOP",
+      "date": "2026-11-06",
+      "opp": "MIL",
       "where": "away",
       "daysUntil": 2
      },
      "notes": [
-      "UTA game 1 of a 4-game road trip"
-     ]
-    },
-    "home": {
-     "team": "SAS",
-     "site": "home",
-     "tipLocal": "7:30 pm",
-     "altitude": null,
-     "gamesIn4Nights": 2,
-     "gamesIn6Nights": 3,
-     "gamesIn7Nights": 4,
-     "restDays": 1,
-     "lastGame": {
-      "opp": "MIN",
-      "where": "home",
-      "result": "W 121-111",
-      "margin": 10,
-      "overtime": false
-     },
-     "lastGameDate": "2026-10-31",
-     "streak": {
-      "kind": "homestand",
-      "game": 2,
-      "of": 3
-     },
-     "nextGame": {
-      "date": "2026-11-04",
-      "opp": "DAL",
-      "where": "home",
-      "daysUntil": 2
-     },
-     "notes": []
-    },
-    "notes": [
-     "Even rest: both teams 1 day off",
-     "UTA game 1 of a 4-game road trip"
-    ]
-   },
-   "401909918": {
-    "matchup": "POR at DEN",
-    "tipET": "9:00 PM ET",
-    "away": {
-     "team": "POR",
-     "site": "away",
-     "tipLocal": "7:00 pm",
-     "altitude": 5280,
-     "gamesIn4Nights": 2,
-     "gamesIn6Nights": 3,
-     "gamesIn7Nights": 4,
-     "restDays": 1,
-     "lastGame": {
-      "opp": "UTA",
-      "where": "away",
-      "result": "W 112-90",
-      "margin": 22,
-      "overtime": false
-     },
-     "lastGameDate": "2026-10-31",
-     "tzShiftSinceLast": 0.0,
-     "streak": {
-      "kind": "roadTrip",
-      "game": 2,
-      "of": 4
-     },
-     "nextGame": {
-      "date": "2026-11-04",
-      "opp": "PHX",
-      "where": "away",
-      "daysUntil": 2
-     },
-     "notes": [
-      "POR game 2 of a 4-game road trip",
-      "POR playing at altitude in Denver (5280 ft)"
+      "TOR playing its 3rd game in 4 nights",
+      "TOR playing its 4th game in 6 nights",
+      "TOR game 3 of a 4-game road trip",
+      "TOR playing at altitude in Denver (5280 ft)"
      ]
     },
     "home": {
@@ -886,283 +714,334 @@
      "gamesIn4Nights": 2,
      "gamesIn6Nights": 3,
      "gamesIn7Nights": 3,
-     "restDays": 2,
+     "restDays": 1,
      "lastGame": {
-      "opp": "PHX",
-      "where": "away",
-      "result": "W 127-120",
-      "margin": 7,
+      "opp": "POR",
+      "where": "home",
+      "result": "L 110-118",
+      "margin": -8,
       "overtime": false
      },
-     "lastGameDate": "2026-10-30",
-     "tzShiftSinceLast": 0.0,
+     "lastGameDate": "2026-11-02",
      "streak": {
       "kind": "homestand",
-      "game": 1,
+      "game": 2,
       "of": 2
      },
      "nextGame": {
-      "date": "2026-11-04",
-      "opp": "TOR",
-      "where": "home",
-      "daysUntil": 2
+      "date": "2026-11-07",
+      "opp": "IND",
+      "where": "away",
+      "daysUntil": 3
      },
      "notes": []
     },
     "notes": [
-     "Rest edge DEN: 2 days off vs 1 for POR",
-     "POR game 2 of a 4-game road trip",
-     "POR playing at altitude in Denver (5280 ft)"
+     "Even rest: both teams 1 day off",
+     "TOR playing its 3rd game in 4 nights",
+     "TOR playing its 4th game in 6 nights",
+     "TOR game 3 of a 4-game road trip",
+     "TOR playing at altitude in Denver (5280 ft)"
     ]
    },
-   "401909919": {
-    "matchup": "PHX at GSW",
-    "tipET": "10:00 PM ET",
+   "401909932": {
+    "matchup": "POR at PHX",
+    "tipET": "9:00 PM ET",
     "away": {
-     "team": "PHX",
+     "team": "POR",
      "site": "away",
      "tipLocal": "7:00 pm",
      "altitude": null,
      "gamesIn4Nights": 2,
-     "gamesIn6Nights": 2,
-     "gamesIn7Nights": 2,
-     "restDays": 2,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 4,
+     "restDays": 1,
      "lastGame": {
       "opp": "DEN",
-      "where": "home",
-      "result": "L 120-127",
-      "margin": -7,
+      "where": "away",
+      "result": "W 118-110",
+      "margin": 8,
       "overtime": false
      },
-     "lastGameDate": "2026-10-30",
-     "tzShiftSinceLast": -1.0,
+     "lastGameDate": "2026-11-02",
+     "tzShiftSinceLast": 0.0,
+     "streak": {
+      "kind": "roadTrip",
+      "game": 3,
+      "of": 4
+     },
+     "nextGame": {
+      "date": "2026-11-06",
+      "opp": "LAL",
+      "where": "away",
+      "daysUntil": 2
+     },
+     "notes": [
+      "POR game 3 of a 4-game road trip"
+     ]
+    },
+    "home": {
+     "team": "PHX",
+     "site": "home",
+     "tipLocal": "7:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 3,
+     "restDays": 1,
+     "lastGame": {
+      "opp": "GSW",
+      "where": "away",
+      "result": "L 113-116",
+      "margin": -3,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-02",
+     "tzShiftSinceLast": 1.0,
+     "streak": {
+      "kind": "homestand",
+      "game": 1,
+      "of": 5
+     },
+     "nextGame": {
+      "date": "2026-11-05",
+      "opp": "ORL",
+      "where": "home",
+      "daysUntil": 1
+     },
+     "notes": [
+      "PHX first leg of a back-to-back (plays at home tomorrow)"
+     ]
+    },
+    "notes": [
+     "Even rest: both teams 1 day off",
+     "POR game 3 of a 4-game road trip",
+     "PHX first leg of a back-to-back (plays at home tomorrow)"
+    ]
+   },
+   "401909933": {
+    "matchup": "DAL at SAS",
+    "tipET": "9:30 PM ET",
+    "away": {
+     "team": "DAL",
+     "site": "away",
+     "tipLocal": "8:30 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 3,
+     "restDays": 1,
+     "lastGame": {
+      "opp": "SAC",
+      "where": "home",
+      "result": "L 100-115",
+      "margin": -15,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-02",
+     "tzShiftSinceLast": 0.0,
      "streak": {
       "kind": "roadTrip",
       "game": 1,
       "of": 1
      },
      "nextGame": {
-      "date": "2026-11-04",
-      "opp": "POR",
+      "date": "2026-11-06",
+      "opp": "UTA",
       "where": "home",
       "daysUntil": 2
      },
      "notes": []
     },
     "home": {
-     "team": "GSW",
+     "team": "SAS",
      "site": "home",
-     "tipLocal": "7:00 pm",
+     "tipLocal": "8:30 pm",
      "altitude": null,
-     "gamesIn4Nights": 3,
-     "gamesIn6Nights": 4,
-     "gamesIn7Nights": 4,
-     "restDays": 0,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 3,
+     "restDays": 1,
      "lastGame": {
-      "opp": "LAC",
+      "opp": "UTA",
       "where": "home",
-      "result": "W 124-112",
-      "margin": 12,
+      "result": "W 119-97",
+      "margin": 22,
       "overtime": false
      },
-     "lastGameDate": "2026-11-01",
-     "backToBack": true,
+     "lastGameDate": "2026-11-02",
      "streak": {
       "kind": "homestand",
       "game": 3,
-      "of": 6
+      "of": 3
      },
      "nextGame": {
-      "date": "2026-11-05",
-      "opp": "MIA",
-      "where": "home",
-      "daysUntil": 3
+      "date": "2026-11-06",
+      "opp": "SAC",
+      "where": "away",
+      "daysUntil": 2
      },
-     "notes": [
-      "GSW on a back-to-back with no travel (played at home last night)",
-      "GSW playing its 3rd game in 4 nights",
-      "GSW playing its 4th game in 6 nights"
-     ]
+     "notes": []
     },
     "notes": [
-     "Rest edge PHX: 2 days off vs 0 for GSW (GSW on a back-to-back)",
-     "GSW on a back-to-back with no travel (played at home last night)",
-     "GSW playing its 3rd game in 4 nights",
-     "GSW playing its 4th game in 6 nights"
+     "Even rest: both teams 1 day off"
     ]
    },
-   "401909920": {
-    "matchup": "TOR at LAC",
+   "401909934": {
+    "matchup": "LAL at SAC",
     "tipET": "10:00 PM ET",
     "away": {
-     "team": "TOR",
+     "team": "LAL",
      "site": "away",
      "tipLocal": "7:00 pm",
      "altitude": null,
      "gamesIn4Nights": 3,
      "gamesIn6Nights": 4,
      "gamesIn7Nights": 4,
-     "restDays": 0,
+     "restDays": 1,
+     "lastGame": {
+      "opp": "MIA",
+      "where": "home",
+      "result": "W 138-117",
+      "margin": 21,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-02",
+     "tzShiftSinceLast": 0.0,
+     "streak": {
+      "kind": "roadTrip",
+      "game": 1,
+      "of": 1
+     },
+     "nextGame": {
+      "date": "2026-11-06",
+      "opp": "POR",
+      "where": "home",
+      "daysUntil": 2
+     },
+     "notes": [
+      "LAL playing its 3rd game in 4 nights",
+      "LAL playing its 4th game in 6 nights"
+     ]
+    },
+    "home": {
+     "team": "SAC",
+     "site": "home",
+     "tipLocal": "7:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 4,
+     "restDays": 1,
+     "lastGame": {
+      "opp": "DAL",
+      "where": "away",
+      "result": "W 115-100",
+      "margin": 15,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-02",
+     "tzShiftSinceLast": -2.0,
+     "streak": {
+      "kind": "homestand",
+      "game": 1,
+      "of": 4
+     },
+     "nextGame": {
+      "date": "2026-11-06",
+      "opp": "SAS",
+      "where": "home",
+      "daysUntil": 2
+     },
+     "notes": [
+      "SAC crossed 2 time zones westward since its last game",
+      "SAC first game home after a 4-game road trip"
+     ]
+    },
+    "notes": [
+     "Even rest: both teams 1 day off",
+     "LAL playing its 3rd game in 4 nights",
+     "LAL playing its 4th game in 6 nights",
+     "SAC crossed 2 time zones westward since its last game",
+     "SAC first game home after a 4-game road trip"
+    ]
+   },
+   "401909935": {
+    "matchup": "MIA at LAC",
+    "tipET": "10:30 PM ET",
+    "away": {
+     "team": "MIA",
+     "site": "away",
+     "tipLocal": "7:30 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 3,
+     "restDays": 1,
      "lastGame": {
       "opp": "LAL",
       "where": "away",
-      "result": "L 125-131",
-      "margin": -6,
+      "result": "L 117-138",
+      "margin": -21,
       "overtime": false
      },
-     "lastGameDate": "2026-11-01",
-     "backToBack": true,
+     "lastGameDate": "2026-11-02",
      "tzShiftSinceLast": 0.0,
      "streak": {
       "kind": "roadTrip",
       "game": 2,
-      "of": 4
+      "of": 5
      },
      "nextGame": {
-      "date": "2026-11-04",
-      "opp": "DEN",
+      "date": "2026-11-05",
+      "opp": "GSW",
       "where": "away",
-      "daysUntil": 2
+      "daysUntil": 1
      },
      "notes": [
-      "TOR on a back-to-back with no travel (played in Los Angeles last night)",
-      "TOR playing its 3rd game in 4 nights",
-      "TOR playing its 4th game in 6 nights",
-      "TOR game 2 of a 4-game road trip"
+      "MIA game 2 of a 5-game road trip",
+      "MIA first leg of a back-to-back (plays in San Francisco tomorrow)"
      ]
     },
     "home": {
      "team": "LAC",
      "site": "home",
-     "tipLocal": "7:00 pm",
+     "tipLocal": "7:30 pm",
      "altitude": null,
      "gamesIn4Nights": 3,
      "gamesIn6Nights": 4,
      "gamesIn7Nights": 4,
-     "restDays": 0,
+     "restDays": 1,
      "lastGame": {
-      "opp": "GSW",
-      "where": "away",
-      "result": "L 112-124",
-      "margin": -12,
+      "opp": "TOR",
+      "where": "home",
+      "result": "L 118-125",
+      "margin": -7,
       "overtime": false
      },
-     "lastGameDate": "2026-11-01",
-     "backToBack": true,
-     "travel": {
-      "from": "San Francisco",
-      "to": "Los Angeles",
-      "miles": 348,
-      "estLanding": "11:33 pm",
-      "estHotel": "12:18 am",
-      "tzShift": 0.0
-     },
-     "tzShiftSinceLast": 0.0,
+     "lastGameDate": "2026-11-02",
      "streak": {
       "kind": "homestand",
-      "game": 1,
+      "game": 2,
       "of": 3
      },
      "nextGame": {
-      "date": "2026-11-04",
-      "opp": "MIA",
+      "date": "2026-11-08",
+      "opp": "NOP",
       "where": "home",
-      "daysUntil": 2
+      "daysUntil": 4
      },
      "notes": [
-      "LAC on a back-to-back: played in San Francisco last night, flew 348 miles and landed in Los Angeles around 11:33 pm; estimate, check the news for delays",
       "LAC playing its 3rd game in 4 nights",
       "LAC playing its 4th game in 6 nights"
      ]
     },
     "notes": [
-     "Even rest: both teams 0 days off",
-     "TOR on a back-to-back with no travel (played in Los Angeles last night)",
-     "TOR playing its 3rd game in 4 nights",
-     "TOR playing its 4th game in 6 nights",
-     "TOR game 2 of a 4-game road trip",
-     "LAC on a back-to-back: played in San Francisco last night, flew 348 miles and landed in Los Angeles around 11:33 pm; estimate, check the news for delays",
+     "Even rest: both teams 1 day off",
+     "MIA game 2 of a 5-game road trip",
+     "MIA first leg of a back-to-back (plays in San Francisco tomorrow)",
      "LAC playing its 3rd game in 4 nights",
      "LAC playing its 4th game in 6 nights"
-    ]
-   },
-   "401909921": {
-    "matchup": "MIA at LAL",
-    "tipET": "10:00 PM ET",
-    "away": {
-     "team": "MIA",
-     "site": "away",
-     "tipLocal": "7:00 pm",
-     "altitude": null,
-     "gamesIn4Nights": 2,
-     "gamesIn6Nights": 3,
-     "gamesIn7Nights": 3,
-     "restDays": 2,
-     "lastGame": {
-      "opp": "IND",
-      "where": "home",
-      "result": "W 145-125",
-      "margin": 20,
-      "overtime": false
-     },
-     "lastGameDate": "2026-10-30",
-     "tzShiftSinceLast": -3.0,
-     "streak": {
-      "kind": "roadTrip",
-      "game": 1,
-      "of": 4
-     },
-     "nextGame": {
-      "date": "2026-11-04",
-      "opp": "LAC",
-      "where": "away",
-      "daysUntil": 2
-     },
-     "notes": [
-      "MIA game 1 of a 4-game road trip"
-     ]
-    },
-    "home": {
-     "team": "LAL",
-     "site": "home",
-     "tipLocal": "7:00 pm",
-     "altitude": null,
-     "gamesIn4Nights": 3,
-     "gamesIn6Nights": 4,
-     "gamesIn7Nights": 5,
-     "restDays": 0,
-     "lastGame": {
-      "opp": "TOR",
-      "where": "home",
-      "result": "W 131-125",
-      "margin": 6,
-      "overtime": false
-     },
-     "lastGameDate": "2026-11-01",
-     "backToBack": true,
-     "streak": {
-      "kind": "homestand",
-      "game": 2,
-      "of": 2
-     },
-     "nextGame": {
-      "date": "2026-11-04",
-      "opp": "SAC",
-      "where": "away",
-      "daysUntil": 2
-     },
-     "notes": [
-      "LAL on a back-to-back with no travel (played at home last night)",
-      "LAL playing its 3rd game in 4 nights",
-      "LAL playing its 4th game in 6 nights"
-     ]
-    },
-    "notes": [
-     "Rest edge MIA: 2 days off vs 0 for LAL (LAL on a back-to-back)",
-     "MIA game 1 of a 4-game road trip",
-     "LAL on a back-to-back with no travel (played at home last night)",
-     "LAL playing its 3rd game in 4 nights",
-     "LAL playing its 4th game in 6 nights"
     ]
    }
   }
