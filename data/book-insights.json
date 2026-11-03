@@ -4729,24 +4729,24 @@
  },
  "players": {
   "Beekie": {
-   "settled": 4,
-   "text": "Beekie builds three-leg long shots and nothing else: all four settled bets are parlays priced over +300, and they are 0-4 for -20 at a flat 5 each. Legs are 3-9, with props 2-6 and totals 1-3, and every prop is on points, mostly guards (six of eight) with an even split of overs and unders. No alt lines, no singles, and the weekly boost went on a +608 parlay that lost. The stakes keep the damage small, but one bad leg kills each ticket. Read: a guard-points parlay dreamer, small sample.",
-   "updated": "2026-11-02T14:03:56Z"
+   "text": "Beekie builds three-leg long shots and nothing else: all five settled bets are parlays priced over +300, and they are 0-5 for -25 at a flat 5 each. Legs are 3-12, with props 2-8 and totals 1-4, and every prop is on points, mostly guards (six of ten), with overs and unders close to even. No alt lines, no singles, and both boosts went on parlays averaging +618 and lost. The flat stake keeps the damage small, but one bad leg kills each ticket. Read: a guard-points parlay dreamer, small sample.",
+   "settled": 5,
+   "updated": "2026-11-03T13:42:21Z"
   },
   "Kev": {
+   "text": "Kev is the straight bettor of the group: all five settled bets are singles, and at 4-1 for +31.77 he sits second only to Mio. Four of the five came near even, at 3-1, every side he has taken was on the road, and he is 2-0 on underdogs. Stakes run 10 to 30, averaging 18. His one alt leg, bought safer, won, and his boost on a +108 moneyline cashed. He bets about seven hours before tip and has never copied Claude. Read: a disciplined road-dog single bettor, small sample so far.",
    "settled": 5,
-   "text": "Kev is the straight bettor of the group: all five settled bets are singles, and he is 4-1 for +31.77, second only to Mio. Four of his five are in the near-even range at 3-1, he has backed road teams every time, and he is 2-0 on underdogs. Stakes run 10 to 30, averaging 18. His one alt leg, bought safer, won, and his boost on a moneyline at +108 cashed. He bets about seven hours before tip and has never copied Claude. Read: a disciplined road-dog single bettor, small sample so far.",
-   "updated": "2026-11-02T14:03:56Z"
+   "updated": "2026-11-03T13:42:21Z"
   },
   "Mio": {
-   "settled": 10,
-   "text": "Mio is the buy-the-safe-number specialist and the runaway leader at +138.26 on a 9-1 record. Seventeen legs, 89% of them, were alternate lines moved to a shorter price, and those went 16-1. Nine of ten bets are two-leg parlays (8-1, legs 17-1), usually priced as modest favorites (6-1 from -131 to -199). Props are all overs at 9-1, mostly points-rebounds-assists combos, paired with spreads (4-0) and overs (2-0). Stakes average 23 with a 50 top, and the boost on a -190 parlay won. Read: a grinder who buys safety and stacks near-locks.",
-   "updated": "2026-11-02T14:03:56Z"
+   "text": "Mio is the buy-the-safe-number specialist and the runaway leader at +173.64 on an 11-1 record with one push. Twenty-three of 25 legs were alternate lines moved to a shorter price, and those went 20-1. Twelve of 13 bets are two-leg parlays (10-1, legs 21-1), usually modest favorites (7-1 from -131 to -199). Props are all overs at 11-1, mostly points-rebounds-assists combos, paired with spreads (5-0) and overs (3-0). Stakes average 23 with a 50 top, and both boosts won on short-priced parlays. Read: a grinder who buys safety and stacks near-locks.",
+   "settled": 13,
+   "updated": "2026-11-03T13:42:21Z"
   },
   "Sulliver": {
+   "text": "Sulliver leans on Claude more than anyone, copying four of seven settled bets, and that has not paid: 1-6 for -68.91. Singles are 1-4 and three-leg parlays 0-2, with stakes swinging from 5 to 43. Every prop is an over, at 2-5, spread across guards, forwards and a center with no clear favorite, and favorites are 0-2. Alt lines are 0-3, and the boost on a +547 parlay lost. The price range wanders from favorites to long shots, which is the real leak. Read: no settled pattern yet, a star-overs chaser who needs one lane.",
    "settled": 7,
-   "text": "Sulliver leans on Claude more than anyone, copying four of seven settled bets, and that has not paid: 1-6 for -68.91. Singles are 1-4 and three-leg parlays 0-2, with stakes swinging from 5 to 43. Every prop is an over, at 2-5, spread across guards, forwards and a center with no clear favorite, and favorites are 0-2. Alt lines are 0-3, and the boost on a +547 parlay lost. The price range wanders from near even to long shots, which is the real leak. Read: no settled pattern yet, a star-overs chaser who needs one lane.",
-   "updated": "2026-11-02T14:03:56Z"
+   "updated": "2026-11-03T13:42:21Z"
   }
  },
  "results": {
@@ -5412,11 +5412,11 @@
  },
  "winOdds": {
   "odds": {
-   "Beekie": 28,
-   "Kev": 34,
-   "Mio": 17,
-   "Sulliver": 21
+   "Kev": 35,
+   "Beekie": 29,
+   "Mio": 13,
+   "Sulliver": 23
   },
-  "updated": "2026-11-02T14:03:56Z"
+  "updated": "2026-11-03T13:42:21Z"
  }
 }
