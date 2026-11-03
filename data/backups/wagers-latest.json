@@ -1,6 +1,6 @@
 {
- "backedUpAt": "2026-11-02T09:01:57Z",
- "count": 26,
+ "backedUpAt": "2026-11-03T08:56:14Z",
+ "count": 30,
  "wagers": {
   "14UdpQ6CLjt5ixeLfELL": {
    "_updated": "2026-11-02T08:30:36.355154Z",
@@ -236,6 +236,64 @@
    "settledAt": "2026-11-01T08:08:08Z",
    "stage": "regular",
    "stake": 20,
+   "status": "win"
+  },
+  "BpV7ZbpOumBhlLDdpFXt": {
+   "_updated": "2026-11-03T08:25:31.700739Z",
+   "boost": null,
+   "createdAt": "2026-11-02T18:18:40.438Z",
+   "eventID": "x4q7hhvxJ5L0a4mILVVZ",
+   "game": "NOP at MEM",
+   "gameDate": "2026-11-02",
+   "gameStart": "2026-11-03T01:00:00.000Z",
+   "legResults": [
+    "win",
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "home",
+     "line": 5.5,
+     "name": "Spread",
+     "oddID": "points-home-game-sp-home",
+     "odds": -350,
+     "opposing": "points-away-game-sp-away",
+     "period": "game",
+     "player": null,
+     "short": "MEM +5.5 (alt)",
+     "side": "home",
+     "stat": "points",
+     "team": "MEM"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "CAMERON_BOOZER_1_NBA",
+     "line": 24.5,
+     "name": "Cameron Boozer Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-CAMERON_BOOZER_1_NBA-game-ou-over",
+     "odds": -430,
+     "opposing": "points+rebounds+assists-CAMERON_BOOZER_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "CAMERON_BOOZER_1_NBA",
+     "short": "Cameron Boozer Pts + Reb + Ast Over 24.5 (alt)",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "MEM"
+    }
+   ],
+   "net": 10.52,
+   "payout": 28.52,
+   "placedAt": "2026-11-02T18:18:33.207Z",
+   "player": "Mio",
+   "series": null,
+   "settledAt": "2026-11-03T08:25:31Z",
+   "stage": "regular",
+   "stake": 18,
    "status": "win"
   },
   "EhDun7mY9NyggHX8znj4": {
@@ -1199,6 +1257,68 @@
    "stake": 25,
    "status": "win"
   },
+  "gxkCNQuoTH38zPfRyu2x": {
+   "_updated": "2026-11-03T08:25:31.894261Z",
+   "boost": {
+    "id": "week:2026-11-02",
+    "label": "1.5x weekly",
+    "mult": 1.5
+   },
+   "createdAt": "2026-11-02T18:15:07.194Z",
+   "eventID": "gdPxIUkZq9h39cSvqIm3",
+   "game": "POR at DEN",
+   "gameDate": "2026-11-02",
+   "gameStart": "2026-11-03T02:00:00.000Z",
+   "legResults": [
+    "win",
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "line": 219.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-over",
+     "odds": -310,
+     "opposing": "points-all-game-ou-under",
+     "period": "game",
+     "player": null,
+     "short": "Game Over 219.5 (alt)",
+     "side": "over",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAMAL_MURRAY_1_NBA",
+     "line": 29.5,
+     "name": "Jamal Murray Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-JAMAL_MURRAY_1_NBA-game-ou-over",
+     "odds": -265,
+     "opposing": "points+rebounds+assists-JAMAL_MURRAY_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JAMAL_MURRAY_1_NBA",
+     "short": "Jamal Murray Pts + Reb + Ast Over 29.5 (alt)",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "DEN"
+    }
+   ],
+   "net": 24.86,
+   "payout": 45.12,
+   "placedAt": "2026-11-02T18:15:00.128Z",
+   "player": "Mio",
+   "series": null,
+   "settledAt": "2026-11-03T08:25:31Z",
+   "stage": "regular",
+   "stake": 20.26,
+   "status": "win"
+  },
   "hRrSmZyCKCK6AlvVjGEk": {
    "_updated": "2026-10-27T16:58:32.597814Z",
    "boost": null,
@@ -1270,6 +1390,144 @@
    "player": "Beekie",
    "series": null,
    "settledAt": "2026-10-27T16:58:31Z",
+   "stage": "regular",
+   "stake": 5,
+   "status": "loss"
+  },
+  "lIRKFw2r0CPBpdounA8b": {
+   "_updated": "2026-11-03T08:25:32.062854Z",
+   "boost": null,
+   "createdAt": "2026-11-02T20:54:06.344Z",
+   "eventID": "mQKMT2SpINxADaG0ykeC",
+   "game": "ATL at IND",
+   "gameDate": "2026-11-02",
+   "gameStart": "2026-11-03T00:30:00.000Z",
+   "legResults": [
+    "void",
+    "void"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "away",
+     "line": 1.5,
+     "name": "Spread",
+     "oddID": "points-away-game-sp-away",
+     "odds": -210,
+     "opposing": "points-home-game-sp-home",
+     "period": "game",
+     "player": null,
+     "short": "ATL +1.5 (alt)",
+     "side": "away",
+     "stat": "points",
+     "team": "ATL"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JALEN_JOHNSON_1_NBA",
+     "line": 29.5,
+     "name": "Jalen Johnson Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-JALEN_JOHNSON_1_NBA-game-ou-over",
+     "odds": -530,
+     "opposing": "points+rebounds+assists-JALEN_JOHNSON_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JALEN_JOHNSON_1_NBA",
+     "short": "Jalen Johnson Pts + Reb + Ast Over 29.5 (alt)",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "ATL"
+    }
+   ],
+   "net": 0,
+   "payout": 30,
+   "placedAt": "2026-11-02T20:54:05.650Z",
+   "player": "Mio",
+   "series": null,
+   "settledAt": "2026-11-03T08:25:31Z",
+   "stage": "regular",
+   "stake": 30,
+   "status": "void"
+  },
+  "oPL5yBDyi09X5JtQmpcg": {
+   "_updated": "2026-11-03T08:25:32.234645Z",
+   "boost": {
+    "id": "week:2026-11-02",
+    "label": "1.5x weekly",
+    "mult": 1.5
+   },
+   "createdAt": "2026-11-02T17:33:42.381Z",
+   "eventID": "MP6jmrA6TjjcZeqhsg4u",
+   "game": "BOS at HOU",
+   "gameDate": "2026-11-02",
+   "gameStart": "2026-11-03T01:30:00.000Z",
+   "legResults": [
+    "loss",
+    "loss",
+    "loss"
+   ],
+   "legs": [
+    {
+     "alt": false,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "line": 218.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-over",
+     "odds": -108,
+     "opposing": "points-all-game-ou-under",
+     "period": "game",
+     "player": null,
+     "short": "Game Over 218.5",
+     "side": "over",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "alt": false,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYSON_TATUM_1_NBA",
+     "line": 25.5,
+     "name": "Jayson Tatum Points",
+     "oddID": "points-JAYSON_TATUM_1_NBA-game-ou-over",
+     "odds": -112,
+     "opposing": "points-JAYSON_TATUM_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JAYSON_TATUM_1_NBA",
+     "short": "Jayson Tatum Points Over 25.5",
+     "side": "over",
+     "stat": "points",
+     "team": "BOS"
+    },
+    {
+     "alt": false,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "KEVIN_DURANT_1_NBA",
+     "line": 22.5,
+     "name": "Kevin Durant Points",
+     "oddID": "points-KEVIN_DURANT_1_NBA-game-ou-over",
+     "odds": 100,
+     "opposing": "points-KEVIN_DURANT_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "KEVIN_DURANT_1_NBA",
+     "short": "Kevin Durant Points Over 22.5",
+     "side": "over",
+     "stat": "points",
+     "team": "HOU"
+    }
+   ],
+   "net": -5,
+   "payout": 0,
+   "placedAt": "2026-11-02T17:33:37.063Z",
+   "player": "Beekie",
+   "series": null,
+   "settledAt": "2026-11-03T08:25:31Z",
    "stage": "regular",
    "stake": 5,
    "status": "loss"
