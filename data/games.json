@@ -2484,13 +2484,13 @@
   "awayColor": "29127a",
   "awayLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
   "awayName": "Phoenix Suns",
-  "awayScore": 108,
+  "awayScore": 113,
   "date": "2026-11-02",
   "home": "GSW",
   "homeColor": "fdb927",
   "homeLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/gs.png",
   "homeName": "Golden State Warriors",
-  "homeScore": 113,
+  "homeScore": 116,
   "id": "401909919",
   "label": null,
   "multiplier": 1,
@@ -2500,20 +2500,20 @@
   "spreadUpdated": "2026-11-02T20:12:55Z",
   "stage": "regular",
   "start": "2026-11-03T03:00:00Z",
-  "status": "inprogress"
+  "status": "final"
  },
  "401909920": {
   "away": "TOR",
   "awayColor": "d91244",
   "awayLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/tor.png",
   "awayName": "Toronto Raptors",
-  "awayScore": 115,
+  "awayScore": 125,
   "date": "2026-11-02",
   "home": "LAC",
   "homeColor": "12173f",
   "homeLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
   "homeName": "LA Clippers",
-  "homeScore": 112,
+  "homeScore": 118,
   "id": "401909920",
   "label": null,
   "multiplier": 1,
@@ -2523,7 +2523,7 @@
   "spreadUpdated": "2026-11-03T02:41:18Z",
   "stage": "regular",
   "start": "2026-11-03T03:00:00Z",
-  "status": "inprogress"
+  "status": "final"
  },
  "401909921": {
   "away": "MIA",
