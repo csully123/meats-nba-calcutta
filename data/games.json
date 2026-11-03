@@ -2656,9 +2656,9 @@
   "label": null,
   "multiplier": 1,
   "series": null,
-  "spreadHome": null,
-  "spreadSource": null,
-  "spreadUpdated": null,
+  "spreadHome": -12.5,
+  "spreadSource": "ESPN",
+  "spreadUpdated": "2026-11-03T20:37:56Z",
   "stage": "regular",
   "start": "2026-11-05T00:30:00Z",
   "status": "scheduled"
