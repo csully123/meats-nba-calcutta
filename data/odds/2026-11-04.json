@@ -1,0 +1,6202 @@
+{
+ "date": "2026-11-04",
+ "games": {
+  "3RNJpmr3kk5EPsuzzgwI": {
+   "away": "CHA",
+   "awayColor": "#008CA8",
+   "awayName": "Charlotte Hornets",
+   "cancelled": false,
+   "date": "2026-11-04",
+   "display": "",
+   "ended": false,
+   "eventID": "3RNJpmr3kk5EPsuzzgwI",
+   "finalized": false,
+   "home": "BKN",
+   "homeColor": "#FFFFFF",
+   "homeName": "Brooklyn Nets",
+   "markets": [
+    {
+     "available": true,
+     "betType": "ml",
+     "book": "fanduel",
+     "entity": "away",
+     "kind": "game",
+     "line": null,
+     "name": "Moneyline",
+     "oddID": "points-away-game-ml-away",
+     "odds": -138,
+     "opposing": "points-home-game-ml-home",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       null,
+       -138
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "away",
+     "stat": "points",
+     "team": "CHA"
+    },
+    {
+     "available": true,
+     "betType": "ml",
+     "book": "fanduel",
+     "entity": "home",
+     "kind": "game",
+     "line": null,
+     "name": "Moneyline",
+     "oddID": "points-home-game-ml-home",
+     "odds": 118,
+     "opposing": "points-away-game-ml-away",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       null,
+       118
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "home",
+     "stat": "points",
+     "team": "BKN"
+    },
+    {
+     "altBook": "betmgm",
+     "alts": [
+      [
+       209.5,
+       -170
+      ],
+      [
+       210.5,
+       -155
+      ],
+      [
+       211.5,
+       -145
+      ],
+      [
+       212.5,
+       -130
+      ],
+      [
+       213.5,
+       -125
+      ],
+      [
+       215.5,
+       -102
+      ],
+      [
+       216.5,
+       105
+      ],
+      [
+       217.5,
+       115
+      ],
+      [
+       218.5,
+       125
+      ],
+      [
+       219.5,
+       135
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "kind": "game",
+     "line": 214.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-over",
+     "odds": -106,
+     "opposing": "points-all-game-ou-under",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       209.5,
+       -170
+      ],
+      [
+       210.5,
+       -155
+      ],
+      [
+       211.5,
+       -145
+      ],
+      [
+       212.5,
+       -130
+      ],
+      [
+       213.5,
+       -125
+      ],
+      [
+       214.5,
+       -106
+      ],
+      [
+       215.5,
+       -102
+      ],
+      [
+       216.5,
+       105
+      ],
+      [
+       217.5,
+       115
+      ],
+      [
+       218.5,
+       125
+      ],
+      [
+       219.5,
+       135
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "over",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "altBook": "betmgm",
+     "alts": [
+      [
+       209.5,
+       130
+      ],
+      [
+       210.5,
+       120
+      ],
+      [
+       211.5,
+       110
+      ],
+      [
+       212.5,
+       100
+      ],
+      [
+       213.5,
+       -105
+      ],
+      [
+       215.5,
+       -130
+      ],
+      [
+       216.5,
+       -140
+      ],
+      [
+       217.5,
+       -150
+      ],
+      [
+       218.5,
+       -160
+      ],
+      [
+       219.5,
+       -180
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "kind": "game",
+     "line": 214.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-under",
+     "odds": -114,
+     "opposing": "points-all-game-ou-over",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       209.5,
+       130
+      ],
+      [
+       210.5,
+       120
+      ],
+      [
+       211.5,
+       110
+      ],
+      [
+       212.5,
+       100
+      ],
+      [
+       213.5,
+       -105
+      ],
+      [
+       214.5,
+       -114
+      ],
+      [
+       215.5,
+       -130
+      ],
+      [
+       216.5,
+       -140
+      ],
+      [
+       217.5,
+       -150
+      ],
+      [
+       218.5,
+       -160
+      ],
+      [
+       219.5,
+       -180
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "under",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "altBook": "betmgm",
+     "alts": [
+      [
+       -8.5,
+       210
+      ],
+      [
+       -7.5,
+       180
+      ],
+      [
+       -6.5,
+       155
+      ],
+      [
+       -5.5,
+       135
+      ],
+      [
+       -4.5,
+       118
+      ],
+      [
+       -3.5,
+       100
+      ],
+      [
+       -1.5,
+       -130
+      ],
+      [
+       1.5,
+       -160
+      ],
+      [
+       2.5,
+       -185
+      ],
+      [
+       3.5,
+       -210
+      ]
+     ],
+     "available": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "away",
+     "kind": "game",
+     "line": -2.5,
+     "name": "Spread",
+     "oddID": "points-away-game-sp-away",
+     "odds": -110,
+     "opposing": "points-home-game-sp-home",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       -8.5,
+       210
+      ],
+      [
+       -7.5,
+       180
+      ],
+      [
+       -6.5,
+       155
+      ],
+      [
+       -5.5,
+       135
+      ],
+      [
+       -4.5,
+       118
+      ],
+      [
+       -3.5,
+       100
+      ],
+      [
+       -2.5,
+       -110
+      ],
+      [
+       -1.5,
+       -130
+      ],
+      [
+       1.5,
+       -160
+      ],
+      [
+       2.5,
+       -185
+      ],
+      [
+       3.5,
+       -210
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "away",
+     "stat": "points",
+     "team": "CHA"
+    },
+    {
+     "altBook": "betmgm",
+     "alts": [
+      [
+       -3.5,
+       160
+      ],
+      [
+       -2.5,
+       140
+      ],
+      [
+       -1.5,
+       125
+      ],
+      [
+       1.5,
+       -102
+      ],
+      [
+       3.5,
+       -130
+      ],
+      [
+       4.5,
+       -155
+      ],
+      [
+       5.5,
+       -180
+      ],
+      [
+       6.5,
+       -210
+      ],
+      [
+       7.5,
+       -235
+      ],
+      [
+       8.5,
+       -295
+      ]
+     ],
+     "available": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "home",
+     "kind": "game",
+     "line": 2.5,
+     "name": "Spread",
+     "oddID": "points-home-game-sp-home",
+     "odds": -110,
+     "opposing": "points-away-game-sp-away",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       -3.5,
+       160
+      ],
+      [
+       -2.5,
+       140
+      ],
+      [
+       -1.5,
+       125
+      ],
+      [
+       1.5,
+       -102
+      ],
+      [
+       2.5,
+       -110
+      ],
+      [
+       3.5,
+       -130
+      ],
+      [
+       4.5,
+       -155
+      ],
+      [
+       5.5,
+       -180
+      ],
+      [
+       6.5,
+       -210
+      ],
+      [
+       7.5,
+       -235
+      ],
+      [
+       8.5,
+       -295
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "home",
+     "stat": "points",
+     "team": "BKN"
+    },
+    {
+     "alts": [
+      [
+       98.5,
+       -460
+      ],
+      [
+       99.5,
+       -391
+      ],
+      [
+       100.5,
+       -334
+      ],
+      [
+       101.5,
+       -287
+      ],
+      [
+       102.5,
+       -249
+      ],
+      [
+       103.5,
+       -213
+      ],
+      [
+       104.5,
+       -183
+      ],
+      [
+       105.5,
+       -159
+      ],
+      [
+       106.5,
+       -140
+      ],
+      [
+       109.5,
+       107
+      ],
+      [
+       110.5,
+       122
+      ],
+      [
+       111.5,
+       140
+      ],
+      [
+       112.5,
+       159
+      ],
+      [
+       113.5,
+       180
+      ],
+      [
+       114.5,
+       206
+      ],
+      [
+       115.5,
+       232
+      ],
+      [
+       116.5,
+       263
+      ],
+      [
+       117.5,
+       297
+      ],
+      [
+       118.5,
+       338
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "away",
+     "kind": "game",
+     "line": 107.5,
+     "name": "Total",
+     "oddID": "points-away-game-ou-over",
+     "odds": -122,
+     "opposing": "points-away-game-ou-under",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       98.5,
+       -460
+      ],
+      [
+       99.5,
+       -391
+      ],
+      [
+       100.5,
+       -334
+      ],
+      [
+       101.5,
+       -287
+      ],
+      [
+       102.5,
+       -249
+      ],
+      [
+       103.5,
+       -213
+      ],
+      [
+       104.5,
+       -183
+      ],
+      [
+       105.5,
+       -159
+      ],
+      [
+       106.5,
+       -140
+      ],
+      [
+       107.5,
+       -122
+      ],
+      [
+       109.5,
+       107
+      ],
+      [
+       110.5,
+       122
+      ],
+      [
+       111.5,
+       140
+      ],
+      [
+       112.5,
+       159
+      ],
+      [
+       113.5,
+       180
+      ],
+      [
+       114.5,
+       206
+      ],
+      [
+       115.5,
+       232
+      ],
+      [
+       116.5,
+       263
+      ],
+      [
+       117.5,
+       297
+      ],
+      [
+       118.5,
+       338
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "over",
+     "stat": "points",
+     "team": "CHA"
+    },
+    {
+     "alts": [
+      [
+       98.5,
+       332
+      ],
+      [
+       99.5,
+       290
+      ],
+      [
+       100.5,
+       253
+      ],
+      [
+       101.5,
+       221
+      ],
+      [
+       102.5,
+       195
+      ],
+      [
+       103.5,
+       168
+      ],
+      [
+       104.5,
+       146
+      ],
+      [
+       105.5,
+       127
+      ],
+      [
+       106.5,
+       112
+      ],
+      [
+       109.5,
+       -134
+      ],
+      [
+       110.5,
+       -152
+      ],
+      [
+       111.5,
+       -176
+      ],
+      [
+       112.5,
+       -200
+      ],
+      [
+       113.5,
+       -229
+      ],
+      [
+       114.5,
+       -265
+      ],
+      [
+       115.5,
+       -304
+      ],
+      [
+       116.5,
+       -349
+      ],
+      [
+       117.5,
+       -402
+      ],
+      [
+       118.5,
+       -470
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "away",
+     "kind": "game",
+     "line": 107.5,
+     "name": "Total",
+     "oddID": "points-away-game-ou-under",
+     "odds": -102,
+     "opposing": "points-away-game-ou-over",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       98.5,
+       332
+      ],
+      [
+       99.5,
+       290
+      ],
+      [
+       100.5,
+       253
+      ],
+      [
+       101.5,
+       221
+      ],
+      [
+       102.5,
+       195
+      ],
+      [
+       103.5,
+       168
+      ],
+      [
+       104.5,
+       146
+      ],
+      [
+       105.5,
+       127
+      ],
+      [
+       106.5,
+       112
+      ],
+      [
+       107.5,
+       -102
+      ],
+      [
+       109.5,
+       -134
+      ],
+      [
+       110.5,
+       -152
+      ],
+      [
+       111.5,
+       -176
+      ],
+      [
+       112.5,
+       -200
+      ],
+      [
+       113.5,
+       -229
+      ],
+      [
+       114.5,
+       -265
+      ],
+      [
+       115.5,
+       -304
+      ],
+      [
+       116.5,
+       -349
+      ],
+      [
+       117.5,
+       -402
+      ],
+      [
+       118.5,
+       -470
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "under",
+     "stat": "points",
+     "team": "CHA"
+    },
+    {
+     "alts": [
+      [
+       96.5,
+       -457
+      ],
+      [
+       97.5,
+       -389
+      ],
+      [
+       98.5,
+       -329
+      ],
+      [
+       99.5,
+       -282
+      ],
+      [
+       100.5,
+       -246
+      ],
+      [
+       101.5,
+       -211
+      ],
+      [
+       102.5,
+       -184
+      ],
+      [
+       103.5,
+       -159
+      ],
+      [
+       104.5,
+       -138
+      ],
+      [
+       107.5,
+       108
+      ],
+      [
+       108.5,
+       122
+      ],
+      [
+       109.5,
+       139
+      ],
+      [
+       110.5,
+       159
+      ],
+      [
+       111.5,
+       182
+      ],
+      [
+       112.5,
+       211
+      ],
+      [
+       113.5,
+       237
+      ],
+      [
+       114.5,
+       267
+      ],
+      [
+       115.5,
+       305
+      ],
+      [
+       116.5,
+       348
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "home",
+     "kind": "game",
+     "line": 105.5,
+     "name": "Total",
+     "oddID": "points-home-game-ou-over",
+     "odds": -120,
+     "opposing": "points-home-game-ou-under",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       96.5,
+       -457
+      ],
+      [
+       97.5,
+       -389
+      ],
+      [
+       98.5,
+       -329
+      ],
+      [
+       99.5,
+       -282
+      ],
+      [
+       100.5,
+       -246
+      ],
+      [
+       101.5,
+       -211
+      ],
+      [
+       102.5,
+       -184
+      ],
+      [
+       103.5,
+       -159
+      ],
+      [
+       104.5,
+       -138
+      ],
+      [
+       105.5,
+       -120
+      ],
+      [
+       107.5,
+       108
+      ],
+      [
+       108.5,
+       122
+      ],
+      [
+       109.5,
+       139
+      ],
+      [
+       110.5,
+       159
+      ],
+      [
+       111.5,
+       182
+      ],
+      [
+       112.5,
+       211
+      ],
+      [
+       113.5,
+       237
+      ],
+      [
+       114.5,
+       267
+      ],
+      [
+       115.5,
+       305
+      ],
+      [
+       116.5,
+       348
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "over",
+     "stat": "points",
+     "team": "BKN"
+    },
+    {
+     "alts": [
+      [
+       96.5,
+       330
+      ],
+      [
+       97.5,
+       288
+      ],
+      [
+       98.5,
+       250
+      ],
+      [
+       99.5,
+       217
+      ],
+      [
+       100.5,
+       192
+      ],
+      [
+       101.5,
+       166
+      ],
+      [
+       102.5,
+       146
+      ],
+      [
+       103.5,
+       128
+      ],
+      [
+       104.5,
+       111
+      ],
+      [
+       107.5,
+       -134
+      ],
+      [
+       108.5,
+       -153
+      ],
+      [
+       109.5,
+       -174
+      ],
+      [
+       110.5,
+       -201
+      ],
+      [
+       111.5,
+       -232
+      ],
+      [
+       112.5,
+       -272
+      ],
+      [
+       113.5,
+       -311
+      ],
+      [
+       114.5,
+       -356
+      ],
+      [
+       115.5,
+       -416
+      ],
+      [
+       116.5,
+       -488
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "home",
+     "kind": "game",
+     "line": 105.5,
+     "name": "Total",
+     "oddID": "points-home-game-ou-under",
+     "odds": -103,
+     "opposing": "points-home-game-ou-over",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       96.5,
+       330
+      ],
+      [
+       97.5,
+       288
+      ],
+      [
+       98.5,
+       250
+      ],
+      [
+       99.5,
+       217
+      ],
+      [
+       100.5,
+       192
+      ],
+      [
+       101.5,
+       166
+      ],
+      [
+       102.5,
+       146
+      ],
+      [
+       103.5,
+       128
+      ],
+      [
+       104.5,
+       111
+      ],
+      [
+       105.5,
+       -103
+      ],
+      [
+       107.5,
+       -134
+      ],
+      [
+       108.5,
+       -153
+      ],
+      [
+       109.5,
+       -174
+      ],
+      [
+       110.5,
+       -201
+      ],
+      [
+       111.5,
+       -232
+      ],
+      [
+       112.5,
+       -272
+      ],
+      [
+       113.5,
+       -311
+      ],
+      [
+       114.5,
+       -356
+      ],
+      [
+       115.5,
+       -416
+      ],
+      [
+       116.5,
+       -488
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "under",
+     "stat": "points",
+     "team": "BKN"
+    }
+   ],
+   "pulledAt": "2026-11-03T13:04:04Z",
+   "start": "2026-11-05T00:30:00.000Z",
+   "started": false
+  },
+  "5V7FXpUox0doMPLR4msO": {
+   "away": "MIA",
+   "awayColor": "#98002E",
+   "awayName": "Miami Heat",
+   "cancelled": false,
+   "date": "2026-11-04",
+   "display": "",
+   "ended": false,
+   "eventID": "5V7FXpUox0doMPLR4msO",
+   "finalized": false,
+   "home": "LAC",
+   "homeColor": "#006BB6",
+   "homeName": "Los Angeles Clippers",
+   "markets": [],
+   "pulledAt": "2026-11-03T13:04:04Z",
+   "start": "2026-11-05T03:30:00.000Z",
+   "started": false
+  },
+  "7mhQN16pLsaHgcUAHEpG": {
+   "away": "CHI",
+   "awayColor": "#CE1141",
+   "awayName": "Chicago Bulls",
+   "cancelled": false,
+   "date": "2026-11-04",
+   "display": "",
+   "ended": false,
+   "eventID": "7mhQN16pLsaHgcUAHEpG",
+   "finalized": false,
+   "home": "NYK",
+   "homeColor": "#006BB6",
+   "homeName": "New York Knicks",
+   "markets": [],
+   "pulledAt": "2026-11-03T13:04:04Z",
+   "start": "2026-11-05T00:30:00.000Z",
+   "started": false
+  },
+  "CQNL3A3h6mu0wQjOr7Ir": {
+   "away": "LAL",
+   "awayColor": "#FDB927",
+   "awayName": "Los Angeles Lakers",
+   "cancelled": false,
+   "date": "2026-11-04",
+   "display": "",
+   "ended": false,
+   "eventID": "CQNL3A3h6mu0wQjOr7Ir",
+   "finalized": false,
+   "home": "SAC",
+   "homeColor": "#724C9F",
+   "homeName": "Sacramento Kings",
+   "markets": [],
+   "pulledAt": "2026-11-03T13:04:04Z",
+   "start": "2026-11-05T03:00:00.000Z",
+   "started": false
+  },
+  "GqDpw8Z3lOA3FviOWmjb": {
+   "away": "CLE",
+   "awayColor": "#871539",
+   "awayName": "Cleveland Cavaliers",
+   "cancelled": false,
+   "date": "2026-11-04",
+   "display": "",
+   "ended": false,
+   "eventID": "GqDpw8Z3lOA3FviOWmjb",
+   "finalized": false,
+   "home": "OKC",
+   "homeColor": "#3479BC",
+   "homeName": "Oklahoma City Thunder",
+   "markets": [
+    {
+     "available": true,
+     "betType": "ml",
+     "book": "fanduel",
+     "entity": "away",
+     "kind": "game",
+     "line": null,
+     "name": "Moneyline",
+     "oddID": "points-away-game-ml-away",
+     "odds": 122,
+     "opposing": "points-home-game-ml-home",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       null,
+       122
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "away",
+     "stat": "points",
+     "team": "CLE"
+    },
+    {
+     "available": true,
+     "betType": "ml",
+     "book": "fanduel",
+     "entity": "home",
+     "kind": "game",
+     "line": null,
+     "name": "Moneyline",
+     "oddID": "points-home-game-ml-home",
+     "odds": -144,
+     "opposing": "points-away-game-ml-away",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       null,
+       -144
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "home",
+     "stat": "points",
+     "team": "OKC"
+    },
+    {
+     "altBook": "betmgm",
+     "alts": [
+      [
+       223.5,
+       -160
+      ],
+      [
+       224.5,
+       -150
+      ],
+      [
+       225.5,
+       -140
+      ],
+      [
+       226.5,
+       -130
+      ],
+      [
+       227.5,
+       -118
+      ],
+      [
+       229.5,
+       100
+      ],
+      [
+       230.5,
+       110
+      ],
+      [
+       231.5,
+       118
+      ],
+      [
+       232.5,
+       125
+      ],
+      [
+       233.5,
+       140
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "kind": "game",
+     "line": 228.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-over",
+     "odds": -110,
+     "opposing": "points-all-game-ou-under",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       223.5,
+       -160
+      ],
+      [
+       224.5,
+       -150
+      ],
+      [
+       225.5,
+       -140
+      ],
+      [
+       226.5,
+       -130
+      ],
+      [
+       227.5,
+       -118
+      ],
+      [
+       228.5,
+       -110
+      ],
+      [
+       229.5,
+       100
+      ],
+      [
+       230.5,
+       110
+      ],
+      [
+       231.5,
+       118
+      ],
+      [
+       232.5,
+       125
+      ],
+      [
+       233.5,
+       140
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "over",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "altBook": "betmgm",
+     "alts": [
+      [
+       223.5,
+       135
+      ],
+      [
+       224.5,
+       125
+      ],
+      [
+       225.5,
+       115
+      ],
+      [
+       226.5,
+       105
+      ],
+      [
+       227.5,
+       -102
+      ],
+      [
+       229.5,
+       -120
+      ],
+      [
+       230.5,
+       -135
+      ],
+      [
+       231.5,
+       -145
+      ],
+      [
+       232.5,
+       -155
+      ],
+      [
+       233.5,
+       -170
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "kind": "game",
+     "line": 228.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-under",
+     "odds": -110,
+     "opposing": "points-all-game-ou-over",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       223.5,
+       135
+      ],
+      [
+       224.5,
+       125
+      ],
+      [
+       225.5,
+       115
+      ],
+      [
+       226.5,
+       105
+      ],
+      [
+       227.5,
+       -102
+      ],
+      [
+       228.5,
+       -110
+      ],
+      [
+       229.5,
+       -120
+      ],
+      [
+       230.5,
+       -135
+      ],
+      [
+       231.5,
+       -145
+      ],
+      [
+       232.5,
+       -155
+      ],
+      [
+       233.5,
+       -170
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "under",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "altBook": "betmgm",
+     "alts": [
+      [
+       -3.5,
+       170
+      ],
+      [
+       -2.5,
+       150
+      ],
+      [
+       -1.5,
+       135
+      ],
+      [
+       1.5,
+       105
+      ],
+      [
+       3.5,
+       -120
+      ],
+      [
+       4.5,
+       -145
+      ],
+      [
+       5.5,
+       -165
+      ],
+      [
+       6.5,
+       -190
+      ],
+      [
+       7.5,
+       -225
+      ],
+      [
+       8.5,
+       -275
+      ]
+     ],
+     "available": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "away",
+     "kind": "game",
+     "line": 2.5,
+     "name": "Spread",
+     "oddID": "points-away-game-sp-away",
+     "odds": -108,
+     "opposing": "points-home-game-sp-home",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       -3.5,
+       170
+      ],
+      [
+       -2.5,
+       150
+      ],
+      [
+       -1.5,
+       135
+      ],
+      [
+       1.5,
+       105
+      ],
+      [
+       2.5,
+       -108
+      ],
+      [
+       3.5,
+       -120
+      ],
+      [
+       4.5,
+       -145
+      ],
+      [
+       5.5,
+       -165
+      ],
+      [
+       6.5,
+       -190
+      ],
+      [
+       7.5,
+       -225
+      ],
+      [
+       8.5,
+       -275
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "away",
+     "stat": "points",
+     "team": "CLE"
+    },
+    {
+     "altBook": "betmgm",
+     "alts": [
+      [
+       -8.5,
+       220
+      ],
+      [
+       -7.5,
+       185
+      ],
+      [
+       -6.5,
+       155
+      ],
+      [
+       -5.5,
+       135
+      ],
+      [
+       -4.5,
+       118
+      ],
+      [
+       -3.5,
+       100
+      ],
+      [
+       -1.5,
+       -130
+      ],
+      [
+       1.5,
+       -160
+      ],
+      [
+       2.5,
+       -185
+      ],
+      [
+       3.5,
+       -210
+      ]
+     ],
+     "available": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "home",
+     "kind": "game",
+     "line": -2.5,
+     "name": "Spread",
+     "oddID": "points-home-game-sp-home",
+     "odds": -112,
+     "opposing": "points-away-game-sp-away",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       -8.5,
+       220
+      ],
+      [
+       -7.5,
+       185
+      ],
+      [
+       -6.5,
+       155
+      ],
+      [
+       -5.5,
+       135
+      ],
+      [
+       -4.5,
+       118
+      ],
+      [
+       -3.5,
+       100
+      ],
+      [
+       -2.5,
+       -112
+      ],
+      [
+       -1.5,
+       -130
+      ],
+      [
+       1.5,
+       -160
+      ],
+      [
+       2.5,
+       -185
+      ],
+      [
+       3.5,
+       -210
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "home",
+     "stat": "points",
+     "team": "OKC"
+    },
+    {
+     "alts": [
+      [
+       103.5,
+       -447
+      ],
+      [
+       104.5,
+       -379
+      ],
+      [
+       105.5,
+       -321
+      ],
+      [
+       106.5,
+       -274
+      ],
+      [
+       107.5,
+       -233
+      ],
+      [
+       108.5,
+       -203
+      ],
+      [
+       109.5,
+       -176
+      ],
+      [
+       110.5,
+       -154
+      ],
+      [
+       111.5,
+       -134
+      ],
+      [
+       114.5,
+       109
+      ],
+      [
+       115.5,
+       124
+      ],
+      [
+       116.5,
+       141
+      ],
+      [
+       117.5,
+       158
+      ],
+      [
+       118.5,
+       181
+      ],
+      [
+       119.5,
+       205
+      ],
+      [
+       120.5,
+       234
+      ],
+      [
+       121.5,
+       266
+      ],
+      [
+       122.5,
+       303
+      ],
+      [
+       123.5,
+       343
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "away",
+     "kind": "game",
+     "line": 113.5,
+     "name": "Total",
+     "oddID": "points-away-game-ou-over",
+     "odds": -103,
+     "opposing": "points-away-game-ou-under",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       103.5,
+       -447
+      ],
+      [
+       104.5,
+       -379
+      ],
+      [
+       105.5,
+       -321
+      ],
+      [
+       106.5,
+       -274
+      ],
+      [
+       107.5,
+       -233
+      ],
+      [
+       108.5,
+       -203
+      ],
+      [
+       109.5,
+       -176
+      ],
+      [
+       110.5,
+       -154
+      ],
+      [
+       111.5,
+       -134
+      ],
+      [
+       113.5,
+       -103
+      ],
+      [
+       114.5,
+       109
+      ],
+      [
+       115.5,
+       124
+      ],
+      [
+       116.5,
+       141
+      ],
+      [
+       117.5,
+       158
+      ],
+      [
+       118.5,
+       181
+      ],
+      [
+       119.5,
+       205
+      ],
+      [
+       120.5,
+       234
+      ],
+      [
+       121.5,
+       266
+      ],
+      [
+       122.5,
+       303
+      ],
+      [
+       123.5,
+       343
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "over",
+     "stat": "points",
+     "team": "CLE"
+    },
+    {
+     "alts": [
+      [
+       103.5,
+       324
+      ],
+      [
+       104.5,
+       282
+      ],
+      [
+       105.5,
+       244
+      ],
+      [
+       106.5,
+       212
+      ],
+      [
+       107.5,
+       183
+      ],
+      [
+       108.5,
+       161
+      ],
+      [
+       109.5,
+       140
+      ],
+      [
+       110.5,
+       123
+      ],
+      [
+       111.5,
+       108
+      ],
+      [
+       114.5,
+       -136
+      ],
+      [
+       115.5,
+       -154
+      ],
+      [
+       116.5,
+       -176
+      ],
+      [
+       117.5,
+       -200
+      ],
+      [
+       118.5,
+       -231
+      ],
+      [
+       119.5,
+       -264
+      ],
+      [
+       120.5,
+       -307
+      ],
+      [
+       121.5,
+       -354
+      ],
+      [
+       122.5,
+       -412
+      ],
+      [
+       123.5,
+       -479
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "away",
+     "kind": "game",
+     "line": 113.5,
+     "name": "Total",
+     "oddID": "points-away-game-ou-under",
+     "odds": -120,
+     "opposing": "points-away-game-ou-over",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       103.5,
+       324
+      ],
+      [
+       104.5,
+       282
+      ],
+      [
+       105.5,
+       244
+      ],
+      [
+       106.5,
+       212
+      ],
+      [
+       107.5,
+       183
+      ],
+      [
+       108.5,
+       161
+      ],
+      [
+       109.5,
+       140
+      ],
+      [
+       110.5,
+       123
+      ],
+      [
+       111.5,
+       108
+      ],
+      [
+       113.5,
+       -120
+      ],
+      [
+       114.5,
+       -136
+      ],
+      [
+       115.5,
+       -154
+      ],
+      [
+       116.5,
+       -176
+      ],
+      [
+       117.5,
+       -200
+      ],
+      [
+       118.5,
+       -231
+      ],
+      [
+       119.5,
+       -264
+      ],
+      [
+       120.5,
+       -307
+      ],
+      [
+       121.5,
+       -354
+      ],
+      [
+       122.5,
+       -412
+      ],
+      [
+       123.5,
+       -479
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "under",
+     "stat": "points",
+     "team": "CLE"
+    },
+    {
+     "alts": [
+      [
+       105.5,
+       -479
+      ],
+      [
+       106.5,
+       -409
+      ],
+      [
+       107.5,
+       -351
+      ],
+      [
+       108.5,
+       -300
+      ],
+      [
+       109.5,
+       -260
+      ],
+      [
+       110.5,
+       -222
+      ],
+      [
+       111.5,
+       -191
+      ],
+      [
+       112.5,
+       -167
+      ],
+      [
+       113.5,
+       -146
+      ],
+      [
+       116.5,
+       105
+      ],
+      [
+       117.5,
+       119
+      ],
+      [
+       118.5,
+       137
+      ],
+      [
+       119.5,
+       156
+      ],
+      [
+       120.5,
+       179
+      ],
+      [
+       121.5,
+       205
+      ],
+      [
+       122.5,
+       232
+      ],
+      [
+       123.5,
+       264
+      ],
+      [
+       124.5,
+       302
+      ],
+      [
+       125.5,
+       342
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "home",
+     "kind": "game",
+     "line": 114.5,
+     "name": "Total",
+     "oddID": "points-home-game-ou-over",
+     "odds": -127,
+     "opposing": "points-home-game-ou-under",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       105.5,
+       -479
+      ],
+      [
+       106.5,
+       -409
+      ],
+      [
+       107.5,
+       -351
+      ],
+      [
+       108.5,
+       -300
+      ],
+      [
+       109.5,
+       -260
+      ],
+      [
+       110.5,
+       -222
+      ],
+      [
+       111.5,
+       -191
+      ],
+      [
+       112.5,
+       -167
+      ],
+      [
+       113.5,
+       -146
+      ],
+      [
+       114.5,
+       -127
+      ],
+      [
+       116.5,
+       105
+      ],
+      [
+       117.5,
+       119
+      ],
+      [
+       118.5,
+       137
+      ],
+      [
+       119.5,
+       156
+      ],
+      [
+       120.5,
+       179
+      ],
+      [
+       121.5,
+       205
+      ],
+      [
+       122.5,
+       232
+      ],
+      [
+       123.5,
+       264
+      ],
+      [
+       124.5,
+       302
+      ],
+      [
+       125.5,
+       342
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "over",
+     "stat": "points",
+     "team": "OKC"
+    },
+    {
+     "alts": [
+      [
+       105.5,
+       343
+      ],
+      [
+       106.5,
+       301
+      ],
+      [
+       107.5,
+       264
+      ],
+      [
+       108.5,
+       230
+      ],
+      [
+       109.5,
+       202
+      ],
+      [
+       110.5,
+       175
+      ],
+      [
+       111.5,
+       152
+      ],
+      [
+       112.5,
+       133
+      ],
+      [
+       113.5,
+       117
+      ],
+      [
+       116.5,
+       -130
+      ],
+      [
+       117.5,
+       -149
+      ],
+      [
+       118.5,
+       -171
+      ],
+      [
+       119.5,
+       -197
+      ],
+      [
+       120.5,
+       -228
+      ],
+      [
+       121.5,
+       -264
+      ],
+      [
+       122.5,
+       -303
+      ],
+      [
+       123.5,
+       -351
+      ],
+      [
+       124.5,
+       -411
+      ],
+      [
+       125.5,
+       -476
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "home",
+     "kind": "game",
+     "line": 114.5,
+     "name": "Total",
+     "oddID": "points-home-game-ou-under",
+     "odds": 102,
+     "opposing": "points-home-game-ou-over",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       105.5,
+       343
+      ],
+      [
+       106.5,
+       301
+      ],
+      [
+       107.5,
+       264
+      ],
+      [
+       108.5,
+       230
+      ],
+      [
+       109.5,
+       202
+      ],
+      [
+       110.5,
+       175
+      ],
+      [
+       111.5,
+       152
+      ],
+      [
+       112.5,
+       133
+      ],
+      [
+       113.5,
+       117
+      ],
+      [
+       114.5,
+       102
+      ],
+      [
+       116.5,
+       -130
+      ],
+      [
+       117.5,
+       -149
+      ],
+      [
+       118.5,
+       -171
+      ],
+      [
+       119.5,
+       -197
+      ],
+      [
+       120.5,
+       -228
+      ],
+      [
+       121.5,
+       -264
+      ],
+      [
+       122.5,
+       -303
+      ],
+      [
+       123.5,
+       -351
+      ],
+      [
+       124.5,
+       -411
+      ],
+      [
+       125.5,
+       -476
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "under",
+     "stat": "points",
+     "team": "OKC"
+    }
+   ],
+   "pulledAt": "2026-11-03T13:04:04Z",
+   "start": "2026-11-05T01:00:00.000Z",
+   "started": false
+  },
+  "HhtiwKwrFcro0itW9oJk": {
+   "away": "UTA",
+   "awayColor": "#002B5C",
+   "awayName": "Utah Jazz",
+   "cancelled": false,
+   "date": "2026-11-04",
+   "display": "",
+   "ended": false,
+   "eventID": "HhtiwKwrFcro0itW9oJk",
+   "finalized": false,
+   "home": "NOP",
+   "homeColor": "#002B5C",
+   "homeName": "New Orleans Pelicans",
+   "markets": [],
+   "pulledAt": "2026-11-03T13:04:04Z",
+   "start": "2026-11-05T01:00:00.000Z",
+   "started": false
+  },
+  "NdWj2SKUs2DQl5b4sI3t": {
+   "away": "MIN",
+   "awayColor": "#005083",
+   "awayName": "Minnesota Timberwolves",
+   "cancelled": false,
+   "date": "2026-11-04",
+   "display": "",
+   "ended": false,
+   "eventID": "NdWj2SKUs2DQl5b4sI3t",
+   "finalized": false,
+   "home": "HOU",
+   "homeColor": "#FFFFFF",
+   "homeName": "Houston Rockets",
+   "markets": [
+    {
+     "available": true,
+     "betType": "ml",
+     "book": "fanduel",
+     "entity": "away",
+     "kind": "game",
+     "line": null,
+     "name": "Moneyline",
+     "oddID": "points-away-game-ml-away",
+     "odds": 285,
+     "opposing": "points-home-game-ml-home",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       null,
+       285
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "away",
+     "stat": "points",
+     "team": "MIN"
+    },
+    {
+     "available": true,
+     "betType": "ml",
+     "book": "fanduel",
+     "entity": "home",
+     "kind": "game",
+     "line": null,
+     "name": "Moneyline",
+     "oddID": "points-home-game-ml-home",
+     "odds": -355,
+     "opposing": "points-away-game-ml-away",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       null,
+       -355
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "home",
+     "stat": "points",
+     "team": "HOU"
+    },
+    {
+     "altBook": "betmgm",
+     "alts": [
+      [
+       218.5,
+       -185
+      ],
+      [
+       219.5,
+       -165
+      ],
+      [
+       220.5,
+       -150
+      ],
+      [
+       221.5,
+       -140
+      ],
+      [
+       222.5,
+       -125
+      ],
+      [
+       224.5,
+       -105
+      ],
+      [
+       225.5,
+       100
+      ],
+      [
+       226.5,
+       110
+      ],
+      [
+       227.5,
+       120
+      ],
+      [
+       228.5,
+       130
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "kind": "game",
+     "line": 224.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-over",
+     "odds": -106,
+     "opposing": "points-all-game-ou-under",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       218.5,
+       -185
+      ],
+      [
+       219.5,
+       -165
+      ],
+      [
+       220.5,
+       -150
+      ],
+      [
+       221.5,
+       -140
+      ],
+      [
+       222.5,
+       -125
+      ],
+      [
+       224.5,
+       -106
+      ],
+      [
+       224.5,
+       -105
+      ],
+      [
+       225.5,
+       100
+      ],
+      [
+       226.5,
+       110
+      ],
+      [
+       227.5,
+       120
+      ],
+      [
+       228.5,
+       130
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "over",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "altBook": "betmgm",
+     "alts": [
+      [
+       218.5,
+       140
+      ],
+      [
+       219.5,
+       125
+      ],
+      [
+       220.5,
+       115
+      ],
+      [
+       221.5,
+       105
+      ],
+      [
+       222.5,
+       -102
+      ],
+      [
+       224.5,
+       -125
+      ],
+      [
+       225.5,
+       -130
+      ],
+      [
+       226.5,
+       -145
+      ],
+      [
+       227.5,
+       -155
+      ],
+      [
+       228.5,
+       -170
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "kind": "game",
+     "line": 224.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-under",
+     "odds": -114,
+     "opposing": "points-all-game-ou-over",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       218.5,
+       140
+      ],
+      [
+       219.5,
+       125
+      ],
+      [
+       220.5,
+       115
+      ],
+      [
+       221.5,
+       105
+      ],
+      [
+       222.5,
+       -102
+      ],
+      [
+       224.5,
+       -125
+      ],
+      [
+       224.5,
+       -114
+      ],
+      [
+       225.5,
+       -130
+      ],
+      [
+       226.5,
+       -145
+      ],
+      [
+       227.5,
+       -155
+      ],
+      [
+       228.5,
+       -170
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "under",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "altBook": "betmgm",
+     "alts": [
+      [
+       4.5,
+       165
+      ],
+      [
+       5.5,
+       145
+      ],
+      [
+       6.5,
+       130
+      ],
+      [
+       7.5,
+       115
+      ],
+      [
+       8.5,
+       -102
+      ],
+      [
+       10.5,
+       -130
+      ],
+      [
+       11.5,
+       -150
+      ],
+      [
+       12.5,
+       -170
+      ],
+      [
+       13.5,
+       -190
+      ],
+      [
+       14.5,
+       -210
+      ]
+     ],
+     "available": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "away",
+     "kind": "game",
+     "line": 9.5,
+     "name": "Spread",
+     "oddID": "points-away-game-sp-away",
+     "odds": -114,
+     "opposing": "points-home-game-sp-home",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       4.5,
+       165
+      ],
+      [
+       5.5,
+       145
+      ],
+      [
+       6.5,
+       130
+      ],
+      [
+       7.5,
+       115
+      ],
+      [
+       8.5,
+       -102
+      ],
+      [
+       9.5,
+       -114
+      ],
+      [
+       10.5,
+       -130
+      ],
+      [
+       11.5,
+       -150
+      ],
+      [
+       12.5,
+       -170
+      ],
+      [
+       13.5,
+       -190
+      ],
+      [
+       14.5,
+       -210
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "away",
+     "stat": "points",
+     "team": "MIN"
+    },
+    {
+     "altBook": "betmgm",
+     "alts": [
+      [
+       -14.5,
+       160
+      ],
+      [
+       -13.5,
+       145
+      ],
+      [
+       -12.5,
+       130
+      ],
+      [
+       -11.5,
+       115
+      ],
+      [
+       -10.5,
+       100
+      ],
+      [
+       -8.5,
+       -130
+      ],
+      [
+       -7.5,
+       -150
+      ],
+      [
+       -6.5,
+       -170
+      ],
+      [
+       -5.5,
+       -190
+      ],
+      [
+       -4.5,
+       -220
+      ]
+     ],
+     "available": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "home",
+     "kind": "game",
+     "line": -9.5,
+     "name": "Spread",
+     "oddID": "points-home-game-sp-home",
+     "odds": -106,
+     "opposing": "points-away-game-sp-away",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       -14.5,
+       160
+      ],
+      [
+       -13.5,
+       145
+      ],
+      [
+       -12.5,
+       130
+      ],
+      [
+       -11.5,
+       115
+      ],
+      [
+       -10.5,
+       100
+      ],
+      [
+       -9.5,
+       -106
+      ],
+      [
+       -8.5,
+       -130
+      ],
+      [
+       -7.5,
+       -150
+      ],
+      [
+       -6.5,
+       -170
+      ],
+      [
+       -5.5,
+       -190
+      ],
+      [
+       -4.5,
+       -220
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "home",
+     "stat": "points",
+     "team": "HOU"
+    },
+    {
+     "alts": [
+      [
+       96.5,
+       -531
+      ],
+      [
+       97.5,
+       -450
+      ],
+      [
+       98.5,
+       -376
+      ],
+      [
+       99.5,
+       -321
+      ],
+      [
+       100.5,
+       -271
+      ],
+      [
+       101.5,
+       -229
+      ],
+      [
+       102.5,
+       -197
+      ],
+      [
+       103.5,
+       -170
+      ],
+      [
+       104.5,
+       -148
+      ],
+      [
+       107.5,
+       103
+      ],
+      [
+       108.5,
+       119
+      ],
+      [
+       109.5,
+       137
+      ],
+      [
+       110.5,
+       157
+      ],
+      [
+       111.5,
+       182
+      ],
+      [
+       112.5,
+       210
+      ],
+      [
+       113.5,
+       242
+      ],
+      [
+       114.5,
+       277
+      ],
+      [
+       115.5,
+       320
+      ],
+      [
+       116.5,
+       364
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "away",
+     "kind": "game",
+     "line": 105.5,
+     "name": "Total",
+     "oddID": "points-away-game-ou-over",
+     "odds": -128,
+     "opposing": "points-away-game-ou-under",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       96.5,
+       -531
+      ],
+      [
+       97.5,
+       -450
+      ],
+      [
+       98.5,
+       -376
+      ],
+      [
+       99.5,
+       -321
+      ],
+      [
+       100.5,
+       -271
+      ],
+      [
+       101.5,
+       -229
+      ],
+      [
+       102.5,
+       -197
+      ],
+      [
+       103.5,
+       -170
+      ],
+      [
+       104.5,
+       -148
+      ],
+      [
+       105.5,
+       -128
+      ],
+      [
+       107.5,
+       103
+      ],
+      [
+       108.5,
+       119
+      ],
+      [
+       109.5,
+       137
+      ],
+      [
+       110.5,
+       157
+      ],
+      [
+       111.5,
+       182
+      ],
+      [
+       112.5,
+       210
+      ],
+      [
+       113.5,
+       242
+      ],
+      [
+       114.5,
+       277
+      ],
+      [
+       115.5,
+       320
+      ],
+      [
+       116.5,
+       364
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "over",
+     "stat": "points",
+     "team": "MIN"
+    },
+    {
+     "alts": [
+      [
+       96.5,
+       373
+      ],
+      [
+       97.5,
+       326
+      ],
+      [
+       98.5,
+       280
+      ],
+      [
+       99.5,
+       244
+      ],
+      [
+       100.5,
+       210
+      ],
+      [
+       101.5,
+       180
+      ],
+      [
+       102.5,
+       157
+      ],
+      [
+       103.5,
+       136
+      ],
+      [
+       104.5,
+       118
+      ],
+      [
+       107.5,
+       -128
+      ],
+      [
+       108.5,
+       -148
+      ],
+      [
+       109.5,
+       -172
+      ],
+      [
+       110.5,
+       -198
+      ],
+      [
+       111.5,
+       -232
+      ],
+      [
+       112.5,
+       -271
+      ],
+      [
+       113.5,
+       -318
+      ],
+      [
+       114.5,
+       -372
+      ],
+      [
+       115.5,
+       -439
+      ],
+      [
+       116.5,
+       -516
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "away",
+     "kind": "game",
+     "line": 105.5,
+     "name": "Total",
+     "oddID": "points-away-game-ou-under",
+     "odds": 103,
+     "opposing": "points-away-game-ou-over",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       96.5,
+       373
+      ],
+      [
+       97.5,
+       326
+      ],
+      [
+       98.5,
+       280
+      ],
+      [
+       99.5,
+       244
+      ],
+      [
+       100.5,
+       210
+      ],
+      [
+       101.5,
+       180
+      ],
+      [
+       102.5,
+       157
+      ],
+      [
+       103.5,
+       136
+      ],
+      [
+       104.5,
+       118
+      ],
+      [
+       105.5,
+       103
+      ],
+      [
+       107.5,
+       -128
+      ],
+      [
+       108.5,
+       -148
+      ],
+      [
+       109.5,
+       -172
+      ],
+      [
+       110.5,
+       -198
+      ],
+      [
+       111.5,
+       -232
+      ],
+      [
+       112.5,
+       -271
+      ],
+      [
+       113.5,
+       -318
+      ],
+      [
+       114.5,
+       -372
+      ],
+      [
+       115.5,
+       -439
+      ],
+      [
+       116.5,
+       -516
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "under",
+     "stat": "points",
+     "team": "MIN"
+    },
+    {
+     "alts": [
+      [
+       106.5,
+       -486
+      ],
+      [
+       107.5,
+       -411
+      ],
+      [
+       108.5,
+       -351
+      ],
+      [
+       109.5,
+       -299
+      ],
+      [
+       110.5,
+       -256
+      ],
+      [
+       111.5,
+       -218
+      ],
+      [
+       112.5,
+       -190
+      ],
+      [
+       113.5,
+       -165
+      ],
+      [
+       114.5,
+       -144
+      ],
+      [
+       117.5,
+       104
+      ],
+      [
+       118.5,
+       119
+      ],
+      [
+       119.5,
+       136
+      ],
+      [
+       120.5,
+       155
+      ],
+      [
+       121.5,
+       177
+      ],
+      [
+       122.5,
+       201
+      ],
+      [
+       123.5,
+       228
+      ],
+      [
+       124.5,
+       258
+      ],
+      [
+       125.5,
+       294
+      ],
+      [
+       126.5,
+       333
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "home",
+     "kind": "game",
+     "line": 115.5,
+     "name": "Total",
+     "oddID": "points-home-game-ou-over",
+     "odds": -125,
+     "opposing": "points-home-game-ou-under",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       106.5,
+       -486
+      ],
+      [
+       107.5,
+       -411
+      ],
+      [
+       108.5,
+       -351
+      ],
+      [
+       109.5,
+       -299
+      ],
+      [
+       110.5,
+       -256
+      ],
+      [
+       111.5,
+       -218
+      ],
+      [
+       112.5,
+       -190
+      ],
+      [
+       113.5,
+       -165
+      ],
+      [
+       114.5,
+       -144
+      ],
+      [
+       115.5,
+       -125
+      ],
+      [
+       117.5,
+       104
+      ],
+      [
+       118.5,
+       119
+      ],
+      [
+       119.5,
+       136
+      ],
+      [
+       120.5,
+       155
+      ],
+      [
+       121.5,
+       177
+      ],
+      [
+       122.5,
+       201
+      ],
+      [
+       123.5,
+       228
+      ],
+      [
+       124.5,
+       258
+      ],
+      [
+       125.5,
+       294
+      ],
+      [
+       126.5,
+       333
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "over",
+     "stat": "points",
+     "team": "HOU"
+    },
+    {
+     "alts": [
+      [
+       106.5,
+       348
+      ],
+      [
+       107.5,
+       302
+      ],
+      [
+       108.5,
+       264
+      ],
+      [
+       109.5,
+       229
+      ],
+      [
+       110.5,
+       199
+      ],
+      [
+       111.5,
+       172
+      ],
+      [
+       112.5,
+       151
+      ],
+      [
+       113.5,
+       132
+      ],
+      [
+       114.5,
+       116
+      ],
+      [
+       117.5,
+       -129
+      ],
+      [
+       118.5,
+       -149
+      ],
+      [
+       119.5,
+       -170
+      ],
+      [
+       120.5,
+       -195
+      ],
+      [
+       121.5,
+       -225
+      ],
+      [
+       122.5,
+       -258
+      ],
+      [
+       123.5,
+       -297
+      ],
+      [
+       124.5,
+       -342
+      ],
+      [
+       125.5,
+       -398
+      ],
+      [
+       126.5,
+       -462
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "home",
+     "kind": "game",
+     "line": 115.5,
+     "name": "Total",
+     "oddID": "points-home-game-ou-under",
+     "odds": 100,
+     "opposing": "points-home-game-ou-over",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       106.5,
+       348
+      ],
+      [
+       107.5,
+       302
+      ],
+      [
+       108.5,
+       264
+      ],
+      [
+       109.5,
+       229
+      ],
+      [
+       110.5,
+       199
+      ],
+      [
+       111.5,
+       172
+      ],
+      [
+       112.5,
+       151
+      ],
+      [
+       113.5,
+       132
+      ],
+      [
+       114.5,
+       116
+      ],
+      [
+       115.5,
+       100
+      ],
+      [
+       117.5,
+       -129
+      ],
+      [
+       118.5,
+       -149
+      ],
+      [
+       119.5,
+       -170
+      ],
+      [
+       120.5,
+       -195
+      ],
+      [
+       121.5,
+       -225
+      ],
+      [
+       122.5,
+       -258
+      ],
+      [
+       123.5,
+       -297
+      ],
+      [
+       124.5,
+       -342
+      ],
+      [
+       125.5,
+       -398
+      ],
+      [
+       126.5,
+       -462
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "under",
+     "stat": "points",
+     "team": "HOU"
+    }
+   ],
+   "pulledAt": "2026-11-03T13:04:04Z",
+   "start": "2026-11-05T01:30:00.000Z",
+   "started": false
+  },
+  "YQH7ORjpj8NiPjJ4CYQw": {
+   "away": "IND",
+   "awayColor": "#00275D",
+   "awayName": "Indiana Pacers",
+   "cancelled": false,
+   "date": "2026-11-04",
+   "display": "",
+   "ended": false,
+   "eventID": "YQH7ORjpj8NiPjJ4CYQw",
+   "finalized": false,
+   "home": "MEM",
+   "homeColor": "#6189B9",
+   "homeName": "Memphis Grizzlies",
+   "markets": [],
+   "pulledAt": "2026-11-03T13:04:04Z",
+   "start": "2026-11-05T01:00:00.000Z",
+   "started": false
+  },
+  "jnlQn64ndQfsw9ig3V4O": {
+   "away": "TOR",
+   "awayColor": "#CE1141",
+   "awayName": "Toronto Raptors",
+   "cancelled": false,
+   "date": "2026-11-04",
+   "display": "",
+   "ended": false,
+   "eventID": "jnlQn64ndQfsw9ig3V4O",
+   "finalized": false,
+   "home": "DEN",
+   "homeColor": "#4FA8FF",
+   "homeName": "Denver Nuggets",
+   "markets": [],
+   "pulledAt": "2026-11-03T13:04:04Z",
+   "start": "2026-11-05T02:00:00.000Z",
+   "started": false
+  },
+  "lb3zjl5VzDy2SvSIwsJI": {
+   "away": "POR",
+   "awayColor": "#F0163A",
+   "awayName": "Portland Trail Blazers",
+   "cancelled": false,
+   "date": "2026-11-04",
+   "display": "",
+   "ended": false,
+   "eventID": "lb3zjl5VzDy2SvSIwsJI",
+   "finalized": false,
+   "home": "PHX",
+   "homeColor": "#E56020",
+   "homeName": "Phoenix Suns",
+   "markets": [],
+   "pulledAt": "2026-11-03T13:04:04Z",
+   "start": "2026-11-05T02:00:00.000Z",
+   "started": false
+  },
+  "m4ysfZP3utX32yU8fPQ6": {
+   "away": "DAL",
+   "awayColor": "#007DC5",
+   "awayName": "Dallas Mavericks",
+   "cancelled": false,
+   "date": "2026-11-04",
+   "display": "",
+   "ended": false,
+   "eventID": "m4ysfZP3utX32yU8fPQ6",
+   "finalized": false,
+   "home": "SAS",
+   "homeColor": "#A6AFAF",
+   "homeName": "San Antonio Spurs",
+   "markets": [
+    {
+     "available": true,
+     "betType": "ml",
+     "book": "fanduel",
+     "entity": "away",
+     "kind": "game",
+     "line": null,
+     "name": "Moneyline",
+     "oddID": "points-away-game-ml-away",
+     "odds": 480,
+     "opposing": "points-home-game-ml-home",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       null,
+       480
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "away",
+     "stat": "points",
+     "team": "DAL"
+    },
+    {
+     "available": true,
+     "betType": "ml",
+     "book": "fanduel",
+     "entity": "home",
+     "kind": "game",
+     "line": null,
+     "name": "Moneyline",
+     "oddID": "points-home-game-ml-home",
+     "odds": -650,
+     "opposing": "points-away-game-ml-away",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       null,
+       -650
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "home",
+     "stat": "points",
+     "team": "SAS"
+    },
+    {
+     "altBook": "betmgm",
+     "alts": [
+      [
+       224.5,
+       -170
+      ],
+      [
+       225.5,
+       -155
+      ],
+      [
+       226.5,
+       -145
+      ],
+      [
+       227.5,
+       -140
+      ],
+      [
+       228.5,
+       -125
+      ],
+      [
+       230.5,
+       -102
+      ],
+      [
+       231.5,
+       105
+      ],
+      [
+       232.5,
+       115
+      ],
+      [
+       233.5,
+       125
+      ],
+      [
+       234.5,
+       135
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "kind": "game",
+     "line": 229.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-over",
+     "odds": -106,
+     "opposing": "points-all-game-ou-under",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       224.5,
+       -170
+      ],
+      [
+       225.5,
+       -155
+      ],
+      [
+       226.5,
+       -145
+      ],
+      [
+       227.5,
+       -140
+      ],
+      [
+       228.5,
+       -125
+      ],
+      [
+       229.5,
+       -106
+      ],
+      [
+       230.5,
+       -102
+      ],
+      [
+       231.5,
+       105
+      ],
+      [
+       232.5,
+       115
+      ],
+      [
+       233.5,
+       125
+      ],
+      [
+       234.5,
+       135
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "over",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "altBook": "betmgm",
+     "alts": [
+      [
+       224.5,
+       130
+      ],
+      [
+       225.5,
+       120
+      ],
+      [
+       226.5,
+       110
+      ],
+      [
+       227.5,
+       105
+      ],
+      [
+       228.5,
+       -105
+      ],
+      [
+       230.5,
+       -125
+      ],
+      [
+       231.5,
+       -140
+      ],
+      [
+       232.5,
+       -150
+      ],
+      [
+       233.5,
+       -160
+      ],
+      [
+       234.5,
+       -175
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "kind": "game",
+     "line": 229.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-under",
+     "odds": -114,
+     "opposing": "points-all-game-ou-over",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       224.5,
+       130
+      ],
+      [
+       225.5,
+       120
+      ],
+      [
+       226.5,
+       110
+      ],
+      [
+       227.5,
+       105
+      ],
+      [
+       228.5,
+       -105
+      ],
+      [
+       229.5,
+       -114
+      ],
+      [
+       230.5,
+       -125
+      ],
+      [
+       231.5,
+       -140
+      ],
+      [
+       232.5,
+       -150
+      ],
+      [
+       233.5,
+       -160
+      ],
+      [
+       234.5,
+       -175
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "under",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "altBook": "betmgm",
+     "alts": [
+      [
+       7.5,
+       180
+      ],
+      [
+       8.5,
+       154
+      ],
+      [
+       9.5,
+       130
+      ],
+      [
+       10.5,
+       115
+      ],
+      [
+       11.5,
+       100
+      ],
+      [
+       13.5,
+       -125
+      ],
+      [
+       14.5,
+       -140
+      ],
+      [
+       15.5,
+       -155
+      ],
+      [
+       16.5,
+       -170
+      ],
+      [
+       17.5,
+       -190
+      ]
+     ],
+     "available": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "away",
+     "kind": "game",
+     "line": 12.5,
+     "name": "Spread",
+     "oddID": "points-away-game-sp-away",
+     "odds": -108,
+     "opposing": "points-home-game-sp-home",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       7.5,
+       180
+      ],
+      [
+       8.5,
+       154
+      ],
+      [
+       9.5,
+       130
+      ],
+      [
+       10.5,
+       115
+      ],
+      [
+       11.5,
+       100
+      ],
+      [
+       12.5,
+       -108
+      ],
+      [
+       13.5,
+       -125
+      ],
+      [
+       14.5,
+       -140
+      ],
+      [
+       15.5,
+       -155
+      ],
+      [
+       16.5,
+       -170
+      ],
+      [
+       17.5,
+       -190
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "away",
+     "stat": "points",
+     "team": "DAL"
+    },
+    {
+     "altBook": "betmgm",
+     "alts": [
+      [
+       -17.5,
+       145
+      ],
+      [
+       -16.5,
+       130
+      ],
+      [
+       -15.5,
+       118
+      ],
+      [
+       -14.5,
+       105
+      ],
+      [
+       -13.5,
+       -102
+      ],
+      [
+       -11.5,
+       -130
+      ],
+      [
+       -10.5,
+       -150
+      ],
+      [
+       -9.5,
+       -170
+      ],
+      [
+       -8.5,
+       -200
+      ],
+      [
+       -7.5,
+       -235
+      ]
+     ],
+     "available": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "home",
+     "kind": "game",
+     "line": -12.5,
+     "name": "Spread",
+     "oddID": "points-home-game-sp-home",
+     "odds": -112,
+     "opposing": "points-away-game-sp-away",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       -17.5,
+       145
+      ],
+      [
+       -16.5,
+       130
+      ],
+      [
+       -15.5,
+       118
+      ],
+      [
+       -14.5,
+       105
+      ],
+      [
+       -13.5,
+       -102
+      ],
+      [
+       -12.5,
+       -112
+      ],
+      [
+       -11.5,
+       -130
+      ],
+      [
+       -10.5,
+       -150
+      ],
+      [
+       -9.5,
+       -170
+      ],
+      [
+       -8.5,
+       -200
+      ],
+      [
+       -7.5,
+       -235
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "home",
+     "stat": "points",
+     "team": "SAS"
+    },
+    {
+     "alts": [
+      [
+       98.5,
+       -494
+      ],
+      [
+       99.5,
+       -424
+      ],
+      [
+       100.5,
+       -351
+      ],
+      [
+       101.5,
+       -298
+      ],
+      [
+       102.5,
+       -252
+      ],
+      [
+       103.5,
+       -215
+      ],
+      [
+       104.5,
+       -183
+      ],
+      [
+       105.5,
+       -158
+      ],
+      [
+       106.5,
+       -135
+      ],
+      [
+       109.5,
+       114
+      ],
+      [
+       110.5,
+       132
+      ],
+      [
+       111.5,
+       151
+      ],
+      [
+       112.5,
+       175
+      ],
+      [
+       113.5,
+       203
+      ],
+      [
+       114.5,
+       232
+      ],
+      [
+       115.5,
+       266
+      ],
+      [
+       116.5,
+       305
+      ],
+      [
+       117.5,
+       349
+      ],
+      [
+       118.5,
+       398
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "away",
+     "kind": "game",
+     "line": 108.5,
+     "name": "Total",
+     "oddID": "points-away-game-ou-over",
+     "odds": 100,
+     "opposing": "points-away-game-ou-under",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       98.5,
+       -494
+      ],
+      [
+       99.5,
+       -424
+      ],
+      [
+       100.5,
+       -351
+      ],
+      [
+       101.5,
+       -298
+      ],
+      [
+       102.5,
+       -252
+      ],
+      [
+       103.5,
+       -215
+      ],
+      [
+       104.5,
+       -183
+      ],
+      [
+       105.5,
+       -158
+      ],
+      [
+       106.5,
+       -135
+      ],
+      [
+       108.5,
+       100
+      ],
+      [
+       109.5,
+       114
+      ],
+      [
+       110.5,
+       132
+      ],
+      [
+       111.5,
+       151
+      ],
+      [
+       112.5,
+       175
+      ],
+      [
+       113.5,
+       203
+      ],
+      [
+       114.5,
+       232
+      ],
+      [
+       115.5,
+       266
+      ],
+      [
+       116.5,
+       305
+      ],
+      [
+       117.5,
+       349
+      ],
+      [
+       118.5,
+       398
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "over",
+     "stat": "points",
+     "team": "DAL"
+    },
+    {
+     "alts": [
+      [
+       98.5,
+       352
+      ],
+      [
+       99.5,
+       310
+      ],
+      [
+       100.5,
+       264
+      ],
+      [
+       101.5,
+       229
+      ],
+      [
+       102.5,
+       196
+      ],
+      [
+       103.5,
+       170
+      ],
+      [
+       104.5,
+       146
+      ],
+      [
+       105.5,
+       126
+      ],
+      [
+       106.5,
+       109
+      ],
+      [
+       109.5,
+       -142
+      ],
+      [
+       110.5,
+       -165
+      ],
+      [
+       111.5,
+       -191
+      ],
+      [
+       112.5,
+       -222
+      ],
+      [
+       113.5,
+       -261
+      ],
+      [
+       114.5,
+       -303
+      ],
+      [
+       115.5,
+       -354
+      ],
+      [
+       116.5,
+       -415
+      ],
+      [
+       117.5,
+       -489
+      ],
+      [
+       118.5,
+       -577
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "away",
+     "kind": "game",
+     "line": 108.5,
+     "name": "Total",
+     "oddID": "points-away-game-ou-under",
+     "odds": -124,
+     "opposing": "points-away-game-ou-over",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       98.5,
+       352
+      ],
+      [
+       99.5,
+       310
+      ],
+      [
+       100.5,
+       264
+      ],
+      [
+       101.5,
+       229
+      ],
+      [
+       102.5,
+       196
+      ],
+      [
+       103.5,
+       170
+      ],
+      [
+       104.5,
+       146
+      ],
+      [
+       105.5,
+       126
+      ],
+      [
+       106.5,
+       109
+      ],
+      [
+       108.5,
+       -124
+      ],
+      [
+       109.5,
+       -142
+      ],
+      [
+       110.5,
+       -165
+      ],
+      [
+       111.5,
+       -191
+      ],
+      [
+       112.5,
+       -222
+      ],
+      [
+       113.5,
+       -261
+      ],
+      [
+       114.5,
+       -303
+      ],
+      [
+       115.5,
+       -354
+      ],
+      [
+       116.5,
+       -415
+      ],
+      [
+       117.5,
+       -489
+      ],
+      [
+       118.5,
+       -577
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "under",
+     "stat": "points",
+     "team": "DAL"
+    },
+    {
+     "alts": [
+      [
+       111.5,
+       -489
+      ],
+      [
+       112.5,
+       -410
+      ],
+      [
+       113.5,
+       -349
+      ],
+      [
+       114.5,
+       -297
+      ],
+      [
+       115.5,
+       -256
+      ],
+      [
+       116.5,
+       -221
+      ],
+      [
+       117.5,
+       -192
+      ],
+      [
+       118.5,
+       -167
+      ],
+      [
+       119.5,
+       -144
+      ],
+      [
+       122.5,
+       104
+      ],
+      [
+       123.5,
+       118
+      ],
+      [
+       124.5,
+       135
+      ],
+      [
+       125.5,
+       154
+      ],
+      [
+       126.5,
+       176
+      ],
+      [
+       127.5,
+       198
+      ],
+      [
+       128.5,
+       226
+      ],
+      [
+       129.5,
+       257
+      ],
+      [
+       130.5,
+       291
+      ],
+      [
+       131.5,
+       331
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "home",
+     "kind": "game",
+     "line": 120.5,
+     "name": "Total",
+     "oddID": "points-home-game-ou-over",
+     "odds": -125,
+     "opposing": "points-home-game-ou-under",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       111.5,
+       -489
+      ],
+      [
+       112.5,
+       -410
+      ],
+      [
+       113.5,
+       -349
+      ],
+      [
+       114.5,
+       -297
+      ],
+      [
+       115.5,
+       -256
+      ],
+      [
+       116.5,
+       -221
+      ],
+      [
+       117.5,
+       -192
+      ],
+      [
+       118.5,
+       -167
+      ],
+      [
+       119.5,
+       -144
+      ],
+      [
+       120.5,
+       -125
+      ],
+      [
+       122.5,
+       104
+      ],
+      [
+       123.5,
+       118
+      ],
+      [
+       124.5,
+       135
+      ],
+      [
+       125.5,
+       154
+      ],
+      [
+       126.5,
+       176
+      ],
+      [
+       127.5,
+       198
+      ],
+      [
+       128.5,
+       226
+      ],
+      [
+       129.5,
+       257
+      ],
+      [
+       130.5,
+       291
+      ],
+      [
+       131.5,
+       331
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "over",
+     "stat": "points",
+     "team": "SAS"
+    },
+    {
+     "alts": [
+      [
+       111.5,
+       349
+      ],
+      [
+       112.5,
+       302
+      ],
+      [
+       113.5,
+       262
+      ],
+      [
+       114.5,
+       228
+      ],
+      [
+       115.5,
+       199
+      ],
+      [
+       116.5,
+       174
+      ],
+      [
+       117.5,
+       152
+      ],
+      [
+       118.5,
+       133
+      ],
+      [
+       119.5,
+       116
+      ],
+      [
+       122.5,
+       -130
+      ],
+      [
+       123.5,
+       -147
+      ],
+      [
+       124.5,
+       -169
+      ],
+      [
+       125.5,
+       -194
+      ],
+      [
+       126.5,
+       -223
+      ],
+      [
+       127.5,
+       -254
+      ],
+      [
+       128.5,
+       -295
+      ],
+      [
+       129.5,
+       -340
+      ],
+      [
+       130.5,
+       -394
+      ],
+      [
+       131.5,
+       -459
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "home",
+     "kind": "game",
+     "line": 120.5,
+     "name": "Total",
+     "oddID": "points-home-game-ou-under",
+     "odds": 101,
+     "opposing": "points-home-game-ou-over",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       111.5,
+       349
+      ],
+      [
+       112.5,
+       302
+      ],
+      [
+       113.5,
+       262
+      ],
+      [
+       114.5,
+       228
+      ],
+      [
+       115.5,
+       199
+      ],
+      [
+       116.5,
+       174
+      ],
+      [
+       117.5,
+       152
+      ],
+      [
+       118.5,
+       133
+      ],
+      [
+       119.5,
+       116
+      ],
+      [
+       120.5,
+       101
+      ],
+      [
+       122.5,
+       -130
+      ],
+      [
+       123.5,
+       -147
+      ],
+      [
+       124.5,
+       -169
+      ],
+      [
+       125.5,
+       -194
+      ],
+      [
+       126.5,
+       -223
+      ],
+      [
+       127.5,
+       -254
+      ],
+      [
+       128.5,
+       -295
+      ],
+      [
+       129.5,
+       -340
+      ],
+      [
+       130.5,
+       -394
+      ],
+      [
+       131.5,
+       -459
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "under",
+     "stat": "points",
+     "team": "SAS"
+    }
+   ],
+   "pulledAt": "2026-11-03T13:04:04Z",
+   "start": "2026-11-05T02:30:00.000Z",
+   "started": false
+  },
+  "ogZq1ereZiElcRbMLZjx": {
+   "away": "MIL",
+   "awayColor": "#00471B",
+   "awayName": "Milwaukee Bucks",
+   "cancelled": false,
+   "date": "2026-11-04",
+   "display": "",
+   "ended": false,
+   "eventID": "ogZq1ereZiElcRbMLZjx",
+   "finalized": false,
+   "home": "BOS",
+   "homeColor": "#008348",
+   "homeName": "Boston Celtics",
+   "markets": [],
+   "pulledAt": "2026-11-03T13:04:04Z",
+   "start": "2026-11-05T00:30:00.000Z",
+   "started": false
+  },
+  "uKjcOGTOm5hVooEjFUO6": {
+   "away": "ATL",
+   "awayColor": "#E03A3E",
+   "awayName": "Atlanta Hawks",
+   "cancelled": false,
+   "date": "2026-11-04",
+   "display": "",
+   "ended": false,
+   "eventID": "uKjcOGTOm5hVooEjFUO6",
+   "finalized": false,
+   "home": "WAS",
+   "homeColor": "#F5002F",
+   "homeName": "Washington Wizards",
+   "markets": [],
+   "pulledAt": "2026-11-03T13:04:04Z",
+   "start": "2026-11-05T00:00:00.000Z",
+   "started": false
+  },
+  "zH5yS1D0GwXIrfQKQt2p": {
+   "away": "PHI",
+   "awayColor": "#006BB6",
+   "awayName": "Philadelphia 76ers",
+   "cancelled": false,
+   "date": "2026-11-04",
+   "display": "",
+   "ended": false,
+   "eventID": "zH5yS1D0GwXIrfQKQt2p",
+   "finalized": false,
+   "home": "DET",
+   "homeColor": "#006BB6",
+   "homeName": "Detroit Pistons",
+   "markets": [
+    {
+     "available": true,
+     "betType": "ml",
+     "book": "fanduel",
+     "entity": "away",
+     "kind": "game",
+     "line": null,
+     "name": "Moneyline",
+     "oddID": "points-away-game-ml-away",
+     "odds": 102,
+     "opposing": "points-home-game-ml-home",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       null,
+       102
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "away",
+     "stat": "points",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ml",
+     "book": "fanduel",
+     "entity": "home",
+     "kind": "game",
+     "line": null,
+     "name": "Moneyline",
+     "oddID": "points-home-game-ml-home",
+     "odds": -120,
+     "opposing": "points-away-game-ml-away",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       null,
+       -120
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "home",
+     "stat": "points",
+     "team": "DET"
+    },
+    {
+     "altBook": "betmgm",
+     "alts": [
+      [
+       213.5,
+       -170
+      ],
+      [
+       214.5,
+       -160
+      ],
+      [
+       215.5,
+       -150
+      ],
+      [
+       216.5,
+       -140
+      ],
+      [
+       217.5,
+       -125
+      ],
+      [
+       219.5,
+       -105
+      ],
+      [
+       220.5,
+       105
+      ],
+      [
+       221.5,
+       115
+      ],
+      [
+       222.5,
+       125
+      ],
+      [
+       223.5,
+       135
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "kind": "game",
+     "line": 218.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-over",
+     "odds": -110,
+     "opposing": "points-all-game-ou-under",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       213.5,
+       -170
+      ],
+      [
+       214.5,
+       -160
+      ],
+      [
+       215.5,
+       -150
+      ],
+      [
+       216.5,
+       -140
+      ],
+      [
+       217.5,
+       -125
+      ],
+      [
+       218.5,
+       -110
+      ],
+      [
+       219.5,
+       -105
+      ],
+      [
+       220.5,
+       105
+      ],
+      [
+       221.5,
+       115
+      ],
+      [
+       222.5,
+       125
+      ],
+      [
+       223.5,
+       135
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "over",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "altBook": "betmgm",
+     "alts": [
+      [
+       213.5,
+       130
+      ],
+      [
+       214.5,
+       125
+      ],
+      [
+       215.5,
+       115
+      ],
+      [
+       216.5,
+       105
+      ],
+      [
+       217.5,
+       -105
+      ],
+      [
+       219.5,
+       -125
+      ],
+      [
+       220.5,
+       -140
+      ],
+      [
+       221.5,
+       -150
+      ],
+      [
+       222.5,
+       -160
+      ],
+      [
+       223.5,
+       -175
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "kind": "game",
+     "line": 218.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-under",
+     "odds": -110,
+     "opposing": "points-all-game-ou-over",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       213.5,
+       130
+      ],
+      [
+       214.5,
+       125
+      ],
+      [
+       215.5,
+       115
+      ],
+      [
+       216.5,
+       105
+      ],
+      [
+       217.5,
+       -105
+      ],
+      [
+       218.5,
+       -110
+      ],
+      [
+       219.5,
+       -125
+      ],
+      [
+       220.5,
+       -140
+      ],
+      [
+       221.5,
+       -150
+      ],
+      [
+       222.5,
+       -160
+      ],
+      [
+       223.5,
+       -175
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "under",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "altBook": "betmgm",
+     "alts": [
+      [
+       -4.5,
+       160
+      ],
+      [
+       -3.5,
+       145
+      ],
+      [
+       -2.5,
+       125
+      ],
+      [
+       -1.5,
+       110
+      ],
+      [
+       2.5,
+       -125
+      ],
+      [
+       3.5,
+       -145
+      ],
+      [
+       4.5,
+       -160
+      ],
+      [
+       5.5,
+       -190
+      ],
+      [
+       6.5,
+       -220
+      ],
+      [
+       7.5,
+       -250
+      ]
+     ],
+     "available": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "away",
+     "kind": "game",
+     "line": 1.5,
+     "name": "Spread",
+     "oddID": "points-away-game-sp-away",
+     "odds": -106,
+     "opposing": "points-home-game-sp-home",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       -4.5,
+       160
+      ],
+      [
+       -3.5,
+       145
+      ],
+      [
+       -2.5,
+       125
+      ],
+      [
+       -1.5,
+       110
+      ],
+      [
+       1.5,
+       -106
+      ],
+      [
+       2.5,
+       -125
+      ],
+      [
+       3.5,
+       -145
+      ],
+      [
+       4.5,
+       -160
+      ],
+      [
+       5.5,
+       -190
+      ],
+      [
+       6.5,
+       -220
+      ],
+      [
+       7.5,
+       -250
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "away",
+     "stat": "points",
+     "team": "PHI"
+    },
+    {
+     "altBook": "betmgm",
+     "alts": [
+      [
+       -7.5,
+       185
+      ],
+      [
+       -6.5,
+       165
+      ],
+      [
+       -5.5,
+       145
+      ],
+      [
+       -4.5,
+       125
+      ],
+      [
+       -3.5,
+       110
+      ],
+      [
+       -2.5,
+       -102
+      ],
+      [
+       1.5,
+       -145
+      ],
+      [
+       2.5,
+       -160
+      ],
+      [
+       3.5,
+       -190
+      ],
+      [
+       4.5,
+       -210
+      ]
+     ],
+     "available": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "home",
+     "kind": "game",
+     "line": -1.5,
+     "name": "Spread",
+     "oddID": "points-home-game-sp-home",
+     "odds": -114,
+     "opposing": "points-away-game-sp-away",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       -7.5,
+       185
+      ],
+      [
+       -6.5,
+       165
+      ],
+      [
+       -5.5,
+       145
+      ],
+      [
+       -4.5,
+       125
+      ],
+      [
+       -3.5,
+       110
+      ],
+      [
+       -2.5,
+       -102
+      ],
+      [
+       -1.5,
+       -114
+      ],
+      [
+       1.5,
+       -145
+      ],
+      [
+       2.5,
+       -160
+      ],
+      [
+       3.5,
+       -190
+      ],
+      [
+       4.5,
+       -210
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "home",
+     "stat": "points",
+     "team": "DET"
+    },
+    {
+     "alts": [
+      [
+       98.5,
+       -487
+      ],
+      [
+       99.5,
+       -409
+      ],
+      [
+       100.5,
+       -350
+      ],
+      [
+       101.5,
+       -297
+      ],
+      [
+       102.5,
+       -256
+      ],
+      [
+       103.5,
+       -220
+      ],
+      [
+       104.5,
+       -192
+      ],
+      [
+       105.5,
+       -166
+      ],
+      [
+       106.5,
+       -145
+      ],
+      [
+       109.5,
+       103
+      ],
+      [
+       110.5,
+       117
+      ],
+      [
+       111.5,
+       133
+      ],
+      [
+       112.5,
+       153
+      ],
+      [
+       113.5,
+       175
+      ],
+      [
+       114.5,
+       198
+      ],
+      [
+       115.5,
+       225
+      ],
+      [
+       116.5,
+       254
+      ],
+      [
+       117.5,
+       291
+      ],
+      [
+       118.5,
+       332
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "away",
+     "kind": "game",
+     "line": 107.5,
+     "name": "Total",
+     "oddID": "points-away-game-ou-over",
+     "odds": -126,
+     "opposing": "points-away-game-ou-under",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       98.5,
+       -487
+      ],
+      [
+       99.5,
+       -409
+      ],
+      [
+       100.5,
+       -350
+      ],
+      [
+       101.5,
+       -297
+      ],
+      [
+       102.5,
+       -256
+      ],
+      [
+       103.5,
+       -220
+      ],
+      [
+       104.5,
+       -192
+      ],
+      [
+       105.5,
+       -166
+      ],
+      [
+       106.5,
+       -145
+      ],
+      [
+       107.5,
+       -126
+      ],
+      [
+       109.5,
+       103
+      ],
+      [
+       110.5,
+       117
+      ],
+      [
+       111.5,
+       133
+      ],
+      [
+       112.5,
+       153
+      ],
+      [
+       113.5,
+       175
+      ],
+      [
+       114.5,
+       198
+      ],
+      [
+       115.5,
+       225
+      ],
+      [
+       116.5,
+       254
+      ],
+      [
+       117.5,
+       291
+      ],
+      [
+       118.5,
+       332
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "over",
+     "stat": "points",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       98.5,
+       348
+      ],
+      [
+       99.5,
+       301
+      ],
+      [
+       100.5,
+       263
+      ],
+      [
+       101.5,
+       228
+      ],
+      [
+       102.5,
+       199
+      ],
+      [
+       103.5,
+       173
+      ],
+      [
+       104.5,
+       153
+      ],
+      [
+       105.5,
+       133
+      ],
+      [
+       106.5,
+       116
+      ],
+      [
+       109.5,
+       -127
+      ],
+      [
+       110.5,
+       -145
+      ],
+      [
+       111.5,
+       -166
+      ],
+      [
+       112.5,
+       -193
+      ],
+      [
+       113.5,
+       -222
+      ],
+      [
+       114.5,
+       -254
+      ],
+      [
+       115.5,
+       -293
+      ],
+      [
+       116.5,
+       -336
+      ],
+      [
+       117.5,
+       -393
+      ],
+      [
+       118.5,
+       -460
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "away",
+     "kind": "game",
+     "line": 107.5,
+     "name": "Total",
+     "oddID": "points-away-game-ou-under",
+     "odds": 102,
+     "opposing": "points-away-game-ou-over",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       98.5,
+       348
+      ],
+      [
+       99.5,
+       301
+      ],
+      [
+       100.5,
+       263
+      ],
+      [
+       101.5,
+       228
+      ],
+      [
+       102.5,
+       199
+      ],
+      [
+       103.5,
+       173
+      ],
+      [
+       104.5,
+       153
+      ],
+      [
+       105.5,
+       133
+      ],
+      [
+       106.5,
+       116
+      ],
+      [
+       107.5,
+       102
+      ],
+      [
+       109.5,
+       -127
+      ],
+      [
+       110.5,
+       -145
+      ],
+      [
+       111.5,
+       -166
+      ],
+      [
+       112.5,
+       -193
+      ],
+      [
+       113.5,
+       -222
+      ],
+      [
+       114.5,
+       -254
+      ],
+      [
+       115.5,
+       -293
+      ],
+      [
+       116.5,
+       -336
+      ],
+      [
+       117.5,
+       -393
+      ],
+      [
+       118.5,
+       -460
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "under",
+     "stat": "points",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       99.5,
+       -519
+      ],
+      [
+       100.5,
+       -447
+      ],
+      [
+       101.5,
+       -375
+      ],
+      [
+       102.5,
+       -322
+      ],
+      [
+       103.5,
+       -275
+      ],
+      [
+       104.5,
+       -235
+      ],
+      [
+       105.5,
+       -201
+      ],
+      [
+       106.5,
+       -175
+      ],
+      [
+       107.5,
+       -152
+      ],
+      [
+       108.5,
+       -133
+      ],
+      [
+       111.5,
+       112
+      ],
+      [
+       112.5,
+       128
+      ],
+      [
+       113.5,
+       147
+      ],
+      [
+       114.5,
+       167
+      ],
+      [
+       115.5,
+       191
+      ],
+      [
+       116.5,
+       218
+      ],
+      [
+       117.5,
+       251
+      ],
+      [
+       118.5,
+       285
+      ],
+      [
+       119.5,
+       327
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "home",
+     "kind": "game",
+     "line": 110.5,
+     "name": "Total",
+     "oddID": "points-home-game-ou-over",
+     "odds": -102,
+     "opposing": "points-home-game-ou-under",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       99.5,
+       -519
+      ],
+      [
+       100.5,
+       -447
+      ],
+      [
+       101.5,
+       -375
+      ],
+      [
+       102.5,
+       -322
+      ],
+      [
+       103.5,
+       -275
+      ],
+      [
+       104.5,
+       -235
+      ],
+      [
+       105.5,
+       -201
+      ],
+      [
+       106.5,
+       -175
+      ],
+      [
+       107.5,
+       -152
+      ],
+      [
+       108.5,
+       -133
+      ],
+      [
+       110.5,
+       -102
+      ],
+      [
+       111.5,
+       112
+      ],
+      [
+       112.5,
+       128
+      ],
+      [
+       113.5,
+       147
+      ],
+      [
+       114.5,
+       167
+      ],
+      [
+       115.5,
+       191
+      ],
+      [
+       116.5,
+       218
+      ],
+      [
+       117.5,
+       251
+      ],
+      [
+       118.5,
+       285
+      ],
+      [
+       119.5,
+       327
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "over",
+     "stat": "points",
+     "team": "DET"
+    },
+    {
+     "alts": [
+      [
+       99.5,
+       367
+      ],
+      [
+       100.5,
+       324
+      ],
+      [
+       101.5,
+       280
+      ],
+      [
+       102.5,
+       245
+      ],
+      [
+       103.5,
+       213
+      ],
+      [
+       104.5,
+       185
+      ],
+      [
+       105.5,
+       159
+      ],
+      [
+       106.5,
+       140
+      ],
+      [
+       107.5,
+       122
+      ],
+      [
+       108.5,
+       107
+      ],
+      [
+       111.5,
+       -140
+      ],
+      [
+       112.5,
+       -160
+      ],
+      [
+       113.5,
+       -184
+      ],
+      [
+       114.5,
+       -212
+      ],
+      [
+       115.5,
+       -244
+      ],
+      [
+       116.5,
+       -283
+      ],
+      [
+       117.5,
+       -331
+      ],
+      [
+       118.5,
+       -383
+      ],
+      [
+       119.5,
+       -452
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "draftkings",
+     "entity": "home",
+     "kind": "game",
+     "line": 110.5,
+     "name": "Total",
+     "oddID": "points-home-game-ou-under",
+     "odds": -122,
+     "opposing": "points-home-game-ou-over",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       99.5,
+       367
+      ],
+      [
+       100.5,
+       324
+      ],
+      [
+       101.5,
+       280
+      ],
+      [
+       102.5,
+       245
+      ],
+      [
+       103.5,
+       213
+      ],
+      [
+       104.5,
+       185
+      ],
+      [
+       105.5,
+       159
+      ],
+      [
+       106.5,
+       140
+      ],
+      [
+       107.5,
+       122
+      ],
+      [
+       108.5,
+       107
+      ],
+      [
+       110.5,
+       -122
+      ],
+      [
+       111.5,
+       -140
+      ],
+      [
+       112.5,
+       -160
+      ],
+      [
+       113.5,
+       -184
+      ],
+      [
+       114.5,
+       -212
+      ],
+      [
+       115.5,
+       -244
+      ],
+      [
+       116.5,
+       -283
+      ],
+      [
+       117.5,
+       -331
+      ],
+      [
+       118.5,
+       -383
+      ],
+      [
+       119.5,
+       -452
+      ]
+     ],
+     "seenSince": "2026-11-03T13:04:04Z",
+     "side": "under",
+     "stat": "points",
+     "team": "DET"
+    }
+   ],
+   "pulledAt": "2026-11-03T13:04:04Z",
+   "start": "2026-11-05T00:00:00.000Z",
+   "started": false
+  }
+ }
+}
