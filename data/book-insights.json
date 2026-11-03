@@ -4803,6 +4803,16 @@
    },
    "single": "win"
   },
+  "2026-11-02": {
+   "parlay": "loss",
+   "personal": {
+    "Beekie": "win",
+    "Kev": "win",
+    "Mio": "loss",
+    "Sulliver": "loss"
+   },
+   "single": "loss"
+  },
   "games": {
    "15lO1kNolbn7vpAPOsEO": {
     "parlay": {
@@ -4854,6 +4864,20 @@
      ]
     }
    },
+   "9PQa56YfM8RaMtAsnTF5": {
+    "parlay": {
+     "date": "2026-11-02",
+     "r": "loss",
+     "teams": [
+      "DET"
+     ]
+    },
+    "single": {
+     "date": "2026-11-02",
+     "r": "loss",
+     "teams": []
+    }
+   },
    "A69luVTP67vxvloyiLL2": {
     "parlay": {
      "date": "2026-10-30",
@@ -4866,6 +4890,22 @@
      "date": "2026-10-30",
      "r": "win",
      "teams": []
+    }
+   },
+   "Ddy2Au8EFUCefHrsfPYE": {
+    "parlay": {
+     "date": "2026-11-02",
+     "r": "win",
+     "teams": [
+      "MIN"
+     ]
+    },
+    "single": {
+     "date": "2026-11-02",
+     "r": "win",
+     "teams": [
+      "MIN"
+     ]
     }
    },
    "FNszYqIYdfrKiqFx0PWs": {
@@ -4917,6 +4957,36 @@
      ]
     }
    },
+   "GwDgzho9v66QVQYHgCqi": {
+    "parlay": {
+     "date": "2026-11-02",
+     "r": "win",
+     "teams": [
+      "NYK"
+     ]
+    },
+    "single": {
+     "date": "2026-11-02",
+     "r": "win",
+     "teams": []
+    }
+   },
+   "Jg3CRvDpuxMlUr1ZW4Rn": {
+    "parlay": {
+     "date": "2026-11-02",
+     "r": "win",
+     "teams": [
+      "PHI"
+     ]
+    },
+    "single": {
+     "date": "2026-11-02",
+     "r": "win",
+     "teams": [
+      "PHI"
+     ]
+    }
+   },
    "LRhY8kYfHreD6OVlzYzs": {
     "parlay": {
      "date": "2026-10-29",
@@ -4947,6 +5017,22 @@
      "r": "loss",
      "teams": [
       "MIN"
+     ]
+    }
+   },
+   "MP6jmrA6TjjcZeqhsg4u": {
+    "parlay": {
+     "date": "2026-11-02",
+     "r": "win",
+     "teams": [
+      "HOU"
+     ]
+    },
+    "single": {
+     "date": "2026-11-02",
+     "r": "loss",
+     "teams": [
+      "BOS"
      ]
     }
    },
@@ -4995,6 +5081,38 @@
      "r": "win",
      "teams": [
       "MIA"
+     ]
+    }
+   },
+   "TI1m4C9SiNRwD7Ho7yJc": {
+    "parlay": {
+     "date": "2026-11-02",
+     "r": "loss",
+     "teams": [
+      "TOR"
+     ]
+    },
+    "single": {
+     "date": "2026-11-02",
+     "r": "loss",
+     "teams": [
+      "TOR"
+     ]
+    }
+   },
+   "TkZGexF6r46bA5nqGbL0": {
+    "parlay": {
+     "date": "2026-11-02",
+     "r": "loss",
+     "teams": [
+      "CLE"
+     ]
+    },
+    "single": {
+     "date": "2026-11-02",
+     "r": "loss",
+     "teams": [
+      "CLE"
      ]
     }
    },
@@ -5056,6 +5174,22 @@
      "teams": []
     }
    },
+   "cyryOmeXfq9UGiG2DjCm": {
+    "parlay": {
+     "date": "2026-11-02",
+     "r": "loss",
+     "teams": [
+      "SAS"
+     ]
+    },
+    "single": {
+     "date": "2026-11-02",
+     "r": "loss",
+     "teams": [
+      "SAS"
+     ]
+    }
+   },
    "eYPZAppxaIOOGJo3sl95": {
     "parlay": {
      "date": "2026-10-30",
@@ -5067,6 +5201,20 @@
     "single": {
      "date": "2026-10-30",
      "r": "win",
+     "teams": []
+    }
+   },
+   "gdPxIUkZq9h39cSvqIm3": {
+    "parlay": {
+     "date": "2026-11-02",
+     "r": "loss",
+     "teams": [
+      "DEN"
+     ]
+    },
+    "single": {
+     "date": "2026-11-02",
+     "r": "loss",
      "teams": []
     }
    },
@@ -5118,6 +5266,22 @@
      ]
     }
    },
+   "lfjZpbqz68gg91nvA5Ln": {
+    "parlay": {
+     "date": "2026-11-02",
+     "r": "loss",
+     "teams": [
+      "DAL"
+     ]
+    },
+    "single": {
+     "date": "2026-11-02",
+     "r": "loss",
+     "teams": [
+      "DAL"
+     ]
+    }
+   },
    "ln9zfUaeeHXXmSA5ykMh": {
     "parlay": {
      "date": "2026-10-30",
@@ -5131,6 +5295,22 @@
      "r": "loss",
      "teams": [
       "BOS"
+     ]
+    }
+   },
+   "neJeUaqX3B8H7qGMIDXS": {
+    "parlay": {
+     "date": "2026-11-02",
+     "r": "loss",
+     "teams": [
+      "GSW"
+     ]
+    },
+    "single": {
+     "date": "2026-11-02",
+     "r": "loss",
+     "teams": [
+      "GSW"
      ]
     }
    },
@@ -5166,6 +5346,38 @@
      ]
     }
    },
+   "t9XBmzA9kwjZd3iGyDid": {
+    "parlay": {
+     "date": "2026-11-02",
+     "r": "win",
+     "teams": [
+      "LAL"
+     ]
+    },
+    "single": {
+     "date": "2026-11-02",
+     "r": "win",
+     "teams": [
+      "LAL"
+     ]
+    }
+   },
+   "vF7mrlCAIjmb7rtvfi4s": {
+    "parlay": {
+     "date": "2026-11-02",
+     "r": "win",
+     "teams": [
+      "WAS"
+     ]
+    },
+    "single": {
+     "date": "2026-11-02",
+     "r": "win",
+     "teams": [
+      "WAS"
+     ]
+    }
+   },
    "vQ0Du8GGuc71OPAZhgRG": {
     "parlay": {
      "date": "2026-10-30",
@@ -5178,6 +5390,22 @@
      "date": "2026-10-30",
      "r": "loss",
      "teams": []
+    }
+   },
+   "x4q7hhvxJ5L0a4mILVVZ": {
+    "parlay": {
+     "date": "2026-11-02",
+     "r": "loss",
+     "teams": [
+      "MEM"
+     ]
+    },
+    "single": {
+     "date": "2026-11-02",
+     "r": "loss",
+     "teams": [
+      "MEM"
+     ]
     }
    }
   }
