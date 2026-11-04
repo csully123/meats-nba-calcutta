@@ -381,6 +381,12 @@ td.legs div{white-space:nowrap}
 /* Mega Bonus celebration */
 .mega-overlay{position:fixed;inset:0;z-index:80;background:rgba(5,8,14,.86);display:grid;place-items:center;text-align:center;padding:24px;cursor:pointer}
 .mega-overlay canvas{position:absolute;inset:0;width:100%;height:100%}
+/* one-time notice for one player, set in CFG.notice */
+.notice-overlay{position:fixed;inset:0;z-index:85;background:#000;display:grid;place-items:center;padding:20px;cursor:pointer}
+.notice-card{display:flex;flex-direction:column;align-items:center;gap:18px;max-width:720px;width:100%;animation:megain .6s cubic-bezier(.2,1.2,.4,1) both}
+.notice-card img{width:100%;max-width:560px;height:auto;display:block;border-radius:6px;box-shadow:0 30px 80px -30px rgba(255,255,255,.25)}
+.notice-card p{margin:0;font-family:var(--display);font-size:clamp(20px,5.5vw,32px);font-weight:800;letter-spacing:.02em;text-transform:uppercase;color:#fff;text-align:center;line-height:1.15}
+.notice-card .dismiss{border:1.5px solid #fff;color:#fff;background:none;border-radius:999px;padding:8px 18px;font:700 12px var(--body);letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
 .mega-card{position:relative;z-index:1;animation:megain .7s cubic-bezier(.2,1.4,.4,1) both}
 .mega-card .eyebrow{color:#ffd166;letter-spacing:.3em}
 .mega-card h1{font-family:var(--display);font-size:clamp(48px,14vw,120px);line-height:.95;text-transform:uppercase;font-weight:800;background:linear-gradient(180deg,#fff2b3,#ffd166 45%,#ff7b54);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 24px rgba(255,160,60,.45));margin:6px 0 10px}
@@ -491,6 +497,8 @@ td.legs div{white-space:nowrap}
     tokens:{week:1.5,cupFinal:1.5,christmas:1.5,r1:1.5,r2:2,cf:2.5,finals:3,mega:5},christmasDate:'2026-12-25',
     // Regular-season prizes, filled in by the commissioner when the regular season ends (names exactly as above).
     prizes:{first:null,firstMult:3,second:null,secondMult:2},
+    // A one-time full-screen notice for one person (null when there is none). Shown once per phone, to that name only.
+    notice:{id:'mio-2026-11-04',player:'Mio',image:'../assets/commissioner.png',text:"Don't test the commissioner Mio... he's always watching..."},
     // Point adjustments outside of bets: the regular-season winner's 25, applied at the moment given.
     adjustments:[]};
   const POOL_EMAIL='pool@meats-calcutta-picks.firebaseapp.com';
@@ -864,7 +872,7 @@ td.legs div{white-space:nowrap}
   function renderStatus(){const el=$('status');if(!S.ready)return;const so=$('signout');
     if(!S.db){el.className='status warn';el.textContent='Bets are not connected, the book is read-only.';return;}
     el.className='status';const fo=S.me&&stateOf(S.me).fouledOut;el.textContent=(S.pulled?`Lines as of ${fmtStamp.format(new Date(S.pulled))} ET. `:'')+(S.me?(fo?`${S.me} has fouled out and is out of the running. No more bets this season; you can still watch the board.`:`Betting as ${S.me}.`):'Choose your name above to bet.');if(fo)el.className='status warn';so.hidden=!S.signedIn;el.appendChild(so);}
-  function render(){renderWho();renderTabs();renderBoard();renderTrend();renderBook();renderBets();renderStatsTab();renderStatus();renderSlip();checkMega();}
+  function render(){renderWho();renderTabs();renderBoard();renderTrend();renderBook();renderBets();renderStatsTab();renderStatus();renderSlip();checkMega();checkNotice();}
   // ---------- chance-to-win trend chart ----------
   const TREND_COLORS={Kev:'#ff5a5f',Beekie:'#4f8cff',Mio:'#f5b942',Sulliver:'#3fcf8e'};
   const TREND_RANGES=[['1W',7],['2W',14],['1M',30],['3M',91],['All',0]];
@@ -919,6 +927,12 @@ td.legs div{white-space:nowrap}
       <p class="hint">Refreshed every morning${u?`; last updated ${esc(u)} ET`:''}.</p>
       <button type="button" class="dismiss">Got it</button></div>`;
     document.body.appendChild(ov);const close=()=>ov.remove();ov.addEventListener('click',e=>{if(e.target===ov||e.target.closest('.dismiss'))close();});}
+  // A one-time full-screen notice for one person: CFG.notice = {id, player, image, text}. Shown the first time that
+  // person opens the book (per phone), dismissed with a tap, never shown again on that phone, never shown to anyone else.
+  function checkNotice(){const n=CFG.notice;if(!n||!S.me||!S.ready||S.me!==n.player||document.querySelector('.notice-overlay,.mega-overlay'))return;
+    const key='bk.notice.'+n.id;try{if(localStorage.getItem(key))return;}catch(e){return;}
+    const ov=document.createElement('div');ov.className='notice-overlay';ov.innerHTML=`<div class="notice-card"><img src="${esc(n.image)}" alt=""><p>${esc(n.text)}</p><button type="button" class="dismiss">Back to the book</button></div>`;
+    const close=()=>{try{localStorage.setItem(key,new Date().toISOString());}catch(e){}ov.remove();};ov.addEventListener('click',close);document.body.appendChild(ov);}
   function checkMega(){if(!S.me||document.querySelector('.mega-overlay'))return;
     const hit=S.wagers.find(w=>w.player===S.me&&w.boost&&w.boost.id==='mega'&&w.status==='win');if(!hit)return;
     let seen=null;try{seen=localStorage.getItem('bk.megaSeen');}catch(e){}if(seen===hit.id)return;
