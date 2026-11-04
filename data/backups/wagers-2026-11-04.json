@@ -1,5 +1,5 @@
 {
- "backedUpAt": "2026-11-04T08:56:22Z",
+ "backedUpAt": "2026-11-04T13:37:10Z",
  "count": 30,
  "wagers": {
   "14UdpQ6CLjt5ixeLfELL": {
@@ -1395,7 +1395,7 @@
    "status": "loss"
   },
   "lIRKFw2r0CPBpdounA8b": {
-   "_updated": "2026-11-03T08:25:32.062854Z",
+   "_updated": "2026-11-04T13:35:52.704620Z",
    "boost": null,
    "createdAt": "2026-11-02T20:54:06.344Z",
    "eventID": "mQKMT2SpINxADaG0ykeC",
@@ -1403,7 +1403,7 @@
    "gameDate": "2026-11-02",
    "gameStart": "2026-11-03T00:30:00.000Z",
    "legResults": [
-    "void",
+    "win",
     "void"
    ],
    "legs": [
@@ -1442,15 +1442,15 @@
      "team": "ATL"
     }
    ],
-   "net": 0,
-   "payout": 30,
+   "net": 14.28,
+   "payout": 44.28,
    "placedAt": "2026-11-02T20:54:05.650Z",
    "player": "Mio",
    "series": null,
-   "settledAt": "2026-11-03T08:25:31Z",
+   "settledAt": "2026-11-04T13:35:52Z",
    "stage": "regular",
    "stake": 30,
-   "status": "void"
+   "status": "win"
   },
   "oPL5yBDyi09X5JtQmpcg": {
    "_updated": "2026-11-03T08:25:32.234645Z",
