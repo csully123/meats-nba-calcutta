@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T12:38:49+00:00",
+ "updated": "2026-11-04T12:33:52+00:00",
  "days": {
   "2026-11-04": {
    "401909922": {
@@ -1042,6 +1042,155 @@
      "MIA first leg of a back-to-back (plays in San Francisco tomorrow)",
      "LAC playing its 3rd game in 4 nights",
      "LAC playing its 4th game in 6 nights"
+    ]
+   }
+  },
+  "2026-11-05": {
+   "401909936": {
+    "matchup": "ORL at PHX",
+    "tipET": "9:00 PM ET",
+    "away": {
+     "team": "ORL",
+     "site": "away",
+     "tipLocal": "7:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 4,
+     "restDays": 2,
+     "lastGame": {
+      "opp": "WAS",
+      "where": "home",
+      "result": "L 94-103",
+      "margin": -9,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-02",
+     "tzShiftSinceLast": -2.0,
+     "streak": {
+      "kind": "roadTrip",
+      "game": 1,
+      "of": 4
+     },
+     "nextGame": {
+      "date": "2026-11-07",
+      "opp": "GSW",
+      "where": "away",
+      "daysUntil": 2
+     },
+     "notes": [
+      "ORL game 1 of a 4-game road trip"
+     ]
+    },
+    "home": {
+     "team": "PHX",
+     "site": "home",
+     "tipLocal": "7:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 3,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 4,
+     "restDays": 0,
+     "lastGameDate": "2026-11-04",
+     "backToBack": true,
+     "streak": {
+      "kind": "homestand",
+      "game": 2,
+      "of": 5
+     },
+     "nextGame": {
+      "date": "2026-11-07",
+      "opp": "HOU",
+      "where": "home",
+      "daysUntil": 2
+     },
+     "notes": [
+      "PHX on a back-to-back with no travel (played at home last night)",
+      "PHX playing its 3rd game in 4 nights"
+     ]
+    },
+    "notes": [
+     "Rest edge ORL: 2 days off vs 0 for PHX (PHX on a back-to-back)",
+     "ORL game 1 of a 4-game road trip",
+     "PHX on a back-to-back with no travel (played at home last night)",
+     "PHX playing its 3rd game in 4 nights"
+    ]
+   },
+   "401909937": {
+    "matchup": "MIA at GSW",
+    "tipET": "10:00 PM ET",
+    "away": {
+     "team": "MIA",
+     "site": "away",
+     "tipLocal": "7:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 3,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 4,
+     "restDays": 0,
+     "lastGameDate": "2026-11-04",
+     "backToBack": true,
+     "travel": {
+      "from": "Los Angeles",
+      "to": "San Francisco",
+      "miles": 348,
+      "estLanding": "1:33 am",
+      "estHotel": "2:18 am",
+      "tzShift": 0.0
+     },
+     "tzShiftSinceLast": 0.0,
+     "streak": {
+      "kind": "roadTrip",
+      "game": 3,
+      "of": 5
+     },
+     "nextGame": {
+      "date": "2026-11-08",
+      "opp": "SAC",
+      "where": "away",
+      "daysUntil": 3
+     },
+     "notes": [
+      "MIA on a back-to-back: played in Los Angeles last night, flew 348 miles and landed in San Francisco around 1:33 am (late); estimate, check the news for delays",
+      "MIA playing its 3rd game in 4 nights",
+      "MIA game 3 of a 5-game road trip"
+     ]
+    },
+    "home": {
+     "team": "GSW",
+     "site": "home",
+     "tipLocal": "7:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 4,
+     "restDays": 2,
+     "lastGame": {
+      "opp": "PHX",
+      "where": "home",
+      "result": "W 116-113",
+      "margin": 3,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-02",
+     "streak": {
+      "kind": "homestand",
+      "game": 4,
+      "of": 6
+     },
+     "nextGame": {
+      "date": "2026-11-07",
+      "opp": "ORL",
+      "where": "home",
+      "daysUntil": 2
+     },
+     "notes": []
+    },
+    "notes": [
+     "Rest edge GSW: 2 days off vs 0 for MIA (MIA on a back-to-back)",
+     "MIA on a back-to-back: played in Los Angeles last night, flew 348 miles and landed in San Francisco around 1:33 am (late); estimate, check the news for delays",
+     "MIA playing its 3rd game in 4 nights",
+     "MIA game 3 of a 5-game road trip"
     ]
    }
   }
