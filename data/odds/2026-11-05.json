@@ -1,0 +1,41 @@
+{
+ "date": "2026-11-05",
+ "games": {
+  "ZwreqgOw8hyXBglasOGp": {
+   "away": "ORL",
+   "awayColor": "#007DC5",
+   "awayName": "Orlando Magic",
+   "cancelled": false,
+   "date": "2026-11-05",
+   "display": "",
+   "ended": false,
+   "eventID": "ZwreqgOw8hyXBglasOGp",
+   "finalized": false,
+   "home": "PHX",
+   "homeColor": "#E56020",
+   "homeName": "Phoenix Suns",
+   "markets": [],
+   "pulledAt": "2026-11-04T13:07:31Z",
+   "start": "2026-11-06T02:00:00.000Z",
+   "started": false
+  },
+  "vWj4zYDAImhO5kpPxaiD": {
+   "away": "MIA",
+   "awayColor": "#98002E",
+   "awayName": "Miami Heat",
+   "cancelled": false,
+   "date": "2026-11-05",
+   "display": "",
+   "ended": false,
+   "eventID": "vWj4zYDAImhO5kpPxaiD",
+   "finalized": false,
+   "home": "GSW",
+   "homeColor": "#FDB927",
+   "homeName": "Golden State Warriors",
+   "markets": [],
+   "pulledAt": "2026-11-04T13:07:31Z",
+   "start": "2026-11-06T03:00:00.000Z",
+   "started": false
+  }
+ }
+}
