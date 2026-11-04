@@ -499,8 +499,6 @@ td.legs div{white-space:nowrap}
     prizes:{first:null,firstMult:3,second:null,secondMult:2},
     // A one-time full-screen notice for one person (null when there is none). Shown once per phone, to that name only.
     notice:{id:'mio-2026-11-04',player:'Mio',image:'../assets/commissioner.png',text:"Don't test the commissioner Mio... he's always watching..."},
-    // Temporary preview for the commissioner, same notice shown to Sulliver once. Remove after he has seen it.
-    noticePreview:{id:'sulliver-preview-2026-11-04',player:'Sulliver',image:'../assets/commissioner.png',text:"Don't test the commissioner Mio... he's always watching..."},
     // Point adjustments outside of bets: the regular-season winner's 25, applied at the moment given.
     adjustments:[]};
   const POOL_EMAIL='pool@meats-calcutta-picks.firebaseapp.com';
@@ -931,7 +929,7 @@ td.legs div{white-space:nowrap}
     document.body.appendChild(ov);const close=()=>ov.remove();ov.addEventListener('click',e=>{if(e.target===ov||e.target.closest('.dismiss'))close();});}
   // A one-time full-screen notice for one person: CFG.notice = {id, player, image, text}. Shown the first time that
   // person opens the book (per phone), dismissed with a tap, never shown again on that phone, never shown to anyone else.
-  function checkNotice(){const n=[CFG.notice,CFG.noticePreview].find(x=>x&&S.me===x.player);if(!n||!S.me||!S.ready||document.querySelector('.notice-overlay,.mega-overlay'))return;
+  function checkNotice(){const n=[CFG.notice].find(x=>x&&S.me===x.player);if(!n||!S.me||!S.ready||document.querySelector('.notice-overlay,.mega-overlay'))return;
     const key='bk.notice.'+n.id;try{if(localStorage.getItem(key))return;}catch(e){return;}
     const ov=document.createElement('div');ov.className='notice-overlay';ov.innerHTML=`<div class="notice-card"><img src="${esc(n.image)}" alt=""><p>${esc(n.text)}</p><button type="button" class="dismiss">Back to the book</button></div>`;
     const close=()=>{try{localStorage.setItem(key,new Date().toISOString());}catch(e){}ov.remove();};ov.addEventListener('click',close);document.body.appendChild(ov);}
