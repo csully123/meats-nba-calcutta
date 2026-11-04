@@ -642,6 +642,103 @@
     "updated": "2026-11-02T14:03:56Z",
     "why": "This is a number that has not caught up to the injury report. OKC has lost by 24 and 21 since Holmgren, Williams and Wallace went down, Caruso is out too, and the Thunder rank 22nd in net rating and 29th in eFG. Cleveland is 3-0 at home with the 4th-best offensive rating at 121.0, and it just got a full four-quarter game from its bigs. Laying 4.5 at a near-even price is the best value on the board."
    }
+  },
+  "2026-11-04": {
+   "parlay": {
+    "eventID": "zH5yS1D0GwXIrfQKQt2p",
+    "legs": [
+     {
+      "label": "Under 219.5",
+      "line": 219.5,
+      "oddID": "points-all-game-ou-under",
+      "odds": -114
+     },
+     {
+      "label": "Tyrese Maxey over 23.5 points",
+      "line": 23.5,
+      "oddID": "points-TYRESE_MAXEY_1_NBA-game-ou-over",
+      "odds": -110
+     }
+    ],
+    "price": 258,
+    "why": "Detroit ranks 1st in defensive rating at 100.3, Philadelphia 4th at 107.8, and they sit 24th and 23rd in pace. Their first meeting ended 106-93 for 199 total points, and Maxey still scored 29. He has at least 26 in every game, per SI, with a 34.9% usage, and Duren's absence takes away Detroit's rim protection. The script is a low-scoring grinder in which Philadelphia's offense runs through him, so both legs win together."
+   },
+   "personal": {
+    "Beekie": {
+     "eventID": "CQNL3A3h6mu0wQjOr7Ir",
+     "legs": [
+      {
+       "label": "Luka Doncic over 34.5 points",
+       "line": 34.5,
+       "oddID": "points-LUKA_DONCIC_1_NBA-game-ou-over",
+       "odds": 102
+      },
+      {
+       "label": "Over 234.5",
+       "line": 234.5,
+       "oddID": "points-all-game-ou-over",
+       "odds": -115
+      }
+     ],
+     "price": 278,
+     "why": "Your guard-points-plus-total idea is fine; the third leg has been the killer, so here it is in two. Doncic averages 40.0 with Sacramento 28th in opponent eFG, and both teams' games average about 238 points. You still get near +280, without needing a third thing to go right."
+    },
+    "Kev": {
+     "eventID": "GqDpw8Z3lOA3FviOWmjb",
+     "legs": [
+      {
+       "label": "Cavaliers moneyline",
+       "line": null,
+       "oddID": "points-away-game-ml-away",
+       "odds": 112
+      }
+     ],
+     "price": 112,
+     "why": "You are a road-side single bettor who is 2-0 on underdogs, and tonight's best fit is Cleveland at plus money. The Cavaliers hold a +5.4 net rating to Oklahoma City's -4.5, and the Thunder give up 17.0 threes a game with three rotation players out. Near even and clean, the exact shape that has you at 4-1."
+    },
+    "Mio": {
+     "eventID": "YQH7ORjpj8NiPjJ4CYQw",
+     "legs": [
+      {
+       "label": "Grizzlies -1.5 (alt)",
+       "line": -1.5,
+       "oddID": "points-home-game-sp-home",
+       "odds": -220
+      },
+      {
+       "label": "Cameron Boozer over 29.5 pts+reb+ast (alt)",
+       "line": 29.5,
+       "oddID": "points+rebounds+assists-CAMERON_BOOZER_1_NBA-game-ou-over",
+       "odds": -186
+      }
+     ],
+     "price": 124,
+     "why": "This is your recipe with your favorite team: a spread bought down and a combo over bought down. Memphis has a 16-point net rating edge on a Pacers team on its third game in four nights, and Boozer averages about 35 combined with 37.7 over his last three. Two safe numbers, two legs, modest plus money."
+    },
+    "Sulliver": {
+     "eventID": "m4ysfZP3utX32yU8fPQ6",
+     "legs": [
+      {
+       "label": "Victor Wembanyama over 26.5 points",
+       "line": 26.5,
+       "oddID": "points-VICTOR_WEMBANYAMA_1_NBA-game-ou-over",
+       "odds": -112
+      }
+     ],
+     "price": -112,
+     "why": "You have chased big names on props, but parlays and moved numbers have cost you, so take the clean version: one star over at the main line. Wembanyama is at 30.3 over his last three on a 40.9% usage, and Dallas has only Gafford inside with Lively out. No alt, no extra legs."
+    }
+   },
+   "single": {
+    "eventID": "jnlQn64ndQfsw9ig3V4O",
+    "label": "Jamal Murray over 24.5 points (alt)",
+    "line": 24.5,
+    "oddID": "points-JAMAL_MURRAY_1_NBA-game-ou-over",
+    "odds": -102,
+    "team": "DEN",
+    "why": "Toronto allows a league-worst 41.3% from three and 56.8% opponent eFG, and it arrives on a third game in four nights, third stop of a road trip, at altitude. Murray is averaging 31.6 with a 71.1% true shooting mark and 5.4 threes while Jokic is cold from deep, so the shots keep coming to him. This number sits seven points under his average at nearly even money, and the market has not caught up to his form."
+   },
+   "updated": "2026-11-04T13:52:29Z"
   }
  },
  "games": {
@@ -958,6 +1055,218 @@
     "why": "Tatum is averaging 7.0 assists and has hit seven or more in four of five games per TheSpread, and Orlando gives up 30.8 assists a game in our numbers. With Suggs and Isaac out, the Magic lack the defenders to stop Boston's actions at the point, so the offense runs through Tatum's reads."
    },
    "updated": "2026-11-01T13:51:11Z"
+  },
+  "3RNJpmr3kk5EPsuzzgwI": {
+   "angles": [
+    "Knueppel probable, season debut",
+    "CHA 30th in net rating, 30th pace",
+    "CHA under 100 points in four of eight",
+    "BKN 3rd game in 4 nights",
+    "CHA 4th game in 6 nights"
+   ],
+   "away": "CHA",
+   "blurb": "Charlotte is 3-5 and has lost four straight, the last a 124-91 home beating by Detroit, while Brooklyn is 1-6 after a 103-90 loss at New York. The Hornets are 30th in net rating at -14.6 and 30th in pace, and the Nets are 23rd at -8.8. Kon Knueppel is probable for his season debut, per Last Word on Sports, likely on a managed workload. Both teams are on heavy schedules. Charlotte -3.5 and 213.5 prices in that return, so the lean is Brooklyn and the under.",
+   "date": "2026-11-04",
+   "home": "BKN",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Left hamstring strain; a season debut that adds shooting, though his workload may be managed.",
+     "player": "Kon Knueppel",
+     "status": "Probable",
+     "team": "CHA"
+    },
+    {
+     "impact": "Medium",
+     "note": "Left calf management; his season has been limited so far.",
+     "player": "Coby White",
+     "status": "Probable",
+     "team": "CHA"
+    },
+    {
+     "impact": "Medium",
+     "note": "Right hamstring; Charlotte loses frontcourt depth.",
+     "player": "Grant Williams",
+     "status": "Out",
+     "team": "CHA"
+    },
+    {
+     "impact": "Medium",
+     "note": "Right leg; Brooklyn loses a young ball handler, leaving more on Traore.",
+     "player": "Egor Demin",
+     "status": "Out",
+     "team": "BKN"
+    }
+   ],
+   "parlay": {
+    "legs": [
+     {
+      "label": "Nets +3.5",
+      "line": 3.5,
+      "oddID": "points-home-game-sp-home",
+      "odds": -106
+     },
+     {
+      "label": "Under 213.5",
+      "line": 213.5,
+      "oddID": "points-all-game-ou-under",
+      "odds": -112
+     }
+    ],
+    "price": 268,
+    "why": "Two bottom-five offenses, with Charlotte at the league's slowest pace and scoring 95.6 per game. Both shot 38% in their last outings, so a low-scoring game keeps a modest favorite within reach of the number and makes the points more valuable."
+   },
+   "single": {
+    "label": "Nets +3.5",
+    "line": 3.5,
+    "oddID": "points-home-game-sp-home",
+    "odds": -106,
+    "team": "BKN",
+    "why": "Charlotte's -14.6 net rating is the league's worst, and laying points on the road with a team that scored 91 Monday is a stretch. The market is paying for Knueppel's return, but a debut on a likely pitch count does not fix a 30th-ranked offense."
+   },
+   "updated": "2026-11-04T13:52:29Z"
+  },
+  "5V7FXpUox0doMPLR4msO": {
+   "angles": [
+    "LAC last in opponent eFG, turnovers",
+    "Giannis probable, wrist sprain",
+    "Giannis 15.7 boards over last three",
+    "MIA first leg of back-to-back",
+    "LAC 3rd game in 4 nights"
+   ],
+   "away": "MIA",
+   "blurb": "Miami is 2-5 after a 138-117 loss to the Lakers, with its two wins at Atlanta and against Indiana, and the Clippers are 1-6 after a 125-118 loss to Toronto. Los Angeles ranks 28th in net rating at -12.7, last in opponent eFG and last in turnover rate. The Heat play the 3rd-fastest pace but allow 41.0% from three, and this is game two of a five-game trip with San Francisco tomorrow. Giannis is probable with a wrist sprain. Miami -4.5 and 233.5 trusts the road team, and the lean is Giannis on the glass.",
+   "date": "2026-11-04",
+   "home": "LAC",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Right wrist sprain; expected to play, per NBC Sports.",
+     "player": "Giannis Antetokounmpo",
+     "stats": "27.3 pts, 13.5 reb, 6.7 ast this season",
+     "status": "Probable",
+     "team": "MIA"
+    },
+    {
+     "impact": "Low",
+     "note": "Quadriceps; a reserve wing.",
+     "player": "Myron Gardner",
+     "status": "Questionable",
+     "team": "MIA"
+    },
+    {
+     "impact": "High",
+     "note": "Right knee; Los Angeles loses a starting scorer.",
+     "player": "Bradley Beal",
+     "status": "Out",
+     "team": "LAC"
+    },
+    {
+     "impact": "High",
+     "note": "Right Achilles; another primary scorer missing, leaving more on Garland.",
+     "player": "Brandon Ingram",
+     "status": "Out",
+     "team": "LAC"
+    },
+    {
+     "impact": "Low",
+     "note": "Right foot; center depth.",
+     "player": "Yanic Konan Niederhauser",
+     "status": "Out",
+     "team": "LAC"
+    }
+   ],
+   "parlay": {
+    "legs": [
+     {
+      "label": "Heat -4.5",
+      "line": -4.5,
+      "oddID": "points-away-game-sp-away",
+      "odds": -115
+     },
+     {
+      "label": "Giannis Antetokounmpo over 11.5 rebounds",
+      "line": 11.5,
+      "oddID": "rebounds-GIANNIS_ANTETOKOUNMPO_1_NBA-game-ou-over",
+      "odds": -114
+     }
+    ],
+    "price": 251,
+    "why": "The Clippers give away possessions, last in turnover rate and last in opponent eFG. Miami cashes extra trips while Giannis owns the glass, and a Heat cover likely means he controlled the paint and the boards."
+   },
+   "single": {
+    "label": "Giannis Antetokounmpo over 11.5 rebounds",
+    "line": 11.5,
+    "oddID": "rebounds-GIANNIS_ANTETOKOUNMPO_1_NBA-game-ou-over",
+    "odds": -114,
+    "team": "MIA",
+    "why": "Giannis is averaging 13.5 rebounds and 15.7 over his last three, and Miami's 3rd-fastest pace creates extra chances. Rebounding is the part of his game the wrist sprain should hurt least, and this line sits two below his average."
+   },
+   "updated": "2026-11-04T13:52:29Z"
+  },
+  "7mhQN16pLsaHgcUAHEpG": {
+   "angles": [
+    "CHI allows 39.7% from three",
+    "Brunson 38 in last meeting",
+    "Bulls lost five straight, three by 19-plus",
+    "Claxton may debut, questionable",
+    "Towns 14.2 rebounds, CHI lacks size"
+   ],
+   "away": "CHI",
+   "blurb": "New York is 3-4 and beat Brooklyn 103-90 Monday, while Chicago is 1-6 on a five-game slide, with losses by 19, 35 and 43 points, per Yahoo. The Bulls rank 28th in defensive rating at 120.9, give up 39.7% from three and play at the 2nd pace. In the first meeting the Knicks won 133-127 after trailing by 19, with Brunson scoring 38, per Heavy. Chicago also closes a three-game trip. Knicks -12.5 and 234.5 expects a rout, so the lean goes to New York's scorers rather than the number.",
+   "date": "2026-11-04",
+   "home": "NYK",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Left hamstring strain; he has been out over a month and would make his Bulls debut, per Heavy.",
+     "player": "Nic Claxton",
+     "status": "Questionable",
+     "team": "CHI"
+    },
+    {
+     "impact": "Medium",
+     "note": "Left finger sprain; he has filled in at center and has not missed a game.",
+     "player": "Jalen Smith",
+     "stats": "11.7 pts, 8.7 reb this season",
+     "status": "Probable",
+     "team": "CHI"
+    },
+    {
+     "impact": "Medium",
+     "note": "Right ankle soreness; New York would lose a starting rebounder and connector.",
+     "player": "Josh Hart",
+     "status": "Questionable",
+     "team": "NYK"
+    }
+   ],
+   "parlay": {
+    "legs": [
+     {
+      "label": "Jalen Brunson over 24.5 points",
+      "line": 24.5,
+      "oddID": "points-JALEN_BRUNSON_1_NBA-game-ou-over",
+      "odds": -106
+     },
+     {
+      "label": "Karl-Anthony Towns over 12.5 rebounds",
+      "line": 12.5,
+      "oddID": "rebounds-KARLANTHONY_TOWNS_1_NBA-game-ou-over",
+      "odds": -110
+     }
+    ],
+    "price": 271,
+    "why": "Chicago's pace adds possessions and misses, and Yahoo flags its lack of inside size. Towns is averaging 14.2 boards, and Brunson feasted last meeting. Betting the two Knicks stars rather than a 12.5-point spread avoids needing a big final margin."
+   },
+   "single": {
+    "label": "Jalen Brunson over 24.5 points",
+    "line": 24.5,
+    "oddID": "points-JALEN_BRUNSON_1_NBA-game-ou-over",
+    "odds": -106,
+    "team": "NYK",
+    "why": "Brunson dropped 38 on this defense a week ago and is averaging 27 with 4.3 threes over his last three. Chicago gives up 39.7% from deep and plays fast, which means more possessions for a 38.1% usage guard. The number sits below his season average."
+   },
+   "updated": "2026-11-04T13:52:29Z"
   },
   "8G8Zcws9ZpYrEyvqTRIK": {
    "away": "WAS",
@@ -1284,6 +1593,84 @@
    ],
    "updated": "2026-10-26T14:03:59Z"
   },
+  "CQNL3A3h6mu0wQjOr7Ir": {
+   "angles": [
+    "Doncic averaging 40.0 points",
+    "SAC 28th in opponent eFG",
+    "Kessler 14.3 boards over last three",
+    "Murray, Raynaud out for Kings",
+    "LAL 3rd game in 4 nights"
+   ],
+   "away": "LAL",
+   "blurb": "The Lakers are 6-2 after beating Toronto 131-125 and Miami 138-117, with Doncic averaging 40.0 points and the team leading the league at a 60.9% eFG. Sacramento is 1-6, though its win came Monday, 115-100 at Dallas, and it returns home after a four-game trip. The Kings rank 27th in net rating and 28th in opponent eFG, with Murray and Raynaud out. Rookie Darius Acuff Jr. is averaging 26.1, per Yahoo. Lakers -11.5 and 234.5 is a big number on the road, so the lean is Doncic's scoring over the spread.",
+   "date": "2026-11-04",
+   "home": "SAC",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Left ankle capsulitis; Sacramento loses its best two-way forward.",
+     "player": "Keegan Murray",
+     "status": "Out",
+     "team": "SAC"
+    },
+    {
+     "impact": "Medium",
+     "note": "Right patella subluxation; thins the center rotation behind Sabonis.",
+     "player": "Maxime Raynaud",
+     "status": "Out",
+     "team": "SAC"
+    },
+    {
+     "impact": "Medium",
+     "note": "Left ankle soreness; likely to play, per CBS Sports.",
+     "player": "Precious Achiuwa",
+     "stats": "11.0 pts, 6.8 reb this season",
+     "status": "Probable",
+     "team": "SAC"
+    },
+    {
+     "impact": "Low",
+     "note": "Right Achilles repair; long-term absence.",
+     "player": "Ben Simmons",
+     "status": "Out",
+     "team": "SAC"
+    },
+    {
+     "impact": "Low",
+     "note": "Left knee management; a reserve forward.",
+     "player": "Adou Thiero",
+     "status": "Out",
+     "team": "LAL"
+    }
+   ],
+   "parlay": {
+    "legs": [
+     {
+      "label": "Luka Doncic over 34.5 points",
+      "line": 34.5,
+      "oddID": "points-LUKA_DONCIC_1_NBA-game-ou-over",
+      "odds": 102
+     },
+     {
+      "label": "Walker Kessler over 10.5 rebounds",
+      "line": 10.5,
+      "oddID": "rebounds-WALKER_KESSLER_1_NBA-game-ou-over",
+      "odds": -104
+     }
+    ],
+    "price": 296,
+    "why": "Sacramento is thin up front with Murray and Raynaud out, and Kessler has 14.3 rebounds a game over his last three. Doncic's volume shots create the long misses, and the Kings' 5th-ranked pace adds possessions for both to reach their numbers."
+   },
+   "single": {
+    "label": "Luka Doncic over 34.5 points",
+    "line": 34.5,
+    "oddID": "points-LUKA_DONCIC_1_NBA-game-ou-over",
+    "odds": 102,
+    "team": "LAL",
+    "why": "Doncic has a 43.4% usage, 40.0 points per game and 41.3 over his last three, facing a defense that ranks 28th in opponent eFG. Plus money on a line five below his average is the value, even with some blowout risk."
+   },
+   "updated": "2026-11-04T13:52:29Z"
+  },
   "Ddy2Au8EFUCefHrsfPYE": {
    "angles": [
     "Edwards out about two months",
@@ -1585,6 +1972,90 @@
    },
    "updated": "2026-10-29T15:27:50Z"
   },
+  "GqDpw8Z3lOA3FviOWmjb": {
+   "angles": [
+    "SGA scored 43 in Monday's win",
+    "CLE +5.4, OKC -4.5 net rating",
+    "OKC allows league-most 17 threes",
+    "Caruso back, Holmgren and Jalen Williams out",
+    "Watson, Tyson out for Cleveland"
+   ],
+   "away": "CLE",
+   "blurb": "Two days after Oklahoma City won 117-112 in Cleveland behind 43 from Gilgeous-Alexander, per SI, the rematch moves to Paycom. The Cavaliers are 4-3 and the Thunder 5-2, but Cleveland holds a +5.4 net rating to Oklahoma City's -4.5, and the Thunder give up 17.0 threes a game, most in the league. Holmgren, Jalen Williams and Wallace remain out, though Caruso returns. Oklahoma City is home after a three-game trip. Thunder -2.5 and 227.5 trusts Gilgeous-Alexander and the building; the numbers lean Cleveland.",
+   "date": "2026-11-04",
+   "home": "OKC",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Right knee patellar tendon; Oklahoma City loses its rim protector for weeks.",
+     "player": "Chet Holmgren",
+     "status": "Out",
+     "team": "OKC"
+    },
+    {
+     "impact": "High",
+     "note": "Left ankle surgery; the Thunder lose their second star and shot creator.",
+     "player": "Jalen Williams",
+     "status": "Out",
+     "team": "OKC"
+    },
+    {
+     "impact": "Medium",
+     "note": "Left shoulder surgery; costs them a key perimeter defender.",
+     "player": "Cason Wallace",
+     "status": "Out",
+     "team": "OKC"
+    },
+    {
+     "impact": "Medium",
+     "note": "Low back spasms; a starter whose absence would thin the frontcourt further.",
+     "player": "Jaylin Williams",
+     "status": "Questionable",
+     "team": "OKC"
+    },
+    {
+     "impact": "High",
+     "note": "Right hamstring; Cleveland loses a new starter, per SI.",
+     "player": "Peyton Watson",
+     "status": "Out",
+     "team": "CLE"
+    },
+    {
+     "impact": "Medium",
+     "note": "Right ankle sprain; costs Cleveland wing depth.",
+     "player": "Jaylon Tyson",
+     "status": "Out",
+     "team": "CLE"
+    }
+   ],
+   "parlay": {
+    "legs": [
+     {
+      "label": "Cavaliers +2.5",
+      "line": 2.5,
+      "oddID": "points-away-game-sp-away",
+      "odds": -115
+     },
+     {
+      "label": "James Harden over 2.5 threes",
+      "line": 2.5,
+      "oddID": "threePointersMade-JAMES_HARDEN_1_NBA-game-ou-over",
+      "odds": -106
+     }
+    ],
+    "price": 263,
+    "why": "Oklahoma City's thin defense gives up 17.0 threes per game at a 38.1% clip, and Cleveland shoots 38.4% from deep. Harden is at 3.0 threes over his last three, and if the Cavaliers keep this close, their perimeter volume is why."
+   },
+   "single": {
+    "label": "Cavaliers +2.5",
+    "line": 2.5,
+    "oddID": "points-away-game-sp-away",
+    "odds": -115,
+    "team": "CLE",
+    "why": "Cleveland has a 10-point net rating edge and just lost by five to a 43-point night from Gilgeous-Alexander. Oklahoma City is missing three rotation pieces and allows the most threes in the league. Getting points here is a price that respects the name more than the current roster."
+   },
+   "updated": "2026-11-04T13:52:29Z"
+  },
   "GsucmgAiRzFwcIkKvDYq": {
    "away": "CHI",
    "blurb": "Boston is 1-1 after blowing a 22-point lead in a 121-113 loss at Detroit, then beating the Knicks 107-103 behind 36 from Jayson Tatum. Chicago is 1-2, a 132-125 win in Milwaukee sandwiched by a 135-92 loss in Toronto and a 124-120 home loss to Washington, shooting 22.6 percent from three. It is the first night of a back-to-back for the Celtics. Boston -13.5 and 233.5 says the Bulls' turnovers and cold shooting get punished at TD Garden.",
@@ -1687,6 +2158,91 @@
     "why": "New York plays at the 28th-ranked pace, is 1-5 to the over per Covers, and has games averaging 216.4. Brooklyn scored 94 and 98 in its last two and arrived late after last night's game. Tired legs and a slow Garden game point under this number."
    },
    "updated": "2026-11-02T14:03:56Z"
+  },
+  "HhtiwKwrFcro0itW9oJk": {
+   "angles": [
+    "NOP 1st in pace, three straight wins",
+    "UTA 1-6, covered once, per SI",
+    "Jackson, Nurkic out, rim wide open",
+    "NOP went overtime Monday",
+    "Poole, Murphy probable"
+   ],
+   "away": "UTA",
+   "blurb": "New Orleans is 3-4 with three straight wins after an 0-4 start, the latest a 135-134 overtime stunner at Memphis. Utah is 1-6 and has covered just once, per SI, after losing 119-97 at San Antonio. The Pelicans play the league's fastest pace at 106.9 and rank 14th in net rating, while the Jazz are 25th at -10.3 and 28th on offense. With Jackson and Nurkic out, Utah has little at the rim for Zion. Pelicans -5.5 and 234.5 is fair, and the lean is New Orleans despite the overtime fatigue.",
+   "date": "2026-11-04",
+   "home": "NOP",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Torn right knee MCL; Utah loses its best interior defender for weeks.",
+     "player": "Jaren Jackson Jr.",
+     "status": "Out",
+     "team": "UTA"
+    },
+    {
+     "impact": "Medium",
+     "note": "Foot; costs Utah size in the middle.",
+     "player": "Jusuf Nurkic",
+     "status": "Out",
+     "team": "UTA"
+    },
+    {
+     "impact": "Low",
+     "note": "Right ankle sprain; another big in doubt behind Hayes.",
+     "player": "Mo Bamba",
+     "status": "Questionable",
+     "team": "UTA"
+    },
+    {
+     "impact": "High",
+     "note": "Left ankle; New Orleans gets a key scorer back, which could trim Fears' touches.",
+     "player": "Jordan Poole",
+     "status": "Probable",
+     "team": "NOP"
+    },
+    {
+     "impact": "Medium",
+     "note": "Knee; expected to play and space the floor.",
+     "player": "Trey Murphy III",
+     "stats": "15.5 pts this season",
+     "status": "Probable",
+     "team": "NOP"
+    },
+    {
+     "impact": "Medium",
+     "note": "Left knee; Matkovic has taken his minutes.",
+     "player": "Yves Missi",
+     "status": "Out",
+     "team": "NOP"
+    }
+   ],
+   "parlay": {
+    "legs": [
+     {
+      "label": "Pelicans -5.5",
+      "line": -5.5,
+      "oddID": "points-home-game-sp-home",
+      "odds": -105
+     },
+     {
+      "label": "Zion Williamson over 20.5 points",
+      "line": 20.5,
+      "oddID": "points-ZION_WILLIAMSON_1_NBA-game-ou-over",
+      "odds": -104
+     }
+    ],
+    "price": 283,
+    "why": "With Jackson and Nurkic out and Bamba questionable, Utah cannot protect the rim, and Zion is shooting a 70.1% true shooting clip. A Pelicans cover likely runs through him in the paint, with the top pace adding extra trips."
+   },
+   "single": {
+    "label": "Pelicans -5.5",
+    "line": -5.5,
+    "oddID": "points-home-game-sp-home",
+    "odds": -105,
+    "team": "NOP",
+    "why": "Utah sits 28th in offensive rating, averaged 97.0 offensive rating over its last three, and has one cover in seven. New Orleans is winning at the league's top pace with Poole and Murphy both probable. A 12.6-point net rating gap at home is worth more than this."
+   },
+   "updated": "2026-11-04T13:52:29Z"
   },
   "Jg3CRvDpuxMlUr1ZW4Rn": {
    "angles": [
@@ -2132,6 +2688,83 @@
     }
    ],
    "updated": "2026-10-28T14:56:19Z"
+  },
+  "NdWj2SKUs2DQl5b4sI3t": {
+   "angles": [
+    "HOU 1st in offensive rating, 121.5",
+    "MIN 2nd in defensive rating without Edwards",
+    "Sengun averaging 8.4 assists",
+    "Capela, Shannon game-time decisions",
+    "Both 4th game in 6 nights"
+   ],
+   "away": "MIN",
+   "blurb": "Houston is 7-1, tied for the NBA's best record, after beating Boston 109-93 and has the league's top offensive rating at 121.5. Minnesota is 5-3 and just beat Milwaukee 112-100 without Edwards and DiVincenzo, with a +9.3 net rating and the 2nd-ranked defense at 105.8. Both teams are on their fourth game in six nights, and Capela is a game-time call, per Yahoo. Rockets -8.5 and 220.5 respects Houston at home, and the lean is Sengun's playmaking against Gobert rather than the big number.",
+   "date": "2026-11-04",
+   "home": "HOU",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Right knee arthroscopy; Minnesota loses its top scorer, with Ball and Dosunmu carrying more.",
+     "player": "Anthony Edwards",
+     "status": "Out",
+     "team": "MIN"
+    },
+    {
+     "impact": "Medium",
+     "note": "Achilles; costs Minnesota guard depth and shooting.",
+     "player": "Donte DiVincenzo",
+     "status": "Out",
+     "team": "MIN"
+    },
+    {
+     "impact": "Low",
+     "note": "Left hip; a reserve wing.",
+     "player": "Terrence Shannon Jr.",
+     "status": "Questionable",
+     "team": "MIN"
+    },
+    {
+     "impact": "Medium",
+     "note": "Right ankle; a game-time decision who would thin Houston's center depth.",
+     "player": "Clint Capela",
+     "status": "Questionable",
+     "team": "HOU"
+    },
+    {
+     "impact": "Medium",
+     "note": "Right calf; costs Houston size and offensive rebounding.",
+     "player": "Steven Adams",
+     "status": "Out",
+     "team": "HOU"
+    }
+   ],
+   "parlay": {
+    "legs": [
+     {
+      "label": "Alperen Sengun over 6.5 assists",
+      "line": 6.5,
+      "oddID": "assists-ALPEREN_SENGUN_1_NBA-game-ou-over",
+      "odds": 100
+     },
+     {
+      "label": "Jabari Smith Jr. over 14.5 points",
+      "line": 14.5,
+      "oddID": "points-JABARI_SMITH_1_NBA-game-ou-over",
+      "odds": -122
+     }
+    ],
+    "price": 264,
+    "why": "Houston's offense runs through Sengun's passing, and Smith has been the finisher, averaging 22.0 with 4.3 threes over his last three. If Gobert sags, Sengun's kick-outs to Smith feed both legs, without needing a Rockets cover against a top defense."
+   },
+   "single": {
+    "label": "Alperen Sengun over 6.5 assists",
+    "line": 6.5,
+    "oddID": "assists-ALPEREN_SENGUN_1_NBA-game-ou-over",
+    "odds": 100,
+    "team": "HOU",
+    "why": "Sengun is averaging 8.4 assists and 9.3 over his last three, and this line is two below his average at even money. Gobert hanging near the rim leaves Houston's bigs passing to shooters, and Jabari Smith is making 4.3 threes a game lately."
+   },
+   "updated": "2026-11-04T13:52:29Z"
   },
   "OZyXK8insHu0FHhzUaA3": {
    "angles": [
@@ -3056,6 +3689,97 @@
    ],
    "updated": "2026-10-28T14:56:19Z"
   },
+  "YQH7ORjpj8NiPjJ4CYQw": {
+   "angles": [
+    "MEM shoots league-best 42.8% from three",
+    "Siakam, Nembhard back from rest",
+    "IND five straight losses, per Yahoo",
+    "Boozer averaging 21 over last three",
+    "IND 3rd game in 4 nights"
+   ],
+   "away": "IND",
+   "blurb": "Memphis is 6-1 and lost its first game 135-134 to New Orleans in overtime Monday, while Indiana is 2-6 on a five-game skid after resting starters in a 108-104 loss to Atlanta. The Grizzlies rank 4th in net rating at +11.5 and shoot 42.8% from three, best in the league, and the Pacers are 22nd at -4.8 and allow 37.8%. Siakam, Nembhard and Nesmith are back, per Yahoo, but Haliburton is out and Zubac is questionable. Grizzlies -6.5 and 229.5 prices the returns, and the lean remains Memphis.",
+   "date": "2026-11-04",
+   "home": "MEM",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Left hamstring strain; Indiana loses its lead creator for at least another stretch.",
+     "player": "Tyrese Haliburton",
+     "status": "Out",
+     "team": "IND"
+    },
+    {
+     "impact": "Medium",
+     "note": "Right hamstring; thins the backup point guard spot.",
+     "player": "T.J. McConnell",
+     "status": "Out",
+     "team": "IND"
+    },
+    {
+     "impact": "Medium",
+     "note": "Left ankle sprain; he has missed several games, weakening Indiana inside, with Huff filling in.",
+     "player": "Ivica Zubac",
+     "status": "Questionable",
+     "team": "IND"
+    },
+    {
+     "impact": "Medium",
+     "note": "Bruised knee; a late scratch Monday who adds wing scoring when he plays.",
+     "player": "Kelly Oubre Jr.",
+     "status": "Questionable",
+     "team": "IND"
+    },
+    {
+     "impact": "Medium",
+     "note": "Back; would cost Indiana bench shooting.",
+     "player": "Obi Toppin",
+     "status": "Questionable",
+     "team": "IND"
+    },
+    {
+     "impact": "Medium",
+     "note": "Back; Memphis loses a backup guard, with Spencer handling those minutes.",
+     "player": "Scotty Pippen Jr.",
+     "status": "Out",
+     "team": "MEM"
+    },
+    {
+     "impact": "Low",
+     "note": "Right ankle sprain; bench floor spacing.",
+     "player": "Quinten Post",
+     "status": "Questionable",
+     "team": "MEM"
+    }
+   ],
+   "parlay": {
+    "legs": [
+     {
+      "label": "Grizzlies -6.5",
+      "line": -6.5,
+      "oddID": "points-home-game-sp-home",
+      "odds": -114
+     },
+     {
+      "label": "Cameron Boozer over 17.5 points",
+      "line": 17.5,
+      "oddID": "points-CAMERON_BOOZER_1_NBA-game-ou-over",
+      "odds": -106
+     }
+    ],
+    "price": 265,
+    "why": "Memphis has a 16-point net rating edge over a Pacers team on its third game in four nights. Boozer attacking a thin frontcourt is how the Grizzlies pull away, so his scoring and a comfortable cover tend to arrive together."
+   },
+   "single": {
+    "label": "Cameron Boozer over 17.5 points",
+    "line": 17.5,
+    "oddID": "points-CAMERON_BOOZER_1_NBA-game-ou-over",
+    "odds": -106,
+    "team": "MEM",
+    "why": "Boozer is averaging 19.5 this season and 21.0 over his last three, with a 61.5% true shooting mark. Indiana's interior is shaky with Zubac questionable, and Memphis runs its offense through him. This line sits below both his season and recent averages."
+   },
+   "updated": "2026-11-04T13:52:29Z"
+  },
   "Z0HpVcHAaiDaOhZgmTem": {
    "angles": [
     "Both teams on a back-to-back",
@@ -3638,6 +4362,83 @@
    ],
    "updated": "2026-10-28T14:56:19Z"
   },
+  "jnlQn64ndQfsw9ig3V4O": {
+   "angles": [
+    "TOR allows league-worst 41.3% from three",
+    "Murray averaging 31.6 and 5.4 threes",
+    "TOR 3rd in 4 nights, at altitude",
+    "TOR 2nd in offensive rebounding",
+    "Leonard, Bittle out for Toronto"
+   ],
+   "away": "TOR",
+   "blurb": "Denver is 3-3 and lost 118-110 at home to Portland after being outrebounded 53-37, per Denver Stiffs. Toronto is 4-3 and beat the Clippers 125-118 Monday, on its third game in four nights, game three of a road trip, now at altitude. The Raptors allow 41.3% from three, last in the league, and Murray is averaging 31.6 with 5.4 threes while Jokic works through a cold shooting start. Toronto's offensive rebounding, 2nd in the league, is its best weapon. Nuggets -4.5 and 230.5 lean toward Denver and the over.",
+   "date": "2026-11-04",
+   "home": "DEN",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Left knee; Toronto loses a star scorer for several weeks, leaving more on Barnes.",
+     "player": "Kawhi Leonard",
+     "status": "Out",
+     "team": "TOR"
+    },
+    {
+     "impact": "Medium",
+     "note": "Right foot; thins the center rotation.",
+     "player": "Nate Bittle",
+     "status": "Out",
+     "team": "TOR"
+    },
+    {
+     "impact": "Medium",
+     "note": "Left shoulder bursitis; upgraded after missing two games and would match up with Jokic.",
+     "player": "Jakob Poeltl",
+     "status": "Questionable",
+     "team": "TOR"
+    },
+    {
+     "impact": "Medium",
+     "note": "Lower body; expected to start and space the floor.",
+     "player": "Cameron Johnson",
+     "status": "Probable",
+     "team": "DEN"
+    },
+    {
+     "impact": "Low",
+     "note": "Left knee sprain; costs Denver a bench shooter.",
+     "player": "Julian Strawther",
+     "status": "Out",
+     "team": "DEN"
+    }
+   ],
+   "parlay": {
+    "legs": [
+     {
+      "label": "Over 230.5",
+      "line": 230.5,
+      "oddID": "points-all-game-ou-over",
+      "odds": -115
+     },
+     {
+      "label": "Jamal Murray over 24.5 points (alt)",
+      "line": 24.5,
+      "oddID": "points-JAMAL_MURRAY_1_NBA-game-ou-over",
+      "odds": -102
+     }
+    ],
+    "price": 270,
+    "why": "Both defenses sit in the bottom half of opponent eFG, Denver's games average 238.8 points, and Toronto arrives tired at altitude. A shootout with Murray taking 30.1% of Denver's plays is the script, and his points and the total climb together."
+   },
+   "single": {
+    "label": "Jamal Murray over 24.5 points (alt)",
+    "line": 24.5,
+    "oddID": "points-JAMAL_MURRAY_1_NBA-game-ou-over",
+    "odds": -102,
+    "team": "DEN",
+    "why": "Murray averages 31.6 points with a 71.1% true shooting mark, and Toronto allows a league-worst 41.3% from three on its third game in four nights, at altitude. Taking 24.5 at -102 costs one point of cushion for a far better price."
+   },
+   "updated": "2026-11-04T13:52:29Z"
+  },
   "lU9nMgCzBskmDIzCWDby": {
    "angles": [
     "HOU back-to-back, 4th game in 6 nights",
@@ -3738,6 +4539,84 @@
     "why": "With Holmgren, Williams, Wallace and Caruso all out, Mitchell is the Thunder's second creator, carrying a 36.7 percent usage rate and 25.7 points over his last three, including 29 at Dallas. A line of 18.5 prices his season average, not the role he has now."
    },
    "updated": "2026-10-31T13:00:35Z"
+  },
+  "lb3zjl5VzDy2SvSIwsJI": {
+   "angles": [
+    "PHX 30th in defensive rating, 123.3",
+    "Blazers won opener 124-83",
+    "Morant out, Avdija usage up",
+    "Brooks in two straight flare-ups",
+    "PHX first leg of back-to-back"
+   ],
+   "away": "POR",
+   "blurb": "Portland is 5-1 and 4-0 on the road by our count after winning 118-110 in Denver, despite losing Morant to a hamstring strain. Phoenix is 1-4, has dropped three straight, and ranks last in defensive rating at 123.3 while allowing 41.1% from three. Dillon Brooks, ejected against Denver, tangled with Draymond Green on Monday, per Arizona Sports. The Blazers won the opener 124-83, and Phoenix plays again at home tomorrow. Portland -3.5 and 227.5 still feels short given the gap, so the lean is the Blazers.",
+   "date": "2026-11-04",
+   "home": "PHX",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Grade 2 left hamstring strain; Henderson starts and Portland loses a lead playmaker for about four weeks.",
+     "player": "Ja Morant",
+     "status": "Out",
+     "team": "POR"
+    },
+    {
+     "impact": "High",
+     "note": "Right meniscus surgery; costs Portland a starting-caliber scorer for months.",
+     "player": "Shaedon Sharpe",
+     "status": "Out",
+     "team": "POR"
+    },
+    {
+     "impact": "Medium",
+     "note": "Calf soreness; he left Monday early and Phoenix would lose a rotation guard.",
+     "player": "Jordan Goodwin",
+     "stats": "7.8 pts, 3.4 reb this season, per Arizona Sports",
+     "status": "Questionable",
+     "team": "PHX"
+    },
+    {
+     "impact": "Medium",
+     "note": "Left shoulder surgery; leaves Phoenix thin at center for months.",
+     "player": "Mark Williams",
+     "status": "Out",
+     "team": "PHX"
+    },
+    {
+     "impact": "Low",
+     "note": "Left ankle sprain; frontcourt depth.",
+     "player": "Rasheer Fleming",
+     "status": "Questionable",
+     "team": "PHX"
+    }
+   ],
+   "parlay": {
+    "legs": [
+     {
+      "label": "Trail Blazers -3.5",
+      "line": -3.5,
+      "oddID": "points-away-game-sp-away",
+      "odds": -105
+     },
+     {
+      "label": "Deni Avdija over 23.5 points",
+      "line": 23.5,
+      "oddID": "points-DENI_AVDIJA_1_NBA-game-ou-over",
+      "odds": -130
+     }
+    ],
+    "price": 245,
+    "why": "With Morant out, Avdija carries a 32.5% usage and has scored at least 18 in every game, averaging 25.0. Phoenix's last-ranked defense cannot slow him, and the Blazers covering likely means he got downhill and to the line, where Portland leads the league."
+   },
+   "single": {
+    "label": "Trail Blazers -3.5",
+    "line": -3.5,
+    "oddID": "points-away-game-sp-away",
+    "odds": -105,
+    "team": "POR",
+    "why": "Portland leads the league in free-throw rate and takes the second most threes, against a defense that ranks last and allows 41.1% from deep. The Blazers are unbeaten on the road and already beat Phoenix by 41, and the Suns could hold something back with tomorrow's game."
+   },
+   "updated": "2026-11-04T13:52:29Z"
   },
   "lfjZpbqz68gg91nvA5Ln": {
    "angles": [
@@ -3916,6 +4795,90 @@
     "why": "Tatum is averaging 33.0 points on a 36.5% usage rate, and Chicago's defense is 27th in rating and last against threes. The Bulls are thin up front with Claxton out and Jalen Smith questionable, and Boston has the rest edge. 27.5 is below what he has done in every sense."
    },
    "updated": "2026-10-30T13:31:22Z"
+  },
+  "m4ysfZP3utX32yU8fPQ6": {
+   "angles": [
+    "SAS 1st in net rating, +12.7",
+    "Spurs six straight over Dallas",
+    "Flagg first look at Spurs",
+    "Wembanyama 30.3 over last three",
+    "Lively out, thin behind Gafford"
+   ],
+   "away": "DAL",
+   "blurb": "San Antonio is 5-2 on a five-game win streak, including 119-97 over Utah, and owns six straight over Dallas, per Sports Mole. The Mavericks are 4-3 after a 115-100 home loss to Sacramento. The Spurs lead the league in net rating at +12.7 and rank 3rd in defense, and Cooper Flagg faces them for the first time this season after missing the 122-106 October meeting. Lively is out, and Irving's knee makes him a game-time call. Spurs -11.5 and 227.5 prices the gap, and the lean is Wembanyama's scoring.",
+   "date": "2026-11-04",
+   "home": "SAS",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Knee management; Sports Mole calls him a game-time decision, though he is not on ESPN's report.",
+     "player": "Kyrie Irving",
+     "status": "Questionable",
+     "team": "DAL"
+    },
+    {
+     "impact": "Medium",
+     "note": "Right hip; ESPN has him out, costing Dallas a wing defender.",
+     "player": "Max Christie",
+     "status": "Out",
+     "team": "DAL"
+    },
+    {
+     "impact": "Medium",
+     "note": "Right foot surgery; leaves Gafford as the main rim protector against Wembanyama.",
+     "player": "Dereck Lively II",
+     "status": "Out",
+     "team": "DAL"
+    },
+    {
+     "impact": "Medium",
+     "note": "Right knee; costs Dallas a stretch big.",
+     "player": "Santi Aldama",
+     "status": "Out",
+     "team": "DAL"
+    },
+    {
+     "impact": "Medium",
+     "note": "Left calf; San Antonio loses a veteran forward.",
+     "player": "Tobias Harris",
+     "status": "Out",
+     "team": "SAS"
+    },
+    {
+     "impact": "Low",
+     "note": "Right knee; still not cleared for basketball activities.",
+     "player": "Jayden Quaintance",
+     "status": "Out",
+     "team": "SAS"
+    }
+   ],
+   "parlay": {
+    "legs": [
+     {
+      "label": "Victor Wembanyama over 26.5 points",
+      "line": 26.5,
+      "oddID": "points-VICTOR_WEMBANYAMA_1_NBA-game-ou-over",
+      "odds": -112
+     },
+     {
+      "label": "Cooper Flagg over 5.5 assists",
+      "line": 5.5,
+      "oddID": "assists-C_FLAGG_1_NBA-game-ou-over",
+      "odds": -108
+     }
+    ],
+    "price": 265,
+    "why": "San Antonio rides Wembanyama, and Dallas, with Christie out and Irving uncertain, puts the ball in Flagg's hands. He is averaging 7.4 assists and 37.1 minutes over his last three, so both legs follow how each team has to play."
+   },
+   "single": {
+    "label": "Victor Wembanyama over 26.5 points",
+    "line": 26.5,
+    "oddID": "points-VICTOR_WEMBANYAMA_1_NBA-game-ou-over",
+    "odds": -112,
+    "team": "SAS",
+    "why": "Wembanyama is at 28.0 this season and 30.3 over his last three, on a 40.9% usage. Dallas has only Gafford behind a thin frontline with Lively out, and the Spurs have beaten the Mavericks six straight. The line sits under both numbers."
+   },
+   "updated": "2026-11-04T13:52:29Z"
   },
   "mQKMT2SpINxADaG0ykeC": {
    "angles": [
@@ -4134,6 +5097,70 @@
     "why": "The schedule says back-to-back, but Curry and Green sat last night by design, so they are the fresh ones. They face the league's worst defensive rating, and the Suns allow 45.0% from three. Phoenix's win over this team came with both stars out."
    },
    "updated": "2026-11-02T14:03:56Z"
+  },
+  "ogZq1ereZiElcRbMLZjx": {
+   "angles": [
+    "Tatum questionable, rest, 3rd in 4 nights",
+    "MIL net rating -12.8, 29th",
+    "Bucks allow 124.1 per game, per NESN",
+    "Herro averaging 3.5 threes",
+    "Pritchard questionable with shoulder contusion"
+   ],
+   "away": "MIL",
+   "blurb": "Boston is 5-2 but saw a five-game win streak end 109-93 at Houston, and Milwaukee is 1-6 with three straight losses since Giannis left, per NESN. The Bucks rank 29th in net rating at -12.8 and 27th in defensive rating, while playing at the 4th pace. Tatum is questionable for rest on the third game in four nights, and Pritchard has a shoulder issue. Celtics -11.5 and 224.5 assumes Boston is close to whole, so the number is risky until Tatum's status is known. The lean is Milwaukee's shooters and the over.",
+   "date": "2026-11-04",
+   "home": "BOS",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Listed for rest in his Achilles return; Boston loses its primary scorer and creator if he sits.",
+     "player": "Jayson Tatum",
+     "stats": "29.3 pts, 7.3 ast this season",
+     "status": "Questionable",
+     "team": "BOS"
+    },
+    {
+     "impact": "Medium",
+     "note": "Right shoulder contusion; his absence would matter more if Tatum also sits, per NESN.",
+     "player": "Payton Pritchard",
+     "status": "Questionable",
+     "team": "BOS"
+    },
+    {
+     "impact": "Low",
+     "note": "Mononucleosis; costs Boston a reserve guard.",
+     "player": "Devin Carter",
+     "status": "Out",
+     "team": "BOS"
+    }
+   ],
+   "parlay": {
+    "legs": [
+     {
+      "label": "Tyler Herro over 2.5 threes",
+      "line": 2.5,
+      "oddID": "threePointersMade-TYLER_HERRO_1_NBA-game-ou-over",
+      "odds": -130
+     },
+     {
+      "label": "Over 224.5",
+      "line": 224.5,
+      "oddID": "points-all-game-ou-over",
+      "odds": -112
+     }
+    ],
+    "price": 235,
+    "why": "Milwaukee's games average 233.8 points because it plays fast and allows 124.1, per NESN. Boston scores at the 10th-best rate, and a trailing Bucks team keeps firing from deep, which lifts both Herro's threes and the total."
+   },
+   "single": {
+    "label": "Tyler Herro over 2.5 threes",
+    "line": 2.5,
+    "oddID": "threePointersMade-TYLER_HERRO_1_NBA-game-ou-over",
+    "odds": -130,
+    "team": "MIL",
+    "why": "Herro is averaging 3.5 threes, and 4.0 over his last three, while leading Milwaukee in scoring at a 31.5% usage. The Bucks play at the 4th pace and will be chasing, and this holds whether or not Tatum plays, unlike the spread."
+   },
+   "updated": "2026-11-04T13:52:29Z"
   },
   "pQsF6kYuDrEQXgaXnmGI": {
    "away": "GSW",
@@ -4441,6 +5468,78 @@
    },
    "updated": "2026-11-02T14:03:56Z"
   },
+  "uKjcOGTOm5hVooEjFUO6": {
+   "angles": [
+    "Trae Young reunion, first DC meeting",
+    "WAS allows league-low 27.3% from three",
+    "Wizards games average 212.3 points",
+    "Jalen Johnson, Sarr both questionable",
+    "ATL last game of road trip"
+   ],
+   "away": "ATL",
+   "blurb": "Washington is 4-3 and leads the Southeast after beating Orlando 103-94 Monday, while Atlanta is 4-4 after winning 108-104 at Indiana behind Alexander-Walker's 34 and nine threes, per TheSpread. The Wizards rank 5th in defensive rating at 108.8 and allow a league-low 27.3% from three. Per Roundtable, Trae Young gets his first home game against the team that traded him, and McCollum and Kispert make their first trip back to DC. Atlanta -2.5 and a 231.5 total, but Wizards games average 212.3 points, so the lean is under.",
+   "date": "2026-11-04",
+   "home": "WAS",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Left ankle sprain; he missed Monday and Atlanta loses its main playmaker and rebounder.",
+     "player": "Jalen Johnson",
+     "stats": "18.0 pts, 8.2 reb, 8.3 ast this season",
+     "status": "Questionable",
+     "team": "ATL"
+    },
+    {
+     "impact": "Medium",
+     "note": "Left hip strain; with Johnson also in doubt, Okongwu is nearly the only big left.",
+     "player": "Jock Landale",
+     "status": "Out",
+     "team": "ATL"
+    },
+    {
+     "impact": "High",
+     "note": "Left knee soreness; he sat Monday and Ayton started at center in his place.",
+     "player": "Alex Sarr",
+     "stats": "10.0 pts, 4.8 reb this season",
+     "status": "Questionable",
+     "team": "WAS"
+    },
+    {
+     "impact": "Low",
+     "note": "Right AC joint injury; costs Washington backcourt depth for about three weeks.",
+     "player": "Reece Beekman",
+     "status": "Out",
+     "team": "WAS"
+    }
+   ],
+   "parlay": {
+    "legs": [
+     {
+      "label": "Under 231.5",
+      "line": 231.5,
+      "oddID": "points-all-game-ou-under",
+      "odds": -105
+     },
+     {
+      "label": "Anthony Davis over 23.5 points",
+      "line": 23.5,
+      "oddID": "points-ANTHONY_DAVIS_1_NBA-game-ou-over",
+      "odds": -112
+     }
+    ],
+    "price": 270,
+    "why": "A half-court game runs through Davis, who is averaging 23.3 over his last three with Atlanta down to one healthy big if Johnson sits. Washington's slow pace and top-rated perimeter defense keep the total down, and a low-possession game concentrates the shots in his hands."
+   },
+   "single": {
+    "label": "Under 231.5",
+    "line": 231.5,
+    "oddID": "points-all-game-ou-under",
+    "odds": -105,
+    "team": "",
+    "why": "Washington's games average 212.3 points and it plays at the 25th pace, holding opponents to 27.3% from three. Landale is out, Johnson is in doubt, and Sarr may sit too. The total has already dropped, but it still sits well above what these teams produce."
+   },
+   "updated": "2026-11-04T13:52:29Z"
+  },
   "vF7mrlCAIjmb7rtvfi4s": {
    "angles": [
     "ORL back-to-back, WAS 2 days rest",
@@ -4725,28 +5824,91 @@
     "why": "Memphis is +14.2 in net rating against a +2.6 Pelicans team, and New Orleans is on its fourth game in six nights without Poole or Missi. Even shading for a soft schedule, 5.5 is a modest price for this gap at home, with Jerome back."
    },
    "updated": "2026-11-02T14:03:56Z"
+  },
+  "zH5yS1D0GwXIrfQKQt2p": {
+   "angles": [
+    "DET 1st, PHI 4th defensive rating",
+    "First meeting totaled just 199 points",
+    "Maxey 26-plus in every game, per SI",
+    "Duren out, DET rim protection thinner",
+    "PHI 4th game in 6 nights"
+   ],
+   "away": "PHI",
+   "blurb": "The East's top two meet: Philadelphia is 7-1 after beating Chicago 126-107, and Detroit is 6-1 after a 124-91 rout at Charlotte. Detroit ranks 1st in defensive rating at 100.3 and Philadelphia 4th at 107.8, with both teams in the bottom 10 in pace. Per ESPN, the Pistons won the first meeting 106-93, the only loss on the Sixers' schedule. Philadelphia is playing its fourth game in six nights. Detroit -2.5 and 219.5 suggests a coin flip, and the lean is under with Maxey still getting his.",
+   "date": "2026-11-04",
+   "home": "DET",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Right hamstring strain; Detroit loses its starting center and top rebounder, with Reed starting.",
+     "player": "Jalen Duren",
+     "status": "Out",
+     "team": "DET"
+    },
+    {
+     "impact": "Medium",
+     "note": "Hip; Detroit loses a bench shooter.",
+     "player": "Isaiah Joe",
+     "status": "Out",
+     "team": "DET"
+    },
+    {
+     "impact": "Medium",
+     "note": "Back; Philadelphia loses frontcourt depth behind Embiid.",
+     "player": "Dominick Barlow",
+     "status": "Out",
+     "team": "PHI"
+    }
+   ],
+   "parlay": {
+    "legs": [
+     {
+      "label": "Under 219.5",
+      "line": 219.5,
+      "oddID": "points-all-game-ou-under",
+      "odds": -114
+     },
+     {
+      "label": "Tyrese Maxey over 23.5 points",
+      "line": 23.5,
+      "oddID": "points-TYRESE_MAXEY_1_NBA-game-ou-over",
+      "odds": -110
+     }
+    ],
+    "price": 258,
+    "why": "The first meeting totaled 199 points and both defenses rank top four in a game between the 23rd and 24th paces. In a grinder Philadelphia leans harder on Maxey, whose 34.9% usage gives him the shots to clear this number even in a low-scoring game."
+   },
+   "single": {
+    "label": "Tyrese Maxey over 23.5 points",
+    "line": 23.5,
+    "oddID": "points-TYRESE_MAXEY_1_NBA-game-ou-over",
+    "odds": -110,
+    "team": "PHI",
+    "why": "Maxey has at least 26 in every game, per SI, is averaging 29.1 and scored 29 in the first meeting against this same defense. With Duren out, Detroit has less at the rim, and this number sits below every game he has played."
+   },
+   "updated": "2026-11-04T13:52:29Z"
   }
  },
  "players": {
   "Beekie": {
-   "text": "Beekie builds three-leg long shots and nothing else: all five settled bets are parlays priced over +300, and they are 0-5 for -25 at a flat 5 each. Legs are 3-12, with props 2-8 and totals 1-4, and every prop is on points, mostly guards (six of ten), with overs and unders close to even. No alt lines, no singles, and both boosts went on parlays averaging +618 and lost. The flat stake keeps the damage small, but one bad leg kills each ticket. Read: a guard-points parlay dreamer, small sample.",
    "settled": 5,
-   "updated": "2026-11-03T13:42:21Z"
+   "text": "Beekie builds three-leg long shots and nothing else: all five settled bets are parlays priced over +300, and they are 0-5 for -25 at a flat 5 each. Legs are 3-12, with props 2-8 and totals 1-4, and every prop is on points, mostly guards (six of ten), with overs and unders close to even. No alt lines, no singles, and both boosts went on parlays averaging +618 and lost. The flat stake keeps the damage small, but one bad leg kills each ticket. Read: a guard-points parlay dreamer, small sample.",
+   "updated": "2026-11-04T13:52:29Z"
   },
   "Kev": {
-   "text": "Kev is the straight bettor of the group: all five settled bets are singles, and at 4-1 for +31.77 he sits second only to Mio. Four of the five came near even, at 3-1, every side he has taken was on the road, and he is 2-0 on underdogs. Stakes run 10 to 30, averaging 18. His one alt leg, bought safer, won, and his boost on a +108 moneyline cashed. He bets about seven hours before tip and has never copied Claude. Read: a disciplined road-dog single bettor, small sample so far.",
    "settled": 5,
-   "updated": "2026-11-03T13:42:21Z"
+   "text": "Kev is the straight bettor of the group: all five settled bets are singles, and at 4-1 for +31.77 he sits second only to Mio. Four of the five came near even, at 3-1, every side was a road team, and he is 2-0 on underdogs. Stakes run 10 to 30, averaging 18. His one alt leg, bought safer, won, and his boost on a +108 moneyline cashed. He bets about seven hours before tip and has never copied Claude. Read: a disciplined road-dog single bettor, small sample so far.",
+   "updated": "2026-11-04T13:52:29Z"
   },
   "Mio": {
-   "text": "Mio is the buy-the-safe-number specialist and the runaway leader at +173.64 on an 11-1 record with one push. Twenty-three of 25 legs were alternate lines moved to a shorter price, and those went 20-1. Twelve of 13 bets are two-leg parlays (10-1, legs 21-1), usually modest favorites (7-1 from -131 to -199). Props are all overs at 11-1, mostly points-rebounds-assists combos, paired with spreads (5-0) and overs (3-0). Stakes average 23 with a 50 top, and both boosts won on short-priced parlays. Read: a grinder who buys safety and stacks near-locks.",
    "settled": 13,
-   "updated": "2026-11-03T13:42:21Z"
+   "text": "Mio is the buy-the-safe-number specialist and the runaway leader at +187.92 on a 12-1 record. Twenty-three of 25 legs were alternate lines moved to a shorter price, and those went 21-1. Twelve of 13 bets are two-leg parlays (11-1, legs 22-1), usually modest favorites (8-1 from -131 to -199). Props are all overs at 11-1, mostly points-rebounds-assists combos, paired with spreads (6-0) and overs (3-0). Stakes average 23 with a 50 top, both boosts won on short-priced parlays, and Memphis is the favorite team. Read: a grinder who buys safety and stacks near-locks.",
+   "updated": "2026-11-04T13:52:29Z"
   },
   "Sulliver": {
-   "text": "Sulliver leans on Claude more than anyone, copying four of seven settled bets, and that has not paid: 1-6 for -68.91. Singles are 1-4 and three-leg parlays 0-2, with stakes swinging from 5 to 43. Every prop is an over, at 2-5, spread across guards, forwards and a center with no clear favorite, and favorites are 0-2. Alt lines are 0-3, and the boost on a +547 parlay lost. The price range wanders from favorites to long shots, which is the real leak. Read: no settled pattern yet, a star-overs chaser who needs one lane.",
    "settled": 7,
-   "updated": "2026-11-03T13:42:21Z"
+   "text": "Sulliver leans on Claude more than anyone, with four of seven settled bets copying a pick of the day, yet sits 1-6 for -68.91. Singles are 1-4 and two three-leg parlays are 0-2. Props are all overs at 2-5, spread across big names like Gilgeous-Alexander, and alt legs went 0-3, usually buying safety. Stakes swing from 5 to 43, averaging 12.6, and the one boost died on a +547 parlay. Bets go in early, about eight hours before tip. No price band is working yet. Read: a star-chasing follower with no settled pattern yet.",
+   "updated": "2026-11-04T13:52:29Z"
   }
  },
  "results": {
@@ -5412,11 +6574,11 @@
  },
  "winOdds": {
   "odds": {
-   "Kev": 35,
    "Beekie": 29,
+   "Kev": 36,
    "Mio": 13,
-   "Sulliver": 23
+   "Sulliver": 22
   },
-  "updated": "2026-11-03T13:42:21Z"
+  "updated": "2026-11-04T13:52:29Z"
  }
 }
