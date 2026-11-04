@@ -279,6 +279,16 @@ def main() -> int:
                 for al, ap in m.get("alts") or []:
                     seen.add((al, ap))
                 m["seen"] = sorted([list(x) for x in seen], key=lambda x: (x[0] is None, x[0] if x[0] is not None else 0, x[1]))
+            # A market the feed has dropped (a scratched player's props, a pulled line) stays on file, marked unavailable,
+            # with its price history: bets already on it still need grading and verifying, and the page still needs its name.
+            have = {m["oddID"] for m in g["markets"]}
+            for pm in prev.get("markets", []):
+                if pm.get("oddID") in have:
+                    continue
+                gone = dict(pm)
+                gone["available"] = False
+                gone.setdefault("withdrawn", g["pulledAt"])
+                g["markets"].append(gone)
         day["games"][g["eventID"]] = g
         touched[g["date"]] = day
         pulled += 1

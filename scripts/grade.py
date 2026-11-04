@@ -5,7 +5,7 @@ A wager document: {player, stake, placedAt, eventID, legs:[{oddID, name, side, l
                    settled: null | {status, net, payout, legs:[...]}, settledAt}
 Grading rules: spread and total use the line stored on the leg; props use the player's stat from results.players;
 a leg exactly on the line is a push and drops out of a parlay; a lost leg loses the slip; a player with no box score
-entry (did not play) voids that leg.
+entry (did not play) voids that leg and the rest of the slip stands at the remaining legs' prices.
 """
 import json
 import math
@@ -100,7 +100,7 @@ def verify(w: dict, g: dict):
     for leg in w.get("legs", []):
         m = markets.get(leg.get("oddID"))
         if not m:
-            return f"market {leg.get('oddID')} not on file"
+            continue  # the feed dropped this market after the bet (a scratched player, a pulled line): nothing to check, grade it normally
         seen = m.get("seen")
         since = m.get("seenSince")
         if not seen or not created or not since or str(created) < str(since):

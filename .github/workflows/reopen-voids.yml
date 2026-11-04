@@ -16,3 +16,7 @@ jobs:
       - run: python scripts/reopen_voids.py "${{ inputs.date }}"
         env:
           POOL_PASSWORD: ${{ secrets.POOL_PASSWORD }}
+      - name: Grade them again right away
+        run: python scripts/grade.py
+        env:
+          POOL_PASSWORD: ${{ secrets.POOL_PASSWORD }}
