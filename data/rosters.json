@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T06:58:15.372088+00:00",
+ "updated": "2026-11-06T03:44:36.013657+00:00",
  "players": {
   "AJ Dybantsa": {
    "team": "WAS",
@@ -1209,6 +1209,10 @@
    "team": "DET",
    "pos": "G"
   },
+  "Kevin McCullar Jr.": {
+   "team": "TOR",
+   "pos": "G"
+  },
   "Kevon Looney": {
    "team": "LAL",
    "pos": "F"
@@ -1424,6 +1428,10 @@
   "Micah Potter": {
    "team": "POR",
    "pos": "C"
+  },
+  "Michael Ajayi": {
+   "team": "CHA",
+   "pos": "F"
   },
   "Michael Porter Jr.": {
    "team": "BKN",
