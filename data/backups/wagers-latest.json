@@ -1,6 +1,6 @@
 {
- "backedUpAt": "2026-11-05T08:58:38Z",
- "count": 33,
+ "backedUpAt": "2026-11-06T08:56:27Z",
+ "count": 35,
  "wagers": {
   "0DMEKNttNFZJhyWOJRg8": {
    "_updated": "2026-11-05T08:27:06.083944Z",
@@ -937,6 +937,126 @@
    "stage": "regular",
    "stake": 30,
    "status": "win"
+  },
+  "SVki9ghxzSmV8SW30Wld": {
+   "_updated": "2026-11-06T08:23:25.031094Z",
+   "boost": {
+    "id": "week:2026-11-02",
+    "label": "1.5x weekly",
+    "mult": 1.5
+   },
+   "createdAt": "2026-11-06T01:48:36.185Z",
+   "eventID": "vWj4zYDAImhO5kpPxaiD",
+   "game": "MIA at GSW",
+   "gameDate": "2026-11-05",
+   "gameStart": "2026-11-06T03:00:00.000Z",
+   "legResults": [
+    "loss"
+   ],
+   "legs": [
+    {
+     "alt": false,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "away",
+     "line": 7.5,
+     "name": "Spread",
+     "oddID": "points-away-game-sp-away",
+     "odds": -110,
+     "opposing": "points-home-game-sp-home",
+     "period": "game",
+     "player": null,
+     "short": "MIA +7.5",
+     "side": "away",
+     "stat": "points",
+     "team": "MIA"
+    }
+   ],
+   "net": -57.94,
+   "payout": 0,
+   "placedAt": "2026-11-06T01:48:35.956Z",
+   "player": "Kev",
+   "series": null,
+   "settledAt": "2026-11-06T08:23:24Z",
+   "stage": "regular",
+   "stake": 57.94,
+   "status": "loss"
+  },
+  "SmjOuI25fyXoZ9DlmnAq": {
+   "_updated": "2026-11-06T08:23:25.178192Z",
+   "boost": null,
+   "createdAt": "2026-11-05T19:40:13.226Z",
+   "eventID": "ZwreqgOw8hyXBglasOGp",
+   "game": "ORL at PHX",
+   "gameDate": "2026-11-05",
+   "gameStart": "2026-11-06T02:00:00.000Z",
+   "legResults": [
+    "loss",
+    "loss",
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": false,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "line": 222.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-over",
+     "odds": -110,
+     "opposing": "points-all-game-ou-under",
+     "period": "game",
+     "player": null,
+     "short": "Game Over 222.5",
+     "side": "over",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "alt": false,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "FRANZ_WAGNER_1_NBA",
+     "line": 23.5,
+     "name": "Franz Wagner Points",
+     "oddID": "points-FRANZ_WAGNER_1_NBA-game-ou-over",
+     "odds": -102,
+     "opposing": "points-FRANZ_WAGNER_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "FRANZ_WAGNER_1_NBA",
+     "short": "Franz Wagner Points Over 23.5",
+     "side": "over",
+     "stat": "points",
+     "team": "ORL"
+    },
+    {
+     "alt": false,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DEVIN_BOOKER_1_NBA",
+     "line": 25.5,
+     "name": "Devin Booker Points",
+     "oddID": "points-DEVIN_BOOKER_1_NBA-game-ou-over",
+     "odds": -114,
+     "opposing": "points-DEVIN_BOOKER_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "DEVIN_BOOKER_1_NBA",
+     "short": "Devin Booker Points Over 25.5",
+     "side": "over",
+     "stat": "points",
+     "team": "PHX"
+    }
+   ],
+   "net": -5,
+   "payout": 0,
+   "placedAt": "2026-11-05T19:40:11.621Z",
+   "player": "Beekie",
+   "series": null,
+   "settledAt": "2026-11-06T08:23:24Z",
+   "stage": "regular",
+   "stake": 5,
+   "status": "loss"
   },
   "U3TJHnVg7En3DN7BZgGL": {
    "_updated": "2026-10-30T00:15:22.243397Z",
