@@ -741,15 +741,6 @@
    "updated": "2026-11-04T13:52:29Z"
   },
   "2026-11-05": {
-   "single": {
-    "eventID": "vWj4zYDAImhO5kpPxaiD",
-    "oddID": "threePointersMade-STEPHEN_CURRY_1_NBA-game-ou-over",
-    "line": 4.5,
-    "odds": 140,
-    "label": "Stephen Curry over 4.5 threes (alt)",
-    "team": "GSW",
-    "why": "Miami allows 16.6 threes a game at 40.4%, both 29th in the league, and it landed around 1:48 am after an overtime win in Los Angeles. Curry averages 5.5 threes with a 41.2% usage rate and has made 6, 8 and 5 in his last three. The market moved the spread from about -4.5 to -7.5 for the tired legs, but plus money on five threes has not followed. That is the edge."
-   },
    "parlay": {
     "eventID": "vWj4zYDAImhO5kpPxaiD",
     "legs": [
@@ -769,21 +760,7 @@
     "price": 169,
     "why": "Golden State ranks 1st in three-point percentage at 40.9% and 4th in three-point rate, and Miami sits 29th in opponent eFG on a back-to-back after 40 minutes each from Giannis and Bam in overtime. The script is the Warriors pulling away from deep in the second half. Curry needs only four threes, which he has cleared in all of his last three, and the alt spread buys two points back from the -7.5 the market moved to."
    },
-   "updated": "2026-11-05T13:51:16Z",
    "personal": {
-    "Kev": {
-     "eventID": "ZwreqgOw8hyXBglasOGp",
-     "legs": [
-      {
-       "label": "Magic +1.5",
-       "line": 1.5,
-       "oddID": "points-away-game-sp-away",
-       "odds": -110
-      }
-     ],
-     "price": -110,
-     "why": "You are 4-1 on singles, every side a road team, and 2-0 on dogs, so here is another in your lane. Orlando has two days off against a Phoenix team on a back-to-back, 30th in defensive rating and 0-6 against the spread, per Fubo. Banchero and Suggs are out, but the price holds. Straight, near even, your shape."
-    },
     "Beekie": {
      "eventID": "vWj4zYDAImhO5kpPxaiD",
      "legs": [
@@ -802,6 +779,19 @@
      ],
      "price": 332,
      "why": "Zero for seven, with legs 3-18, and that third leg keeps killing you, so here is your guard-points idea in two legs. Miami sits 29th in opponent eFG on a back-to-back. Curry has averaged 36.3 over his last three and Podziemski 19.3. You still get long-shot money, with one less thing that has to go right."
+    },
+    "Kev": {
+     "eventID": "ZwreqgOw8hyXBglasOGp",
+     "legs": [
+      {
+       "label": "Magic +1.5",
+       "line": 1.5,
+       "oddID": "points-away-game-sp-away",
+       "odds": -110
+      }
+     ],
+     "price": -110,
+     "why": "You are 4-1 on singles, every side a road team, and 2-0 on dogs, so here is another in your lane. Orlando has two days off against a Phoenix team on a back-to-back, 30th in defensive rating and 0-6 against the spread, per Fubo. Banchero and Suggs are out, but the price holds. Straight, near even, your shape."
     },
     "Mio": {
      "eventID": "ZwreqgOw8hyXBglasOGp",
@@ -835,7 +825,17 @@
      "price": 102,
      "why": "You like overs on stars with a story, and the alts and long parlays have cost you, so here is a clean main-line single at even money. Klay returns to Chase Center averaging 15.1 points, 25.7 over his last three, with 8 threes and the winner last night. The line is 13.5. Check he is active on the back-to-back, the only real risk."
     }
-   }
+   },
+   "single": {
+    "eventID": "vWj4zYDAImhO5kpPxaiD",
+    "label": "Stephen Curry over 4.5 threes (alt)",
+    "line": 4.5,
+    "oddID": "threePointersMade-STEPHEN_CURRY_1_NBA-game-ou-over",
+    "odds": 140,
+    "team": "GSW",
+    "why": "Miami allows 16.6 threes a game at 40.4%, both 29th in the league, and it landed around 1:48 am after an overtime win in Los Angeles. Curry averages 5.5 threes with a 41.2% usage rate and has made 6, 8 and 5 in his last three. The market moved the spread from about -4.5 to -7.5 for the tired legs, but plus money on five threes has not followed. That is the edge."
+   },
+   "updated": "2026-11-05T13:51:16Z"
   }
  },
  "games": {
@@ -3962,6 +3962,106 @@
    },
    "updated": "2026-10-31T13:00:35Z"
   },
+  "ZwreqgOw8hyXBglasOGp": {
+   "angles": [
+    "PHX back-to-back, ORL two days rest",
+    "PHX 30th in defensive rating",
+    "PHX allows 40% from three",
+    "PHX 0-6 against the spread, per Fubo",
+    "Banchero and Suggs out for ORL"
+   ],
+   "away": "ORL",
+   "blurb": "Two bad teams, one tired. Orlando is 2-5 after home losses to Boston 108-97 and Washington 103-94, though it is 2-1 on the road. Phoenix is 1-5 after Portland won there 132-119 last night. The Suns rank 30th in defensive rating at 124.6 and allow 40% from three, while the Magic are 28th in pace. Orlando has two days off against a back-to-back, and Phoenix is 0-6 against the spread, per Fubo. Suns -1.5 and 223.5 call it a coin flip; the lean is Orlando, from three.",
+   "date": "2026-11-05",
+   "home": "PHX",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Right high ankle sprain, expected to cost him four to six weeks; Orlando loses its lead forward and much of its shot creation.",
+     "player": "Paolo Banchero",
+     "status": "Out",
+     "team": "ORL"
+    },
+    {
+     "impact": "High",
+     "note": "Mild bone bruise in the right knee; Orlando loses a starting guard.",
+     "player": "Jalen Suggs",
+     "status": "Out",
+     "team": "ORL"
+    },
+    {
+     "impact": "High",
+     "note": "Left ankle management, rested Monday and listed day-to-day; without him Orlando loses a second playmaker and more falls on Wagner.",
+     "player": "Anthony Black",
+     "stats": "16.5 pts, 4.8 ast this season",
+     "status": "Questionable",
+     "team": "ORL"
+    },
+    {
+     "impact": "Low",
+     "note": "Knee; Orlando loses frontcourt depth.",
+     "player": "Jonathan Isaac",
+     "status": "Out",
+     "team": "ORL"
+    },
+    {
+     "impact": "Low",
+     "note": "Partially torn right hamstring; Orlando loses depth.",
+     "player": "Noah Penda",
+     "status": "Out",
+     "team": "ORL"
+    },
+    {
+     "impact": "High",
+     "note": "Left shoulder surgery for a torn labrum; Phoenix loses size and leans on Maluach.",
+     "player": "Mark Williams",
+     "status": "Out",
+     "team": "PHX"
+    },
+    {
+     "impact": "Medium",
+     "note": "Calf, day-to-day after missing last night; Phoenix would lose a key rotation guard.",
+     "player": "Jordan Goodwin",
+     "stats": "9.0 pts, 3.2 reb this season",
+     "status": "Questionable",
+     "team": "PHX"
+    },
+    {
+     "impact": "Low",
+     "note": "Ankle, day-to-day after missing last night; Phoenix would lose depth.",
+     "player": "Rasheer Fleming",
+     "status": "Questionable",
+     "team": "PHX"
+    }
+   ],
+   "parlay": {
+    "legs": [
+     {
+      "label": "Magic +1.5",
+      "line": 1.5,
+      "oddID": "points-away-game-sp-away",
+      "odds": -110
+     },
+     {
+      "label": "Desmond Bane over 2.5 threes (alt)",
+      "line": 2.5,
+      "oddID": "threePointersMade-DESMOND_BANE_1_NBA-game-ou-over",
+      "odds": -188
+     }
+    ],
+    "price": 192,
+    "why": "Orlando shoots 47.4% from three in wins and 27.2% in losses, per PredictEm, so the bet is one script: rested Magic shooters against the league's 30th-ranked defense on tired legs. Bane is the man it runs through, and the alt number needs just three makes."
+   },
+   "single": {
+    "label": "Desmond Bane over 3.5 threes",
+    "line": 3.5,
+    "oddID": "threePointersMade-DESMOND_BANE_1_NBA-game-ou-over",
+    "odds": 132,
+    "team": "ORL",
+    "why": "Phoenix gives up 15.2 threes a game at 40% and is on the second night of a back-to-back. Bane has made 6, 5 and 4 over his last three and averages 3.7, and with Banchero and Suggs out he stays busy. Plus money undersells that."
+   },
+   "updated": "2026-11-05T13:51:16Z"
+  },
   "cyryOmeXfq9UGiG2DjCm": {
    "angles": [
     "Wemby 36.0 points last 3",
@@ -5812,6 +5912,86 @@
    },
    "updated": "2026-10-30T13:31:22Z"
   },
+  "vWj4zYDAImhO5kpPxaiD": {
+   "angles": [
+    "MIA back-to-back, landed about 1:48 am",
+    "Giannis, Bam 40 minutes in overtime",
+    "MIA 29th allowing threes, 16.6 a game",
+    "GSW 1st in three-point percentage",
+    "Klay back at Chase Center",
+    "Line moved from GSW -4.5, per PredictEm"
+   ],
+   "away": "MIA",
+   "blurb": "Golden State is 5-3 on a five-game win streak, last beating Phoenix 116-113 on Monday, and has been off since. Miami is 3-5 and rallied from 20 down to beat the Clippers 117-116 in overtime last night, with Klay Thompson hitting the winner ahead of his Chase Center return, per CBS and Heavy. The Heat landed around 1:48 am by estimate and rank 29th in opponent eFG at 58.1%, allowing 16.6 threes a game to the league's top three-point shooters. Warriors -7.5 and 235.5 already price the tired legs, so the lean is threes, not the side.",
+   "date": "2026-11-05",
+   "home": "GSW",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Playing through a right wrist sprain and logged 40 minutes last night; Miami's report was not out when we read it, and without him the Heat lose their top scorer and rebounder.",
+     "player": "Giannis Antetokounmpo",
+     "stats": "27.3 pts, 13.6 reb, 6.6 ast this season",
+     "status": "Probable",
+     "team": "MIA"
+    },
+    {
+     "impact": "High",
+     "note": "Recovering from a knee injury, possibly back around January; Golden State loses a top rotation player.",
+     "player": "Jimmy Butler",
+     "status": "Out",
+     "team": "GSW"
+    },
+    {
+     "impact": "Medium",
+     "note": "Recovering from a knee injury on a similar timeline; Golden State loses a rotation player.",
+     "player": "Moses Moody",
+     "status": "Out",
+     "team": "GSW"
+    },
+    {
+     "impact": "Medium",
+     "note": "Away from the team with POTS symptoms; Golden State loses frontcourt depth and is not counting on him.",
+     "player": "Kristaps Porzingis",
+     "status": "Out",
+     "team": "GSW"
+    },
+    {
+     "impact": "Low",
+     "note": "Left knee tendinitis, day-to-day; Golden State loses a reserve forward.",
+     "player": "Gui Santos",
+     "stats": "6.2 pts, 3.8 reb this season",
+     "status": "Out",
+     "team": "GSW"
+    }
+   ],
+   "parlay": {
+    "legs": [
+     {
+      "label": "Warriors -5.5 (alt)",
+      "line": -5.5,
+      "oddID": "points-home-game-sp-home",
+      "odds": -146
+     },
+     {
+      "label": "Stephen Curry over 3.5 threes",
+      "line": 3.5,
+      "oddID": "threePointersMade-STEPHEN_CURRY_1_NBA-game-ou-over",
+      "odds": -168
+     }
+    ],
+    "price": 169,
+    "why": "Golden State has been off since Monday and Miami's stars played 40 minutes in overtime last night, so the script is the Warriors pulling away from deep. Curry needs just four threes against a 29th-ranked three-point defense, and the alt spread gives two points back from the -7.5 the market moved to."
+   },
+   "single": {
+    "label": "Stephen Curry over 4.5 threes (alt)",
+    "line": 4.5,
+    "oddID": "threePointersMade-STEPHEN_CURRY_1_NBA-game-ou-over",
+    "odds": 140,
+    "team": "GSW",
+    "why": "Miami allows 16.6 threes a game at 40.4%, both 29th, and got in around 1:48 am after overtime. Curry averages 5.5 threes on a 41.2% usage rate and has made 6, 8 and 5 in his last three. Five makes at +140 is the number the market missed."
+   },
+   "updated": "2026-11-05T13:51:16Z"
+  },
   "wXpf48J3m5ksYcM21vc5": {
    "away": "MIA",
    "blurb": "Miami is 0-4 despite Giannis Antetokounmpo's 28.5 points and 9.5 rebounds, the latest a 113-109 home loss to Dallas. Atlanta is 2-2 after falling 120-110 in Houston, with Jalen Johnson stuffing the sheet at 21.5, 9.8 and 8.3. Atlanta -3.5 is a modest home number for a winless opponent, and 240.5 says both teams will score.",
@@ -5984,207 +6164,27 @@
     "why": "Maxey has at least 26 in every game, per SI, is averaging 29.1 and scored 29 in the first meeting against this same defense. With Duren out, Detroit has less at the rim, and this number sits below every game he has played."
    },
    "updated": "2026-11-04T13:52:29Z"
-  },
-  "ZwreqgOw8hyXBglasOGp": {
-   "date": "2026-11-05",
-   "away": "ORL",
-   "home": "PHX",
-   "blurb": "Two bad teams, one tired. Orlando is 2-5 after home losses to Boston 108-97 and Washington 103-94, though it is 2-1 on the road. Phoenix is 1-5 after Portland won there 132-119 last night. The Suns rank 30th in defensive rating at 124.6 and allow 40% from three, while the Magic are 28th in pace. Orlando has two days off against a back-to-back, and Phoenix is 0-6 against the spread, per Fubo. Suns -1.5 and 223.5 call it a coin flip; the lean is Orlando, from three.",
-   "angles": [
-    "PHX back-to-back, ORL two days rest",
-    "PHX 30th in defensive rating",
-    "PHX allows 40% from three",
-    "PHX 0-6 against the spread, per Fubo",
-    "Banchero and Suggs out for ORL"
-   ],
-   "injuries": [
-    {
-     "team": "ORL",
-     "player": "Paolo Banchero",
-     "status": "Out",
-     "impact": "High",
-     "note": "Right high ankle sprain, expected to cost him four to six weeks; Orlando loses its lead forward and much of its shot creation."
-    },
-    {
-     "team": "ORL",
-     "player": "Jalen Suggs",
-     "status": "Out",
-     "impact": "High",
-     "note": "Mild bone bruise in the right knee; Orlando loses a starting guard."
-    },
-    {
-     "team": "ORL",
-     "player": "Anthony Black",
-     "status": "Questionable",
-     "impact": "High",
-     "note": "Left ankle management, rested Monday and listed day-to-day; without him Orlando loses a second playmaker and more falls on Wagner.",
-     "stats": "16.5 pts, 4.8 ast this season"
-    },
-    {
-     "team": "ORL",
-     "player": "Jonathan Isaac",
-     "status": "Out",
-     "impact": "Low",
-     "note": "Knee; Orlando loses frontcourt depth."
-    },
-    {
-     "team": "ORL",
-     "player": "Noah Penda",
-     "status": "Out",
-     "impact": "Low",
-     "note": "Partially torn right hamstring; Orlando loses depth."
-    },
-    {
-     "team": "PHX",
-     "player": "Mark Williams",
-     "status": "Out",
-     "impact": "High",
-     "note": "Left shoulder surgery for a torn labrum; Phoenix loses size and leans on Maluach."
-    },
-    {
-     "team": "PHX",
-     "player": "Jordan Goodwin",
-     "status": "Questionable",
-     "impact": "Medium",
-     "note": "Calf, day-to-day after missing last night; Phoenix would lose a key rotation guard.",
-     "stats": "9.0 pts, 3.2 reb this season"
-    },
-    {
-     "team": "PHX",
-     "player": "Rasheer Fleming",
-     "status": "Questionable",
-     "impact": "Low",
-     "note": "Ankle, day-to-day after missing last night; Phoenix would lose depth."
-    }
-   ],
-   "single": {
-    "oddID": "threePointersMade-DESMOND_BANE_1_NBA-game-ou-over",
-    "line": 3.5,
-    "odds": 132,
-    "label": "Desmond Bane over 3.5 threes",
-    "team": "ORL",
-    "why": "Phoenix gives up 15.2 threes a game at 40% and is on the second night of a back-to-back. Bane has made 6, 5 and 4 over his last three and averages 3.7, and with Banchero and Suggs out he stays busy. Plus money undersells that."
-   },
-   "parlay": {
-    "legs": [
-     {
-      "label": "Magic +1.5",
-      "line": 1.5,
-      "oddID": "points-away-game-sp-away",
-      "odds": -110
-     },
-     {
-      "label": "Desmond Bane over 2.5 threes (alt)",
-      "line": 2.5,
-      "oddID": "threePointersMade-DESMOND_BANE_1_NBA-game-ou-over",
-      "odds": -188
-     }
-    ],
-    "price": 192,
-    "why": "Orlando shoots 47.4% from three in wins and 27.2% in losses, per PredictEm, so the bet is one script: rested Magic shooters against the league's 30th-ranked defense on tired legs. Bane is the man it runs through, and the alt number needs just three makes."
-   },
-   "updated": "2026-11-05T13:51:16Z"
-  },
-  "vWj4zYDAImhO5kpPxaiD": {
-   "date": "2026-11-05",
-   "away": "MIA",
-   "home": "GSW",
-   "blurb": "Golden State is 5-3 on a five-game win streak, last beating Phoenix 116-113 on Monday, and has been off since. Miami is 3-5 and rallied from 20 down to beat the Clippers 117-116 in overtime last night, with Klay Thompson hitting the winner ahead of his Chase Center return, per CBS and Heavy. The Heat landed around 1:48 am by estimate and rank 29th in opponent eFG at 58.1%, allowing 16.6 threes a game to the league's top three-point shooters. Warriors -7.5 and 235.5 already price the tired legs, so the lean is threes, not the side.",
-   "angles": [
-    "MIA back-to-back, landed about 1:48 am",
-    "Giannis, Bam 40 minutes in overtime",
-    "MIA 29th allowing threes, 16.6 a game",
-    "GSW 1st in three-point percentage",
-    "Klay back at Chase Center",
-    "Line moved from GSW -4.5, per PredictEm"
-   ],
-   "injuries": [
-    {
-     "team": "MIA",
-     "player": "Giannis Antetokounmpo",
-     "status": "Probable",
-     "impact": "High",
-     "note": "Playing through a right wrist sprain and logged 40 minutes last night; Miami's report was not out when we read it, and without him the Heat lose their top scorer and rebounder.",
-     "stats": "27.3 pts, 13.6 reb, 6.6 ast this season"
-    },
-    {
-     "team": "GSW",
-     "player": "Jimmy Butler",
-     "status": "Out",
-     "impact": "High",
-     "note": "Recovering from a knee injury, possibly back around January; Golden State loses a top rotation player."
-    },
-    {
-     "team": "GSW",
-     "player": "Moses Moody",
-     "status": "Out",
-     "impact": "Medium",
-     "note": "Recovering from a knee injury on a similar timeline; Golden State loses a rotation player."
-    },
-    {
-     "team": "GSW",
-     "player": "Kristaps Porzingis",
-     "status": "Out",
-     "impact": "Medium",
-     "note": "Away from the team with POTS symptoms; Golden State loses frontcourt depth and is not counting on him."
-    },
-    {
-     "team": "GSW",
-     "player": "Gui Santos",
-     "status": "Out",
-     "impact": "Low",
-     "note": "Left knee tendinitis, day-to-day; Golden State loses a reserve forward.",
-     "stats": "6.2 pts, 3.8 reb this season"
-    }
-   ],
-   "single": {
-    "oddID": "threePointersMade-STEPHEN_CURRY_1_NBA-game-ou-over",
-    "line": 4.5,
-    "odds": 140,
-    "label": "Stephen Curry over 4.5 threes (alt)",
-    "team": "GSW",
-    "why": "Miami allows 16.6 threes a game at 40.4%, both 29th, and got in around 1:48 am after overtime. Curry averages 5.5 threes on a 41.2% usage rate and has made 6, 8 and 5 in his last three. Five makes at +140 is the number the market missed."
-   },
-   "parlay": {
-    "legs": [
-     {
-      "label": "Warriors -5.5 (alt)",
-      "line": -5.5,
-      "oddID": "points-home-game-sp-home",
-      "odds": -146
-     },
-     {
-      "label": "Stephen Curry over 3.5 threes",
-      "line": 3.5,
-      "oddID": "threePointersMade-STEPHEN_CURRY_1_NBA-game-ou-over",
-      "odds": -168
-     }
-    ],
-    "price": 169,
-    "why": "Golden State has been off since Monday and Miami's stars played 40 minutes in overtime last night, so the script is the Warriors pulling away from deep. Curry needs just four threes against a 29th-ranked three-point defense, and the alt spread gives two points back from the -7.5 the market moved to."
-   },
-   "updated": "2026-11-05T13:51:16Z"
   }
  },
  "players": {
   "Beekie": {
-   "text": "Beekie builds three-leg long shots and nothing else: all seven settled bets are parlays over +300, and they are 0-7 for -35 at a flat 5 each. Legs are 3-18, with props 2-12 and totals 1-6, and every prop is on points, mostly guards (nine of 14), with overs and unders close to even. No alt lines, no singles, and both boosts went on parlays averaging +618 and lost. The flat stake keeps the damage small, but the third leg keeps killing tickets. Read: a guard-points parlay dreamer who should try two legs.",
    "settled": 7,
+   "text": "Beekie builds three-leg long shots and nothing else: all seven settled bets are parlays over +300, and they are 0-7 for -35 at a flat 5 each. Legs are 3-18, with props 2-12 and totals 1-6, and every prop is on points, mostly guards (nine of 14), with overs and unders close to even. No alt lines, no singles, and both boosts went on parlays averaging +618 and lost. The flat stake keeps the damage small, but the third leg keeps killing tickets. Read: a guard-points parlay dreamer who should try two legs.",
    "updated": "2026-11-05T13:51:16Z"
   },
   "Kev": {
-   "text": "Kev is the straight bettor of the group: all five settled bets are singles, and at 4-1 for +31.77 he is second only to Mio. Four of the five came near even, at 3-1, every side was a road team, and he is 2-0 on underdogs. Stakes run 10 to 30, averaging 18. His one alt leg, bought safer, won, and his boost on a +108 moneyline cashed. He bets about seven hours before tip and has never copied Claude. No new bets to judge lately. Read: a disciplined road-dog single bettor, small sample so far.",
    "settled": 5,
+   "text": "Kev is the straight bettor of the group: all five settled bets are singles, and at 4-1 for +31.77 he is second only to Mio. Four of the five came near even, at 3-1, every side was a road team, and he is 2-0 on underdogs. Stakes run 10 to 30, averaging 18. His one alt leg, bought safer, won, and his boost on a +108 moneyline cashed. He bets about seven hours before tip and has never copied Claude. No new bets to judge lately. Read: a disciplined road-dog single bettor, small sample so far.",
    "updated": "2026-11-05T13:51:16Z"
   },
   "Mio": {
-   "text": "Mio is the buy-the-safe-number specialist and the runaway leader at +202.63 on a 13-1 record. Twenty-five of 27 legs were alternate lines moved to a shorter price, and those went 23-1. Thirteen of 14 bets are two-leg parlays (12-1, legs 24-1), usually modest favorites (8-1 from -131 to -199). Props are all overs at 12-1, mostly points-rebounds-assists combos, and sides are 9-0, favorites and dogs alike. Both boosts went on short parlays and won. Stakes average 23.6, up to 50, and Claude has never been copied. Read: a grinder who buys safety, and it is working.",
    "settled": 14,
+   "text": "Mio is the buy-the-safe-number specialist and the runaway leader at +202.63 on a 13-1 record. Twenty-five of 27 legs were alternate lines moved to a shorter price, and those went 23-1. Thirteen of 14 bets are two-leg parlays (12-1, legs 24-1), usually modest favorites (8-1 from -131 to -199). Props are all overs at 12-1, mostly points-rebounds-assists combos, and sides are 9-0, favorites and dogs alike. Both boosts went on short parlays and won. Stakes average 23.6, up to 50, and Claude has never been copied. Read: a grinder who buys safety, and it is working.",
    "updated": "2026-11-05T13:51:16Z"
   },
   "Sulliver": {
-   "text": "Sulliver is the one who follows Claude: four of seven settled bets copied the pick of the day, and the group's worst number, 1-6 for -68.91, says that has not helped. Five singles went 1-4 and two parlays 0-2, with prices scattered from favorites to long shots. Props lean to overs on stars, all seven, at 2-5, mixed across points, threes, rebounds and assists, and alt legs are 0-3. The one boost went on a +547 parlay and lost. Stakes jump from 5 to 43, averaging 12.6. Read: no settled pattern yet, a star-overs bettor still looking for a lane.",
    "settled": 7,
+   "text": "Sulliver is the one who follows Claude: four of seven settled bets copied the pick of the day, and the group's worst number, 1-6 for -68.91, says that has not helped. Five singles went 1-4 and two parlays 0-2, with prices scattered from favorites to long shots. Props lean to overs on stars, all seven, at 2-5, mixed across points, threes, rebounds and assists, and alt legs are 0-3. The one boost went on a +547 parlay and lost. Stakes jump from 5 to 43, averaging 12.6. Read: no settled pattern yet, a star-overs bettor still looking for a lane.",
    "updated": "2026-11-05T13:51:16Z"
   }
  },
@@ -6261,6 +6261,16 @@
     "Sulliver": "win"
    },
    "single": "loss"
+  },
+  "2026-11-05": {
+   "parlay": "win",
+   "personal": {
+    "Beekie": "loss",
+    "Kev": "loss",
+    "Mio": "loss",
+    "Sulliver": "loss"
+   },
+   "single": "win"
   },
   "games": {
    "15lO1kNolbn7vpAPOsEO": {
@@ -6751,6 +6761,22 @@
      "teams": []
     }
    },
+   "ZwreqgOw8hyXBglasOGp": {
+    "parlay": {
+     "date": "2026-11-05",
+     "r": "loss",
+     "teams": [
+      "ORL"
+     ]
+    },
+    "single": {
+     "date": "2026-11-05",
+     "r": "loss",
+     "teams": [
+      "ORL"
+     ]
+    }
+   },
    "cyryOmeXfq9UGiG2DjCm": {
     "parlay": {
      "date": "2026-11-02",
@@ -7048,6 +7074,22 @@
      "teams": []
     }
    },
+   "vWj4zYDAImhO5kpPxaiD": {
+    "parlay": {
+     "date": "2026-11-05",
+     "r": "win",
+     "teams": [
+      "GSW"
+     ]
+    },
+    "single": {
+     "date": "2026-11-05",
+     "r": "win",
+     "teams": [
+      "GSW"
+     ]
+    }
+   },
    "x4q7hhvxJ5L0a4mILVVZ": {
     "parlay": {
      "date": "2026-11-02",
@@ -7084,8 +7126,8 @@
  },
  "winOdds": {
   "odds": {
-   "Kev": 34,
    "Beekie": 30,
+   "Kev": 34,
    "Mio": 13,
    "Sulliver": 23
   },
