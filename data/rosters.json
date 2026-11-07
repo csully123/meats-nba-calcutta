@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T03:44:36.013657+00:00",
+ "updated": "2026-11-07T00:06:50.102784+00:00",
  "players": {
   "AJ Dybantsa": {
    "team": "WAS",
@@ -253,10 +253,6 @@
    "team": "OKC",
    "pos": "F"
   },
-  "Bruce Thornton": {
-   "team": "HOU",
-   "pos": "G"
-  },
   "Bryce Hopkins": {
    "team": "DEN",
    "pos": "F"
@@ -352,10 +348,6 @@
   "Chet Holmgren": {
    "team": "OKC",
    "pos": "C"
-  },
-  "Chris Cenac Jr.": {
-   "team": "BOS",
-   "pos": "F"
   },
   "Chris Manon": {
    "team": "LAL",
@@ -1573,6 +1565,10 @@
    "team": "BKN",
    "pos": "G"
   },
+  "Norchad Omier": {
+   "team": "CLE",
+   "pos": "C"
+  },
   "Norman Powell": {
    "team": "CHI",
    "pos": "G"
@@ -1700,10 +1696,6 @@
   "Reed Sheppard": {
    "team": "HOU",
    "pos": "G"
-  },
-  "Riley Minix": {
-   "team": "CLE",
-   "pos": "F"
   },
   "Robert Williams III": {
    "team": "POR",
