@@ -1,6 +1,6 @@
 {
- "backedUpAt": "2026-11-06T08:56:27Z",
- "count": 35,
+ "backedUpAt": "2026-11-07T08:51:03Z",
+ "count": 36,
  "wagers": {
   "0DMEKNttNFZJhyWOJRg8": {
    "_updated": "2026-11-05T08:27:06.083944Z",
@@ -294,6 +294,64 @@
    "settledAt": "2026-11-01T08:08:08Z",
    "stage": "regular",
    "stake": 20,
+   "status": "win"
+  },
+  "A3464WIdeaui4MLXEm35": {
+   "_updated": "2026-11-07T08:12:13.164416Z",
+   "boost": null,
+   "createdAt": "2026-11-06T18:09:19.615Z",
+   "eventID": "s3A807sVDC97IVwGKvBl",
+   "game": "UTA at DAL",
+   "gameDate": "2026-11-06",
+   "gameStart": "2026-11-07T01:00:00.000Z",
+   "legResults": [
+    "win",
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "home",
+     "line": -6.5,
+     "name": "Spread",
+     "oddID": "points-home-game-sp-home",
+     "odds": -120,
+     "opposing": "points-away-game-sp-away",
+     "period": "game",
+     "player": null,
+     "short": "DAL -6.5 (alt)",
+     "side": "home",
+     "stat": "points",
+     "team": "DAL"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "C_FLAGG_1_NBA",
+     "line": 3.5,
+     "name": "Cooper Flagg Assists",
+     "oddID": "assists-C_FLAGG_1_NBA-game-ou-over",
+     "odds": -720,
+     "opposing": "assists-C_FLAGG_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "C_FLAGG_1_NBA",
+     "short": "Cooper Flagg Assists Over 3.5 (alt)",
+     "side": "over",
+     "stat": "assists",
+     "team": "DAL"
+    }
+   ],
+   "net": 47.27,
+   "payout": 90.72,
+   "placedAt": "2026-11-06T18:09:17.882Z",
+   "player": "Kev",
+   "series": null,
+   "settledAt": "2026-11-07T08:12:13Z",
+   "stage": "cup",
+   "stake": 43.45,
    "status": "win"
   },
   "BpV7ZbpOumBhlLDdpFXt": {
