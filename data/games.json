@@ -3300,9 +3300,9 @@
   "label": null,
   "multiplier": 1,
   "series": null,
-  "spreadHome": 9.5,
+  "spreadHome": 10.5,
   "spreadSource": "DraftKings",
-  "spreadUpdated": "2026-11-08T15:05:55Z",
+  "spreadUpdated": "2026-11-08T19:33:01Z",
   "stage": "regular",
   "start": "2026-11-08T20:30:00Z",
   "status": "scheduled"
@@ -3323,9 +3323,9 @@
   "label": null,
   "multiplier": 1,
   "series": null,
-  "spreadHome": -7.5,
+  "spreadHome": -6.5,
   "spreadSource": "ESPN",
-  "spreadUpdated": "2026-11-08T18:38:06Z",
+  "spreadUpdated": "2026-11-08T19:33:01Z",
   "stage": "regular",
   "start": "2026-11-08T23:00:00Z",
   "status": "scheduled"
