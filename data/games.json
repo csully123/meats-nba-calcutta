@@ -3289,13 +3289,13 @@
   "awayColor": "1d428a",
   "awayLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
   "awayName": "Philadelphia 76ers",
-  "awayScore": null,
+  "awayScore": 34,
   "date": "2026-11-08",
   "home": "CHI",
   "homeColor": "ce1141",
   "homeLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png",
   "homeName": "Chicago Bulls",
-  "homeScore": null,
+  "homeScore": 35,
   "id": "401909945",
   "label": null,
   "multiplier": 1,
@@ -3305,7 +3305,7 @@
   "spreadUpdated": "2026-11-08T20:27:08Z",
   "stage": "regular",
   "start": "2026-11-08T20:30:00Z",
-  "status": "scheduled"
+  "status": "inprogress"
  },
  "401909946": {
   "away": "LAL",
