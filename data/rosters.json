@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T20:27:37.517651+00:00",
+ "updated": "2026-11-08T17:05:20.434007+00:00",
  "players": {
   "AJ Dybantsa": {
    "team": "WAS",
@@ -252,6 +252,10 @@
   "Brooks Barnhizer": {
    "team": "OKC",
    "pos": "F"
+  },
+  "Bruce Thornton": {
+   "team": "HOU",
+   "pos": "G"
   },
   "Bryce Hopkins": {
    "team": "DEN",
@@ -1701,6 +1705,10 @@
    "team": "MEM",
    "pos": "G"
   },
+  "Riley Minix": {
+   "team": "CLE",
+   "pos": "F"
+  },
   "Robert Williams III": {
    "team": "POR",
    "pos": "C"
@@ -1947,10 +1955,6 @@
   },
   "Trey Murphy III": {
    "team": "NOP",
-   "pos": "F"
-  },
-  "Tristan Enaruna": {
-   "team": "CLE",
    "pos": "F"
   },
   "Tristan Vukcevic": {
