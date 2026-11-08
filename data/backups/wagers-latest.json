@@ -1,6 +1,6 @@
 {
- "backedUpAt": "2026-11-07T08:51:03Z",
- "count": 36,
+ "backedUpAt": "2026-11-08T08:51:16Z",
+ "count": 38,
  "wagers": {
   "0DMEKNttNFZJhyWOJRg8": {
    "_updated": "2026-11-05T08:27:06.083944Z",
@@ -801,6 +801,64 @@
    "stake": 5,
    "status": "loss"
   },
+  "J9k87g3xl2d9G7qHXpYG": {
+   "_updated": "2026-11-08T08:12:24.900241Z",
+   "boost": null,
+   "createdAt": "2026-11-07T18:00:13.126Z",
+   "eventID": "5pWgGpK0VzJgbvMgss8C",
+   "game": "SAS at POR",
+   "gameDate": "2026-11-07",
+   "gameStart": "2026-11-08T03:00:00.000Z",
+   "legResults": [
+    "win",
+    "loss"
+   ],
+   "legs": [
+    {
+     "alt": false,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "away",
+     "line": -5.5,
+     "name": "Spread",
+     "oddID": "points-away-game-sp-away",
+     "odds": -110,
+     "opposing": "points-home-game-sp-home",
+     "period": "game",
+     "player": null,
+     "short": "SAS -5.5",
+     "side": "away",
+     "stat": "points",
+     "team": "SAS"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "VICTOR_WEMBANYAMA_1_NBA",
+     "line": 1.5,
+     "name": "Victor Wembanyama Blocks",
+     "oddID": "blocks-VICTOR_WEMBANYAMA_1_NBA-game-ou-over",
+     "odds": -1100,
+     "opposing": "blocks-VICTOR_WEMBANYAMA_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "VICTOR_WEMBANYAMA_1_NBA",
+     "short": "Victor Wembanyama Blocks Over 1.5 (alt)",
+     "side": "over",
+     "stat": "blocks",
+     "team": "SAS"
+    }
+   ],
+   "net": -20,
+   "payout": 0,
+   "placedAt": "2026-11-07T18:00:12.243Z",
+   "player": "Kev",
+   "series": null,
+   "settledAt": "2026-11-08T08:12:24Z",
+   "stage": "regular",
+   "stake": 20,
+   "status": "loss"
+  },
   "JAb80p3qk61QiGWgPtWq": {
    "_updated": "2026-10-30T00:15:22.085542Z",
    "boost": null,
@@ -1412,6 +1470,64 @@
    "stage": "regular",
    "stake": 10,
    "status": "win"
+  },
+  "YohypGQ2kalUcgx3HPED": {
+   "_updated": "2026-11-08T08:12:25.191510Z",
+   "boost": null,
+   "createdAt": "2026-11-07T18:22:14.862Z",
+   "eventID": "d7EAb9t7TEWyo9b7KBEp",
+   "game": "DEN at IND",
+   "gameDate": "2026-11-07",
+   "gameStart": "2026-11-07T22:00:00.000Z",
+   "legResults": [
+    "win",
+    "loss"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "away",
+     "line": 3.5,
+     "name": "Spread",
+     "oddID": "points-away-game-sp-away",
+     "odds": -360,
+     "opposing": "points-home-game-sp-home",
+     "period": "game",
+     "player": null,
+     "short": "DEN +3.5 (alt)",
+     "side": "away",
+     "stat": "points",
+     "team": "DEN"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAMAL_MURRAY_1_NBA",
+     "line": 19.5,
+     "name": "Jamal Murray Points",
+     "oddID": "points-JAMAL_MURRAY_1_NBA-game-ou-over",
+     "odds": -260,
+     "opposing": "points-JAMAL_MURRAY_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JAMAL_MURRAY_1_NBA",
+     "short": "Jamal Murray Points Over 19.5 (alt)",
+     "side": "over",
+     "stat": "points",
+     "team": "DEN"
+    }
+   ],
+   "net": -28.63,
+   "payout": 0,
+   "placedAt": "2026-11-07T18:22:14.243Z",
+   "player": "Mio",
+   "series": null,
+   "settledAt": "2026-11-08T08:12:24Z",
+   "stage": "regular",
+   "stake": 28.63,
+   "status": "loss"
   },
   "aD7l26HQx7yLdjZ3nRic": {
    "_updated": "2026-10-29T08:12:11.601411Z",
