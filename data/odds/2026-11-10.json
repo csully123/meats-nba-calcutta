@@ -1,0 +1,8068 @@
+{
+ "date": "2026-11-10",
+ "games": {
+  "0yQbsuQDcjAH3WzrI7zn": {
+   "away": "BOS",
+   "awayColor": "#008348",
+   "awayName": "Boston Celtics",
+   "cancelled": false,
+   "date": "2026-11-10",
+   "display": "",
+   "ended": false,
+   "eventID": "0yQbsuQDcjAH3WzrI7zn",
+   "finalized": false,
+   "home": "PHI",
+   "homeColor": "#006BB6",
+   "homeName": "Philadelphia 76ers",
+   "markets": [
+    {
+     "available": true,
+     "betType": "ml",
+     "book": "fanduel",
+     "entity": "home",
+     "kind": "game",
+     "line": null,
+     "name": "Moneyline",
+     "oddID": "points-home-game-ml-home",
+     "odds": -112,
+     "opposing": "points-away-game-ml-away",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       null,
+       -112
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "home",
+     "stat": "points",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ml",
+     "book": "fanduel",
+     "entity": "away",
+     "kind": "game",
+     "line": null,
+     "name": "Moneyline",
+     "oddID": "points-away-game-ml-away",
+     "odds": -104,
+     "opposing": "points-home-game-ml-home",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       null,
+       -104
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "away",
+     "stat": "points",
+     "team": "BOS"
+    },
+    {
+     "altBook": "espnbet",
+     "alts": [
+      [
+       210.5,
+       -165
+      ],
+      [
+       211.5,
+       -150
+      ],
+      [
+       212.5,
+       -135
+      ],
+      [
+       213.5,
+       -125
+      ],
+      [
+       214.5,
+       -115
+      ],
+      [
+       216.5,
+       100
+      ],
+      [
+       217.5,
+       110
+      ],
+      [
+       218.5,
+       120
+      ],
+      [
+       219.5,
+       130
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "kind": "game",
+     "line": 215.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-over",
+     "odds": -110,
+     "opposing": "points-all-game-ou-under",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       210.5,
+       -165
+      ],
+      [
+       211.5,
+       -150
+      ],
+      [
+       212.5,
+       -135
+      ],
+      [
+       213.5,
+       -125
+      ],
+      [
+       214.5,
+       -115
+      ],
+      [
+       215.5,
+       -110
+      ],
+      [
+       216.5,
+       100
+      ],
+      [
+       217.5,
+       110
+      ],
+      [
+       218.5,
+       120
+      ],
+      [
+       219.5,
+       130
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "altBook": "espnbet",
+     "alts": [
+      [
+       210.5,
+       130
+      ],
+      [
+       211.5,
+       120
+      ],
+      [
+       212.5,
+       110
+      ],
+      [
+       213.5,
+       100
+      ],
+      [
+       214.5,
+       -105
+      ],
+      [
+       216.5,
+       -125
+      ],
+      [
+       217.5,
+       -135
+      ],
+      [
+       218.5,
+       -150
+      ],
+      [
+       219.5,
+       -165
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "kind": "game",
+     "line": 215.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-under",
+     "odds": -110,
+     "opposing": "points-all-game-ou-over",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       210.5,
+       130
+      ],
+      [
+       211.5,
+       120
+      ],
+      [
+       212.5,
+       110
+      ],
+      [
+       213.5,
+       100
+      ],
+      [
+       214.5,
+       -105
+      ],
+      [
+       215.5,
+       -110
+      ],
+      [
+       216.5,
+       -125
+      ],
+      [
+       217.5,
+       -135
+      ],
+      [
+       218.5,
+       -150
+      ],
+      [
+       219.5,
+       -165
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "altBook": "espnbet",
+     "alts": [
+      [
+       -6.5,
+       165
+      ],
+      [
+       -5.5,
+       155
+      ],
+      [
+       -4.5,
+       135
+      ],
+      [
+       -3.5,
+       125
+      ],
+      [
+       -2.5,
+       110
+      ],
+      [
+       1.5,
+       -130
+      ],
+      [
+       2.5,
+       -150
+      ],
+      [
+       3.5,
+       -180
+      ],
+      [
+       4.5,
+       -210
+      ]
+     ],
+     "available": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "away",
+     "kind": "game",
+     "line": 1.5,
+     "name": "Spread",
+     "oddID": "points-away-game-sp-away",
+     "odds": -118,
+     "opposing": "points-home-game-sp-home",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       -6.5,
+       165
+      ],
+      [
+       -5.5,
+       155
+      ],
+      [
+       -4.5,
+       135
+      ],
+      [
+       -3.5,
+       125
+      ],
+      [
+       -2.5,
+       110
+      ],
+      [
+       1.5,
+       -130
+      ],
+      [
+       1.5,
+       -118
+      ],
+      [
+       2.5,
+       -150
+      ],
+      [
+       3.5,
+       -180
+      ],
+      [
+       4.5,
+       -210
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "away",
+     "stat": "points",
+     "team": "BOS"
+    },
+    {
+     "altBook": "espnbet",
+     "alts": [
+      [
+       -4.5,
+       155
+      ],
+      [
+       -3.5,
+       135
+      ],
+      [
+       -2.5,
+       120
+      ],
+      [
+       -1.5,
+       105
+      ],
+      [
+       2.5,
+       -135
+      ],
+      [
+       3.5,
+       -160
+      ],
+      [
+       4.5,
+       -180
+      ],
+      [
+       5.5,
+       -210
+      ],
+      [
+       6.5,
+       -240
+      ]
+     ],
+     "available": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "home",
+     "kind": "game",
+     "line": -1.5,
+     "name": "Spread",
+     "oddID": "points-home-game-sp-home",
+     "odds": -104,
+     "opposing": "points-away-game-sp-away",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       -4.5,
+       155
+      ],
+      [
+       -3.5,
+       135
+      ],
+      [
+       -2.5,
+       120
+      ],
+      [
+       -1.5,
+       -104
+      ],
+      [
+       -1.5,
+       105
+      ],
+      [
+       2.5,
+       -135
+      ],
+      [
+       3.5,
+       -160
+      ],
+      [
+       4.5,
+       -180
+      ],
+      [
+       5.5,
+       -210
+      ],
+      [
+       6.5,
+       -240
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "home",
+     "stat": "points",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "DERRICK_WHITE_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Derrick White First basket",
+     "oddID": "firstBasket-DERRICK_WHITE_1_NBA-game-yn-yes",
+     "odds": 1100,
+     "opposing": "firstBasket-DERRICK_WHITE_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "DERRICK_WHITE_1_NBA",
+     "seen": [
+      [
+       null,
+       1100
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "firstBasket",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "JAYLEN_BROWN_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Jaylen Brown First basket",
+     "oddID": "firstBasket-JAYLEN_BROWN_1_NBA-game-yn-yes",
+     "odds": 450,
+     "opposing": "firstBasket-JAYLEN_BROWN_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "JAYLEN_BROWN_1_NBA",
+     "seen": [
+      [
+       null,
+       450
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "firstBasket",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "JAYSON_TATUM_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Jayson Tatum First basket",
+     "oddID": "firstBasket-JAYSON_TATUM_1_NBA-game-yn-yes",
+     "odds": 550,
+     "opposing": "firstBasket-JAYSON_TATUM_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "JAYSON_TATUM_1_NBA",
+     "seen": [
+      [
+       null,
+       550
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "firstBasket",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "JOEL_EMBIID_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Joel Embiid First basket",
+     "oddID": "firstBasket-JOEL_EMBIID_1_NBA-game-yn-yes",
+     "odds": 600,
+     "opposing": "firstBasket-JOEL_EMBIID_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "JOEL_EMBIID_1_NBA",
+     "seen": [
+      [
+       null,
+       600
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "firstBasket",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "JORDAN_WALSH_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Jordan Walsh First basket",
+     "oddID": "firstBasket-JORDAN_WALSH_1_NBA-game-yn-yes",
+     "odds": 1800,
+     "opposing": "firstBasket-JORDAN_WALSH_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "JORDAN_WALSH_1_NBA",
+     "seen": [
+      [
+       null,
+       1800
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "firstBasket",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "LEBRON_JAMES_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "LeBron James First basket",
+     "oddID": "firstBasket-LEBRON_JAMES_1_NBA-game-yn-yes",
+     "odds": 750,
+     "opposing": "firstBasket-LEBRON_JAMES_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "LEBRON_JAMES_1_NBA",
+     "seen": [
+      [
+       null,
+       750
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "firstBasket",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "NEEMIAS_QUETA_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Neemias Queta First basket",
+     "oddID": "firstBasket-NEEMIAS_QUETA_1_NBA-game-yn-yes",
+     "odds": 950,
+     "opposing": "firstBasket-NEEMIAS_QUETA_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "NEEMIAS_QUETA_1_NBA",
+     "seen": [
+      [
+       null,
+       950
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "firstBasket",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "PAUL_GEORGE_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Paul George First basket",
+     "oddID": "firstBasket-PAUL_GEORGE_1_NBA-game-yn-yes",
+     "odds": 600,
+     "opposing": "firstBasket-PAUL_GEORGE_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "PAUL_GEORGE_1_NBA",
+     "seen": [
+      [
+       null,
+       600
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "firstBasket",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "TYRESE_MAXEY_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Tyrese Maxey First basket",
+     "oddID": "firstBasket-TYRESE_MAXEY_1_NBA-game-yn-yes",
+     "odds": 800,
+     "opposing": "firstBasket-TYRESE_MAXEY_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "TYRESE_MAXEY_1_NBA",
+     "seen": [
+      [
+       null,
+       800
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "firstBasket",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "VJ Edgecombe First basket",
+     "oddID": "firstBasket-VJ_EDGECOMBE_1_NBA-game-yn-yes",
+     "odds": 1100,
+     "opposing": "firstBasket-VJ_EDGECOMBE_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       null,
+       1100
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "firstBasket",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "bovada",
+     "entity": "away",
+     "kind": "game",
+     "line": 107.5,
+     "name": "Total",
+     "oddID": "points-away-game-ou-over",
+     "odds": -120,
+     "opposing": "points-away-game-ou-under",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       107.5,
+       -120
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "bovada",
+     "entity": "away",
+     "kind": "game",
+     "line": 107.5,
+     "name": "Total",
+     "oddID": "points-away-game-ou-under",
+     "odds": -110,
+     "opposing": "points-away-game-ou-over",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       107.5,
+       -110
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "bovada",
+     "entity": "home",
+     "kind": "game",
+     "line": 107.0,
+     "name": "Total",
+     "oddID": "points-home-game-ou-over",
+     "odds": -120,
+     "opposing": "points-home-game-ou-under",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       107.0,
+       -120
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "bovada",
+     "entity": "home",
+     "kind": "game",
+     "line": 107.0,
+     "name": "Total",
+     "oddID": "points-home-game-ou-under",
+     "odds": -110,
+     "opposing": "points-home-game-ou-over",
+     "period": "game",
+     "player": null,
+     "seen": [
+      [
+       107.0,
+       -110
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       1.5,
+       -1000
+      ],
+      [
+       5.5,
+       420
+      ],
+      [
+       7.5,
+       1400
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYLEN_BROWN_1_NBA",
+     "kind": "prop",
+     "line": 3.5,
+     "name": "Jaylen Brown Assists",
+     "oddID": "assists-JAYLEN_BROWN_1_NBA-game-ou-over",
+     "odds": -114,
+     "opposing": "assists-JAYLEN_BROWN_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JAYLEN_BROWN_1_NBA",
+     "seen": [
+      [
+       1.5,
+       -1000
+      ],
+      [
+       3.5,
+       -114
+      ],
+      [
+       5.5,
+       420
+      ],
+      [
+       7.5,
+       1400
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "assists",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYLEN_BROWN_1_NBA",
+     "kind": "prop",
+     "line": 3.5,
+     "name": "Jaylen Brown Assists",
+     "oddID": "assists-JAYLEN_BROWN_1_NBA-game-ou-under",
+     "odds": -114,
+     "opposing": "assists-JAYLEN_BROWN_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JAYLEN_BROWN_1_NBA",
+     "seen": [
+      [
+       3.5,
+       -114
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "assists",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "JAYLEN_BROWN_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Jaylen Brown Double-double",
+     "oddID": "doubleDouble-JAYLEN_BROWN_1_NBA-game-yn-yes",
+     "odds": 390,
+     "opposing": "doubleDouble-JAYLEN_BROWN_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "JAYLEN_BROWN_1_NBA",
+     "seen": [
+      [
+       null,
+       390
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "doubleDouble",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       19.5,
+       -600
+      ],
+      [
+       24.5,
+       -185
+      ],
+      [
+       29.5,
+       145
+      ],
+      [
+       34.5,
+       370
+      ],
+      [
+       39.5,
+       1000
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYLEN_BROWN_1_NBA",
+     "kind": "prop",
+     "line": 26.5,
+     "name": "Jaylen Brown Pts + Ast",
+     "oddID": "points+assists-JAYLEN_BROWN_1_NBA-game-ou-over",
+     "odds": -112,
+     "opposing": "points+assists-JAYLEN_BROWN_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JAYLEN_BROWN_1_NBA",
+     "seen": [
+      [
+       19.5,
+       -600
+      ],
+      [
+       24.5,
+       -185
+      ],
+      [
+       26.5,
+       -112
+      ],
+      [
+       29.5,
+       145
+      ],
+      [
+       34.5,
+       370
+      ],
+      [
+       39.5,
+       1000
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+assists",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYLEN_BROWN_1_NBA",
+     "kind": "prop",
+     "line": 26.5,
+     "name": "Jaylen Brown Pts + Ast",
+     "oddID": "points+assists-JAYLEN_BROWN_1_NBA-game-ou-under",
+     "odds": -118,
+     "opposing": "points+assists-JAYLEN_BROWN_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JAYLEN_BROWN_1_NBA",
+     "seen": [
+      [
+       26.5,
+       -118
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+assists",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       24.5,
+       -770
+      ],
+      [
+       29.5,
+       -240
+      ],
+      [
+       34.5,
+       110
+      ],
+      [
+       39.5,
+       255
+      ],
+      [
+       44.5,
+       560
+      ],
+      [
+       49.5,
+       1100
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYLEN_BROWN_1_NBA",
+     "kind": "prop",
+     "line": 33.5,
+     "name": "Jaylen Brown Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-JAYLEN_BROWN_1_NBA-game-ou-over",
+     "odds": -112,
+     "opposing": "points+rebounds+assists-JAYLEN_BROWN_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JAYLEN_BROWN_1_NBA",
+     "seen": [
+      [
+       24.5,
+       -770
+      ],
+      [
+       29.5,
+       -240
+      ],
+      [
+       33.5,
+       -112
+      ],
+      [
+       34.5,
+       110
+      ],
+      [
+       39.5,
+       255
+      ],
+      [
+       44.5,
+       560
+      ],
+      [
+       49.5,
+       1100
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYLEN_BROWN_1_NBA",
+     "kind": "prop",
+     "line": 33.5,
+     "name": "Jaylen Brown Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-JAYLEN_BROWN_1_NBA-game-ou-under",
+     "odds": -118,
+     "opposing": "points+rebounds+assists-JAYLEN_BROWN_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JAYLEN_BROWN_1_NBA",
+     "seen": [
+      [
+       33.5,
+       -118
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+rebounds+assists",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       19.5,
+       -1200
+      ],
+      [
+       24.5,
+       -330
+      ],
+      [
+       34.5,
+       220
+      ],
+      [
+       39.5,
+       480
+      ],
+      [
+       44.5,
+       1060
+      ],
+      [
+       49.5,
+       1800
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYLEN_BROWN_1_NBA",
+     "kind": "prop",
+     "line": 29.5,
+     "name": "Jaylen Brown Pts + Reb",
+     "oddID": "points+rebounds-JAYLEN_BROWN_1_NBA-game-ou-over",
+     "odds": -114,
+     "opposing": "points+rebounds-JAYLEN_BROWN_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JAYLEN_BROWN_1_NBA",
+     "seen": [
+      [
+       19.5,
+       -1200
+      ],
+      [
+       24.5,
+       -330
+      ],
+      [
+       29.5,
+       -114
+      ],
+      [
+       34.5,
+       220
+      ],
+      [
+       39.5,
+       480
+      ],
+      [
+       44.5,
+       1060
+      ],
+      [
+       49.5,
+       1800
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+rebounds",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYLEN_BROWN_1_NBA",
+     "kind": "prop",
+     "line": 29.5,
+     "name": "Jaylen Brown Pts + Reb",
+     "oddID": "points+rebounds-JAYLEN_BROWN_1_NBA-game-ou-under",
+     "odds": -114,
+     "opposing": "points+rebounds-JAYLEN_BROWN_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JAYLEN_BROWN_1_NBA",
+     "seen": [
+      [
+       29.5,
+       -114
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+rebounds",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       14.5,
+       -1000
+      ],
+      [
+       19.5,
+       -230
+      ],
+      [
+       24.5,
+       130
+      ],
+      [
+       29.5,
+       330
+      ],
+      [
+       34.5,
+       800
+      ],
+      [
+       39.5,
+       1500
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYLEN_BROWN_1_NBA",
+     "kind": "prop",
+     "line": 22.5,
+     "name": "Jaylen Brown Points",
+     "oddID": "points-JAYLEN_BROWN_1_NBA-game-ou-over",
+     "odds": -118,
+     "opposing": "points-JAYLEN_BROWN_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JAYLEN_BROWN_1_NBA",
+     "seen": [
+      [
+       14.5,
+       -1000
+      ],
+      [
+       19.5,
+       -230
+      ],
+      [
+       22.5,
+       -118
+      ],
+      [
+       24.5,
+       130
+      ],
+      [
+       29.5,
+       330
+      ],
+      [
+       34.5,
+       800
+      ],
+      [
+       39.5,
+       1500
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYLEN_BROWN_1_NBA",
+     "kind": "prop",
+     "line": 22.5,
+     "name": "Jaylen Brown Points",
+     "oddID": "points-JAYLEN_BROWN_1_NBA-game-ou-under",
+     "odds": -112,
+     "opposing": "points-JAYLEN_BROWN_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JAYLEN_BROWN_1_NBA",
+     "seen": [
+      [
+       22.5,
+       -112
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       9.5,
+       -160
+      ],
+      [
+       14.5,
+       540
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYLEN_BROWN_1_NBA",
+     "kind": "prop",
+     "line": 10.5,
+     "name": "Jaylen Brown Reb + Ast",
+     "oddID": "rebounds+assists-JAYLEN_BROWN_1_NBA-game-ou-over",
+     "odds": 102,
+     "opposing": "rebounds+assists-JAYLEN_BROWN_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JAYLEN_BROWN_1_NBA",
+     "seen": [
+      [
+       9.5,
+       -160
+      ],
+      [
+       10.5,
+       102
+      ],
+      [
+       14.5,
+       540
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "rebounds+assists",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYLEN_BROWN_1_NBA",
+     "kind": "prop",
+     "line": 10.5,
+     "name": "Jaylen Brown Reb + Ast",
+     "oddID": "rebounds+assists-JAYLEN_BROWN_1_NBA-game-ou-under",
+     "odds": -136,
+     "opposing": "rebounds+assists-JAYLEN_BROWN_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JAYLEN_BROWN_1_NBA",
+     "seen": [
+      [
+       10.5,
+       -136
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "rebounds+assists",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       3.5,
+       -1400
+      ],
+      [
+       5.5,
+       -220
+      ],
+      [
+       7.5,
+       162
+      ],
+      [
+       9.5,
+       400
+      ],
+      [
+       11.5,
+       1100
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYLEN_BROWN_1_NBA",
+     "kind": "prop",
+     "line": 6.5,
+     "name": "Jaylen Brown Rebounds",
+     "oddID": "rebounds-JAYLEN_BROWN_1_NBA-game-ou-over",
+     "odds": -114,
+     "opposing": "rebounds-JAYLEN_BROWN_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JAYLEN_BROWN_1_NBA",
+     "seen": [
+      [
+       3.5,
+       -1400
+      ],
+      [
+       5.5,
+       -220
+      ],
+      [
+       6.5,
+       -114
+      ],
+      [
+       7.5,
+       162
+      ],
+      [
+       9.5,
+       400
+      ],
+      [
+       11.5,
+       1100
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "rebounds",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYLEN_BROWN_1_NBA",
+     "kind": "prop",
+     "line": 6.5,
+     "name": "Jaylen Brown Rebounds",
+     "oddID": "rebounds-JAYLEN_BROWN_1_NBA-game-ou-under",
+     "odds": -114,
+     "opposing": "rebounds-JAYLEN_BROWN_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JAYLEN_BROWN_1_NBA",
+     "seen": [
+      [
+       6.5,
+       -114
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "rebounds",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       0.5,
+       -770
+      ],
+      [
+       2.5,
+       215
+      ],
+      [
+       3.5,
+       560
+      ],
+      [
+       4.5,
+       1300
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYLEN_BROWN_1_NBA",
+     "kind": "prop",
+     "line": 1.5,
+     "name": "Jaylen Brown 3-pointers made",
+     "oddID": "threePointersMade-JAYLEN_BROWN_1_NBA-game-ou-over",
+     "odds": -154,
+     "opposing": "threePointersMade-JAYLEN_BROWN_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JAYLEN_BROWN_1_NBA",
+     "seen": [
+      [
+       0.5,
+       -770
+      ],
+      [
+       1.5,
+       -154
+      ],
+      [
+       2.5,
+       215
+      ],
+      [
+       3.5,
+       560
+      ],
+      [
+       4.5,
+       1300
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "threePointersMade",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYLEN_BROWN_1_NBA",
+     "kind": "prop",
+     "line": 1.5,
+     "name": "Jaylen Brown 3-pointers made",
+     "oddID": "threePointersMade-JAYLEN_BROWN_1_NBA-game-ou-under",
+     "odds": 116,
+     "opposing": "threePointersMade-JAYLEN_BROWN_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JAYLEN_BROWN_1_NBA",
+     "seen": [
+      [
+       1.5,
+       116
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "threePointersMade",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "JAYLEN_BROWN_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Jaylen Brown 3-pointers made",
+     "oddID": "threePointersMade-JAYLEN_BROWN_1_NBA-game-yn-yes",
+     "odds": -770,
+     "opposing": "threePointersMade-JAYLEN_BROWN_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "JAYLEN_BROWN_1_NBA",
+     "seen": [
+      [
+       null,
+       -770
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "threePointersMade",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       19.5,
+       -590
+      ],
+      [
+       24.5,
+       -180
+      ],
+      [
+       29.5,
+       144
+      ],
+      [
+       34.5,
+       350
+      ],
+      [
+       39.5,
+       870
+      ],
+      [
+       44.5,
+       1700
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYSON_TATUM_1_NBA",
+     "kind": "prop",
+     "line": 26.5,
+     "name": "Jayson Tatum Points",
+     "oddID": "points-JAYSON_TATUM_1_NBA-game-ou-over",
+     "odds": -125,
+     "opposing": "points-JAYSON_TATUM_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JAYSON_TATUM_1_NBA",
+     "seen": [
+      [
+       19.5,
+       -590
+      ],
+      [
+       24.5,
+       -180
+      ],
+      [
+       26.5,
+       -125
+      ],
+      [
+       29.5,
+       144
+      ],
+      [
+       34.5,
+       350
+      ],
+      [
+       39.5,
+       870
+      ],
+      [
+       44.5,
+       1700
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYSON_TATUM_1_NBA",
+     "kind": "prop",
+     "line": 26.5,
+     "name": "Jayson Tatum Points",
+     "oddID": "points-JAYSON_TATUM_1_NBA-game-ou-under",
+     "odds": -106,
+     "opposing": "points-JAYSON_TATUM_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JAYSON_TATUM_1_NBA",
+     "seen": [
+      [
+       26.5,
+       -106
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       3.5,
+       -2000
+      ],
+      [
+       5.5,
+       -295
+      ],
+      [
+       9.5,
+       280
+      ],
+      [
+       11.5,
+       800
+      ],
+      [
+       13.5,
+       1700
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYSON_TATUM_1_NBA",
+     "kind": "prop",
+     "line": 7.5,
+     "name": "Jayson Tatum Rebounds",
+     "oddID": "rebounds-JAYSON_TATUM_1_NBA-game-ou-over",
+     "odds": 116,
+     "opposing": "rebounds-JAYSON_TATUM_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JAYSON_TATUM_1_NBA",
+     "seen": [
+      [
+       3.5,
+       -2000
+      ],
+      [
+       5.5,
+       -295
+      ],
+      [
+       7.5,
+       116
+      ],
+      [
+       9.5,
+       280
+      ],
+      [
+       11.5,
+       800
+      ],
+      [
+       13.5,
+       1700
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "rebounds",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYSON_TATUM_1_NBA",
+     "kind": "prop",
+     "line": 7.5,
+     "name": "Jayson Tatum Rebounds",
+     "oddID": "rebounds-JAYSON_TATUM_1_NBA-game-ou-under",
+     "odds": -154,
+     "opposing": "rebounds-JAYSON_TATUM_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JAYSON_TATUM_1_NBA",
+     "seen": [
+      [
+       7.5,
+       -154
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "rebounds",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       1.5,
+       -390
+      ],
+      [
+       3.5,
+       220
+      ],
+      [
+       4.5,
+       500
+      ],
+      [
+       5.5,
+       1060
+      ],
+      [
+       6.5,
+       1800
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYSON_TATUM_1_NBA",
+     "kind": "prop",
+     "line": 2.5,
+     "name": "Jayson Tatum 3-pointers made",
+     "oddID": "threePointersMade-JAYSON_TATUM_1_NBA-game-ou-over",
+     "odds": -122,
+     "opposing": "threePointersMade-JAYSON_TATUM_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JAYSON_TATUM_1_NBA",
+     "seen": [
+      [
+       1.5,
+       -390
+      ],
+      [
+       2.5,
+       -122
+      ],
+      [
+       3.5,
+       220
+      ],
+      [
+       4.5,
+       500
+      ],
+      [
+       5.5,
+       1060
+      ],
+      [
+       6.5,
+       1800
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "threePointersMade",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYSON_TATUM_1_NBA",
+     "kind": "prop",
+     "line": 2.5,
+     "name": "Jayson Tatum 3-pointers made",
+     "oddID": "threePointersMade-JAYSON_TATUM_1_NBA-game-ou-under",
+     "odds": -108,
+     "opposing": "threePointersMade-JAYSON_TATUM_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JAYSON_TATUM_1_NBA",
+     "seen": [
+      [
+       2.5,
+       -108
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "threePointersMade",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       3.5,
+       -1800
+      ],
+      [
+       5.5,
+       -265
+      ],
+      [
+       7.5,
+       144
+      ],
+      [
+       9.5,
+       390
+      ],
+      [
+       11.5,
+       1060
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYSON_TATUM_1_NBA",
+     "kind": "prop",
+     "line": 6.5,
+     "name": "Jayson Tatum Assists",
+     "oddID": "assists-JAYSON_TATUM_1_NBA-game-ou-over",
+     "odds": -132,
+     "opposing": "assists-JAYSON_TATUM_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JAYSON_TATUM_1_NBA",
+     "seen": [
+      [
+       3.5,
+       -1800
+      ],
+      [
+       5.5,
+       -265
+      ],
+      [
+       6.5,
+       -132
+      ],
+      [
+       7.5,
+       144
+      ],
+      [
+       9.5,
+       390
+      ],
+      [
+       11.5,
+       1060
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "assists",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYSON_TATUM_1_NBA",
+     "kind": "prop",
+     "line": 6.5,
+     "name": "Jayson Tatum Assists",
+     "oddID": "assists-JAYSON_TATUM_1_NBA-game-ou-under",
+     "odds": 100,
+     "opposing": "assists-JAYSON_TATUM_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JAYSON_TATUM_1_NBA",
+     "seen": [
+      [
+       6.5,
+       100
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "assists",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "JAYSON_TATUM_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Jayson Tatum Double-double",
+     "oddID": "doubleDouble-JAYSON_TATUM_1_NBA-game-yn-yes",
+     "odds": 158,
+     "opposing": "doubleDouble-JAYSON_TATUM_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "JAYSON_TATUM_1_NBA",
+     "seen": [
+      [
+       null,
+       158
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "doubleDouble",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       24.5,
+       -900
+      ],
+      [
+       29.5,
+       -280
+      ],
+      [
+       34.5,
+       -115
+      ],
+      [
+       39.5,
+       220
+      ],
+      [
+       44.5,
+       500
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYSON_TATUM_1_NBA",
+     "kind": "prop",
+     "line": 33.5,
+     "name": "Jayson Tatum Pts + Ast",
+     "oddID": "points+assists-JAYSON_TATUM_1_NBA-game-ou-over",
+     "odds": -128,
+     "opposing": "points+assists-JAYSON_TATUM_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JAYSON_TATUM_1_NBA",
+     "seen": [
+      [
+       24.5,
+       -900
+      ],
+      [
+       29.5,
+       -280
+      ],
+      [
+       33.5,
+       -128
+      ],
+      [
+       34.5,
+       -115
+      ],
+      [
+       39.5,
+       220
+      ],
+      [
+       44.5,
+       500
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+assists",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYSON_TATUM_1_NBA",
+     "kind": "prop",
+     "line": 33.5,
+     "name": "Jayson Tatum Pts + Ast",
+     "oddID": "points+assists-JAYSON_TATUM_1_NBA-game-ou-under",
+     "odds": -104,
+     "opposing": "points+assists-JAYSON_TATUM_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JAYSON_TATUM_1_NBA",
+     "seen": [
+      [
+       33.5,
+       -104
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+assists",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       29.5,
+       -1200
+      ],
+      [
+       34.5,
+       -370
+      ],
+      [
+       39.5,
+       -154
+      ],
+      [
+       44.5,
+       150
+      ],
+      [
+       49.5,
+       320
+      ],
+      [
+       54.5,
+       630
+      ],
+      [
+       59.5,
+       1300
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYSON_TATUM_1_NBA",
+     "kind": "prop",
+     "line": 41.5,
+     "name": "Jayson Tatum Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-JAYSON_TATUM_1_NBA-game-ou-over",
+     "odds": -110,
+     "opposing": "points+rebounds+assists-JAYSON_TATUM_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JAYSON_TATUM_1_NBA",
+     "seen": [
+      [
+       29.5,
+       -1200
+      ],
+      [
+       34.5,
+       -370
+      ],
+      [
+       39.5,
+       -154
+      ],
+      [
+       41.5,
+       -110
+      ],
+      [
+       44.5,
+       150
+      ],
+      [
+       49.5,
+       320
+      ],
+      [
+       54.5,
+       630
+      ],
+      [
+       59.5,
+       1300
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYSON_TATUM_1_NBA",
+     "kind": "prop",
+     "line": 41.5,
+     "name": "Jayson Tatum Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-JAYSON_TATUM_1_NBA-game-ou-under",
+     "odds": -120,
+     "opposing": "points+rebounds+assists-JAYSON_TATUM_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JAYSON_TATUM_1_NBA",
+     "seen": [
+      [
+       41.5,
+       -120
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+rebounds+assists",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       24.5,
+       -800
+      ],
+      [
+       29.5,
+       -265
+      ],
+      [
+       39.5,
+       220
+      ],
+      [
+       44.5,
+       460
+      ],
+      [
+       49.5,
+       1000
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYSON_TATUM_1_NBA",
+     "kind": "prop",
+     "line": 34.5,
+     "name": "Jayson Tatum Pts + Reb",
+     "oddID": "points+rebounds-JAYSON_TATUM_1_NBA-game-ou-over",
+     "odds": -108,
+     "opposing": "points+rebounds-JAYSON_TATUM_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JAYSON_TATUM_1_NBA",
+     "seen": [
+      [
+       24.5,
+       -800
+      ],
+      [
+       29.5,
+       -265
+      ],
+      [
+       34.5,
+       -108
+      ],
+      [
+       39.5,
+       220
+      ],
+      [
+       44.5,
+       460
+      ],
+      [
+       49.5,
+       1000
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+rebounds",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYSON_TATUM_1_NBA",
+     "kind": "prop",
+     "line": 34.5,
+     "name": "Jayson Tatum Pts + Reb",
+     "oddID": "points+rebounds-JAYSON_TATUM_1_NBA-game-ou-under",
+     "odds": -122,
+     "opposing": "points+rebounds-JAYSON_TATUM_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JAYSON_TATUM_1_NBA",
+     "seen": [
+      [
+       34.5,
+       -122
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+rebounds",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       9.5,
+       -1000
+      ],
+      [
+       14.5,
+       108
+      ],
+      [
+       19.5,
+       560
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYSON_TATUM_1_NBA",
+     "kind": "prop",
+     "line": 13.5,
+     "name": "Jayson Tatum Reb + Ast",
+     "oddID": "rebounds+assists-JAYSON_TATUM_1_NBA-game-ou-over",
+     "odds": -140,
+     "opposing": "rebounds+assists-JAYSON_TATUM_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JAYSON_TATUM_1_NBA",
+     "seen": [
+      [
+       9.5,
+       -1000
+      ],
+      [
+       13.5,
+       -140
+      ],
+      [
+       14.5,
+       108
+      ],
+      [
+       19.5,
+       560
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "rebounds+assists",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JAYSON_TATUM_1_NBA",
+     "kind": "prop",
+     "line": 13.5,
+     "name": "Jayson Tatum Reb + Ast",
+     "oddID": "rebounds+assists-JAYSON_TATUM_1_NBA-game-ou-under",
+     "odds": 106,
+     "opposing": "rebounds+assists-JAYSON_TATUM_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JAYSON_TATUM_1_NBA",
+     "seen": [
+      [
+       13.5,
+       106
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "rebounds+assists",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "JAYSON_TATUM_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Jayson Tatum Triple-double",
+     "oddID": "tripleDouble-JAYSON_TATUM_1_NBA-game-yn-yes",
+     "odds": 800,
+     "opposing": "tripleDouble-JAYSON_TATUM_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "JAYSON_TATUM_1_NBA",
+     "seen": [
+      [
+       null,
+       800
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "tripleDouble",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       14.5,
+       -430
+      ],
+      [
+       24.5,
+       240
+      ],
+      [
+       29.5,
+       600
+      ],
+      [
+       34.5,
+       1400
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JOEL_EMBIID_1_NBA",
+     "kind": "prop",
+     "line": 19.5,
+     "name": "Joel Embiid Points",
+     "oddID": "points-JOEL_EMBIID_1_NBA-game-ou-over",
+     "odds": -125,
+     "opposing": "points-JOEL_EMBIID_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JOEL_EMBIID_1_NBA",
+     "seen": [
+      [
+       14.5,
+       -430
+      ],
+      [
+       19.5,
+       -125
+      ],
+      [
+       24.5,
+       240
+      ],
+      [
+       29.5,
+       600
+      ],
+      [
+       34.5,
+       1400
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JOEL_EMBIID_1_NBA",
+     "kind": "prop",
+     "line": 19.5,
+     "name": "Joel Embiid Points",
+     "oddID": "points-JOEL_EMBIID_1_NBA-game-ou-under",
+     "odds": -106,
+     "opposing": "points-JOEL_EMBIID_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JOEL_EMBIID_1_NBA",
+     "seen": [
+      [
+       19.5,
+       -106
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       5.5,
+       -650
+      ],
+      [
+       7.5,
+       -184
+      ],
+      [
+       9.5,
+       132
+      ],
+      [
+       11.5,
+       340
+      ],
+      [
+       13.5,
+       830
+      ],
+      [
+       15.5,
+       1500
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JOEL_EMBIID_1_NBA",
+     "kind": "prop",
+     "line": 8.5,
+     "name": "Joel Embiid Rebounds",
+     "oddID": "rebounds-JOEL_EMBIID_1_NBA-game-ou-over",
+     "odds": -110,
+     "opposing": "rebounds-JOEL_EMBIID_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JOEL_EMBIID_1_NBA",
+     "seen": [
+      [
+       5.5,
+       -650
+      ],
+      [
+       7.5,
+       -184
+      ],
+      [
+       8.5,
+       -110
+      ],
+      [
+       9.5,
+       132
+      ],
+      [
+       11.5,
+       340
+      ],
+      [
+       13.5,
+       830
+      ],
+      [
+       15.5,
+       1500
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "rebounds",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JOEL_EMBIID_1_NBA",
+     "kind": "prop",
+     "line": 8.5,
+     "name": "Joel Embiid Rebounds",
+     "oddID": "rebounds-JOEL_EMBIID_1_NBA-game-ou-under",
+     "odds": -120,
+     "opposing": "rebounds-JOEL_EMBIID_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JOEL_EMBIID_1_NBA",
+     "seen": [
+      [
+       8.5,
+       -120
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "rebounds",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       1.5,
+       -1000
+      ],
+      [
+       5.5,
+       450
+      ],
+      [
+       7.5,
+       1500
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JOEL_EMBIID_1_NBA",
+     "kind": "prop",
+     "line": 3.5,
+     "name": "Joel Embiid Assists",
+     "oddID": "assists-JOEL_EMBIID_1_NBA-game-ou-over",
+     "odds": -106,
+     "opposing": "assists-JOEL_EMBIID_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JOEL_EMBIID_1_NBA",
+     "seen": [
+      [
+       1.5,
+       -1000
+      ],
+      [
+       3.5,
+       -106
+      ],
+      [
+       5.5,
+       450
+      ],
+      [
+       7.5,
+       1500
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "assists",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JOEL_EMBIID_1_NBA",
+     "kind": "prop",
+     "line": 3.5,
+     "name": "Joel Embiid Assists",
+     "oddID": "assists-JOEL_EMBIID_1_NBA-game-ou-under",
+     "odds": -125,
+     "opposing": "assists-JOEL_EMBIID_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JOEL_EMBIID_1_NBA",
+     "seen": [
+      [
+       3.5,
+       -125
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "assists",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       14.5,
+       -1250
+      ],
+      [
+       19.5,
+       -290
+      ],
+      [
+       24.5,
+       100
+      ],
+      [
+       29.5,
+       280
+      ],
+      [
+       34.5,
+       750
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JOEL_EMBIID_1_NBA",
+     "kind": "prop",
+     "line": 23.5,
+     "name": "Joel Embiid Pts + Ast",
+     "oddID": "points+assists-JOEL_EMBIID_1_NBA-game-ou-over",
+     "odds": -114,
+     "opposing": "points+assists-JOEL_EMBIID_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JOEL_EMBIID_1_NBA",
+     "seen": [
+      [
+       14.5,
+       -1250
+      ],
+      [
+       19.5,
+       -290
+      ],
+      [
+       23.5,
+       -114
+      ],
+      [
+       24.5,
+       100
+      ],
+      [
+       29.5,
+       280
+      ],
+      [
+       34.5,
+       750
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+assists",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JOEL_EMBIID_1_NBA",
+     "kind": "prop",
+     "line": 23.5,
+     "name": "Joel Embiid Pts + Ast",
+     "oddID": "points+assists-JOEL_EMBIID_1_NBA-game-ou-under",
+     "odds": -114,
+     "opposing": "points+assists-JOEL_EMBIID_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JOEL_EMBIID_1_NBA",
+     "seen": [
+      [
+       23.5,
+       -114
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+assists",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       24.5,
+       -520
+      ],
+      [
+       29.5,
+       -186
+      ],
+      [
+       34.5,
+       130
+      ],
+      [
+       39.5,
+       290
+      ],
+      [
+       44.5,
+       680
+      ],
+      [
+       49.5,
+       1300
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JOEL_EMBIID_1_NBA",
+     "kind": "prop",
+     "line": 32.5,
+     "name": "Joel Embiid Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-JOEL_EMBIID_1_NBA-game-ou-over",
+     "odds": -112,
+     "opposing": "points+rebounds+assists-JOEL_EMBIID_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JOEL_EMBIID_1_NBA",
+     "seen": [
+      [
+       24.5,
+       -520
+      ],
+      [
+       29.5,
+       -186
+      ],
+      [
+       32.5,
+       -112
+      ],
+      [
+       34.5,
+       130
+      ],
+      [
+       39.5,
+       290
+      ],
+      [
+       44.5,
+       680
+      ],
+      [
+       49.5,
+       1300
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JOEL_EMBIID_1_NBA",
+     "kind": "prop",
+     "line": 32.5,
+     "name": "Joel Embiid Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-JOEL_EMBIID_1_NBA-game-ou-under",
+     "odds": -118,
+     "opposing": "points+rebounds+assists-JOEL_EMBIID_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JOEL_EMBIID_1_NBA",
+     "seen": [
+      [
+       32.5,
+       -118
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+rebounds+assists",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       19.5,
+       -850
+      ],
+      [
+       24.5,
+       -250
+      ],
+      [
+       29.5,
+       102
+      ],
+      [
+       34.5,
+       250
+      ],
+      [
+       39.5,
+       560
+      ],
+      [
+       44.5,
+       1200
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JOEL_EMBIID_1_NBA",
+     "kind": "prop",
+     "line": 28.5,
+     "name": "Joel Embiid Pts + Reb",
+     "oddID": "points+rebounds-JOEL_EMBIID_1_NBA-game-ou-over",
+     "odds": -118,
+     "opposing": "points+rebounds-JOEL_EMBIID_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JOEL_EMBIID_1_NBA",
+     "seen": [
+      [
+       19.5,
+       -850
+      ],
+      [
+       24.5,
+       -250
+      ],
+      [
+       28.5,
+       -118
+      ],
+      [
+       29.5,
+       102
+      ],
+      [
+       34.5,
+       250
+      ],
+      [
+       39.5,
+       560
+      ],
+      [
+       44.5,
+       1200
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+rebounds",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JOEL_EMBIID_1_NBA",
+     "kind": "prop",
+     "line": 28.5,
+     "name": "Joel Embiid Pts + Reb",
+     "oddID": "points+rebounds-JOEL_EMBIID_1_NBA-game-ou-under",
+     "odds": -112,
+     "opposing": "points+rebounds-JOEL_EMBIID_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JOEL_EMBIID_1_NBA",
+     "seen": [
+      [
+       28.5,
+       -112
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+rebounds",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       9.5,
+       -350
+      ],
+      [
+       14.5,
+       220
+      ],
+      [
+       19.5,
+       1200
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JOEL_EMBIID_1_NBA",
+     "kind": "prop",
+     "line": 12.5,
+     "name": "Joel Embiid Reb + Ast",
+     "oddID": "rebounds+assists-JOEL_EMBIID_1_NBA-game-ou-over",
+     "odds": 102,
+     "opposing": "rebounds+assists-JOEL_EMBIID_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "JOEL_EMBIID_1_NBA",
+     "seen": [
+      [
+       9.5,
+       -350
+      ],
+      [
+       12.5,
+       102
+      ],
+      [
+       14.5,
+       220
+      ],
+      [
+       19.5,
+       1200
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "rebounds+assists",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "JOEL_EMBIID_1_NBA",
+     "kind": "prop",
+     "line": 12.5,
+     "name": "Joel Embiid Reb + Ast",
+     "oddID": "rebounds+assists-JOEL_EMBIID_1_NBA-game-ou-under",
+     "odds": -136,
+     "opposing": "rebounds+assists-JOEL_EMBIID_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "JOEL_EMBIID_1_NBA",
+     "seen": [
+      [
+       12.5,
+       -136
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "rebounds+assists",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       3.5,
+       -1600
+      ],
+      [
+       5.5,
+       -250
+      ],
+      [
+       7.5,
+       144
+      ],
+      [
+       9.5,
+       360
+      ],
+      [
+       11.5,
+       1060
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "LEBRON_JAMES_1_NBA",
+     "kind": "prop",
+     "line": 6.5,
+     "name": "LeBron James Assists",
+     "oddID": "assists-LEBRON_JAMES_1_NBA-game-ou-over",
+     "odds": -132,
+     "opposing": "assists-LEBRON_JAMES_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "LEBRON_JAMES_1_NBA",
+     "seen": [
+      [
+       3.5,
+       -1600
+      ],
+      [
+       5.5,
+       -250
+      ],
+      [
+       6.5,
+       -132
+      ],
+      [
+       7.5,
+       144
+      ],
+      [
+       9.5,
+       360
+      ],
+      [
+       11.5,
+       1060
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "assists",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "LEBRON_JAMES_1_NBA",
+     "kind": "prop",
+     "line": 6.5,
+     "name": "LeBron James Assists",
+     "oddID": "assists-LEBRON_JAMES_1_NBA-game-ou-under",
+     "odds": 100,
+     "opposing": "assists-LEBRON_JAMES_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "LEBRON_JAMES_1_NBA",
+     "seen": [
+      [
+       6.5,
+       100
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "assists",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       3.5,
+       -700
+      ],
+      [
+       7.5,
+       280
+      ],
+      [
+       9.5,
+       800
+      ],
+      [
+       11.5,
+       1800
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "TYRESE_MAXEY_1_NBA",
+     "kind": "prop",
+     "line": 5.5,
+     "name": "Tyrese Maxey Assists",
+     "oddID": "assists-TYRESE_MAXEY_1_NBA-game-ou-over",
+     "odds": -136,
+     "opposing": "assists-TYRESE_MAXEY_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "TYRESE_MAXEY_1_NBA",
+     "seen": [
+      [
+       3.5,
+       -700
+      ],
+      [
+       5.5,
+       -136
+      ],
+      [
+       7.5,
+       280
+      ],
+      [
+       9.5,
+       800
+      ],
+      [
+       11.5,
+       1800
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "assists",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "TYRESE_MAXEY_1_NBA",
+     "kind": "prop",
+     "line": 5.5,
+     "name": "Tyrese Maxey Assists",
+     "oddID": "assists-TYRESE_MAXEY_1_NBA-game-ou-under",
+     "odds": 102,
+     "opposing": "assists-TYRESE_MAXEY_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "TYRESE_MAXEY_1_NBA",
+     "seen": [
+      [
+       5.5,
+       102
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "assists",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       1.5,
+       -590
+      ],
+      [
+       5.5,
+       750
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": 3.5,
+     "name": "VJ Edgecombe Assists",
+     "oddID": "assists-VJ_EDGECOMBE_1_NBA-game-ou-over",
+     "odds": 142,
+     "opposing": "assists-VJ_EDGECOMBE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       1.5,
+       -590
+      ],
+      [
+       3.5,
+       142
+      ],
+      [
+       5.5,
+       750
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "assists",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": 3.5,
+     "name": "VJ Edgecombe Assists",
+     "oddID": "assists-VJ_EDGECOMBE_1_NBA-game-ou-under",
+     "odds": -192,
+     "opposing": "assists-VJ_EDGECOMBE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       3.5,
+       -192
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "assists",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "JOEL_EMBIID_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Joel Embiid Double-double",
+     "oddID": "doubleDouble-JOEL_EMBIID_1_NBA-game-yn-yes",
+     "odds": 136,
+     "opposing": "doubleDouble-JOEL_EMBIID_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "JOEL_EMBIID_1_NBA",
+     "seen": [
+      [
+       null,
+       136
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "doubleDouble",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "LEBRON_JAMES_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "LeBron James Double-double",
+     "oddID": "doubleDouble-LEBRON_JAMES_1_NBA-game-yn-yes",
+     "odds": 182,
+     "opposing": "doubleDouble-LEBRON_JAMES_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "LEBRON_JAMES_1_NBA",
+     "seen": [
+      [
+       null,
+       182
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "doubleDouble",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "TYRESE_MAXEY_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Tyrese Maxey Double-double",
+     "oddID": "doubleDouble-TYRESE_MAXEY_1_NBA-game-yn-yes",
+     "odds": 680,
+     "opposing": "doubleDouble-TYRESE_MAXEY_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "TYRESE_MAXEY_1_NBA",
+     "seen": [
+      [
+       null,
+       680
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "doubleDouble",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "VJ Edgecombe Double-double",
+     "oddID": "doubleDouble-VJ_EDGECOMBE_1_NBA-game-yn-yes",
+     "odds": 680,
+     "opposing": "doubleDouble-VJ_EDGECOMBE_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       null,
+       680
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "doubleDouble",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       14.5,
+       -1100
+      ],
+      [
+       19.5,
+       -250
+      ],
+      [
+       24.5,
+       130
+      ],
+      [
+       29.5,
+       420
+      ],
+      [
+       34.5,
+       1300
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "LEBRON_JAMES_1_NBA",
+     "kind": "prop",
+     "line": 22.5,
+     "name": "LeBron James Pts + Ast",
+     "oddID": "points+assists-LEBRON_JAMES_1_NBA-game-ou-over",
+     "odds": -114,
+     "opposing": "points+assists-LEBRON_JAMES_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "LEBRON_JAMES_1_NBA",
+     "seen": [
+      [
+       14.5,
+       -1100
+      ],
+      [
+       19.5,
+       -250
+      ],
+      [
+       22.5,
+       -114
+      ],
+      [
+       24.5,
+       130
+      ],
+      [
+       29.5,
+       420
+      ],
+      [
+       34.5,
+       1300
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+assists",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "LEBRON_JAMES_1_NBA",
+     "kind": "prop",
+     "line": 22.5,
+     "name": "LeBron James Pts + Ast",
+     "oddID": "points+assists-LEBRON_JAMES_1_NBA-game-ou-under",
+     "odds": -114,
+     "opposing": "points+assists-LEBRON_JAMES_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "LEBRON_JAMES_1_NBA",
+     "seen": [
+      [
+       22.5,
+       -114
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+assists",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       19.5,
+       -1250
+      ],
+      [
+       24.5,
+       -340
+      ],
+      [
+       34.5,
+       210
+      ],
+      [
+       39.5,
+       600
+      ],
+      [
+       44.5,
+       1600
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "TYRESE_MAXEY_1_NBA",
+     "kind": "prop",
+     "line": 29.5,
+     "name": "Tyrese Maxey Pts + Ast",
+     "oddID": "points+assists-TYRESE_MAXEY_1_NBA-game-ou-over",
+     "odds": -118,
+     "opposing": "points+assists-TYRESE_MAXEY_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "TYRESE_MAXEY_1_NBA",
+     "seen": [
+      [
+       19.5,
+       -1250
+      ],
+      [
+       24.5,
+       -340
+      ],
+      [
+       29.5,
+       -118
+      ],
+      [
+       34.5,
+       210
+      ],
+      [
+       39.5,
+       600
+      ],
+      [
+       44.5,
+       1600
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+assists",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "TYRESE_MAXEY_1_NBA",
+     "kind": "prop",
+     "line": 29.5,
+     "name": "Tyrese Maxey Pts + Ast",
+     "oddID": "points+assists-TYRESE_MAXEY_1_NBA-game-ou-under",
+     "odds": -112,
+     "opposing": "points+assists-TYRESE_MAXEY_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "TYRESE_MAXEY_1_NBA",
+     "seen": [
+      [
+       29.5,
+       -112
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+assists",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       9.5,
+       -700
+      ],
+      [
+       14.5,
+       -150
+      ],
+      [
+       19.5,
+       250
+      ],
+      [
+       24.5,
+       950
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": 15.5,
+     "name": "VJ Edgecombe Pts + Ast",
+     "oddID": "points+assists-VJ_EDGECOMBE_1_NBA-game-ou-over",
+     "odds": 100,
+     "opposing": "points+assists-VJ_EDGECOMBE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       9.5,
+       -700
+      ],
+      [
+       14.5,
+       -150
+      ],
+      [
+       15.5,
+       100
+      ],
+      [
+       19.5,
+       250
+      ],
+      [
+       24.5,
+       950
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+assists",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": 15.5,
+     "name": "VJ Edgecombe Pts + Ast",
+     "oddID": "points+assists-VJ_EDGECOMBE_1_NBA-game-ou-under",
+     "odds": -132,
+     "opposing": "points+assists-VJ_EDGECOMBE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       15.5,
+       -132
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+assists",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       19.5,
+       -1600
+      ],
+      [
+       24.5,
+       -350
+      ],
+      [
+       34.5,
+       220
+      ],
+      [
+       39.5,
+       520
+      ],
+      [
+       44.5,
+       1200
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "LEBRON_JAMES_1_NBA",
+     "kind": "prop",
+     "line": 29.5,
+     "name": "LeBron James Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-LEBRON_JAMES_1_NBA-game-ou-over",
+     "odds": -118,
+     "opposing": "points+rebounds+assists-LEBRON_JAMES_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "LEBRON_JAMES_1_NBA",
+     "seen": [
+      [
+       19.5,
+       -1600
+      ],
+      [
+       24.5,
+       -350
+      ],
+      [
+       29.5,
+       -118
+      ],
+      [
+       34.5,
+       220
+      ],
+      [
+       39.5,
+       520
+      ],
+      [
+       44.5,
+       1200
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "LEBRON_JAMES_1_NBA",
+     "kind": "prop",
+     "line": 29.5,
+     "name": "LeBron James Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-LEBRON_JAMES_1_NBA-game-ou-under",
+     "odds": -112,
+     "opposing": "points+rebounds+assists-LEBRON_JAMES_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "LEBRON_JAMES_1_NBA",
+     "seen": [
+      [
+       29.5,
+       -112
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+rebounds+assists",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       24.5,
+       -750
+      ],
+      [
+       29.5,
+       -245
+      ],
+      [
+       34.5,
+       112
+      ],
+      [
+       39.5,
+       265
+      ],
+      [
+       44.5,
+       680
+      ],
+      [
+       49.5,
+       1400
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "TYRESE_MAXEY_1_NBA",
+     "kind": "prop",
+     "line": 33.5,
+     "name": "Tyrese Maxey Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-TYRESE_MAXEY_1_NBA-game-ou-over",
+     "odds": -112,
+     "opposing": "points+rebounds+assists-TYRESE_MAXEY_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "TYRESE_MAXEY_1_NBA",
+     "seen": [
+      [
+       24.5,
+       -750
+      ],
+      [
+       29.5,
+       -245
+      ],
+      [
+       33.5,
+       -112
+      ],
+      [
+       34.5,
+       112
+      ],
+      [
+       39.5,
+       265
+      ],
+      [
+       44.5,
+       680
+      ],
+      [
+       49.5,
+       1400
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "TYRESE_MAXEY_1_NBA",
+     "kind": "prop",
+     "line": 33.5,
+     "name": "Tyrese Maxey Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-TYRESE_MAXEY_1_NBA-game-ou-under",
+     "odds": -118,
+     "opposing": "points+rebounds+assists-TYRESE_MAXEY_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "TYRESE_MAXEY_1_NBA",
+     "seen": [
+      [
+       33.5,
+       -118
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+rebounds+assists",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       14.5,
+       -720
+      ],
+      [
+       19.5,
+       -178
+      ],
+      [
+       24.5,
+       180
+      ],
+      [
+       29.5,
+       500
+      ],
+      [
+       34.5,
+       1300
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": 21.5,
+     "name": "VJ Edgecombe Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-VJ_EDGECOMBE_1_NBA-game-ou-over",
+     "odds": -110,
+     "opposing": "points+rebounds+assists-VJ_EDGECOMBE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       14.5,
+       -720
+      ],
+      [
+       19.5,
+       -178
+      ],
+      [
+       21.5,
+       -110
+      ],
+      [
+       24.5,
+       180
+      ],
+      [
+       29.5,
+       500
+      ],
+      [
+       34.5,
+       1300
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": 21.5,
+     "name": "VJ Edgecombe Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-VJ_EDGECOMBE_1_NBA-game-ou-under",
+     "odds": -120,
+     "opposing": "points+rebounds+assists-VJ_EDGECOMBE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       21.5,
+       -120
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+rebounds+assists",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       14.5,
+       -1100
+      ],
+      [
+       19.5,
+       -235
+      ],
+      [
+       24.5,
+       128
+      ],
+      [
+       29.5,
+       350
+      ],
+      [
+       34.5,
+       900
+      ],
+      [
+       39.5,
+       1800
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "LEBRON_JAMES_1_NBA",
+     "kind": "prop",
+     "line": 22.5,
+     "name": "LeBron James Pts + Reb",
+     "oddID": "points+rebounds-LEBRON_JAMES_1_NBA-game-ou-over",
+     "odds": -122,
+     "opposing": "points+rebounds-LEBRON_JAMES_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "LEBRON_JAMES_1_NBA",
+     "seen": [
+      [
+       14.5,
+       -1100
+      ],
+      [
+       19.5,
+       -235
+      ],
+      [
+       22.5,
+       -122
+      ],
+      [
+       24.5,
+       128
+      ],
+      [
+       29.5,
+       350
+      ],
+      [
+       34.5,
+       900
+      ],
+      [
+       39.5,
+       1800
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+rebounds",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "LEBRON_JAMES_1_NBA",
+     "kind": "prop",
+     "line": 22.5,
+     "name": "LeBron James Pts + Reb",
+     "oddID": "points+rebounds-LEBRON_JAMES_1_NBA-game-ou-under",
+     "odds": -108,
+     "opposing": "points+rebounds-LEBRON_JAMES_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "LEBRON_JAMES_1_NBA",
+     "seen": [
+      [
+       22.5,
+       -108
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+rebounds",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       19.5,
+       -670
+      ],
+      [
+       24.5,
+       -200
+      ],
+      [
+       29.5,
+       134
+      ],
+      [
+       34.5,
+       340
+      ],
+      [
+       39.5,
+       870
+      ],
+      [
+       44.5,
+       1700
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "TYRESE_MAXEY_1_NBA",
+     "kind": "prop",
+     "line": 27.5,
+     "name": "Tyrese Maxey Pts + Reb",
+     "oddID": "points+rebounds-TYRESE_MAXEY_1_NBA-game-ou-over",
+     "odds": -112,
+     "opposing": "points+rebounds-TYRESE_MAXEY_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "TYRESE_MAXEY_1_NBA",
+     "seen": [
+      [
+       19.5,
+       -670
+      ],
+      [
+       24.5,
+       -200
+      ],
+      [
+       27.5,
+       -112
+      ],
+      [
+       29.5,
+       134
+      ],
+      [
+       34.5,
+       340
+      ],
+      [
+       39.5,
+       870
+      ],
+      [
+       44.5,
+       1700
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+rebounds",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "TYRESE_MAXEY_1_NBA",
+     "kind": "prop",
+     "line": 27.5,
+     "name": "Tyrese Maxey Pts + Reb",
+     "oddID": "points+rebounds-TYRESE_MAXEY_1_NBA-game-ou-under",
+     "odds": -118,
+     "opposing": "points+rebounds-TYRESE_MAXEY_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "TYRESE_MAXEY_1_NBA",
+     "seen": [
+      [
+       27.5,
+       -118
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+rebounds",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       14.5,
+       -310
+      ],
+      [
+       19.5,
+       124
+      ],
+      [
+       24.5,
+       360
+      ],
+      [
+       29.5,
+       1060
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": 18.5,
+     "name": "VJ Edgecombe Pts + Reb",
+     "oddID": "points+rebounds-VJ_EDGECOMBE_1_NBA-game-ou-over",
+     "odds": -104,
+     "opposing": "points+rebounds-VJ_EDGECOMBE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       14.5,
+       -310
+      ],
+      [
+       18.5,
+       -104
+      ],
+      [
+       19.5,
+       124
+      ],
+      [
+       24.5,
+       360
+      ],
+      [
+       29.5,
+       1060
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+rebounds",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": 18.5,
+     "name": "VJ Edgecombe Pts + Reb",
+     "oddID": "points+rebounds-VJ_EDGECOMBE_1_NBA-game-ou-under",
+     "odds": -128,
+     "opposing": "points+rebounds-VJ_EDGECOMBE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       18.5,
+       -128
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+rebounds",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       9.5,
+       -750
+      ],
+      [
+       14.5,
+       -146
+      ],
+      [
+       19.5,
+       250
+      ],
+      [
+       24.5,
+       800
+      ],
+      [
+       29.5,
+       1800
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "LEBRON_JAMES_1_NBA",
+     "kind": "prop",
+     "line": 15.5,
+     "name": "LeBron James Points",
+     "oddID": "points-LEBRON_JAMES_1_NBA-game-ou-over",
+     "odds": -112,
+     "opposing": "points-LEBRON_JAMES_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "LEBRON_JAMES_1_NBA",
+     "seen": [
+      [
+       9.5,
+       -750
+      ],
+      [
+       14.5,
+       -146
+      ],
+      [
+       15.5,
+       -112
+      ],
+      [
+       19.5,
+       250
+      ],
+      [
+       24.5,
+       800
+      ],
+      [
+       29.5,
+       1800
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "LEBRON_JAMES_1_NBA",
+     "kind": "prop",
+     "line": 15.5,
+     "name": "LeBron James Points",
+     "oddID": "points-LEBRON_JAMES_1_NBA-game-ou-under",
+     "odds": -118,
+     "opposing": "points-LEBRON_JAMES_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "LEBRON_JAMES_1_NBA",
+     "seen": [
+      [
+       15.5,
+       -118
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       14.5,
+       -1200
+      ],
+      [
+       19.5,
+       -280
+      ],
+      [
+       24.5,
+       108
+      ],
+      [
+       29.5,
+       300
+      ],
+      [
+       34.5,
+       800
+      ],
+      [
+       39.5,
+       1500
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "TYRESE_MAXEY_1_NBA",
+     "kind": "prop",
+     "line": 23.5,
+     "name": "Tyrese Maxey Points",
+     "oddID": "points-TYRESE_MAXEY_1_NBA-game-ou-over",
+     "odds": -114,
+     "opposing": "points-TYRESE_MAXEY_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "TYRESE_MAXEY_1_NBA",
+     "seen": [
+      [
+       14.5,
+       -1200
+      ],
+      [
+       19.5,
+       -280
+      ],
+      [
+       23.5,
+       -114
+      ],
+      [
+       24.5,
+       108
+      ],
+      [
+       29.5,
+       300
+      ],
+      [
+       34.5,
+       800
+      ],
+      [
+       39.5,
+       1500
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "TYRESE_MAXEY_1_NBA",
+     "kind": "prop",
+     "line": 23.5,
+     "name": "Tyrese Maxey Points",
+     "oddID": "points-TYRESE_MAXEY_1_NBA-game-ou-under",
+     "odds": -114,
+     "opposing": "points-TYRESE_MAXEY_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "TYRESE_MAXEY_1_NBA",
+     "seen": [
+      [
+       23.5,
+       -114
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       9.5,
+       -250
+      ],
+      [
+       14.5,
+       180
+      ],
+      [
+       19.5,
+       630
+      ],
+      [
+       24.5,
+       1700
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": 11.5,
+     "name": "VJ Edgecombe Points",
+     "oddID": "points-VJ_EDGECOMBE_1_NBA-game-ou-over",
+     "odds": -132,
+     "opposing": "points-VJ_EDGECOMBE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       9.5,
+       -250
+      ],
+      [
+       11.5,
+       -132
+      ],
+      [
+       14.5,
+       180
+      ],
+      [
+       19.5,
+       630
+      ],
+      [
+       24.5,
+       1700
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": 11.5,
+     "name": "VJ Edgecombe Points",
+     "oddID": "points-VJ_EDGECOMBE_1_NBA-game-ou-under",
+     "odds": 100,
+     "opposing": "points-VJ_EDGECOMBE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       11.5,
+       100
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       9.5,
+       -900
+      ],
+      [
+       14.5,
+       108
+      ],
+      [
+       19.5,
+       560
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "LEBRON_JAMES_1_NBA",
+     "kind": "prop",
+     "line": 13.5,
+     "name": "LeBron James Reb + Ast",
+     "oddID": "rebounds+assists-LEBRON_JAMES_1_NBA-game-ou-over",
+     "odds": -138,
+     "opposing": "rebounds+assists-LEBRON_JAMES_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "LEBRON_JAMES_1_NBA",
+     "seen": [
+      [
+       9.5,
+       -900
+      ],
+      [
+       13.5,
+       -138
+      ],
+      [
+       14.5,
+       108
+      ],
+      [
+       19.5,
+       560
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "rebounds+assists",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "LEBRON_JAMES_1_NBA",
+     "kind": "prop",
+     "line": 13.5,
+     "name": "LeBron James Reb + Ast",
+     "oddID": "rebounds+assists-LEBRON_JAMES_1_NBA-game-ou-under",
+     "odds": 104,
+     "opposing": "rebounds+assists-LEBRON_JAMES_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "LEBRON_JAMES_1_NBA",
+     "seen": [
+      [
+       13.5,
+       104
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "rebounds+assists",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       14.5,
+       870
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "TYRESE_MAXEY_1_NBA",
+     "kind": "prop",
+     "line": 9.5,
+     "name": "Tyrese Maxey Reb + Ast",
+     "oddID": "rebounds+assists-TYRESE_MAXEY_1_NBA-game-ou-over",
+     "odds": -114,
+     "opposing": "rebounds+assists-TYRESE_MAXEY_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "TYRESE_MAXEY_1_NBA",
+     "seen": [
+      [
+       9.5,
+       -114
+      ],
+      [
+       14.5,
+       870
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "rebounds+assists",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "TYRESE_MAXEY_1_NBA",
+     "kind": "prop",
+     "line": 9.5,
+     "name": "Tyrese Maxey Reb + Ast",
+     "oddID": "rebounds+assists-TYRESE_MAXEY_1_NBA-game-ou-under",
+     "odds": -114,
+     "opposing": "rebounds+assists-TYRESE_MAXEY_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "TYRESE_MAXEY_1_NBA",
+     "seen": [
+      [
+       9.5,
+       -114
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "rebounds+assists",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       14.5,
+       900
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": 9.5,
+     "name": "VJ Edgecombe Reb + Ast",
+     "oddID": "rebounds+assists-VJ_EDGECOMBE_1_NBA-game-ou-over",
+     "odds": 106,
+     "opposing": "rebounds+assists-VJ_EDGECOMBE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       9.5,
+       106
+      ],
+      [
+       14.5,
+       900
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "rebounds+assists",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": 9.5,
+     "name": "VJ Edgecombe Reb + Ast",
+     "oddID": "rebounds+assists-VJ_EDGECOMBE_1_NBA-game-ou-under",
+     "odds": -140,
+     "opposing": "rebounds+assists-VJ_EDGECOMBE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       9.5,
+       -140
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "rebounds+assists",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       3.5,
+       -1800
+      ],
+      [
+       5.5,
+       -295
+      ],
+      [
+       7.5,
+       118
+      ],
+      [
+       9.5,
+       280
+      ],
+      [
+       11.5,
+       750
+      ],
+      [
+       13.5,
+       1700
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "LEBRON_JAMES_1_NBA",
+     "kind": "prop",
+     "line": 6.5,
+     "name": "LeBron James Rebounds",
+     "oddID": "rebounds-LEBRON_JAMES_1_NBA-game-ou-over",
+     "odds": -158,
+     "opposing": "rebounds-LEBRON_JAMES_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "LEBRON_JAMES_1_NBA",
+     "seen": [
+      [
+       3.5,
+       -1800
+      ],
+      [
+       5.5,
+       -295
+      ],
+      [
+       6.5,
+       -158
+      ],
+      [
+       7.5,
+       118
+      ],
+      [
+       9.5,
+       280
+      ],
+      [
+       11.5,
+       750
+      ],
+      [
+       13.5,
+       1700
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "rebounds",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "LEBRON_JAMES_1_NBA",
+     "kind": "prop",
+     "line": 6.5,
+     "name": "LeBron James Rebounds",
+     "oddID": "rebounds-LEBRON_JAMES_1_NBA-game-ou-under",
+     "odds": 118,
+     "opposing": "rebounds-LEBRON_JAMES_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "LEBRON_JAMES_1_NBA",
+     "seen": [
+      [
+       6.5,
+       118
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "rebounds",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       5.5,
+       370
+      ],
+      [
+       7.5,
+       1400
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "TYRESE_MAXEY_1_NBA",
+     "kind": "prop",
+     "line": 3.5,
+     "name": "Tyrese Maxey Rebounds",
+     "oddID": "rebounds-TYRESE_MAXEY_1_NBA-game-ou-over",
+     "odds": -130,
+     "opposing": "rebounds-TYRESE_MAXEY_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "TYRESE_MAXEY_1_NBA",
+     "seen": [
+      [
+       3.5,
+       -130
+      ],
+      [
+       5.5,
+       370
+      ],
+      [
+       7.5,
+       1400
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "rebounds",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "TYRESE_MAXEY_1_NBA",
+     "kind": "prop",
+     "line": 3.5,
+     "name": "Tyrese Maxey Rebounds",
+     "oddID": "rebounds-TYRESE_MAXEY_1_NBA-game-ou-under",
+     "odds": -102,
+     "opposing": "rebounds-TYRESE_MAXEY_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "TYRESE_MAXEY_1_NBA",
+     "seen": [
+      [
+       3.5,
+       -102
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "rebounds",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       3.5,
+       -720
+      ],
+      [
+       7.5,
+       220
+      ],
+      [
+       9.5,
+       560
+      ],
+      [
+       11.5,
+       1500
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": 5.5,
+     "name": "VJ Edgecombe Rebounds",
+     "oddID": "rebounds-VJ_EDGECOMBE_1_NBA-game-ou-over",
+     "odds": -158,
+     "opposing": "rebounds-VJ_EDGECOMBE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       3.5,
+       -720
+      ],
+      [
+       5.5,
+       -158
+      ],
+      [
+       7.5,
+       220
+      ],
+      [
+       9.5,
+       560
+      ],
+      [
+       11.5,
+       1500
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "rebounds",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": 5.5,
+     "name": "VJ Edgecombe Rebounds",
+     "oddID": "rebounds-VJ_EDGECOMBE_1_NBA-game-ou-under",
+     "odds": 118,
+     "opposing": "rebounds-VJ_EDGECOMBE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       5.5,
+       118
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "rebounds",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       0.5,
+       -330
+      ],
+      [
+       2.5,
+       500
+      ],
+      [
+       3.5,
+       1400
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "LEBRON_JAMES_1_NBA",
+     "kind": "prop",
+     "line": 1.5,
+     "name": "LeBron James 3-pointers made",
+     "oddID": "threePointersMade-LEBRON_JAMES_1_NBA-game-ou-over",
+     "odds": 154,
+     "opposing": "threePointersMade-LEBRON_JAMES_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "LEBRON_JAMES_1_NBA",
+     "seen": [
+      [
+       0.5,
+       -330
+      ],
+      [
+       1.5,
+       154
+      ],
+      [
+       2.5,
+       500
+      ],
+      [
+       3.5,
+       1400
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "threePointersMade",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "LEBRON_JAMES_1_NBA",
+     "kind": "prop",
+     "line": 1.5,
+     "name": "LeBron James 3-pointers made",
+     "oddID": "threePointersMade-LEBRON_JAMES_1_NBA-game-ou-under",
+     "odds": -210,
+     "opposing": "threePointersMade-LEBRON_JAMES_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "LEBRON_JAMES_1_NBA",
+     "seen": [
+      [
+       1.5,
+       -210
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "threePointersMade",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "LEBRON_JAMES_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "LeBron James 3-pointers made",
+     "oddID": "threePointersMade-LEBRON_JAMES_1_NBA-game-yn-yes",
+     "odds": -330,
+     "opposing": "threePointersMade-LEBRON_JAMES_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "LEBRON_JAMES_1_NBA",
+     "seen": [
+      [
+       null,
+       -330
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "threePointersMade",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       1.5,
+       -350
+      ],
+      [
+       3.5,
+       220
+      ],
+      [
+       4.5,
+       500
+      ],
+      [
+       5.5,
+       1060
+      ],
+      [
+       6.5,
+       2000
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "TYRESE_MAXEY_1_NBA",
+     "kind": "prop",
+     "line": 2.5,
+     "name": "Tyrese Maxey 3-pointers made",
+     "oddID": "threePointersMade-TYRESE_MAXEY_1_NBA-game-ou-over",
+     "odds": -118,
+     "opposing": "threePointersMade-TYRESE_MAXEY_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "TYRESE_MAXEY_1_NBA",
+     "seen": [
+      [
+       1.5,
+       -350
+      ],
+      [
+       2.5,
+       -118
+      ],
+      [
+       3.5,
+       220
+      ],
+      [
+       4.5,
+       500
+      ],
+      [
+       5.5,
+       1060
+      ],
+      [
+       6.5,
+       2000
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "threePointersMade",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "TYRESE_MAXEY_1_NBA",
+     "kind": "prop",
+     "line": 2.5,
+     "name": "Tyrese Maxey 3-pointers made",
+     "oddID": "threePointersMade-TYRESE_MAXEY_1_NBA-game-ou-under",
+     "odds": -112,
+     "opposing": "threePointersMade-TYRESE_MAXEY_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "TYRESE_MAXEY_1_NBA",
+     "seen": [
+      [
+       2.5,
+       -112
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "threePointersMade",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       0.5,
+       -620
+      ],
+      [
+       2.5,
+       260
+      ],
+      [
+       3.5,
+       750
+      ],
+      [
+       4.5,
+       1800
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": 1.5,
+     "name": "VJ Edgecombe 3-pointers made",
+     "oddID": "threePointersMade-VJ_EDGECOMBE_1_NBA-game-ou-over",
+     "odds": -118,
+     "opposing": "threePointersMade-VJ_EDGECOMBE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       0.5,
+       -620
+      ],
+      [
+       1.5,
+       -118
+      ],
+      [
+       2.5,
+       260
+      ],
+      [
+       3.5,
+       750
+      ],
+      [
+       4.5,
+       1800
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "threePointersMade",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": 1.5,
+     "name": "VJ Edgecombe 3-pointers made",
+     "oddID": "threePointersMade-VJ_EDGECOMBE_1_NBA-game-ou-under",
+     "odds": -112,
+     "opposing": "threePointersMade-VJ_EDGECOMBE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       1.5,
+       -112
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "threePointersMade",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "VJ Edgecombe 3-pointers made",
+     "oddID": "threePointersMade-VJ_EDGECOMBE_1_NBA-game-yn-yes",
+     "odds": -620,
+     "opposing": "threePointersMade-VJ_EDGECOMBE_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       null,
+       -620
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "threePointersMade",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "LEBRON_JAMES_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "LeBron James Triple-double",
+     "oddID": "tripleDouble-LEBRON_JAMES_1_NBA-game-yn-yes",
+     "odds": 850,
+     "opposing": "tripleDouble-LEBRON_JAMES_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "LEBRON_JAMES_1_NBA",
+     "seen": [
+      [
+       null,
+       850
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "tripleDouble",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       0.5,
+       -580
+      ],
+      [
+       2.5,
+       270
+      ],
+      [
+       3.5,
+       680
+      ],
+      [
+       4.5,
+       1500
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAUL_GEORGE_1_NBA",
+     "kind": "prop",
+     "line": 1.5,
+     "name": "Paul George Steals",
+     "oddID": "steals-PAUL_GEORGE_1_NBA-game-ou-over",
+     "odds": -112,
+     "opposing": "steals-PAUL_GEORGE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "PAUL_GEORGE_1_NBA",
+     "seen": [
+      [
+       0.5,
+       -580
+      ],
+      [
+       1.5,
+       -112
+      ],
+      [
+       2.5,
+       270
+      ],
+      [
+       3.5,
+       680
+      ],
+      [
+       4.5,
+       1500
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "steals",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAUL_GEORGE_1_NBA",
+     "kind": "prop",
+     "line": 1.5,
+     "name": "Paul George Steals",
+     "oddID": "steals-PAUL_GEORGE_1_NBA-game-ou-under",
+     "odds": -118,
+     "opposing": "steals-PAUL_GEORGE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "PAUL_GEORGE_1_NBA",
+     "seen": [
+      [
+       1.5,
+       -118
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "steals",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "PAUL_GEORGE_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Paul George Steals",
+     "oddID": "steals-PAUL_GEORGE_1_NBA-game-yn-yes",
+     "odds": -580,
+     "opposing": "steals-PAUL_GEORGE_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "PAUL_GEORGE_1_NBA",
+     "seen": [
+      [
+       null,
+       -580
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "steals",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       9.5,
+       -1200
+      ],
+      [
+       14.5,
+       -250
+      ],
+      [
+       19.5,
+       140
+      ],
+      [
+       24.5,
+       400
+      ],
+      [
+       29.5,
+       1060
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAUL_GEORGE_1_NBA",
+     "kind": "prop",
+     "line": 17.5,
+     "name": "Paul George Points",
+     "oddID": "points-PAUL_GEORGE_1_NBA-game-ou-over",
+     "odds": -118,
+     "opposing": "points-PAUL_GEORGE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "PAUL_GEORGE_1_NBA",
+     "seen": [
+      [
+       9.5,
+       -1200
+      ],
+      [
+       14.5,
+       -250
+      ],
+      [
+       17.5,
+       -118
+      ],
+      [
+       19.5,
+       140
+      ],
+      [
+       24.5,
+       400
+      ],
+      [
+       29.5,
+       1060
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAUL_GEORGE_1_NBA",
+     "kind": "prop",
+     "line": 17.5,
+     "name": "Paul George Points",
+     "oddID": "points-PAUL_GEORGE_1_NBA-game-ou-under",
+     "odds": -112,
+     "opposing": "points-PAUL_GEORGE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "PAUL_GEORGE_1_NBA",
+     "seen": [
+      [
+       17.5,
+       -112
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       3.5,
+       -280
+      ],
+      [
+       5.5,
+       162
+      ],
+      [
+       7.5,
+       540
+      ],
+      [
+       9.5,
+       1400
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAUL_GEORGE_1_NBA",
+     "kind": "prop",
+     "line": 4.5,
+     "name": "Paul George Rebounds",
+     "oddID": "rebounds-PAUL_GEORGE_1_NBA-game-ou-over",
+     "odds": -130,
+     "opposing": "rebounds-PAUL_GEORGE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "PAUL_GEORGE_1_NBA",
+     "seen": [
+      [
+       3.5,
+       -280
+      ],
+      [
+       4.5,
+       -130
+      ],
+      [
+       5.5,
+       162
+      ],
+      [
+       7.5,
+       540
+      ],
+      [
+       9.5,
+       1400
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "rebounds",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAUL_GEORGE_1_NBA",
+     "kind": "prop",
+     "line": 4.5,
+     "name": "Paul George Rebounds",
+     "oddID": "rebounds-PAUL_GEORGE_1_NBA-game-ou-under",
+     "odds": -102,
+     "opposing": "rebounds-PAUL_GEORGE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "PAUL_GEORGE_1_NBA",
+     "seen": [
+      [
+       4.5,
+       -102
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "rebounds",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       1.5,
+       -430
+      ],
+      [
+       3.5,
+       190
+      ],
+      [
+       4.5,
+       450
+      ],
+      [
+       5.5,
+       900
+      ],
+      [
+       6.5,
+       1700
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAUL_GEORGE_1_NBA",
+     "kind": "prop",
+     "line": 2.5,
+     "name": "Paul George 3-pointers made",
+     "oddID": "threePointersMade-PAUL_GEORGE_1_NBA-game-ou-over",
+     "odds": -136,
+     "opposing": "threePointersMade-PAUL_GEORGE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "PAUL_GEORGE_1_NBA",
+     "seen": [
+      [
+       1.5,
+       -430
+      ],
+      [
+       2.5,
+       -136
+      ],
+      [
+       3.5,
+       190
+      ],
+      [
+       4.5,
+       450
+      ],
+      [
+       5.5,
+       900
+      ],
+      [
+       6.5,
+       1700
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "threePointersMade",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAUL_GEORGE_1_NBA",
+     "kind": "prop",
+     "line": 2.5,
+     "name": "Paul George 3-pointers made",
+     "oddID": "threePointersMade-PAUL_GEORGE_1_NBA-game-ou-under",
+     "odds": 102,
+     "opposing": "threePointersMade-PAUL_GEORGE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "PAUL_GEORGE_1_NBA",
+     "seen": [
+      [
+       2.5,
+       102
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "threePointersMade",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       1.5,
+       -1100
+      ],
+      [
+       5.5,
+       370
+      ],
+      [
+       7.5,
+       1300
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAUL_GEORGE_1_NBA",
+     "kind": "prop",
+     "line": 3.5,
+     "name": "Paul George Assists",
+     "oddID": "assists-PAUL_GEORGE_1_NBA-game-ou-over",
+     "odds": -125,
+     "opposing": "assists-PAUL_GEORGE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "PAUL_GEORGE_1_NBA",
+     "seen": [
+      [
+       1.5,
+       -1100
+      ],
+      [
+       3.5,
+       -125
+      ],
+      [
+       5.5,
+       370
+      ],
+      [
+       7.5,
+       1300
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "assists",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAUL_GEORGE_1_NBA",
+     "kind": "prop",
+     "line": 3.5,
+     "name": "Paul George Assists",
+     "oddID": "assists-PAUL_GEORGE_1_NBA-game-ou-under",
+     "odds": -106,
+     "opposing": "assists-PAUL_GEORGE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "PAUL_GEORGE_1_NBA",
+     "seen": [
+      [
+       3.5,
+       -106
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "assists",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "PAUL_GEORGE_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Paul George Double-double",
+     "oddID": "doubleDouble-PAUL_GEORGE_1_NBA-game-yn-yes",
+     "odds": 1200,
+     "opposing": "doubleDouble-PAUL_GEORGE_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "PAUL_GEORGE_1_NBA",
+     "seen": [
+      [
+       null,
+       1200
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "doubleDouble",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       14.5,
+       -650
+      ],
+      [
+       19.5,
+       -190
+      ],
+      [
+       24.5,
+       160
+      ],
+      [
+       29.5,
+       470
+      ],
+      [
+       34.5,
+       1400
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAUL_GEORGE_1_NBA",
+     "kind": "prop",
+     "line": 21.5,
+     "name": "Paul George Pts + Ast",
+     "oddID": "points+assists-PAUL_GEORGE_1_NBA-game-ou-over",
+     "odds": -112,
+     "opposing": "points+assists-PAUL_GEORGE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "PAUL_GEORGE_1_NBA",
+     "seen": [
+      [
+       14.5,
+       -650
+      ],
+      [
+       19.5,
+       -190
+      ],
+      [
+       21.5,
+       -112
+      ],
+      [
+       24.5,
+       160
+      ],
+      [
+       29.5,
+       470
+      ],
+      [
+       34.5,
+       1400
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+assists",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAUL_GEORGE_1_NBA",
+     "kind": "prop",
+     "line": 21.5,
+     "name": "Paul George Pts + Ast",
+     "oddID": "points+assists-PAUL_GEORGE_1_NBA-game-ou-under",
+     "odds": -118,
+     "opposing": "points+assists-PAUL_GEORGE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "PAUL_GEORGE_1_NBA",
+     "seen": [
+      [
+       21.5,
+       -118
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+assists",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       19.5,
+       -520
+      ],
+      [
+       24.5,
+       -164
+      ],
+      [
+       29.5,
+       168
+      ],
+      [
+       34.5,
+       400
+      ],
+      [
+       39.5,
+       1000
+      ],
+      [
+       44.5,
+       2000
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAUL_GEORGE_1_NBA",
+     "kind": "prop",
+     "line": 26.5,
+     "name": "Paul George Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-PAUL_GEORGE_1_NBA-game-ou-over",
+     "odds": -108,
+     "opposing": "points+rebounds+assists-PAUL_GEORGE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "PAUL_GEORGE_1_NBA",
+     "seen": [
+      [
+       19.5,
+       -520
+      ],
+      [
+       24.5,
+       -164
+      ],
+      [
+       26.5,
+       -108
+      ],
+      [
+       29.5,
+       168
+      ],
+      [
+       34.5,
+       400
+      ],
+      [
+       39.5,
+       1000
+      ],
+      [
+       44.5,
+       2000
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAUL_GEORGE_1_NBA",
+     "kind": "prop",
+     "line": 26.5,
+     "name": "Paul George Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-PAUL_GEORGE_1_NBA-game-ou-under",
+     "odds": -122,
+     "opposing": "points+rebounds+assists-PAUL_GEORGE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "PAUL_GEORGE_1_NBA",
+     "seen": [
+      [
+       26.5,
+       -122
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+rebounds+assists",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       14.5,
+       -850
+      ],
+      [
+       19.5,
+       -215
+      ],
+      [
+       24.5,
+       138
+      ],
+      [
+       29.5,
+       350
+      ],
+      [
+       34.5,
+       900
+      ],
+      [
+       39.5,
+       1800
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAUL_GEORGE_1_NBA",
+     "kind": "prop",
+     "line": 22.5,
+     "name": "Paul George Pts + Reb",
+     "oddID": "points+rebounds-PAUL_GEORGE_1_NBA-game-ou-over",
+     "odds": -114,
+     "opposing": "points+rebounds-PAUL_GEORGE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "PAUL_GEORGE_1_NBA",
+     "seen": [
+      [
+       14.5,
+       -850
+      ],
+      [
+       19.5,
+       -215
+      ],
+      [
+       22.5,
+       -114
+      ],
+      [
+       24.5,
+       138
+      ],
+      [
+       29.5,
+       350
+      ],
+      [
+       34.5,
+       900
+      ],
+      [
+       39.5,
+       1800
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+rebounds",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAUL_GEORGE_1_NBA",
+     "kind": "prop",
+     "line": 22.5,
+     "name": "Paul George Pts + Reb",
+     "oddID": "points+rebounds-PAUL_GEORGE_1_NBA-game-ou-under",
+     "odds": -114,
+     "opposing": "points+rebounds-PAUL_GEORGE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "PAUL_GEORGE_1_NBA",
+     "seen": [
+      [
+       22.5,
+       -114
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+rebounds",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       4.5,
+       -1800
+      ],
+      [
+       9.5,
+       150
+      ],
+      [
+       14.5,
+       1200
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAUL_GEORGE_1_NBA",
+     "kind": "prop",
+     "line": 8.5,
+     "name": "Paul George Reb + Ast",
+     "oddID": "rebounds+assists-PAUL_GEORGE_1_NBA-game-ou-over",
+     "odds": -112,
+     "opposing": "rebounds+assists-PAUL_GEORGE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "PAUL_GEORGE_1_NBA",
+     "seen": [
+      [
+       4.5,
+       -1800
+      ],
+      [
+       8.5,
+       -112
+      ],
+      [
+       9.5,
+       150
+      ],
+      [
+       14.5,
+       1200
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "rebounds+assists",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAUL_GEORGE_1_NBA",
+     "kind": "prop",
+     "line": 8.5,
+     "name": "Paul George Reb + Ast",
+     "oddID": "rebounds+assists-PAUL_GEORGE_1_NBA-game-ou-under",
+     "odds": -118,
+     "opposing": "rebounds+assists-PAUL_GEORGE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "PAUL_GEORGE_1_NBA",
+     "seen": [
+      [
+       8.5,
+       -118
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "rebounds+assists",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       3.5,
+       -265
+      ],
+      [
+       5.5,
+       176
+      ],
+      [
+       7.5,
+       630
+      ],
+      [
+       9.5,
+       1500
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DERRICK_WHITE_1_NBA",
+     "kind": "prop",
+     "line": 4.5,
+     "name": "Derrick White Assists",
+     "oddID": "assists-DERRICK_WHITE_1_NBA-game-ou-over",
+     "odds": -114,
+     "opposing": "assists-DERRICK_WHITE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "DERRICK_WHITE_1_NBA",
+     "seen": [
+      [
+       3.5,
+       -265
+      ],
+      [
+       4.5,
+       -114
+      ],
+      [
+       5.5,
+       176
+      ],
+      [
+       7.5,
+       630
+      ],
+      [
+       9.5,
+       1500
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "assists",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DERRICK_WHITE_1_NBA",
+     "kind": "prop",
+     "line": 4.5,
+     "name": "Derrick White Assists",
+     "oddID": "assists-DERRICK_WHITE_1_NBA-game-ou-under",
+     "odds": -114,
+     "opposing": "assists-DERRICK_WHITE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "DERRICK_WHITE_1_NBA",
+     "seen": [
+      [
+       4.5,
+       -114
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "assists",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "DERRICK_WHITE_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Derrick White Double-double",
+     "oddID": "doubleDouble-DERRICK_WHITE_1_NBA-game-yn-yes",
+     "odds": 1500,
+     "opposing": "doubleDouble-DERRICK_WHITE_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "DERRICK_WHITE_1_NBA",
+     "seen": [
+      [
+       null,
+       1500
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "doubleDouble",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "NEEMIAS_QUETA_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Neemias Queta Double-double",
+     "oddID": "doubleDouble-NEEMIAS_QUETA_1_NBA-game-yn-yes",
+     "odds": 490,
+     "opposing": "doubleDouble-NEEMIAS_QUETA_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "NEEMIAS_QUETA_1_NBA",
+     "seen": [
+      [
+       null,
+       490
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "doubleDouble",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       9.5,
+       -2000
+      ],
+      [
+       14.5,
+       -280
+      ],
+      [
+       19.5,
+       125
+      ],
+      [
+       24.5,
+       400
+      ],
+      [
+       29.5,
+       1400
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DERRICK_WHITE_1_NBA",
+     "kind": "prop",
+     "line": 17.5,
+     "name": "Derrick White Pts + Ast",
+     "oddID": "points+assists-DERRICK_WHITE_1_NBA-game-ou-over",
+     "odds": -118,
+     "opposing": "points+assists-DERRICK_WHITE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "DERRICK_WHITE_1_NBA",
+     "seen": [
+      [
+       9.5,
+       -2000
+      ],
+      [
+       14.5,
+       -280
+      ],
+      [
+       17.5,
+       -118
+      ],
+      [
+       19.5,
+       125
+      ],
+      [
+       24.5,
+       400
+      ],
+      [
+       29.5,
+       1400
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+assists",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DERRICK_WHITE_1_NBA",
+     "kind": "prop",
+     "line": 17.5,
+     "name": "Derrick White Pts + Ast",
+     "oddID": "points+assists-DERRICK_WHITE_1_NBA-game-ou-under",
+     "odds": -112,
+     "opposing": "points+assists-DERRICK_WHITE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "DERRICK_WHITE_1_NBA",
+     "seen": [
+      [
+       17.5,
+       -112
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+assists",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       14.5,
+       -670
+      ],
+      [
+       19.5,
+       -166
+      ],
+      [
+       24.5,
+       190
+      ],
+      [
+       29.5,
+       520
+      ],
+      [
+       34.5,
+       1300
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DERRICK_WHITE_1_NBA",
+     "kind": "prop",
+     "line": 21.5,
+     "name": "Derrick White Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-DERRICK_WHITE_1_NBA-game-ou-over",
+     "odds": -102,
+     "opposing": "points+rebounds+assists-DERRICK_WHITE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "DERRICK_WHITE_1_NBA",
+     "seen": [
+      [
+       14.5,
+       -670
+      ],
+      [
+       19.5,
+       -166
+      ],
+      [
+       21.5,
+       -102
+      ],
+      [
+       24.5,
+       190
+      ],
+      [
+       29.5,
+       520
+      ],
+      [
+       34.5,
+       1300
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DERRICK_WHITE_1_NBA",
+     "kind": "prop",
+     "line": 21.5,
+     "name": "Derrick White Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-DERRICK_WHITE_1_NBA-game-ou-under",
+     "odds": -130,
+     "opposing": "points+rebounds+assists-DERRICK_WHITE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "DERRICK_WHITE_1_NBA",
+     "seen": [
+      [
+       21.5,
+       -130
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+rebounds+assists",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       9.5,
+       -1000
+      ],
+      [
+       14.5,
+       -184
+      ],
+      [
+       19.5,
+       190
+      ],
+      [
+       24.5,
+       560
+      ],
+      [
+       29.5,
+       1400
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DERRICK_WHITE_1_NBA",
+     "kind": "prop",
+     "line": 16.5,
+     "name": "Derrick White Pts + Reb",
+     "oddID": "points+rebounds-DERRICK_WHITE_1_NBA-game-ou-over",
+     "odds": -112,
+     "opposing": "points+rebounds-DERRICK_WHITE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "DERRICK_WHITE_1_NBA",
+     "seen": [
+      [
+       9.5,
+       -1000
+      ],
+      [
+       14.5,
+       -184
+      ],
+      [
+       16.5,
+       -112
+      ],
+      [
+       19.5,
+       190
+      ],
+      [
+       24.5,
+       560
+      ],
+      [
+       29.5,
+       1400
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+rebounds",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DERRICK_WHITE_1_NBA",
+     "kind": "prop",
+     "line": 16.5,
+     "name": "Derrick White Pts + Reb",
+     "oddID": "points+rebounds-DERRICK_WHITE_1_NBA-game-ou-under",
+     "odds": -118,
+     "opposing": "points+rebounds-DERRICK_WHITE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "DERRICK_WHITE_1_NBA",
+     "seen": [
+      [
+       16.5,
+       -118
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+rebounds",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       9.5,
+       -1000
+      ],
+      [
+       14.5,
+       -188
+      ],
+      [
+       19.5,
+       190
+      ],
+      [
+       24.5,
+       560
+      ],
+      [
+       29.5,
+       1500
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "NEEMIAS_QUETA_1_NBA",
+     "kind": "prop",
+     "line": 16.5,
+     "name": "Neemias Queta Pts + Reb",
+     "oddID": "points+rebounds-NEEMIAS_QUETA_1_NBA-game-ou-over",
+     "odds": -112,
+     "opposing": "points+rebounds-NEEMIAS_QUETA_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "NEEMIAS_QUETA_1_NBA",
+     "seen": [
+      [
+       9.5,
+       -1000
+      ],
+      [
+       14.5,
+       -188
+      ],
+      [
+       16.5,
+       -112
+      ],
+      [
+       19.5,
+       190
+      ],
+      [
+       24.5,
+       560
+      ],
+      [
+       29.5,
+       1500
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+rebounds",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "NEEMIAS_QUETA_1_NBA",
+     "kind": "prop",
+     "line": 16.5,
+     "name": "Neemias Queta Pts + Reb",
+     "oddID": "points+rebounds-NEEMIAS_QUETA_1_NBA-game-ou-under",
+     "odds": -118,
+     "opposing": "points+rebounds-NEEMIAS_QUETA_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "NEEMIAS_QUETA_1_NBA",
+     "seen": [
+      [
+       16.5,
+       -118
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+rebounds",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       9.5,
+       -320
+      ],
+      [
+       14.5,
+       138
+      ],
+      [
+       19.5,
+       450
+      ],
+      [
+       24.5,
+       1300
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DERRICK_WHITE_1_NBA",
+     "kind": "prop",
+     "line": 12.5,
+     "name": "Derrick White Points",
+     "oddID": "points-DERRICK_WHITE_1_NBA-game-ou-over",
+     "odds": -130,
+     "opposing": "points-DERRICK_WHITE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "DERRICK_WHITE_1_NBA",
+     "seen": [
+      [
+       9.5,
+       -320
+      ],
+      [
+       12.5,
+       -130
+      ],
+      [
+       14.5,
+       138
+      ],
+      [
+       19.5,
+       450
+      ],
+      [
+       24.5,
+       1300
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DERRICK_WHITE_1_NBA",
+     "kind": "prop",
+     "line": 12.5,
+     "name": "Derrick White Points",
+     "oddID": "points-DERRICK_WHITE_1_NBA-game-ou-under",
+     "odds": -102,
+     "opposing": "points-DERRICK_WHITE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "DERRICK_WHITE_1_NBA",
+     "seen": [
+      [
+       12.5,
+       -102
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       4.5,
+       -750
+      ],
+      [
+       14.5,
+       450
+      ],
+      [
+       19.5,
+       1500
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "NEEMIAS_QUETA_1_NBA",
+     "kind": "prop",
+     "line": 9.5,
+     "name": "Neemias Queta Points",
+     "oddID": "points-NEEMIAS_QUETA_1_NBA-game-ou-over",
+     "odds": -102,
+     "opposing": "points-NEEMIAS_QUETA_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "NEEMIAS_QUETA_1_NBA",
+     "seen": [
+      [
+       4.5,
+       -750
+      ],
+      [
+       9.5,
+       -102
+      ],
+      [
+       14.5,
+       450
+      ],
+      [
+       19.5,
+       1500
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "NEEMIAS_QUETA_1_NBA",
+     "kind": "prop",
+     "line": 9.5,
+     "name": "Neemias Queta Points",
+     "oddID": "points-NEEMIAS_QUETA_1_NBA-game-ou-under",
+     "odds": -130,
+     "opposing": "points-NEEMIAS_QUETA_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "NEEMIAS_QUETA_1_NBA",
+     "seen": [
+      [
+       9.5,
+       -130
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       4.5,
+       -1200
+      ],
+      [
+       9.5,
+       200
+      ],
+      [
+       14.5,
+       1500
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DERRICK_WHITE_1_NBA",
+     "kind": "prop",
+     "line": 7.5,
+     "name": "Derrick White Reb + Ast",
+     "oddID": "rebounds+assists-DERRICK_WHITE_1_NBA-game-ou-over",
+     "odds": -152,
+     "opposing": "rebounds+assists-DERRICK_WHITE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "DERRICK_WHITE_1_NBA",
+     "seen": [
+      [
+       4.5,
+       -1200
+      ],
+      [
+       7.5,
+       -152
+      ],
+      [
+       9.5,
+       200
+      ],
+      [
+       14.5,
+       1500
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "rebounds+assists",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DERRICK_WHITE_1_NBA",
+     "kind": "prop",
+     "line": 7.5,
+     "name": "Derrick White Reb + Ast",
+     "oddID": "rebounds+assists-DERRICK_WHITE_1_NBA-game-ou-under",
+     "odds": 114,
+     "opposing": "rebounds+assists-DERRICK_WHITE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "DERRICK_WHITE_1_NBA",
+     "seen": [
+      [
+       7.5,
+       114
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "rebounds+assists",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       5.5,
+       500
+      ],
+      [
+       7.5,
+       1700
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DERRICK_WHITE_1_NBA",
+     "kind": "prop",
+     "line": 3.5,
+     "name": "Derrick White Rebounds",
+     "oddID": "rebounds-DERRICK_WHITE_1_NBA-game-ou-over",
+     "odds": 104,
+     "opposing": "rebounds-DERRICK_WHITE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "DERRICK_WHITE_1_NBA",
+     "seen": [
+      [
+       3.5,
+       104
+      ],
+      [
+       5.5,
+       500
+      ],
+      [
+       7.5,
+       1700
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "rebounds",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DERRICK_WHITE_1_NBA",
+     "kind": "prop",
+     "line": 3.5,
+     "name": "Derrick White Rebounds",
+     "oddID": "rebounds-DERRICK_WHITE_1_NBA-game-ou-under",
+     "odds": -138,
+     "opposing": "rebounds-DERRICK_WHITE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "DERRICK_WHITE_1_NBA",
+     "seen": [
+      [
+       3.5,
+       -138
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "rebounds",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       3.5,
+       -1400
+      ],
+      [
+       5.5,
+       -265
+      ],
+      [
+       9.5,
+       290
+      ],
+      [
+       11.5,
+       750
+      ],
+      [
+       13.5,
+       1500
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "NEEMIAS_QUETA_1_NBA",
+     "kind": "prop",
+     "line": 7.5,
+     "name": "Neemias Queta Rebounds",
+     "oddID": "rebounds-NEEMIAS_QUETA_1_NBA-game-ou-over",
+     "odds": 118,
+     "opposing": "rebounds-NEEMIAS_QUETA_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "NEEMIAS_QUETA_1_NBA",
+     "seen": [
+      [
+       3.5,
+       -1400
+      ],
+      [
+       5.5,
+       -265
+      ],
+      [
+       7.5,
+       118
+      ],
+      [
+       9.5,
+       290
+      ],
+      [
+       11.5,
+       750
+      ],
+      [
+       13.5,
+       1500
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "rebounds",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "NEEMIAS_QUETA_1_NBA",
+     "kind": "prop",
+     "line": 7.5,
+     "name": "Neemias Queta Rebounds",
+     "oddID": "rebounds-NEEMIAS_QUETA_1_NBA-game-ou-under",
+     "odds": -158,
+     "opposing": "rebounds-NEEMIAS_QUETA_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "NEEMIAS_QUETA_1_NBA",
+     "seen": [
+      [
+       7.5,
+       -158
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "rebounds",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       0.5,
+       -720
+      ],
+      [
+       2.5,
+       220
+      ],
+      [
+       3.5,
+       560
+      ],
+      [
+       4.5,
+       1300
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DERRICK_WHITE_1_NBA",
+     "kind": "prop",
+     "line": 1.5,
+     "name": "Derrick White 3-pointers made",
+     "oddID": "threePointersMade-DERRICK_WHITE_1_NBA-game-ou-over",
+     "odds": -152,
+     "opposing": "threePointersMade-DERRICK_WHITE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "DERRICK_WHITE_1_NBA",
+     "seen": [
+      [
+       0.5,
+       -720
+      ],
+      [
+       1.5,
+       -152
+      ],
+      [
+       2.5,
+       220
+      ],
+      [
+       3.5,
+       560
+      ],
+      [
+       4.5,
+       1300
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "threePointersMade",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DERRICK_WHITE_1_NBA",
+     "kind": "prop",
+     "line": 1.5,
+     "name": "Derrick White 3-pointers made",
+     "oddID": "threePointersMade-DERRICK_WHITE_1_NBA-game-ou-under",
+     "odds": 114,
+     "opposing": "threePointersMade-DERRICK_WHITE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "DERRICK_WHITE_1_NBA",
+     "seen": [
+      [
+       1.5,
+       114
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "threePointersMade",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "DERRICK_WHITE_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Derrick White 3-pointers made",
+     "oddID": "threePointersMade-DERRICK_WHITE_1_NBA-game-yn-yes",
+     "odds": -720,
+     "opposing": "threePointersMade-DERRICK_WHITE_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "DERRICK_WHITE_1_NBA",
+     "seen": [
+      [
+       null,
+       -720
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "threePointersMade",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       0.5,
+       -245
+      ],
+      [
+       2.5,
+       630
+      ],
+      [
+       3.5,
+       1500
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "NEEMIAS_QUETA_1_NBA",
+     "kind": "prop",
+     "line": 1.5,
+     "name": "Neemias Queta Blocks",
+     "oddID": "blocks-NEEMIAS_QUETA_1_NBA-game-ou-over",
+     "odds": 194,
+     "opposing": "blocks-NEEMIAS_QUETA_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "NEEMIAS_QUETA_1_NBA",
+     "seen": [
+      [
+       0.5,
+       -245
+      ],
+      [
+       1.5,
+       194
+      ],
+      [
+       2.5,
+       630
+      ],
+      [
+       3.5,
+       1500
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "blocks",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "NEEMIAS_QUETA_1_NBA",
+     "kind": "prop",
+     "line": 1.5,
+     "name": "Neemias Queta Blocks",
+     "oddID": "blocks-NEEMIAS_QUETA_1_NBA-game-ou-under",
+     "odds": -270,
+     "opposing": "blocks-NEEMIAS_QUETA_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "NEEMIAS_QUETA_1_NBA",
+     "seen": [
+      [
+       1.5,
+       -270
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "blocks",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "NEEMIAS_QUETA_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Neemias Queta Blocks",
+     "oddID": "blocks-NEEMIAS_QUETA_1_NBA-game-yn-yes",
+     "odds": -245,
+     "opposing": "blocks-NEEMIAS_QUETA_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "NEEMIAS_QUETA_1_NBA",
+     "seen": [
+      [
+       null,
+       -245
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "blocks",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       0.5,
+       -270
+      ],
+      [
+       2.5,
+       630
+      ],
+      [
+       3.5,
+       1500
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DERRICK_WHITE_1_NBA",
+     "kind": "prop",
+     "line": 1.5,
+     "name": "Derrick White Steals",
+     "oddID": "steals-DERRICK_WHITE_1_NBA-game-ou-over",
+     "odds": 194,
+     "opposing": "steals-DERRICK_WHITE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "DERRICK_WHITE_1_NBA",
+     "seen": [
+      [
+       0.5,
+       -270
+      ],
+      [
+       1.5,
+       194
+      ],
+      [
+       2.5,
+       630
+      ],
+      [
+       3.5,
+       1500
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "steals",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DERRICK_WHITE_1_NBA",
+     "kind": "prop",
+     "line": 1.5,
+     "name": "Derrick White Steals",
+     "oddID": "steals-DERRICK_WHITE_1_NBA-game-ou-under",
+     "odds": -270,
+     "opposing": "steals-DERRICK_WHITE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "DERRICK_WHITE_1_NBA",
+     "seen": [
+      [
+       1.5,
+       -270
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "steals",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "DERRICK_WHITE_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Derrick White Steals",
+     "oddID": "steals-DERRICK_WHITE_1_NBA-game-yn-yes",
+     "odds": -270,
+     "opposing": "steals-DERRICK_WHITE_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "DERRICK_WHITE_1_NBA",
+     "seen": [
+      [
+       null,
+       -270
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "steals",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       0.5,
+       -290
+      ],
+      [
+       2.5,
+       520
+      ],
+      [
+       3.5,
+       1260
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "TYRESE_MAXEY_1_NBA",
+     "kind": "prop",
+     "line": 1.5,
+     "name": "Tyrese Maxey Steals",
+     "oddID": "steals-TYRESE_MAXEY_1_NBA-game-ou-over",
+     "odds": 168,
+     "opposing": "steals-TYRESE_MAXEY_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "TYRESE_MAXEY_1_NBA",
+     "seen": [
+      [
+       0.5,
+       -290
+      ],
+      [
+       1.5,
+       168
+      ],
+      [
+       2.5,
+       520
+      ],
+      [
+       3.5,
+       1260
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "steals",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "TYRESE_MAXEY_1_NBA",
+     "kind": "prop",
+     "line": 1.5,
+     "name": "Tyrese Maxey Steals",
+     "oddID": "steals-TYRESE_MAXEY_1_NBA-game-ou-under",
+     "odds": -230,
+     "opposing": "steals-TYRESE_MAXEY_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "TYRESE_MAXEY_1_NBA",
+     "seen": [
+      [
+       1.5,
+       -230
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "steals",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "TYRESE_MAXEY_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Tyrese Maxey Steals",
+     "oddID": "steals-TYRESE_MAXEY_1_NBA-game-yn-yes",
+     "odds": -290,
+     "opposing": "steals-TYRESE_MAXEY_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "TYRESE_MAXEY_1_NBA",
+     "seen": [
+      [
+       null,
+       -290
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "steals",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       0.5,
+       -350
+      ],
+      [
+       2.5,
+       410
+      ],
+      [
+       3.5,
+       1100
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": 1.5,
+     "name": "VJ Edgecombe Steals",
+     "oddID": "steals-VJ_EDGECOMBE_1_NBA-game-ou-over",
+     "odds": 136,
+     "opposing": "steals-VJ_EDGECOMBE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       0.5,
+       -350
+      ],
+      [
+       1.5,
+       136
+      ],
+      [
+       2.5,
+       410
+      ],
+      [
+       3.5,
+       1100
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "steals",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": 1.5,
+     "name": "VJ Edgecombe Steals",
+     "oddID": "steals-VJ_EDGECOMBE_1_NBA-game-ou-under",
+     "odds": -182,
+     "opposing": "steals-VJ_EDGECOMBE_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       1.5,
+       -182
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "steals",
+     "team": "PHI"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "VJ_EDGECOMBE_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "VJ Edgecombe Steals",
+     "oddID": "steals-VJ_EDGECOMBE_1_NBA-game-yn-yes",
+     "odds": -350,
+     "opposing": "steals-VJ_EDGECOMBE_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "VJ_EDGECOMBE_1_NBA",
+     "seen": [
+      [
+       null,
+       -350
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "steals",
+     "team": "PHI"
+    },
+    {
+     "alts": [
+      [
+       9.5,
+       -260
+      ],
+      [
+       14.5,
+       158
+      ],
+      [
+       19.5,
+       500
+      ],
+      [
+       24.5,
+       1400
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAYTON_PRITCHARD_1_NBA",
+     "kind": "prop",
+     "line": 12.5,
+     "name": "Payton Pritchard Points",
+     "oddID": "points-PAYTON_PRITCHARD_1_NBA-game-ou-over",
+     "odds": -108,
+     "opposing": "points-PAYTON_PRITCHARD_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "PAYTON_PRITCHARD_1_NBA",
+     "seen": [
+      [
+       9.5,
+       -260
+      ],
+      [
+       12.5,
+       -108
+      ],
+      [
+       14.5,
+       158
+      ],
+      [
+       19.5,
+       500
+      ],
+      [
+       24.5,
+       1400
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAYTON_PRITCHARD_1_NBA",
+     "kind": "prop",
+     "line": 12.5,
+     "name": "Payton Pritchard Points",
+     "oddID": "points-PAYTON_PRITCHARD_1_NBA-game-ou-under",
+     "odds": -122,
+     "opposing": "points-PAYTON_PRITCHARD_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "PAYTON_PRITCHARD_1_NBA",
+     "seen": [
+      [
+       12.5,
+       -122
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       0.5,
+       -1100
+      ],
+      [
+       1.5,
+       -200
+      ],
+      [
+       3.5,
+       390
+      ],
+      [
+       4.5,
+       850
+      ],
+      [
+       5.5,
+       1500
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAYTON_PRITCHARD_1_NBA",
+     "kind": "prop",
+     "line": 2.5,
+     "name": "Payton Pritchard 3-pointers made",
+     "oddID": "threePointersMade-PAYTON_PRITCHARD_1_NBA-game-ou-over",
+     "odds": 154,
+     "opposing": "threePointersMade-PAYTON_PRITCHARD_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "PAYTON_PRITCHARD_1_NBA",
+     "seen": [
+      [
+       0.5,
+       -1100
+      ],
+      [
+       1.5,
+       -200
+      ],
+      [
+       2.5,
+       154
+      ],
+      [
+       3.5,
+       390
+      ],
+      [
+       4.5,
+       850
+      ],
+      [
+       5.5,
+       1500
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "threePointersMade",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAYTON_PRITCHARD_1_NBA",
+     "kind": "prop",
+     "line": 2.5,
+     "name": "Payton Pritchard 3-pointers made",
+     "oddID": "threePointersMade-PAYTON_PRITCHARD_1_NBA-game-ou-under",
+     "odds": -210,
+     "opposing": "threePointersMade-PAYTON_PRITCHARD_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "PAYTON_PRITCHARD_1_NBA",
+     "seen": [
+      [
+       2.5,
+       -210
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "threePointersMade",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "yn",
+     "book": "fanduel",
+     "entity": "PAYTON_PRITCHARD_1_NBA",
+     "kind": "prop",
+     "line": null,
+     "name": "Payton Pritchard 3-pointers made",
+     "oddID": "threePointersMade-PAYTON_PRITCHARD_1_NBA-game-yn-yes",
+     "odds": -1100,
+     "opposing": "threePointersMade-PAYTON_PRITCHARD_1_NBA-game-yn-no",
+     "period": "game",
+     "player": "PAYTON_PRITCHARD_1_NBA",
+     "seen": [
+      [
+       null,
+       -1100
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "yes",
+     "stat": "threePointersMade",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       3.5,
+       154
+      ],
+      [
+       5.5,
+       680
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAYTON_PRITCHARD_1_NBA",
+     "kind": "prop",
+     "line": 2.5,
+     "name": "Payton Pritchard Rebounds",
+     "oddID": "rebounds-PAYTON_PRITCHARD_1_NBA-game-ou-over",
+     "odds": -166,
+     "opposing": "rebounds-PAYTON_PRITCHARD_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "PAYTON_PRITCHARD_1_NBA",
+     "seen": [
+      [
+       2.5,
+       -166
+      ],
+      [
+       3.5,
+       154
+      ],
+      [
+       5.5,
+       680
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "rebounds",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAYTON_PRITCHARD_1_NBA",
+     "kind": "prop",
+     "line": 2.5,
+     "name": "Payton Pritchard Rebounds",
+     "oddID": "rebounds-PAYTON_PRITCHARD_1_NBA-game-ou-under",
+     "odds": 126,
+     "opposing": "rebounds-PAYTON_PRITCHARD_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "PAYTON_PRITCHARD_1_NBA",
+     "seen": [
+      [
+       2.5,
+       126
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "rebounds",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       1.5,
+       -850
+      ],
+      [
+       5.5,
+       350
+      ],
+      [
+       7.5,
+       1200
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAYTON_PRITCHARD_1_NBA",
+     "kind": "prop",
+     "line": 3.5,
+     "name": "Payton Pritchard Assists",
+     "oddID": "assists-PAYTON_PRITCHARD_1_NBA-game-ou-over",
+     "odds": -114,
+     "opposing": "assists-PAYTON_PRITCHARD_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "PAYTON_PRITCHARD_1_NBA",
+     "seen": [
+      [
+       1.5,
+       -850
+      ],
+      [
+       3.5,
+       -114
+      ],
+      [
+       5.5,
+       350
+      ],
+      [
+       7.5,
+       1200
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "assists",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAYTON_PRITCHARD_1_NBA",
+     "kind": "prop",
+     "line": 3.5,
+     "name": "Payton Pritchard Assists",
+     "oddID": "assists-PAYTON_PRITCHARD_1_NBA-game-ou-under",
+     "odds": -114,
+     "opposing": "assists-PAYTON_PRITCHARD_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "PAYTON_PRITCHARD_1_NBA",
+     "seen": [
+      [
+       3.5,
+       -114
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "assists",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       9.5,
+       -800
+      ],
+      [
+       14.5,
+       -185
+      ],
+      [
+       19.5,
+       185
+      ],
+      [
+       24.5,
+       550
+      ],
+      [
+       29.5,
+       1900
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAYTON_PRITCHARD_1_NBA",
+     "kind": "prop",
+     "line": 16.5,
+     "name": "Payton Pritchard Pts + Ast",
+     "oddID": "points+assists-PAYTON_PRITCHARD_1_NBA-game-ou-over",
+     "odds": -104,
+     "opposing": "points+assists-PAYTON_PRITCHARD_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "PAYTON_PRITCHARD_1_NBA",
+     "seen": [
+      [
+       9.5,
+       -800
+      ],
+      [
+       14.5,
+       -185
+      ],
+      [
+       16.5,
+       -104
+      ],
+      [
+       19.5,
+       185
+      ],
+      [
+       24.5,
+       550
+      ],
+      [
+       29.5,
+       1900
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+assists",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAYTON_PRITCHARD_1_NBA",
+     "kind": "prop",
+     "line": 16.5,
+     "name": "Payton Pritchard Pts + Ast",
+     "oddID": "points+assists-PAYTON_PRITCHARD_1_NBA-game-ou-under",
+     "odds": -128,
+     "opposing": "points+assists-PAYTON_PRITCHARD_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "PAYTON_PRITCHARD_1_NBA",
+     "seen": [
+      [
+       16.5,
+       -128
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+assists",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       14.5,
+       -370
+      ],
+      [
+       24.5,
+       280
+      ],
+      [
+       29.5,
+       750
+      ],
+      [
+       34.5,
+       1500
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAYTON_PRITCHARD_1_NBA",
+     "kind": "prop",
+     "line": 19.5,
+     "name": "Payton Pritchard Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-PAYTON_PRITCHARD_1_NBA-game-ou-over",
+     "odds": -110,
+     "opposing": "points+rebounds+assists-PAYTON_PRITCHARD_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "PAYTON_PRITCHARD_1_NBA",
+     "seen": [
+      [
+       14.5,
+       -370
+      ],
+      [
+       19.5,
+       -110
+      ],
+      [
+       24.5,
+       280
+      ],
+      [
+       29.5,
+       750
+      ],
+      [
+       34.5,
+       1500
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAYTON_PRITCHARD_1_NBA",
+     "kind": "prop",
+     "line": 19.5,
+     "name": "Payton Pritchard Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-PAYTON_PRITCHARD_1_NBA-game-ou-under",
+     "odds": -120,
+     "opposing": "points+rebounds+assists-PAYTON_PRITCHARD_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "PAYTON_PRITCHARD_1_NBA",
+     "seen": [
+      [
+       19.5,
+       -120
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+rebounds+assists",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       9.5,
+       -620
+      ],
+      [
+       14.5,
+       -146
+      ],
+      [
+       19.5,
+       235
+      ],
+      [
+       24.5,
+       630
+      ],
+      [
+       29.5,
+       1500
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAYTON_PRITCHARD_1_NBA",
+     "kind": "prop",
+     "line": 15.5,
+     "name": "Payton Pritchard Pts + Reb",
+     "oddID": "points+rebounds-PAYTON_PRITCHARD_1_NBA-game-ou-over",
+     "odds": -112,
+     "opposing": "points+rebounds-PAYTON_PRITCHARD_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "PAYTON_PRITCHARD_1_NBA",
+     "seen": [
+      [
+       9.5,
+       -620
+      ],
+      [
+       14.5,
+       -146
+      ],
+      [
+       15.5,
+       -112
+      ],
+      [
+       19.5,
+       235
+      ],
+      [
+       24.5,
+       630
+      ],
+      [
+       29.5,
+       1500
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "points+rebounds",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAYTON_PRITCHARD_1_NBA",
+     "kind": "prop",
+     "line": 15.5,
+     "name": "Payton Pritchard Pts + Reb",
+     "oddID": "points+rebounds-PAYTON_PRITCHARD_1_NBA-game-ou-under",
+     "odds": -118,
+     "opposing": "points+rebounds-PAYTON_PRITCHARD_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "PAYTON_PRITCHARD_1_NBA",
+     "seen": [
+      [
+       15.5,
+       -118
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "points+rebounds",
+     "team": "BOS"
+    },
+    {
+     "alts": [
+      [
+       4.5,
+       -430
+      ],
+      [
+       9.5,
+       390
+      ]
+     ],
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAYTON_PRITCHARD_1_NBA",
+     "kind": "prop",
+     "line": 6.5,
+     "name": "Payton Pritchard Reb + Ast",
+     "oddID": "rebounds+assists-PAYTON_PRITCHARD_1_NBA-game-ou-over",
+     "odds": -122,
+     "opposing": "rebounds+assists-PAYTON_PRITCHARD_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "PAYTON_PRITCHARD_1_NBA",
+     "seen": [
+      [
+       4.5,
+       -430
+      ],
+      [
+       6.5,
+       -122
+      ],
+      [
+       9.5,
+       390
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "over",
+     "stat": "rebounds+assists",
+     "team": "BOS"
+    },
+    {
+     "available": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PAYTON_PRITCHARD_1_NBA",
+     "kind": "prop",
+     "line": 6.5,
+     "name": "Payton Pritchard Reb + Ast",
+     "oddID": "rebounds+assists-PAYTON_PRITCHARD_1_NBA-game-ou-under",
+     "odds": -108,
+     "opposing": "rebounds+assists-PAYTON_PRITCHARD_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "PAYTON_PRITCHARD_1_NBA",
+     "seen": [
+      [
+       6.5,
+       -108
+      ]
+     ],
+     "seenSince": "2026-11-09T13:15:54Z",
+     "side": "under",
+     "stat": "rebounds+assists",
+     "team": "BOS"
+    }
+   ],
+   "pulledAt": "2026-11-09T13:15:54Z",
+   "start": "2026-11-11T01:00:00.000Z",
+   "started": false
+  },
+  "7w0hVzN6bzNLlUGDNbUl": {
+   "away": "MIA",
+   "awayColor": "#98002E",
+   "awayName": "Miami Heat",
+   "cancelled": false,
+   "date": "2026-11-10",
+   "display": "",
+   "ended": false,
+   "eventID": "7w0hVzN6bzNLlUGDNbUl",
+   "finalized": false,
+   "home": "UTA",
+   "homeColor": "#002B5C",
+   "homeName": "Utah Jazz",
+   "markets": [],
+   "pulledAt": "2026-11-09T13:15:54Z",
+   "start": "2026-11-11T02:00:00.000Z",
+   "started": false
+  },
+  "ePn0Tuu913UkHwcd3QEF": {
+   "away": "MIL",
+   "awayColor": "#00471B",
+   "awayName": "Milwaukee Bucks",
+   "cancelled": false,
+   "date": "2026-11-10",
+   "display": "",
+   "ended": false,
+   "eventID": "ePn0Tuu913UkHwcd3QEF",
+   "finalized": false,
+   "home": "NYK",
+   "homeColor": "#006BB6",
+   "homeName": "New York Knicks",
+   "markets": [],
+   "pulledAt": "2026-11-09T13:15:54Z",
+   "start": "2026-11-11T00:30:00.000Z",
+   "started": false
+  },
+  "ryPD009w9SO9z69hdfSU": {
+   "away": "OKC",
+   "awayColor": "#3479BC",
+   "awayName": "Oklahoma City Thunder",
+   "cancelled": false,
+   "date": "2026-11-10",
+   "display": "",
+   "ended": false,
+   "eventID": "ryPD009w9SO9z69hdfSU",
+   "finalized": false,
+   "home": "POR",
+   "homeColor": "#F0163A",
+   "homeName": "Portland Trail Blazers",
+   "markets": [],
+   "pulledAt": "2026-11-09T13:15:54Z",
+   "start": "2026-11-11T04:00:00.000Z",
+   "started": false
+  },
+  "ygIBOe4CUYEqwtmUrEu5": {
+   "away": "ORL",
+   "awayColor": "#007DC5",
+   "awayName": "Orlando Magic",
+   "cancelled": false,
+   "date": "2026-11-10",
+   "display": "",
+   "ended": false,
+   "eventID": "ygIBOe4CUYEqwtmUrEu5",
+   "finalized": false,
+   "home": "SAC",
+   "homeColor": "#724C9F",
+   "homeName": "Sacramento Kings",
+   "markets": [],
+   "pulledAt": "2026-11-09T13:15:54Z",
+   "start": "2026-11-11T03:00:00.000Z",
+   "started": false
+  },
+  "z5DXEUaP43flGYNaOMU4": {
+   "away": "LAC",
+   "awayColor": "#006BB6",
+   "awayName": "Los Angeles Clippers",
+   "cancelled": false,
+   "date": "2026-11-10",
+   "display": "",
+   "ended": false,
+   "eventID": "z5DXEUaP43flGYNaOMU4",
+   "finalized": false,
+   "home": "PHX",
+   "homeColor": "#E56020",
+   "homeName": "Phoenix Suns",
+   "markets": [],
+   "pulledAt": "2026-11-09T13:15:54Z",
+   "start": "2026-11-11T02:00:00.000Z",
+   "started": false
+  }
+ }
+}
