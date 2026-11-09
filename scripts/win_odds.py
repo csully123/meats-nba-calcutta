@@ -26,6 +26,10 @@ FOUL_OUT = 6
 HOLD = 0.045
 SEASON_END = date(2027, 6, 20)  # roughly the end of the NBA Finals
 SIMS = 4000
+try:
+    ADJUSTMENTS = json.loads((ROOT / "data" / "config.json").read_text()).get("adjustments") or []
+except Exception:  # noqa: BLE001
+    ADJUSTMENTS = []
 
 
 def dec(a):
@@ -41,9 +45,15 @@ def bankroll(player, wagers):
         tl.append((w.get("placedAt") or "", 0, w))
         if w.get("status") not in (None, "open") and w.get("settledAt"):
             tl.append((w["settledAt"], 1, w))
+    for a in ADJUSTMENTS:
+        if a.get("player") == player and a.get("at"):
+            tl.append((a["at"], 2, a))
     tl.sort(key=lambda x: (x[0], x[1]))
     stack, pending, busts = START, 0.0, 0
     for _, kind, w in tl:
+        if kind == 2:  # commissioner adjustment (a prize, a missed-minimum penalty)
+            stack += float(w.get("points") or 0)
+            continue
         s = float(w.get("stake") or 0)
         if kind == 0:
             stack -= s
