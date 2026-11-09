@@ -3461,9 +3461,9 @@
   "label": null,
   "multiplier": 1,
   "series": null,
-  "spreadHome": 1.5,
-  "spreadSource": "Draft Kings",
-  "spreadUpdated": "2026-11-09T11:47:10Z",
+  "spreadHome": -1.5,
+  "spreadSource": "DraftKings",
+  "spreadUpdated": "2026-11-09T14:11:01Z",
   "stage": "regular",
   "start": "2026-11-10T00:00:00Z",
   "status": "scheduled"
