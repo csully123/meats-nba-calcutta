@@ -1,0 +1,6 @@
+{
+  "about": "Commissioner point adjustments outside of bets: missed weekly minimums (written by scripts/weekly_minimum.py every Monday), regular-season prizes, anything else. Each is {id, player, points, at (ISO UTC, the moment it takes effect), note}. The page and the win-odds model both replay these.",
+  "adjustments": [
+    {"id": "min:Sulliver:2026-11-02", "player": "Sulliver", "points": -20, "at": "2026-11-09T04:59:00Z", "note": "Missed the 20-point weekly minimum, week of Nov 2"}
+  ]
+}

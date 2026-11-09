@@ -43,7 +43,7 @@
     timeline.sort((a,b)=>a.t<b.t?-1:a.t>b.t?1:(a.kind==='place'?-1:1));
     let wagered=0;const byWeek={};
     for(const ev of timeline){
-      if(ev.kind==='adjust'){stack+=Number(ev.a.points)||0;}
+      if(ev.kind==='adjust'){stack+=Number(ev.a.points)||0;if(stack<=0.005&&pending<=0.005){busts++;events.push({t:ev.t,bust:busts});stack=reload;}}
       else if(ev.kind==='place'){stack-=ev.w.stake;pending+=ev.w.stake;wagered+=ev.w.stake;const wk=E.weekKey(ev.w.placedAt);byWeek[wk]=(byWeek[wk]||0)+ev.w.stake;}
       else{pending-=ev.w.stake;const s=ev.w.settled;if(s.status==='win')stack+=ev.w.stake+s.net;else if(s.status==='push'||s.status==='void')stack+=ev.w.stake;
         if(stack<=0.005&&pending<=0.005){busts++;events.push({t:ev.t,bust:busts});stack=reload;}}

@@ -485,7 +485,7 @@ td.legs div{white-space:nowrap}
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
 <script src="../firebase-config.js"></script>
-<script src="engine.js?v=20261029a"></script>
+<script src="engine.js?v=20261109"></script>
 <script>
 (function(){
   const E=window.BookEngine;
@@ -499,10 +499,9 @@ td.legs div{white-space:nowrap}
     prizes:{first:null,firstMult:3,second:null,secondMult:2},
     // A one-time full-screen notice for one person (null when there is none). Shown once per phone, to that name only.
     notice:null,
-    // Point adjustments outside of bets: the regular-season winner's 25, missed weekly minimums, applied at the moment given.
-    adjustments:[
-      {player:'Sulliver',points:-20,at:'2026-11-09T04:59:00Z',note:'Missed the 20-point weekly minimum, week of Nov 2'},
-    ]};
+    // Point adjustments outside of bets (missed weekly minimums, the regular-season prize) are loaded from
+    // data/adjustments.json, which scripts/weekly_minimum.py writes every Monday.
+    adjustments:[]};
   const POOL_EMAIL='pool@meats-calcutta-picks.firebaseapp.com';
   const ET='America/New_York';
   const fmtDay=new Intl.DateTimeFormat('en-CA',{timeZone:ET,year:'numeric',month:'2-digit',day:'2-digit'});
@@ -546,6 +545,7 @@ td.legs div{white-space:nowrap}
     S.logos={};for(const x of Object.values(pg)){S.logos[x.date+'|'+x.away+'|'+x.home]={a:x.awayLogo,h:x.homeLogo,ac:x.awayColor,hc:x.homeColor,stage:x.stage||'regular',series:x.series||null};}
     S.actuals=await fetch('../data/leg-actuals.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));
     S.oddsHist=await fetch('../data/win-odds-history.json'+bust).then(r=>r.ok?r.json():null).catch(()=>null);
+    try{const adj=await fetch('../data/adjustments.json'+bust).then(r=>r.ok?r.json():null);if(adj&&Array.isArray(adj.adjustments))CFG.adjustments=adj.adjustments;}catch(e){}
     S.situations={};try{const sc=await fetch('../data/schedule-context.json'+bust).then(r=>r.ok?r.json():{});for(const [d,gs] of Object.entries(sc.days||{}))for(const x of Object.values(gs))S.situations[d+'|'+x.matchup]=x.notes||[];}catch(e){}
     const ins=await fetch('../data/book-insights.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));S.insights=ins.games||{};S.bestBets=ins.days||{};S.claudeResults=ins.results||{};S.profiles=ins.players||{};S.winOdds=ins.winOdds||null;
   }

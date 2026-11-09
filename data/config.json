@@ -7,13 +7,5 @@
   ],
   "seasonStart": "2026-10-20",
   "seasonEnd": "2027-04-12",
-  "playoffsEnd": "2027-06-30",
-  "adjustments": [
-    {
-      "player": "Sulliver",
-      "points": -20,
-      "at": "2026-11-09T04:59:00Z",
-      "note": "Missed the 20-point weekly minimum, week of Nov 2"
-    }
-  ]
+  "playoffsEnd": "2027-06-30"
 }

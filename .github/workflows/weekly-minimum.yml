@@ -1,0 +1,38 @@
+name: Weekly minimum
+
+on:
+  schedule:
+    - cron: "40 12 * * 1"   # Mondays 7:40 AM ET, after the overnight backup
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  minimum:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Penalize anyone who missed last week's 20-point minimum
+        run: python scripts/weekly_minimum.py
+      - name: Commit
+        run: |
+          git config user.name "calcutta-bot"
+          git config user.email "calcutta-bot@users.noreply.github.com"
+          git add data/adjustments.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Weekly minimum $(date -u +%Y-%m-%d)"
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push && break
+              echo "push attempt $i failed, retrying"; sleep $((i * 10))
+            done
+          fi
