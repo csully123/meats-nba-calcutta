@@ -1,6 +1,6 @@
 {
- "backedUpAt": "2026-11-09T09:09:39Z",
- "count": 38,
+ "backedUpAt": "2026-11-10T08:56:09Z",
+ "count": 41,
  "wagers": {
   "0DMEKNttNFZJhyWOJRg8": {
    "_updated": "2026-11-05T08:27:06.083944Z",
@@ -237,6 +237,86 @@
    "stage": "regular",
    "stake": 20,
    "status": "win"
+  },
+  "7dkdddQvMRrvuYUDEp8R": {
+   "_updated": "2026-11-10T08:25:15.860889Z",
+   "boost": {
+    "id": "week:2026-11-09",
+    "label": "1.5x weekly",
+    "mult": 1.5
+   },
+   "createdAt": "2026-11-09T17:12:18.019Z",
+   "eventID": "pQKPBuYJINPiRbTMEYCq",
+   "game": "IND at DAL",
+   "gameDate": "2026-11-09",
+   "gameStart": "2026-11-10T01:00:00.000Z",
+   "legResults": [
+    "loss",
+    "loss",
+    "loss"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "line": 230.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-under",
+     "odds": -205,
+     "opposing": "points-all-game-ou-over",
+     "period": "game",
+     "player": null,
+     "short": "Game Under 230.5 (alt)",
+     "side": "under",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "PASCAL_SIAKAM_1_NBA",
+     "line": 22.5,
+     "name": "Pascal Siakam Points",
+     "oddID": "points-PASCAL_SIAKAM_1_NBA-game-ou-under",
+     "odds": -200,
+     "opposing": "points-PASCAL_SIAKAM_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "PASCAL_SIAKAM_1_NBA",
+     "short": "Pascal Siakam Points Under 22.5 (alt)",
+     "side": "under",
+     "stat": "points",
+     "team": "IND"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "C_FLAGG_1_NBA",
+     "line": 29.5,
+     "name": "Cooper Flagg Points",
+     "oddID": "points-C_FLAGG_1_NBA-game-ou-under",
+     "odds": -200,
+     "opposing": "points-C_FLAGG_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "C_FLAGG_1_NBA",
+     "short": "Cooper Flagg Points Under 29.5 (alt)",
+     "side": "under",
+     "stat": "points",
+     "team": "DAL"
+    }
+   ],
+   "net": -5,
+   "payout": 0,
+   "placedAt": "2026-11-09T17:12:16.776Z",
+   "player": "Beekie",
+   "series": null,
+   "settledAt": "2026-11-10T08:25:15Z",
+   "stage": "regular",
+   "stake": 5,
+   "status": "loss"
   },
   "8KZOKT2nPpnGs0loUeAO": {
    "_updated": "2026-11-01T08:08:08.834450Z",
@@ -1174,6 +1254,68 @@
    "stake": 5,
    "status": "loss"
   },
+  "T4Iuu2UgfgZUbwgq7GzF": {
+   "_updated": "2026-11-10T08:25:15.989142Z",
+   "boost": {
+    "id": "week:2026-11-09",
+    "label": "1.5x weekly",
+    "mult": 1.5
+   },
+   "createdAt": "2026-11-09T22:12:11.969Z",
+   "eventID": "Nw3WlnQnITP4DwkbMw6K",
+   "game": "SAS at PHX",
+   "gameDate": "2026-11-09",
+   "gameStart": "2026-11-10T02:00:00.000Z",
+   "legResults": [
+    "win",
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": false,
+     "betType": "ml",
+     "book": "fanduel",
+     "entity": "away",
+     "line": null,
+     "name": "Moneyline",
+     "oddID": "points-away-game-ml-away",
+     "odds": -400,
+     "opposing": "points-home-game-ml-home",
+     "period": "game",
+     "player": null,
+     "short": "SAS ML",
+     "side": "away",
+     "stat": "points",
+     "team": "SAS"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "VICTOR_WEMBANYAMA_1_NBA",
+     "line": 34.5,
+     "name": "Victor Wembanyama Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-VICTOR_WEMBANYAMA_1_NBA-game-ou-over",
+     "odds": -440,
+     "opposing": "points+rebounds+assists-VICTOR_WEMBANYAMA_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "VICTOR_WEMBANYAMA_1_NBA",
+     "short": "Victor Wembanyama Pts + Reb + Ast Over 34.5 (alt)",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "SAS"
+    }
+   ],
+   "net": 32.04,
+   "payout": 82.04,
+   "placedAt": "2026-11-09T22:12:11.196Z",
+   "player": "Mio",
+   "series": null,
+   "settledAt": "2026-11-10T08:25:15Z",
+   "stage": "regular",
+   "stake": 50,
+   "status": "win"
+  },
   "U3TJHnVg7En3DN7BZgGL": {
    "_updated": "2026-10-30T00:15:22.243397Z",
    "boost": null,
@@ -1527,6 +1669,68 @@
    "settledAt": "2026-11-08T08:12:24Z",
    "stage": "regular",
    "stake": 28.63,
+   "status": "loss"
+  },
+  "a8IefjmX7Mh9mDQB6wtx": {
+   "_updated": "2026-11-10T08:25:16.114287Z",
+   "boost": {
+    "id": "week:2026-11-09",
+    "label": "1.5x weekly",
+    "mult": 1.5
+   },
+   "createdAt": "2026-11-09T17:00:39.672Z",
+   "eventID": "WLq3Bh6XYeJ6aZy3a8bd",
+   "game": "NOP at GSW",
+   "gameDate": "2026-11-09",
+   "gameStart": "2026-11-10T03:00:00.000Z",
+   "legResults": [
+    "loss",
+    "loss"
+   ],
+   "legs": [
+    {
+     "alt": false,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "STEPHEN_CURRY_1_NBA",
+     "line": 28.5,
+     "name": "Stephen Curry Points",
+     "oddID": "points-STEPHEN_CURRY_1_NBA-game-ou-over",
+     "odds": -112,
+     "opposing": "points-STEPHEN_CURRY_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "STEPHEN_CURRY_1_NBA",
+     "short": "Stephen Curry Points Over 28.5",
+     "side": "over",
+     "stat": "points",
+     "team": "GSW"
+    },
+    {
+     "alt": false,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "line": 231.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-over",
+     "odds": -112,
+     "opposing": "points-all-game-ou-under",
+     "period": "game",
+     "player": null,
+     "short": "Game Over 231.5",
+     "side": "over",
+     "stat": "points",
+     "team": ""
+    }
+   ],
+   "net": -27.77,
+   "payout": 0,
+   "placedAt": "2026-11-09T17:00:38.239Z",
+   "player": "Sulliver",
+   "series": null,
+   "settledAt": "2026-11-10T08:25:15Z",
+   "stage": "regular",
+   "stake": 27.77,
    "status": "loss"
   },
   "aD7l26HQx7yLdjZ3nRic": {
