@@ -9709,7 +9709,33 @@
    },
    "single": "loss"
   },
+  "2026-11-10": {
+   "parlay": "loss",
+   "personal": {
+    "Beekie": "loss",
+    "Kev": "loss",
+    "Mio": "loss",
+    "Sulliver": "loss"
+   },
+   "single": "win"
+  },
   "games": {
+   "0yQbsuQDcjAH3WzrI7zn": {
+    "parlay": {
+     "date": "2026-11-10",
+     "r": "loss",
+     "teams": [
+      "BOS"
+     ]
+    },
+    "single": {
+     "date": "2026-11-10",
+     "r": "win",
+     "teams": [
+      "BOS"
+     ]
+    }
+   },
    "15lO1kNolbn7vpAPOsEO": {
     "parlay": {
      "date": "2026-10-31",
@@ -9821,6 +9847,22 @@
      "r": "win",
      "teams": [
       "NYK"
+     ]
+    }
+   },
+   "7w0hVzN6bzNLlUGDNbUl": {
+    "parlay": {
+     "date": "2026-11-10",
+     "r": "loss",
+     "teams": [
+      "MIA"
+     ]
+    },
+    "single": {
+     "date": "2026-11-10",
+     "r": "loss",
+     "teams": [
+      "MIA"
      ]
     }
    },
@@ -10590,6 +10632,22 @@
      ]
     }
    },
+   "ePn0Tuu913UkHwcd3QEF": {
+    "parlay": {
+     "date": "2026-11-10",
+     "r": "win",
+     "teams": [
+      "NYK"
+     ]
+    },
+    "single": {
+     "date": "2026-11-10",
+     "r": "win",
+     "teams": [
+      "NYK"
+     ]
+    }
+   },
    "eYPZAppxaIOOGJo3sl95": {
     "parlay": {
      "date": "2026-10-30",
@@ -10843,6 +10901,22 @@
      ]
     }
    },
+   "ryPD009w9SO9z69hdfSU": {
+    "parlay": {
+     "date": "2026-11-10",
+     "r": "loss",
+     "teams": [
+      "OKC"
+     ]
+    },
+    "single": {
+     "date": "2026-11-10",
+     "r": "loss",
+     "teams": [
+      "OKC"
+     ]
+    }
+   },
    "s3A807sVDC97IVwGKvBl": {
     "parlay": {
      "date": "2026-11-06",
@@ -11026,6 +11100,38 @@
      "r": "loss",
      "teams": [
       "MEM"
+     ]
+    }
+   },
+   "ygIBOe4CUYEqwtmUrEu5": {
+    "parlay": {
+     "date": "2026-11-10",
+     "r": "loss",
+     "teams": [
+      "ORL"
+     ]
+    },
+    "single": {
+     "date": "2026-11-10",
+     "r": "loss",
+     "teams": [
+      "ORL"
+     ]
+    }
+   },
+   "z5DXEUaP43flGYNaOMU4": {
+    "parlay": {
+     "date": "2026-11-10",
+     "r": "loss",
+     "teams": [
+      "LAC"
+     ]
+    },
+    "single": {
+     "date": "2026-11-10",
+     "r": "loss",
+     "teams": [
+      "PHX"
      ]
     }
    },
