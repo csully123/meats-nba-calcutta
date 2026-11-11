@@ -1,6 +1,6 @@
 {
- "backedUpAt": "2026-11-10T08:56:09Z",
- "count": 41,
+ "backedUpAt": "2026-11-11T08:55:56Z",
+ "count": 44,
  "wagers": {
   "0DMEKNttNFZJhyWOJRg8": {
    "_updated": "2026-11-05T08:27:06.083944Z",
@@ -433,6 +433,82 @@
    "stage": "cup",
    "stake": 43.45,
    "status": "win"
+  },
+  "BfoHaZbpsXwVE7DF6YwR": {
+   "_updated": "2026-11-11T08:24:19.231468Z",
+   "boost": null,
+   "createdAt": "2026-11-10T18:26:35.201Z",
+   "eventID": "z5DXEUaP43flGYNaOMU4",
+   "game": "LAC at PHX",
+   "gameDate": "2026-11-10",
+   "gameStart": "2026-11-11T02:00:00.000Z",
+   "legResults": [
+    "loss",
+    "win",
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "line": 231.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-under",
+     "odds": -198,
+     "opposing": "points-all-game-ou-over",
+     "period": "game",
+     "player": null,
+     "short": "Game Under 231.5 (alt)",
+     "side": "under",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DARIUS_GARLAND_1_NBA",
+     "line": 25.5,
+     "name": "Darius Garland Points",
+     "oddID": "points-DARIUS_GARLAND_1_NBA-game-ou-under",
+     "odds": -220,
+     "opposing": "points-DARIUS_GARLAND_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "DARIUS_GARLAND_1_NBA",
+     "short": "Darius Garland Points Under 25.5 (alt)",
+     "side": "under",
+     "stat": "points",
+     "team": "LAC"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DEVIN_BOOKER_1_NBA",
+     "line": 29.5,
+     "name": "Devin Booker Points",
+     "oddID": "points-DEVIN_BOOKER_1_NBA-game-ou-under",
+     "odds": -200,
+     "opposing": "points-DEVIN_BOOKER_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "DEVIN_BOOKER_1_NBA",
+     "short": "Devin Booker Points Under 29.5 (alt)",
+     "side": "under",
+     "stat": "points",
+     "team": "PHX"
+    }
+   ],
+   "net": -5,
+   "payout": 0,
+   "placedAt": "2026-11-10T18:26:34.015Z",
+   "player": "Beekie",
+   "series": null,
+   "settledAt": "2026-11-11T08:24:18Z",
+   "stage": "regular",
+   "stake": 5,
+   "status": "loss"
   },
   "BpV7ZbpOumBhlLDdpFXt": {
    "_updated": "2026-11-03T08:25:31.700739Z",
@@ -977,6 +1053,64 @@
    "settledAt": "2026-10-29T08:12:10Z",
    "stage": "regular",
    "stake": 10,
+   "status": "win"
+  },
+  "NpIoN9aeXf9BmZPZfNBY": {
+   "_updated": "2026-11-11T08:24:19.388709Z",
+   "boost": null,
+   "createdAt": "2026-11-10T20:28:32.245Z",
+   "eventID": "0yQbsuQDcjAH3WzrI7zn",
+   "game": "BOS at PHI",
+   "gameDate": "2026-11-10",
+   "gameStart": "2026-11-11T01:00:00.000Z",
+   "legResults": [
+    "win",
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "away",
+     "line": 9.5,
+     "name": "Spread",
+     "oddID": "points-away-game-sp-away",
+     "odds": -385,
+     "opposing": "points-home-game-sp-home",
+     "period": "game",
+     "player": null,
+     "short": "BOS +9.5 (alt)",
+     "side": "away",
+     "stat": "points",
+     "team": "BOS"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "line": 231.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-under",
+     "odds": -400,
+     "opposing": "points-all-game-ou-over",
+     "period": "game",
+     "player": null,
+     "short": "Game Under 231.5 (alt)",
+     "side": "under",
+     "stat": "points",
+     "team": ""
+    }
+   ],
+   "net": 20,
+   "payout": 54.81,
+   "placedAt": "2026-11-10T20:28:32.178Z",
+   "player": "Mio",
+   "series": null,
+   "settledAt": "2026-11-11T08:24:18Z",
+   "stage": "regular",
+   "stake": 34.81,
    "status": "win"
   },
   "OLIClsFR6EMnvvg9Dra8": {
@@ -2354,6 +2488,50 @@
    "settledAt": "2026-10-31T07:59:22Z",
    "stage": "cup",
    "stake": 13.1,
+   "status": "win"
+  },
+  "rSK7zEoZgZzRy0osCHTx": {
+   "_updated": "2026-11-11T08:24:19.555354Z",
+   "boost": {
+    "id": "week:2026-11-09",
+    "label": "1.5x weekly",
+    "mult": 1.5
+   },
+   "createdAt": "2026-11-11T00:26:33.658Z",
+   "eventID": "0yQbsuQDcjAH3WzrI7zn",
+   "game": "BOS at PHI",
+   "gameDate": "2026-11-10",
+   "gameStart": "2026-11-11T01:00:00.000Z",
+   "legResults": [
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": false,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "away",
+     "line": -1.5,
+     "name": "Spread",
+     "oddID": "points-away-game-sp-away",
+     "odds": -112,
+     "opposing": "points-home-game-sp-home",
+     "period": "game",
+     "player": null,
+     "short": "BOS -1.5",
+     "side": "away",
+     "stat": "points",
+     "team": "BOS"
+    }
+   ],
+   "net": 53.81,
+   "payout": 104.08,
+   "placedAt": "2026-11-11T00:26:32.713Z",
+   "player": "Kev",
+   "series": null,
+   "settledAt": "2026-11-11T08:24:18Z",
+   "stage": "regular",
+   "stake": 50.27,
    "status": "win"
   },
   "u6hvTLHErrtaSes9gCHD": {
