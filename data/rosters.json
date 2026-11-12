@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T06:56:14.433365+00:00",
+ "updated": "2026-11-12T03:44:02.341772+00:00",
  "players": {
   "AJ Dybantsa": {
    "team": "WAS",
@@ -1380,6 +1380,10 @@
   "Marvin Bagley III": {
    "team": "DEN",
    "pos": "F"
+  },
+  "Mason Plumlee": {
+   "team": "SAC",
+   "pos": "C"
   },
   "Matas Buzelis": {
    "team": "CHI",
