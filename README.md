@@ -24,6 +24,8 @@ Regular-season prize (25 points and an extra 3x Finals token for first, an extra
 
 Commissioner point adjustments live in `data/adjustments.json`, which the page replays (and lists in the Bets tab as a "Commissioner" row) and `scripts/win_odds.py` replays. Each is `{id, player, points, at (ISO UTC, the moment it takes effect), note}`. `scripts/weekly_minimum.py` (`.github/workflows/weekly-minimum.yml`, Mondays 7:40 AM ET) checks the week that just ended and appends `min:<player>:<week>` penalties for anyone who wagered less than 20 points (or less than their whole stack when it was under 20); the regular-season prize is added by hand.
 
+`data/live.json` (`scripts/live.py`, `.github/workflows/live.yml`, every five minutes from 6 PM to 2 AM ET) holds the live score, period and clock and every player's stat line for the games in progress, keyed `<date>|<AWAY> at <HOME>`. The Bets tab draws a DraftKings-style progress bar under each over/under leg of an open bet (player props and totals): filled to the current number, a marker at the line, "needs 4 more" or "19.5 of room" underneath, green on track and red once an under is blown. The page re-reads the file every minute while an open bet's game is on.
+
 `data/win-odds-history.json` (`scripts/win_odds_history.py`) is the running history behind the "Who wins the Meats Sportsbook?" chart under the leaderboard: one point per night from the backup workflow (the same simulation as `scripts/win_odds.py`, run on that night's wagers), backfilled from the dated backups with `--backfill`. The page adds the morning write-up's number as the live point when it is newer.
 
 Two context files feed the morning write-ups and the page, refreshed by `.github/workflows/context.yml` at 7:50 AM ET (free, on GitHub):

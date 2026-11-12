@@ -229,6 +229,19 @@ td.legs .actual.pos{color:var(--win)}td.legs .actual.neg{color:var(--loss)}
 .cbet.best .recpill em{font-style:normal;font-family:var(--mono);font-size:9.5px;font-weight:700;opacity:.9;margin-top:1px;white-space:nowrap}
 .teamrec em{font-style:normal;color:var(--ink)}
 .cteamtbl .up{color:#3fcf8e}.cteamtbl .down{color:#ff6b6b}
+/* live progress on open bets (DraftKings style): a bar from 0 to past the number, filled to the current stat */
+.lv{margin:5px 0 7px;max-width:360px}
+.lvtrack{position:relative;height:8px;border-radius:999px;background:color-mix(in srgb,var(--line) 70%,transparent);overflow:visible}
+.lvfill{position:absolute;left:0;top:0;height:100%;border-radius:999px;background:linear-gradient(90deg,color-mix(in srgb,#3fcf8e 35%,transparent),#3fcf8e);transition:width .6s ease}
+.lv.bad .lvfill{background:linear-gradient(90deg,color-mix(in srgb,#ff6b6b 35%,transparent),#ff6b6b)}
+.lv.hit .lvfill{background:#3fcf8e}
+.lvmark{position:absolute;top:-4px;width:2px;height:16px;background:var(--muted);border-radius:1px}
+.lvcur{position:absolute;top:-9px;transform:translateX(-50%);min-width:30px;padding:2px 7px;border-radius:999px;border:2px solid #3fcf8e;background:#0b1118;color:#fff;font:700 11px var(--mono);line-height:1.2;text-align:center;white-space:nowrap}
+.lv.bad .lvcur{border-color:#ff6b6b}
+.lvlab{display:flex;justify-content:space-between;font:600 10px var(--mono);color:var(--muted);margin-top:8px}
+.lvgame{font:600 11px var(--mono);color:var(--muted);margin-top:4px}
+.lvgame b{color:var(--ink);font-weight:700}
+.lvgame .q{color:#f5b942;margin-right:6px}
 .cbet.best.loss .recpill{opacity:1}
 .cbet .add.go{border-color:var(--line);color:var(--ink)}
 .wtext{margin:0;font-size:14px}
@@ -545,6 +558,7 @@ td.legs div{white-space:nowrap}
     S.logos={};for(const x of Object.values(pg)){S.logos[x.date+'|'+x.away+'|'+x.home]={a:x.awayLogo,h:x.homeLogo,ac:x.awayColor,hc:x.homeColor,stage:x.stage||'regular',series:x.series||null};}
     S.actuals=await fetch('../data/leg-actuals.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));
     S.oddsHist=await fetch('../data/win-odds-history.json'+bust).then(r=>r.ok?r.json():null).catch(()=>null);
+    S.live=await fetch('../data/live.json'+bust).then(r=>r.ok?r.json():null).catch(()=>null)||S.live;
     try{const adj=await fetch('../data/adjustments.json'+bust).then(r=>r.ok?r.json():null);if(adj&&Array.isArray(adj.adjustments))CFG.adjustments=adj.adjustments;}catch(e){}
     S.situations={};try{const sc=await fetch('../data/schedule-context.json'+bust).then(r=>r.ok?r.json():{});for(const [d,gs] of Object.entries(sc.days||{}))for(const x of Object.values(gs))S.situations[d+'|'+x.matchup]=x.notes||[];}catch(e){}
     const ins=await fetch('../data/book-insights.json'+bust).then(r=>r.ok?r.json():{}).catch(()=>({}));S.insights=ins.games||{};S.bestBets=ins.days||{};S.claudeResults=ins.results||{};S.profiles=ins.players||{};S.winOdds=ins.winOdds||null;
@@ -817,6 +831,27 @@ td.legs div{white-space:nowrap}
     return `<div class="bread ${FLAGS[p]||''}"><span class="eyebrow">Claude's read on ${esc(p)}${r.settled?` <small>from ${esc(r.settled)} settled bet${r.settled===1?'':'s'}${stamp?', '+esc(stamp):''}</small>`:''}</span><p>${esc(r.text)}</p></div>`;}
 
   // ---------- bets ledger ----------
+  // ---------- live progress on open bets ----------
+  const LIVE_STAT={points:['pts'],rebounds:['reb'],assists:['ast'],threePointersMade:['threes'],steals:['stl'],blocks:['blk'],turnovers:['to'],
+    'points+rebounds+assists':['pts','reb','ast'],'points+rebounds':['pts','reb'],'points+assists':['pts','ast'],'rebounds+assists':['reb','ast'],'blocks+steals':['blk','stl']};
+  const STAT_TAIL=/ (Points|Pts|Rebounds|Reb|Assists|Ast|3-pointers|Threes|Steals|Stl|Blocks|Blk|Turnovers|Double-double|Triple-double|First basket|Over|Under)\b.*$/i;
+  function liveGame(w){if(!S.live||!S.live.games)return null;const g=S.games[w.eventID];const date=g?g.date:(w.gameDate||w.date||E.gameDate(w.placedAt));return S.live.games[date+'|'+(w.game||'')]||null;}
+  function liveValue(leg,lg){if(!lg||leg.period&&leg.period!=='game')return null;
+    if(leg.player){const want=normName(fixName(leg.short||'').replace(STAT_TAIL,''));let row=null;for(const [n,r] of Object.entries(lg.players||{}))if(normName(n)===want){row=r;break;}
+      if(!row)return null;const keys=LIVE_STAT[leg.stat||'points'];if(!keys)return null;return keys.reduce((a,k)=>a+(+row[k]||0),0);}
+    if(leg.betType==='ou'){return leg.entity==='home'?lg.homeScore:leg.entity==='away'?lg.awayScore:lg.homeScore+lg.awayScore;}
+    return null;}
+  function liveBar(leg,lg){const v=liveValue(leg,lg);if(v==null||leg.line==null||leg.betType!=='ou')return '';const line=+leg.line;const scale=Math.max(line*1.35,v*1.08,1);
+    const fillPct=Math.min(100,100*v/scale),markPct=Math.min(98,100*line/scale);const over=leg.side==='over';const reached=v>line;const done=lg.status==='final';
+    const cls=over?(reached?'hit':''):(reached?'bad':(done?'hit':''));const remain=over?(reached?'cleared':`needs ${fmtNum(line-v)} more`):(reached?`over by ${fmtNum(v-line)}`:`${fmtNum(line-v)} of room`);
+    return `<div class="lv ${cls}"><div class="lvtrack"><div class="lvfill" style="width:${fillPct.toFixed(1)}%"></div><div class="lvmark" style="left:${markPct.toFixed(1)}%"></div><span class="lvcur" style="left:${fillPct.toFixed(1)}%">${esc(fmtNum(v))}</span></div><div class="lvlab"><span>0</span><span>${esc(remain)}</span><span>${esc(fmtNum(line))}</span></div></div>`;}
+  const fmtNum=x=>{x=+x;return Number.isInteger(x)?String(x):x.toFixed(1).replace(/\.0$/,'');};
+  function liveGameLine(lg){if(!lg)return '';const q=lg.status==='final'?'Final':(lg.period>4?`OT${lg.period-4}`:`Q${lg.period||''}`)+(lg.clock?' '+lg.clock:'');
+    return `<div class="lvgame"><span class="q">${esc(q)}</span>${esc(lg.away)} <b>${lg.awayScore}</b>, ${esc(lg.home)} <b>${lg.homeScore}</b></div>`;}
+  // Poll the live file every minute while an open bet's game is on and the Bets tab is showing
+  async function pollLive(){if(document.hidden||S.tab!=='bets')return;const any=(S.wagers||[]).some(w=>w.status==='open'&&liveGame(w)&&liveGame(w).status!=='final');const t=S.liveAt||0;if(!any&&Date.now()-t<300000)return;
+    try{const r=await fetch('../data/live.json?t='+Date.now());if(r.ok){S.live=await r.json();S.liveAt=Date.now();renderBets();}}catch(e){}}
+  setInterval(pollLive,60000);
   function tableZoom(){if(S.tz==null){try{S.tz=parseFloat(localStorage.getItem('bk.tz'))||1;}catch(e){S.tz=1;}}return S.tz;}
   function setTableZoom(z,fit){S.tz=Math.max(0.45,Math.min(1.3,Math.round(z*100)/100));S.tzFit=!!fit;try{localStorage.setItem('bk.tz',String(S.tz));}catch(e){}$('betbody').style.setProperty('--tz',S.tz);const l=$('betfilters').querySelector('.sizer .lvl');if(l)l.textContent=Math.round(S.tz*100)+'%';const f=$('betfilters').querySelector('[data-tz="fit"]');if(f)f.setAttribute('aria-pressed',String(!!fit));}
   function fitTableZoom(){const wrap=$('betbody').querySelector('.tablewrap');const t=wrap&&wrap.querySelector('table');if(!t)return;const z=Math.min(1,wrap.clientWidth/640);setTableZoom(z,true);}
@@ -832,7 +867,8 @@ td.legs div{white-space:nowrap}
       if(w.adjust){out+=`<tr><td class="num">${esc(fmtShort.format(new Date(w.placedAt)))}</td><td>${esc(w.player)}</td><td>Commissioner</td><td class="legs"><div>${esc(w.note)}</div></td><td class="num"></td><td><span class="res push">adjust</span></td><td class="ptcell num ${w.net>0?'pos':w.net<0?'neg':'zero'}">${signed(w.net)}</td></tr>`;continue;}
       const g=S.games[w.eventID];const cc=canCancel(w)&&g&&!started(g);
       const dec=E.parlayDecimal(w.legs);const bm=(w.boost&&w.boost.mult)||1;
-      out+=`<tr><td class="num">${esc(fmtShort.format(new Date(w.placedAt)))}</td><td>${esc(w.player)}</td><td>${esc(w.game||'')}${w.stage&&STAGE_BADGE[w.stage]?`<div class="hint">${esc(STAGE_BADGE[w.stage])}</div>`:''}</td><td class="legs">${w.legs.map((l,i)=>{const a=((S.actuals||{})[w.id]||[])[i];return `<div>${esc(l.short)} <span class="hint num">${esc(E.fmtAmerican(l.odds))}</span>${w.legResults&&w.legResults[i]?` <span class="res ${esc(w.legResults[i])}" style="font-size:9px;padding:1px 5px">${esc(w.legResults[i])}</span>`:''}${a&&a.text?`<div class="actual num ${a.margin==null?'':a.margin>0?'pos':a.margin<0?'neg':''}">${esc(a.text)}</div>`:''}</div>`;}).join('')}${w.legs.length>1?`<div class="hint">Parlay ${esc(E.fmtAmerican(E.american(dec)))}</div>`:''}${w.boost?`<div><span class="boostbadge ${w.boost.id==='mega'?'mega':''}">${esc(w.boost.label||w.boost.mult+'x boost')}</span></div>`:''}</td>
+      const lg=w.status==='open'?liveGame(w):null;
+      out+=`<tr><td class="num">${esc(fmtShort.format(new Date(w.placedAt)))}</td><td>${esc(w.player)}</td><td>${esc(w.game||'')}${w.stage&&STAGE_BADGE[w.stage]?`<div class="hint">${esc(STAGE_BADGE[w.stage])}</div>`:''}${lg?liveGameLine(lg):''}</td><td class="legs">${w.legs.map((l,i)=>{const a=((S.actuals||{})[w.id]||[])[i];return `<div>${esc(l.short)} <span class="hint num">${esc(E.fmtAmerican(l.odds))}</span>${w.legResults&&w.legResults[i]?` <span class="res ${esc(w.legResults[i])}" style="font-size:9px;padding:1px 5px">${esc(w.legResults[i])}</span>`:''}${a&&a.text?`<div class="actual num ${a.margin==null?'':a.margin>0?'pos':a.margin<0?'neg':''}">${esc(a.text)}</div>`:''}${lg?liveBar(l,lg):''}</div>`;}).join('')}${w.legs.length>1?`<div class="hint">Parlay ${esc(E.fmtAmerican(E.american(dec)))}</div>`:''}${w.boost?`<div><span class="boostbadge ${w.boost.id==='mega'?'mega':''}">${esc(w.boost.label||w.boost.mult+'x boost')}</span></div>`:''}</td>
         <td class="num">${fmtPts(w.stake)}</td><td><span class="res ${esc(w.status)}">${esc(w.status)}</span>${cc?` <button class="signout" data-cancel="${esc(w.id)}">cancel</button>`:''}</td><td class="ptcell num ${w.status==='open'?'zero':(w.net>0?'pos':w.net<0?'neg':'zero')}">${w.status==='open'?`to win ${fmtPts(E.boostedProfit(w.stake,w.legs,bm))}`:signed(w.net||0)}</td></tr>`;}
     $('betbody').innerHTML=`<div class="tablewrap"><table><thead><tr><th>Placed</th><th>Who</th><th>Game</th><th>Bet</th><th>Stake</th><th>Result</th><th style="text-align:right">Net</th></tr></thead><tbody>${out}</tbody></table></div>`;
     $('betbody').querySelectorAll('[data-cancel]').forEach(b=>b.addEventListener('click',()=>cancelBet(b.dataset.cancel)));
