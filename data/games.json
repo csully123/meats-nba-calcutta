@@ -3772,13 +3772,13 @@
   "awayColor": "e31837",
   "awayLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png",
   "awayName": "Washington Wizards",
-  "awayScore": null,
+  "awayScore": 5,
   "date": "2026-11-11",
   "home": "IND",
   "homeColor": "0c2340",
   "homeLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
   "homeName": "Indiana Pacers",
-  "homeScore": null,
+  "homeScore": 4,
   "id": "401909966",
   "label": null,
   "multiplier": 1,
@@ -3788,7 +3788,7 @@
   "spreadUpdated": "2026-11-11T21:24:47Z",
   "stage": "regular",
   "start": "2026-11-12T00:00:00Z",
-  "status": "scheduled"
+  "status": "inprogress"
  },
  "401909967": {
   "away": "CLE",
@@ -3875,9 +3875,9 @@
   "label": null,
   "multiplier": 1,
   "series": null,
-  "spreadHome": 4.5,
+  "spreadHome": 3.5,
   "spreadSource": "ESPN",
-  "spreadUpdated": "2026-11-11T21:24:47Z",
+  "spreadUpdated": "2026-11-12T00:13:20Z",
   "stage": "regular",
   "start": "2026-11-12T01:00:00Z",
   "status": "scheduled"
@@ -3898,9 +3898,9 @@
   "label": null,
   "multiplier": 1,
   "series": null,
-  "spreadHome": 14.5,
+  "spreadHome": 15.5,
   "spreadSource": "ESPN",
-  "spreadUpdated": "2026-11-11T15:41:08Z",
+  "spreadUpdated": "2026-11-12T00:13:20Z",
   "stage": "regular",
   "start": "2026-11-12T01:00:00Z",
   "status": "scheduled"
