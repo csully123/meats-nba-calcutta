@@ -1,0 +1,38 @@
+name: Live scores and stat lines
+
+on:
+  schedule:
+    - cron: "*/5 23 * * *"     # 6 PM to 7 PM ET
+    - cron: "*/5 0-6 * * *"    # 7 PM to 2 AM ET
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: live-data
+  cancel-in-progress: true
+
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/live.py
+      - name: Commit
+        run: |
+          git config user.name "calcutta-bot"
+          git config user.email "calcutta-bot@users.noreply.github.com"
+          git add data/live.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Live $(date -u +%H:%M)"
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push && break
+              echo "push attempt $i failed, retrying"; sleep $((i * 10))
+            done
+          fi
