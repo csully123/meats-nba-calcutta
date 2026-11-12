@@ -1421,6 +1421,104 @@
     "updated": "2026-11-11T13:48:47Z",
     "why": "Golden State has the league's best offense at 122.3 per 100 and best three-point percentage at 41.7%, and its 12.3 net rating is nearly four points better than Houston's 8.5, yet it is getting 6.5. The Rockets are without Adams, Capela and Tshiebwe, so their usual edge on the glass is gone, and they play at the 27th-ranked pace, which keeps margins tight. The market is pricing Houston's home record, not the matchup."
    }
+  },
+  "2026-11-12": {
+   "parlay": {
+    "eventID": "GooCbrgiRHcJUdKfs4Ds",
+    "legs": [
+     {
+      "label": "Maxey over 24.5 points",
+      "line": 24.5,
+      "oddID": "points-TYRESE_MAXEY_1_NBA-game-ou-over",
+      "odds": -102
+     },
+     {
+      "label": "Raptors under 105.5 points",
+      "line": 105.5,
+      "oddID": "points-away-game-ou-under",
+      "odds": -110
+     }
+    ],
+    "price": 278,
+    "updated": "2026-11-12T13:51:05Z",
+    "why": "Toronto plays on a back-to-back after landing around 1 am, without Kawhi Leonard or Scottie Barnes, after scoring 93 last night. Its defense ranks 28th in opponent eFG and 27th in opponent three-point percentage, which is ideal for Maxey at 26.0 points per game. With Embiid and LeBron both questionable, Philly's offense runs through him even more. The script is Maxey scoring freely while the Raptors' offense never finds its legs."
+   },
+   "personal": {
+    "Beekie": {
+     "eventID": "qYQYMC2IlSMiW7lPrCTz",
+     "legs": [
+      {
+       "label": "Booker over 24.5 points",
+       "line": 24.5,
+       "oddID": "points-DEVIN_BOOKER_1_NBA-game-ou-over",
+       "odds": -112
+      },
+      {
+       "label": "Naz Reid over 20.5 points",
+       "line": 20.5,
+       "oddID": "points-NAZ_REID_1_NBA-game-ou-over",
+       "odds": 100
+      }
+     ],
+     "price": 279,
+     "why": "Points props are your game, and Booker is your most-bet player, but your three-leg tickets at +300 or longer are 0-8. Try two legs. Booker draws a Charlotte defense ranked 30th against the three, and Reid is the Hornets' focal point with Miller, Knueppel and Schroder out; he scored 25 and 28 in two of his last three games."
+    },
+    "Kev": {
+     "eventID": "zYWeeTgz33wFbjbXdlsm",
+     "legs": [
+      {
+       "label": "Pistons -9.5 (alt)",
+       "line": -9.5,
+       "oddID": "points-away-game-sp-away",
+       "odds": -120
+      }
+     ],
+     "price": -120,
+     "why": "You are 5-2 on spreads, mostly backing road sides, and every alt you have taken bought a safer number. Detroit fits that mold: the league's best defense by opponent eFG on two days rest, against a Washington team on a back-to-back after landing around 1:20 am. Buying the point to -9.5 keeps you in your near-even price range."
+    },
+    "Mio": {
+     "eventID": "GooCbrgiRHcJUdKfs4Ds",
+     "legs": [
+      {
+       "label": "Maxey over 34.5 pts+reb+ast",
+       "line": 34.5,
+       "oddID": "points+rebounds+assists-TYRESE_MAXEY_1_NBA-game-ou-over",
+       "odds": -106
+      },
+      {
+       "label": "76ers -3.5 (alt)",
+       "line": -3.5,
+       "oddID": "points-home-game-sp-home",
+       "odds": -275
+      }
+     ],
+     "price": 165,
+     "why": "This is your recipe: a PRA over paired with a spread bought way down, which has gone 29-2 for you on alt legs. Maxey gets a tired Toronto defense that is 28th in opponent eFG, and his share grows if Embiid or LeBron sits. Moving Philly to -3.5 makes the second leg a backstop for a bounce-back game after the Boston loss."
+    },
+    "Sulliver": {
+     "eventID": "GooCbrgiRHcJUdKfs4Ds",
+     "legs": [
+      {
+       "label": "Jaylen Brown over 22.5 points",
+       "line": 22.5,
+       "oddID": "points-JAYLEN_BROWN_1_NBA-game-ou-over",
+       "odds": 100
+      }
+     ],
+     "price": 100,
+     "why": "Points overs are your thing, so keep it to one clean single instead of a long ticket, since your parlays and boosted longshots have not landed yet. Brown averages 21.8 points and gets a Raptors defense that is 28th in opponent eFG and on a back-to-back. If Embiid or LeBron sits, his shots go up."
+    }
+   },
+   "single": {
+    "eventID": "zYWeeTgz33wFbjbXdlsm",
+    "label": "Wizards under 105.5 points",
+    "line": 105.5,
+    "oddID": "points-home-game-ou-under",
+    "odds": -110,
+    "team": "",
+    "updated": "2026-11-12T13:51:05Z",
+    "why": "Washington is the most tired team on the board: a back-to-back after landing around 1:20 am, its third game in four nights and fourth in six, and the first game home after a four-game trip. It ranks 28th in offensive rating and posted a 97.0 rating over its last three. Detroit leads the league in opponent eFG at 49.1% and has had two days off. The market priced the spread, but 105.5 still credits the Wizards with an average night."
+   }
   }
  },
  "games": {
@@ -3562,6 +3660,87 @@
     "why": "Memphis is 4-0, plays at the 28th-ranked pace and holds opponents to the 3rd-lowest eFG%, the kind of team that shrinks a game. It also has two days of rest to Portland's one, while 85% of spread tickets sit on the Blazers. Seven and a half is too many against a slow, rested defense."
    },
    "updated": "2026-10-29T15:27:50Z"
+  },
+  "GooCbrgiRHcJUdKfs4Ds": {
+   "angles": [
+    "TOR back-to-back, landed about 1 am",
+    "TOR 3rd game in 4 nights",
+    "TOR 28th in opponent eFG",
+    "Embiid, LeBron questionable, Maxey usage up",
+    "Kawhi and Barnes out for TOR"
+   ],
+   "away": "TOR",
+   "blurb": "Philadelphia is 9-3 but got blown out 123-101 by Boston on Tuesday, while Toronto (5-6) lost 98-93 to the Celtics at home last night. The Raptors are on a back-to-back, landing around 1 am for their third game in four nights, and they are 28th in opponent eFG at 57.4%. Philly sits 10th in defensive rating, and the hosts get a bounce-back spot per Liberty Line. The 9.5-point spread and 220.5 total price in a tired visitor, and the lean is Toronto's offense struggling again.",
+   "date": "2026-11-12",
+   "home": "PHI",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "Knee trouble has kept him out eight straight games, so Toronto lacks its top wing scorer.",
+     "player": "Kawhi Leonard",
+     "stats": "16 pts, 9 reb in his one game",
+     "status": "Out",
+     "team": "TOR"
+    },
+    {
+     "impact": "High",
+     "note": "A groin strain has cost him three games, which takes away their best defender and playmaker.",
+     "player": "Scottie Barnes",
+     "stats": "23.6 pts, 7.9 reb, 5.1 ast this season",
+     "status": "Out",
+     "team": "TOR"
+    },
+    {
+     "impact": "High",
+     "note": "He is managing a right foot issue, and without him Philly is thin up front and on the glass.",
+     "player": "Joel Embiid",
+     "stats": "17.5 pts, 9.4 reb this season",
+     "status": "Questionable",
+     "team": "PHI"
+    },
+    {
+     "impact": "High",
+     "note": "Low back management; Philly would lose a secondary creator and Maxey would carry more of the offense.",
+     "player": "LeBron James",
+     "stats": "15.0 pts, 6.6 reb, 6.6 ast this season",
+     "status": "Questionable",
+     "team": "PHI"
+    },
+    {
+     "impact": "Low",
+     "note": "A back injury removes a backup big, so frontcourt depth gets thinner if Embiid sits.",
+     "player": "Adem Bona",
+     "status": "Out",
+     "team": "PHI"
+    }
+   ],
+   "parlay": {
+    "legs": [
+     {
+      "label": "Maxey over 24.5 points",
+      "line": 24.5,
+      "oddID": "points-TYRESE_MAXEY_1_NBA-game-ou-over",
+      "odds": -102
+     },
+     {
+      "label": "Raptors under 105.5 points",
+      "line": 105.5,
+      "oddID": "points-away-game-ou-under",
+      "odds": -110
+     }
+    ],
+    "price": 278,
+    "why": "The script is Maxey feasting on a leaky, tired defense while Toronto's short-handed offense stalls on a second night. The Raptors scored 93 last night without Kawhi and Barnes and posted a 111.5 offensive rating over their last three, so their team total of 105.5 is a reach."
+   },
+   "single": {
+    "label": "Maxey over 24.5 points",
+    "line": 24.5,
+    "oddID": "points-TYRESE_MAXEY_1_NBA-game-ou-over",
+    "odds": -102,
+    "team": "PHI",
+    "why": "Toronto ranks 28th in opponent eFG (57.4%) and 27th defending threes, and it is on a back-to-back after landing around 1 am. Maxey is at 26.0 points a night, and with Embiid and LeBron both questionable the shots only climb."
+   },
+   "updated": "2026-11-12T13:51:05Z"
   },
   "Gq5hByHX86Hl7YCF4bAo": {
    "angles": [
@@ -8995,6 +9174,164 @@
    },
    "updated": "2026-11-08T13:52:45Z"
   },
+  "qYQYMC2IlSMiW7lPrCTz": {
+   "angles": [
+    "Allen, O'Neale face former team",
+    "CHA 30th defending the three",
+    "PHX 4th game in 6 nights",
+    "CHA missing Miller, Knueppel, Schroder",
+    "CHA 29th in pace"
+   ],
+   "away": "CHA",
+   "blurb": "Phoenix (4-6) shot its way past the Clippers 133-110 on Tuesday, making 22 threes. Charlotte (4-7) beat Cleveland 124-112 on Monday after a 119-80 loss to Boston. The Hornets are 30th in offensive rating and 30th in opponent three-point percentage (40.9%), while Phoenix shoots 39.5% from deep, 2nd best. Grayson Allen and Royce O'Neale face the team that traded them, per 92.1 The Ticket. Phoenix is playing its fourth game in six nights. The 6.5-point spread respects that, and the matchup leans Phoenix's shooters.",
+   "date": "2026-11-12",
+   "home": "PHX",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "A right hip strain costs Charlotte its top scorer, with Sion James starting.",
+     "player": "Brandon Miller",
+     "stats": "20.9 pts this season",
+     "status": "Out",
+     "team": "CHA"
+    },
+    {
+     "impact": "High",
+     "note": "He re-strained his hamstring and will be re-evaluated in four weeks, so Charlotte loses a starting wing shooter.",
+     "player": "Kon Knueppel",
+     "status": "Out",
+     "team": "CHA"
+    },
+    {
+     "impact": "Medium",
+     "note": "A hamstring strain costs Charlotte its backup point guard.",
+     "player": "Dennis Schroder",
+     "stats": "9.1 pts, 4.6 ast this season",
+     "status": "Out",
+     "team": "CHA"
+    },
+    {
+     "impact": "Medium",
+     "note": "He is managing a quad issue but should anchor the glass.",
+     "player": "Moussa Diabate",
+     "stats": "9.2 reb this season",
+     "status": "Probable",
+     "team": "CHA"
+    },
+    {
+     "impact": "Low",
+     "note": "A hamstring strain has him on the report, but he is expected to play.",
+     "player": "Grant Williams",
+     "status": "Probable",
+     "team": "CHA"
+    },
+    {
+     "impact": "Medium",
+     "note": "Shoulder surgery leaves Phoenix thin at center.",
+     "player": "Mark Williams",
+     "status": "Out",
+     "team": "PHX"
+    }
+   ],
+   "parlay": {
+    "legs": [
+     {
+      "label": "Allen over 3.5 threes",
+      "line": 3.5,
+      "oddID": "threePointersMade-GRAYSON_ALLEN_1_NBA-game-ou-over",
+      "odds": 108
+     },
+     {
+      "label": "Booker over 24.5 points",
+      "line": 24.5,
+      "oddID": "points-DEVIN_BOOKER_1_NBA-game-ou-over",
+      "odds": -112
+     }
+    ],
+    "price": 294,
+    "why": "Both defenses leak threes (Charlotte 30th, Phoenix 22nd), so the script is a shooting night for the guards. Booker averages 25.3 points and scored 32 two games ago, while Allen has extra motivation and Charlotte's injuries funnel the shots to him."
+   },
+   "single": {
+    "label": "Allen over 3.5 threes",
+    "line": 3.5,
+    "oddID": "threePointersMade-GRAYSON_ALLEN_1_NBA-game-ou-over",
+    "odds": 108,
+    "team": "CHA",
+    "why": "This is Allen's first game against Phoenix since the offseason trade, and he is hitting 3.3 threes a game for a Charlotte team that ranks 2nd in three-point rate. With Miller, Knueppel and Schroder out, the shots go to him; he hit five and six in two of his last three games."
+   },
+   "updated": "2026-11-12T13:51:05Z"
+  },
+  "qyRGv34UwQKC6G1Kax86": {
+   "angles": [
+    "MIN 3 days rest, 4-game win streak",
+    "Both top-5 defensive rating, lean under",
+    "DAL 1st in opponent 3P%",
+    "Flagg 43 points in last game",
+    "Edwards out, Ball and Dosunmu carry MIN"
+   ],
+   "away": "DAL",
+   "blurb": "Minnesota (8-3) has won four straight, the last a 115-100 win over Utah, and has gone five of six without Anthony Edwards. Dallas (7-4) has won three straight behind Cooper Flagg, who scored 43 in Monday's 125-122 win over Indiana. Per Yahoo, the Mavs have not beaten Minnesota since the Luka days. The Wolves have three days of rest and the league's 4th-best net rating (+9.6), and both defenses rank top five. The 5.5-point spread is fair, and the factors lean to the under.",
+   "date": "2026-11-12",
+   "home": "MIN",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "He is recovering from knee surgery, so Minnesota is without its best scorer.",
+     "player": "Anthony Edwards",
+     "stats": "29.3 pts in 3 games",
+     "status": "Out",
+     "team": "MIN"
+    },
+    {
+     "impact": "Medium",
+     "note": "An Achilles injury costs Minnesota a rotation guard.",
+     "player": "Donte DiVincenzo",
+     "status": "Out",
+     "team": "MIN"
+    },
+    {
+     "impact": "Medium",
+     "note": "A foot injury costs Dallas its rim-protecting center.",
+     "player": "Dereck Lively II",
+     "status": "Out",
+     "team": "DAL"
+    },
+    {
+     "impact": "Low",
+     "note": "Shin issue; he should play.",
+     "player": "Morez Johnson Jr.",
+     "status": "Probable",
+     "team": "DAL"
+    }
+   ],
+   "parlay": {
+    "legs": [
+     {
+      "label": "Under 226.5",
+      "line": 226.5,
+      "oddID": "points-all-game-ou-under",
+      "odds": -110
+     },
+     {
+      "label": "Gobert over 11.5 rebounds",
+      "line": 11.5,
+      "oddID": "rebounds-RUDY_GOBERT_1_NBA-game-ou-over",
+      "odds": 118
+     }
+    ],
+    "price": 316,
+    "why": "Two top-five defenses grind it out, and a lower-scoring game leaves more misses for Gobert. He averages 11.7 rebounds and grabbed 11, 11 and 15 in his last three, and with Lively out Dallas has less size to keep him off the glass."
+   },
+   "single": {
+    "label": "Under 226.5",
+    "line": 226.5,
+    "oddID": "points-all-game-ou-under",
+    "odds": -110,
+    "team": "",
+    "why": "Both defenses are top five in defensive rating (Minnesota 3rd, Dallas 5th) and top five at defending the three (Dallas 1st, Minnesota 5th). Both teams average 223.9 total points, so 226.5 is priced off the hot offenses, not the defenses."
+   },
+   "updated": "2026-11-12T13:51:05Z"
+  },
   "rjxbD1V9ROfL3lFcGdte": {
    "angles": [
     "Curry and Green resting, front of a back-to-back",
@@ -10439,28 +10776,98 @@
     "why": "Maxey has at least 26 in every game, per SI, is averaging 29.1 and scored 29 in the first meeting against this same defense. With Duren out, Detroit has less at the rim, and this number sits below every game he has played."
    },
    "updated": "2026-11-04T13:52:29Z"
+  },
+  "zYWeeTgz33wFbjbXdlsm": {
+   "angles": [
+    "WAS back-to-back, landed about 1:20 am",
+    "WAS 4th game in 6 nights",
+    "DET 1st in opponent eFG",
+    "WAS 28th in offensive rating",
+    "AD scored 44 in Monday's meeting"
+   ],
+   "away": "DET",
+   "blurb": "Detroit (7-3) beat these Wizards 122-111 on Monday and has had two days off since. Washington (4-8) lost its fifth straight at Indiana last night, 114-101, then landed in DC around 1:20 am for its third game in four nights and fourth in six. Detroit leads the league in opponent eFG at 49.1%, and the Wizards are 28th in offensive rating. Anthony Davis dropped 44 in the last meeting, per TheSpread, but the 10.5-point spread and 220.5 total both point to a tired offense, and the lean is Detroit and the under.",
+   "date": "2026-11-12",
+   "home": "WAS",
+   "injuries": [
+    {
+     "impact": "High",
+     "note": "A hamstring strain has limited him to two games, so Detroit is without its starting center and lob threat.",
+     "player": "Jalen Duren",
+     "status": "Out",
+     "team": "DET"
+    },
+    {
+     "impact": "Medium",
+     "note": "A hip injury costs Detroit a bench shooter.",
+     "player": "Isaiah Joe",
+     "status": "Out",
+     "team": "DET"
+    },
+    {
+     "impact": "Low",
+     "note": "A hip injury takes away frontcourt depth.",
+     "player": "Tristan Vukcevic",
+     "status": "Out",
+     "team": "WAS"
+    },
+    {
+     "impact": "Low",
+     "note": "Shoulder injury; Washington loses some guard depth.",
+     "player": "Reece Beekman",
+     "status": "Out",
+     "team": "WAS"
+    }
+   ],
+   "parlay": {
+    "legs": [
+     {
+      "label": "Pistons -10.5",
+      "line": -10.5,
+      "oddID": "points-away-game-sp-away",
+      "odds": -105
+     },
+     {
+      "label": "Under 220.5",
+      "line": 220.5,
+      "oddID": "points-all-game-ou-under",
+      "odds": -106
+     }
+    ],
+    "price": 279,
+    "why": "Detroit's top defense smothers a Washington team on fumes, so the Pistons pull away while the score stays low. Both teams play below-average pace, and the Wizards are 30th in three-point shooting, so a lopsided 112-98 type game cashes both legs."
+   },
+   "single": {
+    "label": "Wizards under 105.5 points",
+    "line": 105.5,
+    "oddID": "points-home-game-ou-under",
+    "odds": -110,
+    "team": "",
+    "why": "Washington ranks 28th in offensive rating and fell to a 97.0 rating over its last three, scoring 75, 111 and 101. Now it plays on a back-to-back after landing around 1:20 am, its fourth game in six nights, against the league's top defense by opponent eFG."
+   },
+   "updated": "2026-11-12T13:51:05Z"
   }
  },
  "players": {
   "Beekie": {
-   "settled": 10,
-   "text": "Beekie swings for the fences: all ten bets are parlays, averaging three legs, eight of them priced at +301 or longer, all on a flat 5 stake. The legs are points props (5-15, split evenly between overs and unders, mostly guards like Booker and Siakam) plus game totals, which are 1-9 and the biggest drag. Six legs were bought to safer alt numbers, 2-4. All three boosts went on parlays averaging +491 and lost. At 0-10 with legs hitting 25%, the third leg is the killer. A long-shot parlay builder still waiting on the first hit.",
-   "updated": "2026-11-11T13:48:47Z"
+   "settled": 11,
+   "text": "Beekie is all parlays, all the time: 11 settled tickets, every one about three legs, and only one has cashed (1-10). Her legs are points props (7-15) and totals (2-9), with guards the favorite target and Booker and Siakam her most-bet names. The +300-or-longer tickets are 0-8, while the underdog-range ones went 1-2. She keeps stakes small (about $6) and put all four boosts on parlays (1-3), though one big hit still has her bankroll ahead. What has not worked is the third leg; her alt legs, all bought safer, went 5-4. Read: a longshot points-prop builder who would do better with two legs.",
+   "updated": "2026-11-12T13:51:20Z"
   },
   "Kev": {
    "settled": 9,
-   "text": "Kev is a spread bettor who likes to buy a safer number: seven of his eleven legs are spreads, he wins them at 5-2, and all four of his alternate-line legs moved the line his way, going 3-1. He leans on the road side (seven of eight sides away) and mostly near even money, where he is 5-3. Stakes average about 29, he spends his boosts on sides (2-1), and he copied my pick once. Props (2-1, all overs) are a light side dish. It is working, 6-3 and up about 55. A grinder who buys safety.",
-   "updated": "2026-11-11T13:48:47Z"
+   "text": "Kev is a spread bettor who likes to buy safety. Seven of his nine settled bets are singles (5-2), and spreads make up most of his legs at 5-2, mostly on road teams (7 of 8 sides away). All four of his alt legs bought a safer number and went 3-1, keeping nearly everything in the near-even band (5-3). Favorites are 4-1, and his three weekly boosts went on sides and went 2-1. He sizes up to about $58 and usually bets about six hours before tip, and he is up about $55. Read: a disciplined road-spread grinder who buys a point.",
+   "updated": "2026-11-12T13:51:20Z"
   },
   "Mio": {
-   "settled": 17,
-   "text": "Mio is the ladder king: 91% of his legs are alternate lines bought to safer numbers, and they are 27-2. Almost everything is a two-leg parlay (14-2), usually a combo-stat over like points, rebounds and assists on stars such as Brunson, Boozer, Wembanyama and Murray, paired with a spread, total or moneyline. Spreads are 8-0, totals 5-0, props 13-2, all overs. Prices sit in the favorite band, where he is 10-1, stakes average about 26, and all three boosts went on parlays and won. Up about 226 at 15-2. A ladder-down parlay grinder.",
-   "updated": "2026-11-11T13:48:47Z"
+   "settled": 18,
+   "text": "Mio is the most consistent bettor here, at 16-2 on mostly two-leg parlays whose legs hit 31 of 33. The trademark is alt lines: 91% of legs move to a safer number, and those went 29-2. The usual pairing is a player combo over (12 PRA-type legs, all overs) with a spread or total bought down; spreads are 9-0 and totals 5-0. Most tickets land in the -131 to -199 band (11-1), boosts are 4-0 on parlays, and stakes run around $26. Boozer, Brunson and Wemby show up most. Read: a safety-first ladder builder printing short favorites.",
+   "updated": "2026-11-12T13:51:20Z"
   },
   "Sulliver": {
    "settled": 8,
-   "text": "Sulliver's defining trait is trust in my picks: five of his eight settled bets copied my pick of the day exactly. On his own he leans on star scoring overs, with all eight prop legs overs, going 2-6, including two on Shai Gilgeous-Alexander. Singles are 1-4 and parlays 0-3, and the long shots (+131 and up) are 0-4, with both boosts on parlays at an average of +403 and both lost. Alternate-line legs are 0-3. Stakes average about 15. Down about 97 at 1-7. A follower still finding his own lane.",
-   "updated": "2026-11-11T13:48:47Z"
+   "text": "Sulliver has followed Claude's pick of the day on 5 of 8 settled bets, and it has not paid: 1-7 and down about $97. The rest of his card is player overs, mostly points (props 2-6), plus a few spreads (1-2). Singles are 1-4, parlays 0-3, and both boosted longshots near +400 missed. He mixes prices from near even to long shots, uses alts only now and then (0-3), and bets early, about nine hours before tip. Shai is the only repeat name. Read: no settled pattern of his own yet, a points-over fan who should keep it to clean singles.",
+   "updated": "2026-11-12T13:51:20Z"
   }
  },
  "results": {
@@ -12198,11 +12605,11 @@
  },
  "winOdds": {
   "odds": {
-   "Beekie": 31,
-   "Kev": 31,
-   "Mio": 15,
-   "Sulliver": 23
+   "Beekie": 46,
+   "Kev": 25,
+   "Mio": 11,
+   "Sulliver": 18
   },
-  "updated": "2026-11-11T13:48:47Z"
+  "updated": "2026-11-12T13:51:20Z"
  }
 }
