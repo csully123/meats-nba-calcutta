@@ -61,13 +61,16 @@ def players_of(summary: dict) -> dict:
                 st = ath.get("stats") or []
                 if not st or ath.get("didNotPlay"):
                     continue
-                def v(key, alt=None):
-                    i = idx.get(key, idx.get(alt, -1) if alt else -1)
-                    return st[i] if 0 <= i < len(st) else "0"
-                threes = v("threePointFieldGoalsMade-threePointFieldGoalsAttempted", "3PT")
-                row = {"pts": num(v("points", "PTS")), "reb": num(v("totalRebounds", "REB")), "ast": num(v("assists", "AST")),
-                       "threes": num(threes), "stl": num(v("steals", "STL")), "blk": num(v("blocks", "BLK")),
-                       "to": num(v("turnovers", "TO")), "min": num(v("minutes", "MIN"))}
+                def v(*keys):
+                    for k in keys:
+                        i = idx.get(k, -1)
+                        if 0 <= i < len(st):
+                            return st[i]
+                    return "0"
+                row = {"pts": num(v("points", "PTS")), "reb": num(v("rebounds", "totalRebounds", "REB")), "ast": num(v("assists", "AST")),
+                       "threes": num(v("threePointFieldGoalsMade-threePointFieldGoalsAttempted", "3PT")),
+                       "stl": num(v("steals", "STL")), "blk": num(v("blocks", "BLK")), "to": num(v("turnovers", "TO")),
+                       "min": num(v("minutes", "MIN"))}
                 out[a.get("displayName") or a.get("shortName") or ""] = row
     out.pop("", None)
     return out
