@@ -601,9 +601,9 @@
   "label": "NBA Cup",
   "multiplier": 1,
   "series": null,
-  "spreadHome": -8.5,
+  "spreadHome": -9.5,
   "spreadSource": "ESPN",
-  "spreadUpdated": "2026-11-13T13:40:46Z",
+  "spreadUpdated": "2026-11-13T17:41:36Z",
   "stage": "cup",
   "start": "2026-11-14T00:00:00Z",
   "status": "scheduled"
@@ -739,9 +739,9 @@
   "label": "NBA Cup",
   "multiplier": 1,
   "series": null,
-  "spreadHome": 9.5,
+  "spreadHome": 10.5,
   "spreadSource": "ESPN",
-  "spreadUpdated": "2026-11-13T14:45:30Z",
+  "spreadUpdated": "2026-11-13T17:41:36Z",
   "stage": "cup",
   "start": "2026-11-14T03:00:00Z",
   "status": "scheduled"
