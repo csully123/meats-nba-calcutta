@@ -1,11 +1,11 @@
 {
- "updated": "2026-11-13T03:23:38+00:00",
+ "updated": "2026-11-13T04:22:42+00:00",
  "games": {
   "2026-11-12|TOR at PHI": {
    "espnId": "401909976",
    "status": "final",
    "period": 4,
-   "clock": "0.0",
+   "clock": "12:00",
    "detail": "Final",
    "home": "PHI",
    "away": "TOR",
@@ -258,7 +258,7 @@
    "espnId": "401909977",
    "status": "final",
    "period": 6,
-   "clock": "0.0",
+   "clock": "5:00",
    "detail": "Final/2OT",
    "home": "WAS",
    "away": "DET",
@@ -743,213 +743,213 @@
   "2026-11-12|CHA at PHX": {
    "espnId": "401909979",
    "status": "inprogress",
-   "period": 3,
-   "clock": "12:00",
-   "detail": "12:00 - 3rd",
+   "period": 4,
+   "clock": "21.3",
+   "detail": "21.3 - 4th",
    "home": "PHX",
    "away": "CHA",
-   "homeScore": 55,
-   "awayScore": 50,
+   "homeScore": 97,
+   "awayScore": 94,
    "players": {
     "Moussa Diabate": {
+     "pts": 6,
+     "reb": 12,
+     "ast": 2,
+     "threes": 0,
+     "stl": 0,
+     "blk": 1,
+     "to": 4,
+     "min": 31
+    },
+    "Naz Reid": {
+     "pts": 16,
+     "reb": 8,
+     "ast": 3,
+     "threes": 1,
+     "stl": 2,
+     "blk": 1,
+     "to": 5,
+     "min": 33
+    },
+    "Grayson Allen": {
+     "pts": 14,
+     "reb": 4,
+     "ast": 6,
+     "threes": 4,
+     "stl": 1,
+     "blk": 0,
+     "to": 3,
+     "min": 34
+    },
+    "Coby White": {
+     "pts": 21,
+     "reb": 3,
+     "ast": 3,
+     "threes": 2,
+     "stl": 0,
+     "blk": 0,
+     "to": 4,
+     "min": 20
+    },
+    "Sion James": {
+     "pts": 3,
+     "reb": 7,
+     "ast": 6,
+     "threes": 0,
+     "stl": 1,
+     "blk": 0,
+     "to": 4,
+     "min": 32
+    },
+    "Royce O'Neale": {
+     "pts": 6,
+     "reb": 4,
+     "ast": 0,
+     "threes": 2,
+     "stl": 0,
+     "blk": 0,
+     "to": 2,
+     "min": 22
+    },
+    "Grant Williams": {
+     "pts": 11,
+     "reb": 2,
+     "ast": 1,
+     "threes": 2,
+     "stl": 0,
+     "blk": 1,
+     "to": 0,
+     "min": 16
+    },
+    "Tidjane Salaun": {
+     "pts": 2,
+     "reb": 4,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 16
+    },
+    "Ryan Kalkbrenner": {
      "pts": 2,
      "reb": 6,
      "ast": 1,
      "threes": 0,
      "stl": 0,
-     "blk": 0,
-     "to": 3,
-     "min": 16
-    },
-    "Naz Reid": {
-     "pts": 9,
-     "reb": 2,
-     "ast": 2,
-     "threes": 0,
-     "stl": 1,
-     "blk": 0,
-     "to": 2,
-     "min": 17
-    },
-    "Grayson Allen": {
-     "pts": 9,
-     "reb": 2,
-     "ast": 0,
-     "threes": 3,
-     "stl": 0,
-     "blk": 0,
-     "to": 1,
-     "min": 16
-    },
-    "Coby White": {
-     "pts": 9,
-     "reb": 2,
-     "ast": 3,
-     "threes": 1,
-     "stl": 0,
-     "blk": 0,
-     "to": 4,
-     "min": 10
-    },
-    "Sion James": {
-     "pts": 3,
-     "reb": 4,
-     "ast": 4,
-     "threes": 0,
-     "stl": 1,
-     "blk": 0,
-     "to": 3,
-     "min": 16
-    },
-    "Royce O'Neale": {
-     "pts": 0,
-     "reb": 2,
-     "ast": 0,
-     "threes": 0,
-     "stl": 0,
-     "blk": 0,
-     "to": 1,
-     "min": 12
-    },
-    "Grant Williams": {
-     "pts": 9,
-     "reb": 2,
-     "ast": 0,
-     "threes": 2,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 7
-    },
-    "Tidjane Salaun": {
-     "pts": 2,
-     "reb": 3,
-     "ast": 0,
-     "threes": 0,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 9
-    },
-    "Ryan Kalkbrenner": {
-     "pts": 2,
-     "reb": 4,
-     "ast": 0,
-     "threes": 0,
-     "stl": 0,
      "blk": 1,
      "to": 0,
-     "min": 8
+     "min": 16
     },
     "Christian Anderson": {
-     "pts": 5,
-     "reb": 1,
-     "ast": 1,
-     "threes": 1,
+     "pts": 13,
+     "reb": 0,
+     "ast": 2,
+     "threes": 3,
      "stl": 0,
      "blk": 0,
-     "to": 1,
-     "min": 9
+     "to": 2,
+     "min": 18
     },
     "Dillon Brooks": {
-     "pts": 5,
-     "reb": 2,
+     "pts": 15,
+     "reb": 3,
      "ast": 1,
-     "threes": 1,
+     "threes": 3,
      "stl": 0,
      "blk": 0,
      "to": 0,
-     "min": 15
+     "min": 30
     },
     "Miles Bridges": {
-     "pts": 6,
-     "reb": 2,
+     "pts": 9,
+     "reb": 5,
      "ast": 3,
      "threes": 0,
      "stl": 1,
      "blk": 0,
      "to": 0,
-     "min": 12
+     "min": 24
     },
     "Oso Ighodaro": {
-     "pts": 0,
+     "pts": 2,
      "reb": 3,
-     "ast": 1,
+     "ast": 7,
      "threes": 0,
-     "stl": 0,
+     "stl": 1,
      "blk": 1,
      "to": 0,
-     "min": 16
+     "min": 31
     },
     "Devin Booker": {
-     "pts": 15,
+     "pts": 28,
      "reb": 1,
-     "ast": 5,
-     "threes": 3,
-     "stl": 0,
+     "ast": 7,
+     "threes": 4,
+     "stl": 2,
      "blk": 1,
-     "to": 0,
-     "min": 19
+     "to": 2,
+     "min": 35
     },
     "Jalen Green": {
-     "pts": 10,
-     "reb": 2,
+     "pts": 12,
+     "reb": 4,
      "ast": 0,
      "threes": 1,
      "stl": 1,
      "blk": 0,
      "to": 2,
-     "min": 14
+     "min": 21
     },
     "Ryan Dunn": {
      "pts": 0,
-     "reb": 0,
+     "reb": 4,
      "ast": 0,
      "threes": 0,
      "stl": 1,
      "blk": 0,
      "to": 0,
-     "min": 5
+     "min": 10
     },
     "Khaman Maluach": {
-     "pts": 2,
-     "reb": 0,
-     "ast": 0,
+     "pts": 4,
+     "reb": 2,
+     "ast": 1,
      "threes": 0,
      "stl": 0,
      "blk": 2,
-     "to": 0,
-     "min": 8
+     "to": 1,
+     "min": 16
     },
     "Luke Kennard": {
-     "pts": 2,
+     "pts": 8,
      "reb": 1,
      "ast": 1,
      "threes": 0,
      "stl": 0,
      "blk": 0,
      "to": 0,
-     "min": 8
+     "min": 21
     },
     "Jordan Goodwin": {
      "pts": 6,
-     "reb": 3,
-     "ast": 1,
+     "reb": 5,
+     "ast": 2,
      "threes": 2,
-     "stl": 1,
+     "stl": 2,
      "blk": 0,
      "to": 0,
-     "min": 9
+     "min": 24
     },
     "Collin Gillespie": {
-     "pts": 9,
-     "reb": 1,
-     "ast": 0,
+     "pts": 13,
+     "reb": 2,
+     "ast": 1,
      "threes": 3,
-     "stl": 1,
+     "stl": 2,
      "blk": 0,
-     "to": 1,
-     "min": 14
+     "to": 2,
+     "min": 27
     }
    }
   }
