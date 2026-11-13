@@ -1,4 +1,241 @@
 {
- "updated": "2026-11-12T23:32:30+00:00",
- "games": {}
+ "updated": "2026-11-13T00:17:47+00:00",
+ "games": {
+  "2026-11-12|TOR at PHI": {
+   "espnId": "401909976",
+   "status": "inprogress",
+   "period": 1,
+   "clock": "8:33",
+   "detail": "8:33 - 1st",
+   "home": "PHI",
+   "away": "TOR",
+   "homeScore": 9,
+   "awayScore": 7,
+   "players": {
+    "RJ Barrett": {
+     "pts": 2,
+     "reb": 0,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 3
+    },
+    "Collin Murray-Boyles": {
+     "pts": 1,
+     "reb": 0,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 3
+    },
+    "Jakob Poeltl": {
+     "pts": 2,
+     "reb": 1,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 3
+    },
+    "Immanuel Quickley": {
+     "pts": 2,
+     "reb": 2,
+     "ast": 1,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 3
+    },
+    "Ja'Kobe Walter": {
+     "pts": 0,
+     "reb": 0,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 3
+    },
+    "Dean Wade": {
+     "pts": 0,
+     "reb": 0,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 3
+    },
+    "Joel Embiid": {
+     "pts": 0,
+     "reb": 2,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 3
+    },
+    "Jaylen Brown": {
+     "pts": 2,
+     "reb": 0,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 3
+    },
+    "Tyrese Maxey": {
+     "pts": 2,
+     "reb": 0,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 3
+    },
+    "VJ Edgecombe": {
+     "pts": 2,
+     "reb": 1,
+     "ast": 1,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 3
+    },
+    "Justin Edwards": {
+     "pts": 0,
+     "reb": 0,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 0
+    }
+   }
+  },
+  "2026-11-12|DET at WAS": {
+   "espnId": "401909977",
+   "status": "inprogress",
+   "period": 1,
+   "clock": "8:30",
+   "detail": "8:30 - 1st",
+   "home": "WAS",
+   "away": "DET",
+   "homeScore": 17,
+   "awayScore": 10,
+   "players": {
+    "Duncan Robinson": {
+     "pts": 0,
+     "reb": 0,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 4
+    },
+    "John Collins": {
+     "pts": 5,
+     "reb": 0,
+     "ast": 0,
+     "threes": 1,
+     "stl": 0,
+     "blk": 0,
+     "to": 1,
+     "min": 4
+    },
+    "Cade Cunningham": {
+     "pts": 0,
+     "reb": 0,
+     "ast": 1,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 4
+    },
+    "Ausar Thompson": {
+     "pts": 2,
+     "reb": 1,
+     "ast": 1,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 4
+    },
+    "Daniss Jenkins": {
+     "pts": 3,
+     "reb": 0,
+     "ast": 0,
+     "threes": 1,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 4
+    },
+    "Anthony Davis": {
+     "pts": 4,
+     "reb": 2,
+     "ast": 1,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 4
+    },
+    "AJ Dybantsa": {
+     "pts": 0,
+     "reb": 0,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 1,
+     "to": 0,
+     "min": 4
+    },
+    "Kyshawn George": {
+     "pts": 3,
+     "reb": 0,
+     "ast": 3,
+     "threes": 1,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 4
+    },
+    "Alex Sarr": {
+     "pts": 7,
+     "reb": 1,
+     "ast": 0,
+     "threes": 1,
+     "stl": 1,
+     "blk": 0,
+     "to": 0,
+     "min": 4
+    },
+    "Trae Young": {
+     "pts": 3,
+     "reb": 0,
+     "ast": 2,
+     "threes": 1,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 4
+    }
+   }
+  }
+ }
 }
