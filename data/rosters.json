@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T00:48:31.068737+00:00",
+ "updated": "2026-11-13T21:40:09.333860+00:00",
  "players": {
   "AJ Dybantsa": {
    "team": "WAS",
@@ -1015,6 +1015,10 @@
   },
   "John Tonje": {
    "team": "POR",
+   "pos": "F"
+  },
+  "Johni Broome": {
+   "team": "MIN",
    "pos": "F"
   },
   "Johnny Furphy": {
