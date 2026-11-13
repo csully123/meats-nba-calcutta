@@ -11014,6 +11014,16 @@
    },
    "single": "loss"
   },
+  "2026-11-12": {
+   "parlay": "loss",
+   "personal": {
+    "Beekie": "loss",
+    "Kev": "loss",
+    "Mio": "win",
+    "Sulliver": "loss"
+   },
+   "single": "loss"
+  },
   "games": {
    "07DHJxFV7qO1nHJkQYvi": {
     "parlay": {
@@ -11408,6 +11418,23 @@
      "r": "win",
      "teams": [
       "MEM"
+     ]
+    }
+   },
+   "GooCbrgiRHcJUdKfs4Ds": {
+    "parlay": {
+     "date": "2026-11-12",
+     "r": "loss",
+     "teams": [
+      "PHI",
+      "TOR"
+     ]
+    },
+    "single": {
+     "date": "2026-11-12",
+     "r": "win",
+     "teams": [
+      "PHI"
      ]
     }
    },
@@ -12335,6 +12362,37 @@
      ]
     }
    },
+   "qYQYMC2IlSMiW7lPrCTz": {
+    "parlay": {
+     "date": "2026-11-12",
+     "r": "win",
+     "teams": [
+      "CHA",
+      "PHX"
+     ]
+    },
+    "single": {
+     "date": "2026-11-12",
+     "r": "win",
+     "teams": [
+      "CHA"
+     ]
+    }
+   },
+   "qyRGv34UwQKC6G1Kax86": {
+    "parlay": {
+     "date": "2026-11-12",
+     "r": "loss",
+     "teams": [
+      "MIN"
+     ]
+    },
+    "single": {
+     "date": "2026-11-12",
+     "r": "loss",
+     "teams": []
+    }
+   },
    "rjxbD1V9ROfL3lFcGdte": {
     "parlay": {
      "date": "2026-11-01",
@@ -12598,6 +12656,22 @@
      "r": "loss",
      "teams": [
       "PHI"
+     ]
+    }
+   },
+   "zYWeeTgz33wFbjbXdlsm": {
+    "parlay": {
+     "date": "2026-11-12",
+     "r": "loss",
+     "teams": [
+      "DET"
+     ]
+    },
+    "single": {
+     "date": "2026-11-12",
+     "r": "loss",
+     "teams": [
+      "WAS"
      ]
     }
    }
