@@ -1,330 +1,6 @@
 {
- "updated": "2026-11-12T12:43:55+00:00",
+ "updated": "2026-11-13T12:42:59+00:00",
  "days": {
-  "2026-11-12": {
-   "401909976": {
-    "matchup": "TOR at PHI",
-    "tipET": "7:00 PM ET",
-    "away": {
-     "team": "TOR",
-     "site": "away",
-     "tipLocal": "7:00 pm",
-     "altitude": null,
-     "gamesIn4Nights": 3,
-     "gamesIn6Nights": 3,
-     "gamesIn7Nights": 4,
-     "restDays": 0,
-     "lastGame": {
-      "opp": "BOS",
-      "where": "home",
-      "result": "L 93-98",
-      "margin": -5,
-      "overtime": false
-     },
-     "lastGameDate": "2026-11-11",
-     "backToBack": true,
-     "travel": {
-      "from": "Toronto",
-      "to": "Philadelphia",
-      "miles": 337,
-      "estLanding": "1:02 am",
-      "estHotel": "1:47 am",
-      "tzShift": 0.0
-     },
-     "tzShiftSinceLast": 0.0,
-     "streak": {
-      "kind": "roadTrip",
-      "game": 1,
-      "of": 1
-     },
-     "nextGame": {
-      "date": "2026-11-15",
-      "opp": "NYK",
-      "where": "home",
-      "daysUntil": 3
-     },
-     "notes": [
-      "TOR on a back-to-back: played at home last night, flew 337 miles and landed in Philadelphia around 1:02 am; estimate, check the news for delays",
-      "TOR playing its 3rd game in 4 nights"
-     ]
-    },
-    "home": {
-     "team": "PHI",
-     "site": "home",
-     "tipLocal": "7:00 pm",
-     "altitude": null,
-     "gamesIn4Nights": 2,
-     "gamesIn6Nights": 3,
-     "gamesIn7Nights": 4,
-     "restDays": 1,
-     "lastGame": {
-      "opp": "BOS",
-      "where": "home",
-      "result": "L 101-123",
-      "margin": -22,
-      "overtime": false
-     },
-     "lastGameDate": "2026-11-10",
-     "streak": {
-      "kind": "homestand",
-      "game": 2,
-      "of": 3
-     },
-     "nextGame": {
-      "date": "2026-11-15",
-      "opp": "IND",
-      "where": "home",
-      "daysUntil": 3
-     },
-     "notes": []
-    },
-    "notes": [
-     "Rest edge PHI: 1 day off vs 0 for TOR (TOR on a back-to-back)",
-     "TOR on a back-to-back: played at home last night, flew 337 miles and landed in Philadelphia around 1:02 am; estimate, check the news for delays",
-     "TOR playing its 3rd game in 4 nights"
-    ]
-   },
-   "401909977": {
-    "matchup": "DET at WAS",
-    "tipET": "7:00 PM ET",
-    "away": {
-     "team": "DET",
-     "site": "away",
-     "tipLocal": "7:00 pm",
-     "altitude": null,
-     "gamesIn4Nights": 2,
-     "gamesIn6Nights": 3,
-     "gamesIn7Nights": 3,
-     "restDays": 2,
-     "lastGame": {
-      "opp": "WAS",
-      "where": "home",
-      "result": "W 122-111",
-      "margin": 11,
-      "overtime": false
-     },
-     "lastGameDate": "2026-11-09",
-     "tzShiftSinceLast": 0.0,
-     "streak": {
-      "kind": "roadTrip",
-      "game": 1,
-      "of": 4
-     },
-     "nextGame": {
-      "date": "2026-11-14",
-      "opp": "MIA",
-      "where": "away",
-      "daysUntil": 2
-     },
-     "notes": [
-      "DET game 1 of a 4-game road trip"
-     ]
-    },
-    "home": {
-     "team": "WAS",
-     "site": "home",
-     "tipLocal": "7:00 pm",
-     "altitude": null,
-     "gamesIn4Nights": 3,
-     "gamesIn6Nights": 4,
-     "gamesIn7Nights": 5,
-     "restDays": 0,
-     "lastGame": {
-      "opp": "IND",
-      "where": "away",
-      "result": "L 101-114",
-      "margin": -13,
-      "overtime": false
-     },
-     "lastGameDate": "2026-11-11",
-     "backToBack": true,
-     "travel": {
-      "from": "Indianapolis",
-      "to": "Washington",
-      "miles": 492,
-      "estLanding": "1:21 am",
-      "estHotel": "2:06 am",
-      "tzShift": 0.0
-     },
-     "tzShiftSinceLast": 0.0,
-     "streak": {
-      "kind": "homestand",
-      "game": 1,
-      "of": 3
-     },
-     "nextGame": {
-      "date": "2026-11-15",
-      "opp": "HOU",
-      "where": "home",
-      "daysUntil": 3
-     },
-     "notes": [
-      "WAS on a back-to-back: played in Indianapolis last night, flew 492 miles and landed in Washington around 1:21 am; estimate, check the news for delays",
-      "WAS playing its 3rd game in 4 nights",
-      "WAS playing its 4th game in 6 nights",
-      "WAS first game home after a 4-game road trip"
-     ]
-    },
-    "notes": [
-     "Rest edge DET: 2 days off vs 0 for WAS (WAS on a back-to-back)",
-     "DET game 1 of a 4-game road trip",
-     "WAS on a back-to-back: played in Indianapolis last night, flew 492 miles and landed in Washington around 1:21 am; estimate, check the news for delays",
-     "WAS playing its 3rd game in 4 nights",
-     "WAS playing its 4th game in 6 nights",
-     "WAS first game home after a 4-game road trip"
-    ]
-   },
-   "401909978": {
-    "matchup": "DAL at MIN",
-    "tipET": "8:00 PM ET",
-    "away": {
-     "team": "DAL",
-     "site": "away",
-     "tipLocal": "7:00 pm",
-     "altitude": null,
-     "gamesIn4Nights": 2,
-     "gamesIn6Nights": 3,
-     "gamesIn7Nights": 4,
-     "restDays": 2,
-     "lastGame": {
-      "opp": "IND",
-      "where": "home",
-      "result": "W 125-122",
-      "margin": 3,
-      "overtime": false
-     },
-     "lastGameDate": "2026-11-09",
-     "tzShiftSinceLast": 0.0,
-     "streak": {
-      "kind": "roadTrip",
-      "game": 1,
-      "of": 3
-     },
-     "nextGame": {
-      "date": "2026-11-14",
-      "opp": "CLE",
-      "where": "away",
-      "daysUntil": 2
-     },
-     "notes": [
-      "DAL game 1 of a 3-game road trip"
-     ]
-    },
-    "home": {
-     "team": "MIN",
-     "site": "home",
-     "tipLocal": "7:00 pm",
-     "altitude": null,
-     "gamesIn4Nights": 1,
-     "gamesIn6Nights": 2,
-     "gamesIn7Nights": 3,
-     "restDays": 3,
-     "lastGame": {
-      "opp": "UTA",
-      "where": "home",
-      "result": "W 115-100",
-      "margin": 15,
-      "overtime": false
-     },
-     "lastGameDate": "2026-11-08",
-     "streak": {
-      "kind": "homestand",
-      "game": 2,
-      "of": 6
-     },
-     "nextGame": {
-      "date": "2026-11-14",
-      "opp": "CHI",
-      "where": "home",
-      "daysUntil": 2
-     },
-     "notes": [
-      "MIN well rested: 3 days off"
-     ]
-    },
-    "notes": [
-     "Rest edge MIN: 3 days off vs 2 for DAL",
-     "DAL game 1 of a 3-game road trip",
-     "MIN well rested: 3 days off"
-    ]
-   },
-   "401909979": {
-    "matchup": "CHA at PHX",
-    "tipET": "9:00 PM ET",
-    "away": {
-     "team": "CHA",
-     "site": "away",
-     "tipLocal": "7:00 pm",
-     "altitude": null,
-     "gamesIn4Nights": 2,
-     "gamesIn6Nights": 2,
-     "gamesIn7Nights": 3,
-     "restDays": 2,
-     "lastGame": {
-      "opp": "CLE",
-      "where": "home",
-      "result": "W 124-112",
-      "margin": 12,
-      "overtime": false
-     },
-     "lastGameDate": "2026-11-09",
-     "tzShiftSinceLast": -2.0,
-     "streak": {
-      "kind": "roadTrip",
-      "game": 1,
-      "of": 3
-     },
-     "nextGame": {
-      "date": "2026-11-15",
-      "opp": "LAC",
-      "where": "away",
-      "daysUntil": 3
-     },
-     "notes": [
-      "CHA game 1 of a 3-game road trip"
-     ]
-    },
-    "home": {
-     "team": "PHX",
-     "site": "home",
-     "tipLocal": "7:00 pm",
-     "altitude": null,
-     "gamesIn4Nights": 3,
-     "gamesIn6Nights": 4,
-     "gamesIn7Nights": 4,
-     "restDays": 1,
-     "lastGame": {
-      "opp": "LAC",
-      "where": "home",
-      "result": "W 133-110",
-      "margin": 23,
-      "overtime": false
-     },
-     "lastGameDate": "2026-11-10",
-     "streak": {
-      "kind": "homestand",
-      "game": 6,
-      "of": 7
-     },
-     "nextGame": {
-      "date": "2026-11-15",
-      "opp": "LAL",
-      "where": "home",
-      "daysUntil": 3
-     },
-     "notes": [
-      "PHX playing its 3rd game in 4 nights",
-      "PHX playing its 4th game in 6 nights"
-     ]
-    },
-    "notes": [
-     "Rest edge CHA: 2 days off vs 1 for PHX",
-     "CHA game 1 of a 3-game road trip",
-     "PHX playing its 3rd game in 4 nights",
-     "PHX playing its 4th game in 6 nights"
-    ]
-   }
-  },
   "2026-11-13": {
    "401909296": {
     "matchup": "NYK at IND",
@@ -1004,6 +680,393 @@
      "Rest edge LAC: 2 days off vs 1 for OKC",
      "OKC playing its 3rd game in 4 nights",
      "OKC game 3 of a 4-game road trip"
+    ]
+   }
+  },
+  "2026-11-14": {
+   "401909980": {
+    "matchup": "DEN at NOP",
+    "tipET": "7:00 PM ET",
+    "away": {
+     "team": "DEN",
+     "site": "away",
+     "tipLocal": "6:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 3,
+     "restDays": 2,
+     "lastGame": {
+      "opp": "MEM",
+      "where": "away",
+      "result": "W 123-118",
+      "margin": 5,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-11",
+     "tzShiftSinceLast": 0.0,
+     "streak": {
+      "kind": "roadTrip",
+      "game": 4,
+      "of": 4
+     },
+     "nextGame": {
+      "date": "2026-11-16",
+      "opp": "PHX",
+      "where": "home",
+      "daysUntil": 2
+     },
+     "notes": [
+      "DEN last game of a 4-game road trip"
+     ]
+    },
+    "home": {
+     "team": "NOP",
+     "site": "home",
+     "tipLocal": "6:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 3,
+     "gamesIn6Nights": 4,
+     "gamesIn7Nights": 5,
+     "restDays": 0,
+     "lastGameDate": "2026-11-13",
+     "backToBack": true,
+     "streak": {
+      "kind": "homestand",
+      "game": 3,
+      "of": 5
+     },
+     "nextGame": {
+      "date": "2026-11-16",
+      "opp": "GSW",
+      "where": "home",
+      "daysUntil": 2
+     },
+     "notes": [
+      "NOP on a back-to-back with no travel (played at home last night)",
+      "NOP playing its 3rd game in 4 nights",
+      "NOP playing its 4th game in 6 nights"
+     ]
+    },
+    "notes": [
+     "Rest edge DEN: 2 days off vs 0 for NOP (NOP on a back-to-back)",
+     "DEN last game of a 4-game road trip",
+     "NOP on a back-to-back with no travel (played at home last night)",
+     "NOP playing its 3rd game in 4 nights",
+     "NOP playing its 4th game in 6 nights"
+    ]
+   },
+   "401909981": {
+    "matchup": "DAL at CLE",
+    "tipET": "7:30 PM ET",
+    "away": {
+     "team": "DAL",
+     "site": "away",
+     "tipLocal": "7:30 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 4,
+     "restDays": 1,
+     "lastGame": {
+      "opp": "MIN",
+      "where": "away",
+      "result": "L 94-133",
+      "margin": -39,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-12",
+     "tzShiftSinceLast": 1.0,
+     "streak": {
+      "kind": "roadTrip",
+      "game": 2,
+      "of": 3
+     },
+     "nextGame": {
+      "date": "2026-11-15",
+      "opp": "BOS",
+      "where": "away",
+      "daysUntil": 1
+     },
+     "notes": [
+      "DAL game 2 of a 3-game road trip",
+      "DAL first leg of a back-to-back (plays in Boston tomorrow)"
+     ]
+    },
+    "home": {
+     "team": "CLE",
+     "site": "home",
+     "tipLocal": "7:30 pm",
+     "altitude": null,
+     "gamesIn4Nights": 3,
+     "gamesIn6Nights": 4,
+     "gamesIn7Nights": 4,
+     "restDays": 0,
+     "lastGameDate": "2026-11-13",
+     "backToBack": true,
+     "travel": {
+      "from": "Miami",
+      "to": "Cleveland",
+      "miles": 1089,
+      "estLanding": "3:36 am",
+      "estHotel": "4:21 am",
+      "tzShift": 0.0
+     },
+     "tzShiftSinceLast": 0.0,
+     "streak": {
+      "kind": "homestand",
+      "game": 1,
+      "of": 4
+     },
+     "nextGame": {
+      "date": "2026-11-16",
+      "opp": "CHI",
+      "where": "home",
+      "daysUntil": 2
+     },
+     "notes": [
+      "CLE on a back-to-back: played in Miami last night, flew 1089 miles and landed in Cleveland around 3:36 am (brutal); estimate, check the news for delays",
+      "CLE playing its 3rd game in 4 nights",
+      "CLE playing its 4th game in 6 nights",
+      "CLE first game home after a 3-game road trip"
+     ]
+    },
+    "notes": [
+     "Rest edge DAL: 1 day off vs 0 for CLE (CLE on a back-to-back)",
+     "DAL game 2 of a 3-game road trip",
+     "DAL first leg of a back-to-back (plays in Boston tomorrow)",
+     "CLE on a back-to-back: played in Miami last night, flew 1089 miles and landed in Cleveland around 3:36 am (brutal); estimate, check the news for delays",
+     "CLE playing its 3rd game in 4 nights",
+     "CLE playing its 4th game in 6 nights",
+     "CLE first game home after a 3-game road trip"
+    ]
+   },
+   "401909982": {
+    "matchup": "DET at MIA",
+    "tipET": "8:00 PM ET",
+    "away": {
+     "team": "DET",
+     "site": "away",
+     "tipLocal": "8:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 4,
+     "restDays": 1,
+     "lastGame": {
+      "opp": "WAS",
+      "where": "away",
+      "result": "W 144-140",
+      "margin": 4,
+      "overtime": true
+     },
+     "lastGameDate": "2026-11-12",
+     "tzShiftSinceLast": 0.0,
+     "streak": {
+      "kind": "roadTrip",
+      "game": 2,
+      "of": 4
+     },
+     "nextGame": {
+      "date": "2026-11-17",
+      "opp": "SAS",
+      "where": "away",
+      "daysUntil": 3
+     },
+     "notes": [
+      "DET went to overtime last game",
+      "DET game 2 of a 4-game road trip"
+     ]
+    },
+    "home": {
+     "team": "MIA",
+     "site": "home",
+     "tipLocal": "8:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 4,
+     "restDays": 0,
+     "lastGameDate": "2026-11-13",
+     "backToBack": true,
+     "streak": {
+      "kind": "homestand",
+      "game": 2,
+      "of": 4
+     },
+     "nextGame": {
+      "date": "2026-11-16",
+      "opp": "HOU",
+      "where": "home",
+      "daysUntil": 2
+     },
+     "notes": [
+      "MIA on a back-to-back with no travel (played at home last night)"
+     ]
+    },
+    "notes": [
+     "Rest edge DET: 1 day off vs 0 for MIA (MIA on a back-to-back)",
+     "DET went to overtime last game",
+     "DET game 2 of a 4-game road trip",
+     "MIA on a back-to-back with no travel (played at home last night)"
+    ]
+   },
+   "401909983": {
+    "matchup": "BKN at MEM",
+    "tipET": "8:00 PM ET",
+    "away": {
+     "team": "BKN",
+     "site": "away",
+     "tipLocal": "7:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 2,
+     "gamesIn7Nights": 3,
+     "restDays": 2,
+     "lastGame": {
+      "opp": "NOP",
+      "where": "away",
+      "result": "W 145-111",
+      "margin": 34,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-11",
+     "tzShiftSinceLast": 0.0,
+     "streak": {
+      "kind": "roadTrip",
+      "game": 4,
+      "of": 4
+     },
+     "nextGame": {
+      "date": "2026-11-16",
+      "opp": "PHI",
+      "where": "home",
+      "daysUntil": 2
+     },
+     "notes": [
+      "BKN last game of a 4-game road trip"
+     ]
+    },
+    "home": {
+     "team": "MEM",
+     "site": "home",
+     "tipLocal": "7:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 3,
+     "gamesIn6Nights": 4,
+     "gamesIn7Nights": 4,
+     "restDays": 0,
+     "lastGameDate": "2026-11-13",
+     "backToBack": true,
+     "travel": {
+      "from": "New Orleans",
+      "to": "Memphis",
+      "miles": 359,
+      "estLanding": "1:04 am",
+      "estHotel": "1:49 am",
+      "tzShift": 0.0
+     },
+     "tzShiftSinceLast": 0.0,
+     "streak": {
+      "kind": "homestand",
+      "game": 1,
+      "of": 1
+     },
+     "nextGame": {
+      "date": "2026-11-16",
+      "opp": "WAS",
+      "where": "away",
+      "daysUntil": 2
+     },
+     "notes": [
+      "MEM on a back-to-back: played in New Orleans last night, flew 359 miles and landed in Memphis around 1:04 am; estimate, check the news for delays",
+      "MEM playing its 3rd game in 4 nights",
+      "MEM playing its 4th game in 6 nights"
+     ]
+    },
+    "notes": [
+     "Rest edge BKN: 2 days off vs 0 for MEM (MEM on a back-to-back)",
+     "BKN last game of a 4-game road trip",
+     "MEM on a back-to-back: played in New Orleans last night, flew 359 miles and landed in Memphis around 1:04 am; estimate, check the news for delays",
+     "MEM playing its 3rd game in 4 nights",
+     "MEM playing its 4th game in 6 nights"
+    ]
+   },
+   "401909984": {
+    "matchup": "CHI at MIN",
+    "tipET": "8:00 PM ET",
+    "away": {
+     "team": "CHI",
+     "site": "away",
+     "tipLocal": "7:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 3,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 4,
+     "restDays": 0,
+     "lastGameDate": "2026-11-13",
+     "backToBack": true,
+     "travel": {
+      "from": "Chicago",
+      "to": "Minneapolis",
+      "miles": 353,
+      "estLanding": "1:04 am",
+      "estHotel": "1:49 am",
+      "tzShift": 0.0
+     },
+     "tzShiftSinceLast": 0.0,
+     "streak": {
+      "kind": "roadTrip",
+      "game": 1,
+      "of": 3
+     },
+     "nextGame": {
+      "date": "2026-11-16",
+      "opp": "CLE",
+      "where": "away",
+      "daysUntil": 2
+     },
+     "notes": [
+      "CHI on a back-to-back: played at home last night, flew 353 miles and landed in Minneapolis around 1:04 am; estimate, check the news for delays",
+      "CHI playing its 3rd game in 4 nights",
+      "CHI game 1 of a 3-game road trip"
+     ]
+    },
+    "home": {
+     "team": "MIN",
+     "site": "home",
+     "tipLocal": "7:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 2,
+     "gamesIn7Nights": 3,
+     "restDays": 1,
+     "lastGame": {
+      "opp": "DAL",
+      "where": "home",
+      "result": "W 133-94",
+      "margin": 39,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-12",
+     "streak": {
+      "kind": "homestand",
+      "game": 3,
+      "of": 6
+     },
+     "nextGame": {
+      "date": "2026-11-16",
+      "opp": "POR",
+      "where": "home",
+      "daysUntil": 2
+     },
+     "notes": []
+    },
+    "notes": [
+     "Rest edge MIN: 1 day off vs 0 for CHI (CHI on a back-to-back)",
+     "CHI on a back-to-back: played at home last night, flew 353 miles and landed in Minneapolis around 1:04 am; estimate, check the news for delays",
+     "CHI playing its 3rd game in 4 nights",
+     "CHI game 1 of a 3-game road trip"
     ]
    }
   }
