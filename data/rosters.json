@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T03:44:02.341772+00:00",
+ "updated": "2026-11-13T00:48:31.068737+00:00",
  "players": {
   "AJ Dybantsa": {
    "team": "WAS",
@@ -735,6 +735,10 @@
   },
   "Isaiah Crawford": {
    "team": "HOU",
+   "pos": "F"
+  },
+  "Isaiah Evans": {
+   "team": "MIN",
    "pos": "F"
   },
   "Isaiah Hartenstein": {
