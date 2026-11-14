@@ -567,13 +567,13 @@
   "awayColor": "1d428a",
   "awayLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
   "awayName": "New York Knicks",
-  "awayScore": null,
+  "awayScore": 27,
   "date": "2026-11-13",
   "home": "IND",
   "homeColor": "0c2340",
   "homeLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
   "homeName": "Indiana Pacers",
-  "homeScore": null,
+  "homeScore": 26,
   "id": "401909296",
   "label": "NBA Cup",
   "multiplier": 1,
@@ -583,20 +583,20 @@
   "spreadUpdated": "2026-11-13T23:33:10Z",
   "stage": "cup",
   "start": "2026-11-14T00:00:00Z",
-  "status": "scheduled"
+  "status": "inprogress"
  },
  "401909297": {
   "away": "MIL",
   "awayColor": "00471b",
   "awayLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
   "awayName": "Milwaukee Bucks",
-  "awayScore": null,
+  "awayScore": 18,
   "date": "2026-11-13",
   "home": "ORL",
   "homeColor": "0150b5",
   "homeLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/orl.png",
   "homeName": "Orlando Magic",
-  "homeScore": null,
+  "homeScore": 31,
   "id": "401909297",
   "label": "NBA Cup",
   "multiplier": 1,
@@ -606,7 +606,7 @@
   "spreadUpdated": "2026-11-13T17:41:36Z",
   "stage": "cup",
   "start": "2026-11-14T00:00:00Z",
-  "status": "scheduled"
+  "status": "inprogress"
  },
  "401909298": {
   "away": "CLE",
