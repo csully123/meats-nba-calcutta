@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T21:40:09.333860+00:00",
+ "updated": "2026-11-14T18:00:11.436804+00:00",
  "players": {
   "AJ Dybantsa": {
    "team": "WAS",
@@ -1217,6 +1217,10 @@
    "team": "UTA",
    "pos": "G"
   },
+  "Khalifa Diop": {
+   "team": "CLE",
+   "pos": "C"
+  },
   "Khaman Maluach": {
    "team": "PHX",
    "pos": "C"
@@ -1497,6 +1501,10 @@
    "team": "MIA",
    "pos": "F"
   },
+  "Nae'Qwan Tomlin": {
+   "team": "CLE",
+   "pos": "F"
+  },
   "Naji Marshall": {
    "team": "DAL",
    "pos": "F"
@@ -1592,6 +1600,10 @@
   "Onyeka Okongwu": {
    "team": "ATL",
    "pos": "F"
+  },
+  "Orlando Robinson": {
+   "team": "CHI",
+   "pos": "C"
   },
   "Oscar Tshiebwe": {
    "team": "HOU",
