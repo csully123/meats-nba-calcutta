@@ -4358,9 +4358,9 @@
   "label": null,
   "multiplier": 1,
   "series": null,
-  "spreadHome": 3.5,
+  "spreadHome": 4.5,
   "spreadSource": "ESPN",
-  "spreadUpdated": "2026-11-14T18:41:55Z",
+  "spreadUpdated": "2026-11-14T20:28:39Z",
   "stage": "regular",
   "start": "2026-11-15T01:00:00Z",
   "status": "scheduled"
@@ -4381,9 +4381,9 @@
   "label": null,
   "multiplier": 1,
   "series": null,
-  "spreadHome": -2.5,
+  "spreadHome": -1.5,
   "spreadSource": "ESPN",
-  "spreadUpdated": "2026-11-14T18:00:11Z",
+  "spreadUpdated": "2026-11-14T20:28:39Z",
   "stage": "regular",
   "start": "2026-11-15T01:00:00Z",
   "status": "scheduled"
