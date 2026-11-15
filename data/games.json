@@ -4416,13 +4416,13 @@
   "awayColor": "0c2340",
   "awayLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
   "awayName": "Indiana Pacers",
-  "awayScore": null,
+  "awayScore": 57,
   "date": "2026-11-15",
   "home": "PHI",
   "homeColor": "1d428a",
   "homeLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
   "homeName": "Philadelphia 76ers",
-  "homeScore": null,
+  "homeScore": 58,
   "id": "401909985",
   "label": null,
   "multiplier": 1,
@@ -4432,7 +4432,7 @@
   "spreadUpdated": "2026-11-15T17:09:13Z",
   "stage": "regular",
   "start": "2026-11-15T18:00:00Z",
-  "status": "scheduled"
+  "status": "inprogress"
  },
  "401909986": {
   "away": "LAL",
@@ -4519,9 +4519,9 @@
   "label": null,
   "multiplier": 1,
   "series": null,
-  "spreadHome": -13.5,
+  "spreadHome": -14.5,
   "spreadSource": "ESPN",
-  "spreadUpdated": "2026-11-15T05:44:44Z",
+  "spreadUpdated": "2026-11-15T19:15:28Z",
   "stage": "regular",
   "start": "2026-11-15T23:00:00Z",
   "status": "scheduled"
