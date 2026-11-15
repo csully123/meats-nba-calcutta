@@ -254,7 +254,7 @@
       "odds": -106
      },
      {
-      "label": "Nikola Jokić over 9.5 assists",
+      "label": "Nikola Joki\u0107 over 9.5 assists",
       "line": 9.5,
       "oddID": "assists-NIKOLA_JOKIC_1_NBA-game-ou-over",
       "odds": -102
@@ -262,7 +262,7 @@
     ],
     "price": 285,
     "updated": "2026-10-30T13:31:22Z",
-    "why": "Phoenix has the league's best offense and its worst defense, Denver's defense ranks 22nd, and both teams' games have averaged at least 239.7 points. The Suns have three days of rest against one for a Nuggets team that crossed two time zones, so expect pace from Phoenix. A track meet against a bad defense is where Jokić's 10.3 assists a game turn into 11 or 12, and the two legs win together."
+    "why": "Phoenix has the league's best offense and its worst defense, Denver's defense ranks 22nd, and both teams' games have averaged at least 239.7 points. The Suns have three days of rest against one for a Nuggets team that crossed two time zones, so expect pace from Phoenix. A track meet against a bad defense is where Joki\u0107's 10.3 assists a game turn into 11 or 12, and the two legs win together."
    },
    "personal": {
     "Beekie": {
@@ -342,7 +342,7 @@
     "odds": -122,
     "team": "GSW",
     "updated": "2026-10-30T13:31:22Z",
-    "why": "The best price on the board is Yaxel Lendeborg at 17.5 points. The rookie is averaging 25.2 points in 34.8 minutes with a 34.7% usage rate, and over his last three he is at 27.7. He has history with Luka Dončić from opening night, including a technical, so expect him to want the ball. The Lakers defense ranks 19th and is on its third game in four nights. The market has not moved this line to meet what he is doing."
+    "why": "The best price on the board is Yaxel Lendeborg at 17.5 points. The rookie is averaging 25.2 points in 34.8 minutes with a 34.7% usage rate, and over his last three he is at 27.7. He has history with Luka Don\u010di\u0107 from opening night, including a technical, so expect him to want the ball. The Lakers defense ranks 19th and is on its third game in four nights. The market has not moved this line to meet what he is doing."
    }
   },
   "2026-10-31": {
@@ -3232,10 +3232,10 @@
     "PHX 1st offense, 30th defense",
     "DEN 22nd in defensive rating",
     "Both teams' games average 240 plus",
-    "Jokić averaging 10.3 assists"
+    "Joki\u0107 averaging 10.3 assists"
    ],
    "away": "DEN",
-   "blurb": "Denver is 2-1 after a 104-91 win in New Orleans, and Phoenix is 1-1 after a 125-114 loss in Oklahoma City. The Suns have three days of rest while Denver has one and crossed two time zones. Phoenix has the league's best offensive rating and its worst defensive rating, and Denver ranks 22nd on defense. Nuggets games average 239.7 points and Suns games 246.0. Nikola Jokić is averaging 25.0 points, 11.7 rebounds and 10.3 assists. Denver -4.5 is fair given the rest gap, and the total looks short.",
+   "blurb": "Denver is 2-1 after a 104-91 win in New Orleans, and Phoenix is 1-1 after a 125-114 loss in Oklahoma City. The Suns have three days of rest while Denver has one and crossed two time zones. Phoenix has the league's best offensive rating and its worst defensive rating, and Denver ranks 22nd on defense. Nuggets games average 239.7 points and Suns games 246.0. Nikola Joki\u0107 is averaging 25.0 points, 11.7 rebounds and 10.3 assists. Denver -4.5 is fair given the rest gap, and the total looks short.",
    "date": "2026-10-30",
    "home": "PHX",
    "injuries": [
@@ -3277,14 +3277,14 @@
       "odds": -106
      },
      {
-      "label": "Nikola Jokić over 9.5 assists",
+      "label": "Nikola Joki\u0107 over 9.5 assists",
       "line": 9.5,
       "oddID": "assists-NIKOLA_JOKIC_1_NBA-game-ou-over",
       "odds": -102
      }
     ],
     "price": 285,
-    "why": "A shootout against the league's worst defense is the best setting there is for Jokić's passing: he is averaging 10.3 assists in 37.7 minutes, and Phoenix will give up open looks. If the over hits, his teammates are making the shots he sets up."
+    "why": "A shootout against the league's worst defense is the best setting there is for Joki\u0107's passing: he is averaging 10.3 assists in 37.7 minutes, and Phoenix will give up open looks. If the over hits, his teammates are making the shots he sets up."
    },
    "single": {
     "label": "Over 231.5",
@@ -6708,7 +6708,7 @@
     "GSW first home game after trip"
    ],
    "away": "LAL",
-   "blurb": "The Lakers are 3-1 after a 103-87 win over the Clippers, and they beat Golden State 127-105 on opening night, when Luka Dončić and rookie Yaxel Lendeborg traded words and Lendeborg drew a technical, per NBC Sports Bay Area. Golden State is 2-2 and home after a three-game trip. Both offenses rank top four and both teams' games average 238. The Lakers play their third game in four nights. Luka is averaging 38.7 points and Lendeborg 25.2. Lakers -2.5 is nearly even; the grudge and the defenses lean to scoring.",
+   "blurb": "The Lakers are 3-1 after a 103-87 win over the Clippers, and they beat Golden State 127-105 on opening night, when Luka Don\u010di\u0107 and rookie Yaxel Lendeborg traded words and Lendeborg drew a technical, per NBC Sports Bay Area. Golden State is 2-2 and home after a three-game trip. Both offenses rank top four and both teams' games average 238. The Lakers play their third game in four nights. Luka is averaging 38.7 points and Lendeborg 25.2. Lakers -2.5 is nearly even; the grudge and the defenses lean to scoring.",
    "date": "2026-10-30",
    "home": "GSW",
    "injuries": [
@@ -6744,7 +6744,7 @@
     {
      "impact": "Medium",
      "note": "Away from the team indefinitely; the Warriors are short a big.",
-     "player": "Kristaps Porziņģis",
+     "player": "Kristaps Porzi\u0146\u0123is",
      "status": "Out",
      "team": "GSW"
     },
@@ -6759,7 +6759,7 @@
    "parlay": {
     "legs": [
      {
-      "label": "Luka Dončić over 33.5 points",
+      "label": "Luka Don\u010di\u0107 over 33.5 points",
       "line": 33.5,
       "oddID": "points-LUKA_DONCIC_1_NBA-game-ou-over",
       "odds": -128
@@ -8595,7 +8595,7 @@
     {
      "impact": "Medium",
      "note": "Foot issue; Charlotte would lose its backup playmaker and 4.2 assists a night.",
-     "player": "Dennis Schröder",
+     "player": "Dennis Schr\u00f6der",
      "stats": "12.8 pts, 4.2 ast this season",
      "status": "Questionable",
      "team": "CHA"
@@ -12380,6 +12380,16 @@
    },
    "single": "loss"
   },
+  "2026-11-14": {
+   "parlay": "loss",
+   "personal": {
+    "Beekie": "win",
+    "Kev": "loss",
+    "Mio": "loss",
+    "Sulliver": "loss"
+   },
+   "single": "loss"
+  },
   "games": {
    "07DHJxFV7qO1nHJkQYvi": {
     "parlay": {
@@ -12859,6 +12869,22 @@
      ]
     }
    },
+   "Gr4VtpkIU4jrga8Q2FPi": {
+    "parlay": {
+     "date": "2026-11-14",
+     "r": "loss",
+     "teams": [
+      "MIN"
+     ]
+    },
+    "single": {
+     "date": "2026-11-14",
+     "r": "loss",
+     "teams": [
+      "MIN"
+     ]
+    }
+   },
    "GwDgzho9v66QVQYHgCqi": {
     "parlay": {
      "date": "2026-11-02",
@@ -13035,6 +13061,22 @@
      ]
     }
    },
+   "MliAwSCyMqrabIX7tOaL": {
+    "parlay": {
+     "date": "2026-11-14",
+     "r": "loss",
+     "teams": [
+      "DEN"
+     ]
+    },
+    "single": {
+     "date": "2026-11-14",
+     "r": "loss",
+     "teams": [
+      "DEN"
+     ]
+    }
+   },
    "NdWj2SKUs2DQl5b4sI3t": {
     "parlay": {
      "date": "2026-11-04",
@@ -13080,6 +13122,22 @@
      "r": "loss",
      "teams": [
       "ATL"
+     ]
+    }
+   },
+   "OeymLe7wQY2zwKedvCrU": {
+    "parlay": {
+     "date": "2026-11-14",
+     "r": "loss",
+     "teams": [
+      "DET"
+     ]
+    },
+    "single": {
+     "date": "2026-11-14",
+     "r": "win",
+     "teams": [
+      "MIA"
      ]
     }
    },
@@ -13578,6 +13636,22 @@
      "teams": []
     }
    },
+   "eZJHrEb25QaGPXmVUaF0": {
+    "parlay": {
+     "date": "2026-11-14",
+     "r": "loss",
+     "teams": [
+      "BKN"
+     ]
+    },
+    "single": {
+     "date": "2026-11-14",
+     "r": "loss",
+     "teams": [
+      "BKN"
+     ]
+    }
+   },
    "gdPxIUkZq9h39cSvqIm3": {
     "parlay": {
      "date": "2026-11-02",
@@ -13744,6 +13818,22 @@
     },
     "single": {
      "date": "2026-11-02",
+     "r": "loss",
+     "teams": [
+      "DAL"
+     ]
+    }
+   },
+   "lifymi4jrXCpckkBVDDC": {
+    "parlay": {
+     "date": "2026-11-14",
+     "r": "loss",
+     "teams": [
+      "DAL"
+     ]
+    },
+    "single": {
+     "date": "2026-11-14",
      "r": "loss",
      "teams": [
       "DAL"
