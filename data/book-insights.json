@@ -254,7 +254,7 @@
       "odds": -106
      },
      {
-      "label": "Nikola Joki\u0107 over 9.5 assists",
+      "label": "Nikola Jokić over 9.5 assists",
       "line": 9.5,
       "oddID": "assists-NIKOLA_JOKIC_1_NBA-game-ou-over",
       "odds": -102
@@ -262,7 +262,7 @@
     ],
     "price": 285,
     "updated": "2026-10-30T13:31:22Z",
-    "why": "Phoenix has the league's best offense and its worst defense, Denver's defense ranks 22nd, and both teams' games have averaged at least 239.7 points. The Suns have three days of rest against one for a Nuggets team that crossed two time zones, so expect pace from Phoenix. A track meet against a bad defense is where Joki\u0107's 10.3 assists a game turn into 11 or 12, and the two legs win together."
+    "why": "Phoenix has the league's best offense and its worst defense, Denver's defense ranks 22nd, and both teams' games have averaged at least 239.7 points. The Suns have three days of rest against one for a Nuggets team that crossed two time zones, so expect pace from Phoenix. A track meet against a bad defense is where Jokić's 10.3 assists a game turn into 11 or 12, and the two legs win together."
    },
    "personal": {
     "Beekie": {
@@ -342,7 +342,7 @@
     "odds": -122,
     "team": "GSW",
     "updated": "2026-10-30T13:31:22Z",
-    "why": "The best price on the board is Yaxel Lendeborg at 17.5 points. The rookie is averaging 25.2 points in 34.8 minutes with a 34.7% usage rate, and over his last three he is at 27.7. He has history with Luka Don\u010di\u0107 from opening night, including a technical, so expect him to want the ball. The Lakers defense ranks 19th and is on its third game in four nights. The market has not moved this line to meet what he is doing."
+    "why": "The best price on the board is Yaxel Lendeborg at 17.5 points. The rookie is averaging 25.2 points in 34.8 minutes with a 34.7% usage rate, and over his last three he is at 27.7. He has history with Luka Dončić from opening night, including a technical, so expect him to want the ball. The Lakers defense ranks 19th and is on its third game in four nights. The market has not moved this line to meet what he is doing."
    }
   },
   "2026-10-31": {
@@ -3404,10 +3404,10 @@
     "PHX 1st offense, 30th defense",
     "DEN 22nd in defensive rating",
     "Both teams' games average 240 plus",
-    "Joki\u0107 averaging 10.3 assists"
+    "Jokić averaging 10.3 assists"
    ],
    "away": "DEN",
-   "blurb": "Denver is 2-1 after a 104-91 win in New Orleans, and Phoenix is 1-1 after a 125-114 loss in Oklahoma City. The Suns have three days of rest while Denver has one and crossed two time zones. Phoenix has the league's best offensive rating and its worst defensive rating, and Denver ranks 22nd on defense. Nuggets games average 239.7 points and Suns games 246.0. Nikola Joki\u0107 is averaging 25.0 points, 11.7 rebounds and 10.3 assists. Denver -4.5 is fair given the rest gap, and the total looks short.",
+   "blurb": "Denver is 2-1 after a 104-91 win in New Orleans, and Phoenix is 1-1 after a 125-114 loss in Oklahoma City. The Suns have three days of rest while Denver has one and crossed two time zones. Phoenix has the league's best offensive rating and its worst defensive rating, and Denver ranks 22nd on defense. Nuggets games average 239.7 points and Suns games 246.0. Nikola Jokić is averaging 25.0 points, 11.7 rebounds and 10.3 assists. Denver -4.5 is fair given the rest gap, and the total looks short.",
    "date": "2026-10-30",
    "home": "PHX",
    "injuries": [
@@ -3449,14 +3449,14 @@
       "odds": -106
      },
      {
-      "label": "Nikola Joki\u0107 over 9.5 assists",
+      "label": "Nikola Jokić over 9.5 assists",
       "line": 9.5,
       "oddID": "assists-NIKOLA_JOKIC_1_NBA-game-ou-over",
       "odds": -102
      }
     ],
     "price": 285,
-    "why": "A shootout against the league's worst defense is the best setting there is for Joki\u0107's passing: he is averaging 10.3 assists in 37.7 minutes, and Phoenix will give up open looks. If the over hits, his teammates are making the shots he sets up."
+    "why": "A shootout against the league's worst defense is the best setting there is for Jokić's passing: he is averaging 10.3 assists in 37.7 minutes, and Phoenix will give up open looks. If the over hits, his teammates are making the shots he sets up."
    },
    "single": {
     "label": "Over 231.5",
@@ -7372,7 +7372,7 @@
     "GSW first home game after trip"
    ],
    "away": "LAL",
-   "blurb": "The Lakers are 3-1 after a 103-87 win over the Clippers, and they beat Golden State 127-105 on opening night, when Luka Don\u010di\u0107 and rookie Yaxel Lendeborg traded words and Lendeborg drew a technical, per NBC Sports Bay Area. Golden State is 2-2 and home after a three-game trip. Both offenses rank top four and both teams' games average 238. The Lakers play their third game in four nights. Luka is averaging 38.7 points and Lendeborg 25.2. Lakers -2.5 is nearly even; the grudge and the defenses lean to scoring.",
+   "blurb": "The Lakers are 3-1 after a 103-87 win over the Clippers, and they beat Golden State 127-105 on opening night, when Luka Dončić and rookie Yaxel Lendeborg traded words and Lendeborg drew a technical, per NBC Sports Bay Area. Golden State is 2-2 and home after a three-game trip. Both offenses rank top four and both teams' games average 238. The Lakers play their third game in four nights. Luka is averaging 38.7 points and Lendeborg 25.2. Lakers -2.5 is nearly even; the grudge and the defenses lean to scoring.",
    "date": "2026-10-30",
    "home": "GSW",
    "injuries": [
@@ -7408,7 +7408,7 @@
     {
      "impact": "Medium",
      "note": "Away from the team indefinitely; the Warriors are short a big.",
-     "player": "Kristaps Porzi\u0146\u0123is",
+     "player": "Kristaps Porziņģis",
      "status": "Out",
      "team": "GSW"
     },
@@ -7423,7 +7423,7 @@
    "parlay": {
     "legs": [
      {
-      "label": "Luka Don\u010di\u0107 over 33.5 points",
+      "label": "Luka Dončić over 33.5 points",
       "line": 33.5,
       "oddID": "points-LUKA_DONCIC_1_NBA-game-ou-over",
       "odds": -128
@@ -9447,7 +9447,7 @@
     {
      "impact": "Medium",
      "note": "Foot issue; Charlotte would lose its backup playmaker and 4.2 assists a night.",
-     "player": "Dennis Schr\u00f6der",
+     "player": "Dennis Schröder",
      "stats": "12.8 pts, 4.2 ast this season",
      "status": "Questionable",
      "team": "CHA"
@@ -13048,24 +13048,24 @@
  },
  "players": {
   "Beekie": {
+   "text": "Beekie plays nothing but parlays: 11 settled tickets of about three legs, eight of them +300 or longer, and those long shots are 0-8. He is still up about 195 because his one hit was a 20-unit ticket with the 5x Mega Bonus that paid about 265, while every other stake sat at 5. All 22 props are points (7-15, mostly guards, Booker and Siakam favorites), and the totals he tacks on are 2-9, the clearest leak. His alt legs buy safer numbers and go 5-4. Read: a lottery-ticket points-prop builder who would cash more with two legs and no totals.",
    "settled": 11,
-   "text": "Beekie only plays parlays: all 11 settled bets, about three legs each, and eight of them +300 or longer, which went 0-8. The lone hit was big enough to keep him up about 195 despite a 1-10 record, on tiny stakes near 6. Every prop he plays is points (7-15 on those legs, mostly guards, with Booker and Siakam his favorites), and the totals he tacks on are 2-9, the clearest leak. He buys safer alt numbers (5-4) and spends boosts on parlays averaging +429, 1-3. Read: a lottery-ticket points-prop builder who would cash more with two legs and no totals.",
-   "updated": "2026-11-15T13:54:27Z"
+   "updated": "2026-11-16T14:05:47Z"
   },
   "Kev": {
+   "text": "Kev is the pool's steady road-spread grinder: seven of his nine settled bets are singles, almost all priced between -130 and +130, and he is 6-3 and up about 55. Spread legs carry him at 5-2, and seven of nine bets ride the road team. Every alt line he has used bought a safer number (3-1), his weekly boosts went on short-priced sides (2-1), and stakes sit near 29, usually placed about six hours before tip. Props are a light side dish at 2-1 and he has copied Claude once. What works is discipline; nothing is leaking yet. Read: a grinder who buys safety.",
    "settled": 9,
-   "text": "Kev is the steady hand of the group: seven of his nine settled bets are singles, nearly all priced between -130 and +130, and he is 6-3 and up about 55. Spreads are the core (5-2 on spread legs), almost always on the road team (7 of 9 bets), and when he touches an alt line it is to buy a safer number, 3-1 on those. His boosts go on short-priced sides, 2-1, stakes hold around 29, and bets land about six hours before tip. Props are a light side dish at 2-1, and he has copied Claude once. Read: a grinder who buys safety, and it is paying.",
-   "updated": "2026-11-15T13:54:27Z"
+   "updated": "2026-11-16T14:05:47Z"
   },
   "Mio": {
+   "text": "Mio is the sharpest bettor in the pool: 16-2 and up about 300, nearly all on two-leg parlays where 31 of 33 legs have cashed. The engine is alt lines on 91% of legs, always buying a safer number, which parks his tickets in the -131 to -199 band (11-1 there). Combo-stat overs drive the props (12 of 17 legs, 14-2 overall), while his spreads (9-0) and totals (5-0) are spotless, with Memphis and Boston backed most. Boosts on short parlays are 4-0 and stakes run around 26. Read: a grinder who buys safety, stacking near-locks two at a time.",
    "settled": 18,
-   "text": "Mio is the sharpest bettor in the pool: 16-2 and up about 300, almost entirely on two-leg parlays where 31 of 33 legs have hit. The engine is alt lines, used on 91% of legs and always to buy a safer number, which keeps his tickets in the -131 to -199 band (11-1 there). Combo-stat overs drive his props (12 of 17, 14-2 overall), and his spreads (9-0) and totals (5-0) are spotless, with Memphis and Boston backed most. Boosts on short parlays are 4-0 and stakes sit around 26. Read: a grinder who buys safety, stacking near-locks two at a time.",
-   "updated": "2026-11-15T13:54:27Z"
+   "updated": "2026-11-16T14:05:47Z"
   },
   "Sulliver": {
+   "text": "Sulliver leans on Claude more than anyone: five of his eight settled bets copied Claude's pick, and it has been a rough start at 1-7, down about 97. Player-prop overs are his main market (2-6 on those legs, split between guards and forwards, SGA twice), singles are 1-4 and parlays 0-3, including two boosted tickets near +400 that missed. His three alt-line legs are 0-3. Stakes average about 15 but have reached 43, and he bets early, roughly nine hours before tip. Read: a star-overs bettor still finding his own style; near-even singles are the piece to build on.",
    "settled": 8,
-   "text": "Sulliver leans on Claude: five of his eight settled bets copied Claude's pick, and it has been a rough start at 1-7, down about 97. Player-prop overs are his main market (2-6 on those legs, guards and forwards about evenly, with SGA bet twice), his singles are 1-4 and his parlays 0-3, including two boosted tickets around +400. His alt-line tries are 0-3. Stakes average about 15 but have reached 43, and he bets early, about nine hours before tip. Read: a star-overs bettor still finding his own style; the near-even singles are the version to build on.",
-   "updated": "2026-11-15T13:54:27Z"
+   "updated": "2026-11-16T14:05:47Z"
   }
  },
  "results": {
@@ -15277,11 +15277,11 @@
  },
  "winOdds": {
   "odds": {
+   "Kev": 24,
    "Beekie": 47,
-   "Kev": 25,
    "Mio": 13,
-   "Sulliver": 15
+   "Sulliver": 16
   },
-  "updated": "2026-11-15T13:54:27Z"
+  "updated": "2026-11-16T14:05:47Z"
  }
 }
