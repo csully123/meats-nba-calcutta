@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T14:36:01.456026+00:00",
+ "updated": "2026-11-16T11:23:32.429384+00:00",
  "players": {
   "AJ Dybantsa": {
    "team": "WAS",
@@ -1193,10 +1193,6 @@
    "team": "MIA",
    "pos": "F"
   },
-  "Keshon Gilbert": {
-   "team": "ATL",
-   "pos": "G"
-  },
   "Kevin Durant": {
    "team": "HOU",
    "pos": "F"
@@ -1691,6 +1687,10 @@
   },
   "RJ Barrett": {
    "team": "TOR",
+   "pos": "F"
+  },
+  "Rafael Castro": {
+   "team": "ATL",
    "pos": "F"
   },
   "Rasheer Fleming": {
