@@ -5158,7 +5158,7 @@
   "homeColor": "552583",
   "homeLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lal.png",
   "homeName": "Los Angeles Lakers",
-  "homeScore": 117,
+  "homeScore": 118,
   "id": "401910005",
   "label": null,
   "multiplier": 1,
@@ -5168,7 +5168,7 @@
   "spreadUpdated": "2026-11-18T00:54:34Z",
   "stage": "regular",
   "start": "2026-11-18T04:00:00Z",
-  "status": "inprogress"
+  "status": "final"
  },
  "401910006": {
   "away": "UTA",
@@ -5209,9 +5209,9 @@
   "label": null,
   "multiplier": 1,
   "series": null,
-  "spreadHome": -5.5,
+  "spreadHome": -4.5,
   "spreadSource": "DraftKings",
-  "spreadUpdated": "2026-11-18T02:10:52Z",
+  "spreadUpdated": "2026-11-18T08:19:51Z",
   "stage": "regular",
   "start": "2026-11-19T00:00:00Z",
   "status": "scheduled"
@@ -5324,9 +5324,9 @@
   "label": null,
   "multiplier": 1,
   "series": null,
-  "spreadHome": -7.5,
+  "spreadHome": -6.5,
   "spreadSource": "ESPN",
-  "spreadUpdated": "2026-11-18T04:27:41Z",
+  "spreadUpdated": "2026-11-18T08:19:51Z",
   "stage": "regular",
   "start": "2026-11-19T00:30:00Z",
   "status": "scheduled"
@@ -5416,9 +5416,9 @@
   "label": null,
   "multiplier": 1,
   "series": null,
-  "spreadHome": -5.5,
+  "spreadHome": -6.5,
   "spreadSource": "ESPN",
-  "spreadUpdated": "2026-11-18T03:20:53Z",
+  "spreadUpdated": "2026-11-18T08:19:51Z",
   "stage": "regular",
   "start": "2026-11-19T01:00:00Z",
   "status": "scheduled"
@@ -5439,9 +5439,9 @@
   "label": null,
   "multiplier": 1,
   "series": null,
-  "spreadHome": -11.5,
+  "spreadHome": -10.5,
   "spreadSource": "ESPN",
-  "spreadUpdated": "2026-11-18T06:59:40Z",
+  "spreadUpdated": "2026-11-18T08:19:51Z",
   "stage": "regular",
   "start": "2026-11-19T03:00:00Z",
   "status": "scheduled"
