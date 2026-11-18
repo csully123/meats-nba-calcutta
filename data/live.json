@@ -1,4 +1,118 @@
 {
- "updated": "2026-11-18T00:31:57+00:00",
- "games": {}
+ "updated": "2026-11-18T00:47:04+00:00",
+ "games": {
+  "2026-11-17|NYK at TOR": {
+   "espnId": "401910002",
+   "status": "inprogress",
+   "period": 1,
+   "clock": "7:27",
+   "detail": "7:27 - 1st",
+   "home": "TOR",
+   "away": "NYK",
+   "homeScore": 11,
+   "awayScore": 8,
+   "players": {
+    "OG Anunoby": {
+     "pts": 2,
+     "reb": 0,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 4
+    },
+    "Karl-Anthony Towns": {
+     "pts": 2,
+     "reb": 1,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 4
+    },
+    "Josh Hart": {
+     "pts": 0,
+     "reb": 0,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 4
+    },
+    "Mikal Bridges": {
+     "pts": 4,
+     "reb": 1,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 1,
+     "min": 4
+    },
+    "Jalen Brunson": {
+     "pts": 0,
+     "reb": 1,
+     "ast": 1,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 4
+    },
+    "RJ Barrett": {
+     "pts": 0,
+     "reb": 2,
+     "ast": 2,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 4
+    },
+    "Scottie Barnes": {
+     "pts": 5,
+     "reb": 0,
+     "ast": 0,
+     "threes": 1,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 4
+    },
+    "Collin Murray-Boyles": {
+     "pts": 2,
+     "reb": 0,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 4
+    },
+    "Immanuel Quickley": {
+     "pts": 2,
+     "reb": 0,
+     "ast": 2,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 4
+    },
+    "Ja'Kobe Walter": {
+     "pts": 0,
+     "reb": 0,
+     "ast": 0,
+     "threes": 0,
+     "stl": 1,
+     "blk": 0,
+     "to": 0,
+     "min": 4
+    }
+   }
+  }
+ }
 }
