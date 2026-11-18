@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T08:22:25.998685+00:00",
+ "updated": "2026-11-18T04:27:41.358223+00:00",
  "players": {
   "AJ Dybantsa": {
    "team": "WAS",
@@ -344,6 +344,10 @@
   "Charles Bassey": {
    "team": "GSW",
    "pos": "C"
+  },
+  "Chaz Lanier": {
+   "team": "DET",
+   "pos": "G"
   },
   "Chet Holmgren": {
    "team": "OKC",
@@ -1024,6 +1028,10 @@
   "Johnny Furphy": {
    "team": "IND",
    "pos": "G"
+  },
+  "Jonas Aidoo": {
+   "team": "UTA",
+   "pos": "C"
   },
   "Jonathan Isaac": {
    "team": "ORL",
