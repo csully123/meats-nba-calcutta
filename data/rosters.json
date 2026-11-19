@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T04:27:41.358223+00:00",
+ "updated": "2026-11-19T01:46:29.693938+00:00",
  "players": {
   "AJ Dybantsa": {
    "team": "WAS",
@@ -2087,6 +2087,10 @@
   },
   "Zach LaVine": {
    "team": "SAC",
+   "pos": "G"
+  },
+  "Zack Austin": {
+   "team": "CLE",
    "pos": "G"
   },
   "Zeke Nnaji": {
