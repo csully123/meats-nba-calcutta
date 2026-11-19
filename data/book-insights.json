@@ -14898,6 +14898,16 @@
    },
    "single": "win"
   },
+  "2026-11-18": {
+   "parlay": "win",
+   "personal": {
+    "Beekie": "loss",
+    "Kev": "win",
+    "Mio": "win",
+    "Sulliver": "loss"
+   },
+   "single": "win"
+  },
   "games": {
    "07DHJxFV7qO1nHJkQYvi": {
     "parlay": {
@@ -15106,6 +15116,22 @@
      ]
     }
    },
+   "7ugmOV11uFXrEFsicgl2": {
+    "parlay": {
+     "date": "2026-11-18",
+     "r": "loss",
+     "teams": [
+      "MEM"
+     ]
+    },
+    "single": {
+     "date": "2026-11-18",
+     "r": "win",
+     "teams": [
+      "MEM"
+     ]
+    }
+   },
    "7w0hVzN6bzNLlUGDNbUl": {
     "parlay": {
      "date": "2026-11-10",
@@ -15244,6 +15270,38 @@
      ]
     }
    },
+   "Bvqi2PKKuzCJzxYGeUfU": {
+    "parlay": {
+     "date": "2026-11-18",
+     "r": "loss",
+     "teams": [
+      "LAL"
+     ]
+    },
+    "single": {
+     "date": "2026-11-18",
+     "r": "loss",
+     "teams": [
+      "LAL"
+     ]
+    }
+   },
+   "CAP9fEQevONdESUaleN1": {
+    "parlay": {
+     "date": "2026-11-18",
+     "r": "loss",
+     "teams": [
+      "MIA"
+     ]
+    },
+    "single": {
+     "date": "2026-11-18",
+     "r": "loss",
+     "teams": [
+      "MIA"
+     ]
+    }
+   },
    "CQNL3A3h6mu0wQjOr7Ir": {
     "parlay": {
      "date": "2026-11-04",
@@ -15273,6 +15331,22 @@
      "r": "win",
      "teams": [
       "MIN"
+     ]
+    }
+   },
+   "EL8e5V0RgFacUFGFwt3J": {
+    "parlay": {
+     "date": "2026-11-18",
+     "r": "loss",
+     "teams": [
+      "NOP"
+     ]
+    },
+    "single": {
+     "date": "2026-11-18",
+     "r": "loss",
+     "teams": [
+      "NOP"
      ]
     }
    },
@@ -15886,6 +15960,22 @@
      ]
     }
    },
+   "TDewvJKGAJVXJ1ZpVAAR": {
+    "parlay": {
+     "date": "2026-11-18",
+     "r": "loss",
+     "teams": [
+      "HOU"
+     ]
+    },
+    "single": {
+     "date": "2026-11-18",
+     "r": "loss",
+     "teams": [
+      "HOU"
+     ]
+    }
+   },
    "TI1m4C9SiNRwD7Ho7yJc": {
     "parlay": {
      "date": "2026-11-02",
@@ -16286,6 +16376,22 @@
      "teams": []
     }
    },
+   "cuEG6mOMNUNF5Tt8av9o": {
+    "parlay": {
+     "date": "2026-11-18",
+     "r": "loss",
+     "teams": [
+      "CHI"
+     ]
+    },
+    "single": {
+     "date": "2026-11-18",
+     "r": "loss",
+     "teams": [
+      "CHI"
+     ]
+    }
+   },
    "cyryOmeXfq9UGiG2DjCm": {
     "parlay": {
      "date": "2026-11-02",
@@ -16410,6 +16516,54 @@
      ]
     }
    },
+   "iIHyUVBCPvy1DyAFhyks": {
+    "parlay": {
+     "date": "2026-11-18",
+     "r": "win",
+     "teams": [
+      "PHX"
+     ]
+    },
+    "single": {
+     "date": "2026-11-18",
+     "r": "win",
+     "teams": [
+      "PHX"
+     ]
+    }
+   },
+   "iYk6LNf95xVdkjW53MEz": {
+    "parlay": {
+     "date": "2026-11-18",
+     "r": "win",
+     "teams": [
+      "DAL"
+     ]
+    },
+    "single": {
+     "date": "2026-11-18",
+     "r": "win",
+     "teams": [
+      "GSW"
+     ]
+    }
+   },
+   "j0nltZe9grJvJRq0DZSH": {
+    "parlay": {
+     "date": "2026-11-18",
+     "r": "loss",
+     "teams": [
+      "ORL"
+     ]
+    },
+    "single": {
+     "date": "2026-11-18",
+     "r": "win",
+     "teams": [
+      "ORL"
+     ]
+    }
+   },
    "jCds5tUQJXpIjhanWBoO": {
     "parlay": {
      "date": "2026-10-30",
@@ -16456,6 +16610,22 @@
      "r": "loss",
      "teams": [
       "DEN"
+     ]
+    }
+   },
+   "kF6oVG1eYadvoZIoaPTO": {
+    "parlay": {
+     "date": "2026-11-18",
+     "r": "win",
+     "teams": [
+      "OKC"
+     ]
+    },
+    "single": {
+     "date": "2026-11-18",
+     "r": "loss",
+     "teams": [
+      "OKC"
      ]
     }
    },
@@ -16854,6 +17024,36 @@
      "teams": [
       "WAS"
      ]
+    }
+   },
+   "vIL97LMwECNVOMXCwRJ1": {
+    "parlay": {
+     "date": "2026-11-18",
+     "r": "win",
+     "teams": [
+      "WAS"
+     ]
+    },
+    "single": {
+     "date": "2026-11-18",
+     "r": "win",
+     "teams": [
+      "WAS"
+     ]
+    }
+   },
+   "vIdiQ7QpCnPFNAfVmODU": {
+    "parlay": {
+     "date": "2026-11-18",
+     "r": "loss",
+     "teams": [
+      "DEN"
+     ]
+    },
+    "single": {
+     "date": "2026-11-18",
+     "r": "win",
+     "teams": []
     }
    },
    "vNchQGPNSIcmnyk6zzy8": {
