@@ -1,6 +1,6 @@
 {
- "backedUpAt": "2026-11-18T09:03:33Z",
- "count": 50,
+ "backedUpAt": "2026-11-19T09:03:45Z",
+ "count": 52,
  "wagers": {
   "0DMEKNttNFZJhyWOJRg8": {
    "_updated": "2026-11-05T08:27:06.083944Z",
@@ -2205,6 +2205,64 @@
    "stake": 5,
    "status": "loss"
   },
+  "avbApxYOum2zYlQoK5Ym": {
+   "_updated": "2026-11-19T08:32:22.453551Z",
+   "boost": null,
+   "createdAt": "2026-11-18T20:29:44.758Z",
+   "eventID": "CAP9fEQevONdESUaleN1",
+   "game": "MIL at MIA",
+   "gameDate": "2026-11-18",
+   "gameStart": "2026-11-19T00:00:00.000Z",
+   "legResults": [
+    "loss",
+    "loss"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "home",
+     "line": -19.5,
+     "name": "Spread",
+     "oddID": "points-home-game-sp-home",
+     "odds": 192,
+     "opposing": "points-away-game-sp-away",
+     "period": "game",
+     "player": null,
+     "short": "MIA -19.5 (alt)",
+     "side": "home",
+     "stat": "points",
+     "team": "MIA"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "GIANNIS_ANTETOKOUNMPO_1_NBA",
+     "line": 59.5,
+     "name": "Giannis Antetokounmpo Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-GIANNIS_ANTETOKOUNMPO_1_NBA-game-ou-over",
+     "odds": 500,
+     "opposing": "points+rebounds+assists-GIANNIS_ANTETOKOUNMPO_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "GIANNIS_ANTETOKOUNMPO_1_NBA",
+     "short": "Giannis Antetokounmpo Pts + Reb + Ast Over 59.5 (alt)",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "MIA"
+    }
+   ],
+   "net": -20,
+   "payout": 0,
+   "placedAt": "2026-11-18T20:29:43.672Z",
+   "player": "Mio",
+   "series": null,
+   "settledAt": "2026-11-19T08:32:22Z",
+   "stage": "regular",
+   "stake": 20,
+   "status": "loss"
+  },
   "dpel7mf20wKde3HPi0pk": {
    "_updated": "2026-10-29T08:12:11.777598Z",
    "boost": null,
@@ -2243,6 +2301,82 @@
    "settledAt": "2026-10-29T08:12:10Z",
    "stage": "regular",
    "stake": 5,
+   "status": "loss"
+  },
+  "fAMIch9LTpaRn74Td13g": {
+   "_updated": "2026-11-19T08:32:22.620469Z",
+   "boost": null,
+   "createdAt": "2026-11-18T18:20:42.452Z",
+   "eventID": "7ugmOV11uFXrEFsicgl2",
+   "game": "MEM at CLE",
+   "gameDate": "2026-11-18",
+   "gameStart": "2026-11-19T00:00:00.000Z",
+   "legResults": [
+    "loss",
+    "win",
+    "loss"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "line": 242.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-under",
+     "odds": -194,
+     "opposing": "points-all-game-ou-over",
+     "period": "game",
+     "player": null,
+     "short": "Game Under 242.5 (alt)",
+     "side": "under",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "CAMERON_BOOZER_1_NBA",
+     "line": 22.5,
+     "name": "Cameron Boozer Points",
+     "oddID": "points-CAMERON_BOOZER_1_NBA-game-ou-under",
+     "odds": -215,
+     "opposing": "points-CAMERON_BOOZER_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "CAMERON_BOOZER_1_NBA",
+     "short": "Cameron Boozer Points Under 22.5 (alt)",
+     "side": "under",
+     "stat": "points",
+     "team": "MEM"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DONOVAN_MITCHELL_1_NBA",
+     "line": 29.5,
+     "name": "Donovan Mitchell Points",
+     "oddID": "points-DONOVAN_MITCHELL_1_NBA-game-ou-under",
+     "odds": -215,
+     "opposing": "points-DONOVAN_MITCHELL_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "DONOVAN_MITCHELL_1_NBA",
+     "short": "Donovan Mitchell Points Under 29.5 (alt)",
+     "side": "under",
+     "stat": "points",
+     "team": "CLE"
+    }
+   ],
+   "net": -10,
+   "payout": 0,
+   "placedAt": "2026-11-18T18:20:41.095Z",
+   "player": "Beekie",
+   "series": null,
+   "settledAt": "2026-11-19T08:32:22Z",
+   "stage": "regular",
+   "stake": 10,
    "status": "loss"
   },
   "g4QBHJkF8qZ12jkYL9Ot": {
