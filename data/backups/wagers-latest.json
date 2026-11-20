@@ -1,6 +1,6 @@
 {
- "backedUpAt": "2026-11-19T09:03:45Z",
- "count": 52,
+ "backedUpAt": "2026-11-20T09:02:18Z",
+ "count": 53,
  "wagers": {
   "0DMEKNttNFZJhyWOJRg8": {
    "_updated": "2026-11-05T08:27:06.083944Z",
@@ -476,6 +476,64 @@
    "settledAt": "2026-11-07T08:12:13Z",
    "stage": "cup",
    "stake": 43.45,
+   "status": "win"
+  },
+  "BKvYu8SFxWa50myUvgyh": {
+   "_updated": "2026-11-20T08:28:26.833771Z",
+   "boost": null,
+   "createdAt": "2026-11-19T14:59:41.939Z",
+   "eventID": "iratTYXaAa01WfPr3h3A",
+   "game": "GSW at MEM",
+   "gameDate": "2026-11-19",
+   "gameStart": "2026-11-20T01:00:00.000Z",
+   "legResults": [
+    "win",
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "home",
+     "line": -3.5,
+     "name": "Spread",
+     "oddID": "points-home-game-sp-home",
+     "odds": -156,
+     "opposing": "points-away-game-sp-away",
+     "period": "game",
+     "player": null,
+     "short": "MEM -3.5 (alt)",
+     "side": "home",
+     "stat": "points",
+     "team": "MEM"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "CAMERON_BOOZER_1_NBA",
+     "line": 24.5,
+     "name": "Cameron Boozer Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-CAMERON_BOOZER_1_NBA-game-ou-over",
+     "odds": -460,
+     "opposing": "points+rebounds+assists-CAMERON_BOOZER_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "CAMERON_BOOZER_1_NBA",
+     "short": "Cameron Boozer Pts + Reb + Ast Over 24.5 (alt)",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "MEM"
+    }
+   ],
+   "net": 99.77,
+   "payout": 199.77,
+   "placedAt": "2026-11-19T14:59:41.661Z",
+   "player": "Mio",
+   "series": null,
+   "settledAt": "2026-11-20T08:28:26Z",
+   "stage": "regular",
+   "stake": 100,
    "status": "win"
   },
   "BfoHaZbpsXwVE7DF6YwR": {
