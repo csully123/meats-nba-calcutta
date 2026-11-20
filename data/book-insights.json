@@ -15366,6 +15366,16 @@
    },
    "single": "win"
   },
+  "2026-11-19": {
+   "parlay": "win",
+   "personal": {
+    "Beekie": "win",
+    "Kev": "win",
+    "Mio": "win",
+    "Sulliver": "win"
+   },
+   "single": "loss"
+  },
   "games": {
    "07DHJxFV7qO1nHJkQYvi": {
     "parlay": {
@@ -16588,6 +16598,22 @@
      ]
     }
    },
+   "VAht06ByC7hs5p3qVcC6": {
+    "parlay": {
+     "date": "2026-11-19",
+     "r": "win",
+     "teams": [
+      "POR"
+     ]
+    },
+    "single": {
+     "date": "2026-11-19",
+     "r": "win",
+     "teams": [
+      "POR"
+     ]
+    }
+   },
    "VFlfBUxippPN99LBUVl9": {
     "parlay": {
      "date": "2026-11-01",
@@ -16631,6 +16657,22 @@
      "r": "win",
      "teams": [
       "OKC"
+     ]
+    }
+   },
+   "W0lQX1faDfDcS7YEtfdP": {
+    "parlay": {
+     "date": "2026-11-19",
+     "r": "loss",
+     "teams": [
+      "SAS"
+     ]
+    },
+    "single": {
+     "date": "2026-11-19",
+     "r": "loss",
+     "teams": [
+      "SAS"
      ]
     }
    },
@@ -16882,6 +16924,22 @@
      ]
     }
    },
+   "dXW4D8qAZoq6G8cD4lr7": {
+    "parlay": {
+     "date": "2026-11-19",
+     "r": "win",
+     "teams": [
+      "NYK"
+     ]
+    },
+    "single": {
+     "date": "2026-11-19",
+     "r": "loss",
+     "teams": [
+      "NYK"
+     ]
+    }
+   },
    "ePn0Tuu913UkHwcd3QEF": {
     "parlay": {
      "date": "2026-11-10",
@@ -17000,6 +17058,23 @@
     },
     "single": {
      "date": "2026-11-18",
+     "r": "win",
+     "teams": [
+      "GSW"
+     ]
+    }
+   },
+   "iratTYXaAa01WfPr3h3A": {
+    "parlay": {
+     "date": "2026-11-19",
+     "r": "win",
+     "teams": [
+      "MEM",
+      "GSW"
+     ]
+    },
+    "single": {
+     "date": "2026-11-19",
      "r": "win",
      "teams": [
       "GSW"
