@@ -877,9 +877,9 @@
   "label": "NBA Cup",
   "multiplier": 1,
   "series": null,
-  "spreadHome": -3.5,
+  "spreadHome": -2.5,
   "spreadSource": "ESPN",
-  "spreadUpdated": "2026-11-20T01:59:45Z",
+  "spreadUpdated": "2026-11-20T11:50:19Z",
   "stage": "cup",
   "start": "2026-11-21T01:00:00Z",
   "status": "scheduled"
