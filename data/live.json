@@ -1,66 +1,66 @@
 {
- "updated": "2026-11-20T01:52:50+00:00",
+ "updated": "2026-11-20T02:39:26+00:00",
  "games": {
   "2026-11-19|GSW at MEM": {
    "espnId": "401910019",
    "status": "inprogress",
-   "period": 2,
-   "clock": "6:23",
-   "detail": "6:23 - 2nd",
+   "period": 3,
+   "clock": "7:05",
+   "detail": "7:05 - 3rd",
    "home": "MEM",
    "away": "GSW",
-   "homeScore": 45,
-   "awayScore": 30,
+   "homeScore": 73,
+   "awayScore": 59,
    "players": {
     "Gui Santos": {
-     "pts": 2,
-     "reb": 1,
+     "pts": 7,
+     "reb": 2,
      "ast": 0,
      "threes": 0,
      "stl": 0,
      "blk": 0,
-     "to": 1,
-     "min": 8
+     "to": 3,
+     "min": 17
     },
     "Yaxel Lendeborg": {
-     "pts": 2,
-     "reb": 1,
-     "ast": 1,
+     "pts": 6,
+     "reb": 5,
+     "ast": 5,
      "threes": 0,
-     "stl": 0,
+     "stl": 1,
      "blk": 1,
-     "to": 1,
-     "min": 14
+     "to": 2,
+     "min": 21
     },
     "Charles Bassey": {
      "pts": 9,
-     "reb": 6,
-     "ast": 0,
-     "threes": 0,
-     "stl": 0,
-     "blk": 0,
-     "to": 1,
-     "min": 8
-    },
-    "De'Anthony Melton": {
-     "pts": 0,
-     "reb": 0,
-     "ast": 2,
-     "threes": 0,
-     "stl": 0,
-     "blk": 1,
-     "to": 2,
-     "min": 9
-    },
-    "Brandin Podziemski": {
-     "pts": 5,
-     "reb": 3,
+     "reb": 9,
      "ast": 1,
      "threes": 0,
      "stl": 0,
+     "blk": 1,
+     "to": 1,
+     "min": 17
+    },
+    "De'Anthony Melton": {
+     "pts": 5,
+     "reb": 0,
+     "ast": 3,
+     "threes": 1,
+     "stl": 1,
+     "blk": 1,
+     "to": 2,
+     "min": 17
+    },
+    "Brandin Podziemski": {
+     "pts": 13,
+     "reb": 3,
+     "ast": 1,
+     "threes": 0,
+     "stl": 1,
      "blk": 0,
      "to": 2,
-     "min": 14
+     "min": 21
     },
     "Georges Niang": {
      "pts": 2,
@@ -84,23 +84,23 @@
     },
     "Al Horford": {
      "pts": 3,
-     "reb": 1,
+     "reb": 2,
      "ast": 1,
      "threes": 0,
      "stl": 1,
      "blk": 0,
-     "to": 1,
-     "min": 9
+     "to": 2,
+     "min": 12
     },
     "Gary Payton II": {
-     "pts": 0,
-     "reb": 0,
-     "ast": 0,
+     "pts": 2,
+     "reb": 1,
+     "ast": 1,
      "threes": 0,
      "stl": 2,
      "blk": 0,
-     "to": 0,
-     "min": 5
+     "to": 1,
+     "min": 11
     },
     "LJ Cryer": {
      "pts": 3,
@@ -113,71 +113,71 @@
      "min": 4
     },
     "Will Richard": {
-     "pts": 4,
-     "reb": 1,
-     "ast": 0,
-     "threes": 0,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 6
-    },
-    "Taylor Hendricks": {
-     "pts": 4,
-     "reb": 0,
-     "ast": 0,
-     "threes": 0,
-     "stl": 3,
-     "blk": 0,
-     "to": 0,
-     "min": 9
-    },
-    "Cedric Coward": {
-     "pts": 10,
-     "reb": 1,
-     "ast": 2,
-     "threes": 2,
-     "stl": 0,
-     "blk": 1,
-     "to": 1,
-     "min": 9
-    },
-    "Cameron Boozer": {
-     "pts": 11,
-     "reb": 1,
-     "ast": 1,
-     "threes": 0,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 9
-    },
-    "Jaylen Wells": {
-     "pts": 5,
-     "reb": 4,
+     "pts": 9,
+     "reb": 2,
      "ast": 0,
      "threes": 1,
      "stl": 0,
      "blk": 0,
      "to": 0,
-     "min": 8
+     "min": 12
     },
-    "Cam Spencer": {
-     "pts": 0,
+    "Taylor Hendricks": {
+     "pts": 6,
      "reb": 0,
-     "ast": 6,
+     "ast": 0,
+     "threes": 0,
+     "stl": 3,
+     "blk": 0,
+     "to": 1,
+     "min": 13
+    },
+    "Cedric Coward": {
+     "pts": 16,
+     "reb": 4,
+     "ast": 4,
+     "threes": 4,
+     "stl": 1,
+     "blk": 1,
+     "to": 1,
+     "min": 19
+    },
+    "Cameron Boozer": {
+     "pts": 16,
+     "reb": 3,
+     "ast": 4,
      "threes": 0,
      "stl": 0,
      "blk": 0,
+     "to": 2,
+     "min": 20
+    },
+    "Jaylen Wells": {
+     "pts": 13,
+     "reb": 7,
+     "ast": 0,
+     "threes": 3,
+     "stl": 0,
+     "blk": 0,
+     "to": 1,
+     "min": 19
+    },
+    "Cam Spencer": {
+     "pts": 5,
+     "reb": 1,
+     "ast": 9,
+     "threes": 1,
+     "stl": 1,
+     "blk": 0,
      "to": 0,
-     "min": 10
+     "min": 19
     },
     "Jerami Grant": {
      "pts": 3,
      "reb": 0,
      "ast": 0,
      "threes": 1,
-     "stl": 1,
+     "stl": 0,
      "blk": 0,
      "to": 1,
      "min": 5
@@ -190,70 +190,70 @@
      "stl": 0,
      "blk": 0,
      "to": 1,
-     "min": 8
+     "min": 9
     },
     "Isaiah Stewart": {
-     "pts": 0,
-     "reb": 0,
+     "pts": 2,
+     "reb": 2,
      "ast": 0,
      "threes": 0,
      "stl": 0,
      "blk": 0,
      "to": 0,
-     "min": 6
+     "min": 9
     },
     "Quinten Post": {
      "pts": 0,
      "reb": 0,
      "ast": 0,
      "threes": 0,
-     "stl": 0,
+     "stl": 1,
      "blk": 0,
-     "to": 1,
-     "min": 3
+     "to": 2,
+     "min": 6
     },
     "Jahmai Mashack": {
      "pts": 0,
      "reb": 3,
      "ast": 0,
      "threes": 0,
-     "stl": 0,
+     "stl": 1,
      "blk": 0,
      "to": 0,
-     "min": 10
+     "min": 11
     },
     "Javon Small": {
      "pts": 3,
      "reb": 2,
-     "ast": 2,
+     "ast": 3,
      "threes": 1,
      "stl": 0,
      "blk": 0,
-     "to": 2,
-     "min": 9
+     "to": 3,
+     "min": 12
     }
    }
   },
   "2026-11-19|POR at MIL": {
    "espnId": "401910020",
    "status": "inprogress",
-   "period": 2,
-   "clock": "7:45",
-   "detail": "7:45 - 2nd",
+   "period": 3,
+   "clock": "9:24",
+   "detail": "9:24 - 3rd",
    "home": "MIL",
    "away": "POR",
-   "homeScore": 34,
-   "awayScore": 38,
+   "homeScore": 68,
+   "awayScore": 63,
    "players": {
     "Toumani Camara": {
      "pts": 0,
-     "reb": 1,
-     "ast": 2,
+     "reb": 2,
+     "ast": 3,
      "threes": 0,
      "stl": 0,
      "blk": 0,
      "to": 0,
-     "min": 9
+     "min": 19
     },
     "Donovan Clingan": {
      "pts": 3,
@@ -262,38 +262,48 @@
      "threes": 0,
      "stl": 1,
      "blk": 0,
-     "to": 0,
-     "min": 11
+     "to": 2,
+     "min": 16
     },
     "Damian Lillard": {
-     "pts": 8,
-     "reb": 1,
+     "pts": 22,
+     "reb": 2,
      "ast": 0,
-     "threes": 2,
+     "threes": 4,
      "stl": 0,
      "blk": 0,
      "to": 0,
-     "min": 9
+     "min": 19
     },
     "Jayson Kent": {
      "pts": 2,
      "reb": 1,
-     "ast": 1,
+     "ast": 2,
      "threes": 0,
      "stl": 1,
      "blk": 0,
      "to": 2,
-     "min": 10
+     "min": 12
     },
     "Sidy Cissoko": {
-     "pts": 7,
-     "reb": 1,
+     "pts": 10,
+     "reb": 3,
      "ast": 0,
      "threes": 1,
      "stl": 2,
      "blk": 0,
      "to": 0,
-     "min": 12
+     "min": 19
+    },
+    "John Tonje": {
+     "pts": 0,
+     "reb": 1,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 3
     },
     "Branden Carlson": {
      "pts": 0,
@@ -307,93 +317,93 @@
     },
     "Yang Hansen": {
      "pts": 0,
-     "reb": 0,
+     "reb": 1,
      "ast": 0,
      "threes": 0,
      "stl": 0,
      "blk": 0,
      "to": 0,
-     "min": 5
+     "min": 7
     },
     "Jrue Holiday": {
      "pts": 5,
-     "reb": 1,
-     "ast": 4,
+     "reb": 2,
+     "ast": 6,
      "threes": 1,
+     "stl": 3,
+     "blk": 0,
+     "to": 3,
+     "min": 15
+    },
+    "Scoot Henderson": {
+     "pts": 21,
+     "reb": 2,
+     "ast": 1,
+     "threes": 4,
+     "stl": 0,
+     "blk": 0,
+     "to": 2,
+     "min": 16
+    },
+    "Pete Nance": {
+     "pts": 4,
+     "reb": 2,
+     "ast": 3,
+     "threes": 0,
+     "stl": 0,
+     "blk": 1,
+     "to": 0,
+     "min": 18
+    },
+    "Nate Ament": {
+     "pts": 16,
+     "reb": 7,
+     "ast": 0,
+     "threes": 2,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 21
+    },
+    "Kel'el Ware": {
+     "pts": 4,
+     "reb": 4,
+     "ast": 0,
+     "threes": 1,
+     "stl": 2,
+     "blk": 0,
+     "to": 3,
+     "min": 14
+    },
+    "Tyler Herro": {
+     "pts": 15,
+     "reb": 3,
+     "ast": 1,
+     "threes": 4,
      "stl": 1,
      "blk": 0,
      "to": 2,
-     "min": 10
-    },
-    "Scoot Henderson": {
-     "pts": 13,
-     "reb": 1,
-     "ast": 2,
-     "threes": 2,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 10
-    },
-    "Pete Nance": {
-     "pts": 2,
-     "reb": 2,
-     "ast": 1,
-     "threes": 0,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 10
-    },
-    "Nate Ament": {
-     "pts": 12,
-     "reb": 3,
-     "ast": 0,
-     "threes": 2,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 11
-    },
-    "Kel'el Ware": {
-     "pts": 1,
-     "reb": 4,
-     "ast": 0,
-     "threes": 0,
-     "stl": 2,
-     "blk": 0,
-     "to": 2,
-     "min": 12
-    },
-    "Tyler Herro": {
-     "pts": 9,
-     "reb": 2,
-     "ast": 1,
-     "threes": 2,
-     "stl": 0,
-     "blk": 0,
-     "to": 2,
-     "min": 12
+     "min": 18
     },
     "Brayden Burries": {
-     "pts": 2,
+     "pts": 9,
      "reb": 3,
-     "ast": 1,
-     "threes": 0,
-     "stl": 0,
+     "ast": 2,
+     "threes": 1,
+     "stl": 1,
      "blk": 0,
-     "to": 0,
-     "min": 6
+     "to": 1,
+     "min": 15
     },
     "Jaime Jaquez Jr.": {
      "pts": 5,
      "reb": 0,
      "ast": 0,
      "threes": 1,
-     "stl": 0,
+     "stl": 1,
      "blk": 0,
      "to": 0,
-     "min": 6
+     "min": 11
     },
     "Jericho Sims": {
      "pts": 0,
@@ -403,7 +413,7 @@
      "stl": 2,
      "blk": 0,
      "to": 0,
-     "min": 5
+     "min": 6
     },
     "Gary Trent Jr.": {
      "pts": 0,
@@ -416,117 +426,117 @@
      "min": 7
     },
     "Ryan Rollins": {
-     "pts": 3,
+     "pts": 5,
      "reb": 3,
-     "ast": 2,
+     "ast": 3,
      "threes": 0,
      "stl": 0,
      "blk": 0,
      "to": 1,
-     "min": 8
+     "min": 10
     },
     "Kasparas Jakucionis": {
-     "pts": 0,
-     "reb": 0,
-     "ast": 1,
-     "threes": 0,
-     "stl": 0,
+     "pts": 10,
+     "reb": 1,
+     "ast": 2,
+     "threes": 1,
+     "stl": 1,
      "blk": 0,
-     "to": 1,
-     "min": 6
+     "to": 2,
+     "min": 12
     }
    }
   },
   "2026-11-19|NYK at MIN": {
    "espnId": "401910021",
    "status": "inprogress",
-   "period": 2,
-   "clock": "4:46",
-   "detail": "4:46 - 2nd",
+   "period": 3,
+   "clock": "1:56",
+   "detail": "1:56 - 3rd",
    "home": "MIN",
    "away": "NYK",
-   "homeScore": 43,
-   "awayScore": 52,
+   "homeScore": 71,
+   "awayScore": 85,
    "players": {
     "OG Anunoby": {
-     "pts": 5,
-     "reb": 1,
+     "pts": 13,
+     "reb": 3,
      "ast": 1,
      "threes": 1,
      "stl": 1,
-     "blk": 1,
+     "blk": 2,
      "to": 1,
-     "min": 12
+     "min": 24
     },
     "Karl-Anthony Towns": {
-     "pts": 17,
-     "reb": 8,
-     "ast": 0,
+     "pts": 19,
+     "reb": 12,
+     "ast": 4,
      "threes": 2,
      "stl": 0,
      "blk": 0,
-     "to": 0,
-     "min": 13
+     "to": 2,
+     "min": 23
     },
     "Josh Hart": {
-     "pts": 9,
-     "reb": 2,
-     "ast": 1,
+     "pts": 11,
+     "reb": 3,
+     "ast": 2,
      "threes": 3,
      "stl": 0,
      "blk": 0,
      "to": 1,
-     "min": 14
+     "min": 20
     },
     "Mikal Bridges": {
-     "pts": 2,
-     "reb": 1,
-     "ast": 1,
-     "threes": 0,
-     "stl": 0,
+     "pts": 5,
+     "reb": 2,
+     "ast": 2,
+     "threes": 1,
+     "stl": 2,
      "blk": 0,
      "to": 0,
-     "min": 11
+     "min": 21
     },
     "Jalen Brunson": {
-     "pts": 7,
-     "reb": 0,
-     "ast": 3,
+     "pts": 18,
+     "reb": 1,
+     "ast": 5,
+     "threes": 3,
+     "stl": 1,
+     "blk": 0,
+     "to": 2,
+     "min": 27
+    },
+    "Andre Drummond": {
+     "pts": 4,
+     "reb": 3,
+     "ast": 0,
+     "threes": 0,
+     "stl": 1,
+     "blk": 0,
+     "to": 2,
+     "min": 10
+    },
+    "Landry Shamet": {
+     "pts": 10,
+     "reb": 1,
+     "ast": 2,
      "threes": 2,
      "stl": 0,
      "blk": 0,
-     "to": 1,
-     "min": 13
-    },
-    "Andre Drummond": {
-     "pts": 2,
-     "reb": 1,
-     "ast": 0,
-     "threes": 0,
-     "stl": 0,
-     "blk": 0,
-     "to": 1,
-     "min": 6
-    },
-    "Landry Shamet": {
-     "pts": 7,
-     "reb": 1,
-     "ast": 1,
-     "threes": 1,
-     "stl": 0,
-     "blk": 0,
-     "to": 1,
-     "min": 12
+     "to": 2,
+     "min": 20
     },
     "Jose Alvarado": {
-     "pts": 0,
+     "pts": 2,
      "reb": 1,
-     "ast": 0,
+     "ast": 2,
      "threes": 0,
      "stl": 0,
      "blk": 0,
      "to": 0,
-     "min": 3
+     "min": 10
     },
     "Miles McBride": {
      "pts": 3,
@@ -549,157 +559,167 @@
      "min": 7
     },
     "Jaden McDaniels": {
-     "pts": 8,
+     "pts": 11,
      "reb": 1,
      "ast": 0,
-     "threes": 2,
+     "threes": 3,
      "stl": 2,
-     "blk": 0,
-     "to": 0,
-     "min": 14
+     "blk": 2,
+     "to": 3,
+     "min": 27
     },
     "Jonathan Kuminga": {
-     "pts": 7,
-     "reb": 0,
-     "ast": 1,
-     "threes": 0,
+     "pts": 19,
+     "reb": 1,
+     "ast": 2,
+     "threes": 2,
      "stl": 0,
-     "blk": 1,
-     "to": 1,
-     "min": 15
+     "blk": 2,
+     "to": 2,
+     "min": 25
     },
     "Rudy Gobert": {
-     "pts": 3,
-     "reb": 1,
+     "pts": 7,
+     "reb": 3,
      "ast": 0,
      "threes": 0,
-     "stl": 1,
+     "stl": 2,
      "blk": 0,
-     "to": 0,
-     "min": 12
+     "to": 1,
+     "min": 23
     },
     "Ayo Dosunmu": {
      "pts": 3,
-     "reb": 2,
-     "ast": 2,
+     "reb": 4,
+     "ast": 3,
+     "threes": 1,
+     "stl": 1,
+     "blk": 0,
+     "to": 3,
+     "min": 23
+    },
+    "LaMelo Ball": {
+     "pts": 12,
+     "reb": 6,
+     "ast": 6,
+     "threes": 2,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 25
+    },
+    "Trey Lyles": {
+     "pts": 5,
+     "reb": 4,
+     "ast": 1,
      "threes": 1,
      "stl": 0,
      "blk": 0,
      "to": 1,
-     "min": 12
-    },
-    "LaMelo Ball": {
-     "pts": 9,
-     "reb": 3,
-     "ast": 3,
-     "threes": 1,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 12
-    },
-    "Trey Lyles": {
-     "pts": 5,
-     "reb": 2,
-     "ast": 0,
-     "threes": 1,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 4
+     "min": 9
     },
     "Joan Beringer": {
-     "pts": 0,
-     "reb": 1,
+     "pts": 4,
+     "reb": 2,
      "ast": 0,
      "threes": 0,
      "stl": 0,
      "blk": 0,
      "to": 0,
-     "min": 7
+     "min": 10
     },
     "Terrence Shannon Jr.": {
-     "pts": 2,
+     "pts": 4,
      "reb": 2,
      "ast": 3,
      "threes": 0,
      "stl": 1,
      "blk": 0,
      "to": 0,
-     "min": 11
+     "min": 16
     },
     "Bones Hyland": {
      "pts": 6,
-     "reb": 0,
-     "ast": 0,
+     "reb": 1,
+     "ast": 1,
      "threes": 1,
      "stl": 0,
      "blk": 0,
-     "to": 0,
-     "min": 9
+     "to": 1,
+     "min": 11
     }
    }
   },
   "2026-11-19|LAC at SAS": {
    "espnId": "401910022",
    "status": "inprogress",
-   "period": 2,
-   "clock": "5:20",
-   "detail": "5:20 - 2nd",
+   "period": 3,
+   "clock": "5:27",
+   "detail": "5:27 - 3rd",
    "home": "SAS",
    "away": "LAC",
-   "homeScore": 49,
-   "awayScore": 37,
+   "homeScore": 76,
+   "awayScore": 78,
    "players": {
     "Derrick Jones Jr.": {
      "pts": 2,
-     "reb": 0,
-     "ast": 1,
-     "threes": 0,
-     "stl": 1,
-     "blk": 0,
-     "to": 0,
-     "min": 9
-    },
-    "Rui Hachimura": {
-     "pts": 9,
-     "reb": 2,
-     "ast": 1,
-     "threes": 1,
-     "stl": 1,
-     "blk": 0,
-     "to": 0,
-     "min": 10
-    },
-    "Brook Lopez": {
-     "pts": 5,
-     "reb": 2,
-     "ast": 3,
-     "threes": 1,
-     "stl": 0,
-     "blk": 0,
-     "to": 2,
-     "min": 13
-    },
-    "Max Strus": {
-     "pts": 6,
      "reb": 1,
      "ast": 1,
-     "threes": 2,
-     "stl": 0,
-     "blk": 0,
-     "to": 2,
-     "min": 11
-    },
-    "Darius Garland": {
-     "pts": 6,
-     "reb": 0,
-     "ast": 1,
      "threes": 0,
      "stl": 1,
      "blk": 0,
+     "to": 1,
+     "min": 21
+    },
+    "Rui Hachimura": {
+     "pts": 12,
+     "reb": 5,
+     "ast": 2,
+     "threes": 1,
+     "stl": 1,
+     "blk": 0,
+     "to": 1,
+     "min": 22
+    },
+    "Brook Lopez": {
+     "pts": 15,
+     "reb": 3,
+     "ast": 3,
+     "threes": 3,
+     "stl": 1,
+     "blk": 0,
+     "to": 3,
+     "min": 19
+    },
+    "Max Strus": {
+     "pts": 15,
+     "reb": 2,
+     "ast": 3,
+     "threes": 4,
+     "stl": 0,
+     "blk": 0,
+     "to": 3,
+     "min": 23
+    },
+    "Darius Garland": {
+     "pts": 19,
+     "reb": 0,
+     "ast": 3,
+     "threes": 3,
+     "stl": 1,
+     "blk": 0,
      "to": 0,
-     "min": 13
+     "min": 24
+    },
+    "Isaiah Jackson": {
+     "pts": 6,
+     "reb": 2,
+     "ast": 1,
+     "threes": 0,
+     "stl": 3,
+     "blk": 1,
+     "to": 0,
+     "min": 5
     },
     "Yanic Konan Niederhauser": {
      "pts": 2,
@@ -752,94 +772,94 @@
      "min": 9
     },
     "Julian Champagnie": {
-     "pts": 8,
+     "pts": 10,
      "reb": 2,
      "ast": 1,
      "threes": 2,
      "stl": 0,
      "blk": 0,
      "to": 1,
-     "min": 13
+     "min": 20
     },
     "Victor Wembanyama": {
-     "pts": 12,
-     "reb": 6,
-     "ast": 1,
+     "pts": 23,
+     "reb": 8,
+     "ast": 2,
      "threes": 2,
      "stl": 0,
      "blk": 0,
-     "to": 0,
-     "min": 13
+     "to": 1,
+     "min": 22
     },
     "De'Aaron Fox": {
-     "pts": 2,
+     "pts": 4,
      "reb": 1,
      "ast": 2,
      "threes": 0,
      "stl": 0,
      "blk": 0,
-     "to": 1,
-     "min": 10
+     "to": 3,
+     "min": 19
     },
     "Devin Vassell": {
-     "pts": 2,
-     "reb": 0,
-     "ast": 2,
+     "pts": 10,
+     "reb": 2,
+     "ast": 4,
      "threes": 0,
-     "stl": 0,
+     "stl": 2,
      "blk": 1,
-     "to": 0,
-     "min": 9
+     "to": 1,
+     "min": 21
     },
     "Stephon Castle": {
-     "pts": 12,
-     "reb": 3,
-     "ast": 4,
+     "pts": 16,
+     "reb": 4,
+     "ast": 8,
      "threes": 2,
      "stl": 2,
      "blk": 0,
-     "to": 5,
-     "min": 12
+     "to": 7,
+     "min": 21
     },
     "Harrison Barnes": {
      "pts": 3,
      "reb": 0,
-     "ast": 0,
+     "ast": 1,
      "threes": 1,
      "stl": 0,
      "blk": 0,
-     "to": 0,
-     "min": 6
+     "to": 1,
+     "min": 11
     },
     "Keldon Johnson": {
      "pts": 5,
-     "reb": 1,
-     "ast": 1,
+     "reb": 2,
+     "ast": 2,
      "threes": 0,
      "stl": 1,
      "blk": 0,
      "to": 0,
-     "min": 9
+     "min": 12
     },
     "Carter Bryant": {
      "pts": 3,
-     "reb": 0,
+     "reb": 1,
      "ast": 0,
      "threes": 1,
      "stl": 1,
      "blk": 0,
      "to": 0,
-     "min": 9
+     "min": 11
     },
     "Luke Kornet": {
      "pts": 2,
      "reb": 0,
-     "ast": 1,
+     "ast": 2,
      "threes": 0,
      "stl": 0,
      "blk": 0,
      "to": 0,
-     "min": 6
+     "min": 9
     },
     "Jordan McLaughlin": {
      "pts": 0,
@@ -849,7 +869,7 @@
      "stl": 2,
      "blk": 0,
      "to": 0,
-     "min": 5
+     "min": 7
     }
    }
   }
