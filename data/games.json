@@ -5835,7 +5835,7 @@
   "spreadUpdated": "2026-11-21T08:43:06Z",
   "stage": "regular",
   "start": "2026-11-21T18:00:00Z",
-  "status": "inprogress"
+  "status": "final"
  },
  "401910024": {
   "away": "POR",
@@ -5853,9 +5853,9 @@
   "label": null,
   "multiplier": 1,
   "series": null,
-  "spreadHome": -3.5,
-  "spreadSource": "ESPN",
-  "spreadUpdated": "2026-11-21T16:37:26Z",
+  "spreadHome": -2.5,
+  "spreadSource": "DraftKings",
+  "spreadUpdated": "2026-11-21T21:30:38Z",
   "stage": "regular",
   "start": "2026-11-22T00:30:00Z",
   "status": "scheduled"
@@ -5945,9 +5945,9 @@
   "label": null,
   "multiplier": 1,
   "series": null,
-  "spreadHome": 13.5,
+  "spreadHome": 12.5,
   "spreadSource": "ESPN",
-  "spreadUpdated": "2026-11-21T12:43:14Z",
+  "spreadUpdated": "2026-11-21T21:30:38Z",
   "stage": "regular",
   "start": "2026-11-22T03:00:00Z",
   "status": "scheduled"
