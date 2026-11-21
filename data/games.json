@@ -5819,13 +5819,13 @@
   "awayColor": "00471b",
   "awayLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
   "awayName": "Milwaukee Bucks",
-  "awayScore": null,
+  "awayScore": 30,
   "date": "2026-11-21",
   "home": "PHI",
   "homeColor": "1d428a",
   "homeLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
   "homeName": "Philadelphia 76ers",
-  "homeScore": null,
+  "homeScore": 29,
   "id": "401910023",
   "label": null,
   "multiplier": 1,
@@ -5835,7 +5835,7 @@
   "spreadUpdated": "2026-11-21T08:43:06Z",
   "stage": "regular",
   "start": "2026-11-21T18:00:00Z",
-  "status": "scheduled"
+  "status": "inprogress"
  },
  "401910024": {
   "away": "POR",
