@@ -1,4 +1,168 @@
 {
- "updated": "2026-11-20T23:37:37+00:00",
- "games": {}
+ "updated": "2026-11-21T00:26:38+00:00",
+ "games": {
+  "2026-11-20|CHA at ATL": {
+   "espnId": "401909305",
+   "status": "inprogress",
+   "period": 1,
+   "clock": "4:38",
+   "detail": "4:38 - 1st",
+   "home": "ATL",
+   "away": "CHA",
+   "homeScore": 14,
+   "awayScore": 19,
+   "players": {
+    "Moussa Diabate": {
+     "pts": 4,
+     "reb": 4,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 2,
+     "min": 7
+    },
+    "Brandon Miller": {
+     "pts": 3,
+     "reb": 0,
+     "ast": 2,
+     "threes": 1,
+     "stl": 1,
+     "blk": 0,
+     "to": 1,
+     "min": 7
+    },
+    "Naz Reid": {
+     "pts": 5,
+     "reb": 0,
+     "ast": 1,
+     "threes": 1,
+     "stl": 0,
+     "blk": 1,
+     "to": 0,
+     "min": 7
+    },
+    "Coby White": {
+     "pts": 4,
+     "reb": 1,
+     "ast": 1,
+     "threes": 0,
+     "stl": 1,
+     "blk": 0,
+     "to": 1,
+     "min": 5
+    },
+    "Sion James": {
+     "pts": 3,
+     "reb": 1,
+     "ast": 1,
+     "threes": 1,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 6
+    },
+    "Royce O'Neale": {
+     "pts": 0,
+     "reb": 0,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 0
+    },
+    "Ryan Kalkbrenner": {
+     "pts": 0,
+     "reb": 0,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 0
+    },
+    "Christian Anderson": {
+     "pts": 0,
+     "reb": 0,
+     "ast": 1,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 1
+    },
+    "Onyeka Okongwu": {
+     "pts": 2,
+     "reb": 1,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 1,
+     "min": 6
+    },
+    "Jalen Johnson": {
+     "pts": 5,
+     "reb": 1,
+     "ast": 1,
+     "threes": 1,
+     "stl": 1,
+     "blk": 0,
+     "to": 1,
+     "min": 7
+    },
+    "Nickeil Alexander-Walker": {
+     "pts": 4,
+     "reb": 1,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 6
+    },
+    "Aaron Wiggins": {
+     "pts": 0,
+     "reb": 1,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 5
+    },
+    "Dyson Daniels": {
+     "pts": 3,
+     "reb": 1,
+     "ast": 2,
+     "threes": 1,
+     "stl": 2,
+     "blk": 0,
+     "to": 2,
+     "min": 7
+    },
+    "Luguentz Dort": {
+     "pts": 0,
+     "reb": 0,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 1
+    },
+    "RayJ Dennis": {
+     "pts": 0,
+     "reb": 0,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 0
+    }
+   }
+  }
+ }
 }
