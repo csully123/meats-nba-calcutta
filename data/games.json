@@ -935,13 +935,13 @@
   "awayColor": "ce0e2d",
   "awayLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png",
   "awayName": "Houston Rockets",
-  "awayScore": 115,
+  "awayScore": 124,
   "date": "2026-11-20",
   "home": "DEN",
   "homeColor": "0e2240",
   "homeLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/den.png",
   "homeName": "Denver Nuggets",
-  "homeScore": 117,
+  "homeScore": 133,
   "id": "401909312",
   "label": "NBA Cup",
   "multiplier": 1,
@@ -951,7 +951,7 @@
   "spreadUpdated": "2026-11-21T02:02:49Z",
   "stage": "cup",
   "start": "2026-11-21T03:00:00Z",
-  "status": "inprogress"
+  "status": "final"
  },
  "401909313": {
   "away": "SAC",
