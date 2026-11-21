@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T03:30:05+00:00",
+ "updated": "2026-11-21T04:27:40+00:00",
  "games": {
   "2026-11-20|CHA at ATL": {
    "espnId": "401909305",
@@ -38,7 +38,7 @@
      "ast": 3,
      "threes": 2,
      "stl": 0,
-     "blk": 1,
+     "blk": 0,
      "to": 3,
      "min": 39
     },
@@ -867,7 +867,7 @@
    "espnId": "401909309",
    "status": "final",
    "period": 4,
-   "clock": "0.0",
+   "clock": "12:00",
    "detail": "Final",
    "home": "CHI",
    "away": "WAS",
@@ -1090,7 +1090,7 @@
    "espnId": "401909310",
    "status": "final",
    "period": 4,
-   "clock": "0.0",
+   "clock": "12:00",
    "detail": "Final",
    "home": "OKC",
    "away": "NOP",
@@ -1140,7 +1140,7 @@
     "Jeremiah Fears": {
      "pts": 22,
      "reb": 7,
-     "ast": 6,
+     "ast": 5,
      "threes": 3,
      "stl": 0,
      "blk": 1,
@@ -1213,7 +1213,7 @@
      "ast": 2,
      "threes": 0,
      "stl": 0,
-     "blk": 3,
+     "blk": 2,
      "to": 1,
      "min": 29
     },
@@ -1302,63 +1302,63 @@
   "2026-11-20|PHX at UTA": {
    "espnId": "401909311",
    "status": "inprogress",
-   "period": 2,
-   "clock": "5:14",
-   "detail": "5:14 - 2nd",
+   "period": 3,
+   "clock": "1:17",
+   "detail": "1:17 - 3rd",
    "home": "UTA",
    "away": "PHX",
-   "homeScore": 39,
-   "awayScore": 50,
+   "homeScore": 74,
+   "awayScore": 89,
    "players": {
     "Dillon Brooks": {
-     "pts": 11,
-     "reb": 1,
-     "ast": 0,
-     "threes": 1,
+     "pts": 16,
+     "reb": 2,
+     "ast": 2,
+     "threes": 2,
      "stl": 0,
      "blk": 0,
      "to": 1,
-     "min": 11
+     "min": 17
     },
     "Miles Bridges": {
-     "pts": 9,
-     "reb": 5,
-     "ast": 1,
+     "pts": 16,
+     "reb": 8,
+     "ast": 3,
      "threes": 1,
      "stl": 1,
      "blk": 1,
      "to": 0,
-     "min": 11
+     "min": 18
     },
     "Oso Ighodaro": {
-     "pts": 0,
-     "reb": 4,
-     "ast": 1,
+     "pts": 3,
+     "reb": 6,
+     "ast": 3,
      "threes": 0,
      "stl": 2,
      "blk": 0,
      "to": 0,
-     "min": 12
+     "min": 21
     },
     "Devin Booker": {
-     "pts": 6,
+     "pts": 18,
      "reb": 0,
      "ast": 2,
-     "threes": 0,
+     "threes": 1,
      "stl": 0,
      "blk": 0,
-     "to": 1,
-     "min": 13
+     "to": 3,
+     "min": 29
     },
     "Jalen Green": {
-     "pts": 2,
-     "reb": 1,
-     "ast": 2,
+     "pts": 6,
+     "reb": 2,
+     "ast": 3,
      "threes": 0,
      "stl": 0,
      "blk": 0,
-     "to": 1,
-     "min": 10
+     "to": 0,
+     "min": 21
     },
     "Ryan Dunn": {
      "pts": 0,
@@ -1370,15 +1370,25 @@
      "to": 0,
      "min": 9
     },
-    "Khaman Maluach": {
-     "pts": 4,
-     "reb": 1,
+    "Koa Peat": {
+     "pts": 0,
+     "reb": 0,
      "ast": 0,
      "threes": 0,
      "stl": 0,
      "blk": 0,
      "to": 0,
-     "min": 6
+     "min": 3
+    },
+    "Khaman Maluach": {
+     "pts": 8,
+     "reb": 3,
+     "ast": 1,
+     "threes": 0,
+     "stl": 0,
+     "blk": 1,
+     "to": 0,
+     "min": 12
     },
     "Luke Kennard": {
      "pts": 5,
@@ -1388,107 +1398,107 @@
      "stl": 0,
      "blk": 0,
      "to": 0,
-     "min": 5
+     "min": 9
     },
     "Jordan Goodwin": {
-     "pts": 2,
-     "reb": 2,
-     "ast": 3,
-     "threes": 0,
+     "pts": 5,
+     "reb": 5,
+     "ast": 4,
+     "threes": 1,
      "stl": 1,
      "blk": 0,
      "to": 0,
-     "min": 7
+     "min": 17
     },
     "Collin Gillespie": {
      "pts": 11,
-     "reb": 1,
-     "ast": 3,
+     "reb": 3,
+     "ast": 4,
      "threes": 2,
      "stl": 0,
      "blk": 0,
-     "to": 1,
-     "min": 9
+     "to": 2,
+     "min": 17
     },
     "Jaxson Hayes": {
-     "pts": 11,
-     "reb": 4,
+     "pts": 13,
+     "reb": 7,
      "ast": 0,
      "threes": 0,
      "stl": 0,
      "blk": 0,
      "to": 1,
-     "min": 12
+     "min": 17
     },
     "Josh Green": {
-     "pts": 0,
-     "reb": 0,
+     "pts": 8,
+     "reb": 4,
      "ast": 0,
-     "threes": 0,
-     "stl": 1,
+     "threes": 2,
+     "stl": 2,
      "blk": 0,
      "to": 0,
-     "min": 8
+     "min": 22
     },
     "Keyonte George": {
-     "pts": 4,
+     "pts": 12,
      "reb": 1,
-     "ast": 3,
+     "ast": 4,
      "threes": 0,
      "stl": 0,
      "blk": 0,
      "to": 3,
-     "min": 14
+     "min": 24
     },
     "Ace Bailey": {
-     "pts": 4,
-     "reb": 4,
-     "ast": 0,
+     "pts": 7,
+     "reb": 7,
+     "ast": 1,
      "threes": 0,
      "stl": 0,
-     "blk": 0,
-     "to": 2,
-     "min": 12
+     "blk": 1,
+     "to": 3,
+     "min": 24
     },
     "Darryn Peterson": {
-     "pts": 7,
-     "reb": 5,
-     "ast": 4,
+     "pts": 16,
+     "reb": 9,
+     "ast": 7,
      "threes": 0,
-     "stl": 1,
-     "blk": 0,
-     "to": 0,
-     "min": 12
+     "stl": 2,
+     "blk": 1,
+     "to": 1,
+     "min": 24
     },
     "Brice Sensabaugh": {
-     "pts": 6,
+     "pts": 9,
      "reb": 0,
      "ast": 1,
-     "threes": 2,
+     "threes": 3,
      "stl": 0,
      "blk": 0,
      "to": 0,
-     "min": 8
+     "min": 15
     },
     "Mo Bamba": {
-     "pts": 0,
-     "reb": 0,
+     "pts": 2,
+     "reb": 2,
      "ast": 0,
      "threes": 0,
      "stl": 0,
-     "blk": 2,
+     "blk": 1,
      "to": 0,
-     "min": 6
+     "min": 18
     },
     "Svi Mykhailiuk": {
      "pts": 6,
-     "reb": 4,
+     "reb": 5,
      "ast": 1,
      "threes": 2,
      "stl": 0,
      "blk": 0,
-     "to": 1,
-     "min": 11
+     "to": 2,
+     "min": 17
     },
     "Josh Okogie": {
      "pts": 1,
@@ -1498,143 +1508,183 @@
      "stl": 0,
      "blk": 0,
      "to": 2,
-     "min": 9
+     "min": 11
     }
    }
   },
   "2026-11-20|HOU at DEN": {
    "espnId": "401909312",
    "status": "inprogress",
-   "period": 1,
-   "clock": "3:30",
-   "detail": "3:30 - 1st",
+   "period": 2,
+   "clock": "0.0",
+   "detail": "Halftime",
    "home": "DEN",
    "away": "HOU",
-   "homeScore": 26,
-   "awayScore": 26,
+   "homeScore": 62,
+   "awayScore": 60,
    "players": {
     "Kevin Durant": {
-     "pts": 6,
-     "reb": 0,
-     "ast": 0,
+     "pts": 8,
+     "reb": 1,
+     "ast": 3,
      "threes": 0,
      "stl": 0,
      "blk": 0,
-     "to": 1,
-     "min": 8
+     "to": 3,
+     "min": 16
     },
     "Jabari Smith Jr.": {
-     "pts": 6,
-     "reb": 1,
-     "ast": 0,
+     "pts": 10,
+     "reb": 2,
+     "ast": 2,
      "threes": 2,
      "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 5
+     "blk": 1,
+     "to": 1,
+     "min": 15
     },
     "Alperen Sengun": {
-     "pts": 3,
-     "reb": 2,
-     "ast": 3,
+     "pts": 16,
+     "reb": 5,
+     "ast": 5,
      "threes": 1,
      "stl": 1,
-     "blk": 0,
-     "to": 1,
-     "min": 5
+     "blk": 1,
+     "to": 2,
+     "min": 17
     },
     "Fred VanVleet": {
-     "pts": 2,
-     "reb": 0,
-     "ast": 3,
-     "threes": 0,
+     "pts": 7,
+     "reb": 1,
+     "ast": 4,
+     "threes": 1,
      "stl": 1,
      "blk": 0,
-     "to": 0,
-     "min": 8
+     "to": 2,
+     "min": 16
     },
     "Amen Thompson": {
-     "pts": 6,
-     "reb": 1,
+     "pts": 10,
+     "reb": 4,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 2,
+     "min": 11
+    },
+    "Tari Eason": {
+     "pts": 4,
+     "reb": 3,
      "ast": 0,
      "threes": 0,
      "stl": 0,
      "blk": 0,
      "to": 1,
-     "min": 5
-    },
-    "Tari Eason": {
-     "pts": 0,
-     "reb": 0,
-     "ast": 0,
-     "threes": 0,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 3
+     "min": 12
     },
     "Steven Adams": {
-     "pts": 0,
-     "reb": 0,
+     "pts": 2,
+     "reb": 2,
      "ast": 1,
      "threes": 0,
      "stl": 0,
      "blk": 0,
      "to": 0,
-     "min": 3
+     "min": 7
     },
     "Marcus Smart": {
-     "pts": 0,
-     "reb": 0,
+     "pts": 3,
+     "reb": 2,
      "ast": 1,
-     "threes": 0,
+     "threes": 1,
      "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 3
+     "blk": 1,
+     "to": 1,
+     "min": 13
     },
-    "Aaron Gordon": {
-     "pts": 7,
+    "Bogdan Bogdanovic": {
+     "pts": 0,
      "reb": 1,
      "ast": 0,
-     "threes": 1,
+     "threes": 0,
+     "stl": 1,
+     "blk": 0,
+     "to": 0,
+     "min": 5
+    },
+    "Reed Sheppard": {
+     "pts": 0,
+     "reb": 1,
+     "ast": 0,
+     "threes": 0,
      "stl": 0,
      "blk": 0,
      "to": 0,
      "min": 8
     },
-    "Cameron Johnson": {
-     "pts": 4,
+    "Aaron Gordon": {
+     "pts": 9,
      "reb": 1,
-     "ast": 3,
+     "ast": 1,
      "threes": 1,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 16
+    },
+    "Cameron Johnson": {
+     "pts": 9,
+     "reb": 1,
+     "ast": 4,
+     "threes": 2,
      "stl": 2,
      "blk": 0,
      "to": 1,
-     "min": 8
+     "min": 16
     },
     "Nikola Jokic": {
      "pts": 2,
-     "reb": 1,
-     "ast": 3,
+     "reb": 3,
+     "ast": 5,
      "threes": 0,
      "stl": 0,
      "blk": 0,
      "to": 1,
-     "min": 8
+     "min": 19
     },
     "Jamal Murray": {
      "pts": 4,
-     "reb": 1,
-     "ast": 1,
+     "reb": 2,
+     "ast": 5,
      "threes": 1,
      "stl": 0,
      "blk": 0,
      "to": 1,
-     "min": 8
+     "min": 18
     },
     "Christian Braun": {
-     "pts": 7,
+     "pts": 12,
+     "reb": 1,
+     "ast": 0,
+     "threes": 2,
+     "stl": 3,
+     "blk": 0,
+     "to": 0,
+     "min": 14
+    },
+    "Marvin Bagley III": {
+     "pts": 5,
+     "reb": 3,
+     "ast": 0,
+     "threes": 1,
+     "stl": 2,
+     "blk": 1,
+     "to": 0,
+     "min": 5
+    },
+    "Spencer Jones": {
+     "pts": 3,
      "reb": 0,
      "ast": 0,
      "threes": 1,
@@ -1643,88 +1693,108 @@
      "to": 0,
      "min": 8
     },
-    "DeMar DeRozan": {
-     "pts": 2,
-     "reb": 0,
+    "Trevon Brazile": {
+     "pts": 4,
+     "reb": 1,
      "ast": 0,
      "threes": 0,
      "stl": 0,
      "blk": 0,
      "to": 0,
-     "min": 1
+     "min": 6
+    },
+    "DeMar DeRozan": {
+     "pts": 9,
+     "reb": 0,
+     "ast": 1,
+     "threes": 0,
+     "stl": 1,
+     "blk": 0,
+     "to": 0,
+     "min": 10
+    },
+    "Tyus Jones": {
+     "pts": 5,
+     "reb": 1,
+     "ast": 3,
+     "threes": 1,
+     "stl": 0,
+     "blk": 0,
+     "to": 1,
+     "min": 7
     }
    }
   },
   "2026-11-20|SAC at LAL": {
    "espnId": "401909313",
    "status": "inprogress",
-   "period": 1,
-   "clock": "2:41",
-   "detail": "2:41 - 1st",
+   "period": 3,
+   "clock": "9:43",
+   "detail": "9:43 - 3rd",
    "home": "LAL",
    "away": "SAC",
-   "homeScore": 22,
-   "awayScore": 23,
+   "homeScore": 62,
+   "awayScore": 67,
    "players": {
     "Domantas Sabonis": {
-     "pts": 8,
-     "reb": 4,
-     "ast": 0,
-     "threes": 0,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 8
-    },
-    "De'Andre Hunter": {
-     "pts": 0,
-     "reb": 1,
-     "ast": 0,
-     "threes": 0,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 8
-    },
-    "Keegan Murray": {
-     "pts": 8,
-     "reb": 1,
-     "ast": 0,
-     "threes": 2,
+     "pts": 15,
+     "reb": 8,
+     "ast": 1,
+     "threes": 1,
      "stl": 0,
      "blk": 0,
      "to": 1,
-     "min": 7
+     "min": 22
     },
-    "Zach LaVine": {
-     "pts": 0,
-     "reb": 1,
-     "ast": 0,
-     "threes": 0,
-     "stl": 1,
-     "blk": 0,
-     "to": 0,
-     "min": 7
-    },
-    "Darius Acuff Jr.": {
-     "pts": 4,
-     "reb": 0,
-     "ast": 2,
-     "threes": 0,
-     "stl": 1,
-     "blk": 0,
-     "to": 0,
-     "min": 9
-    },
-    "Leaky Black": {
-     "pts": 0,
-     "reb": 0,
-     "ast": 0,
-     "threes": 0,
+    "De'Andre Hunter": {
+     "pts": 15,
+     "reb": 4,
+     "ast": 1,
+     "threes": 3,
      "stl": 0,
      "blk": 0,
      "to": 0,
-     "min": 2
+     "min": 20
+    },
+    "Keegan Murray": {
+     "pts": 11,
+     "reb": 1,
+     "ast": 2,
+     "threes": 2,
+     "stl": 0,
+     "blk": 0,
+     "to": 2,
+     "min": 20
+    },
+    "Zach LaVine": {
+     "pts": 6,
+     "reb": 2,
+     "ast": 2,
+     "threes": 0,
+     "stl": 2,
+     "blk": 0,
+     "to": 0,
+     "min": 21
+    },
+    "Darius Acuff Jr.": {
+     "pts": 15,
+     "reb": 0,
+     "ast": 7,
+     "threes": 1,
+     "stl": 1,
+     "blk": 0,
+     "to": 3,
+     "min": 18
+    },
+    "Leaky Black": {
+     "pts": 0,
+     "reb": 2,
+     "ast": 1,
+     "threes": 0,
+     "stl": 2,
+     "blk": 0,
+     "to": 0,
+     "min": 11
     },
     "Dylan Cardwell": {
      "pts": 0,
@@ -1732,119 +1802,129 @@
      "ast": 0,
      "threes": 0,
      "stl": 0,
-     "blk": 0,
+     "blk": 1,
      "to": 0,
-     "min": 0
+     "min": 4
+    },
+    "Malik Monk": {
+     "pts": 2,
+     "reb": 0,
+     "ast": 3,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 2,
+     "min": 8
     },
     "Emanuel Sharp": {
-     "pts": 0,
+     "pts": 3,
      "reb": 0,
-     "ast": 0,
-     "threes": 0,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 2
-    },
-    "Ziaire Williams": {
-     "pts": 0,
-     "reb": 0,
-     "ast": 0,
-     "threes": 0,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 7
-    },
-    "Walker Kessler": {
-     "pts": 2,
-     "reb": 1,
-     "ast": 0,
-     "threes": 0,
-     "stl": 0,
-     "blk": 1,
-     "to": 2,
-     "min": 7
-    },
-    "Matisse Thybulle": {
-     "pts": 6,
-     "reb": 1,
-     "ast": 0,
-     "threes": 2,
+     "ast": 1,
+     "threes": 1,
      "stl": 0,
      "blk": 0,
      "to": 0,
      "min": 5
     },
-    "Luka Doncic": {
-     "pts": 9,
-     "reb": 1,
-     "ast": 2,
-     "threes": 1,
-     "stl": 0,
-     "blk": 0,
-     "to": 2,
-     "min": 9
-    },
-    "Quentin Grimes": {
+    "Ziaire Williams": {
      "pts": 2,
-     "reb": 2,
-     "ast": 2,
+     "reb": 0,
+     "ast": 0,
      "threes": 0,
      "stl": 0,
      "blk": 0,
      "to": 0,
-     "min": 7
+     "min": 14
+    },
+    "Walker Kessler": {
+     "pts": 8,
+     "reb": 1,
+     "ast": 1,
+     "threes": 0,
+     "stl": 1,
+     "blk": 3,
+     "to": 2,
+     "min": 14
+    },
+    "Matisse Thybulle": {
+     "pts": 8,
+     "reb": 1,
+     "ast": 0,
+     "threes": 2,
+     "stl": 0,
+     "blk": 1,
+     "to": 0,
+     "min": 13
+    },
+    "Luka Doncic": {
+     "pts": 19,
+     "reb": 4,
+     "ast": 5,
+     "threes": 1,
+     "stl": 2,
+     "blk": 0,
+     "to": 4,
+     "min": 20
+    },
+    "Quentin Grimes": {
+     "pts": 6,
+     "reb": 4,
+     "ast": 6,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 18
     },
     "Jarred Vanderbilt": {
-     "pts": 0,
+     "pts": 2,
      "reb": 1,
      "ast": 1,
      "threes": 0,
      "stl": 0,
      "blk": 0,
      "to": 1,
-     "min": 2
+     "min": 6
     },
     "Sandro Mamukelashvili": {
-     "pts": 2,
-     "reb": 3,
-     "ast": 0,
+     "pts": 4,
+     "reb": 8,
+     "ast": 1,
      "threes": 0,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 4
+     "stl": 1,
+     "blk": 1,
+     "to": 2,
+     "min": 15
     },
     "Jake LaRavia": {
-     "pts": 1,
-     "reb": 0,
+     "pts": 4,
+     "reb": 3,
      "ast": 0,
-     "threes": 0,
+     "threes": 1,
      "stl": 0,
      "blk": 0,
      "to": 0,
-     "min": 2
+     "min": 12
     },
     "Collin Sexton": {
-     "pts": 0,
+     "pts": 4,
      "reb": 0,
-     "ast": 0,
+     "ast": 2,
      "threes": 0,
-     "stl": 0,
+     "stl": 1,
      "blk": 0,
      "to": 0,
-     "min": 1
+     "min": 10
     },
     "Cameron Carr": {
-     "pts": 0,
+     "pts": 5,
      "reb": 0,
      "ast": 0,
-     "threes": 0,
-     "stl": 0,
+     "threes": 1,
+     "stl": 1,
      "blk": 0,
      "to": 0,
-     "min": 0
+     "min": 8
     }
    }
   }
