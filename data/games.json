@@ -5957,13 +5957,13 @@
   "awayColor": "1d428a",
   "awayLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/det.png",
   "awayName": "Detroit Pistons",
-  "awayScore": null,
+  "awayScore": 30,
   "date": "2026-11-22",
   "home": "ATL",
   "homeColor": "c8102e",
   "homeLogo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
   "homeName": "Atlanta Hawks",
-  "homeScore": null,
+  "homeScore": 35,
   "id": "401910029",
   "label": null,
   "multiplier": 1,
@@ -5973,7 +5973,7 @@
   "spreadUpdated": "2026-11-22T16:12:39Z",
   "stage": "regular",
   "start": "2026-11-22T20:30:00Z",
-  "status": "scheduled"
+  "status": "inprogress"
  },
  "401910030": {
   "away": "OKC",
@@ -6060,9 +6060,9 @@
   "label": null,
   "multiplier": 1,
   "series": null,
-  "spreadHome": 1.5,
+  "spreadHome": 2.5,
   "spreadSource": "ESPN",
-  "spreadUpdated": "2026-11-22T19:22:46Z",
+  "spreadUpdated": "2026-11-22T21:13:42Z",
   "stage": "regular",
   "start": "2026-11-23T00:00:00Z",
   "status": "scheduled"
@@ -6106,9 +6106,9 @@
   "label": null,
   "multiplier": 1,
   "series": null,
-  "spreadHome": 8.5,
+  "spreadHome": 7.5,
   "spreadSource": "ESPN",
-  "spreadUpdated": "2026-11-22T13:28:19Z",
+  "spreadUpdated": "2026-11-22T21:13:42Z",
   "stage": "regular",
   "start": "2026-11-23T01:30:00Z",
   "status": "scheduled"
