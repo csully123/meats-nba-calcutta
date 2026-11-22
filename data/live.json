@@ -1,4 +1,381 @@
 {
- "updated": "2026-11-22T07:38:43+00:00",
- "games": {}
+ "updated": "2026-11-22T23:33:13+00:00",
+ "games": {
+  "2026-11-22|DET at ATL": {
+   "espnId": "401910029",
+   "status": "final",
+   "period": 4,
+   "clock": "12:00",
+   "detail": "Final",
+   "home": "ATL",
+   "away": "DET",
+   "homeScore": 107,
+   "awayScore": 97,
+   "players": {
+    "John Collins": {
+     "pts": 18,
+     "reb": 6,
+     "ast": 0,
+     "threes": 4,
+     "stl": 1,
+     "blk": 1,
+     "to": 1,
+     "min": 22
+    },
+    "Kevin Huerter": {
+     "pts": 2,
+     "reb": 3,
+     "ast": 1,
+     "threes": 0,
+     "stl": 1,
+     "blk": 0,
+     "to": 3,
+     "min": 30
+    },
+    "Cade Cunningham": {
+     "pts": 5,
+     "reb": 4,
+     "ast": 15,
+     "threes": 1,
+     "stl": 1,
+     "blk": 1,
+     "to": 6,
+     "min": 33
+    },
+    "Ausar Thompson": {
+     "pts": 18,
+     "reb": 11,
+     "ast": 5,
+     "threes": 0,
+     "stl": 1,
+     "blk": 2,
+     "to": 1,
+     "min": 38
+    },
+    "Daniss Jenkins": {
+     "pts": 11,
+     "reb": 5,
+     "ast": 3,
+     "threes": 1,
+     "stl": 1,
+     "blk": 0,
+     "to": 0,
+     "min": 38
+    },
+    "Paul Reed": {
+     "pts": 16,
+     "reb": 5,
+     "ast": 2,
+     "threes": 0,
+     "stl": 1,
+     "blk": 1,
+     "to": 3,
+     "min": 26
+    },
+    "Ronald Holland II": {
+     "pts": 2,
+     "reb": 4,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 1,
+     "to": 0,
+     "min": 10
+    },
+    "Javonte Green": {
+     "pts": 6,
+     "reb": 3,
+     "ast": 1,
+     "threes": 2,
+     "stl": 1,
+     "blk": 0,
+     "to": 2,
+     "min": 18
+    },
+    "Isaiah Joe": {
+     "pts": 19,
+     "reb": 2,
+     "ast": 3,
+     "threes": 3,
+     "stl": 3,
+     "blk": 0,
+     "to": 0,
+     "min": 26
+    },
+    "Onyeka Okongwu": {
+     "pts": 6,
+     "reb": 9,
+     "ast": 2,
+     "threes": 1,
+     "stl": 0,
+     "blk": 1,
+     "to": 1,
+     "min": 29
+    },
+    "Jalen Johnson": {
+     "pts": 12,
+     "reb": 11,
+     "ast": 0,
+     "threes": 0,
+     "stl": 1,
+     "blk": 0,
+     "to": 3,
+     "min": 30
+    },
+    "Nickeil Alexander-Walker": {
+     "pts": 27,
+     "reb": 2,
+     "ast": 1,
+     "threes": 6,
+     "stl": 0,
+     "blk": 0,
+     "to": 2,
+     "min": 28
+    },
+    "Dyson Daniels": {
+     "pts": 5,
+     "reb": 14,
+     "ast": 8,
+     "threes": 0,
+     "stl": 5,
+     "blk": 3,
+     "to": 3,
+     "min": 39
+    },
+    "Kingston Flemings": {
+     "pts": 10,
+     "reb": 5,
+     "ast": 6,
+     "threes": 1,
+     "stl": 1,
+     "blk": 0,
+     "to": 2,
+     "min": 27
+    },
+    "Corey Kispert": {
+     "pts": 18,
+     "reb": 4,
+     "ast": 3,
+     "threes": 4,
+     "stl": 1,
+     "blk": 0,
+     "to": 0,
+     "min": 19
+    },
+    "Zuby Ejiofor": {
+     "pts": 4,
+     "reb": 4,
+     "ast": 1,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 19
+    },
+    "Luguentz Dort": {
+     "pts": 16,
+     "reb": 7,
+     "ast": 1,
+     "threes": 2,
+     "stl": 3,
+     "blk": 0,
+     "to": 1,
+     "min": 31
+    },
+    "Aaron Wiggins": {
+     "pts": 9,
+     "reb": 6,
+     "ast": 1,
+     "threes": 1,
+     "stl": 1,
+     "blk": 0,
+     "to": 3,
+     "min": 19
+    }
+   }
+  },
+  "2026-11-22|OKC at MIA": {
+   "espnId": "401910030",
+   "status": "inprogress",
+   "period": 1,
+   "clock": "1:06",
+   "detail": "1:06 - 1st",
+   "home": "MIA",
+   "away": "OKC",
+   "homeScore": 30,
+   "awayScore": 24,
+   "players": {
+    "Isaiah Hartenstein": {
+     "pts": 0,
+     "reb": 2,
+     "ast": 1,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 1,
+     "min": 5
+    },
+    "Kenrich Williams": {
+     "pts": 2,
+     "reb": 2,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 8
+    },
+    "Micah Peavy": {
+     "pts": 0,
+     "reb": 1,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 7
+    },
+    "Jared McCain": {
+     "pts": 8,
+     "reb": 1,
+     "ast": 1,
+     "threes": 2,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 8
+    },
+    "Ajay Mitchell": {
+     "pts": 6,
+     "reb": 1,
+     "ast": 1,
+     "threes": 0,
+     "stl": 1,
+     "blk": 0,
+     "to": 0,
+     "min": 8
+    },
+    "Brooks Barnhizer": {
+     "pts": 0,
+     "reb": 2,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 1,
+     "min": 5
+    },
+    "Nique Clifford": {
+     "pts": 0,
+     "reb": 0,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 2
+    },
+    "Josh Dix": {
+     "pts": 3,
+     "reb": 0,
+     "ast": 0,
+     "threes": 1,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 3
+    },
+    "Bennett Stirtz": {
+     "pts": 5,
+     "reb": 1,
+     "ast": 0,
+     "threes": 1,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 5
+    },
+    "Bobby Portis": {
+     "pts": 5,
+     "reb": 3,
+     "ast": 0,
+     "threes": 1,
+     "stl": 0,
+     "blk": 0,
+     "to": 2,
+     "min": 10
+    },
+    "Bam Adebayo": {
+     "pts": 6,
+     "reb": 3,
+     "ast": 3,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 6
+    },
+    "Klay Thompson": {
+     "pts": 9,
+     "reb": 3,
+     "ast": 2,
+     "threes": 3,
+     "stl": 1,
+     "blk": 0,
+     "to": 0,
+     "min": 7
+    },
+    "Davion Mitchell": {
+     "pts": 2,
+     "reb": 1,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 7
+    },
+    "Pelle Larsson": {
+     "pts": 3,
+     "reb": 1,
+     "ast": 3,
+     "threes": 1,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 10
+    },
+    "Andrew Wiggins": {
+     "pts": 0,
+     "reb": 0,
+     "ast": 1,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 3
+    },
+    "Nikola Jovic": {
+     "pts": 0,
+     "reb": 3,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 1,
+     "to": 0,
+     "min": 5
+    },
+    "Ryan Conwell": {
+     "pts": 5,
+     "reb": 0,
+     "ast": 0,
+     "threes": 1,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 5
+    }
+   }
+  }
+ }
 }
