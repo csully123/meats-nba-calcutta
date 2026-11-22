@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T03:30:00+00:00",
+ "updated": "2026-11-22T04:30:01+00:00",
  "games": {
   "2026-11-21|MIL at PHI": {
    "espnId": "401910023",
@@ -460,7 +460,7 @@
     },
     "Rui Hachimura": {
      "pts": 19,
-     "reb": 9,
+     "reb": 8,
      "ast": 1,
      "threes": 4,
      "stl": 0,
@@ -523,7 +523,7 @@
      "reb": 6,
      "ast": 1,
      "threes": 0,
-     "stl": 0,
+     "stl": 1,
      "blk": 2,
      "to": 0,
      "min": 16
@@ -590,12 +590,12 @@
     },
     "Daniel Gafford": {
      "pts": 10,
-     "reb": 9,
+     "reb": 10,
      "ast": 3,
      "threes": 0,
      "stl": 2,
      "blk": 1,
-     "to": 0,
+     "to": 1,
      "min": 31
     },
     "Cooper Flagg": {
@@ -613,7 +613,7 @@
      "reb": 7,
      "ast": 1,
      "threes": 1,
-     "stl": 2,
+     "stl": 1,
      "blk": 0,
      "to": 0,
      "min": 29
@@ -663,7 +663,7 @@
      "reb": 4,
      "ast": 0,
      "threes": 3,
-     "stl": 2,
+     "stl": 3,
      "blk": 1,
      "to": 1,
      "min": 24
@@ -1109,79 +1109,99 @@
   "2026-11-21|BOS at SAC": {
    "espnId": "401910028",
    "status": "inprogress",
-   "period": 1,
-   "clock": "3:32",
-   "detail": "3:32 - 1st",
+   "period": 3,
+   "clock": "8:40",
+   "detail": "8:40 - 3rd",
    "home": "SAC",
    "away": "BOS",
-   "homeScore": 13,
-   "awayScore": 18,
+   "homeScore": 48,
+   "awayScore": 58,
    "players": {
     "Paul George": {
-     "pts": 3,
-     "reb": 2,
+     "pts": 10,
+     "reb": 5,
+     "ast": 4,
+     "threes": 2,
+     "stl": 3,
+     "blk": 0,
+     "to": 0,
+     "min": 22
+    },
+    "Sam Hauser": {
+     "pts": 14,
+     "reb": 3,
+     "ast": 1,
+     "threes": 4,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 19
+    },
+    "Neemias Queta": {
+     "pts": 9,
+     "reb": 5,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 2,
+     "to": 1,
+     "min": 20
+    },
+    "Payton Pritchard": {
+     "pts": 5,
+     "reb": 4,
+     "ast": 6,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 21
+    },
+    "Hugo Gonzalez": {
+     "pts": 5,
+     "reb": 4,
      "ast": 0,
      "threes": 1,
+     "stl": 0,
+     "blk": 1,
+     "to": 0,
+     "min": 13
+    },
+    "Chris Cenac Jr.": {
+     "pts": 2,
+     "reb": 2,
+     "ast": 0,
+     "threes": 0,
      "stl": 1,
+     "blk": 0,
+     "to": 0,
+     "min": 9
+    },
+    "Luka Garza": {
+     "pts": 2,
+     "reb": 2,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 2,
+     "min": 8
+    },
+    "Mike Conley": {
+     "pts": 7,
+     "reb": 0,
+     "ast": 2,
+     "threes": 1,
+     "stl": 3,
      "blk": 0,
      "to": 0,
      "min": 6
     },
-    "Sam Hauser": {
-     "pts": 0,
-     "reb": 0,
-     "ast": 1,
-     "threes": 0,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 5
-    },
-    "Neemias Queta": {
-     "pts": 4,
-     "reb": 2,
-     "ast": 0,
-     "threes": 0,
-     "stl": 0,
-     "blk": 1,
-     "to": 0,
-     "min": 5
-    },
-    "Payton Pritchard": {
+    "Ron Harper Jr.": {
      "pts": 3,
-     "reb": 1,
-     "ast": 3,
-     "threes": 0,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 8
-    },
-    "Hugo Gonzalez": {
-     "pts": 5,
-     "reb": 1,
+     "reb": 0,
      "ast": 0,
      "threes": 1,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 5
-    },
-    "Chris Cenac Jr.": {
-     "pts": 0,
-     "reb": 2,
-     "ast": 0,
-     "threes": 0,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 2
-    },
-    "Luka Garza": {
-     "pts": 2,
-     "reb": 1,
-     "ast": 0,
-     "threes": 0,
      "stl": 0,
      "blk": 0,
      "to": 0,
@@ -1190,82 +1210,82 @@
     "Baylor Scheierman": {
      "pts": 0,
      "reb": 1,
-     "ast": 0,
-     "threes": 0,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 3
-    },
-    "Jordan Walsh": {
-     "pts": 1,
-     "reb": 3,
-     "ast": 0,
-     "threes": 0,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 3
-    },
-    "Domantas Sabonis": {
-     "pts": 4,
-     "reb": 0,
      "ast": 1,
      "threes": 0,
      "stl": 0,
      "blk": 0,
      "to": 0,
-     "min": 5
+     "min": 10
     },
-    "De'Andre Hunter": {
-     "pts": 0,
-     "reb": 2,
+    "Jordan Walsh": {
+     "pts": 1,
+     "reb": 4,
      "ast": 0,
      "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 6
+    },
+    "Domantas Sabonis": {
+     "pts": 6,
+     "reb": 4,
+     "ast": 4,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 5,
+     "min": 15
+    },
+    "De'Andre Hunter": {
+     "pts": 14,
+     "reb": 5,
+     "ast": 1,
+     "threes": 1,
      "stl": 0,
      "blk": 1,
      "to": 1,
-     "min": 7
+     "min": 22
     },
     "Keegan Murray": {
-     "pts": 2,
+     "pts": 7,
+     "reb": 6,
+     "ast": 0,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 3,
+     "min": 25
+    },
+    "Zach LaVine": {
+     "pts": 4,
      "reb": 3,
+     "ast": 0,
+     "threes": 1,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 11
+    },
+    "Darius Acuff Jr.": {
+     "pts": 6,
+     "reb": 4,
+     "ast": 4,
+     "threes": 0,
+     "stl": 0,
+     "blk": 0,
+     "to": 0,
+     "min": 21
+    },
+    "Precious Achiuwa": {
+     "pts": 5,
+     "reb": 5,
      "ast": 0,
      "threes": 0,
      "stl": 0,
      "blk": 0,
      "to": 1,
-     "min": 6
-    },
-    "Zach LaVine": {
-     "pts": 0,
-     "reb": 2,
-     "ast": 0,
-     "threes": 0,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 5
-    },
-    "Darius Acuff Jr.": {
-     "pts": 2,
-     "reb": 2,
-     "ast": 2,
-     "threes": 0,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 8
-    },
-    "Precious Achiuwa": {
-     "pts": 5,
-     "reb": 3,
-     "ast": 0,
-     "threes": 0,
-     "stl": 0,
-     "blk": 0,
-     "to": 0,
-     "min": 3
+     "min": 14
     },
     "Dylan Cardwell": {
      "pts": 0,
@@ -1275,17 +1295,27 @@
      "stl": 0,
      "blk": 0,
      "to": 0,
-     "min": 3
+     "min": 6
     },
-    "Emanuel Sharp": {
-     "pts": 0,
+    "Malik Monk": {
+     "pts": 3,
      "reb": 0,
-     "ast": 0,
+     "ast": 1,
      "threes": 0,
      "stl": 0,
+     "blk": 1,
+     "to": 1,
+     "min": 8
+    },
+    "Emanuel Sharp": {
+     "pts": 3,
+     "reb": 0,
+     "ast": 0,
+     "threes": 1,
+     "stl": 1,
      "blk": 0,
      "to": 0,
-     "min": 3
+     "min": 14
     }
    }
   }
