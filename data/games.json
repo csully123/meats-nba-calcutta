@@ -6060,9 +6060,9 @@
   "label": null,
   "multiplier": 1,
   "series": null,
-  "spreadHome": 1.5,
+  "spreadHome": -1.5,
   "spreadSource": "ESPN",
-  "spreadUpdated": "2026-11-22T04:51:10Z",
+  "spreadUpdated": "2026-11-22T17:12:49Z",
   "stage": "regular",
   "start": "2026-11-23T00:00:00Z",
   "status": "scheduled"
