@@ -1,6 +1,6 @@
 {
- "backedUpAt": "2026-11-21T08:51:36Z",
- "count": 53,
+ "backedUpAt": "2026-11-22T08:51:28Z",
+ "count": 54,
  "wagers": {
   "0DMEKNttNFZJhyWOJRg8": {
    "_updated": "2026-11-05T08:27:06.083944Z",
@@ -1155,6 +1155,46 @@
    "settledAt": "2026-10-29T08:12:10Z",
    "stage": "regular",
    "stake": 10,
+   "status": "win"
+  },
+  "MJ1eRfLA6f4Y1bDPBaeO": {
+   "_updated": "2026-11-22T08:20:28.629300Z",
+   "boost": null,
+   "createdAt": "2026-11-21T16:35:49.008Z",
+   "eventID": "C8msr3REC7p9Unntf9Ql",
+   "game": "BOS at SAC",
+   "gameDate": "2026-11-21",
+   "gameStart": "2026-11-22T03:00:00.000Z",
+   "legResults": [
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": false,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "away",
+     "line": -8.5,
+     "name": "1st half spread",
+     "oddID": "points-away-1h-sp-away",
+     "odds": -104,
+     "opposing": "points-home-1h-sp-home",
+     "period": "1h",
+     "player": null,
+     "short": "BOS -8.5 (1H)",
+     "side": "away",
+     "stat": "points",
+     "team": "BOS"
+    }
+   ],
+   "net": 19.23,
+   "payout": 39.23,
+   "placedAt": "2026-11-21T16:35:48.580Z",
+   "player": "Kev",
+   "series": null,
+   "settledAt": "2026-11-22T08:20:28Z",
+   "stage": "regular",
+   "stake": 20,
    "status": "win"
   },
   "MpflacxAoRuzbpjSK4oL": {
