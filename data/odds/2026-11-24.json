@@ -1,0 +1,59 @@
+{
+ "date": "2026-11-24",
+ "games": {
+  "0N4dyCi9911qPRE4DYsy": {
+   "away": "BOS",
+   "awayColor": "#008348",
+   "awayName": "Boston Celtics",
+   "cancelled": false,
+   "date": "2026-11-24",
+   "display": "",
+   "ended": false,
+   "eventID": "0N4dyCi9911qPRE4DYsy",
+   "finalized": false,
+   "home": "WAS",
+   "homeColor": "#F5002F",
+   "homeName": "Washington Wizards",
+   "markets": [],
+   "pulledAt": "2026-11-23T13:24:43Z",
+   "start": "2026-11-25T01:00:00.000Z",
+   "started": false
+  },
+  "86WeNM55ZylhAfMEAgpS": {
+   "away": "DET",
+   "awayColor": "#006BB6",
+   "awayName": "Detroit Pistons",
+   "cancelled": false,
+   "date": "2026-11-24",
+   "display": "",
+   "ended": false,
+   "eventID": "86WeNM55ZylhAfMEAgpS",
+   "finalized": false,
+   "home": "ORL",
+   "homeColor": "#007DC5",
+   "homeName": "Orlando Magic",
+   "markets": [],
+   "pulledAt": "2026-11-23T13:24:43Z",
+   "start": "2026-11-25T00:00:00.000Z",
+   "started": false
+  },
+  "MkeoQuI6mutTqPUONP8O": {
+   "away": "DAL",
+   "awayColor": "#007DC5",
+   "awayName": "Dallas Mavericks",
+   "cancelled": false,
+   "date": "2026-11-24",
+   "display": "",
+   "ended": false,
+   "eventID": "MkeoQuI6mutTqPUONP8O",
+   "finalized": false,
+   "home": "DEN",
+   "homeColor": "#4FA8FF",
+   "homeName": "Denver Nuggets",
+   "markets": [],
+   "pulledAt": "2026-11-23T13:24:43Z",
+   "start": "2026-11-25T03:00:00.000Z",
+   "started": false
+  }
+ }
+}
