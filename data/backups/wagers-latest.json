@@ -1,6 +1,6 @@
 {
- "backedUpAt": "2026-11-23T09:24:41Z",
- "count": 56,
+ "backedUpAt": "2026-11-24T19:28:15Z",
+ "count": 58,
  "wagers": {
   "0DMEKNttNFZJhyWOJRg8": {
    "_updated": "2026-11-05T08:27:06.083944Z",
@@ -2539,6 +2539,68 @@
    "stake": 5,
    "status": "loss"
   },
+  "e88jPAmG8yr1Wl50qKoU": {
+   "_updated": "2026-11-24T09:43:16.797312Z",
+   "boost": {
+    "id": "week:2026-11-23",
+    "label": "1.5x weekly",
+    "mult": 1.5
+   },
+   "createdAt": "2026-11-23T21:18:28.888Z",
+   "eventID": "cmJIho0qoq84JvHTFZ1S",
+   "game": "UTA at LAL",
+   "gameDate": "2026-11-23",
+   "gameStart": "2026-11-24T03:00:00.000Z",
+   "legResults": [
+    "win",
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "home",
+     "line": -3.5,
+     "name": "Spread",
+     "oddID": "points-home-game-sp-home",
+     "odds": -450,
+     "opposing": "points-away-game-sp-away",
+     "period": "game",
+     "player": null,
+     "short": "LAL -3.5 (alt)",
+     "side": "home",
+     "stat": "points",
+     "team": "LAL"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "WALKER_KESSLER_1_NBA",
+     "line": 9.5,
+     "name": "Walker Kessler Points",
+     "oddID": "points-WALKER_KESSLER_1_NBA-game-ou-over",
+     "odds": -430,
+     "opposing": "points-WALKER_KESSLER_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "WALKER_KESSLER_1_NBA",
+     "short": "Walker Kessler Points Over 9.5 (alt)",
+     "side": "over",
+     "stat": "points",
+     "team": "LAL"
+    }
+   ],
+   "net": 15.19,
+   "payout": 35.19,
+   "placedAt": "2026-11-23T21:18:27.891Z",
+   "player": "Mio",
+   "series": null,
+   "settledAt": "2026-11-24T09:43:16Z",
+   "stage": "regular",
+   "stake": 20,
+   "status": "win"
+  },
   "fAMIch9LTpaRn74Td13g": {
    "_updated": "2026-11-19T08:32:22.620469Z",
    "boost": null,
@@ -2791,6 +2853,86 @@
    "stage": "regular",
    "stake": 5,
    "status": "loss"
+  },
+  "jNi8CJfxer9bQEHVonRz": {
+   "_updated": "2026-11-24T05:14:16.450355Z",
+   "boost": {
+    "id": "week:2026-11-23",
+    "label": "1.5x weekly",
+    "mult": 1.5
+   },
+   "createdAt": "2026-11-23T14:19:22.451Z",
+   "eventID": "sWYtq3T5amL33wZm7UcR",
+   "game": "CLE at CHI",
+   "gameDate": "2026-11-23",
+   "gameStart": "2026-11-24T01:00:00.000Z",
+   "legResults": [
+    "win",
+    "win",
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "all",
+     "line": 244.5,
+     "name": "Total",
+     "oddID": "points-all-game-ou-under",
+     "odds": -172,
+     "opposing": "points-all-game-ou-over",
+     "period": "game",
+     "player": null,
+     "short": "Game Under 244.5 (alt)",
+     "side": "under",
+     "stat": "points",
+     "team": ""
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "MATAS_BUZELIS_1_NBA",
+     "line": 19.5,
+     "name": "Matas Buzelis Points",
+     "oddID": "points-MATAS_BUZELIS_1_NBA-game-ou-under",
+     "odds": -200,
+     "opposing": "points-MATAS_BUZELIS_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "MATAS_BUZELIS_1_NBA",
+     "short": "Matas Buzelis Points Under 19.5 (alt)",
+     "side": "under",
+     "stat": "points",
+     "team": "CHI"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "DONOVAN_MITCHELL_1_NBA",
+     "line": 29.5,
+     "name": "Donovan Mitchell Points",
+     "oddID": "points-DONOVAN_MITCHELL_1_NBA-game-ou-under",
+     "odds": -170,
+     "opposing": "points-DONOVAN_MITCHELL_1_NBA-game-ou-over",
+     "period": "game",
+     "player": "DONOVAN_MITCHELL_1_NBA",
+     "short": "Donovan Mitchell Points Under 29.5 (alt)",
+     "side": "under",
+     "stat": "points",
+     "team": "CLE"
+    }
+   ],
+   "net": 83.02,
+   "payout": 103.02,
+   "placedAt": "2026-11-23T14:19:20.822Z",
+   "player": "Beekie",
+   "series": null,
+   "settledAt": "2026-11-24T05:14:16Z",
+   "stage": "regular",
+   "stake": 20,
+   "status": "win"
   },
   "lIRKFw2r0CPBpdounA8b": {
    "_updated": "2026-11-04T13:35:52.704620Z",
