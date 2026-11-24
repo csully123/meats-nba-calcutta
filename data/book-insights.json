@@ -18471,7 +18471,8 @@
    "personal": {
     "Beekie": "loss",
     "Kev": "win",
-    "Mio": "loss"
+    "Mio": "loss",
+    "Sulliver": "loss"
    },
    "single": "win"
   },
@@ -18634,6 +18635,22 @@
      "r": "loss",
      "teams": [
       "GSW"
+     ]
+    }
+   },
+   "5AbGhgZxXtEBbYa3nnpH": {
+    "parlay": {
+     "date": "2026-11-23",
+     "r": "loss",
+     "teams": [
+      "SAC"
+     ]
+    },
+    "single": {
+     "date": "2026-11-23",
+     "r": "loss",
+     "teams": [
+      "SAC"
      ]
     }
    },
@@ -20260,6 +20277,22 @@
      "date": "2026-11-06",
      "r": "win",
      "teams": []
+    }
+   },
+   "cmJIho0qoq84JvHTFZ1S": {
+    "parlay": {
+     "date": "2026-11-23",
+     "r": "win",
+     "teams": [
+      "LAL"
+     ]
+    },
+    "single": {
+     "date": "2026-11-23",
+     "r": "loss",
+     "teams": [
+      "LAL"
+     ]
     }
    },
    "cuEG6mOMNUNF5Tt8av9o": {
