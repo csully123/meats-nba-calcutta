@@ -1,6 +1,6 @@
 {
- "backedUpAt": "2026-11-24T19:28:15Z",
- "count": 58,
+ "backedUpAt": "2026-11-25T18:37:07Z",
+ "count": 59,
  "wagers": {
   "0DMEKNttNFZJhyWOJRg8": {
    "_updated": "2026-11-05T08:27:06.083944Z",
@@ -1249,6 +1249,64 @@
    "settledAt": "2026-10-29T08:12:10Z",
    "stage": "regular",
    "stake": 10,
+   "status": "win"
+  },
+  "M5eiUOyboicoudexJ6HN": {
+   "_updated": "2026-11-25T04:04:25.881699Z",
+   "boost": null,
+   "createdAt": "2026-11-24T23:45:44.404Z",
+   "eventID": "0N4dyCi9911qPRE4DYsy",
+   "game": "BOS at WAS",
+   "gameDate": "2026-11-24",
+   "gameStart": "2026-11-25T01:00:00.000Z",
+   "legResults": [
+    "win",
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": true,
+     "betType": "sp",
+     "book": "fanduel",
+     "entity": "home",
+     "line": 19.5,
+     "name": "Spread",
+     "oddID": "points-home-game-sp-home",
+     "odds": -350,
+     "opposing": "points-away-game-sp-away",
+     "period": "game",
+     "player": null,
+     "short": "WAS +19.5 (alt)",
+     "side": "home",
+     "stat": "points",
+     "team": "WAS"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "KYSHAWN_GEORGE_1_NBA",
+     "line": 17.5,
+     "name": "Kyshawn George Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-KYSHAWN_GEORGE_1_NBA-game-ou-over",
+     "odds": -490,
+     "opposing": "points+rebounds+assists-KYSHAWN_GEORGE_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "KYSHAWN_GEORGE_1_NBA",
+     "short": "Kyshawn George Pts + Reb + Ast Over 17.5 (alt)",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "WAS"
+    }
+   ],
+   "net": 50,
+   "payout": 141.24,
+   "placedAt": "2026-11-24T23:45:43.229Z",
+   "player": "Mio",
+   "series": null,
+   "settledAt": "2026-11-25T04:04:25Z",
+   "stage": "cup",
+   "stake": 91.24,
    "status": "win"
   },
   "MJ1eRfLA6f4Y1bDPBaeO": {
