@@ -1,6 +1,6 @@
 {
- "backedUpAt": "2026-11-25T18:37:07Z",
- "count": 59,
+ "backedUpAt": "2026-11-26T18:21:46Z",
+ "count": 60,
  "wagers": {
   "0DMEKNttNFZJhyWOJRg8": {
    "_updated": "2026-11-05T08:27:06.083944Z",
@@ -512,6 +512,64 @@
    "settledAt": "2026-11-01T08:08:08Z",
    "stage": "regular",
    "stake": 20,
+   "status": "win"
+  },
+  "9xNhI6whQxck4fFsk7wA": {
+   "_updated": "2026-11-26T08:03:47.622207Z",
+   "boost": null,
+   "createdAt": "2026-11-25T20:57:33.297Z",
+   "eventID": "YxYG5xC24ZSnH4EuBVxh",
+   "game": "LAC at MEM",
+   "gameDate": "2026-11-25",
+   "gameStart": "2026-11-26T01:00:00.000Z",
+   "legResults": [
+    "win",
+    "win"
+   ],
+   "legs": [
+    {
+     "alt": false,
+     "betType": "ml",
+     "book": "fanduel",
+     "entity": "home",
+     "line": null,
+     "name": "Moneyline",
+     "oddID": "points-home-game-ml-home",
+     "odds": -260,
+     "opposing": "points-away-game-ml-away",
+     "period": "game",
+     "player": null,
+     "short": "MEM ML",
+     "side": "home",
+     "stat": "points",
+     "team": "MEM"
+    },
+    {
+     "alt": true,
+     "betType": "ou",
+     "book": "fanduel",
+     "entity": "TY_JEROME_1_NBA",
+     "line": 24.5,
+     "name": "Ty Jerome Pts + Reb + Ast",
+     "oddID": "points+rebounds+assists-TY_JEROME_1_NBA-game-ou-over",
+     "odds": -560,
+     "opposing": "points+rebounds+assists-TY_JEROME_1_NBA-game-ou-under",
+     "period": "game",
+     "player": "TY_JEROME_1_NBA",
+     "short": "Ty Jerome Pts + Reb + Ast Over 24.5 (alt)",
+     "side": "over",
+     "stat": "points+rebounds+assists",
+     "team": "MEM"
+    }
+   ],
+   "net": 31.59,
+   "payout": 81.59,
+   "placedAt": "2026-11-25T20:57:32.023Z",
+   "player": "Mio",
+   "series": null,
+   "settledAt": "2026-11-26T08:03:47Z",
+   "stage": "cup",
+   "stake": 50,
    "status": "win"
   },
   "A3464WIdeaui4MLXEm35": {
