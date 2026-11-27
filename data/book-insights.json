@@ -18202,24 +18202,24 @@
  },
  "players": {
   "Beekie": {
+   "text": "Beekie bets nothing but parlays, 15 of them at about three legs each, built entirely from player points props and game totals, with a hard lean to the under (20 of 30 props, 10 of 15 totals). Stakes stay small, around $9.50, and every boost has gone on a parlay at an average of +373. The 4-11 record hides a big profit: the long shots are 0-8, but the +131 to +300 band is 4-3 and paid off. Bought-down alt legs are 15-6, while totals are only 5-10 and are the leg sinking slips. Guards are the favorite targets. An under-loving points-prop parlay hunter.",
    "settled": 15,
-   "text": "Beekie is the long-ticket artist: all 15 settled bets are parlays averaging three legs, 4-11 on the board yet up $397 because a handful of boosted hits paid big. Every prop leg is points, mostly on guards, and two thirds of props and totals are unders. Buying safer alt numbers is the winning habit at 15-6, while totals legs have gone just 5-10. The price band tells the story: 4-3 from +131 to +300, 0-8 at +301 or longer. All six boosts went on parlays (3-3, averaging +373), stakes stay near $9.50, and Beekie has never copied Claude. Read: a points-under parlay builder who belongs in the +200 range.",
-   "updated": "2026-11-26T13:41:12Z"
+   "updated": "2026-11-27T14:03:48Z"
   },
   "Kev": {
+   "text": "Kev is a road-spread guy: 9 of his 10 side bets have been on the away team, almost all at near-even prices, and spreads are his bread and butter at 5-3 across 8 legs. He mostly plays singles (6-3) and sizes up, averaging about $32 a bet. When he does touch an alt line he buys the safer number (3-1 on those), and all four boosts went on spreads or a moneyline, splitting 2-2. Favorites have treated him well at 5-2, and he has copied Claude's pick twice. Up a few bucks at 7-4: a disciplined road-spread grinder who buys safety.",
    "settled": 11,
-   "text": "Kev is the road-spread grinder. Nine of his 11 settled bets are singles (6-3), spreads make up 8 of his 13 legs and have gone 5-3, and he backed the road in 9 of 10 sided bets. He lives near even money, 6-4 in that band, with favorites 5-2 and dogs 2-1. Every alt leg bought a safer number (3-1), all four boosts went on sides at about -105 (2-2), and his three props were overs that went 2-1. Stakes average about $32 and he has copied Claude twice. Still, 7-4 is only +$5.61, so losses hit his bigger tickets. Read: a road-side grinder who buys the hook.",
-   "updated": "2026-11-26T13:41:12Z"
+   "updated": "2026-11-27T14:03:48Z"
   },
   "Mio": {
-   "settled": 24,
-   "text": "Mio is the sharp of the group at 19-5 and +$410, built almost entirely on two-leg parlays (18-5) with 94% of legs on alt lines, nearly all bought down to safer numbers, and those alt legs are 39-6. Props are 20-3 and always overs, mostly points-rebounds-assists combos on forwards, with Cameron Boozer the go-to name. Totals legs are 6-0, moneylines 3-0 and underdog sides 8-0. Most tickets land between -131 and -199, where Mio is 13-2, and boosted parlays are 5-1. Memphis is the favorite team. The only real misses are two long shots, both lost. Read: a two-leg safety buyer printing money.",
-   "updated": "2026-11-26T13:41:12Z"
+   "text": "Mio is the machine of the group: 20-5, with 24 of 25 bets as short parlays averaging just 2.1 legs, and those legs hitting 43-6. Nearly every leg (44 of 47) is an alt line bought down to a safer number, and props are all overs, mostly points-rebounds-assists combos (Cameron Boozer four times), going 21-3. Slips priced -131 to -199 are 14-2, underdog sides are 8-0, and Memphis is the team he backs most. Boosts on parlays are 5-1. The only leaks are the two long shots, both losers. A safety-buying two-leg grinder.",
+   "settled": 25,
+   "updated": "2026-11-27T14:03:48Z"
   },
   "Sulliver": {
+   "text": "Sulliver has followed Claude more than anyone, copying the pick of the day five times in nine settled bets, and he gets his bets in early, almost nine hours before tip on average. On his own he likes player overs, mostly points, but props are 2-6 and the three parlays are 0-3. Singles at near-even prices are 2-2, while everything priced as an underdog or longer is 0-4, and his alt legs are 0-3. Boosts have gone 1-2. Down about $68 at 2-7: still finding his own lane, best when he keeps it to one near-even single.",
    "settled": 9,
-   "text": "Sulliver trusts Claude more than anyone, copying a pick of the day on 5 of 9 settled bets, but the record is 2-7 and -$68. Props are the leak: all overs, 2-6, spread across stars like Gilgeous-Alexander, Wembanyama and Flagg, mostly guards. Parlays are 0-3 and plus-money tickets 0-4, while near-even singles are 2-2. Alt lines are 0-3 and boosts 1-2 at an average of +300. Stakes stay modest at about $15, and bets go in early, nearly nine hours before tip. Read: a star-prop over bettor who does best keeping it to one leg near even money.",
-   "updated": "2026-11-26T13:41:12Z"
+   "updated": "2026-11-27T14:03:48Z"
   }
  },
  "results": {
@@ -21344,11 +21344,11 @@
  },
  "winOdds": {
   "odds": {
-   "Beekie": 56,
-   "Kev": 20,
+   "Kev": 19,
+   "Beekie": 57,
    "Mio": 10,
    "Sulliver": 14
   },
-  "updated": "2026-11-26T13:41:12Z"
+  "updated": "2026-11-27T14:03:48Z"
  }
 }
