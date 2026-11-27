@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T20:35:23+00:00",
+ "updated": "2026-11-27T20:22:06+00:00",
  "days": {
   "2026-11-27": {
    "401909326": {
@@ -819,6 +819,396 @@
     },
     "notes": [
      "Even rest: both teams 1 day off"
+    ]
+   }
+  },
+  "2026-11-28": {
+   "401910046": {
+    "matchup": "ORL at WAS",
+    "tipET": "5:00 PM ET",
+    "away": {
+     "team": "ORL",
+     "site": "away",
+     "tipLocal": "5:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 1,
+     "gamesIn6Nights": 2,
+     "gamesIn7Nights": 3,
+     "restDays": 3,
+     "lastGame": {
+      "opp": "DET",
+      "where": "home",
+      "result": "L 86-104",
+      "margin": -18,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-24",
+     "tzShiftSinceLast": 0.0,
+     "streak": {
+      "kind": "roadTrip",
+      "game": 1,
+      "of": 3
+     },
+     "nextGame": {
+      "date": "2026-11-29",
+      "opp": "DET",
+      "where": "away",
+      "daysUntil": 1
+     },
+     "notes": [
+      "ORL well rested: 3 days off",
+      "ORL game 1 of a 3-game road trip",
+      "ORL first leg of a back-to-back (plays in Detroit tomorrow)"
+     ]
+    },
+    "home": {
+     "team": "WAS",
+     "site": "home",
+     "tipLocal": "5:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 1,
+     "gamesIn6Nights": 2,
+     "gamesIn7Nights": 3,
+     "restDays": 3,
+     "lastGame": {
+      "opp": "BOS",
+      "where": "home",
+      "result": "L 116-131",
+      "margin": -15,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-24",
+     "streak": {
+      "kind": "homestand",
+      "game": 3,
+      "of": 3
+     },
+     "nextGame": {
+      "date": "2026-11-30",
+      "opp": "CHA",
+      "where": "away",
+      "daysUntil": 2
+     },
+     "notes": [
+      "WAS well rested: 3 days off"
+     ]
+    },
+    "notes": [
+     "Even rest: both teams 3 days off",
+     "ORL well rested: 3 days off",
+     "ORL game 1 of a 3-game road trip",
+     "ORL first leg of a back-to-back (plays in Detroit tomorrow)",
+     "WAS well rested: 3 days off"
+    ]
+   },
+   "401910047": {
+    "matchup": "BKN at CHA",
+    "tipET": "6:00 PM ET",
+    "away": {
+     "team": "BKN",
+     "site": "away",
+     "tipLocal": "6:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 3,
+     "gamesIn6Nights": 4,
+     "gamesIn7Nights": 4,
+     "restDays": 0,
+     "lastGameDate": "2026-11-27",
+     "backToBack": true,
+     "travel": {
+      "from": "Toronto",
+      "to": "Charlotte",
+      "miles": 587,
+      "estLanding": "2:03 am",
+      "estHotel": "2:48 am",
+      "tzShift": 0.0
+     },
+     "tzShiftSinceLast": 0.0,
+     "streak": {
+      "kind": "roadTrip",
+      "game": 4,
+      "of": 4
+     },
+     "nextGame": {
+      "date": "2026-11-30",
+      "opp": "OKC",
+      "where": "home",
+      "daysUntil": 2
+     },
+     "notes": [
+      "BKN on a back-to-back: played in Toronto last night, flew 587 miles and landed in Charlotte around 2:03 am (late); estimate, check the news for delays",
+      "BKN playing its 3rd game in 4 nights",
+      "BKN playing its 4th game in 6 nights",
+      "BKN last game of a 4-game road trip"
+     ]
+    },
+    "home": {
+     "team": "CHA",
+     "site": "home",
+     "tipLocal": "6:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 3,
+     "restDays": 2,
+     "lastGame": {
+      "opp": "CHI",
+      "where": "home",
+      "result": "L 105-107",
+      "margin": -2,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-25",
+     "streak": {
+      "kind": "homestand",
+      "game": 3,
+      "of": 4
+     },
+     "nextGame": {
+      "date": "2026-11-30",
+      "opp": "WAS",
+      "where": "home",
+      "daysUntil": 2
+     },
+     "notes": []
+    },
+    "notes": [
+     "Rest edge CHA: 2 days off vs 0 for BKN (BKN on a back-to-back)",
+     "BKN on a back-to-back: played in Toronto last night, flew 587 miles and landed in Charlotte around 2:03 am (late); estimate, check the news for delays",
+     "BKN playing its 3rd game in 4 nights",
+     "BKN playing its 4th game in 6 nights",
+     "BKN last game of a 4-game road trip"
+    ]
+   },
+   "401910048": {
+    "matchup": "IND at CHI",
+    "tipET": "8:00 PM ET",
+    "away": {
+     "team": "IND",
+     "site": "away",
+     "tipLocal": "7:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 4,
+     "restDays": 0,
+     "lastGameDate": "2026-11-27",
+     "backToBack": true,
+     "travel": {
+      "from": "Indianapolis",
+      "to": "Chicago",
+      "miles": 166,
+      "estLanding": "12:10 am",
+      "estHotel": "12:55 am",
+      "tzShift": -1.0
+     },
+     "tzShiftSinceLast": -1.0,
+     "streak": {
+      "kind": "roadTrip",
+      "game": 1,
+      "of": 3
+     },
+     "nextGame": {
+      "date": "2026-12-01",
+      "opp": "CLE",
+      "where": "away",
+      "daysUntil": 3
+     },
+     "notes": [
+      "IND on a back-to-back: played at home last night, flew 166 miles and landed in Chicago around 12:10 am, 1 time zone west; estimate, check the news for delays",
+      "IND game 1 of a 3-game road trip"
+     ]
+    },
+    "home": {
+     "team": "CHI",
+     "site": "home",
+     "tipLocal": "7:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 4,
+     "restDays": 2,
+     "lastGame": {
+      "opp": "CHA",
+      "where": "away",
+      "result": "W 107-105",
+      "margin": 2,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-25",
+     "tzShiftSinceLast": -1.0,
+     "streak": {
+      "kind": "homestand",
+      "game": 1,
+      "of": 3
+     },
+     "nextGame": {
+      "date": "2026-12-01",
+      "opp": "NYK",
+      "where": "home",
+      "daysUntil": 3
+     },
+     "notes": []
+    },
+    "notes": [
+     "Rest edge CHI: 2 days off vs 0 for IND (IND on a back-to-back)",
+     "IND on a back-to-back: played at home last night, flew 166 miles and landed in Chicago around 12:10 am, 1 time zone west; estimate, check the news for delays",
+     "IND game 1 of a 3-game road trip"
+    ]
+   },
+   "401910049": {
+    "matchup": "OKC at MIL",
+    "tipET": "8:00 PM ET",
+    "away": {
+     "team": "OKC",
+     "site": "away",
+     "tipLocal": "7:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 4,
+     "restDays": 2,
+     "lastGame": {
+      "opp": "MIN",
+      "where": "home",
+      "result": "L 106-113",
+      "margin": -7,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-25",
+     "tzShiftSinceLast": 0.0,
+     "streak": {
+      "kind": "roadTrip",
+      "game": 1,
+      "of": 2
+     },
+     "nextGame": {
+      "date": "2026-11-30",
+      "opp": "BKN",
+      "where": "away",
+      "daysUntil": 2
+     },
+     "notes": []
+    },
+    "home": {
+     "team": "MIL",
+     "site": "home",
+     "tipLocal": "7:00 pm",
+     "altitude": null,
+     "gamesIn4Nights": 3,
+     "gamesIn6Nights": 4,
+     "gamesIn7Nights": 4,
+     "restDays": 0,
+     "lastGameDate": "2026-11-27",
+     "backToBack": true,
+     "travel": {
+      "from": "Detroit",
+      "to": "Milwaukee",
+      "miles": 252,
+      "estLanding": "12:21 am",
+      "estHotel": "1:06 am",
+      "tzShift": -1.0
+     },
+     "tzShiftSinceLast": -1.0,
+     "streak": {
+      "kind": "homestand",
+      "game": 1,
+      "of": 3
+     },
+     "nextGame": {
+      "date": "2026-11-30",
+      "opp": "SAS",
+      "where": "home",
+      "daysUntil": 2
+     },
+     "notes": [
+      "MIL on a back-to-back: played in Detroit last night, flew 252 miles and landed in Milwaukee around 12:21 am, 1 time zone west; estimate, check the news for delays",
+      "MIL playing its 3rd game in 4 nights",
+      "MIL playing its 4th game in 6 nights"
+     ]
+    },
+    "notes": [
+     "Rest edge OKC: 2 days off vs 0 for MIL (MIL on a back-to-back)",
+     "MIL on a back-to-back: played in Detroit last night, flew 252 miles and landed in Milwaukee around 12:21 am, 1 time zone west; estimate, check the news for delays",
+     "MIL playing its 3rd game in 4 nights",
+     "MIL playing its 4th game in 6 nights"
+    ]
+   },
+   "401910050": {
+    "matchup": "PHI at HOU",
+    "tipET": "8:30 PM ET",
+    "away": {
+     "team": "PHI",
+     "site": "away",
+     "tipLocal": "7:30 pm",
+     "altitude": null,
+     "gamesIn4Nights": 3,
+     "gamesIn6Nights": 4,
+     "gamesIn7Nights": 4,
+     "restDays": 0,
+     "lastGameDate": "2026-11-27",
+     "backToBack": true,
+     "travel": {
+      "from": "Indianapolis",
+      "to": "Houston",
+      "miles": 866,
+      "estLanding": "1:38 am",
+      "estHotel": "2:23 am",
+      "tzShift": -1.0
+     },
+     "tzShiftSinceLast": -1.0,
+     "streak": {
+      "kind": "roadTrip",
+      "game": 2,
+      "of": 2
+     },
+     "nextGame": {
+      "date": "2026-12-01",
+      "opp": "MEM",
+      "where": "home",
+      "daysUntil": 3
+     },
+     "notes": [
+      "PHI on a back-to-back: played in Indianapolis last night, flew 866 miles and landed in Houston around 1:38 am (late), 1 time zone west; estimate, check the news for delays",
+      "PHI playing its 3rd game in 4 nights",
+      "PHI playing its 4th game in 6 nights"
+     ]
+    },
+    "home": {
+     "team": "HOU",
+     "site": "home",
+     "tipLocal": "7:30 pm",
+     "altitude": null,
+     "gamesIn4Nights": 2,
+     "gamesIn6Nights": 3,
+     "gamesIn7Nights": 3,
+     "restDays": 2,
+     "lastGame": {
+      "opp": "PHX",
+      "where": "home",
+      "result": "W 116-104",
+      "margin": 12,
+      "overtime": false
+     },
+     "lastGameDate": "2026-11-25",
+     "streak": {
+      "kind": "homestand",
+      "game": 3,
+      "of": 5
+     },
+     "nextGame": {
+      "date": "2026-11-30",
+      "opp": "LAL",
+      "where": "home",
+      "daysUntil": 2
+     },
+     "notes": []
+    },
+    "notes": [
+     "Rest edge HOU: 2 days off vs 0 for PHI (PHI on a back-to-back)",
+     "PHI on a back-to-back: played in Indianapolis last night, flew 866 miles and landed in Houston around 1:38 am (late), 1 time zone west; estimate, check the news for delays",
+     "PHI playing its 3rd game in 4 nights",
+     "PHI playing its 4th game in 6 nights"
     ]
    }
   }
